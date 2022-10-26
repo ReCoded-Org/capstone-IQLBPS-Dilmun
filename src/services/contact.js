@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser';
 
-const contactUs = (e, templateParams) => {
+const mailSender = (e, templateParams) => {
     e.preventDefault();
 
     emailjs.sendForm('service_iwqsu3f', 'template_d0s4lc6', templateParams, 'SMrzCAgEF5PcNX7Jo')
@@ -8,4 +8,4 @@ const contactUs = (e, templateParams) => {
     e.target.reset()
 };
 
-export { contactUs }
+export { mailSender }
