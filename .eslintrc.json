@@ -25,5 +25,6 @@
     "react/jsx-props-no-spreading": "off",
     "import/no-cycle": "off",
     "import/prefer-default-export": "off"
+    
   }
 }
