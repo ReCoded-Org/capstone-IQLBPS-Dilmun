@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import NavLogIn from './Components/NavBar/NavLogIn';
+import NavBar from './Components/NavBar/NavBar';
 
 
 function App() {
   return (
     <div>
-      <NavLogIn />
+      <NavBar />
     </div>
   );
 }
