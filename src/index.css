@@ -15,3 +15,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.nav-link {
+  @apply mx-3 bg-slate-300 px-2 py-2 rounded-xl;
+}
+
+.active {
+  @apply text-white bg-blue-700;
+}
