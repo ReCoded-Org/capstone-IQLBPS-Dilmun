@@ -23,7 +23,7 @@ function NavBar(){
        };
 
     return(
-            <nav className=' h-auto md:h-24 p-2 bg-blue-200 max-w-10xl mx-auto flex justify-between md:items-center'>
+            <nav className=' h-auto md:h-24 p-2 bg-primary max-w-10xl mx-auto flex justify-between md:items-center'>
                 <Link to={HOME_ROUTE}>
                 <img src='https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png' className='object-scale-down h-20 justify-self-center py-0 mx-4' alt='logo'/>
                 </Link>
