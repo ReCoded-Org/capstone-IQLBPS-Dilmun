@@ -17,9 +17,13 @@ code {
 }
 
 .nav-link {
-  @apply mx-3 bg-slate-300 px-2 py-2 rounded-xl;
+  @apply mx-3 px-2 py-2 ;
 }
 
 .active {
-  @apply text-white bg-blue-700;
+  @apply text-tertiary;
+}
+
+#translation-icon {
+  color: #D9DCD6;
 }
