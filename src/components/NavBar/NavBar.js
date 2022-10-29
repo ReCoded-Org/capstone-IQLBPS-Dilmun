@@ -19,8 +19,8 @@ function NavBar(){
     const [open,setOpen]=useState(false);
 
     return(
-     
-        <div id='validation' className='shadow-md w-full fixed top-0 left-0 bg-primary '>
+     <nav id='validation'>
+        <div className='shadow-md w-full fixed top-0 left-0 bg-primary '>
             <div className='md:flex bg-primary py-3 items-center justify-between md:px-8 px-5'>
                 <div >
                 <Link to={HOME_ROUTE}>
@@ -47,6 +47,7 @@ function NavBar(){
                 </ul>
             </div>
         </div>
+    </nav>
     )
 }
 export default NavBar;
