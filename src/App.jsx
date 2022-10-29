@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import NavBar from './Components/NavBar/NavBar';
-
+import NavBar from './Components/NavBar/NavBar';    
+import NewsLetter from './components/NewsLetter';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <NavBar />
+      <NewsLetter />
     </div>
   );
 }
