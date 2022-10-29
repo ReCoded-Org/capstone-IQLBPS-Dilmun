@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link , NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -25,21 +25,21 @@ function NavBar(){
     return(
             <nav className=' h-auto md:h-24 p-2 bg-primary text-background max-w-10xl mx-auto flex flex-row justify-center md:items-center '>
                 <Link to={HOME_ROUTE}>
-                <img src='https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png' className='object-scale-down h-20 md:justify-self-center py-0 mx-4' alt='logo'/>
+                <img src='https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png' className='object-scale-down h-20 md:justify-self-center py-0 mx-10' alt='logo'/>
                 </Link>
                 <div
                  className={
                 togglerNav ? 'flex flex-col gap-4 md:inline' : 'hidden md:inline'
                 }
                 >
-                <NavLink className='nav-link hover:text-tertiary' onClick={clickHandler} to={HOME_ROUTE} >Home</NavLink>
-                <NavLink className='nav-link hover:text-tertiary' onClick={clickHandler} to={CONTACT_ROUTE} >Contact</NavLink>
-                <NavLink className='nav-link hover:text-tertiary' onClick={clickHandler} to={ABOUT_ROUTE} >About</NavLink>
-                <NavLink className='nav-link hover:text-tertiary' onClick={clickHandler} to={PROFILE} >Profile</NavLink>
-                <NavLink className='nav-link hover:text-tertiary' onClick={clickHandler} to={SIGN_UP_ROUTE} >Sign Up</NavLink>
-                <NavLink className='nav-link hover:text-tertiary' onClick={clickHandler} to={SIGN_IN_ROUTE} >Sign In</NavLink>
-                <NavLink className='nav-link hover:text-tertiary' onClick={clickHandler} to={LOG_OUT} >Log Out</NavLink>
-                <button type='submit' id='translation-icon'><img src='https://cdn.discordapp.com/attachments/1031834305703460906/1035608527923843122/translation-icon.png' className='h-10 justify-self-center py-0 mx-4' alt='icon'/></button>
+                <Link className='nav-link hover:text-tertiary' to={HOME_ROUTE} >Home</Link>
+                <Link className='nav-link hover:text-tertiary' to={CONTACT_ROUTE} >Contact</Link>
+                <Link className='nav-link hover:text-tertiary' to={ABOUT_ROUTE} >About</Link>
+                <Link className='nav-link hover:text-tertiary' to={PROFILE} >Profile</Link>
+                <Link className='nav-link hover:text-tertiary' to={SIGN_UP_ROUTE} >Sign Up</Link>
+                <Link className='nav-link hover:text-tertiary' to={SIGN_IN_ROUTE} >Sign In</Link>
+                <Link className='nav-link hover:text-tertiary' to={LOG_OUT} >Log Out</Link>
+                <button type='submit' id='translation-icon'><img src='https://cdn.discordapp.com/attachments/1031834305703460906/1035608527923843122/translation-icon.png' className='h-10 justify-self-center py-0 mx-10' alt='icon'/></button>
                 </div>
                 <button 
                 className=' inline md:hidden self-start nav-link'
