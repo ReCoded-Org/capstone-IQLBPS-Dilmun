@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render NavBar correctly 1`] = `
+<nav
+  class=" h-auto md:h-24 p-2 bg-primary text-background max-w-10xl mx-auto flex flex-row justify-center md:items-center"
+  id="validation"
+>
+  <a
+    href="/"
+  >
+    <img
+      alt="logo"
+      class="object-scale-down h-20 md:justify-self-center py-0 mx-10"
+      src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
+    />
+  </a>
+  <div
+    class="hidden md:inline"
+  >
+    <a
+      class="nav-link hover:text-tertiary"
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      class="nav-link hover:text-tertiary"
+      href="/contact"
+    >
+      Contact
+    </a>
+    <a
+      class="nav-link hover:text-tertiary"
+      href="/about"
+    >
+      About
+    </a>
+    <a
+      class="nav-link hover:text-tertiary"
+      href="/profile"
+    >
+      Profile
+    </a>
+    <a
+      class="nav-link hover:text-tertiary"
+      href="/signup"
+    >
+      Sign Up
+    </a>
+    <a
+      class="nav-link hover:text-tertiary"
+      href="/signin"
+    >
+      Sign In
+    </a>
+    <a
+      class="nav-link hover:text-tertiary"
+      href="/logout"
+    >
+      Log Out
+    </a>
+    <button
+      id="translation-icon"
+      type="submit"
+    >
+      <img
+        alt="icon"
+        class="h-10 justify-self-center py-0 mx-10"
+        src="https://cdn.discordapp.com/attachments/1031834305703460906/1035608527923843122/translation-icon.png"
+      />
+    </button>
+  </div>
+  <button
+    class=" inline md:hidden self-start nav-link"
+    type="button"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 448 512"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+      />
+    </svg>
+  </button>
+</nav>
+`;
