@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly: 
+    <h1 className='text-[20px] sm:text-[40px] mb-3 sm:mb-0'>Subscribe to our <br /> Newsletter !</h1>
+   1`] = `
+<h1
+  class="text-[20px] sm:text-[40px] mb-3 sm:mb-0"
+>
+  Subscribe to our 
+  <br />
+   Newsletter !
+</h1>
+`;
