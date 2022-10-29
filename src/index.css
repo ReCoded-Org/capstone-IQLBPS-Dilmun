@@ -15,15 +15,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.nav-link {
-  @apply mx-10 px-2 py-2 ;
-}
-
-.active {
-  @apply text-tertiary;
-}
-
-#translation-icon {
-  color: #D9DCD6;
-}
