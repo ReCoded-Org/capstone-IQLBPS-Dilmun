@@ -5,7 +5,7 @@ exports[`render NavBar correctly 1`] = `
   class="shadow-md w-full fixed top-0 left-0 bg-primary"
 >
   <div
-    class="md:flex bg-primary py-3 items-center justify-between md:px-8 px-10 max-h-24"
+    class="md:flex bg-primary py-2 items-center justify-between md:px-8 px-10 max-h-24"
   >
     <div>
       <a
@@ -22,7 +22,7 @@ exports[`render NavBar correctly 1`] = `
       type="button"
     >
       <svg
-        class="text-6xl text-secondary absolute right-8 top-7 cursor-pointer md:hidden"
+        class="text-6xl text-secondary absolute right-8 top-5 cursor-pointer md:hidden"
         fill="currentColor"
         height="1em"
         stroke="currentColor"

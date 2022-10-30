@@ -31,9 +31,9 @@ function NavBar() {
         </div>
         <button type="button" onClick={() => setOpen(!open)}>
           {open ? (
-            <AiOutlineClose className="text-6xl text-secondary absolute right-8 top-6 cursor-pointer md:hidden" />
+            <AiOutlineClose className="text-6xl text-secondary absolute right-8 top-5 cursor-pointer md:hidden" />
           ) : (
-            <FaBars className="text-6xl text-secondary absolute right-8 top-6 cursor-pointer md:hidden" />
+            <FaBars className="text-6xl text-secondary absolute right-8 top-5 cursor-pointer md:hidden" />
           )}
         </button>
         <ul
