@@ -98,7 +98,7 @@ function NavBar() {
             </Link>
           </li>
           <button type="submit">
-            <SiGoogletranslate className=" text-3xl md:ml-6 md:my-0 text-background hover:text-secondary duration-500" />
+            <SiGoogletranslate className=" text-3xl md:ml-6 md:my-0 mt-2 text-background hover:text-secondary duration-500" />
           </button>
         </ul>
       </div>

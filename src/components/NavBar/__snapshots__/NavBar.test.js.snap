@@ -99,7 +99,7 @@ exports[`render NavBar correctly 1`] = `
         type="submit"
       >
         <svg
-          class=" text-3xl md:ml-6 md:my-0 text-background hover:text-secondary duration-500"
+          class=" text-3xl md:ml-6 md:my-0 mt-2 text-background hover:text-secondary duration-500"
           fill="currentColor"
           height="1em"
           role="img"
