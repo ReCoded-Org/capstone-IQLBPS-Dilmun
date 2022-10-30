@@ -3,8 +3,8 @@ import data from './faq.json';
 
 function FAQ() {
   return (
-    <section className="bg-background py-14 mx-auto">
-      <h2 className="text-4xl mb-10 text-primary font-bold">
+    <section className="bg-background py-14 pt-20 mx-auto">
+      <h2 className="text-4xl mb-10 text-primary font-bold text-center">
         Frequently Asked Questions
       </h2>
       <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center">
@@ -64,7 +64,7 @@ function FAQ() {
         </div>
         <div className="w-1/2 h-full">
           <img
-            className="w-full h-full max-h-96 object-contain drop-shadow-xl	"
+            className="w-full h-full max-h-96 object-contain 	"
             src="/assets/img/faq.png"
             alt="frequently asked questions"
           />
