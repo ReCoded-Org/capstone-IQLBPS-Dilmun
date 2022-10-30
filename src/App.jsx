@@ -1,14 +1,11 @@
 import React from 'react';
-
 import './App.css';
-import Features from './components/Features/Features';
-import NewsLetter from './components/NewsLetter';
+import Hero from './components/Hero';
 
 function App() {
   return (
     <div className="App">
-      <Features />
-      <NewsLetter />
+    <Hero/>
     </div>
   );
 }
