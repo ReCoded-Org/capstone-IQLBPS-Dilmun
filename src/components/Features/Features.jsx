@@ -8,19 +8,19 @@ const Features = () => {
   return (
     <section
       data-testid="features-section"
-      className="bg-background dark:bg-gray-900"
+      className="bg-primary dark:bg-gray-900"
     >
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="mb-8 lg:mb-16">
           <h2
             data-testid="features-title"
-            className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+            className="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
           >
             Designed for your needs and kind
           </h2>
           <p
             data-testid="features-paragraph"
-            className="text-gray-500 sm:text-xl dark:text-gray-400"
+            className="text-background sm:text-xl dark:text-gray-400"
           >
             Here at Dilmun we focus on joining people together and help those
             people that are in need.
@@ -40,6 +40,7 @@ const Features = () => {
             description="Use the website in your preferred language"
           />
           <FeatureCard
+            customClass='col-span-2 lg:col-span-1'
             data-testid="feature-card"
             icon={<SiGotomeeting />}
             title="Meet"
