@@ -8,15 +8,15 @@ test('should render features component ', () => {
 
 });
 
-test('feature section h2 should contain (Designed for your needs and kind) ', () => {
+test('feature section h2 should contain (Designed to meet your needs.) ', () => {
   render(<Features />);
   const FeaturesTitle = screen.getByTestId('features-title');
-  expect(FeaturesTitle).toHaveTextContent('Designed for your needs and kind');
+  expect(FeaturesTitle).toHaveTextContent('Designed to meet your needs.');
 });
-test('feature section p should contain (Here at Dilmun we focus on joining people together and help those people that are in need.) ', () => {
+test('feature section p should contain (Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.) ', () => {
   render(<Features />);
   const FeaturesParagraph = screen.getByTestId('features-paragraph');
-  expect(FeaturesParagraph).toHaveTextContent('Here at Dilmun we focus on joining people together and help those people that are in need.');
+  expect(FeaturesParagraph).toHaveTextContent('Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.');
 });
 
 test('feature section should contain 3 feature cards', () => {

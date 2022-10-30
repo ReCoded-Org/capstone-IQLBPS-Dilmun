@@ -16,14 +16,14 @@ const Features = () => {
             data-testid="features-title"
             className="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
           >
-            Designed for your needs and kind
+            Designed to meet your needs.
           </h2>
           <p
             data-testid="features-paragraph"
             className="text-background sm:text-xl dark:text-gray-400"
           >
-            Here at Dilmun we focus on joining people together and help those
-            people that are in need.
+            Here at Dilmun we sell various products to customers and accept
+            donations to help those people that are in need.
           </p>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
@@ -40,7 +40,7 @@ const Features = () => {
             description="Use the website in your preferred language"
           />
           <FeatureCard
-            customClass='col-span-2 lg:col-span-1'
+            customClass="git ccol-span-2 lg:col-span-1"
             data-testid="feature-card"
             icon={<SiGotomeeting />}
             title="Meet"
