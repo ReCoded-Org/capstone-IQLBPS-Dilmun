@@ -3,7 +3,7 @@ import data from './faq.json';
 
 function FAQ() {
   return (
-    <section className="bg-background py-10 mx-auto">
+    <section className="bg-background py-14 mx-auto">
       <h2 className="text-4xl mb-10 text-primary font-bold">
         Frequently Asked Questions
       </h2>
@@ -17,7 +17,7 @@ function FAQ() {
                     className={`flex w-full justify-between border-b-2 border-primary px-4 py-4 text-left font-medium hover:text-white hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-opacity-75 text-md ${
                       open
                         ? ' bg-primary text-white '
-                        : ' bg-background  text-primary '
+                        : ' bg-background text-primary '
                     } ${index === 0 && ' rounded-t-lg '} ${
                       index === data.length - 1 &&
                       ' rounded-b-lg border-b-none '
@@ -64,8 +64,8 @@ function FAQ() {
         </div>
         <div className="w-1/2 h-full">
           <img
-            className="w-full h-full max-h-96 object-contain"
-            src="/assets/img/faq.jpg"
+            className="w-full h-full max-h-96 object-contain drop-shadow-xl	"
+            src="/assets/img/faq.png"
             alt="frequently asked questions"
           />
         </div>
