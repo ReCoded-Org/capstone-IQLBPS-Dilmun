@@ -7,7 +7,7 @@ function FAQ() {
       <h2 className="text-4xl mb-10 text-primary font-bold">
         Frequently Asked Questions
       </h2>
-      <div className=" mx-14  px-4 flex flex-col lg:flex-row gap-4 justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center">
         <div className="w-full lg:w-1/2 max-w-md p-2">
           {data.questions.map((item, index) => (
             <Disclosure key={item.question}>
@@ -65,7 +65,7 @@ function FAQ() {
         <div className="w-1/2 h-full">
           <img
             className="w-full h-full max-h-96 object-contain"
-            src="public\assets\img\faq.jpg"
+            src="/assets/img/faq.jpg"
             alt="frequently asked questions"
           />
         </div>
