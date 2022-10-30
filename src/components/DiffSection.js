@@ -6,6 +6,7 @@ function DiffSection(){
         <div className="DiffVid">
             <video src={CoffeeShopCommercial} autoPlay loop muted >
             <track kind="captions"/>
+            
             </video>
         </div>
     )

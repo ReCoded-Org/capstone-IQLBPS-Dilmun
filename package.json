@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^14.1.1",
     "emailjs": "^4.0.1",
+    "enzyme-to-json": "^3.6.2",
     "firebase": "^9.12.1",
     "i18next": "^22.0.3",
     "i18next-browser-languagedetector": "^7.0.0",
