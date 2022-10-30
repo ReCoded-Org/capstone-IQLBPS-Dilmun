@@ -40,7 +40,7 @@ const Features = () => {
             description="Use the website in your preferred language"
           />
           <FeatureCard
-            customClass="git ccol-span-2 lg:col-span-1"
+            customClass="git col-span-2 lg:col-span-1"
             data-testid="feature-card"
             icon={<SiGotomeeting />}
             title="Meet"
