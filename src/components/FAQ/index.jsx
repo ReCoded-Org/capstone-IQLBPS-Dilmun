@@ -56,8 +56,8 @@ function FAQ() {
       <div className="">
         <img
           className="w-full h-full"
-          src="/assets/img/keila-hotzel-lFmuWU0tv4M-unsplash.jpg"
-          alt="fkndfjn"
+          src="public\assets\img\faq.jpg"
+          alt="frequently asked questions"
         />
       </div>
     </div>
