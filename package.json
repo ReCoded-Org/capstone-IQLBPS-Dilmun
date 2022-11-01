@@ -10,7 +10,6 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^14.1.1",
-    "add": "^2.0.6",
     "emailjs": "^4.0.1",
     "firebase": "^9.12.1",
     "heroicons": "^2.0.12",
@@ -27,7 +26,6 @@
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.0",
-    "yarn": "^1.22.19",
     "yup": "^0.32.11"
   },
   "scripts": {
