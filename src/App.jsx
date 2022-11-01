@@ -1,7 +1,8 @@
 import React from 'react';
-import NavBar from './components/NavBar/NavBar'    
+import NavBar from './components/NavBar/NavBar'
 import Features from './components/Features/Features';
 import NewsLetter from './components/NewsLetter';
+import SearchBar from './components/SearchBar';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <NavBar />
       <Features />
       <NewsLetter />
+      <SearchBar />
     </div>
   );
 }
