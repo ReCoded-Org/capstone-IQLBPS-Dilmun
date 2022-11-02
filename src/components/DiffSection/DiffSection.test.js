@@ -1,7 +1,7 @@
 import React from "react";
-import DiffSection from "../DiffSection";
 import OverlapText from "./OverlapText";
 import Button from "./Button";
+import DiffSection from "../DiffSection";
 import renderer from 'react-test-renderer'
 //import { renderer } from "@testing-library/react";
 
