@@ -6,7 +6,7 @@ function SignIn() {
   };
   return (
     <div className="bg-background h-screen flex flex-col justify-center items-center">
-      <h1 className="text-5xl font-bold my-7 text-primary absolute inset-y-0 top-24 justify-self-center">SIGN IN</h1>
+      <h1 className="text-5xl font-bold mb-10 text-primary ">SIGN IN</h1>
       <form onSubmit={handleSubmit} className="flex flex-col justufy-center">
         <label htmlFor="email">
           <span className="text-primary font-semibold">Email</span>
@@ -28,10 +28,22 @@ function SignIn() {
         </label>
         <button
           type="submit"
-          className="bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+          className="my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
         >
           Sign In
         </button>
+        <button
+        type="button"
+        className="my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+      >
+        Sign In With Google
+      </button>
+      <button
+      type="button"
+      className="my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+    >
+      Sign In With Facebook
+    </button>
       </form>
     </div>
   );
