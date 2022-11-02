@@ -6,7 +6,7 @@ function SignIn() {
   };
   return (
     <div className="bg-background h-screen flex flex-col justify-center items-center">
-      <h1 className="text-4xl font-bold my-4 text-primary">SIGN IN</h1>
+      <h1 className="text-5xl font-bold my-7 text-primary absolute inset-y-0 top-24 justify-self-center">SIGN IN</h1>
       <form onSubmit={handleSubmit} className="flex flex-col justufy-center">
         <label htmlFor="email">
           <span className="text-primary font-semibold">Email</span>
