@@ -15,9 +15,16 @@ const LanguageButton = () => {
   };
 
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu
+      as="div"
+      data-testid="language-button"
+      className="relative inline-block text-left"
+    >
       <div>
-        <Menu.Button className="md:ml-6 text-2xl md:mt-0 mt-2 text-background hover:text-secondary duration-500">
+        <Menu.Button
+          data-testid="language-botton-toggle"
+          className="md:ml-6 text-2xl md:mt-0 mt-2 text-background hover:text-secondary duration-500"
+        >
           <SiGoogletranslate />
         </Menu.Button>
       </div>
@@ -32,10 +39,11 @@ const LanguageButton = () => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="absolute -right-24 md:right-0 z-10 mt-2 w-56 origin-center md:origin-top-right rounded-md bg-primary shadow-lg ring-1 ring-white ring-opacity-5 focus:outline-none">
-          <div className="">
+          <div>
             <Menu.Item>
               {({ active }) => (
                 <div
+                  data-testid="language-button-option"
                   onClick={() => handleLanguageChange('en')}
                   aria-hidden="true"
                   className={classNames(
@@ -51,6 +59,7 @@ const LanguageButton = () => {
             <Menu.Item>
               {({ active }) => (
                 <div
+                  data-testid="language-button-option"
                   onClick={() => handleLanguageChange('ar')}
                   aria-hidden="true"
                   className={classNames(
