@@ -1,10 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
 
         <div className="p-4 bg-primary  rounded-lg shadow md:px-6 md:py-8 dark:bg-primary ">
             <div className="sm:flex sm:items-center sm:justify-between">
+                <Link to={HOME_ROUTE}>
+                    <img src='https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png' className='object-scale-down h-20 md:justify-self-center py-0 mx-10' alt='logo' />
+                </Link>
                 <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0">
                     <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-8" alt="Flowbite Logo" />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
