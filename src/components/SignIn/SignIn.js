@@ -5,8 +5,8 @@ function SignIn() {
     e.preventDefault();
   };
   return (
-    <div className="bg-background h-screen flex flex-col justify-center items-center">
-      <h1 className="text-5xl font-bold mb-10 text-primary ">SIGN IN</h1>
+    <div className="bg-background h-screen flex flex-col justify-center items-center w-screen">
+      <h1 className="text-5xl font-bold mb-10 text-primary">SIGN IN</h1>
       <form onSubmit={handleSubmit} className="flex flex-col justufy-center">
         <label htmlFor="email">
           <span className="text-primary font-semibold">Email</span>
@@ -33,17 +33,17 @@ function SignIn() {
           Sign In
         </button>
         <button
-        type="button"
-        className="my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
-      >
-        Sign In With Google
-      </button>
-      <button
-      type="button"
-      className="my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
-    >
-      Sign In With Facebook
-    </button>
+          type="button"
+          className="my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+        >
+          Sign In With Google
+        </button>
+        <button
+          type="button"
+          className="my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+        >
+          Sign In With Facebook
+        </button>
       </form>
     </div>
   );

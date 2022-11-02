@@ -5,6 +5,7 @@ import Features from './components/Features/Features';
 import NewsLetter from './components/NewsLetter';
 import SearchBar from './components/SearchBar';
 import SignInPage from './Pages/SignInPage';
+import SignUpPage from './Pages/SignUpPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Features />} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
       </Routes>
       <NewsLetter />
     </div>
