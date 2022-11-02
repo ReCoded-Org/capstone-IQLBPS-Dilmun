@@ -27,11 +27,26 @@ test('option 1 shloud has English title and Us Flag', async () => {
   await user.click(screen.getByTestId('language-botton-toggle'));
 
   const options = screen.getAllByTestId('language-button-option');
+  await user.click(options[0]);
+  const languageFromLocalStorage = localStorage.getItem('language');
+  expect(languageFromLocalStorage).toBe('en');
   expect(options[0].getElementsByTagName('h3')[0]).toHaveTextContent('English');
   expect(options[0].getElementsByTagName('img')[0]).toHaveAttribute(
     'src',
     UsFlag
   );
+});
+
+test('option 1 OnClick Function shloud set the language (en) into localStorage', async () => {
+  const user = userEvent.setup();
+  render(<LanguageButton />);
+
+  await user.click(screen.getByTestId('language-botton-toggle'));
+
+  const options = screen.getAllByTestId('language-button-option');
+  await user.click(options[0]);
+  const languageFromLocalStorage = localStorage.getItem('language');
+  expect(languageFromLocalStorage).toBe('en');
 });
 
 test('option 2 shloud has Arabic title and Iraq Flag', async () => {
@@ -46,4 +61,16 @@ test('option 2 shloud has Arabic title and Iraq Flag', async () => {
     'src',
     IraqFlag
   );
+});
+
+test('option 2 OnClick Function shloud set the language (ar) into localStorage', async () => {
+  const user = userEvent.setup();
+  render(<LanguageButton />);
+
+  await user.click(screen.getByTestId('language-botton-toggle'));
+
+  const options = screen.getAllByTestId('language-button-option');
+  await user.click(options[1]);
+  const languageFromLocalStorage = localStorage.getItem('language');
+  expect(languageFromLocalStorage).toBe('ar');
 });
