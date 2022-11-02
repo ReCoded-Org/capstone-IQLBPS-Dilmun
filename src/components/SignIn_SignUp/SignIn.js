@@ -2,7 +2,7 @@ import React from "react";
 
 function SignIn(){
     return (
-        <div className="bg-zinc-200 h-screen flex justify-center items-center">
+        <div className="bg-background h-screen flex justify-center items-center">
             <div>
                 <form action="" >
                     <div>
