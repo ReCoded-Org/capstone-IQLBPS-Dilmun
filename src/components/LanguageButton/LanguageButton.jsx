@@ -47,8 +47,10 @@ const LanguageButton = () => {
                   onClick={() => handleLanguageChange('en')}
                   aria-hidden="true"
                   className={classNames(
-                    active ? 'bg-secondary rounded-md' : '',
-                    'text-sm flex justify-between items-center px-4 cursor-pointer text-background'
+                    active
+                      ? 'bg-background text-secondary rounded-md'
+                      : 'text-background',
+                    'text-sm flex justify-between items-center px-4 cursor-pointer '
                   )}
                 >
                   <h3>English</h3>
@@ -63,7 +65,9 @@ const LanguageButton = () => {
                   onClick={() => handleLanguageChange('ar')}
                   aria-hidden="true"
                   className={classNames(
-                    active ? 'bg-secondary rounded-md' : '',
+                    active
+                      ? 'bg-background text-secondary rounded-md'
+                      : 'text-background',
                     'text-sm flex justify-between items-center px-4 cursor-pointer text-background'
                   )}
                 >
