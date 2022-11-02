@@ -2,19 +2,43 @@
 
 exports[`DiffSection renders without crashing  1`] = `
 <div
-  className="DiffVid"
+  className="relative"
 >
-  <video
-    autoPlay={true}
-    loop={true}
-    muted={true}
-    src="CoffeeShopCommercial.mp4"
+  <div
+    className="relative flex justify-center overflow-hidden m-14 pt-8 pb-8 md:flex rounded-md shadow-md justify-around bg-primary"
   >
-    <track
-      kind="captions"
-    />
-  </video>
+    <video
+      autoPlay={true}
+      className="opacity-80 drop-shadow-2xl rounded-md p-8 w-full sm:w-fit sm:mb-0"
+      loop={true}
+      muted={true}
+      src="Dilmun.mp4"
+    >
+      <track
+        kind="captions"
+      />
+    </video>
+    <div
+      className="absolute mt-60 my-10"
+    >
+      <div
+        className="relative z-30 p-5 text-2xl text-black bg-opacity-20"
+      >
+        <h2
+          className="text-white font-bold"
+        >
+          Check this video made by one of our satisfied customers!
+        </h2>
+      </div>
+      <div>
+        <button
+          className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          type="button"
+        >
+          Watch Full Video
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
-
-exports[`DiffSection snapshot test  1`] = `undefined`;
