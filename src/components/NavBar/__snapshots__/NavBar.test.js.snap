@@ -2,7 +2,7 @@
 
 exports[`render NavBar correctly 1`] = `
 <nav
-  class="shadow-md w-full fixed top-0 left-0 bg-primary"
+  class="shadow-md w-full z-10 fixed top-0 left-0 bg-primary"
 >
   <div
     class="md:flex bg-primary py-2 items-center justify-between md:px-8 px-10 max-h-24"
