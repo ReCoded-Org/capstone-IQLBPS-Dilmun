@@ -37,7 +37,7 @@ function SignUp() {
           />
         </label>
         <label htmlFor="password">
-          <span className="sm:w-96 w-80 shadow-lg text-primary font-semibold">Password</span>
+          <span className="text-primary font-semibold">Password</span>
           <input
             type="password"
             placeholder="Password"
