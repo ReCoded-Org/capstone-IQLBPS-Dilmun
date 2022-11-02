@@ -16,7 +16,7 @@ function SignIn() {
           <span className='text-primary font-semibold'>Password</span>
           <input type="password" placeholder="Password" required className="focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 my-3 block" />
         </label>
-        <button type='submit' className='bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary'>Sign In</button>
+        <button type='submit' className='bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500'>Sign In</button>
       </form>
     </div>
   );
