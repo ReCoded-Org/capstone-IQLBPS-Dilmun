@@ -8,6 +8,14 @@ function SignIn(){
                     <div>
                         <p>LOGIN</p>
                     </div>
+                    <div>
+                        <p>Email</p>
+                        <input type="email" placeholder='Email' required />
+                    </div>
+                    <div>
+                        <p>Password</p>
+                        <input type="password" placeholder='Password' required />
+                    </div>
                 </form>
             </div>
         </div>
