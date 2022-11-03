@@ -18,7 +18,7 @@ function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="shadow-md w-full fixed top-0 left-0 bg-primary">
+    <nav className="shadow-md w-full z-10 fixed top-0 left-0 bg-primary">
       <div className="md:flex bg-primary py-2 items-center justify-between md:px-8 px-10 max-h-24">
         <div>
           <Link to={HOME_ROUTE}>
@@ -37,9 +37,8 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${
-            open ? 'top-24' : 'top-[-170px]'
-          }`}
+          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
+            }`}
         >
           <li>
             <Link
