@@ -35,7 +35,7 @@ function SignUp() {
   };
 
   return (
-    <div className="bg-background bg-signin-background sm:bg-contain bg-cover bg-no-repeat flex flex-col justify-center items-center w-screen">
+    <div className=" flex flex-col justify-center items-center">
       <h1 className="text-5xl font-bold mb-10 text-primary pt-9 ">SIGN UP</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
