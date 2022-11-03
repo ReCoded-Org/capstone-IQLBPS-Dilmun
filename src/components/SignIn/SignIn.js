@@ -5,8 +5,8 @@ function SignIn() {
     e.preventDefault();
   };
   return (
-    <div className="bg-background bg-signin-background md:bg-contain bg-cover bg-no-repeat h-screen flex flex-col justify-center items-center w-screen">
-      <h1 className="text-5xl font-bold mb-10 text-primary">SIGN IN</h1>
+    <div className="bg-background bg-signin-background md:bg-contain bg-cover bg-no-repeat max-h-140 flex flex-col justify-center items-center w-screen">
+      <h1 className="text-5xl font-bold mb-10 text-primary pt-9">SIGN IN</h1>
       <form onSubmit={handleSubmit} className="flex flex-col justufy-center">
         <label htmlFor="email">
           <span className="text-primary font-semibold">Email</span>
@@ -14,7 +14,7 @@ function SignIn() {
             type="email"
             placeholder="Email"
             required
-            className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 my-3 block duration-500"
+            className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 my-3 block duration-500 "
           />
         </label>
         <label htmlFor="password">
