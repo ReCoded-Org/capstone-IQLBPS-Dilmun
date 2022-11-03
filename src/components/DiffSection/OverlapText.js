@@ -1,14 +1,13 @@
 import React from "react";
- // import Button from "./Button";
 
 function OverlapText() {
     return (
-    <div className ="absolute ">
-        <div className="relative z-30 p-5 text-2xl text-black bg-opacity-20">
-            <h2 className="text-white font-bold">Check this video made by one of our satisfied customers!</h2>
+        <div className=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 ">
+            <h2 className=" text-white text-[20px] sm:text-[40px] ">Check this video made by one of our satisfied customers!</h2>
+            <button type="button" className="bg-tertiary font-semibold p-2 m-2 hover:bg-blue-700 text-white font-semibold rounded-lg w-full sm:w-auto ">
+                Watch Full Video
+            </button>
         </div>
-       
-    </div>
     )
 }
 

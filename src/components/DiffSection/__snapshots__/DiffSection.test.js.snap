@@ -2,11 +2,11 @@
 
 exports[`DiffSection renders without crashing  1`] = `
 <div
-  className="relative justify-center mt-8 p-8 md:flex rounded-md shadow-md justify-around bg-primary dark:bg-gray-900"
+  className="rounded-md shadow-md bg-primary"
 >
   <video
     autoPlay={true}
-    className="flex opacity-75 drop-shadow-2xl h-1/2 rounded-md p-8 w-full sm:w-fit sm:mb-0"
+    className=" opacity-50 drop-shadow-2xl rounded-md w-full h-full"
     loop={true}
     muted={true}
     src="Dilmun.mp4"
@@ -16,17 +16,19 @@ exports[`DiffSection renders without crashing  1`] = `
     />
   </video>
   <div
-    className="absolute "
+    className=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 "
   >
-    <div
-      className="relative z-30 p-5 text-2xl text-black bg-opacity-20"
+    <h2
+      className=" text-white text-[20px] sm:text-[40px] "
     >
-      <h2
-        className="text-white font-bold"
-      >
-        Check this video made by one of our satisfied customers!
-      </h2>
-    </div>
+      Check this video made by one of our satisfied customers!
+    </h2>
+    <button
+      className="bg-tertiary font-semibold p-2 m-2 hover:bg-blue-700 text-white font-semibold rounded-lg w-full sm:w-auto "
+      type="button"
+    >
+      Watch Full Video
+    </button>
   </div>
 </div>
 `;
