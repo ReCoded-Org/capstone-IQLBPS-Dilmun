@@ -6,4 +6,5 @@ export const SIGN_IN_ROUTE = '/signin';
 export const LOG_OUT = '/logout';
 export const PROFILE = '/profile';
 export const FAQ_ROUTE = '/faq';
+export const ITEM_DETAILS_PAGE_ROUTE = '/items-details'
 
