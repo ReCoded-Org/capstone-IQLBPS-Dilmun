@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { SiGoogletranslate } from 'react-icons/si';
 
 import {
   HOME_ROUTE,
@@ -13,6 +12,7 @@ import {
   LOG_OUT,
   PROFILE,
 } from '../../route';
+import LanguageButton from '../LanguageButton/LanguageButton';
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -96,9 +96,7 @@ function NavBar() {
               LogOut
             </Link>
           </li>
-          <button type="submit">
-            <SiGoogletranslate className=" text-3xl md:ml-6 md:my-0 mt-2 text-background hover:text-secondary duration-500" />
-          </button>
+          <LanguageButton/>
         </ul>
       </div>
     </nav>
