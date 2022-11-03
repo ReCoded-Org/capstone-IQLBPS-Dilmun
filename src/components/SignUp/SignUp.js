@@ -20,7 +20,7 @@ function SignUp() {
   });
 
   return (
-    <div className="bg-background bg-signin-background sm:bg-contain bg-cover bg-no-repeat max-h-140 flex flex-col justify-center items-center w-screen">
+    <div className="bg-background bg-signin-background sm:bg-contain bg-cover bg-no-repeat h-screen flex flex-col justify-center items-center w-screen">
     <h1 className="text-5xl font-bold mb-10 text-primary pt-9 ">SIGN UP</h1>
       <form onSubmit={handleSubmit} className="flex flex-col justufy-center">
         <label htmlFor="first-name">
