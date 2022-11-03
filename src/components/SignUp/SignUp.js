@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { yupResolver } from "yup"
-// import { yupResolver } from "@hookform/resolvers/yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 
@@ -27,6 +26,7 @@ function SignUp() {
           <span className="text-primary font-semibold">First Name</span>
           <input
             type="text"
+            name='firstName'
             placeholder="First Name"
             ref={register}
             required
@@ -38,6 +38,7 @@ function SignUp() {
           <span className="text-primary font-semibold">Last Name</span>
           <input
             type="text"
+            name='lastName'
             placeholder="Last Name"
             ref={register}
             required
@@ -49,6 +50,7 @@ function SignUp() {
           <span className="text-primary font-semibold">Email</span>
           <input
             type="email"
+            name='email'
             placeholder="Email"
             ref={register}
             required
@@ -60,6 +62,7 @@ function SignUp() {
           <span className="text-primary font-semibold">Password</span>
           <input
             type="password"
+            name='password'
             placeholder="Password"
             ref={register}
             required
@@ -71,6 +74,7 @@ function SignUp() {
           <span className="text-primary font-semibold">Confirm Password</span>
           <input
             type="password"
+            name='confirmPassword'
             placeholder="Confirm Password"
             ref={register}
             required
