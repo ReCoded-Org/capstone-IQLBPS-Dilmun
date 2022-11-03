@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+// import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 
@@ -12,9 +13,10 @@ const schema = yup.object().shape({
 });
 
 function SignUp() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+
+  const { register, handleSubmit, errors } = useForm({
+    resolver: yupResolver(schema),
+  });
 
   return (
     <div className="bg-background bg-signin-background sm:bg-contain bg-cover bg-no-repeat max-h-140 flex flex-col justify-center items-center w-screen">
@@ -25,45 +27,55 @@ function SignUp() {
           <input
             type="text"
             placeholder="First Name"
+            ref={register}
             required
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 my-3 block duration-500"
           />
+          <p> {errors.firstName?.message} </p>
         </label>
         <label htmlFor="last-name">
           <span className="text-primary font-semibold">Last Name</span>
           <input
             type="text"
             placeholder="Last Name"
+            ref={register}
             required
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 my-3 block duration-500"
           />
+          <p> {errors.lastName?.message} </p>
         </label>
         <label htmlFor="email">
           <span className="text-primary font-semibold">Email</span>
           <input
             type="email"
             placeholder="Email"
+            ref={register}
             required
             className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 my-3 block duration-500"
           />
+          <p> {errors.email?.message} </p>
         </label>
         <label htmlFor="password">
           <span className="text-primary font-semibold">Password</span>
           <input
             type="password"
             placeholder="Password"
+            ref={register}
             required
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 my-3 block duration-500"
           />
+          <p> {errors.password?.message} </p>
         </label>
         <label htmlFor="confirm-password">
           <span className="text-primary font-semibold">Confirm Password</span>
           <input
             type="password"
             placeholder="Confirm Password"
+            ref={register}
             required
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 my-3 block duration-500"
           />
+          <p> {errors.confirmPassword && "Passwords Should Match!"} </p>
         </label>
         <button
           type="submit"
