@@ -1,4 +1,15 @@
 import React from 'react';
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+
+
+const schema = yup.object().shape({
+  firstName: yup.string().required("Please insert your First Name"),
+  lastName: yup.string().required("Please insert your Last Name"),
+  email: yup.string().email().required("Please insert your Email"),
+  password: yup.string().min(4).max(15).required("Please insert your Password"),
+  confirmPassword: yup.string().oneOf([yup.ref("password"), null]),
+});
 
 function SignUp() {
   const handleSubmit = (e) => {
