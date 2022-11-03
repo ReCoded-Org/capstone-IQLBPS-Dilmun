@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar'
 import Features from './components/Features/Features';
 import NewsLetter from './components/NewsLetter';
 import SearchBar from './components/SearchBar';
+import ItemDetailsPage from './pages/ItemDetailsPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <SearchBar />
       <Features />
       <NewsLetter />
+      <ItemDetailsPage />
     </div>
   );
 }
