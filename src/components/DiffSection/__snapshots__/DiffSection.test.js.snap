@@ -2,7 +2,7 @@
 
 exports[`DiffSection renders without crashing  1`] = `
 <div
-  className="rounded-md shadow-md bg-primary w-full h-96 relative"
+  className=" rounded-md shadow-md bg-primary w-full h-96 relative"
 >
   <video
     autoPlay={true}
@@ -16,18 +16,18 @@ exports[`DiffSection renders without crashing  1`] = `
     />
   </video>
   <div
-    className=" relative mt-14 pt-24 lg:pt-18"
+    className=" relative mt-14 pt-14 lg:pt-12 "
   >
     <div
       className=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 "
     >
       <h2
-        className=" text-white text-[20px] sm:text-[40px] "
+        className="text-center text-white text-[16px] sm:text-[32px] "
       >
         Check out this video made by one of our satisfied customers!
       </h2>
       <button
-        className="bg-tertiary font-semibold p-2 m-2 hover:shadow-lg text-white font-semibold rounded-lg w-full sm:w-auto "
+        className="bg-tertiary font-semibold p-2 m-2 hover:shadow-lg text-white font-semibold rounded-lg  sm:w-auto "
         type="button"
       >
         Watch Full Video
