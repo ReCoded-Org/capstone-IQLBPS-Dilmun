@@ -2,7 +2,8 @@ import React from 'react';
 import NavBar from './components/NavBar/NavBar'
 import Features from './components/Features/Features';
 import NewsLetter from './components/NewsLetter';
-import SearchBar from './components/SearchBar';
+import SearchBar from './components/SearchBar/SearchBar';
+
 
 function App() {
   return (
