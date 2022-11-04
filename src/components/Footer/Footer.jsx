@@ -33,7 +33,7 @@ const Footer = () => {
                             Home
                         </Link>
                     </li>
-                    
+
 
                     <li>
 
