@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomButton from '../CustomComponents/CustomButton'
+import CustomButton from '../customComponents/CustomButton'
 
 const NewsLetter = () => {
   return (
