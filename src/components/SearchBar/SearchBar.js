@@ -4,7 +4,7 @@ import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { ChevronUpDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 // Custom Components
-import CustomButton from '../CustomButton'
+import CustomButton from '../CustomComponents/CustomButton'
 
 
 // just for the demo
