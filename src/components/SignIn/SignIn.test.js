@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import SignIn from './SignIn';
 
-test('render inputs correctly', () => {
+test('Sign In Page Renders Correctly', () => {
   render(
     <Router>
       <SignIn />

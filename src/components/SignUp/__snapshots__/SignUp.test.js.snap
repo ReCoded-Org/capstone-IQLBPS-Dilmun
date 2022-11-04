@@ -1,18 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sign In Page Renders Correctly 1`] = `
+exports[`Sign Up Page Renders Correctly 1`] = `
 <div
   class="flex flex-col justify-center items-center"
-  data-testid="sign-in"
+  data-testid="sign-up"
 >
   <h1
     class="text-5xl font-bold mb-10 text-primary pt-9"
   >
-    SIGN IN
+    SIGN UP
   </h1>
   <form
     class="flex flex-col justify-center"
   >
+    <label
+      class="mt-3"
+      for="firstName"
+    >
+      <span
+        class="text-primary font-semibold"
+      >
+        First Name
+      </span>
+      <input
+        class="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
+        name="firstName"
+        placeholder="First Name"
+        type="text"
+      />
+      <p
+        class="text-red-800 font-semibold"
+      />
+    </label>
+    <label
+      class="mt-3"
+      for="lastName"
+    >
+      <span
+        class="text-primary font-semibold"
+      >
+        Last Name
+      </span>
+      <input
+        class="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
+        name="lastName"
+        placeholder="Last Name"
+        type="text"
+      />
+      <p
+        class="text-red-800 font-semibold"
+      >
+         
+         
+      </p>
+    </label>
     <label
       class="mt-3"
       for="email"
@@ -23,11 +64,17 @@ exports[`Sign In Page Renders Correctly 1`] = `
         Email
       </span>
       <input
-        class="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500 "
+        class="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
+        name="email"
         placeholder="Email"
-        required=""
         type="email"
       />
+      <p
+        class="text-red-800 font-semibold"
+      >
+         
+         
+      </p>
     </label>
     <label
       class="mt-3"
@@ -40,27 +87,55 @@ exports[`Sign In Page Renders Correctly 1`] = `
       </span>
       <input
         class="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
+        name="password"
         placeholder="Password"
-        required=""
         type="password"
       />
+      <p
+        class="text-red-800 font-semibold"
+      >
+         
+         
+      </p>
+    </label>
+    <label
+      class="mt-3"
+      for="confirmPassword"
+    >
+      <span
+        class="text-primary font-semibold"
+      >
+        Confirm Password
+      </span>
+      <input
+        class="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
+        name="confirmPassword"
+        placeholder="Confirm Password"
+        type="password"
+      />
+      <p
+        class="text-red-800 font-semibold mt-1 mb-3"
+      >
+         
+         
+      </p>
     </label>
     <button
       class="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
       type="submit"
     >
-      Sign In
+      Sign Up
     </button>
     <p
       class="text-lg text-primary self-center mt-2"
     >
-      Do Not Have an Account?
+      Already Have an Account?
        
       <a
         class="underline hover:text-tertiary duration-300"
-        href="/signup"
+        href="/signin"
       >
-        Sign Up
+        Sign In
       </a>
     </p>
     <p
@@ -71,7 +146,7 @@ exports[`Sign In Page Renders Correctly 1`] = `
     <p
       class="text-3xl text-primary font-semibold self-center mb-6"
     >
-      Sign in With
+      Sign Up With
       <button
         type="button"
       >
@@ -81,7 +156,6 @@ exports[`Sign In Page Renders Correctly 1`] = `
           height="1em"
           stroke="currentColor"
           stroke-width="0"
-          type="icon"
           viewBox="0 0 16 16"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
