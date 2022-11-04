@@ -1,4 +1,4 @@
-import { people01, people02, people03 } from "../assets/index";
+import { people01, people02, people03 } from "../assets/FeedbackCardImages";
 
 export const feedback = [
   {
@@ -12,7 +12,7 @@ export const feedback = [
   {
     id: "feedback-2",
     content:
-      "Every purchase felt secure and all items were received in a timely manner. What a great place to showcase businesses goods!",
+      "Every purchase felt secure and all items were received in a timely manner. What a great place to showcase products and goods of the business!",
     name: "Steve Mark",
     title: "Client",
     img: people02

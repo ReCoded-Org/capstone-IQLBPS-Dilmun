@@ -3,7 +3,7 @@ import NavBar from './components/NavBar/NavBar'
 import Features from './components/Features/Features';
 import NewsLetter from './components/NewsLetter';
 import Testimonials from './components/Proof/Testimonials';
-import CostumersLogo from './components/Proof/CostumersLogo';
+import PartnersLogo from './components/Proof/PartnersLogo';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       <Features />
       <Testimonials />
-      <CostumersLogo />
+      <PartnersLogo />
       <NewsLetter />
     </div>
   );

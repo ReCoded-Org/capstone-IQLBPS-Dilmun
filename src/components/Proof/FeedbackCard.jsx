@@ -1,7 +1,7 @@
-import { quotes } from "./assets";
+import { quotes } from "./assets/FeedbackCardImages";
 
 const FeedbackCard = ({ content, name, title, img }) => (
-  <div className="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card"
+  <div className="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-background transition"
   data-testid="feedbackcard-div">
     <img
       src={quotes}
