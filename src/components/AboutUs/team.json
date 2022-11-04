@@ -1,0 +1,136 @@
+[
+  {
+    "id": "1",
+    "name": "Kutay",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Lead Engineer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://www.GitHub.com/",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Maher",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Project Supervisor",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://www.GitHub.com/",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Dania",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Web Developer",
+    "likedIn": "https://www.linkedin.com/in/john-doe-123456789/",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://www.GitHub.com/",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Mike",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://www.GitHub.com/",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Dan",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://www.GitHub.com/",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Stacy",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://www.GitHub.com/",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Ben",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://www.GitHub.com/",
+        "icon": "github"
+      }
+    ]
+  }
+]
