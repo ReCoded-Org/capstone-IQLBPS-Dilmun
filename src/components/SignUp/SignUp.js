@@ -1,5 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import {BsFacebook, BsGoogle} from 'react-icons/bs'
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
@@ -116,18 +118,9 @@ function SignUp() {
         >
           Sign Up
         </button>
-        <button
-          type="button"
-          className="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
-        >
-          Sign Up With Google
-        </button>
-        <button
-          type="button"
-          className="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
-        >
-          Sign Up With Facebook
-        </button>
+        <p className="text-lg text-primary self-center mt-2">Already Have an Account? <Link to="/signin" className='underline hover:text-tertiary duration-300'>Sign In</Link></p>
+        <p className="text-2xl text-primary font-semibold self-center my-4">OR</p>
+        <p className="text-3xl text-primary font-semibold self-center mb-6">Sign Up With <BsFacebook className='inline pb-1 h-9 w-9'/> or <BsGoogle className='inline pb-1 h-9 w-9'/></p>
       </form>
     </div>
   );

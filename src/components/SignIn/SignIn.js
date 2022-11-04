@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import {BsFacebook, BsGoogle} from 'react-icons/bs'
 
 function SignIn() {
   const handleSubmit = (e) => {
@@ -32,18 +34,9 @@ function SignIn() {
         >
           Sign In
         </button>
-        <button
-          type="button"
-          className="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
-        >
-          Sign In With Google
-        </button>
-        <button
-          type="button"
-          className="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
-        >
-          Sign In With Facebook
-        </button>
+        <p className="text-lg text-primary self-center mt-2">Do Not Have an Account? <Link to="/signup" className='underline hover:text-tertiary duration-300'>Sign Up</Link></p>
+        <p className="text-2xl text-primary font-semibold self-center my-4">OR</p>
+        <p className="text-3xl text-primary font-semibold self-center mb-6">Sign in With <BsFacebook className='inline pb-1 h-9 w-9'/> or <BsGoogle className='inline pb-1 h-9 w-9'/></p>
       </form>
     </div>
   );
