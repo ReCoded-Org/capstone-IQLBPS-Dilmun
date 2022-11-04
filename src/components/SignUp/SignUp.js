@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import {BsFacebook, BsGoogle} from 'react-icons/bs'
+import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
@@ -43,7 +43,7 @@ function SignUp() {
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-center"
       >
-        <label htmlFor="firstName" className='mt-3'>
+        <label htmlFor="firstName" className="mt-3">
           <span className="text-primary font-semibold">First Name</span>
           <input
             type="text"
@@ -56,7 +56,7 @@ function SignUp() {
             {errors?.firstName?.message}
           </p>
         </label>
-        <label htmlFor="lastName" className='mt-3'>
+        <label htmlFor="lastName" className="mt-3">
           <span className="text-primary font-semibold">Last Name</span>
           <input
             type="text"
@@ -70,7 +70,7 @@ function SignUp() {
             {errors?.lastName?.message}{' '}
           </p>
         </label>
-        <label htmlFor="email" className='mt-3'>
+        <label htmlFor="email" className="mt-3">
           <span className="text-primary font-semibold">Email</span>
           <input
             type="email"
@@ -84,7 +84,7 @@ function SignUp() {
             {errors?.email?.message}{' '}
           </p>
         </label>
-        <label htmlFor="password" className='mt-3'>
+        <label htmlFor="password" className="mt-3">
           <span className="text-primary font-semibold">Password</span>
           <input
             type="password"
@@ -98,7 +98,7 @@ function SignUp() {
             {errors?.password?.message}{' '}
           </p>
         </label>
-        <label htmlFor="confirmPassword" className='mt-3'>
+        <label htmlFor="confirmPassword" className="mt-3">
           <span className="text-primary font-semibold">Confirm Password</span>
           <input
             type="password"
@@ -118,9 +118,29 @@ function SignUp() {
         >
           Sign Up
         </button>
-        <p className="text-lg text-primary self-center mt-2">Already Have an Account? <Link to="/signin" className='underline hover:text-tertiary duration-300'>Sign In</Link></p>
-        <p className="text-2xl text-primary font-semibold self-center my-4">OR</p>
-        <p className="text-3xl text-primary font-semibold self-center mb-6">Sign Up With <BsFacebook className='inline pb-1 h-9 w-9'/> or <BsGoogle className='inline pb-1 h-9 w-9'/></p>
+        <p className="text-lg text-primary self-center mt-2">
+          Already Have an Account?{' '}
+          <Link
+            to="/signin"
+            className="underline hover:text-tertiary duration-300"
+          >
+            Sign In
+          </Link>
+        </p>
+        <p className="text-2xl text-primary font-semibold self-center my-4">
+          OR
+        </p>
+        <p className="text-3xl text-primary font-semibold self-center mb-6">
+          Sign Up With
+          <button type="button">
+            <BsFacebook className="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200" />
+            or
+          </button>
+          <button type="button">
+            <BsGoogle className="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200" />
+            .
+          </button>
+        </p>
       </form>
     </div>
   );
