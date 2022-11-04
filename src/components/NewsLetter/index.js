@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomButton from '../CustomButton'
+import CustomButton from '../CustomComponents/CustomButton'
 
 const NewsLetter = () => {
   return (
@@ -13,7 +13,7 @@ const NewsLetter = () => {
           <p className='text-background mb-5'>Subscribe to our newsletter and stay updated</p>
           <div className='items-center sm:flex justify-center gap-2'>
             <input type="text" placeholder='Write your email here' className='rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid ' />
-            <CustomButton paddingX='px-2' paddingY='py-2'>Subscribe</CustomButton>
+            <CustomButton paddingY='py-2'>Subscribe</CustomButton>
           </div>
         </div>
       </div>
