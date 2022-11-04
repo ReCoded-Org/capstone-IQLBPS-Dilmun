@@ -37,8 +37,9 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
-            }`}
+          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${
+            open ? 'top-24' : 'top-[-170px]'
+          }`}
         >
           <li>
             <Link
@@ -96,7 +97,7 @@ function NavBar() {
               LogOut
             </Link>
           </li>
-          <LanguageButton/>
+          <LanguageButton />
         </ul>
       </div>
     </nav>

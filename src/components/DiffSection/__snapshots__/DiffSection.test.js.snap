@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DiffSection renders without crashing  1`] = `
+<div
+  className=" rounded-md shadow-md bg-primary w-full h-96 relative"
+>
+  <video
+    autoPlay={true}
+    className="w-full h-full object-cover opacity-60 drop-shadow-2xl rounded-md absolute"
+    loop={true}
+    muted={true}
+    src="Dilmun.mp4"
+  >
+    <track
+      kind="captions"
+    />
+  </video>
+  <div
+    className=" relative mt-14 pt-14 lg:pt-12 "
+  >
+    <div
+      className=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 "
+    >
+      <h2
+        className="text-center text-white text-[16px] sm:text-[32px] "
+      >
+        Check out this video made by one of our satisfied customers!
+      </h2>
+      <button
+        className="bg-tertiary font-semibold p-2 m-2 hover:shadow-lg text-white font-semibold rounded-lg  sm:w-auto "
+        type="button"
+      >
+        Watch Full Video
+      </button>
+    </div>
+  </div>
+</div>
+`;
