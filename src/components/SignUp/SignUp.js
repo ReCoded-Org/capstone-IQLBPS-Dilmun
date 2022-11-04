@@ -35,11 +35,11 @@ function SignUp() {
   };
 
   return (
-    <div className=" flex flex-col justify-center items-center">
-      <h1 className="text-5xl font-bold mb-10 text-primary pt-9 ">SIGN UP</h1>
+    <div className="flex flex-col justify-center items-center">
+      <h1 className="text-5xl font-bold mb-10 text-primary pt-9">SIGN UP</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col justufy-center"
+        className="flex flex-col justify-center"
       >
         <label htmlFor="firstName" className='mt-3'>
           <span className="text-primary font-semibold">First Name</span>
