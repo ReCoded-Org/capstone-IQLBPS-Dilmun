@@ -14,7 +14,7 @@ const Testimonials = () => (
         What People are <br className="sm:block hidden" /> saying about us
       </h2>
       <div className="w-full md:mt-0 mt-6">
-        <p className="font-poppins font-normal text-[20px] leading-[30.8px] text-center max-w-[450px] p-6 sm:text-left"
+        <p className="font-poppins font-normal text-[20px] leading-[30.8px] text-center p-6 md:text-left md:max-w-[450px]"
         data-testid="testimonials-paragraph">
           Everything you need to know about our business and products anywhere on the planet.
         </p>
