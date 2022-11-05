@@ -66,8 +66,7 @@ function SignUp() {
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
           <p className="text-red-800 font-semibold">
-            {' '}
-            {errors?.lastName?.message}{' '}
+            {errors?.lastName?.message}
           </p>
         </label>
         <label htmlFor="email" className="mt-3">
@@ -80,8 +79,7 @@ function SignUp() {
             className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
           <p className="text-red-800 font-semibold">
-            {' '}
-            {errors?.email?.message}{' '}
+            {errors?.email?.message}
           </p>
         </label>
         <label htmlFor="password" className="mt-3">
@@ -94,8 +92,7 @@ function SignUp() {
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
           <p className="text-red-800 font-semibold">
-            {' '}
-            {errors?.password?.message}{' '}
+            {errors?.password?.message}
           </p>
         </label>
         <label htmlFor="confirmPassword" className="mt-3">
@@ -108,8 +105,7 @@ function SignUp() {
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
           <p className="text-red-800 font-semibold mt-1 mb-3">
-            {' '}
-            {errors?.confirmPassword?.message && 'Passwords should match'}{' '}
+            {errors?.confirmPassword?.message && 'Passwords should match'}
           </p>
         </label>
         <button
@@ -119,7 +115,7 @@ function SignUp() {
           Sign Up
         </button>
         <p className="text-lg text-primary self-center mt-2">
-          Already Have an Account?{' '}
+          Already Have an Account?
           <Link
             to="/signin"
             className="underline hover:text-tertiary duration-300"

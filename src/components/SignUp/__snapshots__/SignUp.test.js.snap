@@ -49,10 +49,7 @@ exports[`Sign Up Page Renders Correctly 1`] = `
       />
       <p
         class="text-red-800 font-semibold"
-      >
-         
-         
-      </p>
+      />
     </label>
     <label
       class="mt-3"
@@ -71,10 +68,7 @@ exports[`Sign Up Page Renders Correctly 1`] = `
       />
       <p
         class="text-red-800 font-semibold"
-      >
-         
-         
-      </p>
+      />
     </label>
     <label
       class="mt-3"
@@ -93,10 +87,7 @@ exports[`Sign Up Page Renders Correctly 1`] = `
       />
       <p
         class="text-red-800 font-semibold"
-      >
-         
-         
-      </p>
+      />
     </label>
     <label
       class="mt-3"
@@ -115,10 +106,7 @@ exports[`Sign Up Page Renders Correctly 1`] = `
       />
       <p
         class="text-red-800 font-semibold mt-1 mb-3"
-      >
-         
-         
-      </p>
+      />
     </label>
     <button
       class="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
@@ -130,7 +118,6 @@ exports[`Sign Up Page Renders Correctly 1`] = `
       class="text-lg text-primary self-center mt-2"
     >
       Already Have an Account?
-       
       <a
         class="underline hover:text-tertiary duration-300"
         href="/signin"
