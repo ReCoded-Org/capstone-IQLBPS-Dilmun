@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sign In Page Renders Correctly 1`] = `
+<div
+  class="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center"
+  data-testid="sign-in"
+>
+  <h1
+    class="text-5xl font-bold mb-10 text-primary pt-9"
+  >
+    SIGN IN
+  </h1>
+  <form
+    class="flex flex-col justify-center"
+  >
+    <label
+      class="mt-3"
+      for="email"
+    >
+      <span
+        class="text-primary font-semibold"
+      >
+        Email
+      </span>
+      <input
+        class="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500 "
+        name="email"
+        placeholder="Email"
+        type="email"
+      />
+      <p
+        class="text-red-800 font-semibold"
+      />
+    </label>
+    <label
+      class="mt-3"
+      for="password"
+    >
+      <span
+        class="text-primary font-semibold"
+      >
+        Password
+      </span>
+      <input
+        class="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
+        name="password"
+        placeholder="Password"
+        type="password"
+      />
+      <p
+        class="text-red-800 font-semibold"
+      />
+    </label>
+    <button
+      class="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+      type="submit"
+    >
+      Sign In
+    </button>
+    <p
+      class="text-lg text-primary self-center mt-2"
+    >
+      Do Not Have an Account?
+       
+      <a
+        class="underline hover:text-secondary duration-300"
+        href="/signup"
+      >
+        Sign Up
+      </a>
+    </p>
+    <p
+      class="text-lg text-primary font-bold self-center my-4"
+    >
+      OR
+    </p>
+    <p
+      class="text-xl text-primary font-semibold self-center mb-6"
+    >
+      Sign in With
+      <button
+        type="button"
+      >
+        <svg
+          class="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          type="icon"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+          />
+        </svg>
+        or
+      </button>
+      <button
+        type="button"
+      >
+        <svg
+          class="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
+          />
+        </svg>
+        .
+      </button>
+    </p>
+  </form>
+</div>
+`;
