@@ -1064,16 +1064,6 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-<<<<<<< HEAD
-"@babel/runtime@^7.14.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.19.4":
-  version "7.20.0"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.20.0.tgz"
-  integrity sha512-NDYdls71fTXoU8TZHfbBWg7DiZfNzClcKui/+kyi6ppD2L1qnWW3VV6CjtaBXSUGGhiTWJ6ereOIkUvenif66Q==
-  dependencies:
-    regenerator-runtime "^0.13.10"
-
-=======
->>>>>>> 006365efc809b0c35c847741d3bd07e6c8a6328b
 "@babel/template@^7.18.10", "@babel/template@^7.3.3":
   version "7.18.10"
   resolved "https://registry.npmjs.org/@babel/template/-/template-7.18.10.tgz"
@@ -1650,19 +1640,6 @@
     protobufjs "^7.0.0"
     yargs "^16.2.0"
 
-<<<<<<< HEAD
-"@headlessui/react@^1.7.4":
-  version "1.7.4"
-  resolved "https://registry.npmjs.org/@headlessui/react/-/react-1.7.4.tgz"
-  integrity sha512-D8n5yGCF3WIkPsjEYeM8knn9jQ70bigGGb5aUvN6y4BGxcT3OcOQOKcM3zRGllRCZCFxCZyQvYJF6ZE7bQUOyQ==
-  dependencies:
-    client-only "^0.0.1"
-
-"@heroicons/react@^2.0.12":
-  version "2.0.12"
-  resolved "https://registry.npmjs.org/@heroicons/react/-/react-2.0.12.tgz"
-  integrity sha512-FZxKh3i9aKIDxyALTgIpSF2t6V6/eZfF5mRu41QlwkX3Oxzecdm1u6dpft6PQGxIBwO7TKYWaMAYYL8mp/EaOg==
-=======
 "@headlessui/react@^1.7.3":
   version "1.7.3"
   resolved "https://registry.npmjs.org/@headlessui/react/-/react-1.7.3.tgz"
@@ -1677,7 +1654,6 @@
   version "2.9.10"
   resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.9.10.tgz#e7e88942ee34e97b7bc937b0be4694194c9cd420"
   integrity sha512-JIL1DgJIlH9yuxcNGtyhsWX/PgNltz+5Gr6+8SX9fhXc/hPbEIk6wPI82nhgvp3uUb6ZfAM5mqg/x7KR7NAb+A==
->>>>>>> 006365efc809b0c35c847741d3bd07e6c8a6328b
 
 "@humanwhocodes/config-array@^0.10.5":
   version "0.10.7"
@@ -3848,11 +3824,6 @@ clean-css@^5.2.2:
   dependencies:
     source-map "~0.6.0"
 
-client-only@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz"
-  integrity sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==
-
 cliui@^7.0.2:
   version "7.0.4"
   resolved "https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz"
@@ -5768,15 +5739,9 @@ he@^1.2.0:
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
 heroicons@^2.0.12:
-<<<<<<< HEAD
-  version "2.0.12"
-  resolved "https://registry.npmjs.org/heroicons/-/heroicons-2.0.12.tgz"
-  integrity sha512-fqK3k5a1F5eUf74cebh2Ng82lCskDwMbMno9f/BCyZQjSJ8bXKl7jK3507pOSIvB2QrZjF9SD0YQzkKUx1iiNw==
-=======
   version "2.0.13"
   resolved "https://registry.npmjs.org/heroicons/-/heroicons-2.0.13.tgz"
   integrity sha512-INL+CaS5eJ8+kkXc6kz+i/4m6AWYESGpyorDIZDPH281vZWjV/W6coGmXVZdvyYVLIbPx0id4fPbWvCj//MW5A==
->>>>>>> 006365efc809b0c35c847741d3bd07e6c8a6328b
 
 hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
