@@ -7,6 +7,7 @@ import DiffSection from './components/DiffSection/DiffSection';
 import NewsLetter from './components/NewsLetter';
 import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
+import FAQ from './components/FAQ';
 import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
+      <FAQ />
       <DiffSection />
       <NewsLetter />
     </div>
