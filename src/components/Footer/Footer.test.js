@@ -11,17 +11,19 @@ test("redering footer", () => {
 })
 
 it("redering list correctly", () => {
-    const {list} =renderer.create(
-    <Router>
-        <list />
-    </Router>).toJSON();
+    const { list } = renderer.create(
+        <Router>
+            <list />
+        </Router>).toJSON();
     expect(list).toMatchSnapshot();
 })
 
 it("redering button correctly", () => {
-    const {Button} = renderer.create(
+    const { Button } = renderer.create(
         <Router>
-            <button />
+            <list >
+                <Button />
+            </list>
         </Router>).toJSON();
-        expect(Button).toMatchSnapshot();
+    expect(Button).toMatchSnapshot();
 })
