@@ -68,7 +68,7 @@ function SignIn() {
           Do Not Have an Account?{' '}
           <Link
             to="/signup"
-            className="underline hover:text-tertiary duration-300"
+            className="underline hover:text-secondary duration-300"
           >
             Sign Up
           </Link>
@@ -81,12 +81,12 @@ function SignIn() {
           <button type="button">
             <BsFacebook
               type="icon"
-              className="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200"
+              className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
             />
             or
           </button>
           <button type="button">
-            <BsGoogle className="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200" />
+            <BsGoogle className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             .
           </button>
         </p>

@@ -118,7 +118,7 @@ function SignUp() {
           Already Have an Account?
           <Link
             to="/signin"
-            className="underline hover:text-tertiary duration-300"
+            className="underline hover:text-secondary duration-300"
           >
             Sign In
           </Link>
@@ -129,11 +129,11 @@ function SignUp() {
         <p className="text-xl text-primary font-semibold self-center mb-6">
           Sign Up With
           <button type="button">
-            <BsFacebook className="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200" />
+            <BsFacebook className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             or
           </button>
           <button type="button">
-            <BsGoogle className="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200" />
+            <BsGoogle className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             .
           </button>
         </p>

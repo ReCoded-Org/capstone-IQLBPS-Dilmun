@@ -123,7 +123,7 @@ exports[`Sign In Page Rendered Correctly 1`] = `
       >
         Already Have an Account?
         <a
-          class="underline hover:text-tertiary duration-300"
+          class="underline hover:text-secondary duration-300"
           href="/signin"
         >
           Sign In
@@ -142,7 +142,7 @@ exports[`Sign In Page Rendered Correctly 1`] = `
           type="button"
         >
           <svg
-            class="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200"
+            class="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -161,7 +161,7 @@ exports[`Sign In Page Rendered Correctly 1`] = `
           type="button"
         >
           <svg
-            class="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200"
+            class="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
