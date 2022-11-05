@@ -1,7 +1,7 @@
 import React from "react";
-import OverlapText from "./OverlapText";
-import DiffSection from "../DiffSection";
 import renderer from 'react-test-renderer'
+import OverlapText from "./OverlapText";
+import DiffSection from "./DiffSection";
 
 
 test('DiffSection renders without crashing ', () => {
