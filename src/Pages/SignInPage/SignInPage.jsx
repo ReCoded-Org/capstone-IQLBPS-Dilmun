@@ -3,7 +3,7 @@ import SignIn from '../../components/SignIn/SignIn';
 
 export default function SignInPage() {
   return (
-    <div className="bg-background bg-signin-background md:bg-contain bg-cover bg-no-repeat h-screen w-full overflow-y-auto" data-testid='sign-in-page'>
+    <div className="bg-background bg-signin-background bg-cover bg-no-repeat w-full h-screen" data-testid='sign-in-page'>
       <SignIn />
     </div>
   );

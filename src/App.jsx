@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar';
+import Hero from './components/HeroSection/Hero';
+import NavBar from './components/NavBar/NavBar'
 import Features from './components/Features/Features';
 import DiffSection from './components/DiffSection';
 import NewsLetter from './components/NewsLetter';
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <Hero/>
       <SearchBar />
       <Routes>
         <Route path="/" element={<Features />} />
@@ -23,5 +25,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
