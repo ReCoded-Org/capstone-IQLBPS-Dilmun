@@ -1,32 +1,62 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+const schema = yup.object().shape({
+  email: yup
+  .string()
+  .required('Please insert your Email'),
+password: yup
+  .string()
+  .required('Please insert your Password'),
+})
+
+
+
 
 function SignIn() {
-  const handleSubmit = (e) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+  const onSubmit = (e) => {
     e.preventDefault();
   };
   return (
     <div className="flex flex-col justify-center items-center" data-testid="sign-in">
       <h1 className="text-5xl font-bold mb-10 text-primary pt-9">SIGN IN</h1>
-      <form onSubmit={handleSubmit} className="flex flex-col justify-center">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center">
         <label htmlFor="email" className="mt-3" >
           <span className="text-primary font-semibold">Email</span>
           <input
             type="email"
             placeholder="Email"
-            required
+            name='email'
+            {...register('email')}
             className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500 "
           />
+          <p className="text-red-800 font-semibold">
+          {errors?.email?.message}
+        </p>
         </label>
         <label htmlFor="password" className="mt-3">
           <span className="text-primary font-semibold">Password</span>
           <input
             type="password"
             placeholder="Password"
-            required
+            name='password'
+            {...register('password')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
+          <p className="text-red-800 font-semibold">
+          {errors?.password?.message}
+        </p>
         </label>
         <button
           type="submit"
