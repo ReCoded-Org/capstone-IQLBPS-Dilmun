@@ -12,6 +12,12 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
       },
+      transitionDuration: {
+        '0': '0ms',
+      },
+      maxHeight: {
+        "100": '26rem',
+      },
     },
     plugins: [],
   },

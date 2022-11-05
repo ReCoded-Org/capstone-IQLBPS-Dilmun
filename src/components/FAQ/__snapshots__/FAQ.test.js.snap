@@ -2,7 +2,7 @@
 
 exports[`FAQ renders correctly 1`] = `
 <section
-  className="bg-background py-14 pt-20 mx-auto"
+  className="bg-background py-20 mx-auto"
 >
   <h2
     className="text-4xl mb-10 text-primary font-bold text-center"
@@ -10,10 +10,10 @@ exports[`FAQ renders correctly 1`] = `
     Frequently Asked Questions
   </h2>
   <div
-    className="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center"
+    className="max-w-7xl mx-auto px-4 py-10 lg:max-h-100 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center"
   >
     <div
-      className="w-full lg:w-1/2 max-w-md p-2"
+      className="w-full lg:w-1/2 max-w-lg p-2 "
     >
       <button
         aria-expanded={false}
@@ -25,11 +25,13 @@ exports[`FAQ renders correctly 1`] = `
         onKeyUp={[Function]}
         type="button"
       >
-        <span>
+        <span
+          className="w-3/4 md:w-full"
+        >
           What is the return policy?
         </span>
         <svg
-          className=" h-5 w-5"
+          className="rotate-180 duration-200 transform h-5 w-5"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.5"
@@ -53,11 +55,13 @@ exports[`FAQ renders correctly 1`] = `
         onKeyUp={[Function]}
         type="button"
       >
-        <span>
-          Can I cancel my order
+        <span
+          className="w-3/4 md:w-full"
+        >
+          Can I cancel my order?
         </span>
         <svg
-          className=" h-5 w-5"
+          className="rotate-180 duration-200 transform h-5 w-5"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.5"
@@ -81,11 +85,13 @@ exports[`FAQ renders correctly 1`] = `
         onKeyUp={[Function]}
         type="button"
       >
-        <span>
+        <span
+          className="w-3/4 md:w-full"
+        >
           What methods of payment you take?
         </span>
         <svg
-          className=" h-5 w-5"
+          className="rotate-180 duration-200 transform h-5 w-5"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.5"
@@ -109,11 +115,13 @@ exports[`FAQ renders correctly 1`] = `
         onKeyUp={[Function]}
         type="button"
       >
-        <span>
+        <span
+          className="w-3/4 md:w-full"
+        >
           How do I track my order?
         </span>
         <svg
-          className=" h-5 w-5"
+          className="rotate-180 duration-200 transform h-5 w-5"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.5"
@@ -137,11 +145,13 @@ exports[`FAQ renders correctly 1`] = `
         onKeyUp={[Function]}
         type="button"
       >
-        <span>
+        <span
+          className="w-3/4 md:w-full"
+        >
           What is the policy for late/non-delivery of items ordered online?
         </span>
         <svg
-          className=" h-5 w-5"
+          className="rotate-180 duration-200 transform h-5 w-5"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.5"
@@ -157,7 +167,7 @@ exports[`FAQ renders correctly 1`] = `
       </button>
     </div>
     <div
-      className="w-1/2 h-full"
+      className="w-full lg:w-1/2 h-full"
     >
       <img
         alt="frequently asked questions"
