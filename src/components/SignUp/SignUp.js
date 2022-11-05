@@ -1,9 +1,11 @@
-import React from 'react';
+import React ,{useState , useEffect} from 'react';
+import {useSelector} from 'react-redux'
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+// import { registerInitiate } from '../../redux/action';
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Please insert your First Name'),
@@ -24,6 +26,43 @@ const schema = yup.object().shape({
 });
 
 function SignUp() {
+
+  const [state,setState] = useState({
+    firstName:"",
+    lastName:"",
+    email:"",
+    password:"",
+    confirmPassword:""
+  })
+
+  const {currentUser} = useSelector(state.user)
+
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    if (currentUser){
+      navigate.push("/")
+    }
+  },[currentUser,navigate])
+
+  // const dispatch = useDispatch();
+
+  const {firstName,lastName,email,password,confirmPassword} = state
+
+  const handleChange = (e) => {
+    const {name,value} = e.target
+    setState({...state,[name]:value})
+  }
+
+  // const handleSubmit = (e) =>{
+  //   e.preventDefault();
+  //   if(password !== confirmPassword){
+  //     return
+  //   }
+  //   dispatch(registerInitiate(firstName,lastName,email,password))
+  //   setState({firstName:"" , lastName:"" , email:"" , password:"" , confirmPassword:""})
+  // }
+
   const {
     register,
     handleSubmit,
@@ -35,6 +74,7 @@ function SignUp() {
   const onSubmit = (e) => {
     e.preventDefault();
   };
+
 
   return (
     <div className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] h-full flex flex-col justify-center items-center content-center" data-testid='sign-up'>
@@ -49,6 +89,8 @@ function SignUp() {
             type="text"
             placeholder="First Name"
             name="firstName"
+            onChange={handleChange}
+            value={firstName}
             {...register('firstName')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -62,6 +104,8 @@ function SignUp() {
             type="text"
             name="lastName"
             placeholder="Last Name"
+            onChange={handleChange}
+            value={lastName}
             {...register('lastName')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -75,6 +119,8 @@ function SignUp() {
             type="email"
             name="email"
             placeholder="Email"
+            onChange={handleChange}
+            value={email}
             {...register('email')}
             className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -88,6 +134,8 @@ function SignUp() {
             type="password"
             name="password"
             placeholder="Password"
+            onChange={handleChange}
+            value={password}
             {...register('password')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -101,6 +149,8 @@ function SignUp() {
             type="password"
             name="confirmPassword"
             placeholder="Confirm Password"
+            onChange={handleChange}
+            value={confirmPassword}
             {...register('confirmPassword')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
