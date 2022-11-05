@@ -1,6 +1,6 @@
 import React from "react";
-import Dilmun from "../assets/Dilmun.mp4";
-import OverlapText from "./DiffSection/OverlapText"
+import Dilmun from "../../assets/Dilmun.mp4";
+import OverlapText from "./OverlapText"
 
 
 function DiffSection(){
