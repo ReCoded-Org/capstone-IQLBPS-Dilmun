@@ -9,7 +9,7 @@ function FAQ() {
   // Calling this function with the close function available from disclosure will return a proper callback
   const closeCurrent = useCallback(
     (close) => () => {
-      if (closeRecent.current) {
+      if (closeRecent.current && closeRecent.current !== close) {
         closeRecent.current();
       }
       closeRecent.current = close;
