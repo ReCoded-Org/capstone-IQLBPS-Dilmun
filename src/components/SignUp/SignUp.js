@@ -127,10 +127,10 @@ function SignUp() {
             Sign In
           </Link>
         </p>
-        <p className="text-2xl text-primary font-semibold self-center my-4">
+        <p className="text-lg text-primary font-bold self-center my-4">
           OR
         </p>
-        <p className="text-3xl text-primary font-semibold self-center mb-6">
+        <p className="text-xl text-primary font-semibold self-center mb-6">
           Sign Up With
           <button type="button">
             <BsFacebook className="inline pb-1 h-9 w-9 hover:text-tertiary mx-1 duration-200" />
