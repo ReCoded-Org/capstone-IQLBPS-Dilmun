@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`redering button correctly 1`] = `undefined`;
+
 exports[`redering footer 1`] = `
 <div
   className="rtl-grid container mt-14 pt-14 pb-14 pr-10 pl-10 bg-primary  w-full shadow  md:px-6 md:py-8 dark:bg-primary "
@@ -88,3 +90,5 @@ exports[`redering footer 1`] = `
   </span>
 </div>
 `;
+
+exports[`redering list correctly 1`] = `undefined`;

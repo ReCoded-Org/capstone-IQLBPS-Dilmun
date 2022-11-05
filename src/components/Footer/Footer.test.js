@@ -9,3 +9,19 @@ test("redering footer", () => {
     </Router>).toJSON();
     expect(tree).toMatchSnapshot();
 })
+
+it("redering list correctly", () => {
+    const {list} =renderer.create(
+    <Router>
+        <list />
+    </Router>).toJSON();
+    expect(list).toMatchSnapshot();
+})
+
+it("redering button correctly", () => {
+    const {Button} = renderer.create(
+        <Router>
+            <button />
+        </Router>).toJSON();
+        expect(Button).toMatchSnapshot();
+})
