@@ -1,5 +1,3 @@
-// import React ,{useState , useEffect} from 'react';
-// import {useDispatch,useSelector} from 'react-redux'
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
@@ -19,13 +17,6 @@ password: yup
 
 
 function SignIn() {
-
-  // const [state,setState] = useState({
-  //   email:"",
-  //   password:""
-  // })
-  // const {email,password} = state
-  // const handleChange = () => {}
 
   const {
     register,
@@ -47,8 +38,6 @@ function SignIn() {
             type="email"
             placeholder="Email"
             name='email'
-            // onChange={handleChange}
-            // value={email}
             {...register('email')}
             className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500 "
           />
@@ -62,8 +51,6 @@ function SignIn() {
             type="password"
             placeholder="Password"
             name='password'
-            // onChange={handleChange}
-            // value={password}
             {...register('password')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
