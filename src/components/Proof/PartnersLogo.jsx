@@ -1,6 +1,6 @@
 const PartnersLogo = () => {
   return (
-    <section className="bg-white" data-testid="customerslogo-section">
+    <section className="" data-testid="customerslogo-section">
       <div className="lg:pb-8 mx-auto max-w-screen-xl px-4">
         <h2 className="mb-8 lg:mb-16 font-poppins font-bold xs:text-[40px] text-center text-[32px] text-black xs:leading-[70px] leading-[60px] w-full"
           data-testid="costumerslogo-title">

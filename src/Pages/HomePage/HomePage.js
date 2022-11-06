@@ -12,11 +12,13 @@ const HomePage = () => {
         <div data-testid='home-page'>
             <Hero />
             <Features />
+            <section className='h-screen bg-background'>
+                <Testimonials />
+                <PartnersLogo />
+            </section>
             <DiffSection />
-            <Testimonials />
-            <PartnersLogo />
-            <NewsLetter />
             <FAQ />
+            <NewsLetter />
         </div>
     )
 }
