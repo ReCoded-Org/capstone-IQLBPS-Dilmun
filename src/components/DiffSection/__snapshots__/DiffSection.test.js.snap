@@ -28,6 +28,7 @@ exports[`DiffSection renders without crashing  1`] = `
       </h2>
       <button
         className="bg-tertiary font-semibold p-2 m-2 hover:shadow-lg text-white font-semibold rounded-lg  sm:w-auto "
+        onClick={[Function]}
         type="button"
       >
         Watch Full Video
