@@ -1,9 +1,11 @@
-import React  from 'react';
+import React, { useState }  from 'react';
 import { useForm } from 'react-hook-form';
 import { Link  } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../firebase-config'; 
 
 
 const schema = yup.object().shape({
@@ -34,8 +36,24 @@ function SignUp() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data)
+  const [loading,setLoading] = useState(false)
+  const [firstName,setFirstName] = useState("")
+  const [lastName,setlastName] = useState("")
+  const [email,setEmail] = useState("")
+  const [password,setPassword] = useState("")
+
+  const onSubmit = async(e) => {
+    e.preventDefault()
+    setLoading(true)
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth,email,password)
+
+      const {user} = userCredential
+      console.log(user)
+    } catch(error){
+      
+    }
   };
 
 
@@ -52,6 +70,8 @@ function SignUp() {
             type="text"
             placeholder="First Name"
             name="firstName"
+            value={firstName}
+            onChange={(e)=> setFirstName(e.target.value)}
             {...register('firstName')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -65,6 +85,8 @@ function SignUp() {
             type="text"
             name="lastName"
             placeholder="Last Name"
+            value={lastName}
+            onChange={(e)=> setlastName(e.target.value)}
             {...register('lastName')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -78,6 +100,8 @@ function SignUp() {
             type="email"
             name="email"
             placeholder="Email"
+            value={email}
+            onChange={(e)=> setEmail(e.target.value)}
             {...register('email')}
             className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -91,6 +115,8 @@ function SignUp() {
             type="password"
             name="password"
             placeholder="Password"
+            value={password}
+            onChange={(e)=> setPassword(e.target.value)}
             {...register('password')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
