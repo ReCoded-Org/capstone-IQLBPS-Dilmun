@@ -1,7 +1,7 @@
 
 function Hero() {
   return (
-    <div className='backdrop-blur-md bg-white/30 h-[100vh] cont text-center text-background'>
+    <div className='backdrop-blur-md bg-white/30 md:h-[100vh] h-[85vh] cont text-center text-background duration-200 bg-cover'>
       <div className='backdrop-blur-md w-full h-full  flex flex-col justify-center text-center'>
         <div className=" text-bg-black sm:mx-0 mx-4">
           <h1 className=' text-background text-7xl font-bold  '>
