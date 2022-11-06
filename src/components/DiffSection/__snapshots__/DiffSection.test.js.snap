@@ -16,7 +16,7 @@ exports[`DiffSection renders without crashing  1`] = `
     />
   </video>
   <div
-    className=" relative mt-14 pt-14 lg:pt-12 "
+    className=" relative  pt-14 lg:pt-12 "
   >
     <div
       className=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 "
