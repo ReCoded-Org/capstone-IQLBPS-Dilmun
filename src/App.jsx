@@ -11,6 +11,7 @@ import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import FAQ from './components/FAQ';
 import SearchBar from './components/SearchBar/SearchBar';
+import AddItemPage from './Pages/AddItemPage/AddItemPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
+      <AddItemPage/>
       <FAQ />
       <DiffSection />
       <NewsLetter />
