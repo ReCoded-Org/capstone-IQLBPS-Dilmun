@@ -5,8 +5,8 @@ import OverlapText from "./OverlapText"
 function DiffSection(){
 
     return (
-            <div className=" rounded-md shadow-md bg-primary w-full h-96 relative">
-                <video src={Dilmun} autoPlay loop muted className="w-full h-full object-cover opacity-60 drop-shadow-2xl rounded-md absolute">
+            <div className="shadow-md bg-primary w-full h-96 relative">
+                <video src={Dilmun} autoPlay loop muted className="w-full h-full object-cover opacity-60 drop-shadow-2xl absolute">
                     <track kind="captions"/>
                 </video> 
                 <div  className=" relative pt-14 lg:pt-12 ">
