@@ -6,7 +6,7 @@ function OverlapText() {
         return(
             window.open(videoLink)
         );
-    }   
+    }    
     return (
         <div className=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 ">
             <h2 className="text-center text-white text-[16px] sm:text-[32px] ">Check out this video made by one of our satisfied customers!</h2>
