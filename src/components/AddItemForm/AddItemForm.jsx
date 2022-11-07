@@ -3,14 +3,14 @@ import { Input, TextArea } from '../Forms';
 export default function AddItemForm() {
   return (
     <>
-      <div>
+      <div className='bg-background'>
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">
+              <h3 className="text-lg font-medium leading-6 text-primary">
                 Profile
               </h3>
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1 text-sm text-secondary">
                 This information will be displayed publicly so be careful what
                 you share.
               </p>
@@ -19,16 +19,16 @@ export default function AddItemForm() {
           <div className="mt-5 md:col-span-2 md:mt-0">
             <form action="#" method="POST">
               <div className="shadow sm:overflow-hidden sm:rounded-md">
-                <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
+                <div className="space-y-6 bg-primary px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-6">
                     <div>
-                      <p className="block text-sm font-medium text-gray-700">
+                      <p className="block text-sm font-medium text-background">
                         Item Image
                       </p>
-                      <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
+                      <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6">
                         <div className="space-y-1 text-center">
                           <svg
-                            className="mx-auto h-12 w-12 text-gray-400"
+                            className="mx-auto h-12 w-12 text-tertiary"
                             stroke="currentColor"
                             fill="none"
                             viewBox="0 0 48 48"
@@ -41,10 +41,10 @@ export default function AddItemForm() {
                               strokeLinejoin="round"
                             />
                           </svg>
-                          <div className="flex text-sm text-gray-600">
+                          <div className="flex text-sm text-background">
                             <label
                               htmlFor="file-upload"
-                              className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
+                              className="relative cursor-pointer rounded-md bg-tertiary font-medium text-secondary px-1 focus-within:outline-none focus-within:ring-2 focus-within:ring-backgound focus-within:ring-offset-2 hover:text-background"
                             >
                               <span>Upload a file</span>
                               <input
@@ -56,7 +56,7 @@ export default function AddItemForm() {
                             </label>
                             <p className="pl-1">or drag and drop</p>
                           </div>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-xs text-tertiary">
                             PNG, JPG, GIF up to 10MB
                           </p>
                         </div>
@@ -66,21 +66,6 @@ export default function AddItemForm() {
                       <Input name="title" type="text" errors={false}>
                         Item Name
                       </Input>
-                      {/* <label
-                        htmlFor="title"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Item Name
-                        <div className="mt-1 flex rounded-md shadow-sm">
-                          <input
-                            type="text"
-                            name="title"
-                            id="title"
-                            className="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                            placeholder="Item Name"
-                          />
-                        </div>
-                      </label> */}
                       <Input name="price" type="number" errors={false}>
                         Price
                       </Input>
@@ -89,14 +74,14 @@ export default function AddItemForm() {
                   <div className="col-span-6 sm:col-span-3">
                     <label
                       htmlFor="country"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium text-background"
                     >
                       Select Item Type
                       <select
                         id="country"
                         name="country"
                         autoComplete="country-name"
-                        className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border border-secondary bg-background text-secondary py-2 px-3 shadow-sm focus:border-tertiary focus:outline-none focus:ring-tertiary sm:text-sm"
                       >
                         <option>Crafted</option>
                         <option>New</option>
@@ -108,22 +93,6 @@ export default function AddItemForm() {
                     <TextArea name="description" errors={false}>
                       Description
                     </TextArea>
-                    {/* <label
-                      htmlFor="description"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Description
-                      <div className="mt-1">
-                        <textarea
-                          id="description"
-                          name="description"
-                          rows={3}
-                          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                          placeholder="Add Description"
-                          defaultValue=""
-                        />
-                      </div>
-                    </label> */}
                   </div>
                 </div>
               </div>
@@ -138,14 +107,14 @@ export default function AddItemForm() {
         </div>
       </div>
 
-      <div className="mt-10 sm:mt-0">
+      <div className="mt-10 sm:mt-0 bg-background">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">
+              <h3 className="text-lg font-medium leading-6 text-primary">
                 Contact Information
               </h3>
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1 text-sm text-secondary">
                 Use a permanent contact information to receive emails.
               </p>
             </div>
@@ -153,63 +122,24 @@ export default function AddItemForm() {
           <div className="mt-5 md:col-span-2 md:mt-0">
             <form action="#" method="POST">
               <div className="overflow-hidden shadow sm:rounded-md">
-                <div className="bg-white px-4 py-5 sm:p-6">
+                <div className="bg-primary px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-4">
                       <Input name="email" type="text" errors={false}>
                         Email address
                       </Input>
-                      {/* <label
-                        htmlFor="email-address"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Email address
-                        <input
-                          type="text"
-                          name="email-address"
-                          id="email-address"
-                          autoComplete="email"
-                          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </label> */}
                     </div>
 
                     <div className="col-span-6 sm:col-span-4">
                       <Input name="country" type="text" errors={false}>
                         County
                       </Input>
-                      {/* <label
-                        htmlFor="country"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        County
-                        <input
-                          type="text"
-                          name="country"
-                          id="country"
-                          autoComplete="country"
-                          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </label> */}
                     </div>
 
                     <div className="col-span-6 sm:col-span-4">
                       <Input name="city" type="text" errors={false}>
                         City
                       </Input>
-                      {/* <label
-                        htmlFor="city"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        City
-                        <input
-                          type="text"
-                          name="city"
-                          id="city"
-                          autoComplete="address-level2"
-                          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </label> */}
                     </div>
                   </div>
                 </div>
