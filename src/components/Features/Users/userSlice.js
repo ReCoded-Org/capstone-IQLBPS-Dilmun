@@ -1,6 +1,5 @@
 import {
     createSlice,
-    createAsyncThunk
 } from "@reduxjs/toolkit"
 
 const initialState = {
@@ -11,9 +10,7 @@ const initialState = {
     error: ""
 }
 
-const signUpUser = createAsyncThunk('signupuser',async()=>{
 
-})
 
 const userSlice = createSlice({
     name: "user",
