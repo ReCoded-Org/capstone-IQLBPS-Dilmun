@@ -1,9 +1,35 @@
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { Input, TextArea } from '../Forms';
 
+const schema = yup.object().shape({
+  title: yup.string().required('Please insert your Item Name.'),
+  price: yup.number().positive('Please insert a positive number.'),
+  description: yup.string().required('Please add a description.'),
+  email: yup
+    .string()
+    .email('Should be a valid email.')
+    .required('Please insert your Email.'),
+  country: yup.string().required('Please insert your Country name.'),
+  city: yup.string().required('Please insert your City name.'),
+});
+
 export default function AddItemForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
-      <div className='bg-background'>
+      <div className="bg-background">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
@@ -17,7 +43,7 @@ export default function AddItemForm() {
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-primary px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-6">
@@ -63,24 +89,40 @@ export default function AddItemForm() {
                       </div>
                     </div>
                     <div className="col-span-3 sm:col-span-2 ">
-                      <Input name="title" type="text" errors={false}>
-                        Item Name
-                      </Input>
-                      <Input name="price" type="number" errors={false}>
-                        Price
-                      </Input>
+                      <div>
+                        <Input
+                          name="title"
+                          type="text"
+                          errors={errors?.title}
+                          {...register('title')}
+                          errorMessage={errors?.title?.message}
+                        >
+                          Item Name
+                        </Input>
+                      </div>
+                      <div>
+                        <Input
+                          name="price"
+                          type="number"
+                          errors={errors?.price}
+                          {...register('price')}
+                          errorMessage={errors?.price?.message}
+                        >
+                          Price
+                        </Input>
+                      </div>
                     </div>
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <label
-                      htmlFor="country"
+                      htmlFor="type"
                       className="block text-sm font-medium text-background"
                     >
                       Select Item Type
                       <select
-                        id="country"
-                        name="country"
-                        autoComplete="country-name"
+                        id="type"
+                        name="type"
+                        autoComplete="type-name"
                         className="mt-1 block w-full rounded-md border border-secondary bg-background text-secondary py-2 px-3 shadow-sm focus:border-tertiary focus:outline-none focus:ring-tertiary sm:text-sm"
                       >
                         <option>Crafted</option>
@@ -90,7 +132,12 @@ export default function AddItemForm() {
                     </label>
                   </div>
                   <div>
-                    <TextArea name="description" errors={false}>
+                    <TextArea
+                      name="description"
+                      errors={errors?.description}
+                      {...register('description')}
+                      errorMessage={errors?.description?.message}
+                    >
                       Description
                     </TextArea>
                   </div>
@@ -102,8 +149,8 @@ export default function AddItemForm() {
       </div>
 
       <div className="hidden sm:block" aria-hidden="true">
-        <div className="py-2">
-          <div className="border-t border-gray-200" />
+        <div className="">
+          <div className="border-t border-secondary" />
         </div>
       </div>
 
@@ -120,24 +167,42 @@ export default function AddItemForm() {
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-primary px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-4">
-                      <Input name="email" type="text" errors={false}>
+                      <Input
+                        name="email"
+                        type="text"
+                        errors={errors?.email}
+                        {...register('email')}
+                        errorMessage={errors?.email?.message}
+                      >
                         Email address
                       </Input>
                     </div>
 
                     <div className="col-span-6 sm:col-span-4">
-                      <Input name="country" type="text" errors={false}>
+                      <Input
+                        name="country"
+                        type="text"
+                        errors={errors?.country}
+                        {...register('country')}
+                        errorMessage={errors?.country?.message}
+                      >
                         County
                       </Input>
                     </div>
 
                     <div className="col-span-6 sm:col-span-4">
-                      <Input name="city" type="text" errors={false}>
+                      <Input
+                        name="city"
+                        type="text"
+                        errors={errors?.city}
+                        {...register('city')}
+                        errorMessage={errors?.city?.message}
+                      >
                         City
                       </Input>
                     </div>
