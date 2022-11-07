@@ -8,15 +8,16 @@ import PartnersLogo from '../../components/Proof/PartnersLogo'
 import Testimonials from '../../components/Proof/Testimonials'
 
 const HomePage = () => {
+    
     return (
         <div data-testid='home-page'>
             <Hero />
-            <Features />
-            <section className='h-screen bg-background'>
+            <DiffSection />
+            <section className='h-screen bg-background sna'>
                 <Testimonials />
                 <PartnersLogo />
             </section>
-            <DiffSection />
+            <Features />
             <FAQ />
             <NewsLetter />
         </div>

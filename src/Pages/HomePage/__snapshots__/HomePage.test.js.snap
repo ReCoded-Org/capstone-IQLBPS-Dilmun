@@ -36,149 +36,41 @@ exports[`Home Page Rendered Correctly 1`] = `
       </div>
     </div>
   </div>
-  <section
-    class="bg-primary dark:bg-gray-900"
-    data-testid="features-section"
+  <div
+    class="shadow-md bg-primary w-full h-96 relative"
   >
+    <video
+      autoplay=""
+      class="w-full h-full object-cover opacity-60 drop-shadow-2xl absolute"
+      loop=""
+      src="Dilmun.mp4"
+    >
+      <track
+        kind="captions"
+      />
+    </video>
     <div
-      class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6"
+      class=" relative pt-14 lg:pt-12 "
     >
       <div
-        class="mb-8 lg:mb-16"
+        class=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 "
       >
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
-          data-testid="features-title"
+          class="text-center text-white text-[16px] sm:text-[32px] "
         >
-          Designed to meet your needs.
+          Check out this video made by one of our satisfied customers!
         </h2>
-        <p
-          class="text-background sm:text-xl dark:text-gray-400"
-          data-testid="features-paragraph"
+        <button
+          class="bg-tertiary font-semibold p-2 m-2 hover:shadow-lg text-white font-semibold rounded-lg  sm:w-auto "
+          type="button"
         >
-          Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.
-        </p>
-      </div>
-      <div
-        class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
-      >
-        <div
-          class="flex flex-col justify-center items-center "
-          data-testid="feature-card"
-        >
-          <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
-            data-testid="feature-card-icon"
-          >
-            <svg
-              fill="none"
-              height="1em"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polygon
-                points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
-              />
-            </svg>
-          </div>
-          <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
-            data-testid="feature-card-title"
-          >
-            Filter
-          </h3>
-          <p
-            class="text-background dark:text-gray-400"
-            data-testid="feature-card-paragraph"
-          >
-            Filter your items to find the right information.
-          </p>
-        </div>
-        <div
-          class="flex flex-col justify-center items-center "
-          data-testid="feature-card"
-        >
-          <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
-            data-testid="feature-card-icon"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12,23 C18.0751322,23 23,18.0751322 23,12 C23,5.92486775 18.0751322,1 12,1 C5.92486775,1 1,5.92486775 1,12 C1,18.0751322 5.92486775,23 12,23 Z M12,23 C15,23 16,18 16,12 C16,6 15,1 12,1 C9,1 8,6 8,12 C8,18 9,23 12,23 Z M2,16 L22,16 M2,8 L22,8"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </div>
-          <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
-            data-testid="feature-card-title"
-          >
-            Multi Language
-          </h3>
-          <p
-            class="text-background dark:text-gray-400"
-            data-testid="feature-card-paragraph"
-          >
-            Use the website in your preferred language
-          </p>
-        </div>
-        <div
-          class="flex flex-col justify-center items-center git col-span-2 lg:col-span-1"
-          data-testid="feature-card"
-        >
-          <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
-            data-testid="feature-card-icon"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              role="img"
-              stroke="currentColor"
-              stroke-width="0"
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title />
-              <path
-                d="M21.3 13.72a3.158 3.158 0 0 0-3.462.124.632.632 0 0 1-.682.035l-3.137-1.81a.08.08 0 0 1 0-.137l3.12-1.8a.632.632 0 0 1 .685.036 3.158 3.158 0 0 0 3.47.139A3.194 3.194 0 0 0 22.442 6.1a3.158 3.158 0 0 0-5.924 1.773.633.633 0 0 1-.311.606l-3.136 1.811a.08.08 0 0 1-.118-.068V6.6a.632.632 0 0 1 .372-.573 3.158 3.158 0 1 0-2.64 0 .632.632 0 0 1 .373.573v3.622a.08.08 0 0 1-.119.068L7.804 8.48a.632.632 0 0 1-.311-.605 3.157 3.157 0 1 0-1.307 2.294.633.633 0 0 1 .687-.038l3.12 1.8a.08.08 0 0 1 0 .137L6.854 13.88a.632.632 0 0 1-.683-.035 3.158 3.158 0 0 0-3.461-.124 3.194 3.194 0 0 0-1.143 4.202 3.159 3.159 0 0 0 5.924-1.792.633.633 0 0 1 .31-.61l3.137-1.81a.08.08 0 0 1 .119.068V17.4a.632.632 0 0 1-.372.573 3.158 3.158 0 1 0 2.64 0 .633.633 0 0 1-.373-.573v-3.621a.08.08 0 0 1 .118-.069l3.137 1.812a.631.631 0 0 1 .31.609 3.159 3.159 0 0 0 5.924 1.792A3.194 3.194 0 0 0 21.3 13.72Z"
-              />
-            </svg>
-          </div>
-          <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
-            data-testid="feature-card-title"
-          >
-            Meet
-          </h3>
-          <p
-            class="text-background dark:text-gray-400"
-            data-testid="feature-card-paragraph"
-          >
-            Meet new people and make new connections
-          </p>
-        </div>
+          Watch Full Video
+        </button>
       </div>
     </div>
-  </section>
+  </div>
   <section
-    class="h-screen bg-background"
+    class="h-screen bg-background sna"
   >
     <section
       class="sm:py-5 py-4 flex justify-center items-center flex-col"
@@ -579,39 +471,147 @@ exports[`Home Page Rendered Correctly 1`] = `
       </div>
     </section>
   </section>
-  <div
-    class="shadow-md bg-primary w-full h-96 relative"
+  <section
+    class="bg-primary dark:bg-gray-900"
+    data-testid="features-section"
   >
-    <video
-      autoplay=""
-      class="w-full h-full object-cover opacity-60 drop-shadow-2xl absolute"
-      loop=""
-      src="Dilmun.mp4"
-    >
-      <track
-        kind="captions"
-      />
-    </video>
     <div
-      class=" relative pt-14 lg:pt-12 "
+      class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6"
     >
       <div
-        class=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 "
+        class="mb-8 lg:mb-16"
       >
         <h2
-          class="text-center text-white text-[16px] sm:text-[32px] "
+          class="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
+          data-testid="features-title"
         >
-          Check out this video made by one of our satisfied customers!
+          Designed to meet your needs.
         </h2>
-        <button
-          class="bg-tertiary font-semibold p-2 m-2 hover:shadow-lg text-white font-semibold rounded-lg  sm:w-auto "
-          type="button"
+        <p
+          class="text-background sm:text-xl dark:text-gray-400"
+          data-testid="features-paragraph"
         >
-          Watch Full Video
-        </button>
+          Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.
+        </p>
+      </div>
+      <div
+        class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+      >
+        <div
+          class="flex flex-col justify-center items-center "
+          data-testid="feature-card"
+        >
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            data-testid="feature-card-icon"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+              />
+            </svg>
+          </div>
+          <h3
+            class="mb-2 text-xl font-bold text-background dark:text-white"
+            data-testid="feature-card-title"
+          >
+            Filter
+          </h3>
+          <p
+            class="text-background dark:text-gray-400"
+            data-testid="feature-card-paragraph"
+          >
+            Filter your items to find the right information.
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center "
+          data-testid="feature-card"
+        >
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            data-testid="feature-card-icon"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,23 C18.0751322,23 23,18.0751322 23,12 C23,5.92486775 18.0751322,1 12,1 C5.92486775,1 1,5.92486775 1,12 C1,18.0751322 5.92486775,23 12,23 Z M12,23 C15,23 16,18 16,12 C16,6 15,1 12,1 C9,1 8,6 8,12 C8,18 9,23 12,23 Z M2,16 L22,16 M2,8 L22,8"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <h3
+            class="mb-2 text-xl font-bold text-background dark:text-white"
+            data-testid="feature-card-title"
+          >
+            Multi Language
+          </h3>
+          <p
+            class="text-background dark:text-gray-400"
+            data-testid="feature-card-paragraph"
+          >
+            Use the website in your preferred language
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center git col-span-2 lg:col-span-1"
+          data-testid="feature-card"
+        >
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            data-testid="feature-card-icon"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              role="img"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title />
+              <path
+                d="M21.3 13.72a3.158 3.158 0 0 0-3.462.124.632.632 0 0 1-.682.035l-3.137-1.81a.08.08 0 0 1 0-.137l3.12-1.8a.632.632 0 0 1 .685.036 3.158 3.158 0 0 0 3.47.139A3.194 3.194 0 0 0 22.442 6.1a3.158 3.158 0 0 0-5.924 1.773.633.633 0 0 1-.311.606l-3.136 1.811a.08.08 0 0 1-.118-.068V6.6a.632.632 0 0 1 .372-.573 3.158 3.158 0 1 0-2.64 0 .632.632 0 0 1 .373.573v3.622a.08.08 0 0 1-.119.068L7.804 8.48a.632.632 0 0 1-.311-.605 3.157 3.157 0 1 0-1.307 2.294.633.633 0 0 1 .687-.038l3.12 1.8a.08.08 0 0 1 0 .137L6.854 13.88a.632.632 0 0 1-.683-.035 3.158 3.158 0 0 0-3.461-.124 3.194 3.194 0 0 0-1.143 4.202 3.159 3.159 0 0 0 5.924-1.792.633.633 0 0 1 .31-.61l3.137-1.81a.08.08 0 0 1 .119.068V17.4a.632.632 0 0 1-.372.573 3.158 3.158 0 1 0 2.64 0 .633.633 0 0 1-.373-.573v-3.621a.08.08 0 0 1 .118-.069l3.137 1.812a.631.631 0 0 1 .31.609 3.159 3.159 0 0 0 5.924 1.792A3.194 3.194 0 0 0 21.3 13.72Z"
+              />
+            </svg>
+          </div>
+          <h3
+            class="mb-2 text-xl font-bold text-background dark:text-white"
+            data-testid="feature-card-title"
+          >
+            Meet
+          </h3>
+          <p
+            class="text-background dark:text-gray-400"
+            data-testid="feature-card-paragraph"
+          >
+            Meet new people and make new connections
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <section
     class="bg-background py-20 mx-auto h-screen"
   >
