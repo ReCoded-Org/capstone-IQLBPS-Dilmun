@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -16,10 +16,25 @@ import LanguageButton from '../LanguageButton/LanguageButton';
 
 function NavBar() {
   const [open, setOpen] = useState(false);
+  const [transparentNav, setTransparentNav] = useState(false)
+
+  const changeNavBarBackground = () => {
+    if (window.scrollY >= 100) {
+      setTransparentNav(true)
+    }
+    else setTransparentNav(false)
+  }
+
+  useEffect(() => {
+    changeNavBarBackground()
+    window.addEventListener('scroll', changeNavBarBackground)
+  })
+
+
 
   return (
-    <nav className="shadow-md w-full z-10 fixed top-0 left-0 ">
-      <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg ">
+    <nav className="shadow-md w-full z-10 sticky top-0  ">
+      <div className={`md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ${transparentNav ? "bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg" : "bg-primary"} `}>
         <div>
           <Link to={HOME_ROUTE}>
             <img
@@ -37,12 +52,12 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`md:flex items-center font-semibold text-secondary md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'flex bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg ' : 'hidden'
+          className={`md:flex items-center font-semibold ${transparentNav ? 'text-secondary' : 'text-background'} md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'flex bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg ' : 'hidden'
             }`}
         >
           <li>
             <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-tertiary duration-300"
+              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
               to={HOME_ROUTE}
             >
               Home
@@ -50,7 +65,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-tertiary duration-300"
+              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
               to={CONTACT_ROUTE}
             >
               Contact
@@ -58,7 +73,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-tertiary duration-300"
+              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
               to={ABOUT_ROUTE}
             >
               About
@@ -66,7 +81,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-tertiary duration-300"
+              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
               to={PROFILE}
             >
               Profile
@@ -74,7 +89,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-tertiary duration-200"
+              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
               to={SIGN_UP_ROUTE}
             >
               SignUp
@@ -82,7 +97,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-tertiary duration-300"
+              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
               to={SIGN_IN_ROUTE}
             >
               SignIn
@@ -90,16 +105,13 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-tertiary duration-300"
+              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
               to={LOG_OUT}
             >
               LogOut
             </Link>
           </li>
-          <li>
-            <LanguageButton />
-          </li>
-
+          <LanguageButton />
         </ul>
       </div>
     </nav>
