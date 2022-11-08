@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Input, TextArea, SubmitButton } from '../Forms';
+import { Input, TextArea, SubmitButton, ListBox } from '../Forms';
 
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
@@ -14,6 +14,8 @@ const schema = yup.object().shape({
   country: yup.string().required('Please insert your Country name.'),
   city: yup.string().required('Please insert your City name.'),
 });
+
+const ITEM_TYPES = ['Crafted', 'Donated', 'New'];
 
 export default function AddItemForm() {
   const {
@@ -114,7 +116,8 @@ export default function AddItemForm() {
                     </div>
                   </div>
                   <div className="col-span-6 sm:col-span-3">
-                    <label
+                    <ListBox options={ITEM_TYPES} value={ITEM_TYPES[0]} />
+                    {/* <label
                       htmlFor="type"
                       className="block text-sm font-medium text-background"
                     >
@@ -129,7 +132,7 @@ export default function AddItemForm() {
                         <option>New</option>
                         <option>Donated</option>
                       </select>
-                    </label>
+                    </label> */}
                   </div>
                   <div>
                     <TextArea
