@@ -20,19 +20,19 @@
   },
   {
     "id": "2",
-    "name": "Maher",
-    "img": "https://www.w3schools.com/w3images/avatar2.png",
-    "title": "Project Supervisor",
+    "name": "Karzan",
+    "img": "https://avatars.githubusercontent.com/u/77196732?v=4",
+    "title": "Team Member/Fron-End Developer",
     "desc": "",
     "links": [
       {
         "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "url": "https://www.linkedin.com/in/karzan7899",
         "icon": "linkedIn"
       },
       {
         "name": "GitHub",
-        "url": "https://www.GitHub.com/",
+        "url": "https://github.com/karzan7899",
         "icon": "github"
       }
     ]

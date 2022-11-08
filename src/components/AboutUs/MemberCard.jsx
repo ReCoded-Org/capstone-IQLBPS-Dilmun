@@ -18,11 +18,11 @@ const MemberCard = ({ member }) => {
             >
               <div className="flex space-x-2 items-center">
                 <div className='mr-1'>
-                {link.icon == 'linkedIn' ? (
-                  <AiFillLinkedin size={20} />
-                ) : (
-                  <AiFillGithub size={20} />
-                )}
+                  {link.icon === 'linkedIn' ? (
+                    <AiFillLinkedin size={20} />
+                  ) : (
+                    <AiFillGithub size={20} />
+                  )}
                 </div>
 
                 {link.name}
