@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 // import { BrowserRouter as Router } from "react-router-dom"
 import AboutUS from "./AboutUs";
 import MemberCard from "./MemberCard";
-import team from './team.json';
+
 test("redering AboutUS", () => {
     const tree = renderer.create(
         <AboutUS />
