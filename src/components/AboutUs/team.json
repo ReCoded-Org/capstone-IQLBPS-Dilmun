@@ -20,7 +20,26 @@
   },
   {
     "id": "2",
-    "name": "Karzan",
+    "name": "Maher",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Project supervisor",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/karzan7899",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/karzan7899",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Karzan Luqman",
     "img": "https://avatars.githubusercontent.com/u/77196732?v=4",
     "title": "Team Member/Fron-End Developer",
     "desc": "",
@@ -38,27 +57,46 @@
     ]
   },
   {
-    "id": "3",
-    "name": "Dania",
-    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "id": "4",
+    "name": "Dania Diar",
+    "img": "https://cdn.discordapp.com/attachments/1036708593371721738/1039652181869072394/IMG_3704.jpg",
     "title": "Web Developer",
-    "likedIn": "https://www.linkedin.com/in/john-doe-123456789/",
     "desc": "",
     "links": [
       {
         "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "url": "https://www.linkedin.com/in/dania-deyar-097558243/",
         "icon": "linkedIn"
       },
       {
         "name": "GitHub",
-        "url": "https://www.GitHub.com/",
+        "url": "https://github.com/dania-diar",
+        "icon": "github"
+      }
+    ]
+  },
+ 
+  {
+    "id": "4",
+    "name": "Dania Diar",
+    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/dania-deyar-097558243/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/dania-diar",
         "icon": "github"
       }
     ]
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "Mike",
     "img": "https://www.w3schools.com/w3images/avatar2.png",
     "title": "Web Developer",
@@ -77,7 +115,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "6",
     "name": "Dan",
     "img": "https://www.w3schools.com/w3images/avatar2.png",
     "title": "Web Developer",
@@ -96,7 +134,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": "7",
     "name": "Stacy",
     "img": "https://www.w3schools.com/w3images/avatar2.png",
     "title": "Web Developer",
@@ -115,7 +153,7 @@
     ]
   },
   {
-    "id": "7",
+    "id": "8",
     "name": "Ben",
     "img": "https://www.w3schools.com/w3images/avatar2.png",
     "title": "Web Developer",
