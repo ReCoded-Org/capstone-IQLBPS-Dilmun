@@ -1,15 +1,12 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { useForm } from 'react-hook-form';
 import { Link  } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { toast } from 'react-toastify';
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth} from '../../firebase-config'; 
-
-
-
+import { useAuth } from '../Features/Users/userAuthContext';
+// import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { auth} from '../../firebase-config'; 
 
 
 const schema = yup.object().shape({
@@ -30,6 +27,8 @@ const schema = yup.object().shape({
     .required('Please Confirm Password'),
 });
 
+
+
 function SignUp() {
 
   const {
@@ -41,18 +40,35 @@ function SignUp() {
   });
 
 
-  const onSubmit = async(data) => {
+  // const onSubmit = async() => {
 
-    const {email , password} = data
+    // const {email , password , firstName,lastName} = data
 
-      createUserWithEmailAndPassword(auth,email,password).then((userCredential)=>{
-        const {user} = userCredential 
-        toast.success('Registration Successful')
-        console.log(user)
-      })
+    //   createUserWithEmailAndPassword(auth,email,password).then((userCredential)=>{
+    //     const {user} = userCredential 
+    //     toast.success('Registration Successful')
+    //     console.log(user)
+    //   })
+    const {signUp} = useAuth();
+    const[user,setUser] = useState({
+      firstName:"",
+      lastName:"",
+      email:"",
+      password:"",
+      confirmPassword:""
+    })
+    const userhandler = (event)=>{
+      const{name , value} = event.target
+      console.log(name,value)
+      setUser((perState)=>({...perState,[name]:value}))
+    }
+    const RegisterHandler = (e)=>{
+      e.preventDefault();
+      const {email,password,firstName,lastName} = user
 
-
+      signUp(email,password,firstName,lastName)
   };
+// }
 
 
   return (
