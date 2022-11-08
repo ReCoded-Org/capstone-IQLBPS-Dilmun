@@ -9,8 +9,11 @@ const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ');
 };
 
-const LanguageButton = () => {
+const LanguageButton = ( {closeNavbar}) => {
   const handleLanguageChange = (language) => {
+
+   
+    closeNavbar();
     localStorage.setItem('language', language);
   };
 
