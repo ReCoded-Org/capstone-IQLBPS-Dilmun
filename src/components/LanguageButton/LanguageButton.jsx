@@ -12,9 +12,12 @@ const classNames = (...classes) => {
 const LanguageButton = ( {closeNavbar}) => {
   const handleLanguageChange = (language) => {
 
-   
-    closeNavbar();
+
     localStorage.setItem('language', language);
+       if(closeNavbar){
+       closeNavbar();
+       }
+    
   };
 
   return (
