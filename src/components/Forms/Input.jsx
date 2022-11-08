@@ -7,12 +7,14 @@ function Input({
   errors,
   errorMessage,
   children,
+  onChange,
   ...props
 }) {
   const [active, setActive] = React.useState(false);
 
   function handleActivation(e) {
     setActive(!!e.target.value);
+    onChange(e);
   }
 
   return (

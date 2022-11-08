@@ -21,13 +21,15 @@ export default function AddItemForm() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();;
+    console.log(e);
   };
   return (
     <>
@@ -98,6 +100,9 @@ export default function AddItemForm() {
                           errors={errors?.title}
                           {...register('title')}
                           errorMessage={errors?.title?.message}
+                          onChange={(e) => {
+                            console.log('title', e.target.value);
+                          }}
                         >
                           Item Name
                         </Input>
@@ -109,6 +114,9 @@ export default function AddItemForm() {
                           errors={errors?.price}
                           {...register('price')}
                           errorMessage={errors?.price?.message}
+                          onChange={(e) => {
+                            console.log('price', e.target.value);
+                          }}
                         >
                           Price
                         </Input>
@@ -181,6 +189,10 @@ export default function AddItemForm() {
                         errors={errors?.email}
                         {...register('email')}
                         errorMessage={errors?.email?.message}
+                        onChange={(e) => {
+                          console.log('email', e.target.value);
+                          setValue('email', e.target.value);
+                        }}
                       >
                         Email address
                       </Input>
@@ -193,6 +205,10 @@ export default function AddItemForm() {
                         errors={errors?.country}
                         {...register('country')}
                         errorMessage={errors?.country?.message}
+                        onChange={(e) => {
+                          console.log('country', e.target.value);
+                          // setValue('country', e.target.value);
+                        }}
                       >
                         County
                       </Input>
@@ -205,6 +221,9 @@ export default function AddItemForm() {
                         errors={errors?.city}
                         {...register('city')}
                         errorMessage={errors?.city?.message}
+                        onChange={(e) => {
+                          console.log('city', e.target.value);
+                        }}
                       >
                         City
                       </Input>
