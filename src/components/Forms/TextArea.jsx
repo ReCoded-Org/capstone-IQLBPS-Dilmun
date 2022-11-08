@@ -1,10 +1,11 @@
 import React from 'react';
 
-function TextArea({ name, errors, errorMessage, children }) {
+function TextArea({ name, errors, errorMessage, children, onChange }) {
   const [active, setActive] = React.useState(false);
 
   function handleActivation(e) {
     setActive(!!e.target.value);
+    onChange(e)
   }
 
   return (

@@ -13,6 +13,16 @@ const schema = yup.object().shape({
     .required('Please insert your Email.'),
   country: yup.string().required('Please insert your Country name.'),
   city: yup.string().required('Please insert your City name.'),
+  file: yup.mixed().test('required', 'Please upload a photo.', (photo) => {
+      if (!photo.length) return false;
+      return true
+  })
+  .test('fileSize', 'File size is too large.', (photo) => {
+    return photo.length && photo[0].size <= 200000;
+  })
+  .test('fileType', 'Please add a supported file type.', (photo) => {
+    return photo.length && ["image/jpeg", "image/png", "image/jpg"].includes(photo[0].type)
+  }),
 });
 
 const ITEM_TYPES = ['Crafted', 'Donated', 'New'];
@@ -28,7 +38,6 @@ export default function AddItemForm() {
   });
 
   const onSubmit = (e) => {
-    // e.preventDefault();;
     console.log(e);
   };
   return (
@@ -55,7 +64,7 @@ export default function AddItemForm() {
                       <p className="block text-sm font-medium text-background">
                         Item Image
                       </p>
-                      <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6">
+                      <div className={["mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6",  errors?.file? 'border-red-500' : ''].join(' ')}>
                         <div className="space-y-1 text-center">
                           <svg
                             className="mx-auto h-12 w-12 text-tertiary"
@@ -73,14 +82,15 @@ export default function AddItemForm() {
                           </svg>
                           <div className="flex text-sm text-background">
                             <label
-                              htmlFor="file-upload"
+                              htmlFor="file"
                               className="relative cursor-pointer rounded-md bg-tertiary font-medium text-secondary px-1 focus-within:outline-none focus-within:ring-2 focus-within:ring-backgound focus-within:ring-offset-2 hover:text-background"
                             >
                               <span>Upload a file</span>
                               <input
-                                id="file-upload"
-                                name="file-upload"
+                                id="file"
+                                name="file"
                                 type="file"
+                                {...register('file')}
                                 className="sr-only"
                               />
                             </label>
@@ -89,6 +99,7 @@ export default function AddItemForm() {
                           <p className="text-xs text-tertiary">
                             PNG, JPG, GIF up to 10MB
                           </p>
+                          <p className="inline-flex text-sm text-red-500">{errors?.file?.message}</p>
                         </div>
                       </div>
                     </div>
@@ -97,12 +108,10 @@ export default function AddItemForm() {
                         <Input
                           name="title"
                           type="text"
-                          errors={errors?.title}
+                          errors={errors.title}
                           {...register('title')}
+                          onChange={(e) => setValue('title', e.target.value)}
                           errorMessage={errors?.title?.message}
-                          onChange={(e) => {
-                            console.log('title', e.target.value);
-                          }}
                         >
                           Item Name
                         </Input>
@@ -115,7 +124,7 @@ export default function AddItemForm() {
                           {...register('price')}
                           errorMessage={errors?.price?.message}
                           onChange={(e) => {
-                            console.log('price', e.target.value);
+                            setValue('price', e.target.value, '$');
                           }}
                         >
                           Price
@@ -125,28 +134,13 @@ export default function AddItemForm() {
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <ListBox options={ITEM_TYPES} value={ITEM_TYPES[0]} />
-                    {/* <label
-                      htmlFor="type"
-                      className="block text-sm font-medium text-background"
-                    >
-                      Select Item Type
-                      <select
-                        id="type"
-                        name="type"
-                        autoComplete="type-name"
-                        className="mt-1 block w-full rounded-md border border-secondary bg-background text-secondary py-2 px-3 shadow-sm focus:border-tertiary focus:outline-none focus:ring-tertiary sm:text-sm"
-                      >
-                        <option>Crafted</option>
-                        <option>New</option>
-                        <option>Donated</option>
-                      </select>
-                    </label> */}
                   </div>
                   <div>
                     <TextArea
                       name="description"
                       errors={errors?.description}
                       {...register('description')}
+                      onChange={(e) => setValue('description', e.target.value)}
                       errorMessage={errors?.description?.message}
                     >
                       Description
@@ -190,7 +184,6 @@ export default function AddItemForm() {
                         {...register('email')}
                         errorMessage={errors?.email?.message}
                         onChange={(e) => {
-                          console.log('email', e.target.value);
                           setValue('email', e.target.value);
                         }}
                       >
@@ -206,8 +199,7 @@ export default function AddItemForm() {
                         {...register('country')}
                         errorMessage={errors?.country?.message}
                         onChange={(e) => {
-                          console.log('country', e.target.value);
-                          // setValue('country', e.target.value);
+                          setValue('country', e.target.value);
                         }}
                       >
                         County
@@ -221,9 +213,7 @@ export default function AddItemForm() {
                         errors={errors?.city}
                         {...register('city')}
                         errorMessage={errors?.city?.message}
-                        onChange={(e) => {
-                          console.log('city', e.target.value);
-                        }}
+                        onChange={(e) => setValue('city', e.target.value)}
                       >
                         City
                       </Input>
