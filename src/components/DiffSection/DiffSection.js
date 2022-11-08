@@ -10,8 +10,8 @@ function DiffSection(){
                     <track kind="captions"/>
                 </video> 
                 <div  className=" relative pt-14 lg:pt-12 ">
-                <OverlapText />
-            </div>
+                    <OverlapText />
+                </div>
         </div>
     )
 }

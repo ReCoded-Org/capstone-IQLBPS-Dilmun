@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar'
 import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import HomePage from './Pages/HomePage/HomePage';
+import ProfilePage from './Pages/ProfilePage/ProfilePage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
