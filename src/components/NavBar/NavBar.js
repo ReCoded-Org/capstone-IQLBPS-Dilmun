@@ -52,7 +52,7 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`md:flex items-center font-semibold text-secondary md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'left-[88%] ' : 'left-[100%]'
+          className={`md:flex items-center font-semibold text-secondary md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-1000 ease-in ${open ? 'left-[88%] ' : 'left-[-100%]'
             }`}
         >
           <li>
