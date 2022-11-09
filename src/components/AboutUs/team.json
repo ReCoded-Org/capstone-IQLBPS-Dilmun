@@ -8,12 +8,12 @@
     "links": [
       {
         "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "url": "https://www.linkedin.com/in/kutay-ka%C4%9Fan-%C3%B6zen/",
         "icon": "linkedIn"
       },
       {
         "name": "GitHub",
-        "url": "https://www.GitHub.com/",
+        "url": "https://github.com/Iseluin",
         "icon": "github"
       }
     ]
@@ -21,18 +21,18 @@
   {
     "id": "2",
     "name": "Maher",
-    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "img": "https://images-ext-2.discordapp.net/external/XTbSXoDXkaO4tf6pOdw2yI5X7ZAcJ28Cdy6M5-iznVU/https/ca.slack-edge.com/T03K5TU7K0E-U03LE4VNAQ5-efdd3ea45859-512?width=473&height=473",
     "title": "Project supervisor",
     "desc": "",
     "links": [
       {
         "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/karzan7899",
+        "url": "https://www.linkedin.com/in/maher-al-aqil-56895894/",
         "icon": "linkedIn"
       },
       {
         "name": "GitHub",
-        "url": "https://github.com/karzan7899",
+        "url": "https://github.com/maqalaqil",
         "icon": "github"
       }
     ]
@@ -77,96 +77,267 @@
   },
  
   {
-    "id": "4",
-    "name": "Dania Diar",
-    "img": "https://www.w3schools.com/w3images/avatar2.png",
-    "title": "Web Developer",
-    "desc": "",
-    "links": [
-      {
-        "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/dania-deyar-097558243/",
-        "icon": "linkedIn"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/dania-diar",
-        "icon": "github"
-      }
-    ]
-  },
-  {
     "id": "5",
-    "name": "Mike",
-    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "name": "Rondik Mousa",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03ME7K3Q07-7c77b4b5ec30-512",
     "title": "Web Developer",
     "desc": "",
     "links": [
       {
         "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "url": "https://www.linkedin.com/in/rondik-mousa-646653256/",
         "icon": "linkedIn"
       },
       {
         "name": "GitHub",
-        "url": "https://www.GitHub.com/",
+        "url": "https://github.com/rondikmousa",
         "icon": "github"
       }
     ]
   },
   {
     "id": "6",
-    "name": "Dan",
-    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "name": "Helin Faidhan",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03NTLZN3MW-31f24e5340ee-512",
     "title": "Web Developer",
     "desc": "",
     "links": [
       {
         "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "url": "https://www.linkedin.com/in/helin-faidhan-a516a71aa/",
         "icon": "linkedIn"
       },
       {
         "name": "GitHub",
-        "url": "https://www.GitHub.com/",
+        "url": "https://github.com/Helin-Faidhan",
         "icon": "github"
       }
     ]
   },
   {
     "id": "7",
-    "name": "Stacy",
-    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "name": "Marwa Hakmi",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03M7GU31T9-7f79896abdee-512",
     "title": "Web Developer",
     "desc": "",
     "links": [
       {
         "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "url": "www.linkedin.com/in/marwa-hakmi",
         "icon": "linkedIn"
       },
       {
         "name": "GitHub",
-        "url": "https://www.GitHub.com/",
+        "url": "https://github.com/MARWAHAKMI",
         "icon": "github"
       }
     ]
   },
   {
     "id": "8",
-    "name": "Ben",
-    "img": "https://www.w3schools.com/w3images/avatar2.png",
+    "name": "Ayub Abdullah",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03MFBY877G-fa68f334cdc6-512",
     "title": "Web Developer",
     "desc": "",
     "links": [
       {
         "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/kutay-ak%C4%B1n-0b1b4b1a1/",
+        "url": "https://www.linkedin.com/mwlite/in/ayub-abdullah",
         "icon": "linkedIn"
       },
       {
         "name": "GitHub",
-        "url": "https://www.GitHub.com/",
+        "url": "https://github.com/ayubabdullah",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Omar Bassatni",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03ML8M4TDK-39b1e18f3beb-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/omar-bassatni-40a762188/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/OmarBassatni97",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Sarah Abou Dalal",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03MFBC1J1L-7c3ea6b1b8ea-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/sarah-abou-dalal-977891250",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/sarahaboudalal",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Oussama Masri",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03NC2B2B6U-02ede13843e0-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/oussama-masri-558445244",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/OussamaMasri",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Mawa Idris",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03NLRW93S4-58883f4311a9-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/mawa-idrees/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/mawaidris",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Viyan Najmaldin",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03MM3YL9T8-9de8727e5be8-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/viyan-najmadin-5a27a2221/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/viyan-najmaldin",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Hiba",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03N7UPQ273-23bbfdd71a52-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/hiba-dawood-93b5ab133",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/haboosh92",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Zahraa Mahmood",
+    "img": "https://images-ext-1.discordapp.net/external/v3hBuX4Izg5bw5M86rQ4c-n9XmSzCKyvz2VNvB0Sa8Q/%3Fe%3D1673481600%26v%3Dbeta%26t%3DidTOSgPpLg5IPA2mXP2QOW_BDyMHT1yCedhkIt4DZ9o/https/media-exp1.licdn.com/dms/image/D4E03AQHKQsWIAMPs6g/profile-displayphoto-shrink_400_400/0/1665437478526",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/zahraa-mahmood/",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/zahraaz",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Maria Theresa Azzi",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03ME5BM4G7-33939c579835-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "http://www.linkedin.com/in/maria-theresa-azzi",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/MariaTheresaAzzi",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Sozyar Nadir",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03MS03CNNN-e137f5f4be76-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "http://www.linkedin.com/in/maria-theresa-azzi",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/sozinadr",
+        "icon": "github"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Maryam Haitham Najaf",
+    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03N0QN0T4Z-329e8b0488d0-512",
+    "title": "Web Developer",
+    "desc": "",
+    "links": [
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/maryam-haitham",
+        "icon": "linkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/aptx-maryam",
         "icon": "github"
       }
     ]
