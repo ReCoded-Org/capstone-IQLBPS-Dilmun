@@ -12,11 +12,11 @@ test("redering AboutUS", () => {
 })
 
 it('should render cards', () => {
-    // const books = ['Harry Potter', 'The Lord of the Rings']
-    const elem = renderer.create(
+
+    const tree = renderer.create(
 
         <AboutUS><MemberCard /></AboutUS>
     ).toJSON();
-    expect(elem).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
 });
 

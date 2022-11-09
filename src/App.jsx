@@ -33,21 +33,21 @@ const AboutUsRoute = () => {
 const NotFound = () => {
   return (
     <div>
-          <NavBar />
+      <NavBar />
 
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '100vh',
-              fontSize: '2rem',
-            }}
-          >
-            404 Not Found
-          </div>
-          <Footer />
-        </div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+          fontSize: '2rem',
+        }}
+      >
+        404 Not Found
+      </div>
+      <Footer />
+    </div>
   )
 }
 function App() {
@@ -62,7 +62,7 @@ function App() {
     },
     {
       path: '*',
-      element: <NotFound/>
+      element: <NotFound />
     },
   ]);
 
