@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Input, TextArea, SubmitButton, ListBox } from '../Forms';
+import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
@@ -13,7 +13,9 @@ const schema = yup.object().shape({
     .required('Please insert your Email.'),
   country: yup.string().required('Please insert your Country name.'),
   city: yup.string().required('Please insert your City name.'),
-  file: yup.mixed().test('required', 'Please upload a photo.', (photo) => {
+  file: yup
+    .mixed()
+    .test('required', 'Please upload a photo.', (photo) => {
       if (!photo.length) return false;
       return true
   })
@@ -26,6 +28,20 @@ const schema = yup.object().shape({
 });
 
 const ITEM_TYPES = ['Crafted', 'Donated', 'New'];
+
+const ITEM_CATEGORY = [
+  'Men',
+  'Women',
+  'Kids',
+  'Toys',
+  'Books',
+  'Sports',
+  'Clothes',
+  'Furniture',
+  'Electronics',
+  'Homemade',
+  'Other',
+];
 
 export default function AddItemForm() {
   const {
@@ -64,7 +80,12 @@ export default function AddItemForm() {
                       <p className="block text-sm font-medium text-background">
                         Item Image
                       </p>
-                      <div className={["mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6",  errors?.file? 'border-red-500' : ''].join(' ')}>
+                      <div
+                        className={[
+                          'mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6',
+                          errors?.file ? 'border-red-500' : '',
+                        ].join(' ')}
+                      >
                         <div className="space-y-1 text-center">
                           <svg
                             className="mx-auto h-12 w-12 text-tertiary"
@@ -99,7 +120,9 @@ export default function AddItemForm() {
                           <p className="text-xs text-tertiary">
                             PNG, JPG, GIF up to 10MB
                           </p>
-                          <p className="inline-flex text-sm text-red-500">{errors?.file?.message}</p>
+                          <p className="inline-flex text-sm text-red-500">
+                            {errors?.file?.message}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -134,6 +157,9 @@ export default function AddItemForm() {
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <ListBox options={ITEM_TYPES} value={ITEM_TYPES[0]} />
+                  </div>
+                  <div className="col-span-6 sm:col-span-3">
+                    <ComboBox options={ITEM_CATEGORY} value="Men" />
                   </div>
                   <div>
                     <TextArea
