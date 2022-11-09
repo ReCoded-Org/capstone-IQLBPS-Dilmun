@@ -34,7 +34,7 @@ function NavBar() {
 
   return (
     <nav className="shadow-md w-full z-10 sticky top-0  ">
-      <div className={`md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ${transparentNav ? "bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg" : "bg-primary"} `}>
+      <div className={`md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24  bg-background bg-opacity-30 backdrop-filter backdrop-blur-lg `}>
         <div>
           <Link to={HOME_ROUTE}>
             <img
@@ -52,7 +52,7 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`md:flex items-center font-semibold ${transparentNav ? 'text-secondary' : 'text-background'} md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'flex bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg ' : 'hidden'
+          className={`md:flex items-center font-semibold text-secondary md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'left-[88%] ' : 'left-[100%]'
             }`}
         >
           <li>
