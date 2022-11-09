@@ -17,14 +17,17 @@ const schema = yup.object().shape({
     .mixed()
     .test('required', 'Please upload a photo.', (photo) => {
       if (!photo.length) return false;
-      return true
-  })
-  .test('fileSize', 'File size is too large.', (photo) => {
-    return photo.length && photo[0].size <= 10000000;
-  })
-  .test('fileType', 'Please add a supported file type.', (photo) => {
-    return photo.length && ["image/jpeg", "image/png", "image/jpg"].includes(photo[0].type)
-  }),
+      return true;
+    })
+    .test('fileSize', 'File size is too large.', (photo) => {
+      return photo.length && photo[0].size <= 10000000;
+    })
+    .test('fileType', 'Please add a supported file type.', (photo) => {
+      return (
+        photo.length &&
+        ['image/jpeg', 'image/png', 'image/jpg'].includes(photo[0].type)
+      );
+    }),
 });
 
 const ITEM_TYPES = ['Crafted', 'Donated', 'New'];
@@ -131,10 +134,9 @@ export default function AddItemForm() {
                         <Input
                           name="title"
                           type="text"
-                          errors={errors.title}
-                          {...register('title')}
+                          errors={errors.title ? errors.title : undefined}
                           onChange={(e) => setValue('title', e.target.value)}
-                          errorMessage={errors?.title?.message}
+                          {...register('title')}
                         >
                           Item Name
                         </Input>
@@ -144,11 +146,10 @@ export default function AddItemForm() {
                           name="price"
                           type="number"
                           errors={errors?.price}
-                          {...register('price')}
-                          errorMessage={errors?.price?.message}
                           onChange={(e) => {
                             setValue('price', e.target.value, '$');
                           }}
+                          {...register('price')}
                         >
                           Price
                         </Input>
@@ -165,9 +166,8 @@ export default function AddItemForm() {
                     <TextArea
                       name="description"
                       errors={errors?.description}
-                      {...register('description')}
                       onChange={(e) => setValue('description', e.target.value)}
-                      errorMessage={errors?.description?.message}
+                      {...register('description')}
                     >
                       Description
                     </TextArea>
@@ -207,11 +207,10 @@ export default function AddItemForm() {
                         name="email"
                         type="text"
                         errors={errors?.email}
-                        {...register('email')}
-                        errorMessage={errors?.email?.message}
                         onChange={(e) => {
                           setValue('email', e.target.value);
                         }}
+                        {...register('email')}
                       >
                         Email address
                       </Input>
@@ -222,11 +221,10 @@ export default function AddItemForm() {
                         name="country"
                         type="text"
                         errors={errors?.country}
-                        {...register('country')}
-                        errorMessage={errors?.country?.message}
                         onChange={(e) => {
                           setValue('country', e.target.value);
                         }}
+                        {...register('country')}
                       >
                         County
                       </Input>
@@ -237,9 +235,8 @@ export default function AddItemForm() {
                         name="city"
                         type="text"
                         errors={errors?.city}
-                        {...register('city')}
-                        errorMessage={errors?.city?.message}
                         onChange={(e) => setValue('city', e.target.value)}
+                        {...register('city')}
                       >
                         City
                       </Input>
