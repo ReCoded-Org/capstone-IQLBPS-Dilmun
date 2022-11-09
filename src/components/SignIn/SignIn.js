@@ -1,8 +1,10 @@
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth} from '../../firebase-config';
 
 const schema = yup.object().shape({
   email: yup
@@ -25,8 +27,18 @@ function SignIn() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (e) => {
-    e.preventDefault();
+
+  const navigate = useNavigate()
+
+  const onSubmit = (data) => {
+    const { email, password } = data
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const {user} = userCredential;
+    // eslint-disable-next-line no-console
+    console.log(user)
+    navigate('/')
+  })
   };
   return (
     <div className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center" data-testid="sign-in">

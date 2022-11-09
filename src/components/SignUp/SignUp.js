@@ -10,7 +10,6 @@ import {
   setDoc
 } from "firebase/firestore"
 import { createUserWithEmailAndPassword } from "firebase/auth";
-// import { useAuth } from '../Features/Users/userAuthContext';
 import { auth, db } from '../../firebase-config';
 
 
@@ -56,25 +55,6 @@ function SignUp() {
       console.log(user)
       await setDoc(doc(db, "Users", user.uid), { firstName, lastName });
     })
-    //   const {signUp} = useAuth();
-    //   const[user,setUser] = useState({
-    //     firstName:"",
-    //     lastName:"",
-    //     email:"",
-    //     password:"",
-    //     confirmPassword:""
-    //   })
-    //   const userhandler = (event)=>{
-    //     const{name , value} = event.target
-    //     console.log(name,value)
-    //     setUser((perState)=>({...perState,[name]:value}))
-    //   }
-    //   const RegisterHandler = (e)=>{
-    //     e.preventDefault();
-    //     const {email,password,firstName,lastName} = user
-
-    //     signUp(email,password,firstName,lastName)
-    // };
   }
 
 
