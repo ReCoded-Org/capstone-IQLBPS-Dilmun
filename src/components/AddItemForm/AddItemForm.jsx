@@ -18,7 +18,7 @@ const schema = yup.object().shape({
       return true
   })
   .test('fileSize', 'File size is too large.', (photo) => {
-    return photo.length && photo[0].size <= 200000;
+    return photo.length && photo[0].size <= 10000000;
   })
   .test('fileType', 'Please add a supported file type.', (photo) => {
     return photo.length && ["image/jpeg", "image/png", "image/jpg"].includes(photo[0].type)
