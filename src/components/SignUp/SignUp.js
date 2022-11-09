@@ -1,12 +1,17 @@
-import React , {useState} from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link  } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { toast } from 'react-toastify';
 import * as yup from 'yup';
-import { useAuth } from '../Features/Users/userAuthContext';
-// import { createUserWithEmailAndPassword } from "firebase/auth";
-// import { auth} from '../../firebase-config'; 
+import {
+  addDoc,
+  collection
+} from "firebase/firestore"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { useAuth } from '../Features/Users/userAuthContext';
+import { auth , db} from '../../firebase-config'; 
 
 
 const schema = yup.object().shape({
@@ -40,35 +45,37 @@ function SignUp() {
   });
 
 
-  // const onSubmit = async() => {
+  const onSubmit = async(data) => {
 
-    // const {email , password , firstName,lastName} = data
+    const {email , password , firstName,lastName} = data
 
-    //   createUserWithEmailAndPassword(auth,email,password).then((userCredential)=>{
-    //     const {user} = userCredential 
-    //     toast.success('Registration Successful')
-    //     console.log(user)
-    //   })
-    const {signUp} = useAuth();
-    const[user,setUser] = useState({
-      firstName:"",
-      lastName:"",
-      email:"",
-      password:"",
-      confirmPassword:""
-    })
-    const userhandler = (event)=>{
-      const{name , value} = event.target
-      console.log(name,value)
-      setUser((perState)=>({...perState,[name]:value}))
-    }
-    const RegisterHandler = (e)=>{
-      e.preventDefault();
-      const {email,password,firstName,lastName} = user
+      createUserWithEmailAndPassword(auth,email,password).then(async(userCredential)=>{
+        const {user} = userCredential 
+        toast.success('Registration Successful')
+        // eslint-disable-next-line no-console
+        console.log(user)
+        await addDoc(collection(db,"Users"),{firstName,lastName})
+      })
+  //   const {signUp} = useAuth();
+  //   const[user,setUser] = useState({
+  //     firstName:"",
+  //     lastName:"",
+  //     email:"",
+  //     password:"",
+  //     confirmPassword:""
+  //   })
+  //   const userhandler = (event)=>{
+  //     const{name , value} = event.target
+  //     console.log(name,value)
+  //     setUser((perState)=>({...perState,[name]:value}))
+  //   }
+  //   const RegisterHandler = (e)=>{
+  //     e.preventDefault();
+  //     const {email,password,firstName,lastName} = user
 
-      signUp(email,password,firstName,lastName)
-  };
-// }
+  //     signUp(email,password,firstName,lastName)
+  // };
+}
 
 
   return (
