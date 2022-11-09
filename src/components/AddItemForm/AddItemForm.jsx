@@ -17,14 +17,17 @@ const schema = yup.object().shape({
     .mixed()
     .test('required', 'Please upload a photo.', (photo) => {
       if (!photo.length) return false;
-      return true
-  })
-  .test('fileSize', 'File size is too large.', (photo) => {
-    return photo.length && photo[0].size <= 10000000;
-  })
-  .test('fileType', 'Please add a supported file type.', (photo) => {
-    return photo.length && ["image/jpeg", "image/png", "image/jpg"].includes(photo[0].type)
-  }),
+      return true;
+    })
+    .test('fileSize', 'File size is too large.', (photo) => {
+      return photo.length && photo[0].size <= 10000000;
+    })
+    .test('fileType', 'Please add a supported file type.', (photo) => {
+      return (
+        photo.length &&
+        ['image/jpeg', 'image/png', 'image/jpg'].includes(photo[0].type)
+      );
+    }),
 });
 
 const ITEM_TYPES = ['Crafted', 'Donated', 'New'];
@@ -57,22 +60,21 @@ export default function AddItemForm() {
     console.log(e);
   };
   return (
-    <>
       <div className="bg-background">
-        <div className="md:grid md:grid-cols-3 md:gap-6">
-          <div className="md:col-span-1">
-            <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-primary">
-                Profile
-              </h3>
-              <p className="mt-1 text-sm text-secondary">
-                This information will be displayed publicly so be careful what
-                you share.
-              </p>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="md:grid md:grid-cols-4 md:gap-6">
+            <div className="md:col-span-1">
+              <div className="mx-4 py-3">
+                <h3 className="text-lg font-bold text-primary">
+                  Profile
+                </h3>
+                <p className="mt-1 text-sm text-secondary font-semibold">
+                  This information will be displayed publicly so be careful what
+                  you share.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="mt-5 md:col-span-2 md:mt-0">
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-2 pr-2">
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-primary px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-6">
@@ -174,31 +176,26 @@ export default function AddItemForm() {
                   </div>
                 </div>
               </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div className="hidden sm:block" aria-hidden="true">
-        <div className="">
-          <div className="border-t border-secondary" />
-        </div>
-      </div>
-
-      <div className="mt-10 sm:mt-0 bg-background">
-        <div className="md:grid md:grid-cols-3 md:gap-6">
-          <div className="md:col-span-1">
-            <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-primary">
-                Contact Information
-              </h3>
-              <p className="mt-1 text-sm text-secondary">
-                Use a permanent contact information to receive emails.
-              </p>
             </div>
           </div>
-          <div className="mt-5 md:col-span-2 md:mt-0">
-            <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="hidden sm:block py-2" aria-hidden="true">
+            <div className="">
+              <div className="border-t border-secondary" />
+            </div>
+          </div>
+
+          <div className="md:grid md:grid-cols-4 md:gap-6">
+            <div className="md:col-span-1">
+              <div className="mx-4 py-3">
+                <h3 className="text-lg font-bold text-primary">
+                  Contact Information
+                </h3>
+                <p className="mt-1 text-sm text-secondary font-semibold">
+                  Use a permanent contact information to receive emails.
+                </p>
+              </div>
+            </div>
+            <div className="mt-5 md:col-span-3 md:mt-0 pr-2 pb-2 md:pl-0 pl-2">
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-primary px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
@@ -246,20 +243,13 @@ export default function AddItemForm() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                <div className="bg-tertiary bg-opacity-50 px-4 py-3 text-right sm:px-6">
                   <SubmitButton buttonText="Add New Item" />
                 </div>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
-
-      <div className="hidden sm:block" aria-hidden="true">
-        <div className="py-5">
-          <div className="border-t border-gray-200" />
-        </div>
-      </div>
-    </>
   );
 }
