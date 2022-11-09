@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -16,25 +16,10 @@ import LanguageButton from '../LanguageButton/LanguageButton';
 
 function NavBar() {
   const [open, setOpen] = useState(false);
-  const [transparentNav, setTransparentNav] = useState(false)
-
-  const changeNavBarBackground = () => {
-    if (window.scrollY >= 100) {
-      setTransparentNav(true)
-    }
-    else setTransparentNav(false)
-  }
-
-  useEffect(() => {
-    changeNavBarBackground()
-    window.addEventListener('scroll', changeNavBarBackground)
-  })
-
-
 
   return (
     <nav className="shadow-md w-full z-10 sticky top-0  ">
-      <div className={`md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24  bg-background bg-opacity-30 backdrop-filter backdrop-blur-lg `}>
+      <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24  bg-background bg-opacity-30 backdrop-filter backdrop-blur-lg" >
         <div>
           <Link to={HOME_ROUTE}>
             <img
@@ -57,7 +42,7 @@ function NavBar() {
         >
           <li>
             <Link
-              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
+              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
               to={HOME_ROUTE}
             >
               Home
@@ -65,7 +50,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
+              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
               to={CONTACT_ROUTE}
             >
               Contact
@@ -73,7 +58,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
+              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
               to={ABOUT_ROUTE}
             >
               About
@@ -81,7 +66,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
+              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
               to={PROFILE}
             >
               Profile
@@ -89,7 +74,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
+              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
               to={SIGN_UP_ROUTE}
             >
               SignUp
@@ -97,7 +82,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
+              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
               to={SIGN_IN_ROUTE}
             >
               SignIn
@@ -105,7 +90,7 @@ function NavBar() {
           </li>
           <li>
             <Link
-              className={`md:ml-6 text-xl md:my-0 ${transparentNav ? 'hover:text-primary' : 'hover:text-background'}  duration-300`}
+              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
               to={LOG_OUT}
             >
               LogOut
