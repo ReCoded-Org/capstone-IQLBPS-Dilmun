@@ -39,7 +39,7 @@ function ComboBox({ value, options, onChange }) {
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options className="absolute w-72 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm h-52 z-50 left-4 border border-secondary">
+            <Combobox.Options className="absolute w-72 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-primary ring-opacity-5 focus:outline-none sm:text-sm h-52 z-50 left-4 border border-secondary">
               {filteredOptions.length === 0 && query !== '' ? (
                 <div className="cursor-default select-none relative py-2 px-4 text-gray-700">
                   Nothing found.
@@ -47,10 +47,12 @@ function ComboBox({ value, options, onChange }) {
               ) : (
                 filteredOptions.map((option) => (
                   <Combobox.Option
-                    key={option.id}
+                    key={option.id || option}
                     className={({ active }) =>
                       `cursor-default select-none relative py-2 pl-10 pr-4 text-left ${
-                        active ? 'text-black-900 bg-secondary' : 'text-gray-900'
+                        active
+                          ? 'text-primary-900 bg-secondary'
+                          : 'text-gray-900'
                       }`
                     }
                     value={option}

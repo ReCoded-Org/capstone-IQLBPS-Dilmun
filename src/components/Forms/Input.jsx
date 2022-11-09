@@ -21,13 +21,11 @@ const Input = React.forwardRef(
       onChange(e);
     }
 
-    // console.log(errors);
-
     return (
       <>
         <div
           className={[
-            'relative border-2 rounded mb-2 text-background border-tertiary',
+            'relative border-2 rounded-md mb-2 text-background border-tertiary',
             errors ? 'border-red-500' : '',
           ].join(' ')}
         >
@@ -37,12 +35,10 @@ const Input = React.forwardRef(
               active ? 'pt-6' : '',
               errors ? 'placeholder-red-500 text-red-500' : '',
             ].join(' ')}
-            // id={name}
             name={name}
             type={type}
             disabled={disabled}
             onChange={handleActivation}
-            // aria-invalid={errors ? 'true' : 'false'}
             {...props}
             ref={ref}
           />
