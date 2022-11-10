@@ -80,10 +80,9 @@ export default function AddItemForm() {
         <div className="md:grid md:grid-cols-4 md:gap-6">
           <div className="md:col-span-1">
             <div className="mx-4 py-3">
-              <h3 className="text-lg font-bold text-primary">Profile</h3>
+              <h3 className="text-xl font-bold text-primary">Product Info</h3>
               <p className="mt-1 text-sm text-secondary font-semibold">
-                This information will be displayed publicly so be careful what
-                you share.
+                Your product will be added to the store after filling the required information.
               </p>
             </div>
           </div>
@@ -210,11 +209,11 @@ export default function AddItemForm() {
         <div className="md:grid md:grid-cols-4 md:gap-6">
           <div className="md:col-span-1">
             <div className="mx-4 py-3">
-              <h3 className="text-lg font-bold text-primary">
+              <h3 className="text-xl font-bold text-primary">
                 Contact Information
               </h3>
               <p className="mt-1 text-sm text-secondary font-semibold">
-                Use a permanent contact information to receive emails.
+                Use permanent contact information to receive emails from potential buyers.
               </p>
             </div>
           </div>
