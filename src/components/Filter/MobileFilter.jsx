@@ -1,112 +1,69 @@
-import { Fragment, useState } from 'react';
-import { Disclosure } from '@headlessui/react';
-import {
-  FunnelIcon,
-  MinusIcon,
-  PlusIcon,
-  Squares2X2Icon,
-} from '@heroicons/react/20/solid';
-import MobileFilter from './MobileFilter';
+import { Dialog, Disclosure, Transition } from '@headlessui/react';
+import React, { Fragment } from 'react';
+import { XMarkIcon } from '@heroicons/react/24/outline';
+import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 
-const checkFilters = [
-  {
-    id: 'category',
-    name: 'Category',
-    options: [
-      { value: 'men', label: 'Men', checked: true },
-      { value: 'women', label: 'Women', checked: false },
-      { value: 'kids', label: 'Kids', checked: false },
-      { value: 'toys', label: 'Toys', checked: false },
-      { value: 'electronics', label: 'Electronics', checked: false },
-      { value: 'home', label: 'Home', checked: false },
-    ],
-  },
-];
-const radioFilters = [
-  {
-    id: 'price',
-    name: 'Price',
-    options: [
-      { value: { min: '1', max: '25' }, label: '1$ - 25$', checked: false },
-      { value: { min: '26', max: '50' }, label: '26$ - 50$', checked: false },
-      { value: { min: '51', max: '100' }, label: '51$ - 100$', checked: false },
-      {
-        value: { min: '101', max: '200' },
-        label: '101$ - 200$',
-        checked: false,
-      },
-      {
-        value: { min: '201', max: '400' },
-        label: '201$ - 400$',
-        checked: false,
-      },
-      {
-        value: { min: '401', max: '800' },
-        label: '401$ - 800$',
-        checked: false,
-      },
-    ],
-  },
-];
-
-const Filter = () => {
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-
+const MobileFilter = ({
+  mobileFiltersOpen,
+  setMobileFiltersOpen,
+  checkFilters,
+  radioFilters,
+}) => {
   return (
-    <div data-testid='filter' className="bg-background">
-      <div>
-        {/* Mobile filter dialog */}
-        <MobileFilter
-          mobileFiltersOpen={mobileFiltersOpen}
-          setMobileFiltersOpen={setMobileFiltersOpen}
-          checkFilters={checkFilters}
-          radioFilters={radioFilters}
-        />
+    <Transition.Root show={mobileFiltersOpen} as={Fragment}>
+      <Dialog
+        as="div"
+        className="relative z-40 lg:hidden"
+        onClose={setMobileFiltersOpen}
+      >
+        <Transition.Child
+          as={Fragment}
+          enter="transition-opacity ease-linear duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity ease-linear duration-300"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-primary bg-opacity-25" />
+        </Transition.Child>
 
-        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
-            <h1 className="text-4xl font-bold tracking-tight text-primary">
-              New Arrivals
-            </h1>
+        <div className="fixed inset-0 z-40 flex">
+          <Transition.Child
+            as={Fragment}
+            enter="transition ease-in-out duration-300 transform"
+            enterFrom="translate-x-full"
+            enterTo="translate-x-0"
+            leave="transition ease-in-out duration-300 transform"
+            leaveFrom="translate-x-0"
+            leaveTo="translate-x-full"
+          >
+            <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-background py-4 pb-12 shadow-xl">
+              <div className="flex items-center justify-between px-4">
+                <h2 className="text-lg font-medium text-primary">Filters</h2>
+                <button
+                  type="button"
+                  className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-background p-2 text-primary"
+                  onClick={() => setMobileFiltersOpen(false)}
+                >
+                  <span className="sr-only">Close menu</span>
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
+              </div>
 
-            <div className="flex items-center">
-              <button
-                type="button"
-                className="-m-2 ml-5 p-2 text-secondary hover:text-primary sm:ml-7"
-              >
-                <span className="sr-only">View grid</span>
-                <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
-              </button>
-              <button
-                type="button"
-                className="-m-2 ml-4 p-2 text-secondary hover:text-primary sm:ml-6 lg:hidden"
-                onClick={() => setMobileFiltersOpen(true)}
-              >
-                <span className="sr-only">Filters</span>
-                <FunnelIcon className="h-5 w-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-
-          <section aria-labelledby="products-heading" className="pt-6 pb-24">
-            <h2 id="products-heading" className="sr-only">
-              Products
-            </h2>
-
-            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Filters */}
-              <form className="hidden lg:block">
+              <form className="mt-4 border-t border-gray-200">
                 {checkFilters.map((section) => (
                   <Disclosure
                     as="div"
                     key={section.id}
-                    className="border-b border-gray-200 py-6"
+                    className="border-t border-gray-200 px-4 py-6"
                     defaultOpen
                   >
                     {({ open }) => (
                       <>
-                        <h3 className="-my-3 flow-root">
-                          <Disclosure.Button className="flex w-full items-center justify-between bg-background py-3 text-sm text-primary hover:text-secondary">
+                        <h3 className="-mx-2 -my-3 flow-root">
+                          <Disclosure.Button className="flex w-full items-center justify-between bg-background px-2 py-3 text-primary hover:text-secondary">
                             <span className="font-medium text-primary">
                               {section.name}
                             </span>
@@ -126,14 +83,14 @@ const Filter = () => {
                           </Disclosure.Button>
                         </h3>
                         <Disclosure.Panel className="pt-6">
-                          <div className="space-y-4">
+                          <div className="space-y-6">
                             {section.options.map((option, optionIdx) => (
                               <div
                                 key={option.value}
                                 className="flex items-center"
                               >
                                 <input
-                                  id={`filter-${section.id}-${optionIdx}`}
+                                  id={`filter-mobile-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
                                   defaultValue={option.value}
                                   type="checkbox"
@@ -141,8 +98,8 @@ const Filter = () => {
                                   className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
                                 />
                                 <label
-                                  htmlFor={`filter-${section.id}-${optionIdx}`}
-                                  className="ml-3 text-sm text-primary select-none"
+                                  htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
+                                  className="ml-3 min-w-0 flex-1 text-primary select-none"
                                 >
                                   {option.label}
                                 </label>
@@ -154,16 +111,17 @@ const Filter = () => {
                     )}
                   </Disclosure>
                 ))}
+
                 {radioFilters.map((section) => (
                   <Disclosure
                     as="div"
                     key={section.id}
-                    className="border-b border-gray-200 py-6"
+                    className="border-t border-gray-200 px-4 py-6"
                   >
                     {({ open }) => (
                       <>
-                        <h3 className="-my-3 flow-root">
-                          <Disclosure.Button className="flex w-full items-center justify-between bg-background py-3 text-primary hover:text-secondary">
+                        <h3 className="-mx-2 -my-3 flow-root">
+                          <Disclosure.Button className="flex w-full items-center justify-between bg-background px-2 py-3 text-primary hover:text-secondary">
                             <span className="font-medium text-primary">
                               {section.name}
                             </span>
@@ -189,17 +147,17 @@ const Filter = () => {
                               <input
                                 type="number"
                                 name="min-price"
-                                id="min-price"
+                                id="mobile-min-price"
                                 placeholder="Min"
-                                className="border border-gray-300 rounded-md px-3 py-2 w-1/3 md:w-1/4 mr-1 focus:outline-primary"
+                                className="border border-gray-300 rounded-md px-3 py-2 w-1/3 mr-1 focus:outline-primary"
                               />
                               <h3 className="sr-only">Maximum Price</h3>
                               <input
                                 type="number"
                                 name="max-price"
-                                id="max-price"
+                                id="mobile-max-price"
                                 placeholder="Max"
-                                className="border border-gray-300 rounded-md px-3 py-2 w-1/3 md:w-1/4 focus:outline-primary"
+                                className="border border-gray-300 rounded-md px-3 py-2 w-1/3 focus:outline-primary"
                               />
                               <button
                                 type="button"
@@ -214,7 +172,7 @@ const Filter = () => {
                                 className="flex items-center"
                               >
                                 <input
-                                  id={`filter-${section.id}-${optionIdx}`}
+                                  id={`filter-mobile-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
                                   defaultValue={option.value}
                                   type="radio"
@@ -222,7 +180,7 @@ const Filter = () => {
                                   className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
                                 />
                                 <label
-                                  htmlFor={`filter-${section.id}-${optionIdx}`}
+                                  htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
                                   className="ml-3 min-w-0 flex-1 text-primary select-none"
                                 >
                                   {option.label}
@@ -236,19 +194,12 @@ const Filter = () => {
                   </Disclosure>
                 ))}
               </form>
-
-              {/* Product grid */}
-              <div className="lg:col-span-3">
-                {/* Replace with your content */}
-                <div className="h-96 rounded-lg border-4 border-dashed border-gray-200 lg:h-full" />
-                {/* /End replace */}
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </div>
+            </Dialog.Panel>
+          </Transition.Child>
+        </div>
+      </Dialog>
+    </Transition.Root>
   );
 };
 
-export default Filter;
+export default MobileFilter;

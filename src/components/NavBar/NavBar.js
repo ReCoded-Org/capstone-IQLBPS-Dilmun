@@ -11,6 +11,7 @@ import {
   SIGN_IN_ROUTE,
   LOG_OUT,
   PROFILE,
+  PRODUCT_ROUTE,
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
 
@@ -47,6 +48,14 @@ function NavBar() {
               to={HOME_ROUTE}
             >
               Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+              to={PRODUCT_ROUTE}
+            >
+              Products
             </Link>
           </li>
           <li>
