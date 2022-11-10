@@ -4,9 +4,8 @@ const TextArea = React.forwardRef(
   ({ name, errors, children, onChange, ...props }, ref) => {
     const [active, setActive] = React.useState(false);
 
-    function handleActivation(e) {
+    function handleActivation() {
       setActive(true);
-      onChange(e);
     }
 
     return (
@@ -27,6 +26,7 @@ const TextArea = React.forwardRef(
             name={name}
             rows="5"
             onFocus={handleActivation}
+            onChange={onChange}
             {...props}
             ref={ref}
           />
