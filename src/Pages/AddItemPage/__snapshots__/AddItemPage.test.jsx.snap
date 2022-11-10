@@ -112,6 +112,7 @@ exports[`Add item page rendered correctly 1`] = `
                     >
                       <input
                         class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                        id="title"
                         name="title"
                         type="text"
                       />
@@ -129,6 +130,7 @@ exports[`Add item page rendered correctly 1`] = `
                     >
                       <input
                         class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                        id="price"
                         name="price"
                         type="number"
                       />

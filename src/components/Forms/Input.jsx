@@ -35,6 +35,7 @@ const Input = React.forwardRef(
               errors ? 'error' : '',
             ].join(' ')}
             name={name}
+            id={name}
             type={type}
             disabled={disabled}
             onFocus={handleActivation}
