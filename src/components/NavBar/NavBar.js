@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+// import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
+import { useLocation, Link } from 'react-router-dom';
 
 import {
   HOME_ROUTE,
@@ -16,7 +17,17 @@ import LanguageButton from '../LanguageButton/LanguageButton';
 
 function NavBar() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
+  const closeNavBar = () => {
+    if (open) {
+      setOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    closeNavBar();
+  }, [location.key]);
   return (
     <nav className="shadow-md w-full z-10 sticky top-0  ">
       <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24  bg-background bg-opacity-30 backdrop-filter backdrop-blur-lg" >
@@ -96,7 +107,7 @@ function NavBar() {
               LogOut
             </Link>
           </li>
-          <LanguageButton />
+          <LanguageButton closeNavbar={closeNavBar} />
         </ul>
       </div>
     </nav>
