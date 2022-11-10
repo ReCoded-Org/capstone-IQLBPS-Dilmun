@@ -1,12 +1,12 @@
 
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Filter from '../Filter';
+import FilterPage from '../../../Pages/FilterPage/FilterPage'
 
-test('Sign In Page Renders Correctly', () => {
+test('Filter Component Renders Correctly', () => {
   render(
     <Router>
-      <Filter />
+      <FilterPage />
     </Router>
   );
   expect(screen.getByTestId('filter')).toMatchSnapshot();
