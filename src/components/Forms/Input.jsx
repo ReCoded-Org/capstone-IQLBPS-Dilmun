@@ -16,9 +16,8 @@ const Input = React.forwardRef(
   ) => {
     const [active, setActive] = React.useState(false);
 
-    function handleActivation(e) {
+    function handleActivation() {
       setActive(true);
-      onChange(e);
     }
 
     return (
@@ -39,6 +38,7 @@ const Input = React.forwardRef(
             type={type}
             disabled={disabled}
             onFocus={handleActivation}
+            onChange={onChange}
             {...props}
             ref={ref}
           />
