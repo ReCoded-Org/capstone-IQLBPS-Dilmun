@@ -1,7 +1,7 @@
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 
 const schema = yup.object().shape({
@@ -26,28 +26,20 @@ const ITEM_CATEGORY = [
   'Other',
 ];
 
-const INTIAL_VALUES = {
-  title: '',
-  price: 0,
-  description: '',
-  email: '',
-  country: '',
-  city: '',
-  file: [],
-  type: ITEM_TYPES[0],
-  category: ITEM_CATEGORY[0],
-};
-
 export default function AddItemForm() {
-  const [item, setItem] = useState(INTIAL_VALUES);
-
   const {
     register,
     handleSubmit,
     formState: { errors },
+    control,
+    setValue,
   } = useForm({
     resolver: yupResolver(schema),
   });
+
+  useEffect(() => {
+    setValue('type', ITEM_TYPES[0]);
+  }, [setValue]);
 
   const onSubmit = (e) => {
     console.log(e);
@@ -100,8 +92,11 @@ export default function AddItemForm() {
                               id="file"
                               name="file"
                               type="file"
-                              accept='image/*'
-                              {...register('file', {value: 'https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png'})}
+                              accept="image/*"
+                              {...register('file', {
+                                value:
+                                  'https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png',
+                              })}
                               className="sr-only"
                             />
                           </label>
@@ -128,7 +123,7 @@ export default function AddItemForm() {
                       <Input
                         name="price"
                         type="number"
-                        disabled={item.type.toLowerCase() === 'donated'}
+                        // disabled={item.type.toLowerCase() === 'donated'}
                         errors={errors?.price}
                         {...register('price')}
                       >
@@ -143,21 +138,22 @@ export default function AddItemForm() {
                       Item Type
                     </span>
                     <ListBox
+                      name="type"
+                      control={control}
                       options={ITEM_TYPES}
-                      value={item.type}
-                      onChange={(e) => setItem({ ...item, type: e })}
-                      {...register('type')}
                     />
                   </div>
                   <div className="w-full">
                     <span className="block text-sm font-medium text-background">
                       Item Category
                     </span>
-                    <ComboBox
-                      options={ITEM_CATEGORY}
-                      value={item.category}
-                      onChange={(e) => setItem({ ...item, category: e })}
-                      {...register('category')}
+                    <Controller
+                      name="category"
+                      control={control}
+                      defaultValue={ITEM_CATEGORY[0]}
+                      render={({ field }) => (
+                        <ComboBox options={ITEM_CATEGORY} {...field} />
+                      )}
                     />
                   </div>
                 </div>

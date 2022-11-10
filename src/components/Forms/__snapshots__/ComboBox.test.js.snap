@@ -12,6 +12,7 @@ exports[`ComboBox renders correctly 1`] = `
     >
       <input
         aria-expanded={false}
+        aria-multiselectable={true}
         className="w-full border-none focus:ring-0 py-2 pl-3 pr-10 text-sm leading-5 text-primary bg-background rounded-lg"
         data-headlessui-state=""
         disabled={false}

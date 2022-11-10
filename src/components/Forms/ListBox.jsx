@@ -1,8 +1,13 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
+import { useController } from 'react-hook-form';
 import { Listbox, Transition } from '@headlessui/react';
 import { HiSelector, HiOutlineCheck } from 'react-icons/hi';
 
-export default function ListBox({ options, value, onChange }) {
+const ListBox = (props) => {
+  const { options } = props;
+  const {
+    field: { value, onChange },
+  } = useController(props);
   return (
     <div className="w-full mt-4">
       <Listbox value={value} onChange={onChange}>
@@ -46,7 +51,11 @@ export default function ListBox({ options, value, onChange }) {
                         {option.name || option}
                       </span>
                       {selected ? (
-                        <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-secondary' : 'text-tertiary'}`}>
+                        <span
+                          className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
+                            active ? 'text-secondary' : 'text-tertiary'
+                          }`}
+                        >
                           <HiOutlineCheck
                             className="w-5 h-5"
                             aria-hidden="true"
@@ -63,4 +72,6 @@ export default function ListBox({ options, value, onChange }) {
       </Listbox>
     </div>
   );
-}
+};
+
+export default ListBox;
