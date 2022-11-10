@@ -135,7 +135,7 @@ export default function AddItemForm() {
                         <p className="text-xs text-tertiary">
                           PNG, JPG, GIF up to 10MB
                         </p>
-                        <p className="inline-flex text-sm text-red-500">
+                        <p className="inline-flex text-sm error">
                           {errors?.file?.message}
                         </p>
                       </div>
@@ -170,9 +170,11 @@ export default function AddItemForm() {
                     <span className="block text-sm font-medium text-background">
                       Item Type
                     </span>
-                    <ListBox options={ITEM_TYPES} value={item.type} onChange={(e) => 
-                      setItem({ ...item, type: e })
-                    } />
+                    <ListBox
+                      options={ITEM_TYPES}
+                      value={item.type}
+                      onChange={(e) => setItem({ ...item, type: e })}
+                    />
                   </div>
                   <div className="w-full">
                     <span className="block text-sm font-medium text-background">
@@ -181,9 +183,7 @@ export default function AddItemForm() {
                     <ComboBox
                       options={ITEM_CATEGORY}
                       value={item.category}
-                      onChange={(e) =>
-                        setItem({ ...item, category: e })
-                      }
+                      onChange={(e) => setItem({ ...item, category: e })}
                     />
                   </div>
                 </div>
@@ -191,6 +191,7 @@ export default function AddItemForm() {
                   <TextArea
                     name="description"
                     errors={errors?.description}
+                    onChange={(e) => console.log(e.target.value, e.target.name)}
                     {...register('description')}
                   >
                     Description

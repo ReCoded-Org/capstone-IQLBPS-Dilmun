@@ -15,3 +15,10 @@ code {
 .cont {
     background: url('https://images.unsplash.com/photo-1561715276-a2d087060f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center/cover;
 }
+.error {
+    @apply text-red-500;
+}
+
+.focus:outline-none:focus {
+    @apply outline-none;
+}

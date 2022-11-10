@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import { Combobox, Transition } from '@headlessui/react';
 import { HiSelector, HiOutlineCheck } from 'react-icons/hi';
 
-function ComboBox({ value, options, onChange }) {
+function ComboBox({ value, options, disabled, onChange }) {
   const [query, setQuery] = useState('');
 
   const filteredOptions =
@@ -17,7 +17,7 @@ function ComboBox({ value, options, onChange }) {
 
   return (
     <div className="w-full">
-      <Combobox value={value} onChange={onChange}>
+      <Combobox value={value} onChange={onChange} disabled={disabled}>
         <div className=" mt-4 relative">
           <div className="relative w-full text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-teal-300 focus-visible:ring-offset-2 sm:text-sm overflow-hidden border border-secondary">
             <Combobox.Input

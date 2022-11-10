@@ -21,7 +21,7 @@ const TextArea = React.forwardRef(
             className={[
               'outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2 text-background',
               active ? 'pt-6' : '',
-              errors ? 'placeholder-red-500 text-red-500' : '',
+              errors ? 'error' : '',
             ].join(' ')}
             id={name}
             name={name}
@@ -34,7 +34,7 @@ const TextArea = React.forwardRef(
             className={[
               'absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out',
               active ? 'text-xs' : 'text-sm',
-              errors ? 'text-red-500' : '',
+              errors ? 'error' : '',
             ].join(' ')}
             htmlFor={name}
           >
@@ -42,9 +42,7 @@ const TextArea = React.forwardRef(
           </label>
         </div>
         {errors && (
-          <span className="inline-flex text-sm text-red-500">
-            {errors.message}
-          </span>
+          <span className="inline-flex text-sm error">{errors.message}</span>
         )}
       </>
     );
