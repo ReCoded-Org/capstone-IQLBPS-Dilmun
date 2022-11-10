@@ -31,7 +31,7 @@ const schema = yup.object().shape({
     }),
 });
 
-const ITEM_TYPES = ['Crafted', 'Donated', 'New'];
+const ITEM_TYPES = ['Crafted', 'Donated', 'New', 'Used'];
 
 const ITEM_CATEGORY = [
   'Men',

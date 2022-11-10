@@ -6,7 +6,7 @@ exports[`TextArea renders correctly 1`] = `
 >
   <textarea
     className="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2 text-background  "
-    onChange={[Function]}
+    onFocus={[Function]}
     rows="5"
   />
   <label
