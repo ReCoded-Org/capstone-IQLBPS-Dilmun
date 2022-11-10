@@ -101,7 +101,7 @@ export default function AddItemForm() {
                               name="file"
                               type="file"
                               accept='image/*'
-                              {...register('file')}
+                              {...register('file', {value: 'https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png'})}
                               className="sr-only"
                             />
                           </label>
@@ -146,6 +146,7 @@ export default function AddItemForm() {
                       options={ITEM_TYPES}
                       value={item.type}
                       onChange={(e) => setItem({ ...item, type: e })}
+                      {...register('type')}
                     />
                   </div>
                   <div className="w-full">
@@ -156,6 +157,7 @@ export default function AddItemForm() {
                       options={ITEM_CATEGORY}
                       value={item.category}
                       onChange={(e) => setItem({ ...item, category: e })}
+                      {...register('category')}
                     />
                   </div>
                 </div>
