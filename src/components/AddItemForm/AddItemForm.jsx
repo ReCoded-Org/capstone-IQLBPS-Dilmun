@@ -100,6 +100,7 @@ export default function AddItemForm() {
                               id="file"
                               name="file"
                               type="file"
+                              accept='image/*'
                               {...register('file')}
                               className="sr-only"
                             />

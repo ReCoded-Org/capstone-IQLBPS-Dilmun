@@ -46,7 +46,7 @@ exports[`Add item form component rendered correctly 1`] = `
                   Item Image
                 </p>
                 <div
-                  class="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6 "
+                  class="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6"
                 >
                   <div
                     class="space-y-1 text-center"
@@ -76,6 +76,7 @@ exports[`Add item form component rendered correctly 1`] = `
                           Upload a file
                         </span>
                         <input
+                          accept="image/*"
                           class="sr-only"
                           id="file"
                           name="file"
@@ -93,9 +94,6 @@ exports[`Add item form component rendered correctly 1`] = `
                     >
                       PNG, JPG, GIF up to 10MB
                     </p>
-                    <p
-                      class="inline-flex text-sm error"
-                    />
                   </div>
                 </div>
               </div>
