@@ -7,7 +7,7 @@ export default function ListBox({ options, value, onChange }) {
     <div className="w-full mt-4">
       <Listbox value={value} onChange={onChange}>
         <div className="relative mt-1">
-          <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+          <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-background  text-primary font-medium rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
             <span className="block truncate">{value}</span>
             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <HiSelector
@@ -22,7 +22,7 @@ export default function ListBox({ options, value, onChange }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-50">
+            <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-background rounded-md shadow-lg max-h-40 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-50">
               {options.map((option, idx) => (
                 <Listbox.Option
                   // eslint-disable-next-line react/no-array-index-key
@@ -31,12 +31,12 @@ export default function ListBox({ options, value, onChange }) {
                     `cursor-default select-none relative py-2 pl-10 pr-4 ${
                       active
                         ? 'text-white bg-secondary bg-opacity-50'
-                        : 'text-gray-900'
+                        : 'text-primary'
                     }`
                   }
                   value={option}
                 >
-                  {({ selected }) => (
+                  {({ selected, active }) => (
                     <>
                       <span
                         className={`block truncate ${
@@ -46,7 +46,7 @@ export default function ListBox({ options, value, onChange }) {
                         {option.name || option}
                       </span>
                       {selected ? (
-                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-secondary">
+                        <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-secondary' : 'text-tertiary'}`}>
                           <HiOutlineCheck
                             className="w-5 h-5"
                             aria-hidden="true"

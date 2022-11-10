@@ -19,9 +19,9 @@ function ComboBox({ value, options, disabled, onChange }) {
     <div className="w-full">
       <Combobox value={value} onChange={onChange} disabled={disabled}>
         <div className=" mt-4 relative">
-          <div className="relative w-full text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-teal-300 focus-visible:ring-offset-2 sm:text-sm overflow-hidden border border-secondary">
+          <div className="relative w-full text-left bg-background text-primary font-medium rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-background focus-visible:ring-offset-teal-300 focus-visible:ring-offset-2 sm:text-sm overflow-hidden border border-secondary">
             <Combobox.Input
-              className="w-full border-none focus:ring-0 py-2 pl-3 pr-10 text-sm leading-5 text-gray-900"
+              className="w-full border-none focus:ring-0 py-2 pl-3 pr-10 text-sm leading-5 text-primary bg-background rounded-lg"
               displayValue={(option) => option}
               onChange={(event) => setQuery(event.target.value)}
             />
@@ -39,9 +39,9 @@ function ComboBox({ value, options, disabled, onChange }) {
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options className="absolute w-72 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-primary ring-opacity-5 focus:outline-none sm:text-sm h-52 z-50 left-4 border border-secondary">
+            <Combobox.Options className="absolute w-80 py-1 mt-1 overflow-auto text-base bg-background text-primary font-medium rounded-md shadow-lg max-h-40 ring-1 ring-primary ring-opacity-5 focus:outline-none sm:text-sm h-52 z-50 left-4 border border-secondary">
               {filteredOptions.length === 0 && query !== '' ? (
-                <div className="cursor-default select-none relative py-2 px-4 text-gray-700">
+                <div className="cursor-default select-none relative py-2 px-4 text-primary">
                   Nothing found.
                 </div>
               ) : (
@@ -51,8 +51,8 @@ function ComboBox({ value, options, disabled, onChange }) {
                     className={({ active }) =>
                       `cursor-default select-none relative py-2 pl-10 pr-4 text-left ${
                         active
-                          ? 'text-primary-900 bg-secondary'
-                          : 'text-gray-900'
+                          ? 'text-white bg-secondary bg-opacity-50'
+                          : 'text-primary'
                       }`
                     }
                     value={option}
@@ -69,7 +69,7 @@ function ComboBox({ value, options, disabled, onChange }) {
                         {selected ? (
                           <span
                             className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                              active ? 'text-green' : 'text-teal-600'
+                              active ? 'text-secondary' : 'text-tertiary'
                             }`}
                           >
                             <HiOutlineCheck

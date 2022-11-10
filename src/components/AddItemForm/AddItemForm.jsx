@@ -219,7 +219,7 @@ export default function AddItemForm() {
               </p>
             </div>
           </div>
-          <div className="mt-5 md:col-span-3 md:mt-0 pr-2 pb-2 md:pl-0 pl-2">
+          <div className="mt-5 md:col-span-3 md:mt-0 pr-2 pb-4 md:pl-0 pl-2">
             <div className="overflow-hidden shadow sm:rounded-md">
               <div className="bg-primary px-4 py-5 sm:p-6">
                 <div className="grid grid-cols-6 gap-6">
@@ -257,7 +257,7 @@ export default function AddItemForm() {
                   </div>
                 </div>
               </div>
-              <div className="bg-tertiary bg-opacity-50 px-4 py-3 text-right sm:px-6">
+              <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" />
               </div>
             </div>
