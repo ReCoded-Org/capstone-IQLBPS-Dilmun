@@ -21,6 +21,16 @@ const checkFilters = [
       { value: 'home', label: 'Home', checked: false },
     ],
   },
+  {
+    id: 'type',
+    name: 'Type',
+    options: [
+      { value: 'new', label: 'New', checked: true },
+      { value: 'used', label: 'Used', checked: false },
+      { value: 'donated', label: 'Donated', checked: false },
+      { value: 'crafted', label: 'Crafted', checked: false },
+    ],
+  },
 ];
 const radioFilters = [
   {
@@ -53,7 +63,7 @@ const Filter = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   return (
-    <div data-testid='filter' className="bg-background">
+    <div data-testid="filter" className="bg-background">
       <div>
         {/* Mobile filter dialog */}
         <MobileFilter
@@ -101,7 +111,7 @@ const Filter = () => {
                     as="div"
                     key={section.id}
                     className="border-b border-gray-200 py-6"
-                    defaultOpen
+                    defaultOpen={section.id === 'category'}
                   >
                     {({ open }) => (
                       <>
