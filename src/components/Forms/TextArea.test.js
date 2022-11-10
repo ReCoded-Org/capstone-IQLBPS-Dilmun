@@ -7,11 +7,6 @@ test('TextArea renders correctly', () => {
     expect(tree).toMatchSnapshot();
 });
 
-test('should have a value', () => {
-    render(<TextArea value="test" />);
-    const value = screen.getByDisplayValue(/test/i)
-    expect(value).toBeTruthy();
-})
 test('should have a disabled', () => {
     render(<TextArea disabled />);
     const input = screen.getByRole('textbox')
