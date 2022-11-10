@@ -2,11 +2,11 @@
 
 exports[`DiffSection renders without crashing  1`] = `
 <div
-  className=" rounded-md shadow-md bg-primary w-full h-96 relative"
+  className="shadow-md bg-primary w-full h-96 relative"
 >
   <video
     autoPlay={true}
-    className="w-full h-full object-cover opacity-60 drop-shadow-2xl rounded-md absolute"
+    className="w-full h-full object-cover opacity-60 drop-shadow-2xl absolute"
     loop={true}
     muted={true}
     src="Dilmun.mp4"
@@ -16,7 +16,7 @@ exports[`DiffSection renders without crashing  1`] = `
     />
   </video>
   <div
-    className=" relative mt-14 pt-14 lg:pt-12 "
+    className=" relative pt-14 lg:pt-12 "
   >
     <div
       className=" flex flex-col items-center justify-center text-black bg-opacity-20 pl-10 pr-10 "
