@@ -8,21 +8,6 @@ const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
   price: yup.number().positive('Please insert a positive number.'),
   description: yup.string().required('Please add a description.'),
-  file: yup
-    .mixed()
-    .test('required', 'Please upload a photo.', (photo) => {
-      if (!photo.length) return false;
-      return true;
-    })
-    .test('fileSize', 'File size is too large.', (photo) => {
-      return photo.length && photo[0].size <= 10000000;
-    })
-    .test('fileType', 'Please add a supported file type.', (photo) => {
-      return (
-        photo.length &&
-        ['image/jpeg', 'image/png', 'image/jpg'].includes(photo[0].type)
-      );
-    }),
 });
 
 const ITEM_TYPES = ['Crafted', 'Donated', 'New', 'Used'];
@@ -65,7 +50,7 @@ export default function AddItemForm() {
   });
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    console.log(e);
   };
 
   return (
@@ -89,12 +74,7 @@ export default function AddItemForm() {
                     <p className="block text-sm font-medium text-background">
                       Item Image
                     </p>
-                    <div
-                      className={[
-                        'mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6',
-                        errors?.file ? 'border-red-500' : '',
-                      ].join(' ')}
-                    >
+                    <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6">
                       <div className="space-y-1 text-center">
                         <svg
                           className="mx-auto h-12 w-12 text-tertiary"
@@ -128,9 +108,6 @@ export default function AddItemForm() {
                         </div>
                         <p className="text-xs text-tertiary">
                           PNG, JPG, GIF up to 10MB
-                        </p>
-                        <p className="inline-flex text-sm error">
-                          {errors?.file?.message}
                         </p>
                       </div>
                     </div>
@@ -190,10 +167,10 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
-                </div>
-                <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                  <SubmitButton buttonText="Add New Item" />
-                </div>
+              </div>
+              <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
+                <SubmitButton buttonText="Add New Item" />
+              </div>
             </div>
           </div>
         </div>
