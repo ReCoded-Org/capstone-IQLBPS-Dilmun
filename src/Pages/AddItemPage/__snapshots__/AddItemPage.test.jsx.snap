@@ -32,7 +32,7 @@ exports[`Add item page rendered correctly 1`] = `
           </div>
         </div>
         <div
-          class="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-2 pr-2"
+          class="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-2 pr-2 pb-4"
         >
           <div
             class="shadow sm:overflow-hidden sm:rounded-md"
@@ -272,113 +272,6 @@ exports[`Add item page rendered correctly 1`] = `
                   >
                     Description
                   </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        class="hidden sm:block py-2"
-      >
-        <div
-          class=""
-        >
-          <div
-            class="border-t border-secondary"
-          />
-        </div>
-      </div>
-      <div
-        class="md:grid md:grid-cols-4 md:gap-6"
-      >
-        <div
-          class="md:col-span-1"
-        >
-          <div
-            class="mx-4 py-3"
-          >
-            <h3
-              class="text-xl font-bold text-primary"
-            >
-              Contact Information
-            </h3>
-            <p
-              class="mt-1 text-sm text-secondary font-semibold"
-            >
-              Use permanent contact information to receive emails from potential buyers.
-            </p>
-          </div>
-        </div>
-        <div
-          class="mt-5 md:col-span-3 md:mt-0 pr-2 pb-4 md:pl-0 pl-2"
-        >
-          <div
-            class="overflow-hidden shadow sm:rounded-md"
-          >
-            <div
-              class="bg-primary px-4 py-5 sm:p-6"
-            >
-              <div
-                class="grid grid-cols-6 gap-6"
-              >
-                <div
-                  class="col-span-6 sm:col-span-4"
-                >
-                  <div
-                    class="relative border-2 rounded-md mb-2 text-background border-tertiary "
-                  >
-                    <input
-                      class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
-                      name="email"
-                      type="text"
-                    />
-                    <label
-                      class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
-                      for="email"
-                    >
-                      Email address
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="col-span-6 sm:col-span-4"
-                >
-                  <div
-                    class="relative border-2 rounded-md mb-2 text-background border-tertiary "
-                  >
-                    <input
-                      class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
-                      name="country"
-                      type="text"
-                    />
-                    <label
-                      class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
-                      for="country"
-                    >
-                      County
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="col-span-6 sm:col-span-4"
-                >
-                  <div
-                    class="relative border-2 rounded-md mb-2 text-background border-tertiary "
-                  >
-                    <input
-                      class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
-                      name="city"
-                      type="text"
-                    />
-                    <label
-                      class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
-                      for="city"
-                    >
-                      City
-                    </label>
-                  </div>
                 </div>
               </div>
             </div>

@@ -8,12 +8,6 @@ const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
   price: yup.number().positive('Please insert a positive number.'),
   description: yup.string().required('Please add a description.'),
-  email: yup
-    .string()
-    .email('Should be a valid email.')
-    .required('Please insert your Email.'),
-  country: yup.string().required('Please insert your Country name.'),
-  city: yup.string().required('Please insert your City name.'),
   file: yup
     .mixed()
     .test('required', 'Please upload a photo.', (photo) => {
@@ -75,18 +69,19 @@ export default function AddItemForm() {
   };
 
   return (
-    <div className="bg-background" data-testid='add-item-form'>
+    <div className="bg-background" data-testid="add-item-form">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="md:grid md:grid-cols-4 md:gap-6">
           <div className="md:col-span-1">
             <div className="mx-4 py-3">
               <h3 className="text-xl font-bold text-primary">Product Info</h3>
               <p className="mt-1 text-sm text-secondary font-semibold">
-                Your product will be added to the store after filling the required information.
+                Your product will be added to the store after filling the
+                required information.
               </p>
             </div>
           </div>
-          <div className="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-2 pr-2">
+          <div className="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-2 pr-2 pb-4">
             <div className="shadow sm:overflow-hidden sm:rounded-md">
               <div className="space-y-6 bg-primary px-4 py-5 sm:p-6">
                 <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-x-0 md:gap-6 gap-y-6">
@@ -195,69 +190,10 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="hidden sm:block py-2" aria-hidden="true">
-          <div className="">
-            <div className="border-t border-secondary" />
-          </div>
-        </div>
-
-        <div className="md:grid md:grid-cols-4 md:gap-6">
-          <div className="md:col-span-1">
-            <div className="mx-4 py-3">
-              <h3 className="text-xl font-bold text-primary">
-                Contact Information
-              </h3>
-              <p className="mt-1 text-sm text-secondary font-semibold">
-                Use permanent contact information to receive emails from potential buyers.
-              </p>
-            </div>
-          </div>
-          <div className="mt-5 md:col-span-3 md:mt-0 pr-2 pb-4 md:pl-0 pl-2">
-            <div className="overflow-hidden shadow sm:rounded-md">
-              <div className="bg-primary px-4 py-5 sm:p-6">
-                <div className="grid grid-cols-6 gap-6">
-                  <div className="col-span-6 sm:col-span-4">
-                    <Input
-                      name="email"
-                      type="text"
-                      errors={errors?.email}
-                      {...register('email')}
-                    >
-                      Email address
-                    </Input>
-                  </div>
-
-                  <div className="col-span-6 sm:col-span-4">
-                    <Input
-                      name="country"
-                      type="text"
-                      errors={errors?.country}
-                      {...register('country')}
-                    >
-                      County
-                    </Input>
-                  </div>
-
-                  <div className="col-span-6 sm:col-span-4">
-                    <Input
-                      name="city"
-                      type="text"
-                      errors={errors?.city}
-                      {...register('city')}
-                    >
-                      City
-                    </Input>
-                  </div>
                 </div>
-              </div>
-              <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                <SubmitButton buttonText="Add New Item" />
-              </div>
+                <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
+                  <SubmitButton buttonText="Add New Item" />
+                </div>
             </div>
           </div>
         </div>
