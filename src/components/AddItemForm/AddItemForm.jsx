@@ -71,7 +71,7 @@ export default function AddItemForm() {
   });
 
   const onSubmit = (e) => {
-    console.log(e, item);
+    e.preventDefault();
   };
 
   return (
@@ -191,7 +191,6 @@ export default function AddItemForm() {
                   <TextArea
                     name="description"
                     errors={errors?.description}
-                    onChange={(e) => console.log(e.target.value, e.target.name)}
                     {...register('description')}
                   >
                     Description
