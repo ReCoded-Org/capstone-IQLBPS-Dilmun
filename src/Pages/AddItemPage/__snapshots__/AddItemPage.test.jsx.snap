@@ -20,14 +20,14 @@ exports[`Add item page rendered correctly 1`] = `
             class="mx-4 py-3"
           >
             <h3
-              class="text-lg font-bold text-primary"
+              class="text-xl font-bold text-primary"
             >
-              Profile
+              Product Info
             </h3>
             <p
               class="mt-1 text-sm text-secondary font-semibold"
             >
-              This information will be displayed publicly so be careful what you share.
+              Your product will be added to the store after filling the required information.
             </p>
           </div>
         </div>
@@ -300,14 +300,14 @@ exports[`Add item page rendered correctly 1`] = `
             class="mx-4 py-3"
           >
             <h3
-              class="text-lg font-bold text-primary"
+              class="text-xl font-bold text-primary"
             >
               Contact Information
             </h3>
             <p
               class="mt-1 text-sm text-secondary font-semibold"
             >
-              Use a permanent contact information to receive emails.
+              Use permanent contact information to receive emails from potential buyers.
             </p>
           </div>
         </div>
