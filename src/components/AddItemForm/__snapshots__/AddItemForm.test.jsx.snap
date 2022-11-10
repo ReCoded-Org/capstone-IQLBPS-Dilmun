@@ -16,22 +16,22 @@ exports[`Add item form component rendered correctly 1`] = `
           class="mx-4 py-3"
         >
           <h3
-            class="text-xl font-bold text-primary"
+            class="text-2xl font-bold text-primary"
           >
             Product Info
           </h3>
           <p
-            class="mt-1 text-sm text-secondary font-semibold"
+            class="mt-1 text-base text-secondary font-semibold"
           >
             Your product will be added to the store after filling the required information.
           </p>
         </div>
       </div>
       <div
-        class="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-2 pr-2 pb-4"
+        class="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-4 pr-2 pb-4"
       >
         <div
-          class="shadow sm:overflow-hidden sm:rounded-md"
+          class="shadow sm:overflow-hidden rounded-md"
         >
           <div
             class="space-y-6 bg-primary px-4 py-5 sm:p-6"

@@ -59,7 +59,7 @@ export default function AddItemForm() {
             </div>
           </div>
           <div className="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-4 pr-2 pb-4">
-            <div className="shadow sm:overflow-hidden sm:rounded-md">
+            <div className="shadow sm:overflow-hidden rounded-md">
               <div className="space-y-6 bg-primary px-4 py-5 sm:p-6">
                 <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-x-0 md:gap-6 gap-y-6">
                   <div>
