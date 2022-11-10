@@ -51,14 +51,14 @@ export default function AddItemForm() {
         <div className="md:grid md:grid-cols-4 md:gap-6">
           <div className="md:col-span-1">
             <div className="mx-4 py-3">
-              <h3 className="text-xl font-bold text-primary">Product Info</h3>
-              <p className="mt-1 text-sm text-secondary font-semibold">
+              <h3 className="text-2xl font-bold text-primary">Product Info</h3>
+              <p className="mt-1 text-base text-secondary font-semibold">
                 Your product will be added to the store after filling the
                 required information.
               </p>
             </div>
           </div>
-          <div className="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-2 pr-2 pb-4">
+          <div className="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-4 pr-2 pb-4">
             <div className="shadow sm:overflow-hidden sm:rounded-md">
               <div className="space-y-6 bg-primary px-4 py-5 sm:p-6">
                 <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-x-0 md:gap-6 gap-y-6">
