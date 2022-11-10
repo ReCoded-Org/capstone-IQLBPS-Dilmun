@@ -55,6 +55,11 @@ const radioFilters = [
         label: '401$ - 800$',
         checked: false,
       },
+      {
+        value: { min: '800' },
+        label: '+800$',
+        checked: false,
+      },
     ],
   },
 ];
