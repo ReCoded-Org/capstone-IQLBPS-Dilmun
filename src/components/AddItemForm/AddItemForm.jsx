@@ -75,7 +75,7 @@ export default function AddItemForm() {
   };
 
   return (
-    <div className="bg-background">
+    <div className="bg-background" data-testid='add-item-form'>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="md:grid md:grid-cols-4 md:gap-6">
           <div className="md:col-span-1">
