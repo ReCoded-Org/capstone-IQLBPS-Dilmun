@@ -42,11 +42,10 @@ const Footer = () => {
                             </Link>
                         </p>
                         <p className="mb-4">
-                            <a href="#!" className="text-background">Orders</a>
+                            <Link to={ABOUT_ROUTE}>FAQ
+                            </Link>
                         </p>
-                        <p>
-                            <a href="#!" className="text-background">Help</a>
-                        </p>
+
                     </div>
                     <div className="">
                         <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
@@ -91,7 +90,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center items-center lg:justify-between  p-6 border-b border-gray-300">
+            <div className="flex justify-center items-center lg:justify-center  p-6 border-b border-gray-300">
 
                 <div className="flex justify-center">
                     <a href="#!" className="mr-6 text-background">
@@ -142,9 +141,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className="text-center p-6 text-primary bg-background">
-                <span>© 2021 Copyright:</span>
-                <a className="text-primary font-semibold" href="https://tailwind-elements.com/">Tailwind Elements</a>
-            </div>
+                <span>© 2022 Copyright:
+                    <Link className="text-primary hover:text-secondary" to={HOME_ROUTE}> Dilmun </Link>  All Rights Reserved. </span>   </div>
         </div>
 
     )
