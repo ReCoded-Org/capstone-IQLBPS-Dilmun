@@ -1,7 +1,6 @@
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useEffect } from 'react';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 
 const schema = yup.object().shape({
@@ -32,14 +31,9 @@ export default function AddItemForm() {
     handleSubmit,
     formState: { errors },
     control,
-    setValue,
   } = useForm({
     resolver: yupResolver(schema),
   });
-
-  useEffect(() => {
-    setValue('type', ITEM_TYPES[0]);
-  }, [setValue]);
 
   const onSubmit = (e) => {
     console.log(e);
@@ -141,6 +135,7 @@ export default function AddItemForm() {
                       name="type"
                       control={control}
                       options={ITEM_TYPES}
+                      defaultValue={ITEM_TYPES[0]}
                     />
                   </div>
                   <div className="w-full">
