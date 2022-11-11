@@ -4,12 +4,9 @@ import { Link } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import {
-  doc,
-  setDoc
-} from "firebase/firestore"
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from '../../firebase-config';
+import { useDispatch } from 'react-redux';
+import {signUpUsers} from '../Features/Users/userAuth'
+import { login } from '../Features/Users/userSlice';
 
 
 const schema = yup.object().shape({
@@ -34,6 +31,8 @@ const schema = yup.object().shape({
 
 function SignUp() {
 
+  const dispatch = useDispatch()
+
   const {
     register,
     handleSubmit,
@@ -44,15 +43,14 @@ function SignUp() {
 
 
   const onSubmit = async (data) => {
-
-    const { email, password, firstName, lastName } = data
-
-    createUserWithEmailAndPassword(auth, email, password).then(async (userCredential) => {
-      const { user } = userCredential
-      // eslint-disable-next-line no-console
-      console.log(user)
-      await setDoc(doc(db, "Users", user.uid), { firstName, lastName });
-    })
+    const result = await signUpUsers(data)
+    dispatch(
+      login({
+        email: result,
+        uid: result,
+        firstName: result,
+      })
+    )
   }
 
 
