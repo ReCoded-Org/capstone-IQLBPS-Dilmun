@@ -33,7 +33,6 @@ const AboutUsRoute = () => {
     <div>
       <NavBar />
       <AboutUs />
-      <Footer />
     </div>
   );
 };
@@ -55,7 +54,6 @@ const NotFound = () => {
       >
         404 Not Found
       </div>
-      <Footer />
     </div>
   )
 }
