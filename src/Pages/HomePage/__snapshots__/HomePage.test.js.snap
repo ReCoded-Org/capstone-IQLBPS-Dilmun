@@ -810,7 +810,7 @@ exports[`Home Page Rendered Correctly 1`] = `
             type="text"
           />
           <button
-            class="bg-tertiary undefined py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg transition duration-3000 cursor-pointer"
+            class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg transition duration-3000 cursor-pointer"
             type="submit"
           >
             Subscribe
