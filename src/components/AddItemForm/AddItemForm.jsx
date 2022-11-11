@@ -36,7 +36,7 @@ export default function AddItemForm() {
   });
 
   const onSubmit = (e) => {
-    console.log(e);
+    e.preventDefault();
   };
 
   return (
