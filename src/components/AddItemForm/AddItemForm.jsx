@@ -7,6 +7,8 @@ const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
   price: yup.number().positive('Please insert a positive number.'),
   description: yup.string().required('Please add a description.'),
+  country: yup.string().required('Please insert your Country Name.'),
+  city: yup.string().required('Please insert your City Name.'),
 });
 
 const ITEM_TYPES = ['Crafted', 'Donated', 'New', 'Used'];
@@ -161,6 +163,26 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
+                <div>
+                <Input
+                  name="country"
+                  type="text"
+                  errors={errors.country ? errors.country : undefined}
+                  {...register('country')}
+                >
+                  Country
+                </Input>
+              </div>
+              <div>
+              <Input
+                name="city"
+                type="text"
+                errors={errors.city ? errors.city : undefined}
+                {...register('city')}
+              >
+                City
+              </Input>
+            </div>
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" />
