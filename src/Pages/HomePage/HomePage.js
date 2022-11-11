@@ -8,12 +8,12 @@ import PartnersLogo from '../../components/Proof/PartnersLogo'
 import Testimonials from '../../components/Proof/Testimonials'
 
 const HomePage = () => {
-    
+
     return (
         <div data-testid='home-page'>
             <Hero />
             <DiffSection />
-            <section className='h-screen bg-background sna'>
+            <section className='min-h-screen bg-background sna'>
                 <Testimonials />
                 <PartnersLogo />
             </section>
