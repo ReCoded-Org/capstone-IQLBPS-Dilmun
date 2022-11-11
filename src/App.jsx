@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar'
 import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import HomePage from './Pages/HomePage/HomePage';
+import ItemDetailsPage from './Pages/ItemDetailsPage/ItemDetailsPage'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
-
+      <ItemDetailsPage />
     </div>
   );
 }

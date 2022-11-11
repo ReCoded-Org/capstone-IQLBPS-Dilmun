@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomButton from '../components/CustomButton'
+import CustomButton from '../../components/CustomComponents/CustomButton'
 
 const ItemDetailsPage = () => {
     return (
@@ -13,6 +13,7 @@ const ItemDetailsPage = () => {
                     <span>Electronics</span>
                 </div>
                 <span>Price: $60</span>
+                <span>Item Type: Crafted</span>
                 <div>
                     <span className='font-bold text-xl'>Description:</span>
                     <p className='text-lg'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
