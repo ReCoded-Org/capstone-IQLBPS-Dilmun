@@ -70,7 +70,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     </div>
   </div>
   <section
-    class="h-screen bg-background sna"
+    class="min-h-screen bg-background sna"
   >
     <section
       class="sm:py-5 py-4 flex justify-center items-center flex-col"
@@ -105,7 +105,7 @@ exports[`Home Page Rendered Correctly 1`] = `
         class="container flex flex-wrap sm:justify-center justify-center w-full feedback-container p-6"
       >
         <div
-          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-background ease-in-out duration-500"
+          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
           data-testid="feedbackcard-div"
         >
           <img
@@ -146,7 +146,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-background ease-in-out duration-500"
+          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
           data-testid="feedbackcard-div"
         >
           <img
@@ -187,7 +187,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-background ease-in-out duration-500"
+          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
           data-testid="feedbackcard-div"
         >
           <img
@@ -230,7 +230,7 @@ exports[`Home Page Rendered Correctly 1`] = `
       </div>
     </section>
     <section
-      class=""
+      class="pb-8 md:pb-0"
       data-testid="customerslogo-section"
     >
       <div
@@ -613,7 +613,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     </div>
   </section>
   <section
-    class="bg-background py-20 mx-auto h-screen"
+    class="bg-background py-20 mx-auto min-h-screen"
   >
     <h2
       class="text-4xl mb-10 text-primary font-bold text-center"
