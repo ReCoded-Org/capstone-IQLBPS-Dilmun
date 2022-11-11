@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import {
     HOME_ROUTE,
     //     CONTACT_ROUTE,
-    ABOUT_ROUTE
+    ABOUT_ROUTE,
+    FAQ_ROUTE
     //     PROFILE,
 
 } from '../../route';
@@ -38,11 +39,11 @@ const Footer = () => {
 
                         </p>
                         <p className="mb-4">
-                            <Link to={ABOUT_ROUTE}>About Us
+                            <Link to={ABOUT_ROUTE}>Our Team
                             </Link>
                         </p>
                         <p className="mb-4">
-                            <Link to={ABOUT_ROUTE}>FAQ
+                            <Link to={FAQ_ROUTE}>FAQ
                             </Link>
                         </p>
 
