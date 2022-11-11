@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FAQ renders correctly 1`] = `
+<section
+  className="bg-background py-20 mx-auto min-h-screen"
+>
+  <h2
+    className="text-4xl mb-10 text-primary font-bold text-center"
+  >
+    Frequently Asked Questions
+  </h2>
+  <div
+    className="max-w-7xl mx-auto px-4 py-10 lg:max-h-100 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center"
+  >
+    <div
+      className="w-full lg:w-1/2 max-w-lg p-2 "
+    >
+      <button
+        aria-expanded={false}
+        className="flex w-full justify-between border-b-2 border-primary px-4 py-4 text-left font-medium hover:text-white hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-opacity-75 text-md  bg-background text-primary   rounded-t-lg  false"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r0:"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          className="w-3/4 md:w-full"
+        >
+          What is the return policy?
+        </span>
+        <svg
+          className="rotate-180 duration-200 transform h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <button
+        aria-expanded={false}
+        className="flex w-full justify-between border-b-2 border-primary px-4 py-4 text-left font-medium hover:text-white hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-opacity-75 text-md  bg-background text-primary  false false"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r2:"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          className="w-3/4 md:w-full"
+        >
+          Can I cancel my order?
+        </span>
+        <svg
+          className="rotate-180 duration-200 transform h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <button
+        aria-expanded={false}
+        className="flex w-full justify-between border-b-2 border-primary px-4 py-4 text-left font-medium hover:text-white hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-opacity-75 text-md  bg-background text-primary  false false"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r4:"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          className="w-3/4 md:w-full"
+        >
+          What methods of payment you take?
+        </span>
+        <svg
+          className="rotate-180 duration-200 transform h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <button
+        aria-expanded={false}
+        className="flex w-full justify-between border-b-2 border-primary px-4 py-4 text-left font-medium hover:text-white hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-opacity-75 text-md  bg-background text-primary  false false"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r6:"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          className="w-3/4 md:w-full"
+        >
+          How do I track my order?
+        </span>
+        <svg
+          className="rotate-180 duration-200 transform h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <button
+        aria-expanded={false}
+        className="flex w-full justify-between border-b-2 border-primary px-4 py-4 text-left font-medium hover:text-white hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-opacity-75 text-md  bg-background text-primary  false false"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r8:"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          className="w-3/4 md:w-full"
+        >
+          What is the policy for late/non-delivery of items ordered online?
+        </span>
+        <svg
+          className="rotate-180 duration-200 transform h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="w-full lg:w-1/2 h-full"
+    >
+      <img
+        alt="frequently asked questions"
+        className="w-full h-full max-h-96 object-contain 	"
+        src="/assets/img/faq.png"
+      />
+    </div>
+  </div>
+</section>
+`;

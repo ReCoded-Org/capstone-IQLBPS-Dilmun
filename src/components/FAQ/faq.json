@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "question": "What is the return policy?",
+      "answer": "There must be a deal between the customers and the sellers to determine how returning items should be and our staff is not responsible of it."
+    },
+    {
+      "question": "Can I cancel my order?",
+      "answer": "Sure! you can cancel your order within first 12 hours."
+    },
+    {
+      "question": "What methods of payment you take?",
+      "answer": "You can pay online via credit card or pay at the door while dealing with the seller."
+    },
+    {
+      "question": "How do I track my order?",
+      "answer": "You can have the phone number of the company which does the delivering and ask them where your order is."
+    },
+    {
+      "question": "What is the policy for late/non-delivery of items ordered online?",
+      "answer": "Our customer service team will be there alwyas to resolve your issue, you can contact us."
+    }
+  ]
+}
