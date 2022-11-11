@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider, Routes, Route } from 'react-router
 import NavBar from './components/NavBar/NavBar';
 import Features from './components/Features/Features';
 import NewsLetter from './components/NewsLetter';
-import Footer from './components/Footer/Footer';
 import SearchBar from './components/SearchBar/SearchBar';
 import AboutUs from './components/AboutUs/AboutUs';
 import SignInPage from './Pages/SignInPage/SignInPage';
@@ -15,17 +14,15 @@ const Home = () => {
   return (
     <div className="App">
       <NavBar />
-
       <SearchBar />
       <Features />
       <NewsLetter />
-      <Footer />
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
+
 
     </div>
   );

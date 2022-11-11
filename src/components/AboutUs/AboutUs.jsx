@@ -12,12 +12,12 @@ const AboutUs = () => {
         // margin: '25px 0'
       }}>
         <h1 className='text-4xl font-bold mt-0 mb-6'>
-          Meet the team
+          Meet Our Team
         </h1>
       </div>
-      <div className="grid gap-4 grid-cols-4">
+      <div className=" grid gap-4 grid-cols-4">
         {team.map((member) => {
-          return <MemberCard member={member} />;
+          return <MemberCard key={member.id} member={member} />;
         })}
       </div>
     </div>
