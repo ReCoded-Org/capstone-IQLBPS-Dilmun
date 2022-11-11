@@ -775,7 +775,7 @@ exports[`Home Page Rendered Correctly 1`] = `
   </section>
   <section>
     <div
-      class="mt-14 pt-14 pb-14 pr-10 pl-10 md:flex shadow-md justify-around bg-primary"
+      class="pt-14 pb-14 pr-10 pl-10 md:flex shadow-md justify-around bg-primary"
     >
       <div
         class="text-background flex flex-col md:flex-row justify-center items-center"
@@ -810,7 +810,7 @@ exports[`Home Page Rendered Correctly 1`] = `
             type="text"
           />
           <button
-            class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg transition duration-3000 cursor-pointer"
+            class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
             type="submit"
           >
             Subscribe
