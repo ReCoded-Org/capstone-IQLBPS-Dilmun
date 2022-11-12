@@ -32,25 +32,7 @@ const AboutUsRoute = () => {
 };
 
 
-const NotFound = () => {
-  return (
-    <div>
-      <NavBar />
 
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100vh',
-          fontSize: '2rem',
-        }}
-      >
-        404 Not Found
-      </div>
-    </div>
-  )
-}
 function App() {
   const router = createBrowserRouter([
     {
@@ -61,10 +43,7 @@ function App() {
       path: '/about',
       element: <AboutUsRoute />,
     },
-    {
-      path: '*',
-      element: <NotFound />
-    },
+    
   ]);
 
   return <RouterProvider router={router} />;
