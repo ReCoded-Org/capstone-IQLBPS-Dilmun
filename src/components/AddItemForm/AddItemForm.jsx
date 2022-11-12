@@ -2,6 +2,8 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
+import CityInput from '../CityCountryInputs/CityInput';
+import CountryInput from '../CityCountryInputs/CountryInput';
 
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
@@ -162,6 +164,19 @@ export default function AddItemForm() {
                   >
                     Description
                   </TextArea>
+                </div>
+                <div>
+                  <CityInput errors={errors?.city} {...register('city')}>
+                    City
+                  </CityInput>
+                </div>
+                <div>
+                  <CountryInput
+                    errors={errors?.country}
+                    {...register('country')}
+                  >
+                    Country
+                  </CountryInput>
                 </div>
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
