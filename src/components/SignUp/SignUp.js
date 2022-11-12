@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import handleFacebookAuth from '../../services/facebookAuth';
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Please insert your First Name'),
@@ -128,7 +129,7 @@ function SignUp() {
         </p>
         <p className="text-xl text-primary font-semibold self-center mb-6">
           Sign Up With
-          <button type="button">
+          <button type="button" onClick={handleFacebookAuth}>
             <BsFacebook className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             or
           </button>
