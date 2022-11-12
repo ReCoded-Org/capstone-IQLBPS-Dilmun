@@ -163,26 +163,6 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
-                <div>
-                <Input
-                  name="country"
-                  type="text"
-                  errors={errors.country ? errors.country : undefined}
-                  {...register('country')}
-                >
-                  Country
-                </Input>
-              </div>
-              <div>
-              <Input
-                name="city"
-                type="text"
-                errors={errors.city ? errors.city : undefined}
-                {...register('city')}
-              >
-                City
-              </Input>
-            </div>
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" />
