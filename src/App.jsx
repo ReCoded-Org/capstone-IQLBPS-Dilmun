@@ -1,12 +1,16 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider, Routes, Route } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Routes,
+  Route,
+} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
-import AboutUs from './components/AboutUs/AboutUs';
+import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import HomePage from './Pages/HomePage/HomePage';
 import FilterPage from './Pages/FilterPage/FilterPage';
-
 
 const Home = () => {
   return (
@@ -17,21 +21,11 @@ const Home = () => {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/products" element={<FilterPage />} />
+        <Route path="/about" element={<AboutUsPage />} />
       </Routes>
     </div>
   );
 };
-
-const AboutUsRoute = () => {
-  return (
-    <div>
-      <NavBar />
-      <AboutUs />
-    </div>
-  );
-};
-
-
 
 function App() {
   const router = createBrowserRouter([
@@ -39,16 +33,14 @@ function App() {
       path: '/',
       element: <Home />,
     },
+
     {
-      path: '/about',
-      element: <AboutUsRoute />,
+      path: '*',
+      element: <Home />,
     },
-    
   ]);
 
   return <RouterProvider router={router} />;
 }
 
-
 export default App;
-
