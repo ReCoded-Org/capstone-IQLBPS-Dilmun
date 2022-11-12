@@ -271,42 +271,6 @@ exports[`Add item form component rendered correctly 1`] = `
                 </label>
               </div>
             </div>
-            <div>
-              <div
-                class="relative border-2 rounded-md mb-2 text-background border-tertiary "
-              >
-                <input
-                  class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
-                  id="country"
-                  name="country"
-                  type="text"
-                />
-                <label
-                  class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
-                  for="country"
-                >
-                  Country
-                </label>
-              </div>
-            </div>
-            <div>
-              <div
-                class="relative border-2 rounded-md mb-2 text-background border-tertiary "
-              >
-                <input
-                  class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
-                  id="city"
-                  name="city"
-                  type="text"
-                />
-                <label
-                  class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
-                  for="city"
-                >
-                  City
-                </label>
-              </div>
-            </div>
           </div>
           <div
             class="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6"
