@@ -6,13 +6,14 @@ import { useLocation, Link } from 'react-router-dom';
 
 import {
   HOME_ROUTE,
-  CONTACT_ROUTE,
+  // CONTACT_ROUTE,
   ABOUT_ROUTE,
   SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,
   LOG_OUT,
   PROFILE,
   PRODUCT_ROUTE,
+  FAQ_ROUTE // this is will be removed before merging, I added it here so reviewers can see the changes
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
 
@@ -49,9 +50,8 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${
-            open ? 'top-24' : 'top-[-170px]'
-          }`}
+          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
+            }`}
         >
           <li>
             <Link
@@ -72,9 +72,9 @@ function NavBar() {
           <li>
             <Link
               className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-              to={CONTACT_ROUTE}
+              to={FAQ_ROUTE} // {CONTACT_ROUTE}   // this is will be removed before merging, I added it here so reviewers can see the changes
             >
-              Contact
+              FAQ {/* Contact  */}
             </Link>
           </li>
           <li>

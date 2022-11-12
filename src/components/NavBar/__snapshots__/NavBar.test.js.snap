@@ -58,9 +58,9 @@ exports[`render NavBar correctly 1`] = `
       <li>
         <a
           class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-          href="/contact"
+          href="/faq"
         >
-          Contact
+          FAQ 
         </a>
       </li>
       <li>
