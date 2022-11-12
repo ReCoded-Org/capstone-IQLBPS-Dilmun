@@ -18,7 +18,7 @@ function FAQ() {
   );
 
   return (
-    <section className="bg-background py-20 mx-auto min-h-screen">
+    <section className="bg-background py-20 mx-auto">
       <h2 className="text-4xl mb-10 text-primary font-bold text-center">
         Frequently Asked Questions
       </h2>
@@ -29,12 +29,14 @@ function FAQ() {
               {({ open, close }) => (
                 <>
                   <Disclosure.Button
-                    className={`flex w-full justify-between border-b-2 border-primary px-4 py-4 text-left font-medium hover:text-white hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-opacity-75 text-md ${open
-                      ? ' bg-primary text-white '
-                      : ' bg-background text-primary '
-                      } ${index === 0 && ' rounded-t-lg '} ${index === data.length - 1 &&
+                    className={`flex w-full justify-between border-b-2 border-primary px-4 py-4 text-left font-medium hover:text-white hover:bg-primary focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-opacity-75 text-md ${
+                      open
+                        ? ' bg-primary text-white '
+                        : ' bg-background text-primary '
+                    } ${index === 0 && ' rounded-t-lg '} ${
+                      index === data.length - 1 &&
                       ' rounded-b-lg border-b-none '
-                      }`}
+                    }`}
                     onClick={closeCurrent(close)}
                   >
                     <span className="w-3/4 md:w-full">{item.question}</span>
@@ -44,10 +46,11 @@ function FAQ() {
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="currentColor"
-                      className={`${open
-                        ? 'duration-200'
-                        : 'rotate-180 duration-200 transform'
-                        } h-5 w-5`}
+                      className={`${
+                        open
+                          ? 'duration-200'
+                          : 'rotate-180 duration-200 transform'
+                      } h-5 w-5`}
                     >
                       <path
                         strokeLinecap="round"
