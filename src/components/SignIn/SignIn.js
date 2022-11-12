@@ -3,12 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-// import { useDispatch } from 'react-redux';
-// import {signInUsers} from '../Features/Users/userAuth'
-// import { login } from '../Features/Users/userSlice';
-// import { onAuthStateChanged } from 'firebase/auth';
-// import { auth } from '../../firebase-config';
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth} from '../../firebase-config';
 
 const schema = yup.object().shape({
   email: yup
@@ -20,9 +16,9 @@ password: yup
 })
 
 
+
+
 function SignIn() {
-
-
 
   const {
     register,
@@ -32,10 +28,17 @@ function SignIn() {
     resolver: yupResolver(schema),
   });
 
+  const navigate = useNavigate()
 
-
-  const onSubmit = async () => {
-
+  const onSubmit = (data) => {
+    const { email, password } = data
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const {user} = userCredential;
+    // eslint-disable-next-line no-console
+    console.log(user)
+    navigate('/')
+  })
   };
   return (
     <div className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center" data-testid="sign-in">
