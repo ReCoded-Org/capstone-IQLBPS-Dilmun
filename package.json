@@ -61,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.12",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
