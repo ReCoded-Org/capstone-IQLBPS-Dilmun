@@ -5,7 +5,11 @@ import React, { Fragment } from 'react';
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
   { name: 'Best Rating', href: '#', current: false },
-  { name: 'Newest', href: '#', current: false },
+  { name: 'Trending', href: '#', current: false },
+  { name: 'Last 7 Days', href: '#', current: false },
+  { name: 'Last 30 Days', href: '#', current: false },
+  { name: 'Coming Soon', href: '#', current: false },
+  { name: 'Price: Free', href: '#', current: false },
   { name: 'Price: Low to High', href: '#', current: false },
   { name: 'Price: High to Low', href: '#', current: false },
 ];
