@@ -1211,7 +1211,7 @@ exports[`redering AboutUS 1`] = `
       <img
         alt="team member"
         className="object-cover  w-full"
-        src="https://cdn.discordapp.com/attachments/1001815468010643518/1038850959306137740/Snapchat-447202707.jpg"
+        src="https://cdn.discordapp.com/attachments/1040665604501287015/1040945758205136916/Snapchat-447202707.jpg"
       />
       <div
         className="px-6 py-4"
@@ -2966,7 +2966,7 @@ exports[`should render cards 1`] = `
       <img
         alt="team member"
         className="object-cover  w-full"
-        src="https://cdn.discordapp.com/attachments/1001815468010643518/1038850959306137740/Snapchat-447202707.jpg"
+        src="https://cdn.discordapp.com/attachments/1040665604501287015/1040945758205136916/Snapchat-447202707.jpg"
       />
       <div
         className="px-6 py-4"
