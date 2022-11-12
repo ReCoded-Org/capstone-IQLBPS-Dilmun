@@ -13,7 +13,7 @@ Object {
           <button
             aria-expanded="false"
             aria-haspopup="true"
-            class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
+            class="group inline-flex justify-center text-sm font-medium text-primary hover:text-gray-900"
             data-headlessui-state=""
             id="headlessui-menu-button-:r0:"
             type="button"
@@ -46,7 +46,7 @@ Object {
         <button
           aria-expanded="false"
           aria-haspopup="true"
-          class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
+          class="group inline-flex justify-center text-sm font-medium text-primary hover:text-gray-900"
           data-headlessui-state=""
           id="headlessui-menu-button-:r0:"
           type="button"
