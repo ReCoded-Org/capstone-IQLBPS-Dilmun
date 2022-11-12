@@ -4,8 +4,8 @@ import { auth } from '../firebase-config';
 const handleFacebookAuth = async () => {
   const provider = new FacebookAuthProvider();
   try {
-    const result = await signInWithPopup(auth, provider);
-    console.log(result);
+    const {user} = await signInWithPopup(auth, provider);
+    console.log(user);
   } catch (error) {
     // Handle Errors here.
     const errorCode = error.code;
