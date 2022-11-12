@@ -273,28 +273,6 @@ exports[`Add item form component rendered correctly 1`] = `
             </div>
             <div>
               <div
-                data-testid="city-input"
-              >
-                <div
-                  class="relative border-2 rounded-md mb-2 text-background border-tertiary "
-                >
-                  <input
-                    class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
-                    id="city"
-                    name="city"
-                    type="text"
-                  />
-                  <label
-                    class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
-                    for="city"
-                  >
-                    City
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div
                 data-testid="country-input"
               >
                 <div
@@ -311,6 +289,28 @@ exports[`Add item form component rendered correctly 1`] = `
                     for="country"
                   >
                     Country
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                data-testid="city-input"
+              >
+                <div
+                  class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                >
+                  <input
+                    class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                    id="city"
+                    name="city"
+                    type="text"
+                  />
+                  <label
+                    class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                    for="city"
+                  >
+                    City
                   </label>
                 </div>
               </div>

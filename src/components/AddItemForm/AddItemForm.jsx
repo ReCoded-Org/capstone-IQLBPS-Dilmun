@@ -166,17 +166,17 @@ export default function AddItemForm() {
                   </TextArea>
                 </div>
                 <div>
-                  <CityInput errors={errors?.city} {...register('city')}>
-                    City
-                  </CityInput>
-                </div>
-                <div>
                   <CountryInput
                     errors={errors?.country}
                     {...register('country')}
                   >
                     Country
                   </CountryInput>
+                </div>
+                <div>
+                  <CityInput errors={errors?.city} {...register('city')}>
+                    City
+                  </CityInput>
                 </div>
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
