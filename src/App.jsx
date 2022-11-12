@@ -5,6 +5,7 @@ import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import HomePage from './Pages/HomePage/HomePage';
 import FilterPage from './Pages/FilterPage/FilterPage';
+import FaqPage from './Pages/FaqPage/FaqPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/products" element={<FilterPage />} />
+        <Route path="/faq" element={<FaqPage />} />
       </Routes>
 
     </div>
