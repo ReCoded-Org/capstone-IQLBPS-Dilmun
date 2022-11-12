@@ -6,7 +6,8 @@ import {
 import {
     auth,
     db,
-    createUserWithEmailAndPassword
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword
 } from '../../../firebase-config'
 
 
@@ -30,4 +31,19 @@ export const signUpUsers = async (data) => {
             lastName
         });
     })
+}
+
+export const signInUsers = async (data) => {
+    const {
+        email,
+        password
+    } = data
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const {
+                user
+            } = userCredential;
+            // eslint-disable-next-line no-console
+            console.log(user)
+        })
 }
