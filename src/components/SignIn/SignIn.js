@@ -24,6 +24,7 @@ function SignIn() {
   const userData = useSelector(user);
   const userError = useSelector(error);
   const userStatus = useSelector(status);
+  // eslint-disable-next-line no-console
   console.log(userData, userError, userStatus);
   const {
     register,
