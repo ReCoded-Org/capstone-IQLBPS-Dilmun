@@ -1,6 +1,7 @@
 import { FunnelIcon, Squares2X2Icon } from '@heroicons/react/20/solid';
 import React, { useState } from 'react';
 import Filter from '../../components/Filter/Filter';
+import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 
 const FilterPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -34,6 +35,7 @@ const FilterPage = () => {
           mobileFiltersOpen={mobileFiltersOpen}
           setMobileFiltersOpen={setMobileFiltersOpen}
         />
+        <ItemsDisplay />
       </div>
     </main>
   );

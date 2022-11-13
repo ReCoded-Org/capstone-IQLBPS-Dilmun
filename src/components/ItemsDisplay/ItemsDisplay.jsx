@@ -2,14 +2,14 @@ import React from 'react';
 
 const ItemsDisplay = () => {
     return(
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-6'>
-            <div className='bg-red-400'>1</div>
-            <div className='bg-gray-400'>1</div>
-            <div className='bg-black-400'>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6'>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
         </div>
     );
 };
