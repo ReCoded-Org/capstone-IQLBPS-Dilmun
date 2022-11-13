@@ -39,7 +39,7 @@ export default function AddItemForm() {
   });
 
   const onSubmit = () => {
-   return getValues(['country', 'city']);
+    return getValues(['country', 'city']);
   };
 
   return (
@@ -164,8 +164,13 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
+                {/* TODO: render conditionally: if the user has set his address the 1st time he added a product,
+                save his address info and do not show this part of the form again. 
+                however, make those info display into every product he adds */}
                 <div>
-                <h1 className="block text-sm font-medium text-background mb-3" >Address Info</h1>
+                  <h1 className="block text-sm font-medium text-background mb-3">
+                    Address Info
+                  </h1>
                   <Input
                     name="country"
                     type="text"
