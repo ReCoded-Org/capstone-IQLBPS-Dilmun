@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useLocation, Link } from 'react-router-dom';
@@ -13,7 +12,6 @@ import {
   LOG_OUT,
   PROFILE,
   PRODUCT_ROUTE,
-  FAQ_ROUTE // this is will be removed before merging, I added it here so reviewers can see the changes
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
 
@@ -67,14 +65,6 @@ function NavBar() {
               to={PRODUCT_ROUTE}
             >
               Products
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-              to={FAQ_ROUTE} // {CONTACT_ROUTE}   // this is will be removed before merging, I added it here so reviewers can see the changes
-            >
-              FAQ {/* Contact  */}
             </Link>
           </li>
           <li>
