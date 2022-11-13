@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import handleFacebookAuth from '../../services/facebookAuth';
+import { useDispatch, useSelector } from 'react-redux';
+import { error, signInWithFacebook, status, user } from '../../features/user/userSlice';
 
 const schema = yup.object().shape({
   email: yup.string().required('Please insert your Email'),
@@ -12,6 +13,12 @@ const schema = yup.object().shape({
 });
 
 function SignIn() {
+  const dispatch = useDispatch();
+
+  const userData = useSelector(user);
+  const userError = useSelector(error);
+  const userStatus = useSelector(status);
+  console.log(userData, userError, userStatus);
   const {
     register,
     handleSubmit,
@@ -75,7 +82,7 @@ function SignIn() {
         <p className="text-lg text-primary font-bold self-center my-4">OR</p>
         <p className="text-xl text-primary font-semibold self-center mb-6">
           Sign in With
-          <button type="button" onClick={handleFacebookAuth}>
+          <button type="button" onClick={() => dispatch(signInWithFacebook())}>
             <BsFacebook
               type="icon"
               className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
