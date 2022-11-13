@@ -13,6 +13,7 @@ export const signInWithFacebook = createAsyncThunk(
     const provider = new FacebookAuthProvider();
     try {
       const { user } = await signInWithPopup(auth, provider);
+      payload();
       return JSON.stringify(user);
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));

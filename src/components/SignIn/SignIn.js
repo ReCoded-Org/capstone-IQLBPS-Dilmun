@@ -1,11 +1,16 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { error, signInWithFacebook, status, user } from '../../features/user/userSlice';
+import {
+  error,
+  signInWithFacebook,
+  status,
+  user,
+} from '../../features/user/userSlice';
 
 const schema = yup.object().shape({
   email: yup.string().required('Please insert your Email'),
@@ -14,6 +19,7 @@ const schema = yup.object().shape({
 
 function SignIn() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const userData = useSelector(user);
   const userError = useSelector(error);
@@ -28,6 +34,9 @@ function SignIn() {
   });
   const onSubmit = (e) => {
     e.preventDefault();
+  };
+  const handleRedirect = () => {
+    navigate('/');
   };
 
   return (
@@ -82,7 +91,10 @@ function SignIn() {
         <p className="text-lg text-primary font-bold self-center my-4">OR</p>
         <p className="text-xl text-primary font-semibold self-center mb-6">
           Sign in With
-          <button type="button" onClick={() => dispatch(signInWithFacebook())}>
+          <button
+            type="button"
+            onClick={() => dispatch(signInWithFacebook(handleRedirect))}
+          >
             <BsFacebook
               type="icon"
               className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
