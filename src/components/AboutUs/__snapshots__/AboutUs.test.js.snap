@@ -20,7 +20,7 @@ exports[`redering AboutUS 1`] = `
     </h1>
   </div>
   <div
-    className=" grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center"
   >
     <div
       className=" max-w-sm rounded-[20px] overflow-hidden shadow-lg "
@@ -1775,7 +1775,7 @@ exports[`should render cards 1`] = `
     </h1>
   </div>
   <div
-    className=" grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center"
   >
     <div
       className=" max-w-sm rounded-[20px] overflow-hidden shadow-lg "
