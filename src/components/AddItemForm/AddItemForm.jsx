@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -38,8 +39,11 @@ export default function AddItemForm() {
     resolver: yupResolver(schema),
   });
 
+  const [address, setAddress] = useState(true)
+
   const onSubmit = () => {
-    return getValues(['country', 'city']);
+    setAddress(false);
+    getValues(['country', 'city'])
   };
 
   return (
@@ -167,7 +171,8 @@ export default function AddItemForm() {
                 {/* TODO: render conditionally: if the user has set his address the 1st time he added a product,
                 save his address info and do not show this part of the form again. 
                 however, make those info display into every product he adds */}
-                <div>
+                {address && (
+                  <div>
                   <h1 className="block text-sm font-medium text-background mb-3">
                     Address Info
                   </h1>
@@ -188,6 +193,7 @@ export default function AddItemForm() {
                     City
                   </Input>
                 </div>
+                )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" />
