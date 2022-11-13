@@ -295,13 +295,15 @@ exports[`redering footer 1`] = `
     <span
       className="text-background"
     >
-      © 2022 Copyright:
+      © 2022 Copyright 
+       
       <a
         className="text-background hover:text-secondary"
         href="/"
         onClick={[Function]}
       >
         Dilmun
+         - 
       </a>
       All Rights Reserved.
     </span>
