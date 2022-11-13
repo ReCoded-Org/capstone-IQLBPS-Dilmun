@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 
 import {
   HOME_ROUTE,
-  //     CONTACT_ROUTE,
   ABOUT_ROUTE,
   FAQ_ROUTE,
-  //     PROFILE,
 } from '../../route';
 
 const Footer = () => {
