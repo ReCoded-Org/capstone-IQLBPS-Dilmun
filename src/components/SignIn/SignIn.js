@@ -1,10 +1,16 @@
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, 
+   useNavigate 
+} from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth} from '../../firebase-config';
+// import { signInWithEmailAndPassword } from "firebase/auth";
+import { useDispatch } from 'react-redux';
+import { login ,
+ // logout 
+} from '../../Features/Users/userSlice';
+import {signInUsers} from '../../Features/Users/userAuth'
 
 const schema = yup.object().shape({
   email: yup
@@ -20,6 +26,8 @@ password: yup
 
 function SignIn() {
 
+   const dispatch = useDispatch()
+
   const {
     register,
     handleSubmit,
@@ -28,17 +36,18 @@ function SignIn() {
     resolver: yupResolver(schema),
   });
 
-  const navigate = useNavigate()
+    const navigate = useNavigate()
 
-  const onSubmit = (data) => {
-    const { email, password } = data
-    signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    const {user} = userCredential;
-    // eslint-disable-next-line no-console
-    console.log(user)
+  const onSubmit = async (data) => {
+
+    const result = await signInUsers(data)
+    dispatch(
+      login({
+        email: result,
+        uid: result,
+      })
+    )
     navigate('/')
-  })
   };
   return (
     <div className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center" data-testid="sign-in">

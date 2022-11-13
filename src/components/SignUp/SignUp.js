@@ -5,8 +5,8 @@ import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
-import {signUpUsers} from '../Features/Users/userAuth'
-import { login } from '../Features/Users/userSlice';
+import {signUpUsers} from '../../Features/Users/userAuth'
+import { login } from '../../Features/Users/userSlice';
 
 
 const schema = yup.object().shape({

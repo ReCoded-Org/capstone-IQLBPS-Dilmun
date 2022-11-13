@@ -8,7 +8,7 @@ import {
     db,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword
-} from '../../../firebase-config'
+} from '../../firebase-config'
 
 
 export const signUpUsers = async (data) => {
