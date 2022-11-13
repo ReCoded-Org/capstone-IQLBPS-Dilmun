@@ -2,8 +2,6 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
-import CityInput from '../CityCountryInputs/CityInput';
-import CountryInput from '../CityCountryInputs/CountryInput';
 
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
@@ -33,14 +31,15 @@ export default function AddItemForm() {
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
     control,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = () => {
+   return getValues(['country', 'city']);
   };
 
   return (
@@ -166,17 +165,23 @@ export default function AddItemForm() {
                   </TextArea>
                 </div>
                 <div>
-                  <CountryInput
-                    errors={errors?.country}
+                <h1 className="block text-sm font-medium text-background mb-3" >Address Info</h1>
+                  <Input
+                    name="country"
+                    type="text"
+                    errors={errors.country ? errors.country : undefined}
                     {...register('country')}
                   >
                     Country
-                  </CountryInput>
-                </div>
-                <div>
-                  <CityInput errors={errors?.city} {...register('city')}>
+                  </Input>
+                  <Input
+                    name="city"
+                    type="text"
+                    errors={errors.city ? errors.city : undefined}
+                    {...register('city')}
+                  >
                     City
-                  </CityInput>
+                  </Input>
                 </div>
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
