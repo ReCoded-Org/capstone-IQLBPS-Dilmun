@@ -233,13 +233,14 @@ const Footer = () => {
       </div>
       <div className="text-center p-4 text-primary bg-primary">
         <span className="text-background">
-          © 2022 Copyright:
+          © 2022 Copyright {" "}
           <Link
             className="text-background hover:text-secondary"
             to={HOME_ROUTE}
           >
 
             Dilmun
+            {" - "}
           </Link>
           All Rights Reserved.
         </span>
