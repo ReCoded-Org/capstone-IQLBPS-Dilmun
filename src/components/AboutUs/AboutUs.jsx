@@ -9,7 +9,6 @@ const AboutUs = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        // margin: '25px 0'
       }}>
         <h1 className='text-4xl font-bold mt-0 mb-6'>
           Meet Our Team
