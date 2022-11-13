@@ -11,8 +11,8 @@ import {
 
 const Footer = () => {
   return (
-    <div className=" text-center lg:text-center bg-primary  text-background">
-      <div className="pl-5 pt-5 mt-14 mx-6  text-center md:text-left">
+    <div className=" text-center lg:text-center bg-primary  text-background pt-8 border-t-2 shadow-xl">
+      <div className="pl-5 pt-6  mx-6  text-center md:text-left shadow-xl">
         <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="hidden lg:inline">
             <h6 className="uppercase font-semibold mb-4 flex items-center  justify-center e md:justify-start hidden lg:inline">

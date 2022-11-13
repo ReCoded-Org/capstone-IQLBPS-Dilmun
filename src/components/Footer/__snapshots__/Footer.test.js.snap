@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`redering divs correctly correctly 1`] = `undefined`;
+
 exports[`redering footer 1`] = `
 <div
   className=" text-center lg:text-center bg-primary  text-background"

@@ -5,7 +5,6 @@ import { useLocation, Link } from 'react-router-dom';
 
 import {
   HOME_ROUTE,
-  // CONTACT_ROUTE,
   ABOUT_ROUTE,
   SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,

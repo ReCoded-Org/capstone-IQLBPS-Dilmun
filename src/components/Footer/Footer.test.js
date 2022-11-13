@@ -10,20 +10,13 @@ test("redering footer", () => {
     expect(tree).toMatchSnapshot();
 })
 
-// it("redering list correctly", () => {
-//     const { list } = renderer.create(
-//         <Router>
-//             <list />
-//         </Router>).toJSON();
-//     expect(list).toMatchSnapshot();
-// })
+it("redering divs correctly correctly", () => {
+    const { divs } = renderer.create(
+        <Router>
+            <div />
+            <div />
+            <div />
+        </Router>).toJSON();
+    expect(divs).toMatchSnapshot();
+})
 
-// it("redering button correctly", () => {
-//     const { Button } = renderer.create(
-//         <Router>
-//             <list >
-//                 <Button />
-//             </list>
-//         </Router>).toJSON();
-//     expect(Button).toMatchSnapshot();
-// })
