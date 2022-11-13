@@ -13,9 +13,9 @@ export const signInWithFacebook = createAsyncThunk(
     const provider = new FacebookAuthProvider();
     try {
       const { user } = await signInWithPopup(auth, provider);
-      return user;
+      return JSON.stringify(user);
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(JSON.stringify(error));
     }
   }
 );
@@ -32,11 +32,11 @@ const userSlice = createSlice({
       })
       .addCase(signInWithFacebook.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
-        state.user = JSON.stringify(payload);
+        state.user = JSON.parse(payload);
       })
       .addCase(signInWithFacebook.rejected, (state, { payload }) => {
         state.status = 'failed';
-        state.error = payload;
+        state.error = JSON.parse(payload);
       });
   },
 });
