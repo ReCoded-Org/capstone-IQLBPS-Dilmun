@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  createBrowserRouter,
-  RouterProvider,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -12,7 +10,7 @@ import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import HomePage from './Pages/HomePage/HomePage';
 import FilterPage from './Pages/FilterPage/FilterPage';
 
-const Home = () => {
+function App() {
   return (
     <div className="App">
       <NavBar />
@@ -25,22 +23,6 @@ const Home = () => {
       </Routes>
     </div>
   );
-};
-
-function App() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Home />,
-    },
-
-    {
-      path: '*',
-      element: <Home />,
-    },
-  ]);
-
-  return <RouterProvider router={router} />;
 }
 
 export default App;
