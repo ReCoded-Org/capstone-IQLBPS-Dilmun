@@ -11,10 +11,10 @@ exports[`redering footer 1`] = `
       className="grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
     >
       <div
-        className=""
+        className="invisible md:visible  lg:visible"
       >
         <h6
-          className="uppercase font-semibold mb-4 flex items-center  justify-center  md:justify-start"
+          className="uppercase font-semibold mb-4 flex items-center  justify-center invisible md:justify-start md:visible lg:visible"
         >
           <a
             href="/"
@@ -27,7 +27,9 @@ exports[`redering footer 1`] = `
             />
           </a>
         </h6>
-        <p>
+        <p
+          className="invisible md:visible  lg:visible"
+        >
           Designed to meet your needs. Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.
         </p>
       </div>
