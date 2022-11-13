@@ -2,7 +2,7 @@
 
 exports[`FAQ renders correctly 1`] = `
 <div
-  className="bg-background pt-40 py-20 "
+  className="bg-background pt-40 py-20"
   data-testid="FAQ-page"
 >
   <section

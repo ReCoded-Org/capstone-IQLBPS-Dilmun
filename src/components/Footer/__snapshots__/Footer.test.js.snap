@@ -5,7 +5,7 @@ exports[`redering footer 1`] = `
   className=" text-center lg:text-center bg-primary  text-background"
 >
   <div
-    className="pt-5 mt-14 mx-6  text-center md:text-left"
+    className="pl-5 pt-5 mt-14 mx-6  text-center md:text-left"
   >
     <div
       className="grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -37,7 +37,7 @@ exports[`redering footer 1`] = `
         <h6
           className="uppercase font-semibold mb-4 flex justify-center md:justify-start"
         >
-          Useful links
+          Pages
         </h6>
         <p
           className="mb-4"
@@ -116,7 +116,7 @@ exports[`redering footer 1`] = `
               fill="currentColor"
             />
           </svg>
-          info@example.com
+          dilmun.recoded@gmail.com
         </p>
         <p
           className="flex items-center justify-center md:justify-start mb-4"
@@ -169,7 +169,8 @@ exports[`redering footer 1`] = `
     >
       <a
         className="mr-6 text-background"
-        href="#!"
+        href="/"
+        onClick={[Function]}
       >
         <svg
           aria-hidden="true"
@@ -189,7 +190,8 @@ exports[`redering footer 1`] = `
       </a>
       <a
         className="mr-6 text-background"
-        href="#!"
+        href="/"
+        onClick={[Function]}
       >
         <svg
           aria-hidden="true"
@@ -209,7 +211,8 @@ exports[`redering footer 1`] = `
       </a>
       <a
         className="mr-6 text-background"
-        href="#!"
+        href="/"
+        onClick={[Function]}
       >
         <svg
           aria-hidden="true"
@@ -229,7 +232,8 @@ exports[`redering footer 1`] = `
       </a>
       <a
         className="mr-6 text-background"
-        href="#!"
+        href="/"
+        onClick={[Function]}
       >
         <svg
           aria-hidden="true"
@@ -249,7 +253,8 @@ exports[`redering footer 1`] = `
       </a>
       <a
         className="mr-6 text-background"
-        href="#!"
+        href="/"
+        onClick={[Function]}
       >
         <svg
           aria-hidden="true"
@@ -268,8 +273,9 @@ exports[`redering footer 1`] = `
         </svg>
       </a>
       <a
-        className="text-background"
-        href="#!"
+        className="mr-6 text-background"
+        href="/"
+        onClick={[Function]}
       >
         <svg
           aria-hidden="true"
