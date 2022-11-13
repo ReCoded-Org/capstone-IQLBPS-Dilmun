@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useLocation, Link } from 'react-router-dom';
 
 import {
   HOME_ROUTE,
-  CONTACT_ROUTE,
+  // CONTACT_ROUTE,
   ABOUT_ROUTE,
   SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,
@@ -49,9 +48,8 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${
-            open ? 'top-24' : 'top-[-170px]'
-          }`}
+          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
+            }`}
         >
           <li>
             <Link
@@ -67,14 +65,6 @@ function NavBar() {
               to={PRODUCT_ROUTE}
             >
               Products
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-              to={CONTACT_ROUTE}
-            >
-              Contact
             </Link>
           </li>
           <li>
