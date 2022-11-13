@@ -290,20 +290,21 @@ exports[`redering footer 1`] = `
     </div>
   </div>
   <div
-    className="text-center p-6 text-primary bg-background"
+    className="text-center p-4 text-primary bg-primary"
   >
-    <span>
+    <span
+      className="text-background"
+    >
       © 2022 Copyright:
       <a
-        className="text-primary hover:text-secondary"
+        className="text-background hover:text-secondary"
         href="/"
         onClick={[Function]}
       >
-         Dilmun 
+        Dilmun
       </a>
-        All Rights Reserved. 
+      All Rights Reserved.
     </span>
-       
   </div>
 </div>
 `;
