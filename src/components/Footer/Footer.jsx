@@ -14,8 +14,8 @@ const Footer = () => {
     <div className=" text-center lg:text-center bg-primary  text-background">
       <div className="pl-5 pt-5 mt-14 mx-6  text-center md:text-left">
         <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="">
-            <h6 className="uppercase font-semibold mb-4 flex items-center  justify-center  md:justify-start">
+          <div className="invisible md:visible  lg:visible">
+            <h6 className="uppercase font-semibold mb-4 flex items-center  justify-center invisible md:justify-start md:visible lg:visible">
               <Link to={HOME_ROUTE}>
                 <img
                   src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
@@ -24,7 +24,7 @@ const Footer = () => {
                 />
               </Link>
             </h6>
-            <p>
+            <p className='invisible md:visible  lg:visible'>
               Designed to meet your needs. Here at Dilmun we sell various
               products to customers and accept donations to help those people
               that are in need.
