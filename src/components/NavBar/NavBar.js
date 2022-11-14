@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, NavLink } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
 import {
   HOME_ROUTE,
@@ -13,6 +14,10 @@ import {
   PRODUCT_ROUTE,
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
+
+const classNames = (...classes) => {
+  return twMerge(classes);
+};
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -51,60 +56,60 @@ function NavBar() {
             }`}
         >
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={HOME_ROUTE}
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={PRODUCT_ROUTE}
             >
               Products
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={ABOUT_ROUTE}
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={PROFILE}
             >
               Profile
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={SIGN_UP_ROUTE}
             >
               SignUp
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={SIGN_IN_ROUTE}
             >
               SignIn
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={LOG_OUT}
             >
               LogOut
-            </Link>
+            </NavLink>
           </li>
           <LanguageButton closeNavbar={closeNavBar} />
         </ul>
