@@ -96,7 +96,7 @@ export default function AddItemForm() {
                               accept="image/*"
                               {...register('file', {
                                 value:
-                                  'https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png',
+                                  'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png',
                               })}
                               className="sr-only"
                             />
