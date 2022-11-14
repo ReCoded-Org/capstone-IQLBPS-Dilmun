@@ -1,21 +1,15 @@
 import React , { useState} from "react";
-import ProfileImg1 from "../../assets/img/profileImg1.jpg";
+// import ProfileImg1 from "../../assets/img/profileImg1.png";
 import CustomItemCard from "../CustomComponents/CustomItemCard";
 // import axios from "axios";
 
  function Profile(){
-    // const [open, setOpen] = useState(false);
-    const [selectedImg , setSelectedImg] = useState({ProfileImg1});
+    const [open, setOpen] = useState(false);
+    const [selectedImg , setSelectedImg] = useState("https://cdn.discordapp.com/attachments/1034545397361815553/1041828532290072647/image.png");
     
 
-    function handleDropdown() {
-        //  if (open) {
-        // setOpen(false);
-        // }
-       }
-
     function handleSelectProfile(e) {
-       // console.log(e.target.files[0])
+        console.log(e.target.files[0])
         setSelectedImg(e.target.files[0])  ;
        }
 
@@ -27,26 +21,27 @@ import CustomItemCard from "../CustomComponents/CustomItemCard";
         <div className="mt-14 bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center">
 
             <div className=" mt-14 mb-14 w-5/6 bg-background rounded-lg flex flex-col justify-center items-center content-center">
-                    <button  className="pt-4 px-2 " type="button" onClick={handleDropdown}>
+                    <button  className="pt-4 px-2 " type="button" onClick={()=>setOpen(!open)} >
                         <svg className="w-6 h-6"   xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"/></svg>
                     </button>
-                        {/* <!-- Dropdown menu --> */}
-                    <div className = "  text-background bg-primary rounded">
+                        {/* <!-- Dropdown menu --> */
+                        open && 
+                        <div className = " text-background bg-primary rounded">
                             <ul >  { /* className={viewMode} I tried to use it here but it's not working & I don't know if there is a way to put it in the above class */ }
                                 <li>
                                     <button type="button" onClick={handleSelectProfile} className="block py-1 px-2 text-[14px] sm:text-[18px] lg:text-[22px]">Change Profile picture</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={handleSelectProfile} className="block py-1 px-2 text-[14px] sm:text-[18px] lg:text-[22px]">Change Profile picture</button>
+                                    <button type="button" onClick={handleSelectProfile} className="block py-1 px-2 text-[14px] sm:text-[18px] lg:text-[22px]">settings</button>
                                 </li>  
                                 <li>
-                                    <button type="button" onClick={handleSelectProfile} className="block py-1 px-2 text-[14px] sm:text-[18px] lg:text-[22px]">Change Profile picture</button>
+                                    <button type="button" onClick={handleSelectProfile} className="block py-1 px-2 text-[14px] sm:text-[18px] lg:text-[22px]">LogOut</button>
                                 </li> 
                                 <li>
                                     <input type="file" onChange={handleSelectProfile} className="block py-1 px-2 text-[14px] sm:text-[18px] lg:text-[22px]" />
                                 </li>
                             </ul>
-                    </div>
+                    </div>}
                 
                 
                 <div className="flex flex-col items-center justify-center content-center  mb-14 items-center justify-center content-center bg-background rounded-lg  pt-4">
