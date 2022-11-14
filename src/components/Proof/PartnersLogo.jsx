@@ -2,14 +2,16 @@ const PartnersLogo = () => {
   return (
     <section className="pb-8 md:pb-0" data-testid="customerslogo-section">
       <div className="lg:pb-8 mx-auto max-w-screen-xl px-4">
-        <h2 className="mb-8 lg:mb-16 font-poppins font-bold xs:text-[40px] text-center text-[32px] text-black xs:leading-[70px] leading-[60px] w-full"
-          data-testid="costumerslogo-title">
+        <h2
+          className="mb-8 lg:mb-16 font-poppins font-bold xs:text-[40px] text-center text-[32px] text-black xs:leading-[70px] leading-[60px] w-full"
+          data-testid="costumerslogo-title"
+        >
           Our Partners
         </h2>
         <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 ">
           <div className="flex justify-center items-center">
             <svg
-              className="h-9 hover:text-gray-900 ease-in-out duration-300"
+              className="h-9 hover:text-[#FF5A5F] ease-in-out duration-300"
               viewBox="0 0 125 35"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +26,7 @@ const PartnersLogo = () => {
           </div>
           <div className="flex justify-center items-center">
             <svg
-              className="h-9 hover:text-gray-900 ease-in-out duration-300"
+              className="h-9 hover:text-[#4285F4] ease-in-out duration-300"
               viewBox="0 0 86 29"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +41,7 @@ const PartnersLogo = () => {
           </div>
           <div className="flex justify-center items-center">
             <svg
-              className="h-8 hover:text-gray-900 ease-in-out duration-300"
+              className="h-8 hover:text-[#F25022] ease-in-out duration-300"
               viewBox="0 0 151 34"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +67,7 @@ const PartnersLogo = () => {
 
           <div className="flex justify-center items-center">
             <svg
-              className="h-9 hover:text-gray-900 ease-in-out duration-300"
+              className="h-9 hover:text-[#1DB954] ease-in-out duration-300"
               viewBox="0 0 124 38"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +80,7 @@ const PartnersLogo = () => {
           </div>
           <div className="flex justify-center items-center ease-in-out duration-300">
             <svg
-              className="h-9 hover:text-gray-900 ease-in-out duration-300"
+              className="h-9 hover:text-[#FFD14F] ease-in-out duration-300"
               viewBox="0 0 137 37"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +161,7 @@ const PartnersLogo = () => {
           </div>
           <div className="flex justify-center items-center">
             <svg
-              className="h-6 hover:text-gray-900 ease-in-out duration-300"
+              className="h-6 hover:text-[#00AEEF] ease-in-out duration-300"
               viewBox="0 0 124 21"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
