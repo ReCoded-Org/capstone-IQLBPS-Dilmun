@@ -42,7 +42,7 @@ exports[`render NavBar correctly 1`] = `
       <li>
         <a
           aria-current="page"
-          class="md:ml-6 text-xl md:my-0 hover:text-secondary duration-300 bg-tertiary text-secondary font-bold px-2 py-1 rounded-md"
+          class="md:ml-6 text-xl md:my-0 hover:text-secondary duration-300 bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md"
           href="/"
         >
           Home

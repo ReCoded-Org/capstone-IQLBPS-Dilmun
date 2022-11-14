@@ -57,7 +57,7 @@ function NavBar() {
         >
           <li>
             <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 py-1 rounded-md " : "")}
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={HOME_ROUTE}
             >
               Home
@@ -65,7 +65,7 @@ function NavBar() {
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 py-1 rounded-md " : "")}
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={PRODUCT_ROUTE}
             >
               Products
@@ -73,7 +73,7 @@ function NavBar() {
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 py-1 rounded-md " : "")}
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={ABOUT_ROUTE}
             >
               About
@@ -81,7 +81,7 @@ function NavBar() {
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 py-1 rounded-md " : "")}
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={PROFILE}
             >
               Profile
@@ -89,7 +89,7 @@ function NavBar() {
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 py-1 rounded-md " : "")}
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={SIGN_UP_ROUTE}
             >
               SignUp
@@ -97,7 +97,7 @@ function NavBar() {
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 py-1 rounded-md " : "")}
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={SIGN_IN_ROUTE}
             >
               SignIn
@@ -105,7 +105,7 @@ function NavBar() {
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 py-1 rounded-md " : "")}
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={LOG_OUT}
             >
               LogOut
