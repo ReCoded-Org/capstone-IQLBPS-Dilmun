@@ -1,7 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {
+  configureStore
+} from '@reduxjs/toolkit';
+import userReducer from '../Features/Users/userSlice';
+
 
 export const store = configureStore({
   reducer: {
-    counter: 0
+    counter: 0,
+    user: userReducer
   },
 });
