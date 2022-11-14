@@ -12,7 +12,7 @@ import {
   login,
   logout,
   // selectUser,
-} from './components/Features/Users/userSlice';
+} from './Features/Users/userSlice';
 import { auth , onAuthStateChanged } from './firebase-config';
 
 function App() {

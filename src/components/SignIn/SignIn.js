@@ -1,16 +1,15 @@
 import { useForm } from 'react-hook-form';
-import { Link, 
-   useNavigate 
-} from 'react-router-dom';
+import { Link,
+  //  useNavigate
+   } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-// import { signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from 'react-redux';
-import { login ,
- // logout 
-} from '../../Features/Users/userSlice';
+import { ToastContainer ,toast } from 'react-toastify';
+import { login} from '../../Features/Users/userSlice';
 import {signInUsers} from '../../Features/Users/userAuth'
+import 'react-toastify/dist/ReactToastify.css';
 
 const schema = yup.object().shape({
   email: yup
@@ -36,35 +35,39 @@ function SignIn() {
     resolver: yupResolver(schema),
   });
 
-    const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const onSubmit = async (data) => {
-
-    const result = await signInUsers(data)
-    dispatch(
-      login({
-        email: result,
-        uid: result,
-      })
-    )
-    navigate('/')
+try {    
+  const result = await signInUsers(data)
+  dispatch(
+    login({
+      email: result,
+      uid: result,
+    }),
+    // navigate('/'),
+    toast.success("Welcome Back!")
+  )}catch(error){
+    toast.error("User Not Found!")
+  }
   };
   return (
+    <>
+    <ToastContainer />
     <div className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center" data-testid="sign-in">
       <h1 className="text-5xl font-bold mb-10 text-primary pt-9">SIGN IN</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center">
-        <label htmlFor="email" className="mt-3" >
+        <label htmlFor="email" className="mt-3">
           <span className="text-primary font-semibold">Email</span>
           <input
             type="email"
             placeholder="Email"
             name='email'
             {...register('email')}
-            className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500 "
-          />
+            className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500 " />
           <p className="text-red-800 font-semibold">
-          {errors?.email?.message}
-        </p>
+            {errors?.email?.message}
+          </p>
         </label>
         <label htmlFor="password" className="mt-3">
           <span className="text-primary font-semibold">Password</span>
@@ -73,11 +76,10 @@ function SignIn() {
             placeholder="Password"
             name='password'
             {...register('password')}
-            className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
-          />
+            className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500" />
           <p className="text-red-800 font-semibold">
-          {errors?.password?.message}
-        </p>
+            {errors?.password?.message}
+          </p>
         </label>
         <button
           type="submit"
@@ -103,8 +105,7 @@ function SignIn() {
           <button type="button">
             <BsFacebook
               type="icon"
-              className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
-            />
+              className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             or
           </button>
           <button type="button">
@@ -113,7 +114,7 @@ function SignIn() {
           </button>
         </p>
       </form>
-    </div>
+    </div></>
   );
 }
 

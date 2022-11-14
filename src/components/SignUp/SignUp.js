@@ -5,8 +5,10 @@ import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
+import {  toast } from 'react-toastify';
 import {signUpUsers} from '../../Features/Users/userAuth'
 import { login } from '../../Features/Users/userSlice';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const schema = yup.object().shape({
@@ -43,6 +45,7 @@ function SignUp() {
 
 
   const onSubmit = async (data) => {
+  try{
     const result = await signUpUsers(data)
     dispatch(
       login({
@@ -51,6 +54,10 @@ function SignUp() {
         firstName: result,
       })
     )
+    toast.success("Registration Completed!")
+  } catch(error){
+      toast.error("Registration Failed!")
+    } 
   }
 
 
@@ -117,6 +124,7 @@ function SignUp() {
           <span className="text-primary font-semibold">Confirm Password</span>
           <input
             type="password"
+            placeholder="Confirm Password"
             {...register('confirmPassword')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
