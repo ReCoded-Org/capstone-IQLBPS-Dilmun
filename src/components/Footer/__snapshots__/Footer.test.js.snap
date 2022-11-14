@@ -3,82 +3,52 @@
 exports[`redering divs correctly correctly 1`] = `undefined`;
 
 exports[`redering footer 1`] = `
-<div>
-  <div
-    className="p-4 border-b bg-primary mt-1 "
+<footer
+  className="p-4 bg-background rounded-lg shadow md:flex md:items-center md:justify-between md:p-6"
+>
+  <span
+    className="text-sm text-primary sm:text-center "
   >
-    <div
-      className=" md:text-xl text-background flex md:content-around items-center md:justify-around justify-center "
+    © 2022 
+    <a
+      className="hover:underline"
+      href="/"
+      onClick={[Function]}
     >
+      Dilmun™
+    </a>
+    . All Rights Reserved.
+  </span>
+  <ul
+    className="flex flex-wrap items-center mt-3 text-sm text-primary sm:mt-0"
+  >
+    <li>
       <a
-        className="hover:text-tertiary duration-200 md:mr-0 mr-6"
+        className="mr-4 hover:underline md:mr-6 "
         href="/"
         onClick={[Function]}
       >
         Home
       </a>
+    </li>
+    <li>
       <a
-        className="hover:text-tertiary duration-200  md:mr-0 mr-6"
+        className="mr-4 hover:underline md:mr-6"
+        href="/about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        className="mr-4 hover:underline md:mr-6"
         href="/faq"
         onClick={[Function]}
       >
         FAQ
       </a>
-      <a
-        className="hover:text-tertiary duration-200 "
-        href="/about"
-        onClick={[Function]}
-      >
-        About Us
-      </a>
-    </div>
-  </div>
-  <div
-    className="flex flex-col text-center text-sm p-4 text-primary bg-primary bg-opacity-75"
-  >
-    <p
-      className="text-background"
-    >
-      <svg
-        className="text-background inline h-5 w-5"
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 24 24"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-        <path
-          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-        />
-      </svg>
-       dilmun.recoded@gmail.com
-    </p>
-    <span
-      className="text-background"
-    >
-      © 2022 Copyright 
-       
-      <a
-        className="text-background hover:text-secondary duration-200"
-        href="/"
-        onClick={[Function]}
-      >
-        Dilmun
-      </a>
-       - 
-      All Rights Reserved.
-    </span>
-  </div>
-</div>
+    </li>
+  </ul>
+</footer>
 `;
