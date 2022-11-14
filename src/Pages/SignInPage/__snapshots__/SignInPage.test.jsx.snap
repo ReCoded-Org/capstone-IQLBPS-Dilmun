@@ -5,9 +5,6 @@ exports[`Sign In Page Rendered Correctly 1`] = `
   data-testid="sign-in-page"
 >
   <div
-    class="Toastify"
-  />
-  <div
     class="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center"
     data-testid="sign-in"
   >
