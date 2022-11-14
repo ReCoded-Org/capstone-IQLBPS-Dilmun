@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, NavLink } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
 import {
   HOME_ROUTE,
-  CONTACT_ROUTE,
   ABOUT_ROUTE,
   SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,
   LOG_OUT,
   PROFILE,
+  PRODUCT_ROUTE,
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
+
+const classNames = (...classes) => {
+  return twMerge(classes);
+};
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -48,64 +52,64 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`md:flex items-center font-semibold text-secondary md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-1000 ease-in ${open ? 'left-[88%] ' : 'left-[-100%]'
+          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
             }`}
         >
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={HOME_ROUTE}
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
-              to={CONTACT_ROUTE}
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
+              to={PRODUCT_ROUTE}
             >
-              Contact
-            </Link>
+              Products
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={ABOUT_ROUTE}
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={PROFILE}
             >
               Profile
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={SIGN_UP_ROUTE}
             >
               SignUp
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={SIGN_IN_ROUTE}
             >
               SignIn
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+            <NavLink
+              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
               to={LOG_OUT}
             >
               LogOut
-            </Link>
+            </NavLink>
           </li>
           <LanguageButton closeNavbar={closeNavBar} />
         </ul>

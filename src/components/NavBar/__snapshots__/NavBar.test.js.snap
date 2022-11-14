@@ -37,11 +37,12 @@ exports[`render NavBar correctly 1`] = `
       </svg>
     </button>
     <ul
-      class="md:flex items-center font-semibold text-secondary md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-1000 ease-in left-[-100%]"
+      class="flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in top-[-170px]"
     >
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+          aria-current="page"
+          class="md:ml-6 text-xl md:my-0 hover:text-secondary duration-300 bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md"
           href="/"
         >
           Home
@@ -49,15 +50,15 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
-          href="/contact"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
+          href="/products"
         >
-          Contact
+          Products
         </a>
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/about"
         >
           About
@@ -65,7 +66,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/profile"
         >
           Profile
@@ -73,7 +74,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/signup"
         >
           SignUp
@@ -81,7 +82,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/signin"
         >
           SignIn
@@ -89,7 +90,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 hover:text-primary' duration-300"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/logout"
         >
           LogOut
