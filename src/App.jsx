@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import HomePage from './Pages/HomePage/HomePage';
+import AddItemPage from './Pages/AddItemPage/AddItemPage';
 import FilterPage from './Pages/FilterPage/FilterPage';
 import FaqPage from './Pages/FaqPage/FaqPage';
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/faq" element={<FaqPage />} />
       </Routes>
+      <AddItemPage/>
       <Footer />
     </div>
   );
