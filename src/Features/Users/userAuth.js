@@ -6,9 +6,6 @@ import {
     toast
 } from 'react-toastify'
 import {
-    useNavigate
-} from 'react-router-dom';
-import {
     auth,
     db,
     createUserWithEmailAndPassword,
@@ -43,7 +40,6 @@ export const signUpUsers = async (data) => {
 
 
 export const signInUsers = async (data) => {
-    const navigate = useNavigate()
     const {
         email,
         password
@@ -55,9 +51,8 @@ export const signInUsers = async (data) => {
             } = userCredential;
             // eslint-disable-next-line no-console
             console.log(user)
-            toast.success("Welcome Back!")
-            navigate('/')
         }).catch((error) => {
-            toast.error(error.message)
+            // eslint-disable-next-line no-console
+            console.log(error)
         })
 }

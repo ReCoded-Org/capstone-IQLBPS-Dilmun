@@ -1,16 +1,11 @@
 import { useForm } from 'react-hook-form';
-import {
-  Link,
-  //  useNavigate
-} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { ToastContainer, toast } from 'react-toastify';
 import { login } from '../../Features/Users/userSlice';
 import { signInUsers } from '../../Features/Users/userAuth';
-import 'react-toastify/dist/ReactToastify.css';
 
 const schema = yup.object().shape({
   email: yup.string().required('Please insert your Email'),
@@ -18,6 +13,9 @@ const schema = yup.object().shape({
 });
 
 function SignIn() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+
   const {
     register,
     handleSubmit,
@@ -26,28 +24,17 @@ function SignIn() {
     resolver: yupResolver(schema),
   });
 
-  const dispatch = useDispatch();
-
-  // const navigate = useNavigate()
-
   const onSubmit = async (data) => {
-    try {
-      const result = await signInUsers(data);
-      dispatch(
-        login({
-          email: result,
-          uid: result,
-        }),
-        // navigate('/'),
-        toast.success('Welcome Back!')
-      );
-    } catch (error) {
-      toast.error('User Not Found!');
-    }
+    const result = await signInUsers(data);
+    dispatch(
+      login({
+        email: result,
+        uid: result,
+      })
+    );
+    navigate('/')
   };
   return (
-    <>
-      <ToastContainer />
       <div
         className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center"
         data-testid="sign-in"
@@ -115,7 +102,7 @@ function SignIn() {
           </p>
         </form>
       </div>
-    </>
-  )}
+  );
+}
 
 export default SignIn;
