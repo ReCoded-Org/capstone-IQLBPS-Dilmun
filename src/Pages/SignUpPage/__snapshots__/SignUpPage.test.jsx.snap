@@ -105,6 +105,7 @@ exports[`Sign In Page Rendered Correctly 1`] = `
         <input
           class="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           name="confirmPassword"
+          placeholder="Confirm Password"
           type="password"
         />
         <p
