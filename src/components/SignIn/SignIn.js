@@ -32,6 +32,7 @@ function SignIn() {
         uid: result,
       })
     );
+    // TODO: Navigate users to the signedin profile page
     navigate('/')
   };
   return (

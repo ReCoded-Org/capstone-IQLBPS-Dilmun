@@ -1,14 +1,12 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
-import {  toast } from 'react-toastify';
 import {signUpUsers} from '../../Features/Users/userAuth'
 import { login } from '../../Features/Users/userSlice';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 const schema = yup.object().shape({
@@ -33,7 +31,8 @@ const schema = yup.object().shape({
 
 function SignUp() {
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -45,7 +44,7 @@ function SignUp() {
 
 
   const onSubmit = async (data) => {
-  try{
+  
     const result = await signUpUsers(data)
     dispatch(
       login({
@@ -54,10 +53,8 @@ function SignUp() {
         firstName: result,
       })
     )
-    toast.success("Registration Completed!")
-  } catch(error){
-      toast.error("Registration Failed!")
-    } 
+    // TODO: Navigate users to the signedin profile page
+    navigate("/")
   }
 
 

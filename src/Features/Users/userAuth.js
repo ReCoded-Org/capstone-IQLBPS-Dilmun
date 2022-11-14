@@ -28,10 +28,9 @@ export const signUpUsers = async (data) => {
         } = userCredential
         // eslint-disable-next-line no-console
         console.log(user)
-        toast.success("Registration Completed!")
         await setDoc(doc(db, "Users", user.uid), {
             firstName,
-            lastName
+            lastName,
         });
     }).catch((error) => {
         toast.error(error.message)

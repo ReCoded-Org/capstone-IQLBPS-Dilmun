@@ -19,6 +19,7 @@ import { auth , onAuthStateChanged } from './firebase-config';
 import FaqPage from './Pages/FaqPage/FaqPage';
 
 function App() {
+  // TODO: Use this selected user to apply needed conditional rendering
 
   // const user = useSelector(selectUser);
   const dispatch = useDispatch();
