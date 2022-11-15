@@ -1,8 +1,9 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch,
+import {
+  useDispatch,
   //  useSelector
-   } from 'react-redux';
+} from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import Footer from './components/Footer/Footer';
@@ -16,9 +17,9 @@ import {
   logout,
   // selectUser,
 } from './Features/Users/userSlice';
-import { auth , onAuthStateChanged } from './firebase-config';
+import { auth, onAuthStateChanged } from './firebase-config';
 import FaqPage from './Pages/FaqPage/FaqPage';
-import ItemEditForm from './components/ItemEditForm/ItemEditForm';
+import EditItemModal from './components/ItemEditForm/EditItemModal';
 
 function App() {
   // TODO: Use this selected user to apply needed conditional rendering
@@ -52,8 +53,8 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/faq" element={<FaqPage />} />
       </Routes>
-      <AddItemPage/>
-      <ItemEditForm/>
+      <AddItemPage />
+      <EditItemModal />
       <Footer />
     </div>
   );
