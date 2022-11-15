@@ -2,6 +2,7 @@ import { FunnelIcon, Squares2X2Icon } from '@heroicons/react/20/solid';
 import React, { useState } from 'react';
 import Filter from '../../components/Filter/Filter';
 import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
+import Sort from '../../components/Sort/Sort';
 
 const FilterPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -13,6 +14,7 @@ const FilterPage = () => {
         </h1>
 
         <div className="flex items-center">
+          <Sort />
           <button
             type="button"
             className="-m-2 ml-5 p-2 text-secondary hover:text-primary sm:ml-7"
