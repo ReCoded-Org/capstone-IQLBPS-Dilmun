@@ -5,6 +5,7 @@ const Input = React.forwardRef(
     {
       type,
       name,
+      isActive = false,
       disabled = false,
       errors,
       errorMessage,
@@ -14,7 +15,7 @@ const Input = React.forwardRef(
     },
     ref
   ) => {
-    const [active, setActive] = React.useState(false);
+    const [active, setActive] = React.useState(isActive);
 
     function handleActivation(e) {
       if (e.target.value !== 0){

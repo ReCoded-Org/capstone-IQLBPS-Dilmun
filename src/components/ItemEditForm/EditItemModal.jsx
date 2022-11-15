@@ -3,12 +3,12 @@ import { Fragment, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import {TbEdit} from 'react-icons/tb'
+import { TbEdit } from 'react-icons/tb';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 
 const schema = yup.object().shape({
-  title: yup.string().required('Cannot stay empty.'),
-  description: yup.string().required('Cannot stay empty.'),
+  name: yup.string().required('Cannot stay empty.'),
+  desc: yup.string().required('Cannot stay empty.'),
 });
 
 const ITEM_TYPES = ['Crafted', 'Donated', 'New', 'Used'];
@@ -50,11 +50,11 @@ export default function EditItemModal() {
   function closeModal() {
     setIsOpen(false);
     reset({
-        keepErrors: false,
-        keepDirty: false,
-        keepValues: false
-    })
-    setImg(defaultImg)
+      keepErrors: false,
+      keepDirty: false,
+      keepValues: false,
+    });
+    setImg(defaultImg);
   }
 
   function openModal() {
@@ -69,7 +69,7 @@ export default function EditItemModal() {
           onClick={openModal}
           className="rounded-md bg-primary bg-opacity-20 px-4 py-2 text-sm font-medium text-primary hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
-          Edit Item <TbEdit className='text-primary w-4 h-6 inline'/>
+          Edit Item <TbEdit className="text-primary w-4 h-6 inline" />
         </button>
       </div>
 
@@ -110,33 +110,31 @@ export default function EditItemModal() {
                     Edit Item Info
                   </Dialog.Title>
                   <span className="block text-sm font-medium text-background">
-                        Edit Item Image
-                      </span>
+                    Edit Item Image
+                  </span>
                   <figure className="flex relative w-fit transition-all duration-300 cursor-pointer filter border-2 rounded-md border-dashed my-3  border-tertiary">
                     <img
                       className="rounded-lg max-h-28 m-1"
                       src={`${img}`}
                       alt="item"
                     />
-                  
-                      <input
-                        type="file"
-                        accept="image/*"
-                        {...register('file')}
-                        onChange={(e) => {
-                          setImg(e.target.files[0].name);
-                        }}
-                        className="w-full self-center text-xs text-background
-            file:mr-4 file:py-2 file:px-4
-            file:rounded file:border-0
-            file:text-sm file:font-semibold
-            file:bg-background file:text-secondary m-2" 
-                      />
+
+                    <input
+                      type="file"
+                      accept="image/*"
+                      {...register('file')}
+                      onChange={(e) => {
+                        setImg(e.target.files[0].name);
+                      }}
+                      className="w-full self-center text-xs text-background file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-background file:text-secondary m-2"
+                    />
                   </figure>
                   <Input
-                    name="title"
-                    {...register('title')}
-                    errors={errors.title ? errors.title : undefined}
+                    isActive
+                    name="name"
+                    {...register('name', {value: "hi"})}
+                    errors={errors.name ? errors.name : undefined}
+              
                   >
                     Edit Item Name
                   </Input>
@@ -179,9 +177,10 @@ export default function EditItemModal() {
                   </div>
                   <div className="my-4">
                     <TextArea
-                      name="description"
-                      {...register('description')}
-                      errors={errors?.description}
+                      isActive
+                      name="edit-desc"
+                      {...register('desc')}
+                      errors={errors?.desc}
                     >
                       Edit Description
                     </TextArea>
