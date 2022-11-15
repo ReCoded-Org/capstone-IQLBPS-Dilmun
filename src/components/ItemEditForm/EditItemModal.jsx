@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import {TbEdit} from 'react-icons/tb'
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 
 const schema = yup.object().shape({
@@ -60,13 +61,13 @@ export default function EditItemModal() {
 
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-end bg-background p-3">
         <button
           type="button"
           onClick={openModal}
-          className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+          className="rounded-md bg-primary bg-opacity-20 px-4 py-2 text-sm font-medium text-primary hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
-          Open dialog
+          Edit Item <TbEdit className='text-primary w-4 h-6 inline'/>
         </button>
       </div>
 
