@@ -5,7 +5,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
 } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { auth, db } from '../../firebase-config';
 
 const initialState = {
@@ -64,6 +64,22 @@ export const signInWithCredentials = createAsyncThunk(
     }
   }
 );
+export const getCurrentSignedInUser = createAsyncThunk(
+  'user/getCurrentSignedInUser',
+  async (payload, { rejectWithValue }) => {
+    try {
+      const docRef = doc(db, 'Users', payload);
+      const docSnap = await getDoc(docRef);
+
+      if (!docSnap.exists()) {
+        return rejectWithValue(JSON.stringify('no user found'));
+      }
+      return JSON.stringify(docSnap.data());
+    } catch (error) {
+      return rejectWithValue(JSON.stringify(error));
+    }
+  }
+);
 const userSlice = createSlice({
   name: 'user',
   initialState,
@@ -73,7 +89,6 @@ const userSlice = createSlice({
       state.status = 'idle';
       state.error = null;
     },
-
   },
   extraReducers: (builder) => {
     builder
@@ -121,6 +136,22 @@ const userSlice = createSlice({
         state.user = JSON.parse(payload);
       })
       .addCase(signUpWithCredentials.rejected, (state, { payload }) => {
+        state.status = 'failed';
+        state.error = JSON.parse(payload);
+        state.user = {};
+      })
+      // getCurrentSignedInUser
+      .addCase(getCurrentSignedInUser.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+        state.user = {};
+      })
+      .addCase(getCurrentSignedInUser.fulfilled, (state, { payload }) => {
+        state.status = 'succeeded';
+        state.error = null;
+        state.user = JSON.parse(payload);
+      })
+      .addCase(getCurrentSignedInUser.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
         state.user = {};
