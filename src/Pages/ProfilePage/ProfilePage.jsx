@@ -4,7 +4,7 @@ import Profile from "../../components/Profile/Profile";
 
 function ProfilePage (){
     return(
-        <div>
+        <div data-testid = 'Profile-page'>
             <Profile />
         </div>
     )} 
