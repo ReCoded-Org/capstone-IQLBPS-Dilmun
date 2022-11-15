@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Filter from '../../components/Filter/Filter';
 import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 
+
 const FilterPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   return (
@@ -13,6 +14,7 @@ const FilterPage = () => {
         </h1>
 
         <div className="flex items-center">
+          <Sort />
           <button
             type="button"
             className="-m-2 ml-5 p-2 text-secondary hover:text-primary sm:ml-7"
