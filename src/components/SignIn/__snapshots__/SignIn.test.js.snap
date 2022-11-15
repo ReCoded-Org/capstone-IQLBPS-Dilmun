@@ -61,7 +61,6 @@ exports[`Sign In Page Renders Correctly 1`] = `
       class="text-lg text-primary self-center mt-2"
     >
       Do Not Have an Account?
-       
       <a
         class="underline hover:text-secondary duration-300"
         href="/signup"
