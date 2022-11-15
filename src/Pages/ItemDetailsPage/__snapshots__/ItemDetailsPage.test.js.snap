@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemDetailsPage Page Rendered Correctly 1`] = `
+<div
+  class="md:flex md:h-screen text-background p-6 bg-background mt-11"
+  data-testid="item-details-page"
+>
+  <div>
+    <img
+      alt="headphones"
+      class="max-h-full mb-6 md:mb-0"
+      src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmFnfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+    />
+  </div>
+  <div
+    class=" md:max-w-lg md:ml-auto min-h-[600px] md:mr-auto flex flex-col gap-7 rounded pt-5 px-5 bg-primary "
+  >
+    <div>
+      <h2
+        class="font-bold text-3xl "
+      >
+        Backpack
+      </h2>
+      <span>
+        Other
+      </span>
+    </div>
+    <span
+      class="flex gap-1"
+    >
+      <p
+        class="font-semibold"
+      >
+        Price:
+      </p>
+       $60
+    </span>
+    <span
+      class="flex gap-1"
+    >
+      <p
+        class="font-semibold"
+      >
+        Item Type:
+      </p>
+       New
+    </span>
+    <span
+      class="flex gap-1"
+    >
+      <p
+        class="font-semibold"
+      >
+        Country:
+      </p>
+       Spain
+    </span>
+    <span
+      class="flex gap-1"
+    >
+      <p
+        class="font-semibold"
+      >
+        Address:
+      </p>
+       C/Conde de Xiquena 7, 3º, 1A Izda, 280280, Madrid
+    </span>
+    <div>
+      <span
+        class="font-bold text-xl"
+      >
+        Description:
+      </span>
+      <p
+        class="text-lg"
+      >
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem facilis cupiditate reiciendis dignissimos hic aliquam esse aspernatur quam similique libero!
+      </p>
+    </div>
+    <button
+      class="bg-tertiary px-4 py-4 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
+      type="submit"
+    >
+      Email Owner
+    </button>
+  </div>
+</div>
+`;
