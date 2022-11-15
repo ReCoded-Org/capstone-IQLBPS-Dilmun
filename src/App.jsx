@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar'
-import SignInPage from './Pages/SignInPage/SignInPage';
-import SignUpPage from './Pages/SignUpPage/SignUpPage';
-import HomePage from './Pages/HomePage/HomePage';
+import HomePage from './Pages/HomePage/HomePage'
+import SignInPage from './Pages/SignInPage/SignInPage'
+import SignUpPage from './Pages/SignUpPage/SignUpPage'
 import ItemDetailsPage from './Pages/ItemDetailsPage/ItemDetailsPage'
 
 function App() {
