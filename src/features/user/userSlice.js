@@ -31,7 +31,7 @@ export const signInWithFacebook = createAsyncThunk(
         });
       }
       payload();
-      return JSON.stringify(docSnap.data());
+      return JSON.stringify(user);
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
