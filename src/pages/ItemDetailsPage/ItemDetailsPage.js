@@ -3,7 +3,7 @@ import CustomButton from '../../components/CustomComponents/CustomButton'
 
 const ItemDetailsPage = () => {
     return (
-        <div className='md:flex md:h-screen text-background p-6 bg-background mt-11'>
+        <div data-testid='item-details-page' className='md:flex md:h-screen text-background p-6 bg-background mt-11'>
             <div>
                 <img className='max-h-full mb-6 md:mb-0' src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmFnfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="headphones" />
             </div>
