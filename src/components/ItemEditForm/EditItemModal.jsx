@@ -63,7 +63,7 @@ export default function EditItemModal() {
 
   return (
     <>
-      <div className="flex items-center justify-end bg-background p-3">
+      <div className="flex items-center justify-end bg-background p-3" data-testid='edit-item'>
         <button
           type="button"
           onClick={openModal}
