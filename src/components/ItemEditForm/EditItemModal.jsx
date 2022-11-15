@@ -105,7 +105,7 @@ export default function EditItemModal() {
                     as="h3"
                     className="text-2xl font-bold text-background mb-3"
                   >
-                    Edit Product Info
+                    Edit Item Info
                   </Dialog.Title>
                   <figure className="relative w-fit transition-all duration-300 cursor-pointer filter border-2 rounded-md border-dashed my-3  border-tertiary">
                     <img
@@ -182,7 +182,7 @@ export default function EditItemModal() {
                     </TextArea>
                   </div>
                   <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                    <SubmitButton buttonText="Edit Info" />
+                    <SubmitButton buttonText="Update Info" />
                     <button
                       type="button"
                       className="ml-2 inline-flex justify-center rounded-md border border-transparent bg-background px-4 py-2 text-sm font-medium text-primary hover:bg-tertiary focus:outline-none focus-visible:ring-2 focus-visible:ring-tertiary focus-visible:ring-offset-2"
