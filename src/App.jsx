@@ -18,6 +18,7 @@ import {
 } from './Features/Users/userSlice';
 import { auth , onAuthStateChanged } from './firebase-config';
 import FaqPage from './Pages/FaqPage/FaqPage';
+import ItemEditForm from './components/ItemEditForm/ItemEditForm';
 
 function App() {
   // TODO: Use this selected user to apply needed conditional rendering
@@ -52,6 +53,7 @@ function App() {
         <Route path="/faq" element={<FaqPage />} />
       </Routes>
       <AddItemPage/>
+      <ItemEditForm/>
       <Footer />
     </div>
   );
