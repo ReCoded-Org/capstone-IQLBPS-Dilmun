@@ -14,7 +14,7 @@ import {
   status,
   user,
 } from '../../features/user/userSlice';
-import { errorTypes } from '../../utils/errorType';
+import { errorTypes } from '../../utils/errorTypes';
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Please insert your First Name'),

@@ -13,7 +13,7 @@ import {
   status,
   user,
 } from '../../features/user/userSlice';
-import { errorTypes } from '../../utils/errorType';
+import { errorTypes } from '../../utils/errorTypes';
 
 const schema = yup.object().shape({
   email: yup.string().required('Please insert your Email'),
@@ -92,7 +92,9 @@ function SignIn() {
           Sign In
         </button>
         {userError && (
-          <p className="w-80 sm:w-96 text-center text-red-800 font-semibold">{errorTypes[userError.code]}</p>
+          <p className="w-80 sm:w-96 text-center text-red-800 font-semibold">
+            {errorTypes[userError.code]}
+          </p>
         )}
         <p className="text-lg text-primary self-center mt-2">
           Do Not Have an Account?
