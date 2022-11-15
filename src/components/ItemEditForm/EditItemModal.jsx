@@ -51,8 +51,10 @@ export default function EditItemModal() {
     setIsOpen(false);
     reset({
         keepErrors: false,
-        keepDirty: false
+        keepDirty: false,
+        keepValues: false
     })
+    setImg(defaultImg)
   }
 
   function openModal() {
@@ -99,7 +101,7 @@ export default function EditItemModal() {
                 <Dialog.Panel
                   as="form"
                   onSubmit={handleSubmit(onSubmit)}
-                  className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-primary p-6 text-left align-middle shadow-xl transition-all"
+                  className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-primary p-6 text-left align-middle shadow-xl transition-all"
                 >
                   <Dialog.Title
                     as="h3"
@@ -107,26 +109,29 @@ export default function EditItemModal() {
                   >
                     Edit Item Info
                   </Dialog.Title>
-                  <figure className="relative w-fit transition-all duration-300 cursor-pointer filter border-2 rounded-md border-dashed my-3  border-tertiary">
+                  <span className="block text-sm font-medium text-background">
+                        Edit Item Image
+                      </span>
+                  <figure className="flex relative w-fit transition-all duration-300 cursor-pointer filter border-2 rounded-md border-dashed my-3  border-tertiary">
                     <img
-                      className="rounded-lg h-44"
+                      className="rounded-lg max-h-28 m-1"
                       src={`${img}`}
                       alt="item"
                     />
-                    <figcaption className="absolute bottom-4 px-4">
+                  
                       <input
                         type="file"
                         accept="image/*"
+                        {...register('file')}
                         onChange={(e) => {
                           setImg(e.target.files[0].name);
                         }}
-                        className="w-full text-xs text-background
+                        className="w-full self-center text-xs text-background
             file:mr-4 file:py-2 file:px-4
             file:rounded file:border-0
             file:text-sm file:font-semibold
-            file:bg-background file:text-secondary"
+            file:bg-background file:text-secondary m-2" 
                       />
-                    </figcaption>
                   </figure>
                   <Input
                     name="title"
