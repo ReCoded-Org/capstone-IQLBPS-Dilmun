@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdEmail } from 'react-icons/md';
 
 import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE } from '../../route';
 
 const Footer = () => {
-  const [email, setEmail] = useState(false);
 
   return (
     <footer className="p-4 bg-primary shadow md:px-6 md:py-6">
@@ -46,15 +45,9 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <button type="button" onClick={() => setEmail(!email)}>
-              {email ? (
-                <p className="mr-4 hover:text-tertiary">
-                  Dilmun.recoded@gmail.com
-                </p>
-              ) : (
+            <a href='mailto:dilmun.recoded@gmail.com' >
                 <MdEmail className="mr-4 hover:text-tertiary h-8 w-5" />
-              )}
-            </button>
+            </a>
           </li>
         </ul>
       </div>
