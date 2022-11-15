@@ -1,18 +1,45 @@
-import React from 'react';
-import {
-  Routes,
-  Route,
-} from 'react-router-dom';
+import React,{useEffect} from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useDispatch,
+  //  useSelector
+   } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import Footer from './components/Footer/Footer';
 import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import HomePage from './Pages/HomePage/HomePage';
+import AddItemPage from './Pages/AddItemPage/AddItemPage';
 import FilterPage from './Pages/FilterPage/FilterPage';
+import {
+  login,
+  logout,
+  // selectUser,
+} from './Features/Users/userSlice';
+import { auth , onAuthStateChanged } from './firebase-config';
 import FaqPage from './Pages/FaqPage/FaqPage';
 
 function App() {
+  // TODO: Use this selected user to apply needed conditional rendering
+
+  // const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (userAuth) => {
+      if (userAuth) {
+        dispatch(
+          login({
+            email: userAuth.email,
+            uid: userAuth.uid,
+          })
+        );
+      } else {
+        dispatch(logout());
+      }
+    });
+  }, []);
+
   return (
     <div className="App  ">
       <NavBar />
@@ -24,6 +51,7 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/faq" element={<FaqPage />} />
       </Routes>
+      <AddItemPage/>
       <Footer />
     </div>
   );
