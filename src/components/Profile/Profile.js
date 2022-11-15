@@ -9,7 +9,7 @@ import CustomItemCard from "../CustomComponents/CustomItemCard";
     
 
     function handleSelectProfile(e) {
-        console.log(e.target.files[0])
+       // console.log(e.target.files[0])
         setSelectedImg(e.target.files[0])  ;
        }
 

@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
+import { render} from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import Profile from "./Profile";
+import Profile from './Profile';
 
 
 test('profile renders correctly', () => {
@@ -8,8 +9,18 @@ test('profile renders correctly', () => {
     expect(tree).toMatchSnapshot();
 });
 
-it('Renders with a className', () => {
-    const { container } = renderer.create(<Profile />);
-    expect((container.firstChild.classList).toHaveClass("rounded-full w-36"))
 
-})
+     test('alt contains correct value', () => {
+       render(<Profile/>)
+       const testImage = document.querySelector("img") ;
+       expect(testImage.alt).toContain("DefaultProfileImg")
+     })
+
+
+  test('should render a button ', () => {
+    render(<Profile />);
+    const button1 = document.querySelector("button");
+    expect(button1).toBeInTheDocument();
+  });
+
+ 
