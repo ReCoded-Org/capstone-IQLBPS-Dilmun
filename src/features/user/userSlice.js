@@ -20,8 +20,18 @@ export const signInWithFacebook = createAsyncThunk(
     const provider = new FacebookAuthProvider();
     try {
       const { user } = await signInWithPopup(auth, provider);
+
+      const docRef = doc(db, 'Users', user.uid);
+      const docSnap = await getDoc(docRef);
+
+      if (!docSnap.exists()) {
+        await setDoc(docRef, {
+          firstName: user.displayName.split(' ')[0],
+          lastName: user.displayName.split(' ')[1],
+        });
+      }
       payload();
-      return JSON.stringify(user);
+      return JSON.stringify(docSnap.data());
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
