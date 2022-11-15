@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useDispatch } from 'react-redux';
-import {signUpUsers} from '../../Features/Users/userAuth'
-import { login } from '../../Features/Users/userSlice';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { signUpUsers } from '../../Features/Users/userAuth';
+import { login, selectUser } from '../../Features/Users/userSlice';
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Please insert your First Name'),
@@ -27,13 +26,16 @@ const schema = yup.object().shape({
     .required('Please Confirm Password'),
 });
 
-
-
 function SignUp() {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const user = useSelector(selectUser);
 
+  useEffect(() => {
+    if (user) {
+      navigate('/');
+    }
+  }, []);
   const {
     register,
     handleSubmit,
@@ -42,25 +44,26 @@ function SignUp() {
     resolver: yupResolver(schema),
   });
 
-
   const onSubmit = async (data) => {
-  
-    const result = await signUpUsers(data)
+    const result = await signUpUsers(data);
     dispatch(
       login({
         email: result,
         uid: result,
         firstName: result,
       })
-    )
+    );
     // TODO: Navigate users to the signedin profile page
-    navigate("/")
-  }
-
+    navigate('/');
+  };
 
   return (
-    <div className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] h-full flex flex-col justify-center items-center content-center" data-testid='sign-up'>
+    <div
+      className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] h-full flex flex-col justify-center items-center content-center"
+      data-testid="sign-up"
+    >
       <h1 className="text-5xl font-bold mb-10 text-primary pt-9">SIGN UP</h1>
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-center"
@@ -100,9 +103,7 @@ function SignUp() {
             {...register('email')}
             className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
-          <p className="text-red-800 font-semibold">
-            {errors?.email?.message}
-          </p>
+          <p className="text-red-800 font-semibold">{errors?.email?.message}</p>
         </label>
         <label htmlFor="password" className="mt-3">
           <span className="text-primary font-semibold">Password</span>
@@ -144,9 +145,7 @@ function SignUp() {
             Sign In
           </Link>
         </p>
-        <p className="text-lg text-primary font-bold self-center my-4">
-          OR
-        </p>
+        <p className="text-lg text-primary font-bold self-center my-4">OR</p>
         <p className="text-xl text-primary font-semibold self-center mb-6">
           Sign Up With
           <button type="button">
