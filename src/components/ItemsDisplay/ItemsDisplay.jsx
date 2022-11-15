@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemsCards from './ItemsCards'
 
 const ItemsDisplay = () => {
     return(
