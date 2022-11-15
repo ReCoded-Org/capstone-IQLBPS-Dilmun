@@ -16,8 +16,10 @@ const Input = React.forwardRef(
   ) => {
     const [active, setActive] = React.useState(false);
 
-    function handleActivation() {
-      setActive(true);
+    function handleActivation(e) {
+      if (e.target.value !== 0){
+          setActive(true);
+      }
     }
 
     return (
@@ -38,7 +40,7 @@ const Input = React.forwardRef(
             id={name}
             type={type}
             disabled={disabled}
-            onFocus={handleActivation}
+            onClick={handleActivation}
             onChange={onChange}
             {...props}
             ref={ref}
