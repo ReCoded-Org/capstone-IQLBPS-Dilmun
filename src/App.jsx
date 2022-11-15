@@ -15,7 +15,7 @@ import {
   login,
   logout,
   // selectUser,
-} from './Features/Users/userSlice';
+} from './features/Users/userSlice';
 import { auth , onAuthStateChanged } from './firebase-config';
 import FaqPage from './Pages/FaqPage/FaqPage';
 

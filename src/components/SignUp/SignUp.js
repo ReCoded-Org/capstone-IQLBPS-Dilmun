@@ -5,10 +5,8 @@ import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { signInWithFacebook } from '../../features/user/userSlice';
-import {signUpUsers} from '../../Features/Users/userAuth'
-import { login } from '../../Features/Users/userSlice';
-
+import { signUpUsers } from '../../features/Users/userAuth';
+import { login, signInWithFacebook } from '../../features/Users/userSlice';
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Please insert your First Name'),
@@ -28,10 +26,7 @@ const schema = yup.object().shape({
     .required('Please Confirm Password'),
 });
 
-
-
 function SignUp() {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -43,21 +38,21 @@ function SignUp() {
     resolver: yupResolver(schema),
   });
 
-
   const onSubmit = async (data) => {
-  
-    const result = await signUpUsers(data)
+    const result = await signUpUsers(data);
     dispatch(
       login({
         email: result,
         uid: result,
         firstName: result,
       })
-    )
+    );
     // TODO: Navigate users to the signedin profile page
-    navigate("/")
-  }
-
+    navigate('/');
+  };
+  const handleRedirect = () => {
+    navigate('/');
+  };
 
   return (
     <div

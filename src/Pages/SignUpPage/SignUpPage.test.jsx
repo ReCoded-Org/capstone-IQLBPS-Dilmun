@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { store } from '../../app/store';
 import SignUpPage from './SignUpPage';
 import SignUp from '../../components/SignUp/SignUp';
-import { store } from '../../app/store';
 
 test('Sign In Page Rendered Correctly', () => {
   render(
