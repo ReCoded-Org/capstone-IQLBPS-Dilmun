@@ -10,7 +10,6 @@ import {
   ABOUT_ROUTE,
   SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,
-  LOG_OUT,
   PROFILE,
   PRODUCT_ROUTE,
 } from '../../route';
@@ -163,7 +162,7 @@ function NavBar() {
             <li>
               <NavLink
                 className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
-                to={'/'}
+                to="/"
                 onClick={() => {
                   dispatch(logout());
                 }}

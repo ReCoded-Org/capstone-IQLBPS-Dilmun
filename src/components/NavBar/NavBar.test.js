@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from '../../app/store';
 
 it('render NavBar correctly', () => {
-  const { navbar } = renderer
+  const tree = renderer
     .create(
       <Provider store={store}>
         <Router>
@@ -15,5 +15,6 @@ it('render NavBar correctly', () => {
       </Provider>
     )
     .toJSON();
-  expect(navbar).toMatchSnapshot();
+  //    console.log(tree);
+  expect(tree).toMatchSnapshot();
 });
