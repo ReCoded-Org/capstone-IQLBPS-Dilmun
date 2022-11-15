@@ -4,12 +4,97 @@ exports[`redering divs correctly correctly 1`] = `undefined`;
 
 exports[`redering footer 1`] = `
 <footer
-  className="p-4 bg-background rounded-lg shadow md:flex md:items-center md:justify-between md:p-6"
+  className="p-4 bg-primary shadow md:px-6 md:py-6"
 >
-  <span
-    className="text-sm text-primary sm:text-center "
+  <div
+    className="sm:flex sm:items-center sm:justify-between"
   >
-    © 2022 
+    <a
+      className="flex items-center mb-4 sm:mb-0"
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="Flowbite Logo"
+        className="mr-3 h-10"
+        src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
+      />
+      <span
+        className="self-center text-2xl font-semibold text-background"
+      >
+        Dilmun
+      </span>
+    </a>
+    <ul
+      className="flex flex-wrap items-center mb-6 text-sm text-background sm:mb-0 font-semibold"
+    >
+      <li>
+        <a
+          className="mr-4 hover:underline hover:text-tertiary md:mr-6 "
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          className="mr-4 hover:underline hover:text-tertiary md:mr-6"
+          href="/about"
+          onClick={[Function]}
+        >
+          Meet The Team
+        </a>
+      </li>
+      <li>
+        <a
+          className="mr-4 hover:underline hover:text-tertiary md:mr-6 "
+          href="/faq"
+          onClick={[Function]}
+        >
+          FAQ
+        </a>
+      </li>
+      <li>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="mr-4 hover:text-tertiary h-8 w-5"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <hr
+    className="my-6 border-secondary sm:mx-auto lg:my-8"
+  />
+  <span
+    className="block text-sm text-tertiary sm:text-center"
+  >
+    © 2022
+     
     <a
       className="hover:underline"
       href="/"
@@ -19,36 +104,5 @@ exports[`redering footer 1`] = `
     </a>
     . All Rights Reserved.
   </span>
-  <ul
-    className="flex flex-wrap items-center mt-3 text-sm text-primary sm:mt-0"
-  >
-    <li>
-      <a
-        className="mr-4 hover:underline md:mr-6 "
-        href="/"
-        onClick={[Function]}
-      >
-        Home
-      </a>
-    </li>
-    <li>
-      <a
-        className="mr-4 hover:underline md:mr-6"
-        href="/about"
-        onClick={[Function]}
-      >
-        About
-      </a>
-    </li>
-    <li>
-      <a
-        className="mr-4 hover:underline md:mr-6"
-        href="/faq"
-        onClick={[Function]}
-      >
-        FAQ
-      </a>
-    </li>
-  </ul>
 </footer>
 `;
