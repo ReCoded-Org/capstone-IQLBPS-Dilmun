@@ -1,9 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useDispatch } from 'react-redux';
+import {signUpUsers} from '../../Features/Users/userAuth'
+import { login } from '../../Features/Users/userSlice';
+
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Please insert your First Name'),
@@ -23,7 +27,13 @@ const schema = yup.object().shape({
     .required('Please Confirm Password'),
 });
 
+
+
 function SignUp() {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -32,9 +42,21 @@ function SignUp() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
+
+  const onSubmit = async (data) => {
+  
+    const result = await signUpUsers(data)
+    dispatch(
+      login({
+        email: result,
+        uid: result,
+        firstName: result,
+      })
+    )
+    // TODO: Navigate users to the signedin profile page
+    navigate("/")
+  }
+
 
   return (
     <div className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] h-full flex flex-col justify-center items-center content-center" data-testid='sign-up'>
@@ -99,7 +121,6 @@ function SignUp() {
           <span className="text-primary font-semibold">Confirm Password</span>
           <input
             type="password"
-            name="confirmPassword"
             placeholder="Confirm Password"
             {...register('confirmPassword')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
