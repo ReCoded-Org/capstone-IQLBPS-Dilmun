@@ -1,11 +1,19 @@
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useDispatch } from 'react-redux';
-import { login, signInWithFacebook } from '../../features/Users/userSlice';
-import { signInUsers } from '../../features/Users/userAuth';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  error,
+  resetState,
+  signInWithCredentials,
+  signInWithFacebook,
+  status,
+  user,
+} from '../../features/user/userSlice';
+import { errorTypes } from '../../utils/errorType';
 
 const schema = yup.object().shape({
   email: yup.string().required('Please insert your Email'),
@@ -16,6 +24,12 @@ function SignIn() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const userData = useSelector(user);
+  const userError = useSelector(error);
+  const userStatus = useSelector(status);
+
+  // eslint-disable-next-line no-console
+  console.log(userData, userError, userStatus);
   const {
     register,
     handleSubmit,
@@ -24,21 +38,19 @@ function SignIn() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (data) => {
-    const result = await signInUsers(data);
-    dispatch(
-      login({
-        email: result,
-        uid: result,
-      })
-    );
-    // TODO: Navigate users to the signedin profile page
+  const callback = () => {
     navigate('/');
   };
 
-  const handleRedirect = () => {
-    navigate('/');
+  const onSubmit = (data) => {
+    const { email, password } = data;
+    dispatch(signInWithCredentials({ email, password, callback }));
   };
+
+  useEffect(() => {
+    dispatch(resetState());
+  }, []);
+
   return (
     <div
       className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center"
@@ -79,6 +91,9 @@ function SignIn() {
         >
           Sign In
         </button>
+        {userError && (
+          <p className="w-80 sm:w-96 text-center text-red-800 font-semibold">{errorTypes[userError.code]}</p>
+        )}
         <p className="text-lg text-primary self-center mt-2">
           Do Not Have an Account?
           <Link
@@ -93,7 +108,7 @@ function SignIn() {
           Sign in With
           <button
             type="button"
-            onClick={() => dispatch(signInWithFacebook(handleRedirect))}
+            onClick={() => dispatch(signInWithFacebook(callback))}
           >
             <BsFacebook
               type="icon"
@@ -106,6 +121,10 @@ function SignIn() {
             .
           </button>
         </p>
+
+        {userError && (
+          <p className="text-red-800 font-semibold">{errorTypes[userError]}</p>
+        )}
       </form>
     </div>
   );

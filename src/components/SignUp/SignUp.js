@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useDispatch } from 'react-redux';
-import { signUpUsers } from '../../features/Users/userAuth';
-import { login, signInWithFacebook } from '../../features/Users/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+
+import {
+  error,
+  resetState,
+  signInWithFacebook,
+  signUpWithCredentials,
+  status,
+  user,
+} from '../../features/user/userSlice';
+import { errorTypes } from '../../utils/errorType';
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Please insert your First Name'),
@@ -30,6 +38,13 @@ function SignUp() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const userData = useSelector(user);
+  const userError = useSelector(error);
+  const userStatus = useSelector(status);
+
+  // eslint-disable-next-line no-console
+  console.log(userData, userError, userStatus);
+
   const {
     register,
     handleSubmit,
@@ -37,22 +52,19 @@ function SignUp() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const callback = () => {
+    navigate('/');
+  };
 
   const onSubmit = async (data) => {
-    const result = await signUpUsers(data);
+    const { email, password, firstName, lastName } = data;
     dispatch(
-      login({
-        email: result,
-        uid: result,
-        firstName: result,
-      })
+      signUpWithCredentials({ email, password, firstName, lastName, callback })
     );
-    // TODO: Navigate users to the signedin profile page
-    navigate('/');
   };
-  const handleRedirect = () => {
-    navigate('/');
-  };
+  useEffect(() => {
+    dispatch(resetState());
+  }, []);
 
   return (
     <div
@@ -132,6 +144,11 @@ function SignUp() {
         >
           Sign Up
         </button>
+        {userError && (
+          <p className="w-80 sm:w-96 text-center text-red-800 font-semibold">
+            {errorTypes[userError.code]}
+          </p>
+        )}
         <p className="text-lg text-primary self-center mt-2">
           Already Have an Account?
           <Link
@@ -146,7 +163,7 @@ function SignUp() {
           Sign Up With
           <button
             type="button"
-            onClick={() => dispatch(signInWithFacebook(handleRedirect))}
+            onClick={() => dispatch(signInWithFacebook(callback))}
           >
             <BsFacebook className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             or
