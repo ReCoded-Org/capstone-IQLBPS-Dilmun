@@ -4,93 +4,117 @@ exports[`redering divs correctly correctly 1`] = `undefined`;
 
 exports[`redering footer 1`] = `
 <footer
-  className="p-4 bg-primary shadow md:p-5"
+  className="p-4 bg-background bg-opacity-50 shadow md:p-5 backdrop-blur-md"
 >
   <div
-    className="sm:flex sm:items-center sm:justify-between"
+    className="lg:grid lg:grid-cols-4 gap-4"
   >
     <a
-      className="flex items-center mb-4 sm:mb-0"
+      className="flex lg:flex-row flex-col mb-4 sm:mb-0 col-span-2 lg:justify-start justify-center"
       href="/"
       onClick={[Function]}
     >
       <img
         alt="Flowbite Logo"
-        className="mr-3 h-10"
+        className="mr-3 h-32 w-min lg:self-start self-center"
         src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
       />
       <span
-        className="self-center text-2xl font-semibold text-background"
+        className="self-center text-2xl font-semibold text-secondary"
       >
-        Dilmun
+        Designed to meet your needs.
       </span>
     </a>
-    <ul
-      className="flex flex-wrap items-center mb-6 text-lg text-background sm:mb-0 font-semibold"
+    <div
+      className="col-span-1 flex lg:my-0 my-3 mx-3 lg:justify-start justify-center text-center"
     >
-      <li>
-        <a
-          className="mr-4 hover:underline hover:text-tertiary md:mr-6 "
-          href="/"
-          onClick={[Function]}
+      <ul
+        className="mb-6 text-lg text-primary sm:mb-0 font-base justify-self-center"
+      >
+        <span
+          className="text-2xl font-bold text-primary"
         >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          className="mr-4 hover:underline hover:text-tertiary md:mr-6"
-          href="/about"
-          onClick={[Function]}
-        >
-          Meet The Team
-        </a>
-      </li>
-      <li>
-        <a
-          className="mr-4 hover:underline hover:text-tertiary md:mr-6 "
-          href="/faq"
-          onClick={[Function]}
-        >
-          FAQ
-        </a>
-      </li>
-      <li>
-        <a
-          href="mailto:dilmun.recoded@gmail.com"
-        >
-          <svg
-            className="mr-4 hover:text-tertiary h-8 w-5"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          Quick Links
+        </span>
+        <li>
+          <a
+            className="mr-4 hover:underline hover:text-tertiary duration-200"
+            href="/"
+            onClick={[Function]}
           >
-            <path
-              d="M0 0h24v24H0z"
-              fill="none"
-            />
-            <path
-              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-            />
-          </svg>
-        </a>
-      </li>
-    </ul>
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            className="mr-4 hover:underline hover:text-tertiary duration-200"
+            href="/about"
+            onClick={[Function]}
+          >
+            Meet The Team
+          </a>
+        </li>
+        <li>
+          <a
+            className="mr-4 hover:underline hover:text-tertiary duration-200"
+            href="/faq"
+            onClick={[Function]}
+          >
+            FAQ
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="col-span-1 mx-3 flex lg:justify-start justify-center text-center"
+    >
+      <ul
+        className="mb-6 text-base text-primary sm:mb-0 font-base"
+      >
+        <span
+          className="text-2xl font-bold text-primary"
+        >
+          Conatct Us
+        </span>
+        <li>
+          <a
+            href="mailto:dilmun.recoded@gmail.com"
+          >
+            <svg
+              className=" hover:text-tertiary duration-200 h-8 w-5 inline"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+             
+            dilmun.recoded@gmail.com
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
   <hr
     className="my-4 border-secondary sm:mx-auto lg:my-6"
   />
   <span
-    className="block text-sm text-tertiary sm:text-center"
+    className="block text-sm text-secondary lg:text-start text-center"
   >
     © 2022
      

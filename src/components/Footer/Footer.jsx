@@ -5,54 +5,64 @@ import { MdEmail } from 'react-icons/md';
 import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE } from '../../route';
 
 const Footer = () => {
-
   return (
-    <footer className="p-4 bg-primary shadow md:p-5">
-      <div className="sm:flex sm:items-center sm:justify-between">
-        <Link to={HOME_ROUTE} className="flex items-center mb-4 sm:mb-0">
+    <footer className="p-4 bg-background bg-opacity-50 shadow md:p-5 backdrop-blur-md">
+      <div className="lg:grid lg:grid-cols-4 gap-4">
+        <Link to={HOME_ROUTE}  className="flex lg:flex-row flex-col mb-4 sm:mb-0 col-span-2 lg:justify-start justify-center">
           <img
             src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
-            className="mr-3 h-10"
+            className="mr-3 h-32 w-min lg:self-start self-center"
             alt="Flowbite Logo"
           />
-          <span className="self-center text-2xl font-semibold text-background">
-            Dilmun
+          <span className="self-center text-2xl font-semibold text-secondary">
+          Designed to meet your needs.
           </span>
-        </Link>
-        <ul className="flex flex-wrap items-center mb-6 text-lg text-background sm:mb-0 font-semibold">
-          <li>
-            <Link
-              to={HOME_ROUTE}
-              className="mr-4 hover:underline hover:text-tertiary md:mr-6 "
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={ABOUT_ROUTE}
-              className="mr-4 hover:underline hover:text-tertiary md:mr-6"
-            >
-              Meet The Team
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={FAQ_ROUTE}
-              className="mr-4 hover:underline hover:text-tertiary md:mr-6 "
-            >
-              FAQ
-            </Link>
-          </li>
-          <li>
-            <a href='mailto:dilmun.recoded@gmail.com' >
-                <MdEmail className="mr-4 hover:text-tertiary h-8 w-5" />
-            </a>
-          </li>
-        </ul>
+          </Link>
+        <div className="col-span-1 flex lg:my-0 my-3 mx-3 lg:justify-start justify-center text-center">
+        <ul className="mb-6 text-lg text-primary sm:mb-0 font-base justify-self-center">
+        <span className="text-2xl font-bold text-primary">
+          Quick Links
+        </span>
+            <li>
+              <Link
+                to={HOME_ROUTE}
+                className="mr-4 hover:underline hover:text-tertiary duration-200"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={ABOUT_ROUTE}
+                className="mr-4 hover:underline hover:text-tertiary duration-200"
+              >
+                Meet The Team
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={FAQ_ROUTE}
+                className="mr-4 hover:underline hover:text-tertiary duration-200"
+              >
+                FAQ
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="col-span-1 mx-3 flex lg:justify-start justify-center text-center">
+        <ul className="mb-6 text-base text-primary sm:mb-0 font-base">
+        <span className="text-2xl font-bold text-primary">Conatct Us</span>
+            <li>
+              <a href="mailto:dilmun.recoded@gmail.com">
+                <MdEmail className=" hover:text-tertiary duration-200 h-8 w-5 inline" />{' '}
+                dilmun.recoded@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <hr className="my-4 border-secondary sm:mx-auto lg:my-6" />
-      <span className="block text-sm text-tertiary sm:text-center">
+      <span className="block text-sm text-secondary lg:text-start text-center">
         © 2022{' '}
         <Link to={HOME_ROUTE} className="hover:underline">
           Dilmun™
