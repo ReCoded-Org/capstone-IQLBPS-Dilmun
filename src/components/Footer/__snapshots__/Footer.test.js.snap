@@ -4,7 +4,7 @@ exports[`redering divs correctly correctly 1`] = `undefined`;
 
 exports[`redering footer 1`] = `
 <footer
-  className="p-4 bg-primary shadow md:px-6 md:py-6"
+  className="p-4 bg-primary shadow md:p-5"
 >
   <div
     className="sm:flex sm:items-center sm:justify-between"
@@ -26,7 +26,7 @@ exports[`redering footer 1`] = `
       </span>
     </a>
     <ul
-      className="flex flex-wrap items-center mb-6 text-sm text-background sm:mb-0 font-semibold"
+      className="flex flex-wrap items-center mb-6 text-lg text-background sm:mb-0 font-semibold"
     >
       <li>
         <a
@@ -87,7 +87,7 @@ exports[`redering footer 1`] = `
     </ul>
   </div>
   <hr
-    className="my-6 border-secondary sm:mx-auto lg:my-8"
+    className="my-4 border-secondary sm:mx-auto lg:my-6"
   />
   <span
     className="block text-sm text-tertiary sm:text-center"

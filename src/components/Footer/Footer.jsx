@@ -7,7 +7,7 @@ import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE } from '../../route';
 const Footer = () => {
 
   return (
-    <footer className="p-4 bg-primary shadow md:px-6 md:py-6">
+    <footer className="p-4 bg-primary shadow md:p-5">
       <div className="sm:flex sm:items-center sm:justify-between">
         <Link to={HOME_ROUTE} className="flex items-center mb-4 sm:mb-0">
           <img
@@ -19,7 +19,7 @@ const Footer = () => {
             Dilmun
           </span>
         </Link>
-        <ul className="flex flex-wrap items-center mb-6 text-sm text-background sm:mb-0 font-semibold">
+        <ul className="flex flex-wrap items-center mb-6 text-lg text-background sm:mb-0 font-semibold">
           <li>
             <Link
               to={HOME_ROUTE}
@@ -51,7 +51,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <hr className="my-6 border-secondary sm:mx-auto lg:my-8" />
+      <hr className="my-4 border-secondary sm:mx-auto lg:my-6" />
       <span className="block text-sm text-tertiary sm:text-center">
         © 2022{' '}
         <Link to={HOME_ROUTE} className="hover:underline">
