@@ -4,6 +4,7 @@ import {
   FacebookAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { auth, db } from '../../firebase-config';
@@ -13,6 +14,17 @@ const initialState = {
   status: 'idle',
   error: null,
 };
+
+export const Signout = createAsyncThunk(
+  'user/signout',
+  async (payload, { rejectWithValue }) => {
+    try {
+      return signOut(auth);
+    } catch (error) {
+      return rejectWithValue(JSON.stringify(error));
+    }
+  }
+);
 
 export const signInWithFacebook = createAsyncThunk(
   'user/signInWithFacebook',
@@ -37,6 +49,7 @@ export const signInWithFacebook = createAsyncThunk(
     }
   }
 );
+
 export const signUpWithCredentials = createAsyncThunk(
   'user/signUpWithCredentials',
   async (payload, { rejectWithValue }) => {
@@ -165,6 +178,19 @@ const userSlice = createSlice({
         state.status = 'failed';
         state.error = JSON.parse(payload);
         state.user = {};
+      })
+      .addCase(Signout.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+      })
+      .addCase(Signout.fulfilled, (state) => {
+        state.status = 'succeeded';
+        state.error = null;
+        state.user = {};
+      })
+      .addCase(Signout.rejected, (state, { payload }) => {
+        state.status = 'failed';
+        state.error = JSON.parse(payload);
       });
   },
 });
