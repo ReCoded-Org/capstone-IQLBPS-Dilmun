@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Filter from '../../components/Filter/Filter';
 import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 import Sort from '../../components/Sort/Sort';
+import ItemDetailsPage from '../ItemDetailsPage/ItemDetailsPage';
 
 
 const FilterPage = () => {
@@ -40,6 +41,7 @@ const FilterPage = () => {
         />
         <ItemsDisplay />
       </div>
+      <ItemDetailsPage />
     </main>
   );
 };
