@@ -13,6 +13,7 @@ import FilterPage from './Pages/FilterPage/FilterPage';
 import FaqPage from './Pages/FaqPage/FaqPage';
 import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
+import EditItemModal from './components/ItemEditForm/EditItemModal';
 
 function App() {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ function App() {
         <Route path="/faq" element={<FaqPage />} />
       </Routes>
       <AddItemPage />
+      <EditItemModal />
       <Footer />
     </div>
   );
