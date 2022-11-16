@@ -6,7 +6,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 
-
 import {
   error,
   resetState,
@@ -16,7 +15,6 @@ import {
   user,
 } from '../../features/user/userSlice';
 import { errorTypes } from '../../utils/errorTypes';
-
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Please insert your First Name'),
@@ -39,8 +37,6 @@ const schema = yup.object().shape({
 function SignUp() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = useSelector(selectUser);
-
 
   const userData = useSelector(user);
   const userError = useSelector(error);
@@ -48,7 +44,6 @@ function SignUp() {
 
   // eslint-disable-next-line no-console
   console.log(userData, userError, userStatus);
-
 
   const {
     register,
@@ -68,10 +63,10 @@ function SignUp() {
       signUpWithCredentials({ email, password, firstName, lastName, callback })
     );
   };
+
   useEffect(() => {
     dispatch(resetState());
   }, []);
-
 
   return (
     <div

@@ -77,6 +77,15 @@ exports[`render NavBar correctly 1`] = `
       <li>
         <a
           className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
+          href="/profile"
+          onClick={[Function]}
+        >
+          Profile
+        </a>
+      </li>
+      <li>
+        <a
+          className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/signup"
           onClick={[Function]}
         >
@@ -90,6 +99,16 @@ exports[`render NavBar correctly 1`] = `
           onClick={[Function]}
         >
           SignIn
+        </a>
+      </li>
+      <li>
+        <a
+          aria-current="page"
+          className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300 active"
+          href="/"
+          onClick={[Function]}
+        >
+          LogOut
         </a>
       </li>
       <div
