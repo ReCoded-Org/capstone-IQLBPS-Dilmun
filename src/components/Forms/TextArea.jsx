@@ -1,8 +1,8 @@
 import React from 'react';
 
 const TextArea = React.forwardRef(
-  ({ name, errors, children, onChange, ...props }, ref) => {
-    const [active, setActive] = React.useState(false);
+  ({ name, errors, children, onChange, isActive = false,  ...props }, ref) => {
+    const [active, setActive] = React.useState(isActive);
 
     function handleActivation() {
       setActive(true);
