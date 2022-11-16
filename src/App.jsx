@@ -1,8 +1,7 @@
-import React,{useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch,
-  //  useSelector
-   } from 'react-redux';
+import { useEffect } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import Footer from './components/Footer/Footer';
@@ -11,31 +10,26 @@ import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import HomePage from './Pages/HomePage/HomePage';
 import AddItemPage from './Pages/AddItemPage/AddItemPage';
 import FilterPage from './Pages/FilterPage/FilterPage';
-import {
-  login,
-  logout,
-  // selectUser,
-} from './Features/Users/userSlice';
-import { auth , onAuthStateChanged } from './firebase-config';
 import FaqPage from './Pages/FaqPage/FaqPage';
+import { auth } from './firebase-config';
+import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
+import EditItemModal from './components/ItemEditForm/EditItemModal';
 
 function App() {
-  // TODO: Use this selected user to apply needed conditional rendering
-
-  // const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
+  const userData = useSelector(user)
+  const errorData = useSelector(error)
+  const statusData = useSelector(status)
+  // eslint-disable-next-line no-console
+  console.log(userData, errorData, statusData)
   useEffect(() => {
-    onAuthStateChanged(auth, (userAuth) => {
-      if (userAuth) {
-        dispatch(
-          login({
-            email: userAuth.email,
-            uid: userAuth.uid,
-          })
-        );
+    onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        dispatch(getCurrentSignedInUser(currentUser.uid));
       } else {
-        dispatch(logout());
+        // eslint-disable-next-line no-console
+        console.log('no user');
       }
     });
   }, []);
@@ -51,7 +45,8 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/faq" element={<FaqPage />} />
       </Routes>
-      <AddItemPage/>
+      <AddItemPage />
+      <EditItemModal />
       <Footer />
     </div>
   );
