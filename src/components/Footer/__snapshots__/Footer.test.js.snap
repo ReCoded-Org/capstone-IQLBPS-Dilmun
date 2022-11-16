@@ -20,7 +20,7 @@ exports[`redering footer 1`] = `
         src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
       />
       <span
-        className="self-center text-2xl font-semibold text-secondary"
+        className="self-center text-3xl lg:mb-0 mb-3 font-semibold text-primary"
       >
         Designed to meet your needs.
       </span>

@@ -14,7 +14,7 @@ const Footer = () => {
             className="mr-3 h-32 w-min lg:self-start self-center"
             alt="Flowbite Logo"
           />
-          <span className="self-center text-2xl font-semibold text-secondary">
+          <span className="self-center text-3xl lg:mb-0 mb-3 font-semibold text-primary">
           Designed to meet your needs.
           </span>
           </Link>
