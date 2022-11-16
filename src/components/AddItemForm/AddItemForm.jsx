@@ -3,6 +3,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
+import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
@@ -12,21 +13,6 @@ const schema = yup.object().shape({
   city: yup.string().required('Please insert your City Name.'),
 });
 
-const ITEM_TYPES = ['Crafted', 'Donated', 'New', 'Used'];
-
-const ITEM_CATEGORY = [
-  'Men',
-  'Women',
-  'Kids',
-  'Toys',
-  'Books',
-  'Sports',
-  'Clothes',
-  'Furniture',
-  'Electronics',
-  'Homemade',
-  'Other',
-];
 
 export default function AddItemForm() {
   const {

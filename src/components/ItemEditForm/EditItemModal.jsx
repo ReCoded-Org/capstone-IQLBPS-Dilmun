@@ -5,27 +5,13 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { TbEdit } from 'react-icons/tb';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
+import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 
 const schema = yup.object().shape({
   name: yup.string().required('Cannot stay empty.'),
   desc: yup.string().required('Cannot stay empty.'),
 });
 
-const ITEM_TYPES = ['Crafted', 'Donated', 'New', 'Used'];
-
-const ITEM_CATEGORY = [
-  'Men',
-  'Women',
-  'Kids',
-  'Toys',
-  'Books',
-  'Sports',
-  'Clothes',
-  'Furniture',
-  'Electronics',
-  'Homemade',
-  'Other',
-];
 
 export default function EditItemModal() {
   const {
