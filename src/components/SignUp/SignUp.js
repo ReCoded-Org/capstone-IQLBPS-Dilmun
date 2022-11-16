@@ -52,6 +52,7 @@ function SignUp() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+
   const callback = () => {
     navigate('/');
   };
@@ -62,6 +63,7 @@ function SignUp() {
       signUpWithCredentials({ email, password, firstName, lastName, callback })
     );
   };
+
   useEffect(() => {
     dispatch(resetState());
   }, []);
@@ -72,6 +74,7 @@ function SignUp() {
       data-testid="sign-up"
     >
       <h1 className="text-5xl font-bold mb-10 text-primary pt-9">SIGN UP</h1>
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-center"
