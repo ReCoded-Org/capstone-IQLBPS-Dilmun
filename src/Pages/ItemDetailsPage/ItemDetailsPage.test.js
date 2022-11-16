@@ -1,9 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import ItemDetailsPage from './ItemDetailsPage';
 
 test('ItemDetailsPage Page Rendered Correctly', () => {
-    render(
-        <ItemDetailsPage />
-    );
-    expect(screen.getByTestId('item-details-page')).toMatchSnapshot();
+    const tree = render(<ItemDetailsPage />);
+  expect(tree).toMatchSnapshot();
 });
