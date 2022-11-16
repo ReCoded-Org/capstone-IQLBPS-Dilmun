@@ -53,7 +53,7 @@ const ComboBox = forwardRef((props, ref) => {
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options className="absolute w-80 py-1 mt-1 overflow-auto text-base bg-background text-primary font-medium rounded-md shadow-lg max-h-40 ring-1 ring-primary ring-opacity-5 focus:outline-none sm:text-sm h-52 z-50 left-4 border border-secondary">
+            <Combobox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-background text-primary font-medium rounded-md shadow-lg max-h-40 ring-1 ring-primary ring-opacity-5 focus:outline-none sm:text-sm h-52 z-50 border border-secondary">
               {filteredOptions.length === 0 && query !== '' ? (
                 <div className="cursor-default select-none relative py-2 px-4 text-primary">
                   Nothing found.
