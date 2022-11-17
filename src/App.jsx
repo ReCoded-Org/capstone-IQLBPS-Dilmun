@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
+import _ from 'lodash';
 import NavBar from './components/NavBar/NavBar';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import Footer from './components/Footer/Footer';
@@ -14,6 +15,8 @@ import FaqPage from './Pages/FaqPage/FaqPage';
 import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
+import SignedInUsersHomePage from './Pages/SignedInUsersHomePage/SignedInUsersHomePage';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -38,7 +41,8 @@ function App() {
     <div className="App  ">
       <NavBar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        {!_.isEmpty(userData) ? <Route path='/' element={<SignedInUsersHomePage />} /> : <Route path='/' element={<HomePage />} />}
+        {/* <Route path="/" element={<HomePage/>} /> */}
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/products" element={<FilterPage />} />
