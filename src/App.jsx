@@ -46,7 +46,6 @@ function App() {
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/add-item" element={<AddItemPage />} />
       </Routes>
-      <AddItemPage />
       <EditItemModal />
       <Footer />
     </div>
