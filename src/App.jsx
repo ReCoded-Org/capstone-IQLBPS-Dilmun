@@ -14,6 +14,7 @@ import FaqPage from './Pages/FaqPage/FaqPage';
 import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
+import AnimatedPage from './components/animations/AnimatedPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -37,15 +38,7 @@ function App() {
   return (
     <div className="App  ">
       <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/signin" element={<SignInPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/products" element={<FilterPage />} />
-        <Route path="/about" element={<AboutUsPage />} />
-        <Route path="/faq" element={<FaqPage />} />
-        <Route path="/add-item" element={<AddItemPage />} />
-      </Routes>
+      <AnimatedPage />
       <EditItemModal />
       <Footer />
     </div>
