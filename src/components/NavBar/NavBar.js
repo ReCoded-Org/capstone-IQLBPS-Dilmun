@@ -136,7 +136,7 @@ function NavBar() {
                 }
                 to={SIGN_IN_ROUTE}
               >
-                SignIn
+                Sign In
               </NavLink>
             </li>
           ) : null}
@@ -150,7 +150,7 @@ function NavBar() {
                   dispatch(Signout());
                 }}
               >
-                LogOut
+                Log Out
               </NavLink>
             </li>
           ) : null}

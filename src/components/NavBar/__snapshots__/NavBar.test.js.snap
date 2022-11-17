@@ -72,7 +72,7 @@ exports[`render NavBar correctly 1`] = `
           href="/signin"
           onClick={[Function]}
         >
-          SignIn
+          Sign In
         </a>
       </li>
       <div
