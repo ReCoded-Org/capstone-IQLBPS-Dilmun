@@ -4,7 +4,7 @@ import Filter from '../../components/Filter/Filter';
 import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 import Sort from '../../components/Sort/Sort';
 import ItemDetailsPage from '../ItemDetailsPage/ItemDetailsPage';
-
+import AddItemButton from '../../components/AddItemButton/AddItemButton';
 
 const FilterPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -14,7 +14,6 @@ const FilterPage = () => {
         <h1 className="text-4xl font-bold tracking-tight text-primary">
           New Arrivals
         </h1>
-
         <div className="flex items-center">
           <Sort />
           <button
@@ -40,6 +39,7 @@ const FilterPage = () => {
           setMobileFiltersOpen={setMobileFiltersOpen}
         />
         <ItemsDisplay />
+        <AddItemButton />
       </div>
       <ItemDetailsPage />
     </main>

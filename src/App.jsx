@@ -44,8 +44,8 @@ function App() {
         <Route path="/products" element={<FilterPage />} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/faq" element={<FaqPage />} />
+        <Route path="/add-item" element={<AddItemPage />} />
       </Routes>
-      <AddItemPage />
       <EditItemModal />
       <Footer />
     </div>
