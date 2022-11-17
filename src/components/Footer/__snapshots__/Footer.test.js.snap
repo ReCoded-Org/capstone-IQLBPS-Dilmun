@@ -4,7 +4,7 @@ exports[`redering divs correctly correctly 1`] = `undefined`;
 
 exports[`redering footer 1`] = `
 <footer
-  className="p-4 bg-background bg-opacity-50 shadow md:p-5 backdrop-blur-md"
+  className="p-4 bg-gradient-to-br from-background to-tertiary bg-opacity-75 shadow md:p-5 backdrop-blur-md"
 >
   <div
     className="lg:grid lg:grid-cols-4 gap-4"
@@ -74,7 +74,7 @@ exports[`redering footer 1`] = `
         <span
           className="text-2xl font-bold text-primary"
         >
-          Conatct Us
+          Contact Us
         </span>
         <li>
           <a
