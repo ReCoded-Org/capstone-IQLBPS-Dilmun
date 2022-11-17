@@ -1,8 +1,11 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import AddItemButton from "./AddItemButton.jsx";
+import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
+import AddItemButton from "./AddItemButton";
+
 
 test('Add item button component rendered correctly', () => {
-    render( < AddItemButton / > );
-    expect(screen.getByTestId('add-item-button')).toMatchSnapshot()
+    const component = renderer.create(<BrowserRouter><AddItemButton /></BrowserRouter>);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
 })
