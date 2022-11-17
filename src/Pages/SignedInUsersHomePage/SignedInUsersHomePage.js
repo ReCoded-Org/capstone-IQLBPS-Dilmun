@@ -14,11 +14,11 @@ const SignedInUsersHomePage = () => {
                 <h1 className='text-5xl font-bold'>Hello, {userData.firstName} {userData.lastName}</h1>
                 <div className='text-center text-2xl mt-2'>
                     <span>Can&apos;t see what you need?</span>
-                    <Link className='border border-solid border-secondary p-1 rounded bg-tertiary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={PRODUCT_ROUTE}>Press Here</Link>
+                    <Link className='p-1 rounded bg-tertiary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={PRODUCT_ROUTE}>Press Here</Link>
                 </div>
                 <div className='text-2xl text-center mt-3'>
                     <span>Or add your own item</span>
-                    <Link className='border border-solid border-secondary p-1 rounded bg-tertiary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={ADD_ITEM_ROUTE}>Add Item</Link>
+                    <Link className='p-1 rounded bg-tertiary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={ADD_ITEM_ROUTE}>Add Item</Link>
                 </div>
             </div>
             <div>
