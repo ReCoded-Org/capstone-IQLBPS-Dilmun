@@ -6,7 +6,7 @@ import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE } from '../../route';
 
 const Footer = () => {
   return (
-    <footer className="p-4 bg-gradient-to-br from-background to-tertiary bg-opacity-75 shadow md:p-5 backdrop-blur-md">
+    <footer className="p-4 bg-gradient-to-br from-background via-background to-secondary shadow md:p-5 backdrop-blur-md">
       <div className="lg:grid lg:grid-cols-4 gap-4">
         <Link to={HOME_ROUTE}  className="flex lg:flex-row flex-col mb-4 sm:mb-0 col-span-2 lg:justify-start justify-center">
           <img
