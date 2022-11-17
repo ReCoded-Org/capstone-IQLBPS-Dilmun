@@ -9,7 +9,6 @@ import _ from 'lodash';
 import {
   HOME_ROUTE,
   ABOUT_ROUTE,
-  SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,
   PROFILE,
   PRODUCT_ROUTE,
@@ -77,6 +76,7 @@ function NavBar() {
             </NavLink>
           </li>
           <li>
+          {!_.isEmpty(userData) ? (
             <NavLink
               className={({ isActive }) =>
                 classNames(
@@ -89,7 +89,7 @@ function NavBar() {
               to={PRODUCT_ROUTE}
             >
               Products
-            </NavLink>
+            </NavLink>) : null}
           </li>
           <li>
             <NavLink
@@ -123,25 +123,6 @@ function NavBar() {
               </NavLink>
             </li>
           ) : null}
-
-          {_.isEmpty(userData) ? (
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  classNames(
-                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
-                    isActive
-                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
-                      : ''
-                  )
-                }
-                to={SIGN_UP_ROUTE}
-              >
-                SignUp
-              </NavLink>
-            </li>
-          ) : null}
-
           {_.isEmpty(userData) ? (
             <li>
               <NavLink

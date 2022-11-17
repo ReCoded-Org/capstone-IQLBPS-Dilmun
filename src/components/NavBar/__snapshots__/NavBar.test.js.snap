@@ -56,15 +56,7 @@ exports[`render NavBar correctly 1`] = `
           Home
         </a>
       </li>
-      <li>
-        <a
-          className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
-          href="/products"
-          onClick={[Function]}
-        >
-          Products
-        </a>
-      </li>
+      <li />
       <li>
         <a
           className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
@@ -72,15 +64,6 @@ exports[`render NavBar correctly 1`] = `
           onClick={[Function]}
         >
           About
-        </a>
-      </li>
-      <li>
-        <a
-          className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
-          href="/signup"
-          onClick={[Function]}
-        >
-          SignUp
         </a>
       </li>
       <li>
