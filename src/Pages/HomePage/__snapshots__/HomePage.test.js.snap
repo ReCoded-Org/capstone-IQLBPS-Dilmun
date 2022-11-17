@@ -3,6 +3,7 @@
 exports[`Home Page Rendered Correctly 1`] = `
 <div
   data-testid="home-page"
+  style="width: 0px;"
 >
   <div
     class="backdrop-blur-md bg-white/30 h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
