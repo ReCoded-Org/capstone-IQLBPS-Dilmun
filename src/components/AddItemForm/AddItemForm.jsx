@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useTranslation } from 'react-i18next';
 import * as yup from 'yup';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
@@ -15,6 +16,7 @@ const schema = yup.object().shape({
 
 
 export default function AddItemForm() {
+  const {t} = useTranslation();
   const {
     register,
     handleSubmit,
@@ -38,10 +40,11 @@ export default function AddItemForm() {
         <div className="md:grid md:grid-cols-4 md:gap-6">
           <div className="md:col-span-1">
             <div className="mx-4 py-3">
-              <h3 className="text-2xl font-bold text-primary">Product Info</h3>
+              <h3 className="text-2xl font-bold text-primary">
+                {t('add_item_form:product_info')}
+              </h3>
               <p className="mt-1 text-base text-secondary font-semibold">
-                Your product will be added to the store after filling the
-                required information.
+                {t('add_item_form:note')}
               </p>
             </div>
           </div>
@@ -51,7 +54,7 @@ export default function AddItemForm() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-x-0 md:gap-6 gap-y-6">
                   <div>
                     <p className="block text-sm font-medium text-background">
-                      Item Image
+                      {t('add_item_form:item_image')}
                     </p>
                     <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6">
                       <div className="space-y-1 text-center">
@@ -74,7 +77,7 @@ export default function AddItemForm() {
                             htmlFor="file"
                             className="relative cursor-pointer rounded-md bg-tertiary font-medium text-secondary px-2 focus-within:outline-none focus-within:ring-2 focus-within:ring-backgound focus-within:ring-offset-2 hover:text-primary"
                           >
-                            <span>Upload a file</span>
+                            <span>{t('add_item_form:upload_a_file')}</span>
                             <input
                               id="file"
                               name="file"
@@ -87,7 +90,9 @@ export default function AddItemForm() {
                               className="sr-only"
                             />
                           </label>
-                          <p className="pl-1">or drag and drop</p>
+                          <p className="pl-1">
+                            {t('add_item_form:or_drag_and_drop')}
+                          </p>
                         </div>
                         <p className="text-xs text-tertiary">
                           PNG, JPG, GIF up to 10MB
@@ -103,7 +108,7 @@ export default function AddItemForm() {
                         errors={errors.title ? errors.title : undefined}
                         {...register('title')}
                       >
-                        Item Name
+                        {t('add_item_form:item_name')}
                       </Input>
                     </div>
                     <div>
@@ -114,7 +119,7 @@ export default function AddItemForm() {
                         errors={errors?.price}
                         {...register('price')}
                       >
-                        Price
+                        {t('add_item_form:item_price')}
                       </Input>
                     </div>
                   </div>
@@ -122,7 +127,7 @@ export default function AddItemForm() {
                 <div className="flex justify-between items-center gap-8 w-full flex-col md:flex-row">
                   <div className="w-full">
                     <span className="block text-sm font-medium text-background">
-                      Item Type
+                      {t('add_item_form:item_type')}
                     </span>
                     <ListBox
                       name="type"
@@ -133,7 +138,7 @@ export default function AddItemForm() {
                   </div>
                   <div className="w-full">
                     <span className="block text-sm font-medium text-background">
-                      Item Category
+                      {t('add_item_form:item_category')}
                     </span>
                     <Controller
                       name="category"
@@ -151,7 +156,7 @@ export default function AddItemForm() {
                     errors={errors?.description}
                     {...register('description')}
                   >
-                    Description
+                    {t('add_item_form:item_description')}
                   </TextArea>
                 </div>
                 {/* TODO: render conditionally: if the user has set his address the 1st time he added a product,
@@ -159,26 +164,26 @@ export default function AddItemForm() {
                 however, make those info display into every product he adds */}
                 {address && (
                   <div>
-                  <h1 className="block text-sm font-medium text-background mb-3">
-                    Address Info
-                  </h1>
-                  <Input
-                    name="country"
-                    type="text"
-                    errors={errors.country ? errors.country : undefined}
-                    {...register('country')}
-                  >
-                    Country
-                  </Input>
-                  <Input
-                    name="city"
-                    type="text"
-                    errors={errors.city ? errors.city : undefined}
-                    {...register('city')}
-                  >
-                    City
-                  </Input>
-                </div>
+                    <h1 className="block text-sm font-medium text-background mb-3">
+                      {t('add_item_form:adress_info')}
+                    </h1>
+                    <Input
+                      name="country"
+                      type="text"
+                      errors={errors.country ? errors.country : undefined}
+                      {...register('country')}
+                    >
+                      {t('add_item_form:country')}
+                    </Input>
+                    <Input
+                      name="city"
+                      type="text"
+                      errors={errors.city ? errors.city : undefined}
+                      {...register('city')}
+                    >
+                      {t('add_item_form:city')}
+                    </Input>
+                  </div>
                 )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">

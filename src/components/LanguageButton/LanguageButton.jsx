@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { SiGoogletranslate } from 'react-icons/si';
+import i18next from 'i18next';
 
 import UsFlag from '../../assets/img/us-flag.svg';
 import IraqFlag from '../../assets/img/iraq-flag.svg';
@@ -9,15 +10,12 @@ const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ');
 };
 
-const LanguageButton = ( {closeNavbar}) => {
+const LanguageButton = ({ closeNavbar }) => {
   const handleLanguageChange = (language) => {
-
-
-    localStorage.setItem('language', language);
-       if(closeNavbar){
-       closeNavbar();
-       }
-    
+    i18next.changeLanguage(language);
+    if (closeNavbar) {
+      closeNavbar();
+    }
   };
 
   return (
@@ -79,6 +77,28 @@ const LanguageButton = ( {closeNavbar}) => {
                 >
                   <h3>Arabic</h3>
                   <img className="h-8 w-8" src={IraqFlag} alt="Arabic" />
+                </div>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <div
+                  data-testid="language-button-option"
+                  onClick={() => handleLanguageChange('ku')}
+                  aria-hidden="true"
+                  className={classNames(
+                    active
+                      ? 'bg-background text-secondary rounded-md'
+                      : 'text-background',
+                    'text-sm flex justify-between items-center px-4 cursor-pointer text-background py-1'
+                  )}
+                >
+                  <h3>Kurdish</h3>
+                  <img
+                    className="h-6 w-8"
+                    src="https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Kurdistan.svg"
+                    alt="Kurdish"
+                  />
                 </div>
               )}
             </Menu.Item>

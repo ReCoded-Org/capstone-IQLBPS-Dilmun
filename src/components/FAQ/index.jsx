@@ -1,9 +1,11 @@
 import { Disclosure, Transition } from '@headlessui/react';
 import { useCallback, useRef } from 'react';
+import {useTranslation} from 'react-i18next';
 import data from './faq.json';
 
 function FAQ() {
   const closeRecent = useRef(undefined);
+  const {t} = useTranslation();
 
   // this is stored in useCallback to impede unnecessary rerenders.
   // Calling this function with the close function available from disclosure will return a proper callback
@@ -20,7 +22,7 @@ function FAQ() {
   return (
     <section className="bg-background py-20 mx-auto">
       <h2 className="text-4xl mb-10 text-primary font-bold text-center">
-        Frequently Asked Questions
+        {t('faq:frequently_asked_questions')}
       </h2>
       <div className="max-w-7xl mx-auto px-4 py-10 lg:max-h-100 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center">
         <div className="w-full lg:w-1/2 max-w-lg p-2 ">

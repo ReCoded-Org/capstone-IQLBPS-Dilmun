@@ -13,7 +13,7 @@ const MemberCard = ({ member }) => {
         {member.links.map((link) => {
           return (
             <a key={link.name}
-              className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+              className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
               href={link.url}
             >
               <div className="flex space-x-2 items-center ">
