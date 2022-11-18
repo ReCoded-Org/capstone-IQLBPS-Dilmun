@@ -1,5 +1,6 @@
 import { FunnelIcon, Squares2X2Icon } from '@heroicons/react/20/solid';
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Filter from '../../components/Filter/Filter';
 import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 import Sort from '../../components/Sort/Sort';
@@ -9,7 +10,11 @@ import AddItemButton from '../../components/AddItemButton/AddItemButton';
 const FilterPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   return (
-    <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <motion.main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    initial={{ width: 0 }}
+    animate={{ width: '100%' }}
+    exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+    >
       <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
         <h1 className="text-4xl font-bold tracking-tight text-primary">
           New Arrivals
@@ -42,7 +47,7 @@ const FilterPage = () => {
         <AddItemButton />
       </div>
       <ItemDetailsPage />
-    </main>
+    </motion.main>
   );
 };
 

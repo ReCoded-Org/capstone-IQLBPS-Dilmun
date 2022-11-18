@@ -1,9 +1,16 @@
+import { motion } from 'framer-motion';
 import AddItemForm from '../../components/AddItemForm/AddItemForm';
 
 export default function AddItemPage() {
   return (
-    <div className="mt-24" data-testid='add-item-page'>
+    <motion.div
+      className="mt-24"
+      data-testid="add-item-page"
+      initial={{ width: 0 }}
+      animate={{ width: '100%' }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+    >
       <AddItemForm />
-    </div>
+    </motion.div>
   );
 }
