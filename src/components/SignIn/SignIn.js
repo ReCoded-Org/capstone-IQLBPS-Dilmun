@@ -16,6 +16,7 @@ import {
 } from '../../features/user/userSlice';
 import { errorTypes } from '../../utils/errorTypes';
 
+
 const schema = yup.object().shape({
   email: yup.string().required('Please insert your Email'),
   password: yup.string().required('Please insert your Password'),
@@ -24,7 +25,6 @@ const schema = yup.object().shape({
 function SignIn() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const userData = useSelector(user);
   const userError = useSelector(error);
   const userStatus = useSelector(status);
@@ -39,6 +39,7 @@ function SignIn() {
     resolver: yupResolver(schema),
   });
 
+
   const callback = () => {
     navigate('/');
   };
@@ -46,6 +47,7 @@ function SignIn() {
   const onSubmit = (data) => {
     const { email, password } = data;
     dispatch(signInWithCredentials({ email, password, callback }));
+
   };
 
   useEffect(() => {
@@ -92,16 +94,19 @@ function SignIn() {
         >
           Sign In
         </button>
+
         {userError && (
           <p className="w-80 sm:w-96 text-center text-red-800 font-semibold">
             {errorTypes[userError.code]}
           </p>
         )}
+
         <p className="text-lg text-primary self-center mt-2">
           Do Not Have an Account?
           <Link
             to="/signup"
             className="underline hover:text-secondary duration-300"
+
           >
             Sign Up
           </Link>
@@ -113,6 +118,7 @@ function SignIn() {
             type="button"
             onClick={() => dispatch(signInWithFacebook(callback))}
           >
+
             <BsFacebook
               type="icon"
               className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200"
@@ -126,9 +132,11 @@ function SignIn() {
           </button>
         </p>
 
+
         {userError && (
           <p className="text-red-800 font-semibold">{errorTypes[userError]}</p>
         )}
+
       </form>
     </div>
   );

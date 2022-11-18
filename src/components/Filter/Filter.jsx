@@ -112,6 +112,8 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
                             htmlFor={`filter-${section.id}-${optionIdx}`}
                             className="ml-3 text-sm text-primary select-none"
                           >
+
+                          
                             {option.label}
                           </label>
                         </div>
