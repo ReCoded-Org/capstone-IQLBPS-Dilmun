@@ -4,6 +4,11 @@ exports[`FAQ renders correctly 1`] = `
 <div
   className="bg-background pt-40 py-20"
   data-testid="FAQ-page"
+  style={
+    Object {
+      "width": "0px",
+    }
+  }
 >
   <section
     className="bg-background py-20 mx-auto"
