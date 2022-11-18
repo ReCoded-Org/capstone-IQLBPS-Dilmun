@@ -2,18 +2,36 @@
 
 exports[`SignedInUsersHomePage renders without crashing 1`] = `
 <div
-  class="bg-background text-primary flex flex-col p-4 items-center justify-between"
+  class="bg-background text-primary flex flex-col items-center justify-between"
   data-testid="SignedInUseresHomePage"
 >
   <div
-    class="mb-3 md:mb-0 border-b border-secondary pb-2 md:pb-6 w-full"
+    class=" bg-home-page-for-signed-in-users bg-cover w-full min-h-[30vh] md:min-h-[60vh] text-background p-5"
   >
-    <h1
-      class="text-2xl md:text-5xl font-bold text-center"
+    <div
+      class=" mb-3 md:mb-0 pt-5 md:pt-14 md:pb-6 w-full"
     >
-      Hello, 
-       
-    </h1>
+      <h1
+        class="text-2xl md:text-5xl font-bold text-center"
+      >
+        Welcome back, 
+      </h1>
+      <h1
+        class="text-2xl md:text-5xl font-bold text-center"
+      >
+         
+         
+      </h1>
+      <h3
+        class="text-l md:text-2xl font-semi-bold text-center"
+      >
+         Dilmun is your best choice to buy or sell anything
+      </h3>
+    </div>
+  </div>
+  <div
+    class=" mb-3 md:mb-0 border-b border-secondary pb-2 md:pb-6 w-full"
+  >
     <div
       class="text-center md:text-2xl mt-2"
     >
