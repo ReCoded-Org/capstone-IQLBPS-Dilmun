@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
-import Cookies from 'js-cookie';
+
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
@@ -13,20 +13,17 @@ import {
 } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
-import languages from './components/LanguageButton/LanguageConstant';
+import { language } from './features/language/languageSlice';
 
 function App() {
   const dispatch = useDispatch();
 
-  const currentLanguageCode = Cookies.get('i18next') || 'en';
-  const currentLanguage = languages.find(
-    (language) => language.code === currentLanguageCode
-  );
+  const currentLanguage = useSelector(language);
   const userData = useSelector(user);
   const errorData = useSelector(error);
   const statusData = useSelector(status);
   // eslint-disable-next-line no-console
-  console.log(userData, errorData, statusData);
+  console.log(userData, errorData, statusData, currentLanguage);
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {

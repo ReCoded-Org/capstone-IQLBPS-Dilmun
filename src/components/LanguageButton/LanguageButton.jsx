@@ -1,19 +1,41 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { SiGoogletranslate } from 'react-icons/si';
+import { useDispatch } from 'react-redux';
 import i18next from 'i18next';
-import languages from './LanguageConstant';
-
-
+import UsFlag from '../../assets/img/us-flag.svg';
+import IraqFlag from '../../assets/img/iraq-flag.svg';
+import { setLanguage } from '../../features/language/languageSlice';
 
 const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ');
 };
 
 const LanguageButton = ({ closeNavbar }) => {
- 
+  const dispatch = useDispatch();
+  const languages = [
+    {
+      name: 'English',
+      code: 'en',
+      flag: UsFlag,
+      direction: 'ltr',
+    },
+    {
+      name: 'العربية',
+      code: 'ar',
+      flag: IraqFlag,
+      direction: 'rtl',
+    },
+    {
+      name: 'کوردی',
+      code: 'ku',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Kurdistan.svg',
+      direction: 'rtl',
+    },
+  ];
   const handleLanguageChange = (language) => {
-    i18next.changeLanguage(language);
+    i18next.changeLanguage(language.code);
+    dispatch(setLanguage(language));
     if (closeNavbar) {
       closeNavbar();
     }
@@ -50,7 +72,7 @@ const LanguageButton = ({ closeNavbar }) => {
                 {({ active }) => (
                   <div
                     data-testid="language-button-option"
-                    onClick={() => handleLanguageChange(language.code)}
+                    onClick={() => handleLanguageChange(language)}
                     aria-hidden="true"
                     className={classNames(
                       active
@@ -60,7 +82,11 @@ const LanguageButton = ({ closeNavbar }) => {
                     )}
                   >
                     <h3>{language.name}</h3>
-                    <img className="h-8 w-8" src={language.flag} alt={language.name} />
+                    <img
+                      className="h-8 w-8"
+                      src={language.flag}
+                      alt={language.name}
+                    />
                   </div>
                 )}
               </Menu.Item>
