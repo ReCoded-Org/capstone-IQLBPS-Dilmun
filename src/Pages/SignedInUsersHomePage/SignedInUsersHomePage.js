@@ -24,7 +24,7 @@ const SignedInUsersHomePage = () => {
             <div>
                 <h1 className='text-2xl md:text-3xl font-bold'>Some of our products</h1>
                 <div className='flex flex-col md:grid grid-cols-3 gap-6 mt-2'>
-                    <ItemCard imgSrc="https://placeimg.com/300/300/any" />
+                    <ItemCard imgSrc="https://placeimg.com/300/300/architecture" />
                     <ItemCard imgSrc="https://placeimg.com/300/300/animals" />
                     <ItemCard imgSrc="https://placeimg.com/300/300/architecture" />
                 </div>
