@@ -1,3 +1,4 @@
+import { useDispatch as useReduxDispatch, useSelector as useReduxSelector } from 'react-redux';
 
 import {
   configureStore
@@ -5,9 +6,15 @@ import {
 import userReducer from '../features/user/userSlice';
 import itemReducer from '../features/slices/item'
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     user: userReducer,
     item: itemReducer
   },
 });
+
+const { dispatch } = store;
+const useSelector = useReduxSelector;
+const useDispatch = () => useReduxDispatch();
+
+export { store, dispatch, useDispatch, useSelector };

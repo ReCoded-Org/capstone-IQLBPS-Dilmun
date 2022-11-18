@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../firebase-config';
+import { dispatch } from "../../app/store";
 
 const initialState = {
     isLoading: false,
@@ -9,42 +10,6 @@ const initialState = {
     item: {},
     itemList: []
 };
-
-export const addItem = createAsyncThunk(
-    'item/addItem',
-    async (payload, { rejectWithValue }) => {
-        try {
-            // add item to users collection as subcolletion of user after adding item to item collection
-            // add item to item collection
-            // return item
-            const docRef = doc(db, 'Items', payload.id);
-            const docSnap = await getDoc(docRef);
-
-            if (!docSnap.exists()) {
-                await setDoc(docRef, {
-                    name: payload.name,
-                    price: payload.price,
-                    description: payload.description,
-                    image: payload.image,
-                    category: payload.category,
-                    quantity: payload.quantity,
-                    seller: payload.seller,
-                    sellerId: payload.sellerId,
-                    sellerEmail: payload.sellerEmail,
-                    sellerPhone: payload.sellerPhone,
-                    sellerAddress: payload.sellerAddress,
-                    sellerCity: payload.sellerCity,
-                    sellerCountry: payload.sellerCountry,
-                    sellerImage: payload.sellerImage
-                });
-            }
-            return JSON.stringify(payload);
-        } catch (error) {
-            return rejectWithValue(JSON.stringify(error));
-        }
-    }
-);
-
 
 const itemSlice = createSlice({
     name: 'item',
@@ -65,7 +30,7 @@ const itemSlice = createSlice({
             state.isLoading = false;
         },
 
-        addItem: (state, action) => {
+        getItemSuccess: (state, action) => {
             state.item = action.payload;
             state.isLoading = false;
         },
@@ -94,4 +59,36 @@ const itemSlice = createSlice({
 export default itemSlice.reducer;
 
 // Actions
-export const { resetState, startLoading, HasError } = itemSlice.actions;
+
+// ADD ITEM to DB and to state (itemList) 
+export const addItem = createAsyncThunk(
+    'item/addItem',
+    async (payload, { rejectWithValue }) => {
+        try {
+            dispatch(itemSlice.actions.startLoading());
+            // add item to users collection as subcolletion of user after adding item to item collection
+
+            // add item to item collection
+            // return item
+            const { item, user } = payload;
+            const docRef = await addDoc(collection(db, "Items"), {
+                // name: item.name,
+                title: item.title,
+                description: item.description,
+                price: item.price,
+                category: item.category,
+                // image: item.image,
+                seller: user,
+                createdAt: new Date(),
+                updatedAt: new Date(),
+            });
+            dispatch(itemSlice.actions.getItemSuccess(payload));
+            console.log("Document written with ID: ", docRef.id);
+            return JSON.stringify({ ...payload, id: docRef.id });
+            // return docRef.id;
+        } catch (error) {
+            dispatch(itemSlice.actions.HasError(error));
+            return rejectWithValue(error);
+        }
+    }
+);

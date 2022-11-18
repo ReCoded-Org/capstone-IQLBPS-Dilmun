@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
+// redux
+import { useSelector, useDispatch } from '../../app/store';
+import { addItem } from '../../features/slices/item';
 
+// Validation schema
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
   price: yup.number().positive('Please insert a positive number.'),
@@ -13,8 +17,16 @@ const schema = yup.object().shape({
   city: yup.string().required('Please insert your City Name.'),
 });
 
-
 export default function AddItemForm() {
+  const dispatch = useDispatch();
+  const { item, isLoading, error } = useSelector((state) => state.item);
+  const { user } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    console.log('user', user);
+    console.log('item', item, error, isLoading);
+  }, [user, item]);
+
   const {
     register,
     handleSubmit,
@@ -25,11 +37,13 @@ export default function AddItemForm() {
     resolver: yupResolver(schema),
   });
 
-  const [address, setAddress] = useState(true)
+  const [address, setAddress] = useState(true);
 
-  const onSubmit = () => {
+  const onSubmit = (values) => {
     setAddress(false);
-    getValues(['country', 'city'])
+    getValues(['country', 'city']);
+    console.log('values', values);
+    dispatch(addItem({ item: values, user }));
   };
 
   return (
@@ -159,26 +173,26 @@ export default function AddItemForm() {
                 however, make those info display into every product he adds */}
                 {address && (
                   <div>
-                  <h1 className="block text-sm font-medium text-background mb-3">
-                    Address Info
-                  </h1>
-                  <Input
-                    name="country"
-                    type="text"
-                    errors={errors.country ? errors.country : undefined}
-                    {...register('country')}
-                  >
-                    Country
-                  </Input>
-                  <Input
-                    name="city"
-                    type="text"
-                    errors={errors.city ? errors.city : undefined}
-                    {...register('city')}
-                  >
-                    City
-                  </Input>
-                </div>
+                    <h1 className="block text-sm font-medium text-background mb-3">
+                      Address Info
+                    </h1>
+                    <Input
+                      name="country"
+                      type="text"
+                      errors={errors.country ? errors.country : undefined}
+                      {...register('country')}
+                    >
+                      Country
+                    </Input>
+                    <Input
+                      name="city"
+                      type="text"
+                      errors={errors.city ? errors.city : undefined}
+                      {...register('city')}
+                    >
+                      City
+                    </Input>
+                  </div>
                 )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
