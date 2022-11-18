@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import DiffSection from '../../components/DiffSection/DiffSection';
 import FAQ from '../../components/FAQ';
 import Features from '../../components/Features/Features';
@@ -9,7 +10,11 @@ import Testimonials from '../../components/Proof/Testimonials';
 
 const HomePage = () => {
   return (
-    <div data-testid="home-page">
+    <motion.div data-testid="home-page"
+    initial={{ width: 0 }}
+    animate={{ width: '100%' }}
+    exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+    >
       <Hero />
       <DiffSection />
       <section className="min-h-screen bg-background sna">
@@ -19,7 +24,7 @@ const HomePage = () => {
       <Features />
       <FAQ />
       <NewsLetter />
-    </div>
+    </motion.div>
   );
 };
 export default HomePage;
