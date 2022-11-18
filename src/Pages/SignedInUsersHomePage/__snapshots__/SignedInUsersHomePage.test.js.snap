@@ -28,7 +28,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
          Dilmun is your best choice to buy or sell anything
       </h3>
       <div
-        class="text-center md:text-2xl m-4"
+        class="flex flex-row flex-wrap gap-4 justify-center  md:text-2xl m-4"
       >
         <a
           class="px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300"
@@ -45,7 +45,9 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
       </div>
     </div>
   </div>
-  <div>
+  <div
+    class="mx-4 lg:mx-0"
+  >
     <h1
       class="text-2xl md:text-3xl font-bold mt-2 mb-2"
     >
