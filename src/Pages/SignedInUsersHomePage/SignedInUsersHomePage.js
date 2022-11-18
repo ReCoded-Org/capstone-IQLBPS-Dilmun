@@ -21,16 +21,6 @@ const SignedInUsersHomePage = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className=' mb-3 md:mb-0 border-b border-secondary pb-2 md:pb-6 w-full'>
-                    <div className='text-center md:text-2xl mt-2'>
-                        <span>Can&apos;t see what you need?</span>
-                        <Link className='p-1 rounded bg-tertiary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={PRODUCT_ROUTE}>Press Here</Link>
-                    </div>
-                    <div className='md:text-2xl text-center mt-3'>
-                        <span>Or add your own item</span>
-                        <Link className='p-1 rounded bg-tertiary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={ADD_ITEM_ROUTE}>Add Item</Link>
-                    </div>
-            </div> */}
             <div>
                 <h1 className='text-2xl md:text-3xl font-bold mt-2 mb-2'>Some of our products</h1>
                 <div className='flex flex-col md:grid grid-cols-3 gap-6 mt-2'>
