@@ -4,6 +4,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
+import Alert from './components/alert/Alert';
 import Footer from './components/Footer/Footer';
 import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
@@ -47,6 +48,7 @@ function App() {
         <Route path="/add-item" element={<AddItemPage />} />
       </Routes>
       <EditItemModal />
+      <Alert color='bg-red-500'>Alert</Alert>
       <Footer />
     </div>
   );
