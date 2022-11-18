@@ -9,7 +9,7 @@ import ItemCard from './ItemCard'
 const SignedInUsersHomePage = () => {
     const userData = useSelector(user)
     return (
-        <div className='lg:h-screen bg-background text-primary flex flex-col p-4 items-center justify-between'>
+        <div className='bg-background text-primary flex flex-col p-4 items-center justify-between'>
             <div className='mb-3 md:mb-0 border-b border-secondary pb-2 md:pb-6 w-full'>
                 <h1 className='text-2xl md:text-5xl font-bold text-center'>Hello, {userData.firstName} {userData.lastName}</h1>
                 <div className='text-center md:text-2xl mt-2'>
