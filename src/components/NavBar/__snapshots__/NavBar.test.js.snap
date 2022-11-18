@@ -41,7 +41,8 @@ exports[`render NavBar correctly 1`] = `
     >
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+          aria-current="page"
+          class="md:ml-6 text-xl md:my-0 hover:text-secondary duration-300 bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md"
           href="/"
         >
           Home
@@ -49,7 +50,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/products"
         >
           Products
@@ -57,7 +58,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/about"
         >
           About
@@ -65,7 +66,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/profile"
         >
           Profile
@@ -73,7 +74,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/signup"
         >
           SignUp
@@ -81,7 +82,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/signin"
         >
           SignIn
@@ -89,7 +90,7 @@ exports[`render NavBar correctly 1`] = `
       </li>
       <li>
         <a
-          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+          class="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
           href="/logout"
         >
           LogOut
