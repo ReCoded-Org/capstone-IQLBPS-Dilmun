@@ -9,7 +9,7 @@ import ItemCard from './ItemCard'
 const SignedInUsersHomePage = () => {
     const userData = useSelector(user)
     return (
-        <div className='bg-background text-primary flex flex-col p-4 items-center justify-between'>
+        <div data-testid='SignedInUseresHomePage' className='bg-background text-primary flex flex-col p-4 items-center justify-between'>
             <div className='mb-3 md:mb-0 border-b border-secondary pb-2 md:pb-6 w-full'>
                 <h1 className='text-2xl md:text-5xl font-bold text-center'>Hello, {userData.firstName} {userData.lastName}</h1>
                 <div className='text-center md:text-2xl mt-2'>
@@ -22,7 +22,7 @@ const SignedInUsersHomePage = () => {
                 </div>
             </div>
             <div>
-                <h1 className='text-2xl md:text-3xl font-bold'>Some of our products</h1>
+                <h1 className='text-2xl md:text-3xl font-bold mt-2 mb-2'>Some of our products</h1>
                 <div className='flex flex-col md:grid grid-cols-3 gap-6 mt-2'>
                     <ItemCard imgSrc="https://placeimg.com/300/300/architecture" />
                     <ItemCard imgSrc="https://placeimg.com/300/300/animals" />
