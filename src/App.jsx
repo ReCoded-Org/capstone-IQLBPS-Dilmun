@@ -1,21 +1,32 @@
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
+import Cookies from 'js-cookie';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
-import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
+import {
+  error,
+  getCurrentSignedInUser,
+  status,
+  user,
+} from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
+import languages from './components/LanguageButton/LanguageConstant';
 
 function App() {
   const dispatch = useDispatch();
 
-  const userData = useSelector(user)
-  const errorData = useSelector(error)
-  const statusData = useSelector(status)
+  const currentLanguageCode = Cookies.get('i18next') || 'en';
+  const currentLanguage = languages.find(
+    (language) => language.code === currentLanguageCode
+  );
+  const userData = useSelector(user);
+  const errorData = useSelector(error);
+  const statusData = useSelector(status);
   // eslint-disable-next-line no-console
-  console.log(userData, errorData, statusData)
+  console.log(userData, errorData, statusData);
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -26,6 +37,10 @@ function App() {
       }
     });
   }, []);
+
+  useEffect(() => {
+    document.body.dir = currentLanguage.direction;
+  }, [currentLanguage]);
 
   return (
     <div className="App  ">

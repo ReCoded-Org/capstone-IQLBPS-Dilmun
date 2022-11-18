@@ -61,7 +61,7 @@ export default function EditItemModal() {
           onClick={openModal}
           className="rounded-md bg-primary bg-opacity-20 px-4 py-2 text-sm font-medium text-primary hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
-          {t('edit_item_form:edit_item')}
+          {t('edit_item_form.edit_item')}
           <TbEdit className="text-primary w-4 h-6 inline" />
         </button>
       </div>
@@ -102,19 +102,18 @@ export default function EditItemModal() {
                 >
                   <div className="flex justify-end text-2xl font-bold text-background my-1.5">
                     <button type="button" onClick={closeModal}>
-                      {' '}
-                      <GiCancel />{' '}
+                      <GiCancel />
                     </button>
                   </div>
                   <Dialog.Title
                     as="h3"
                     className="flex flex-col justify-start text-2xl font-bold text-background mb-3"
                   >
-                    {t('edit_item_form:edit_item_info')}
+                    {t('edit_item_form.edit_item_info')}
                   </Dialog.Title>
                   <Dialog.Description>
                     <span className="block text-sm font-medium text-background">
-                      {t('edit_item_form:edit_item_image')}
+                      {t('edit_item_form.edit_item_image')}
                     </span>
                     <figure className="flex relative w-fit transition-all duration-300 cursor-pointer filter border-2 rounded-md border-dashed my-3  border-tertiary">
                       <img
@@ -139,7 +138,7 @@ export default function EditItemModal() {
                       {...register('name', { value: 'hi' })}
                       errors={errors.name ? errors.name : undefined}
                     >
-                      {t('edit_item_form:edit_item_name')}
+                      {t('edit_item_form.edit_item_name')}
                     </Input>
                     <input
                       disabled
@@ -150,7 +149,7 @@ export default function EditItemModal() {
                     <div className="flex justify-between items-center gap-8 w-full flex-col md:flex-row">
                       <div className="w-full">
                         <span className="block text-sm font-medium text-background">
-                          {t('edit_item_form:edit_item_type')}
+                          {t('edit_item_form.edit_item_type')}
                         </span>
                         <ListBox
                           name="type"
@@ -162,7 +161,7 @@ export default function EditItemModal() {
                       </div>
                       <div className="w-full">
                         <span className="block text-sm font-medium text-background">
-                          {t('edit_item_form:edit_item_category')}
+                          {t('edit_item_form.edit_item_category')}
                         </span>
                         <Controller
                           name="category"
@@ -185,7 +184,7 @@ export default function EditItemModal() {
                         {...register('desc')}
                         errors={errors?.desc}
                       >
-                        {t('edit_item_form:edit_item_description')}
+                        {t('edit_item_form.edit_item_description')}
                       </TextArea>
                     </div>
                   </Dialog.Description>
@@ -196,7 +195,7 @@ export default function EditItemModal() {
                       className="ml-2 inline-flex justify-center rounded-md border border-transparent bg-background px-4 py-2 text-sm font-medium text-primary hover:bg-tertiary focus:outline-none focus-visible:ring-2 focus-visible:ring-tertiary focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
-                      {t('edit_item_form:cancel')}
+                      {t('edit_item_form.cancel')}
                     </button>
                   </div>
                 </Dialog.Panel>

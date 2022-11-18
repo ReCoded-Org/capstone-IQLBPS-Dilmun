@@ -18,34 +18,34 @@ const Features = () => {
             data-testid="features-title"
             className="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
           >
-            {t('features:designed_to_meet_your_needs')}
+            {t('features.designed_to_meet_your_needs')}
           </h2>
           <p
             data-testid="features-paragraph"
             className="text-background sm:text-xl dark:text-gray-400"
           >
-            {t('features:description')}
+            {t('features.description')}
           </p>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
           <FeatureCard
             data-testid="feature-card"
             icon={<FiFilter />}
-            title={t('features:feature_one_title')}
-            description={t('features:feature_one_description')}
+            title={t('features.feature_one_title')}
+            description={t('features.feature_one_description')}
           />
           <FeatureCard
             data-testid="feature-card"
             icon={<GrLanguage />}
-            title={t('features:feature_two_title')}
-            description={t('features:feature_two_description')}
+            title={t('features.feature_two_title')}
+            description={t('features.feature_two_description')}
           />
           <FeatureCard
             customClass="git col-span-2 lg:col-span-1"
             data-testid="feature-card"
             icon={<SiGotomeeting />}
-            title={t('features:feature_three_title')}
-            description={t('features:feature_three_description')}
+            title={t('features.feature_three_title')}
+            description={t('features.feature_three_description')}
           />
         </div>
       </div>

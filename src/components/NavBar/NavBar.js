@@ -6,6 +6,7 @@ import { twMerge } from 'tailwind-merge';
 
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
+import { useTranslation } from 'react-i18next';
 import {
   HOME_ROUTE,
   ABOUT_ROUTE,
@@ -21,6 +22,7 @@ const classNames = (...classes) => {
 };
 
 function NavBar() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const dispatch = useDispatch();
@@ -72,24 +74,25 @@ function NavBar() {
               }
               to={HOME_ROUTE}
             >
-              Home
+              {t('navbar.home')}
             </NavLink>
           </li>
           <li>
-          {!_.isEmpty(userData) ? (
-            <NavLink
-              className={({ isActive }) =>
-                classNames(
-                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
-                  isActive
-                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
-                    : ''
-                )
-              }
-              to={PRODUCT_ROUTE}
-            >
-              Products
-            </NavLink>) : null}
+            {!_.isEmpty(userData) ? (
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    isActive
+                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      : ''
+                  )
+                }
+                to={PRODUCT_ROUTE}
+              >
+                {t('navbar.products')}
+              </NavLink>
+            ) : null}
           </li>
           <li>
             <NavLink
@@ -103,7 +106,7 @@ function NavBar() {
               }
               to={ABOUT_ROUTE}
             >
-              About
+              {t('navbar.about')}
             </NavLink>
           </li>
           {!_.isEmpty(userData) ? (
@@ -119,7 +122,7 @@ function NavBar() {
                 }
                 to={PROFILE}
               >
-                Profile
+                {t('navbar.profile')}
               </NavLink>
             </li>
           ) : null}
@@ -136,7 +139,7 @@ function NavBar() {
                 }
                 to={SIGN_IN_ROUTE}
               >
-                Sign In
+                {t('navbar.sign_in')}
               </NavLink>
             </li>
           ) : null}
@@ -150,7 +153,7 @@ function NavBar() {
                   dispatch(Signout());
                 }}
               >
-                Log Out
+                {t('navbar.log_out')}
               </NavLink>
             </li>
           ) : null}

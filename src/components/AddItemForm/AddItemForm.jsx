@@ -14,9 +14,8 @@ const schema = yup.object().shape({
   city: yup.string().required('Please insert your City Name.'),
 });
 
-
 export default function AddItemForm() {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -27,11 +26,11 @@ export default function AddItemForm() {
     resolver: yupResolver(schema),
   });
 
-  const [address, setAddress] = useState(true)
+  const [address, setAddress] = useState(true);
 
   const onSubmit = () => {
     setAddress(false);
-    getValues(['country', 'city'])
+    getValues(['country', 'city']);
   };
 
   return (
@@ -41,10 +40,10 @@ export default function AddItemForm() {
           <div className="md:col-span-1">
             <div className="mx-4 py-3">
               <h3 className="text-2xl font-bold text-primary">
-                {t('add_item_form:product_info')}
+                {t('add_item_form.product_info')}
               </h3>
               <p className="mt-1 text-base text-secondary font-semibold">
-                {t('add_item_form:note')}
+                {t('add_item_form.note')}
               </p>
             </div>
           </div>
@@ -54,7 +53,7 @@ export default function AddItemForm() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-x-0 md:gap-6 gap-y-6">
                   <div>
                     <p className="block text-sm font-medium text-background">
-                      {t('add_item_form:item_image')}
+                      {t('add_item_form.item_image')}
                     </p>
                     <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6">
                       <div className="space-y-1 text-center">
@@ -77,7 +76,7 @@ export default function AddItemForm() {
                             htmlFor="file"
                             className="relative cursor-pointer rounded-md bg-tertiary font-medium text-secondary px-2 focus-within:outline-none focus-within:ring-2 focus-within:ring-backgound focus-within:ring-offset-2 hover:text-primary"
                           >
-                            <span>{t('add_item_form:upload_a_file')}</span>
+                            <span>{t('add_item_form.upload_a_file')}</span>
                             <input
                               id="file"
                               name="file"
@@ -91,7 +90,7 @@ export default function AddItemForm() {
                             />
                           </label>
                           <p className="pl-1">
-                            {t('add_item_form:or_drag_and_drop')}
+                            {t('add_item_form.or_drag_and_drop')}
                           </p>
                         </div>
                         <p className="text-xs text-tertiary">
@@ -108,7 +107,7 @@ export default function AddItemForm() {
                         errors={errors.title ? errors.title : undefined}
                         {...register('title')}
                       >
-                        {t('add_item_form:item_name')}
+                        {t('add_item_form.item_name')}
                       </Input>
                     </div>
                     <div>
@@ -119,7 +118,7 @@ export default function AddItemForm() {
                         errors={errors?.price}
                         {...register('price')}
                       >
-                        {t('add_item_form:item_price')}
+                        {t('add_item_form.item_price')}
                       </Input>
                     </div>
                   </div>
@@ -127,7 +126,7 @@ export default function AddItemForm() {
                 <div className="flex justify-between items-center gap-8 w-full flex-col md:flex-row">
                   <div className="w-full">
                     <span className="block text-sm font-medium text-background">
-                      {t('add_item_form:item_type')}
+                      {t('add_item_form.item_type')}
                     </span>
                     <ListBox
                       name="type"
@@ -138,7 +137,7 @@ export default function AddItemForm() {
                   </div>
                   <div className="w-full">
                     <span className="block text-sm font-medium text-background">
-                      {t('add_item_form:item_category')}
+                      {t('add_item_form.item_category')}
                     </span>
                     <Controller
                       name="category"
@@ -156,7 +155,7 @@ export default function AddItemForm() {
                     errors={errors?.description}
                     {...register('description')}
                   >
-                    {t('add_item_form:item_description')}
+                    {t('add_item_form.item_description')}
                   </TextArea>
                 </div>
                 {/* TODO: render conditionally: if the user has set his address the 1st time he added a product,
@@ -165,7 +164,7 @@ export default function AddItemForm() {
                 {address && (
                   <div>
                     <h1 className="block text-sm font-medium text-background mb-3">
-                      {t('add_item_form:adress_info')}
+                      {t('add_item_form.adress_info')}
                     </h1>
                     <Input
                       name="country"
@@ -173,7 +172,7 @@ export default function AddItemForm() {
                       errors={errors.country ? errors.country : undefined}
                       {...register('country')}
                     >
-                      {t('add_item_form:country')}
+                      {t('add_item_form.country')}
                     </Input>
                     <Input
                       name="city"
@@ -181,13 +180,13 @@ export default function AddItemForm() {
                       errors={errors.city ? errors.city : undefined}
                       {...register('city')}
                     >
-                      {t('add_item_form:city')}
+                      {t('add_item_form.city')}
                     </Input>
                   </div>
                 )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                <SubmitButton buttonText="Add New Item" />
+                <SubmitButton buttonText={t('add_item_form.add_new_item')} />
               </div>
             </div>
           </div>

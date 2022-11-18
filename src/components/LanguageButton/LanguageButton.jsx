@@ -2,15 +2,16 @@ import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { SiGoogletranslate } from 'react-icons/si';
 import i18next from 'i18next';
+import languages from './LanguageConstant';
 
-import UsFlag from '../../assets/img/us-flag.svg';
-import IraqFlag from '../../assets/img/iraq-flag.svg';
+
 
 const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ');
 };
 
 const LanguageButton = ({ closeNavbar }) => {
+ 
   const handleLanguageChange = (language) => {
     i18next.changeLanguage(language);
     if (closeNavbar) {
@@ -44,64 +45,26 @@ const LanguageButton = ({ closeNavbar }) => {
       >
         <Menu.Items className="absolute -right-24 md:right-0 z-10 mt-2 w-56 origin-center md:origin-top-right rounded-md bg-primary shadow-lg ring-1 ring-white ring-opacity-5 focus:outline-none">
           <div>
-            <Menu.Item>
-              {({ active }) => (
-                <div
-                  data-testid="language-button-option"
-                  onClick={() => handleLanguageChange('en')}
-                  aria-hidden="true"
-                  className={classNames(
-                    active
-                      ? 'bg-background text-secondary rounded-md'
-                      : 'text-background',
-                    'text-sm flex justify-between items-center px-4 cursor-pointer '
-                  )}
-                >
-                  <h3>English</h3>
-                  <img className="h-8 w-8" src={UsFlag} alt="English" />
-                </div>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <div
-                  data-testid="language-button-option"
-                  onClick={() => handleLanguageChange('ar')}
-                  aria-hidden="true"
-                  className={classNames(
-                    active
-                      ? 'bg-background text-secondary rounded-md'
-                      : 'text-background',
-                    'text-sm flex justify-between items-center px-4 cursor-pointer text-background'
-                  )}
-                >
-                  <h3>Arabic</h3>
-                  <img className="h-8 w-8" src={IraqFlag} alt="Arabic" />
-                </div>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <div
-                  data-testid="language-button-option"
-                  onClick={() => handleLanguageChange('ku')}
-                  aria-hidden="true"
-                  className={classNames(
-                    active
-                      ? 'bg-background text-secondary rounded-md'
-                      : 'text-background',
-                    'text-sm flex justify-between items-center px-4 cursor-pointer text-background py-1'
-                  )}
-                >
-                  <h3>Kurdish</h3>
-                  <img
-                    className="h-6 w-8"
-                    src="https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Kurdistan.svg"
-                    alt="Kurdish"
-                  />
-                </div>
-              )}
-            </Menu.Item>
+            {languages.map((language) => (
+              <Menu.Item key={language.code}>
+                {({ active }) => (
+                  <div
+                    data-testid="language-button-option"
+                    onClick={() => handleLanguageChange(language.code)}
+                    aria-hidden="true"
+                    className={classNames(
+                      active
+                        ? 'bg-background text-secondary rounded-md'
+                        : 'text-background',
+                      'text-sm flex justify-between items-center px-4 cursor-pointer text-background'
+                    )}
+                  >
+                    <h3>{language.name}</h3>
+                    <img className="h-8 w-8" src={language.flag} alt={language.name} />
+                  </div>
+                )}
+              </Menu.Item>
+            ))}
           </div>
         </Menu.Items>
       </Transition>

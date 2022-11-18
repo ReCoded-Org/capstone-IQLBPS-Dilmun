@@ -5,6 +5,7 @@ import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import {
   error,
@@ -35,6 +36,7 @@ const schema = yup.object().shape({
 });
 
 function SignUp() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -73,17 +75,21 @@ function SignUp() {
       className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] h-full flex flex-col justify-center items-center content-center"
       data-testid="sign-up"
     >
-      <h1 className="text-5xl font-bold mb-10 text-primary pt-9">SIGN UP</h1>
+      <h1 className="text-5xl font-bold mb-10 text-primary pt-9 uppercase">
+        {t('sign_up.sign_up')}
+      </h1>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-center"
       >
         <label htmlFor="firstName" className="mt-3">
-          <span className="text-primary font-semibold">First Name</span>
+          <span className="text-primary font-semibold">
+            {t('sign_up.first_name')}
+          </span>
           <input
             type="text"
-            placeholder="First Name"
+            placeholder={t('sign_up.first_name')}
             name="firstName"
             {...register('firstName')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
@@ -93,11 +99,13 @@ function SignUp() {
           </p>
         </label>
         <label htmlFor="lastName" className="mt-3">
-          <span className="text-primary font-semibold">Last Name</span>
+          <span className="text-primary font-semibold">
+            {t('sign_up.last_name')}
+          </span>
           <input
             type="text"
             name="lastName"
-            placeholder="Last Name"
+            placeholder={t('sign_up.last_name')}
             {...register('lastName')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -106,22 +114,26 @@ function SignUp() {
           </p>
         </label>
         <label htmlFor="email" className="mt-3">
-          <span className="text-primary font-semibold">Email</span>
+          <span className="text-primary font-semibold">
+            {t('sign_up.email')}
+          </span>
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder={t('sign_up.email')}
             {...register('email')}
             className="sm:w-96 w-80 shadow-lg text-primary focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
           <p className="text-red-800 font-semibold">{errors?.email?.message}</p>
         </label>
         <label htmlFor="password" className="mt-3">
-          <span className="text-primary font-semibold">Password</span>
+          <span className="text-primary font-semibold">
+            {t('sign_up.password')}
+          </span>
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder={t('sign_up.password')}
             {...register('password')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -130,10 +142,12 @@ function SignUp() {
           </p>
         </label>
         <label htmlFor="confirmPassword" className="mt-3">
-          <span className="text-primary font-semibold">Confirm Password</span>
+          <span className="text-primary font-semibold">
+            {t('sign_up.confirm_password')}
+          </span>
           <input
             type="password"
-            placeholder="Confirm Password"
+            placeholder={t('sign_up.confirm_password')}
             {...register('confirmPassword')}
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
@@ -145,7 +159,7 @@ function SignUp() {
           type="submit"
           className="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
         >
-          Sign Up
+          {t('sign_up.sign_up')}
         </button>
         {userError && (
           <p className="w-80 sm:w-96 text-center text-red-800 font-semibold">
@@ -153,23 +167,25 @@ function SignUp() {
           </p>
         )}
         <p className="text-lg text-primary self-center mt-2">
-          Already Have an Account?
+          {t('sign_up.already_have_account')}
           <Link
             to="/signin"
             className="underline hover:text-secondary duration-300"
           >
-            Sign In
+            {t('sign_up.sign_in')}
           </Link>
         </p>
-        <p className="text-lg text-primary font-bold self-center my-4">OR</p>
+        <p className="text-lg text-primary font-bold self-center my-4 uppercase">
+          {t('sign_up.or')}
+        </p>
         <p className="text-xl text-primary font-semibold self-center mb-6">
-          Sign Up With
+          {t('sign_up.sign_up_with')}
           <button
             type="button"
             onClick={() => dispatch(signInWithFacebook(callback))}
           >
             <BsFacebook className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
-            or
+            {t('sign_up.or')}
           </button>
           <button type="button">
             <BsGoogle className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />

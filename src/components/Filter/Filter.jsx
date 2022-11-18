@@ -9,35 +9,35 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
   const checkFilters = [
     {
       id: 'category',
-      name: t('filter:category'),
+      name: t('filter.category.title'),
       options: [
-        { value: 'men', label: t('filter:category:men'), checked: true },
-        { value: 'women', label: t('filter:category:women'), checked: false },
-        { value: 'kids', label: t('filter:category:kids'), checked: false },
-        { value: 'toys', label: t('filter:category:toys'), checked: false },
+        { value: 'men', label: t('filter.category.men'), checked: true },
+        { value: 'women', label: t('filter.category.women'), checked: false },
+        { value: 'kids', label: t('filter.category.kids'), checked: false },
+        { value: 'toys', label: t('filter.category.toys'), checked: false },
         {
           value: 'electronics',
-          label: t('filter:category:electronics'),
+          label: t('filter.category.electronics'),
           checked: false,
         },
-        { value: 'home', label: t('filter:category:home'), checked: false },
+        { value: 'home', label: t('filter.category.home'), checked: false },
       ],
     },
     {
       id: 'type',
-      name: t('filter:type'),
+      name: t('filter.type.title'),
       options: [
-        { value: 'new', label: t('filter:type:new'), checked: true },
-        { value: 'used', label: t('filter:type:used'), checked: false },
-        { value: 'donated', label: t('filter:type:donated'), checked: false },
-        { value: 'crafted', label: t('filter:type:crafted'), checked: false },
+        { value: 'new', label: t('filter.type.new'), checked: true },
+        { value: 'used', label: t('filter.type.used'), checked: false },
+        { value: 'donated', label: t('filter.type.donated'), checked: false },
+        { value: 'crafted', label: t('filter.type.crafted'), checked: false },
       ],
     },
   ];
   const radioFilters = [
     {
       id: 'price',
-      name: t('filter:price'),
+      name: t('filter.price'),
       options: [
         { value: { min: '1', max: '25' }, label: '1$ - 25$', checked: false },
         { value: { min: '26', max: '50' }, label: '26$ - 50$', checked: false },
@@ -176,7 +176,7 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
                           type="button"
                           className="bg-primary text-background px-3 py-1 rounded-md ml-5"
                         >
-                          {t('filter:apply')}
+                          {t('filter.apply')}
                         </button>
                       </div>
                       {section.options.map((option, optionIdx) => (

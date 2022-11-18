@@ -15,7 +15,7 @@ const AboutUs = () => {
         }}
       >
         <h1 className="text-4xl font-bold mt-0 mb-6">
-          {t('about_us:meet_our_team')}
+          {t('about_us.meet_our_team')}
         </h1>
       </div>
       <div className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center">

@@ -1,11 +1,34 @@
 import { Disclosure, Transition } from '@headlessui/react';
 import { useCallback, useRef } from 'react';
-import {useTranslation} from 'react-i18next';
-import data from './faq.json';
+import { useTranslation } from 'react-i18next';
 
 function FAQ() {
   const closeRecent = useRef(undefined);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+  const data = {
+    questions: [
+      {
+        question: t('faq.question_one_title'),
+        answer: t('faq.question_one_answer'),
+      },
+      {
+        question: t('faq.question_two_title'),
+        answer: t('faq.question_two_answer'),
+      },
+      {
+        question: t('faq.question_three_title'),
+        answer: t('faq.question_three_answer'),
+      },
+      {
+        question: t('faq.question_four_title'),
+        answer: t('faq.question_four_answer'),
+      },
+      {
+        question: t('faq.question_five_title'),
+        answer: t('faq.question_five_answer'),
+      },
+    ],
+  };
 
   // this is stored in useCallback to impede unnecessary rerenders.
   // Calling this function with the close function available from disclosure will return a proper callback
