@@ -15,13 +15,13 @@ const SignedInUsersHomePage = () => {
                     <h1 className='text-2xl md:text-5xl font-bold text-center'>Welcome back, </h1>
                     <h1 className='text-2xl md:text-5xl font-bold text-center'> {userData.firstName} {userData.lastName}</h1>
                     <h3 className='text-l md:text-2xl font-semi-bold text-center'> Dilmun is your best choice to buy or sell anything</h3>
-                    <div className='text-center md:text-2xl m-4'>
+                    <div className='flex flex-row flex-wrap gap-4 justify-center  md:text-2xl m-4'>
                         <Link className='px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={PRODUCT_ROUTE}>More Products</Link>
                         <Link className='px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={ADD_ITEM_ROUTE}>Add New Item</Link>
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='mx-4 lg:mx-0'>
                 <h1 className='text-2xl md:text-3xl font-bold mt-2 mb-2'>Some of our products</h1>
                 <div className='flex flex-col md:grid grid-cols-3 gap-6 mt-2'>
                     <ItemCard imgSrc="https://placeimg.com/300/300/architecture" />
