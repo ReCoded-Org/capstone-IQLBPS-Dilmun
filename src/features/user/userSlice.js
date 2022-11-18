@@ -1,3 +1,4 @@
+import { async } from '@firebase/util';
 import {
   createAsyncThunk,
   createSlice
@@ -25,12 +26,15 @@ const initialState = {
   error: null,
 };
 
-export const signInWithFacebook = createAsyncThunk(
-  'user/signInWithFacebook',
-  async (payload, {
-    rejectWithValue
-  }) => {
-    const provider = new FacebookAuthProvider();
+
+export const signInWithGoogle = createAsyncThunk(
+  'user/signInWithGoogle',
+  async (
+    payload, {
+      rejectWithValue
+    }
+  ) => {
+    const provider = new GoogleAuthProvider();
     try {
       const {
         user
@@ -50,15 +54,15 @@ export const signInWithFacebook = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
-  }
-);
+    }
+)
 
-export const signInWithGoogle = createAsyncThunk(
-  'user/signInWithGoogle',
+export const signInWithFacebook = createAsyncThunk(
+  'user/signInWithFacebook',
   async (payload, {
     rejectWithValue
   }) => {
-    const provider = new GoogleAuthProvider();
+    const provider = new FacebookAuthProvider();
     try {
       const {
         user
