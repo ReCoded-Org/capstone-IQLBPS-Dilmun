@@ -6,7 +6,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
   data-testid="SignedInUseresHomePage"
 >
   <div
-    class=" bg-home-page-for-signed-in-users bg-cover w-full min-h-[30vh] md:min-h-[60vh] text-background p-5"
+    class=" bg-home-page-for-signed-in-users bg-cover w-full min-h-[40vh] md:min-h-[7p0vh] text-background p-5"
   >
     <div
       class=" mb-3 md:mb-0 pt-5 md:pt-14 md:pb-6 w-full"
@@ -27,36 +27,22 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
       >
          Dilmun is your best choice to buy or sell anything
       </h3>
-    </div>
-  </div>
-  <div
-    class=" mb-3 md:mb-0 border-b border-secondary pb-2 md:pb-6 w-full"
-  >
-    <div
-      class="text-center md:text-2xl mt-2"
-    >
-      <span>
-        Can't see what you need?
-      </span>
-      <a
-        class="p-1 rounded bg-tertiary ml-2 hover:text-tertiary hover:bg-primary transition duration-300"
-        href="/products"
+      <div
+        class="text-center md:text-2xl m-4"
       >
-        Press Here
-      </a>
-    </div>
-    <div
-      class="md:text-2xl text-center mt-3"
-    >
-      <span>
-        Or add your own item
-      </span>
-      <a
-        class="p-1 rounded bg-tertiary ml-2 hover:text-tertiary hover:bg-primary transition duration-300"
-        href="/add-item"
-      >
-        Add Item
-      </a>
+        <a
+          class="px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300"
+          href="/products"
+        >
+          More Products
+        </a>
+        <a
+          class="px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300"
+          href="/add-item"
+        >
+          Add New Item
+        </a>
+      </div>
     </div>
   </div>
   <div>
@@ -90,7 +76,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
           </p>
           <button
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class="inline-flex items-center text-background px-3 py-2 rounded bg-secondary ml-2 hover:bg-primary transition duration-300"
             type="submit"
           >
             Read more
@@ -119,7 +105,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
           </p>
           <button
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class="inline-flex items-center text-background px-3 py-2 rounded bg-secondary ml-2 hover:bg-primary transition duration-300"
             type="submit"
           >
             Read more
@@ -148,7 +134,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
           </p>
           <button
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class="inline-flex items-center text-background px-3 py-2 rounded bg-secondary ml-2 hover:bg-primary transition duration-300"
             type="submit"
           >
             Read more
