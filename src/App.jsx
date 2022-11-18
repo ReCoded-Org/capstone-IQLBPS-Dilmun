@@ -12,6 +12,7 @@ import HomePage from './Pages/HomePage/HomePage';
 import AddItemPage from './Pages/AddItemPage/AddItemPage';
 import FilterPage from './Pages/FilterPage/FilterPage';
 import FaqPage from './Pages/FaqPage/FaqPage';
+import NotFoundPage from './Pages/NotFoundPage/NotFoundPage'
 import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
@@ -47,7 +48,7 @@ function App() {
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/add-item" element={<AddItemPage />} />
       </Routes>
-
+      <NotFoundPage />
       <EditItemModal />
       <NotFound />
       <Footer />
