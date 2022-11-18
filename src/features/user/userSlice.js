@@ -91,13 +91,14 @@ export const getCurrentSignedInUser = createAsyncThunk(
   'user/getCurrentSignedInUser',
   async (payload, { rejectWithValue }) => {
     try {
-      const docRef = doc(db, 'Users', payload);
+      const docRef = doc(db, 'Users', payload.id);
       const docSnap = await getDoc(docRef);
 
       if (!docSnap.exists()) {
         return rejectWithValue(JSON.stringify('no user found'));
       }
-      return JSON.stringify(docSnap.data());
+      return JSON.stringify(payload.user);
+      // return JSON.stringify(docSnap.data());
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
@@ -111,6 +112,10 @@ const userSlice = createSlice({
       state.user = {};
       state.status = 'idle';
       state.error = null;
+    },
+
+    updateUser: (state, action) => {
+      state.user = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -198,5 +203,5 @@ const userSlice = createSlice({
 export const user = (state) => state.user.user;
 export const status = (state) => state.user.status;
 export const error = (state) => state.user.error;
-export const { resetState } = userSlice.actions;
+export const { resetState, updateUser } = userSlice.actions;
 export default userSlice.reducer;

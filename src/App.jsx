@@ -26,7 +26,9 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        dispatch(getCurrentSignedInUser(currentUser.uid));
+        dispatch(
+          getCurrentSignedInUser({ id: currentUser.uid, user: currentUser })
+        );
       } else {
         // eslint-disable-next-line no-console
         console.log('no user');

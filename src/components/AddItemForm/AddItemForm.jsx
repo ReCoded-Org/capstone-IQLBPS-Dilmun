@@ -6,7 +6,8 @@ import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
-import { addItem } from '../../features/slices/item';
+// import { addItem } from '../../features/slices/item';
+import { updateUser } from '../../features/user/userSlice';
 
 // Validation schema
 const schema = yup.object().shape({
@@ -43,7 +44,10 @@ export default function AddItemForm() {
     setAddress(false);
     getValues(['country', 'city']);
     console.log('values', values);
-    dispatch(addItem({ item: values, user }));
+    dispatch(
+      updateUser({ ...user, city: values.city, country: values.country })
+    );
+    // dispatch(addItem({ item: values, user }));
   };
 
   return (
@@ -196,7 +200,7 @@ export default function AddItemForm() {
                 )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                <SubmitButton buttonText="Add New Item" />
+                <SubmitButton buttonText="Add New Item" loading={isLoading} />
               </div>
             </div>
           </div>
