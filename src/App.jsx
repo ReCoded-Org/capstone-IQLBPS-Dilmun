@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
-import AnimatedPage from './components/animations/AnimatedPage';
+import AnimationProvider from './components/animations/AnimationProvider';
 
 function App() {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App  ">
       <NavBar />
-      <AnimatedPage />
+      <AnimationProvider />
       <EditItemModal />
       <Footer />
     </div>

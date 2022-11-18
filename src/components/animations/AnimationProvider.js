@@ -9,7 +9,7 @@ import AddItemPage from '../../Pages/AddItemPage/AddItemPage';
 import FilterPage from '../../Pages/FilterPage/FilterPage';
 import FaqPage from '../../Pages/FaqPage/FaqPage';
 
-function AnimatedPage() {
+function AnimationProvider() {
     const location = useLocation()
     return (
         <AnimatePresence>
@@ -26,4 +26,4 @@ function AnimatedPage() {
     )
 }
 
-export default AnimatedPage
+export default AnimationProvider
