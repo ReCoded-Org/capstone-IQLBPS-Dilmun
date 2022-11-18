@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
+import NotFound from './components/NotFound/NotFound';
 import NavBar from './components/NavBar/NavBar';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import Footer from './components/Footer/Footer';
@@ -48,6 +49,7 @@ function App() {
       </Routes>
 
       <EditItemModal />
+      <NotFound />
       <Footer />
     </div>
   );
