@@ -1,23 +1,30 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, NavLink } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
+import { useDispatch, useSelector } from 'react-redux';
+import _ from 'lodash';
 import {
   HOME_ROUTE,
-  CONTACT_ROUTE,
   ABOUT_ROUTE,
-  SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,
-  LOG_OUT,
   PROFILE,
+  PRODUCT_ROUTE,
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
+import { Signout, user } from '../../features/user/userSlice';
+
+const classNames = (...classes) => {
+  return twMerge(classes);
+};
 
 function NavBar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const dispatch = useDispatch();
+  const userData = useSelector(user);
 
   const closeNavBar = () => {
     if (open) {
@@ -28,6 +35,7 @@ function NavBar() {
   useEffect(() => {
     closeNavBar();
   }, [location.key]);
+
   return (
     <nav className="shadow-md w-full z-10 fixed top-0 left-0 bg-primary">
       <div className="md:flex bg-primary py-2 items-center justify-between md:px-8 px-10 max-h-24">
@@ -53,61 +61,100 @@ function NavBar() {
           }`}
         >
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  isActive
+                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    : ''
+                )
+              }
               to={HOME_ROUTE}
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-              to={CONTACT_ROUTE}
+          {!_.isEmpty(userData) ? (
+            <NavLink
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  isActive
+                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    : ''
+                )
+              }
+              to={PRODUCT_ROUTE}
             >
-              Contact
-            </Link>
+              Products
+            </NavLink>) : null}
           </li>
           <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
+            <NavLink
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  isActive
+                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    : ''
+                )
+              }
               to={ABOUT_ROUTE}
             >
               About
-            </Link>
+            </NavLink>
           </li>
-          <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-              to={PROFILE}
-            >
-              Profile
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-              to={SIGN_UP_ROUTE}
-            >
-              SignUp
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-              to={SIGN_IN_ROUTE}
-            >
-              SignIn
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-500"
-              to={LOG_OUT}
-            >
-              LogOut
-            </Link>
-          </li>
+          {!_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    isActive
+                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      : ''
+                  )
+                }
+                to={PROFILE}
+              >
+                Profile
+              </NavLink>
+            </li>
+          ) : null}
+          {_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    isActive
+                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      : ''
+                  )
+                }
+                to={SIGN_IN_ROUTE}
+              >
+                Sign In
+              </NavLink>
+            </li>
+          ) : null}
+
+          {!_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
+                to="/"
+                onClick={() => {
+                  dispatch(Signout());
+                }}
+              >
+                Log Out
+              </NavLink>
+            </li>
+          ) : null}
+
           <LanguageButton closeNavbar={closeNavBar} />
         </ul>
       </div>

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea renders correctly 1`] = `
+<div
+  className="relative border-2 rounded mb-2 text-backround border-tertiary "
+>
+  <textarea
+    className="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2 text-background  "
+    onFocus={[Function]}
+    rows="5"
+  />
+  <label
+    className="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+  />
+</div>
+`;
