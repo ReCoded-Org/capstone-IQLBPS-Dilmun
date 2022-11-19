@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
-import NavBar from './components/NavBar/NavBar';
+// import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
+import NavBarV2 from './components/NavBar/NavBar_V2';
 
 function App() {
   const dispatch = useDispatch();
@@ -29,7 +30,8 @@ function App() {
 
   return (
     <div className="App  ">
-      <NavBar />
+      <NavBarV2 />
+      {/* <NavBar /> */}
       <AnimationProvider />
       <EditItemModal />
       <Footer />

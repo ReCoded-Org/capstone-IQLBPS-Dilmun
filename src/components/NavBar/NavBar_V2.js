@@ -20,7 +20,7 @@ import {
     SIGN_IN_ROUTE
 } from '../../route';
 
-const NavBar = () => {
+const NavBarV2 = () => {
 
         const [active, setActive] = useState(false)
 
@@ -42,7 +42,7 @@ const NavBar = () => {
         }, [location.key]);
 
   return (
-    <div className='fixed w-full text-white flex justify-between p-4 items-center'>
+    <div className='fixed w-full text-white flex justify-between z-10 p-4 items-center'>
 
         <Link to={HOME_ROUTE}>
             <img
@@ -76,4 +76,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBarV2;
