@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add item page rendered correctly 1`] = `
+<div
+  class="mt-24"
+  data-testid="add-item-page"
+  style="width: 0px;"
+>
+  <div
+    class="bg-background"
+    data-testid="add-item-form"
+  >
+    <form>
+      <div
+        class="md:grid md:grid-cols-4 md:gap-6"
+      >
+        <div
+          class="md:col-span-1"
+        >
+          <div
+            class="mx-4 py-3"
+          >
+            <h3
+              class="text-2xl font-bold text-primary"
+            >
+              Product Info
+            </h3>
+            <p
+              class="mt-1 text-base text-secondary font-semibold"
+            >
+              Your product will be added to the store after filling the required information.
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-5 md:col-span-3 md:mt-0 md:pl-0 pl-2 pt-4 pr-2 pb-4"
+        >
+          <div
+            class="shadow sm:overflow-hidden rounded-md"
+          >
+            <div
+              class="space-y-6 bg-primary px-4 py-5 sm:p-6"
+            >
+              <div
+                class="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-x-0 md:gap-6 gap-y-6"
+              >
+                <div>
+                  <p
+                    class="block text-sm font-medium text-background"
+                  >
+                    Item Image
+                  </p>
+                  <div
+                    class="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6"
+                  >
+                    <div
+                      class="space-y-1 text-center"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="mx-auto h-12 w-12 text-tertiary"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 48 48"
+                      >
+                        <path
+                          d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <div
+                        class="flex text-sm text-background"
+                      >
+                        <label
+                          class="relative cursor-pointer rounded-md bg-tertiary font-medium text-secondary px-2 focus-within:outline-none focus-within:ring-2 focus-within:ring-backgound focus-within:ring-offset-2 hover:text-primary"
+                          for="file"
+                        >
+                          <span>
+                            Upload a file
+                          </span>
+                          <input
+                            accept="image/*"
+                            class="sr-only"
+                            id="file"
+                            name="file"
+                            type="file"
+                          />
+                        </label>
+                        <p
+                          class="pl-1"
+                        >
+                          or drag and drop
+                        </p>
+                      </div>
+                      <p
+                        class="text-xs text-tertiary"
+                      >
+                        PNG, JPG, GIF up to 10MB
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-span-3 sm:col-span-2 h-full flex flex-col justify-center"
+                >
+                  <div
+                    class="mb-4"
+                  >
+                    <div
+                      class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                    >
+                      <input
+                        class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                        id="title"
+                        name="title"
+                        type="text"
+                      />
+                      <label
+                        class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                        for="title"
+                      >
+                        Item Name
+                      </label>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                    >
+                      <input
+                        class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                        id="price"
+                        name="price"
+                        type="number"
+                      />
+                      <label
+                        class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                        for="price"
+                      >
+                        Price
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center gap-8 w-full flex-col md:flex-row"
+              >
+                <div
+                  class="w-full"
+                >
+                  <span
+                    class="block text-sm font-medium text-background"
+                  >
+                    Item Type
+                  </span>
+                  <div
+                    class="w-full mt-4"
+                  >
+                    <div
+                      class="relative mt-1"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="relative w-full py-2 pl-3 pr-10 text-left bg-background  text-primary font-medium rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm"
+                        data-headlessui-state=""
+                        id="headlessui-listbox-button-:r0:"
+                        type="button"
+                      >
+                        <span
+                          class="block truncate"
+                        >
+                          Crafted
+                        </span>
+                        <span
+                          class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="w-5 h-5 text-gray-400"
+                            fill="currentColor"
+                            height="1em"
+                            stroke="currentColor"
+                            stroke-width="0"
+                            viewBox="0 0 20 20"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <span
+                    class="block text-sm font-medium text-background"
+                  >
+                    Item Category
+                  </span>
+                  <div
+                    class="w-full"
+                  >
+                    <div
+                      class=" mt-4 relative"
+                    >
+                      <div
+                        class="relative w-full text-left bg-background text-primary font-medium rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-background focus-visible:ring-offset-teal-300 focus-visible:ring-offset-2 sm:text-sm overflow-hidden border border-secondary"
+                      >
+                        <input
+                          aria-expanded="false"
+                          aria-multiselectable="true"
+                          class="w-full border-none focus:ring-0 py-2 pl-3 pr-10 text-sm leading-5 text-primary bg-background rounded-lg"
+                          data-headlessui-state=""
+                          id="headlessui-combobox-input-:r1:"
+                          role="combobox"
+                          type="text"
+                        />
+                        <button
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="absolute inset-y-0 right-0 flex items-center pr-2"
+                          data-headlessui-state=""
+                          id="headlessui-combobox-button-:r2:"
+                          tabindex="-1"
+                          type="button"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="w-5 h-5 text-secondary"
+                            fill="currentColor"
+                            height="1em"
+                            stroke="currentColor"
+                            stroke-width="0"
+                            viewBox="0 0 20 20"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="relative border-2 rounded mb-2 text-backround border-tertiary "
+                >
+                  <textarea
+                    class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2 text-background  "
+                    id="description"
+                    name="description"
+                    rows="5"
+                  />
+                  <label
+                    class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                    for="description"
+                  >
+                    Description
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h1
+                  class="block text-sm font-medium text-background mb-3"
+                >
+                  Address Info
+                </h1>
+                <div
+                  class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                >
+                  <input
+                    class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                    id="country"
+                    name="country"
+                    type="text"
+                  />
+                  <label
+                    class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                    for="country"
+                  >
+                    Country
+                  </label>
+                </div>
+                <div
+                  class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                >
+                  <input
+                    class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                    id="city"
+                    name="city"
+                    type="text"
+                  />
+                  <label
+                    class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                    for="city"
+                  >
+                    City
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6"
+            >
+              <button
+                class="shadow-lg justify-center py-2 px-4 border border-secondary rounded-md text-sm font-medium text-background bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
+                type="submit"
+              >
+                Add New Item
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;

@@ -4,16 +4,17 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useLocation, Link, NavLink } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
 
+import { useDispatch, useSelector } from 'react-redux';
+import _ from 'lodash';
 import {
   HOME_ROUTE,
   ABOUT_ROUTE,
-  SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,
-  LOG_OUT,
   PROFILE,
   PRODUCT_ROUTE,
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
+import { Signout, user } from '../../features/user/userSlice';
 
 const classNames = (...classes) => {
   return twMerge(classes);
@@ -22,6 +23,8 @@ const classNames = (...classes) => {
 function NavBar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const dispatch = useDispatch();
+  const userData = useSelector(user);
 
   const closeNavBar = () => {
     if (open) {
@@ -32,6 +35,7 @@ function NavBar() {
   useEffect(() => {
     closeNavBar();
   }, [location.key]);
+
   return (
     <nav className="shadow-md w-full z-10 sticky top-0">
       <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 bg-background bg-opacity-30 backdrop-filter backdrop-blur-lg" >
@@ -58,22 +62,54 @@ function NavBar() {
           <li>
             <NavLink
               className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
+          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${
+            open ? 'top-24' : 'top-[-170px]'
+          }`}
+        >
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  isActive
+                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    : ''
+                )
+              }
               to={HOME_ROUTE}
             >
               Home
             </NavLink>
           </li>
           <li>
+          {!_.isEmpty(userData) ? (
             <NavLink
               className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-primary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  isActive
+                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    : ''
+                )
+              }
               to={PRODUCT_ROUTE}
             >
               Products
-            </NavLink>
+            </NavLink>) : null}
           </li>
           <li>
             <NavLink
               className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
+
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  isActive
+                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    : ''
+                )
+              }
               to={ABOUT_ROUTE}
             >
               About
@@ -111,6 +147,55 @@ function NavBar() {
               LogOut
             </NavLink>
           </li>
+          {!_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    isActive
+                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      : ''
+                  )
+                }
+                to={PROFILE}
+              >
+                Profile
+              </NavLink>
+            </li>
+          ) : null}
+          {_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    isActive
+                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      : ''
+                  )
+                }
+                to={SIGN_IN_ROUTE}
+              >
+                Sign In
+              </NavLink>
+            </li>
+          ) : null}
+
+          {!_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
+                to="/"
+                onClick={() => {
+                  dispatch(Signout());
+                }}
+              >
+                Log Out
+              </NavLink>
+            </li>
+          ) : null}
+
           <LanguageButton closeNavbar={closeNavBar} />
         </ul>
       </div>

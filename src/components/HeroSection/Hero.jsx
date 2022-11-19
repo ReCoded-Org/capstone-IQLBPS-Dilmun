@@ -1,3 +1,8 @@
+import { Link } from "react-router-dom";
+import {
+ SIGN_UP_ROUTE
+} from '../../route';
+
 function Hero() {
   return (
     <div className="backdrop-blur-md bg-white/30 h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center">
@@ -10,12 +15,13 @@ function Hero() {
             Your Way to Get Quality Products!
           </p>
           <div className="btn__container">
-            <button
+            <Link to={SIGN_UP_ROUTE}><button
               type="button"
               className="bg-secondary hover:bg-tertiary text-white font-bold py-2 px-4 rounded-full"
             >
-              Sign Up
+              Get Started
             </button>
+            </Link>
           </div>
         </div>
       </div>
