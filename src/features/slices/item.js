@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../firebase-config';
 import { dispatch } from "../../app/store";
 
@@ -8,8 +8,7 @@ const initialState = {
     status: 'idle',
     error: null,
     item: {},
-    itemList: [],
-    userItems: [],
+    itemList: []
 };
 
 const itemSlice = createSlice({
@@ -35,17 +34,25 @@ const itemSlice = createSlice({
             state.item = action.payload;
             state.isLoading = false;
         },
-
-        getItemListSuccess: (state, action) => {
-            state.itemList = action.payload;
-            state.isLoading = false;
-        },
-
-        getUserItemsSuccess: (state, action) => {
-            state.userItems.push(action.payload);
-            state.isLoading = false;
-        }
     },
+    // extraReducers: (builder) => {
+    //     builder
+    //         .addCase(fetchItem.pending, (state) => {
+    //             state.status = 'loading';
+    //             state.error = null;
+    //             state.item = {};
+    //         })
+    //         .addCase(fetchItem.fulfilled, (state, { payload }) => {
+    //             state.status = 'succeeded';
+    //             state.error = null;
+    //             state.item = JSON.parse(payload);
+    //         })
+    //         .addCase(fetchItem.rejected, (state, { payload }) => {
+    //             state.status = 'failed';
+    //             state.error = JSON.parse(payload);
+    //             state.item = {};
+    //         })
+    // }
 });
 
 // Reducer
@@ -53,32 +60,32 @@ export default itemSlice.reducer;
 
 // Actions
 
-// ADD ITEM to DB and to state (userItems) 
+// ADD ITEM to DB and to state (itemList) 
 export const addItem = createAsyncThunk(
     'item/addItem',
     async (payload, { rejectWithValue }) => {
         try {
             dispatch(itemSlice.actions.startLoading());
-            const { item, onwer } = payload;
-            const data = {
+            // add item to users collection as subcolletion of user after adding item to item collection
+
+            // add item to item collection
+            // return item
+            const { item, user } = payload;
+            const docRef = await addDoc(collection(db, "Items"), {
                 // name: item.name,
                 title: item.title,
                 description: item.description,
                 price: item.price,
                 category: item.category,
                 // image: item.image,
-                onwer,
+                seller: user,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-            }
-            const docRef = await addDoc(collection(db, "Items"), data);
-            // add item to user collection as subcollection
-            await setDoc(doc(db, "Users", onwer.uid, "Items", docRef.id), data);
-            // save item to state
+            });
             dispatch(itemSlice.actions.getItemSuccess(payload));
-            // save item to userItems
-            dispatch(itemSlice.actions.getUserItemsSuccess(item));
+            console.log("Document written with ID: ", docRef.id);
             return JSON.stringify({ ...payload, id: docRef.id });
+            // return docRef.id;
         } catch (error) {
             dispatch(itemSlice.actions.HasError(error));
             return rejectWithValue(error);

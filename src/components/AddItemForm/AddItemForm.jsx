@@ -6,7 +6,8 @@ import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
-import { addItem } from '../../features/slices/item';
+// import { addItem } from '../../features/slices/item';
+import { updateUser } from '../../features/user/userSlice';
 
 // Validation schema
 const schema = yup.object().shape({
@@ -19,16 +20,13 @@ const schema = yup.object().shape({
 
 export default function AddItemForm() {
   const dispatch = useDispatch();
-  const { item, userItems, isLoading, error } = useSelector(
-    (state) => state.item
-  );
+  const { item, isLoading, error } = useSelector((state) => state.item);
   const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
-    if (item) {
-      console.log(userItems);
-    }
-  }, [item]);
+    console.log('user', user);
+    console.log('item', item, error, isLoading);
+  }, [user, item]);
 
   const {
     register,
@@ -45,7 +43,11 @@ export default function AddItemForm() {
   const onSubmit = (values) => {
     setAddress(false);
     getValues(['country', 'city']);
-    dispatch(addItem({ item: values, onwer: user }));
+    console.log('values', values);
+    dispatch(
+      updateUser({ ...user, city: values.city, country: values.country })
+    );
+    // dispatch(addItem({ item: values, user }));
   };
 
   return (
@@ -201,34 +203,6 @@ export default function AddItemForm() {
                 <SubmitButton buttonText="Add New Item" loading={isLoading} />
               </div>
             </div>
-            {error && (
-              <div className="mt-4">
-                <div className="rounded-md bg-red-50 p-4">
-                  <div className="flex">
-                    <div className="flex-shrink-0">
-                      <svg
-                        className="h-5 w-5 text-red-400"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path d="M10 12a  2 2 0 100-4  2 2 0 000 4z" />
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <div className="ml-3">
-                      <h3 className="text-sm font-medium text-red-800">
-                        {error.message}
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </form>
