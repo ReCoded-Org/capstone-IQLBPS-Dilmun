@@ -1,10 +1,9 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { useDispatch } from 'react-redux';
 import i18next from 'i18next';
 import Cookies from 'js-cookie';
 
-import { setLanguage } from '../../features/language/languageSlice';
+
 import languages from './LanguageConstants';
 
 const classNames = (...classes) => {
@@ -12,14 +11,13 @@ const classNames = (...classes) => {
 };
 
 const LanguageButton = ({ closeNavbar }) => {
-  const dispatch = useDispatch();
   const currentLanguageCode = Cookies.get('i18next') || 'en';
   const currentLanguage = languages.find(
     (language) => language.code === currentLanguageCode
   );
   const handleLanguageChange = (language) => {
-    i18next.changeLanguage(language.code);
-    dispatch(setLanguage(language));
+    i18next.changeLanguage(language);
+   
     if (closeNavbar) {
       closeNavbar();
     }
@@ -63,7 +61,7 @@ const LanguageButton = ({ closeNavbar }) => {
                 {({ active }) => (
                   <div
                     data-testid="language-button-option"
-                    onClick={() => handleLanguageChange(language)}
+                    onClick={() => handleLanguageChange(language.code)}
                     aria-hidden="true"
                     className={classNames(
                       active
