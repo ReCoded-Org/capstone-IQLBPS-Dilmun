@@ -618,7 +618,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     <h2
       class="text-4xl mb-10 text-primary font-bold text-center"
     >
-      faq:frequently_asked_questions
+      faq.frequently_asked_questions
     </h2>
     <div
       class="max-w-7xl mx-auto px-4 py-10 lg:max-h-100 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center"
