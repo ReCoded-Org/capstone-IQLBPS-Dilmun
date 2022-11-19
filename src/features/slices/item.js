@@ -64,7 +64,7 @@ export const addItem = createAsyncThunk(
                 // name: item.name,
                 file: item.file,
                 title: item.title,
-                price: `${item.price} '$'`,
+                price: `${item.price} $`,
                 description: item.description,
                 category: item.category,
                 // image: item.image,
