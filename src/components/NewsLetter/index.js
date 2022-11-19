@@ -19,7 +19,6 @@ const NewsLetter = () => {
               i18nKey="news_letter.subscribe_to_our_newsletter"
               components={{ br: <br /> }}
             />
-           
           </h1>
         </div>
         <div className="mt-4">

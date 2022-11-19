@@ -13,17 +13,15 @@ import {
 } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
-import { language } from './features/language/languageSlice';
 
 function App() {
   const dispatch = useDispatch();
 
-  const currentLanguage = useSelector(language);
   const userData = useSelector(user);
   const errorData = useSelector(error);
   const statusData = useSelector(status);
   // eslint-disable-next-line no-console
-  console.log(userData, errorData, statusData, currentLanguage);
+  console.log(userData, errorData, statusData);
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -34,10 +32,6 @@ function App() {
       }
     });
   }, []);
-
-  useEffect(() => {
-    document.body.dir = currentLanguage.direction;
-  }, [currentLanguage]);
 
   return (
     <div className="App  ">

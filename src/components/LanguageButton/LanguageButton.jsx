@@ -3,9 +3,9 @@ import { Menu, Transition } from '@headlessui/react';
 import { SiGoogletranslate } from 'react-icons/si';
 import { useDispatch } from 'react-redux';
 import i18next from 'i18next';
-import UsFlag from '../../assets/img/us-flag.svg';
-import IraqFlag from '../../assets/img/iraq-flag.svg';
+
 import { setLanguage } from '../../features/language/languageSlice';
+import languages from './LanguageConstants';
 
 const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ');
@@ -13,26 +13,7 @@ const classNames = (...classes) => {
 
 const LanguageButton = ({ closeNavbar }) => {
   const dispatch = useDispatch();
-  const languages = [
-    {
-      name: 'English',
-      code: 'en',
-      flag: UsFlag,
-      direction: 'ltr',
-    },
-    {
-      name: 'العربية',
-      code: 'ar',
-      flag: IraqFlag,
-      direction: 'rtl',
-    },
-    {
-      name: 'کوردی',
-      code: 'ku',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Kurdistan.svg',
-      direction: 'rtl',
-    },
-  ];
+  
   const handleLanguageChange = (language) => {
     i18next.changeLanguage(language.code);
     dispatch(setLanguage(language));
