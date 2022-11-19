@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { setDoc, doc, getDoc } from 'firebase/firestore';
+import { setDoc, doc} from 'firebase/firestore';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
 import { addItem } from '../../features/slices/item';
-// import { updateUser } from '../../features/user/userSlice';
+import { user } from '../../features/slices/user';
 import { auth, db } from '../../firebase-config';
 
 // Validation schema
@@ -25,7 +25,7 @@ export default function AddItemForm() {
   const { item, userItems, isLoading, error } = useSelector(
     (state) => state.item
   );
-  const { user } = useSelector((state) => state.user);
+  const userThing = useSelector(user);
 
   useEffect(() => {
     if (item) {
@@ -46,16 +46,12 @@ export default function AddItemForm() {
 
   const onSubmit = async (values) => {
     const userData = doc(db, 'Users', auth.currentUser.uid);
-
     await setDoc(
       userData,
       { address: { city: values.city, country: values.country } },
       { merge: true }
     );
-    const userSnap = await getDoc(userData);
-    const userAddress = userSnap.data().address;
-    console.log('data:', userAddress);
-    dispatch(addItem({ item: values, onwer: user }));
+    dispatch(addItem({ item: values, owner: userThing }));
   };
   // dispatch(addItem({ item: values, user }));
   // const [address, setAddress] = useState(true);
@@ -192,7 +188,7 @@ export default function AddItemForm() {
                 {/* TODO: render conditionally: if the user has set his address the 1st time he added a product,
                 save his address info and do not show this part of the form again. 
                 however, make those info display into every product he adds */}
-
+                {!userThing.address &&(
                 <div>
                   <h1 className="block text-sm font-medium text-background mb-3">
                     Address Info
@@ -213,7 +209,7 @@ export default function AddItemForm() {
                   >
                     City
                   </Input>
-                </div>
+                </div>)}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" loading={isLoading} />

@@ -59,7 +59,7 @@ export const addItem = createAsyncThunk(
     async (payload, { rejectWithValue }) => {
         try {
             dispatch(itemSlice.actions.startLoading());
-            const { item, onwer } = payload;
+            const { item, owner } = payload;
             const data = {
                 // name: item.name,
                 file: item.file,
@@ -68,13 +68,13 @@ export const addItem = createAsyncThunk(
                 description: item.description,
                 category: item.category,
                 // image: item.image,
-                onwer,
+                owner,
                 createdAt: new Date(),
                 updatedAt: new Date(),
             }
             const docRef = await addDoc(collection(db, "Items"), data);
             // add item to user collection as subcollection
-            await setDoc(doc(db, "Users", onwer.uid, "Items", docRef.id), data);
+            await setDoc(doc(db, "Users", owner.uid, "Items", docRef.id), data);
             // save item to state
             dispatch(itemSlice.actions.getItemSuccess(payload));
             // save item to userItems
