@@ -1,23 +1,19 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import i18next from 'i18next';
-import Cookies from 'js-cookie';
-
 
 import languages from './LanguageConstants';
+import getCurrentLanguage from '../../utils/getCurrentLanguage';
 
 const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ');
 };
 
 const LanguageButton = ({ closeNavbar }) => {
-  const currentLanguageCode = Cookies.get('i18next') || 'en';
-  const currentLanguage = languages.find(
-    (language) => language.code === currentLanguageCode
-  );
+  const currentLanguage = getCurrentLanguage();
   const handleLanguageChange = (language) => {
     i18next.changeLanguage(language);
-   
+
     if (closeNavbar) {
       closeNavbar();
     }
