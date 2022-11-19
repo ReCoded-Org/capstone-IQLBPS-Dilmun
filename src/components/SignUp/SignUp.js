@@ -11,6 +11,7 @@ import {
   error,
   resetState,
   signInWithFacebook,
+  signInWithGoogle,
   signUpWithCredentials,
   status,
   user,
@@ -187,7 +188,8 @@ function SignUp() {
             <BsFacebook className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             {t('sign_up.or')}
           </button>
-          <button type="button">
+          <button type="button"
+           onClick={() => dispatch(signInWithGoogle(callback))}>
             <BsGoogle className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             .
           </button>
