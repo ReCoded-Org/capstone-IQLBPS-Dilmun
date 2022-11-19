@@ -42,7 +42,7 @@ const NavBarV2 = () => {
         }, [location.key]);
 
   return (
-    <div className='fixed w-full text-white flex justify-between z-10 p-4 items-center'>
+    <div className='fixed w-full text-primary font-bold flex justify-between z-10 p-4 items-center bg-white/10'>
 
         <Link to={HOME_ROUTE}>
             <img
@@ -54,11 +54,11 @@ const NavBarV2 = () => {
 
         <nav>
 
-            <div className='absolute right-6 md:hidden top-6 scale-150'>
+            <div className='absolute right-7 top-10 md:hidden text-4xl'>
                 <FaBars onClick={showItems} className='scale-150 cursor-pointer'/>
             </div>
 
-                <ul className='hidden md:flex gap-8 p-6 uppercase bg-white/10'>
+                <ul className='hidden md:flex gap-8 p-6 uppercase '>
                 <li><Link to={HOME_ROUTE}>Home</Link></li>
                 <li><Link to={PRODUCT_ROUTE}>Products</Link></li>
                 <li><Link to={ABOUT_ROUTE}>About</Link></li>
