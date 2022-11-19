@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { setDoc, doc, getDoc } from 'firebase/firestore';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
-import { useSelector, useDispatch } from '../../app/store';
+import { useSelector } from '../../app/store';
 // import { addItem } from '../../features/slices/item';
-import { updateUser } from '../../features/user/userSlice';
+// import { updateUser } from '../../features/user/userSlice';
+import { auth, db } from '../../firebase-config';
 
 // Validation schema
 const schema = yup.object().shape({
@@ -19,7 +21,7 @@ const schema = yup.object().shape({
 });
 
 export default function AddItemForm() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { item, isLoading, error } = useSelector((state) => state.item);
   const { user } = useSelector((state) => state.user);
 
@@ -31,22 +33,25 @@ export default function AddItemForm() {
   const {
     register,
     handleSubmit,
-    getValues,
     formState: { errors },
     control,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const [address, setAddress] = useState(true);
+  // const [address, setAddress] = useState(true);
 
-  const onSubmit = (values) => {
-    setAddress(false);
-    getValues(['country', 'city']);
-    console.log('values', values);
-    dispatch(
-      updateUser({ ...user, city: values.city, country: values.country })
+  const onSubmit = async (values) => {
+    const userData = doc(db, 'Users', auth.currentUser.uid);
+
+    await setDoc(
+      userData,
+      { address: { city: values.city, country: values.country } },
+      { merge: true }
     );
+    const userSnap = await getDoc(userData);
+    const userAddress = userSnap.data().address;
+    console.log('data:', userAddress);
     // dispatch(addItem({ item: values, user }));
   };
 
@@ -175,7 +180,7 @@ export default function AddItemForm() {
                 {/* TODO: render conditionally: if the user has set his address the 1st time he added a product,
                 save his address info and do not show this part of the form again. 
                 however, make those info display into every product he adds */}
-                {address && (
+
                   <div>
                     <h1 className="block text-sm font-medium text-background mb-3">
                       Address Info
@@ -197,7 +202,7 @@ export default function AddItemForm() {
                       City
                     </Input>
                   </div>
-                )}
+
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" loading={isLoading} />

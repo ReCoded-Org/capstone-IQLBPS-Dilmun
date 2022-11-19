@@ -73,11 +73,11 @@ export const addItem = createAsyncThunk(
             const { item, user } = payload;
             const docRef = await addDoc(collection(db, "Items"), {
                 // name: item.name,
+                file: item.file,
                 title: item.title,
+                price: `${item.price} '$'`,
                 description: item.description,
-                price: item.price,
                 category: item.category,
-                // image: item.image,
                 seller: user,
                 createdAt: new Date(),
                 updatedAt: new Date(),
