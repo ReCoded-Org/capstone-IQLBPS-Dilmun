@@ -41,6 +41,7 @@ export default function AddItemForm() {
   });
 
   const [address, setAddress] = useState(true);
+  const [type, setType] = useState(ITEM_TYPES[0]);
 
   const onSubmit = (values) => {
     setAddress(false);
@@ -126,7 +127,7 @@ export default function AddItemForm() {
                       <Input
                         name="price"
                         type="number"
-                        // disabled={item.type.toLowerCase() === 'donated'}
+                        disabled={type.toLowerCase() === 'donated'}
                         errors={errors?.price}
                         {...register('price')}
                       >
@@ -145,6 +146,7 @@ export default function AddItemForm() {
                       control={control}
                       options={ITEM_TYPES}
                       defaultValue={ITEM_TYPES[0]}
+                      updateType={(e) => setType(e)}
                     />
                   </div>
                   <div className="w-full">
