@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -6,8 +6,8 @@ import { setDoc, doc, getDoc } from 'firebase/firestore';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
-import { useSelector } from '../../app/store';
-// import { addItem } from '../../features/slices/item';
+import { useSelector, useDispatch } from '../../app/store';
+import { addItem } from '../../features/slices/item';
 // import { updateUser } from '../../features/user/userSlice';
 import { auth, db } from '../../firebase-config';
 
@@ -21,14 +21,17 @@ const schema = yup.object().shape({
 });
 
 export default function AddItemForm() {
-  // const dispatch = useDispatch();
-  const { item, isLoading, error } = useSelector((state) => state.item);
+  const dispatch = useDispatch();
+  const { item, userItems, isLoading, error } = useSelector(
+    (state) => state.item
+  );
   const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
-    console.log('user', user);
-    console.log('item', item, error, isLoading);
-  }, [user, item]);
+    if (item) {
+      console.log(userItems);
+    }
+  }, [item]);
 
   const {
     register,
@@ -52,8 +55,16 @@ export default function AddItemForm() {
     const userSnap = await getDoc(userData);
     const userAddress = userSnap.data().address;
     console.log('data:', userAddress);
-    // dispatch(addItem({ item: values, user }));
+    dispatch(addItem({ item: values, onwer: user }));
   };
+  // dispatch(addItem({ item: values, user }));
+  // const [address, setAddress] = useState(true);
+  const [type, setType] = useState(ITEM_TYPES[0]);
+
+  // const onSubmit = (values) => {
+  //   setAddress(false);
+  //   getValues(['country', 'city']);
+  // };
 
   return (
     <div className="bg-background" data-testid="add-item-form">
@@ -133,7 +144,7 @@ export default function AddItemForm() {
                       <Input
                         name="price"
                         type="number"
-                        // disabled={item.type.toLowerCase() === 'donated'}
+                        disabled={type.toLowerCase() === 'donated'}
                         errors={errors?.price}
                         {...register('price')}
                       >
@@ -152,6 +163,7 @@ export default function AddItemForm() {
                       control={control}
                       options={ITEM_TYPES}
                       defaultValue={ITEM_TYPES[0]}
+                      updateType={(e) => setType(e)}
                     />
                   </div>
                   <div className="w-full">
@@ -181,33 +193,60 @@ export default function AddItemForm() {
                 save his address info and do not show this part of the form again. 
                 however, make those info display into every product he adds */}
 
-                  <div>
-                    <h1 className="block text-sm font-medium text-background mb-3">
-                      Address Info
-                    </h1>
-                    <Input
-                      name="country"
-                      type="text"
-                      errors={errors.country ? errors.country : undefined}
-                      {...register('country')}
-                    >
-                      Country
-                    </Input>
-                    <Input
-                      name="city"
-                      type="text"
-                      errors={errors.city ? errors.city : undefined}
-                      {...register('city')}
-                    >
-                      City
-                    </Input>
-                  </div>
-
+                <div>
+                  <h1 className="block text-sm font-medium text-background mb-3">
+                    Address Info
+                  </h1>
+                  <Input
+                    name="country"
+                    type="text"
+                    errors={errors.country ? errors.country : undefined}
+                    {...register('country')}
+                  >
+                    Country
+                  </Input>
+                  <Input
+                    name="city"
+                    type="text"
+                    errors={errors.city ? errors.city : undefined}
+                    {...register('city')}
+                  >
+                    City
+                  </Input>
+                </div>
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" loading={isLoading} />
               </div>
             </div>
+            {error && (
+              <div className="mt-4">
+                <div className="rounded-md bg-red-50 p-4">
+                  <div className="flex">
+                    <div className="flex-shrink-0">
+                      <svg
+                        className="h-5 w-5 text-red-400"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M10 12a  2 2 0 100-4  2 2 0 000 4z" />
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-sm font-medium text-red-800">
+                        {error.message}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </form>
