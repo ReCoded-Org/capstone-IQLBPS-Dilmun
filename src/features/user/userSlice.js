@@ -165,8 +165,7 @@ export const getCurrentSignedInUser = createAsyncThunk(
       if (!docSnap.exists()) {
         return rejectWithValue(JSON.stringify('no user found'));
       }
-      return JSON.stringify(payload.user);
-      // return JSON.stringify(docSnap.data());
+      return JSON.stringify({ ...docSnap.data(), email: payload.email, uid: payload.id });
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
@@ -180,10 +179,6 @@ const userSlice = createSlice({
       state.user = {};
       state.status = 'idle';
       state.error = null;
-    },
-
-    updateUser: (state, action) => {
-      state.user = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -307,5 +302,5 @@ const userSlice = createSlice({
 export const user = (state) => state.user.user;
 export const status = (state) => state.user.status;
 export const error = (state) => state.user.error;
-export const { resetState, updateUser } = userSlice.actions;
+export const { resetState } = userSlice.actions;
 export default userSlice.reducer;

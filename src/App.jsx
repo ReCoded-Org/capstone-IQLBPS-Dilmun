@@ -20,7 +20,10 @@ function App() {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         dispatch(
-          getCurrentSignedInUser({ id: currentUser.uid, user: currentUser })
+          getCurrentSignedInUser({
+            id: currentUser.uid,
+            email: currentUser.email,
+          })
         );
       } else {
         // eslint-disable-next-line no-console
