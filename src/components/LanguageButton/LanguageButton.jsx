@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { SiGoogletranslate } from 'react-icons/si';
 import { useDispatch } from 'react-redux';
 import i18next from 'i18next';
+import Cookies from 'js-cookie';
 
 import { setLanguage } from '../../features/language/languageSlice';
 import languages from './LanguageConstants';
@@ -13,7 +13,10 @@ const classNames = (...classes) => {
 
 const LanguageButton = ({ closeNavbar }) => {
   const dispatch = useDispatch();
-  
+  const currentLanguageCode = Cookies.get('i18next') || 'en';
+  const currentLanguage = languages.find(
+    (language) => language.code === currentLanguageCode
+  );
   const handleLanguageChange = (language) => {
     i18next.changeLanguage(language.code);
     dispatch(setLanguage(language));
@@ -33,7 +36,14 @@ const LanguageButton = ({ closeNavbar }) => {
           data-testid="language-botton-toggle"
           className="md:ml-6 text-2xl md:mt-0 mt-2 text-background hover:text-secondary duration-500"
         >
-          <SiGoogletranslate />
+          <img
+            className={classNames(
+              currentLanguage.code === 'ku' ? 'h-6' : 'h-8',
+              'w-8'
+            )}
+            src={currentLanguage.flag}
+            alt={currentLanguage.name}
+          />
         </Menu.Button>
       </div>
 
@@ -59,12 +69,15 @@ const LanguageButton = ({ closeNavbar }) => {
                       active
                         ? 'bg-background text-secondary rounded-md'
                         : 'text-background',
-                      'text-sm flex justify-between items-center px-4 cursor-pointer text-background'
+                      'text-sm flex justify-between items-center px-4 cursor-pointer text-background py-1'
                     )}
                   >
                     <h3>{language.name}</h3>
                     <img
-                      className="h-8 w-8"
+                      className={classNames(
+                        currentLanguage.code === 'ku' ? 'h-6' : 'h-8',
+                        'w-8'
+                      )}
                       src={language.flag}
                       alt={language.name}
                     />
