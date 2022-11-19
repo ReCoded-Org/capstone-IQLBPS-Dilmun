@@ -7,67 +7,67 @@
     },
     "add_item_form": {
         "product_info": "زانیاری بەرهەم",
-        "note": "Your product will be added to the store after filling the required information.",
-        "item_image": "Item Image",
-        "upload_a_file": "Upload a file",
-        "or_drag_and_drop": "or drag and drop",
-        "item_name": "Item Name",
-        "item_price": "Price",
-        "item_type": "Item Type",
-        "item_category": "Item Category",
-        "item_description": "Description",
-        "adress_info": "Address Info",
-        "country": "Country",
-        "city": "City",
-        "add_new_item": "Add New Item"
+        "note": "بەرهەمەکەت دوای پڕکردنەوەی زانیارییە پێویستەکان زیاد دەکرێت بۆ فرۆشگاکە.",
+        "item_image": "وێنەی بابەتی",
+        "upload_a_file": "فایلێک باربکە",
+        "or_drag_and_drop": "یان ڕاکێشە و دایبنێ",
+        "item_name": "ناوی بابەتی",
+        "item_price": "نرخ",
+        "item_type": "جۆری بابەت",
+        "item_category": "پۆلی بابەتی",
+        "item_description": "وەسف",
+        "adress_info": "زانیاری ناونیشان",
+        "country": "وڵات",
+        "city": "شار",
+        "add_new_item": "زیادکردنی بابەتی نوێ"
     },
     "overlap_text": {
-        "check_out": "Watch Full Video",
-        "watch_full_video": "Watch Full Video"
+        "check_out": "بینەری تەواوی ڤیدیۆکە بن",
+        "watch_full_video": "بینەری تەواوی ڤیدیۆکە بن"
     },
     "faq": {
-        "frequently_asked_questions": "Frequently Asked Questions",
-        "question_one_title": "What is the return policy?",
-        "question_one_answer": "There must be a deal between the customers and the sellers to determine how returning items should be and our staff is not responsible of it.",
-        "question_two_title": "Can I cancel my order?",
-        "question_two_answer": "Sure! you can cancel your order within first 12 hours.",
-        "question_three_title": "What methods of payment you take?",
-        "question_three_answer": "You can pay online via credit card or pay at the door while dealing with the seller.",
-        "question_four_title": "How do I track my order?",
-        "question_four_answer": "You can have the phone number of the company which does the delivering and ask them where your order is.",
-        "question_five_title": "What is the policy for late/non-delivery of items ordered online?",
-        "question_five_answer": "Our customer service team will be there alwyas to resolve your issue, you can contact us."
+        "frequently_asked_questions": "پرسیارە زۆرباوەکان",
+        "question_one_title": "سیاسەتی گەڕانەوە چییە؟",
+        "question_one_answer": "دەبێت گرێبەستێک لە نێوان کڕیاران و فرۆشیارەکاندا هەبێت بۆ ئەوەی دیاری بکرێت کە گەڕانەوەی شتومەکەکان چۆن دەبێت و ستافەکەمان لێی بەرپرسیار نین.",
+        "question_two_title": "ئایا دەتوانم داواکارییەکەم هەڵبوەشێنمەوە؟",
+        "question_two_answer": "بێگومان! دەتوانیت لە ماوەی ١٢ کاتژمێری یەکەمدا داواکارییەکەت هەڵبوەشێنیتەوە.",
+        "question_three_title": "چ شێوازێکی پارەدان دەگریتە بەر؟",
+        "question_three_answer": "دەتوانیت لە ڕێگەی کارتی بانکییەوە پارە بدەیت بە شێوەی ئۆنلاین یان لەبەردەم دەرگا پارە بدەیت لەکاتی مامەڵەکردن لەگەڵ فرۆشیارەکەدا.",
+        "question_four_title": "چۆن شوێنپێی داواکارییەکەم بگرم؟",
+        "question_four_answer": "دەتوانیت ژمارەی تەلەفۆنی ئەو کۆمپانیایەتان هەبێت کە گەیاندنەکە ئەنجام دەدات و لێیان بپرسن کە داواکارییەکەت لە کوێیە.",
+        "question_five_title": "سیاسەتی درەنگ/نەگەیاندنی ئەو شتانەی کە بە شێوەی ئۆنلاین داوا دەکرێن چییە؟",
+        "question_five_answer": "تیمی خزمەتگوزاری کڕیارەکانمان هەمیشە لەوێ دەبن بۆ چارەسەرکردنی کێشەکەت، دەتوانن پەیوەندیمان پێوە بکەن."
     },
     "features": {
-        "designed_to_meet_your_needs": "Designed to meet your needs.",
-        "description": "Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.",
-        "feature_one_title": "Filter",
-        "feature_one_description": "Filter your items to find the right information.",
-        "feature_two_title": "Multi Language",
-        "feature_two_description": "Use the website in your preferred language.",
-        "feature_three_title": "Meet",
-        "feature_three_description": "Meet new people and make new connections."
+        "designed_to_meet_your_needs": "دیزاین کراوە بۆ دابینکردنی پێداویستییەکانتان.",
+        "description": "لێرە لە دلمون بەرهەمی جۆراوجۆر بە کڕیاران دەفرۆشین و هاوکاری وەرئەگرین بۆ یارمەتیدانی ئەو کەسانەی کە پێویستیان پێیەتی.",
+        "feature_one_title": "فلتەر",
+        "feature_one_description": "شتەکانت فلتەر بکە بۆ دۆزینەوەی زانیاری دروست.",
+        "feature_two_title": "فرە زمان",
+        "feature_two_description": "ماڵپەڕەکە بە زمانی دڵخوازی خۆت بەکاربهێنە.",
+        "feature_three_title": "چاوپێکەوتن",
+        "feature_three_description": "کەسانی نوێ بناسە و پەیوەندی نوێ دروست بکە."
     },
     "filter": {
-        "filters": "Filters",
+        "filters": "فلتەرەکان",
         "category": {
-            "title": "Category",
-            "men": "Men",
-            "women": "Women",
-            "kids": "Kids",
-            "toys": "Toys",
-            "electronics": "Electronics",
-            "home": "Home"
+            "title": "پۆل",
+            "men": "پیاوان",
+            "women": "ئافرەتان",
+            "kids": "منداڵان",
+            "toys": "یاری",
+            "electronics": "ئەلیکترۆنیات",
+            "home": "ناوماڵ"
         },
         "type": {
-            "title": "Type",
-            "new": "New",
-            "used": "Used",
-            "donated": "Donated",
-            "crafted": "Crafted"
+            "title": "جۆر",
+            "new": "نوێ",
+            "used": "بەکارهاتوو",
+            "donated": "بەخشراوە",
+            "crafted": "کاری دەستی"
         },
-        "price": "Price",
-        "apply": "Apply"
+        "price": "نرخ",
+        "apply": "جێبەجێکردن"
     },
     "hero": {
         "welcome_to_dilmun": "بەخێربێن بۆ دڵمون",
@@ -75,77 +75,77 @@
         "get_started": "دەستپێکردن"
     },
     "edit_item_form": {
-        "edit_item": "Edit Item",
-        "edit_item_info": "Edit Item Info",
-        "edit_item_image": "Edit Item Image",
-        "edit_item_name": "Edit Item Name",
-        "edit_item_type": "Edit Item Type",
-        "edit_item_category": "Edit Item Category",
-        "edit_item_description": "Edit Description",
-        "cancel": "Cancel"
+        "edit_item": "دەستکاری بابەتی",
+        "edit_item_info": "دەستکاری زانیاری بابەت",
+        "edit_item_image": "دەستکاریکردنی وێنەی بابەتی",
+        "edit_item_name": "دەستکاری ناوی بابەتی",
+        "edit_item_type": "دەستکاری جۆری بابەتی",
+        "edit_item_category": "دەستکاریکردنی پۆلی بابەتی",
+        "edit_item_description": "دەستکاری وەسف",
+        "cancel": "ڕەتکردنەوە"
     },
     "navbar": {
-        "home": "Home",
-        "products": "Products",
-        "about": "About",
-        "profile": "Profile",
-        "sign_in": "Sign In",
-        "log_out": "Log Out"
+        "home": "ماڵەوە",
+        "products": "بەرهەمەکان",
+        "about": "دەربارەی",
+        "profile": "پرۆفایل",
+        "sign_in": "چوونە ژوورەوە",
+        "log_out": "چوونە دەرەوە"
     },
     "news_letter": {
-        "subscribe_to_our_newsletter": "Subscribe to our <br /> Newsletter !",
-        "description": "Subscribe to our newsletter and stay updated",
-        "subscribe": "Subscribe"
+        "subscribe_to_our_newsletter": "سەبسکرایبی <br /> هەواڵنامەکەمان بکە !",
+        "description": "سەبسکرایبی هەواڵنامەکەمان بکە و لە نوێترین زانیاریدا بمێنەرەوە",
+        "subscribe": "سەبسکرایب بکەن"
     },
     "proof": {
-        "our_partners": "Our Partners",
-        "what_they_say": "What People are <br className='sm:block hidden' /> saying about us",
-        "everything_you_need": " Everything you need to know about our business and products anywhere on the planet.",
-        "feedback_one_title": "Client",
-        "feedback_one_description": "I've made multiple purchases and every single one has been great! The selection they offer is so varied I could spend hours looking through all the items.",
+        "our_partners": "هاوبەشەکانمان",
+        "what_they_say": "خەڵک <br className='block' /> چی دەربارەی ئێمە دەڵێن",
+        "everything_you_need": " هەموو ئەو شتانەی کە پێویستە بزانیت دەربارەی بزنس و بەرهەمەکانمان لە هەر شوێنێکی هەسارەکەدا.",
+        "feedback_one_title": "موشتەری",
+        "feedback_one_description": "چەندین کڕینم کردووە و هەر یەکێکیان زۆر باش بووە! ئەو هەڵبژاردنەی کە پێشکەشی دەکەن ئەوەندە جۆراوجۆرە کە دەمتوانی چەندین کاتژمێر بەسەر بەرم و بەناو هەموو شتەکاندا بگەڕێم.",
         "feedback_one_name": "Herman Jensen",
-        "feedback_two_title": "Client",
-        "feedback_two_description": "Every purchase felt secure and all items were received in a timely manner. What a great place to showcase products and goods of the business!",
+        "feedback_two_title": "موشتەری",
+        "feedback_two_description": "هەر کڕینێک هەستی بە پارێزراوی دەکرد و هەموو شتەکان لە کاتی خۆیدا وەرگیران. چ شوێنێکی نایاب بۆ نمایشکردنی بەرهەم و کاڵاکانی بزنسەکە!",
         "feedback_two_name": "Steve Mark",
-        "feedback_three_title": "Client",
-        "feedback_three_description": "I found that Dilmun was very professional and delivered a quality product in an efficient time frame. I would consider shopping with them again.",
+        "feedback_three_title": "موشتەری",
+        "feedback_three_description": "بۆم دەرکەوت کە دیلمون زۆر پیشەیی بووە و بەرهەمێکی کوالیتی لە چوارچێوەیەکی کاتیی کارادا گەیاندووە. من بیر لەوە دەکەمەوە کە جارێکی تر بازاڕکردن لەگەڵیان بکەم.",
         "feedback_three_name": "Kenn Gallagher"
     },
     "search_bar": {
-        "search_here": "Search here...",
-        "submit": "Submit"
+        "search_here": "لێرەدا بگەڕێ...",
+        "submit": "پێشکەشکردن"
     },
     "sign_in": {
-        "sign_in": "Sign In",
-        "email": "Email",
-        "password": "Password",
-        "dont_have_account": "Don't have an account?",
-        "sign_up": "Sign Up",
-        "or": "or",
-        "sign_in_with": "Sign in with"
+        "sign_in": "چوونە ژوورەوە",
+        "email": "ئیمەیڵ",
+        "password": "وشەی نهێنی",
+        "dont_have_account": "ئەکاونتت نییە؟",
+        "sign_up": "خۆت تۆمار بکە",
+        "or": "یان",
+        "sign_in_with": "بڕۆ ژوورەوە لەگەڵ"
     },
     "sign_up": {
-        "sign_up": "Sign Up",
-        "first_name": "First Name",
-        "last_name": "Last Name",
-        "email": "Email",
-        "password": "Password",
-        "confirm_password": "Confirm Password",
-        "already_have_account": "Already Have an Account?",
-        "sign_in": "Sign In",
-        "or": "or",
-        "sign_up_with": "Sign up with"
+        "sign_up": "خۆت تۆمار بکە",
+        "first_name": "ناوی یەکەم",
+        "last_name": "ناوی کۆتایی",
+        "email": "ئیمەیڵ",
+        "password": "وشەی نهێنی",
+        "confirm_password": "ووشەی نھێنی دووپات بكەوە",
+        "already_have_account": "پێشتر خۆت تۆمار کردووە?",
+        "sign_in": "چوونە ژوورەوە",
+        "or": "یان",
+        "sign_up_with": "خۆت تۆمار بکە لەگەڵ..."
     },
     "sort": {
-        "sort": "Sort",
-        "most_popular": "Most Popular",
-        "best_rating": "Best Rating",
-        "trending": "Trending",
-        "last_7_days": "Last 7 Days",
-        "last_30_days": "Last 30 Days",
-        "coming_soon": "Coming Soon",
-        "price_free": "Price: Free",
-        "price_low_to_high": "Price: Low to High",
-        "price_high_to_low": "Price: High to Low"
+        "sort": "ڕیزکردن",
+        "most_popular": "بەناوبانگترین",
+        "best_rating": "باشترین ڕیزبەندی",
+        "trending": "ترێندینگ",
+        "last_7_days": "٧ ڕۆژی ڕابردوو",
+        "last_30_days": "٣٠ ڕۆژی ڕابردوو",
+        "coming_soon": "بەم زووانە ",
+        "price_free": "نرخ: بەخۆڕایی",
+        "price_low_to_high": "نرخ: نزم بۆ بەرز",
+        "price_high_to_low": "نرخ: بەرز بۆ نزم"
     }
 }
