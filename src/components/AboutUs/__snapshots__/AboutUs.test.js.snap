@@ -16,7 +16,7 @@ exports[`redering AboutUS 1`] = `
     <h1
       className="text-4xl font-bold mt-0 mb-6"
     >
-      Meet Our Team
+      about_us.meet_our_team
     </h1>
   </div>
   <div
@@ -48,7 +48,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/maher-al-aqil-56895894/"
         >
           <div
@@ -80,7 +80,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/maqalaqil"
         >
           <div
@@ -139,7 +139,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/kutay-ka%C4%9Fan-%C3%B6zen/"
         >
           <div
@@ -171,7 +171,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/Iseluin"
         >
           <div
@@ -230,7 +230,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/karzan7899"
         >
           <div
@@ -262,7 +262,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/karzan7899"
         >
           <div
@@ -321,7 +321,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/dania-deyar-097558243/"
         >
           <div
@@ -353,7 +353,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/dania-diar"
         >
           <div
@@ -412,7 +412,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/rondik-mousa-646653256/"
         >
           <div
@@ -444,7 +444,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/rondikmousa"
         >
           <div
@@ -503,7 +503,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/helin-faidhan-a516a71aa/"
         >
           <div
@@ -535,7 +535,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/Helin-Faidhan"
         >
           <div
@@ -594,7 +594,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/marwa-hakmi/"
         >
           <div
@@ -626,7 +626,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/MARWAHAKMI"
         >
           <div
@@ -685,7 +685,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/mwlite/in/ayub-abdullah"
         >
           <div
@@ -717,7 +717,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/ayubabdullah"
         >
           <div
@@ -776,7 +776,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/omar-bassatni-40a762188/"
         >
           <div
@@ -808,7 +808,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/OmarBassatni97"
         >
           <div
@@ -867,7 +867,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/sarah-abou-dalal-977891250"
         >
           <div
@@ -899,7 +899,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/sarahaboudalal"
         >
           <div
@@ -958,7 +958,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/oussama-masri-558445244"
         >
           <div
@@ -990,7 +990,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/OussamaMasri"
         >
           <div
@@ -1049,7 +1049,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/mawa-idrees/"
         >
           <div
@@ -1081,7 +1081,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/mawaidris"
         >
           <div
@@ -1140,7 +1140,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/viyan-najmadin-5a27a2221/"
         >
           <div
@@ -1172,7 +1172,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/viyan-najmaldin"
         >
           <div
@@ -1231,7 +1231,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/hiba-dawood-93b5ab133"
         >
           <div
@@ -1263,7 +1263,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/haboosh92"
         >
           <div
@@ -1322,7 +1322,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/zahraa-mahmood/"
         >
           <div
@@ -1354,7 +1354,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/zahraaz"
         >
           <div
@@ -1413,7 +1413,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="http://www.linkedin.com/in/maria-theresa-azzi"
         >
           <div
@@ -1445,7 +1445,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/MariaTheresaAzzi"
         >
           <div
@@ -1504,7 +1504,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="http://www.linkedin.com/in/maria-theresa-azzi"
         >
           <div
@@ -1536,7 +1536,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/sozinadr"
         >
           <div
@@ -1595,7 +1595,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/maryam-haitham"
         >
           <div
@@ -1627,7 +1627,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/aptx-maryam"
         >
           <div
@@ -1686,7 +1686,7 @@ exports[`redering AboutUS 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/asaad-abughazaleh/"
         >
           <div
@@ -1718,7 +1718,7 @@ exports[`redering AboutUS 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/asaad-abughazaleh"
         >
           <div
@@ -1771,7 +1771,7 @@ exports[`should render cards 1`] = `
     <h1
       className="text-4xl font-bold mt-0 mb-6"
     >
-      Meet Our Team
+      about_us.meet_our_team
     </h1>
   </div>
   <div
@@ -1803,7 +1803,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/maher-al-aqil-56895894/"
         >
           <div
@@ -1835,7 +1835,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/maqalaqil"
         >
           <div
@@ -1894,7 +1894,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/kutay-ka%C4%9Fan-%C3%B6zen/"
         >
           <div
@@ -1926,7 +1926,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/Iseluin"
         >
           <div
@@ -1985,7 +1985,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/karzan7899"
         >
           <div
@@ -2017,7 +2017,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/karzan7899"
         >
           <div
@@ -2076,7 +2076,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/dania-deyar-097558243/"
         >
           <div
@@ -2108,7 +2108,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/dania-diar"
         >
           <div
@@ -2167,7 +2167,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/rondik-mousa-646653256/"
         >
           <div
@@ -2199,7 +2199,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/rondikmousa"
         >
           <div
@@ -2258,7 +2258,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/helin-faidhan-a516a71aa/"
         >
           <div
@@ -2290,7 +2290,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/Helin-Faidhan"
         >
           <div
@@ -2349,7 +2349,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/marwa-hakmi/"
         >
           <div
@@ -2381,7 +2381,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/MARWAHAKMI"
         >
           <div
@@ -2440,7 +2440,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/mwlite/in/ayub-abdullah"
         >
           <div
@@ -2472,7 +2472,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/ayubabdullah"
         >
           <div
@@ -2531,7 +2531,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/omar-bassatni-40a762188/"
         >
           <div
@@ -2563,7 +2563,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/OmarBassatni97"
         >
           <div
@@ -2622,7 +2622,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/sarah-abou-dalal-977891250"
         >
           <div
@@ -2654,7 +2654,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/sarahaboudalal"
         >
           <div
@@ -2713,7 +2713,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/oussama-masri-558445244"
         >
           <div
@@ -2745,7 +2745,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/OussamaMasri"
         >
           <div
@@ -2804,7 +2804,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/mawa-idrees/"
         >
           <div
@@ -2836,7 +2836,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/mawaidris"
         >
           <div
@@ -2895,7 +2895,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/viyan-najmadin-5a27a2221/"
         >
           <div
@@ -2927,7 +2927,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/viyan-najmaldin"
         >
           <div
@@ -2986,7 +2986,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/hiba-dawood-93b5ab133"
         >
           <div
@@ -3018,7 +3018,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/haboosh92"
         >
           <div
@@ -3077,7 +3077,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/zahraa-mahmood/"
         >
           <div
@@ -3109,7 +3109,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/zahraaz"
         >
           <div
@@ -3168,7 +3168,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="http://www.linkedin.com/in/maria-theresa-azzi"
         >
           <div
@@ -3200,7 +3200,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/MariaTheresaAzzi"
         >
           <div
@@ -3259,7 +3259,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="http://www.linkedin.com/in/maria-theresa-azzi"
         >
           <div
@@ -3291,7 +3291,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/sozinadr"
         >
           <div
@@ -3350,7 +3350,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/maryam-haitham"
         >
           <div
@@ -3382,7 +3382,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/aptx-maryam"
         >
           <div
@@ -3441,7 +3441,7 @@ exports[`should render cards 1`] = `
         className="text-center px-6 pt-4 pb-2 "
       >
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://www.linkedin.com/in/asaad-abughazaleh/"
         >
           <div
@@ -3473,7 +3473,7 @@ exports[`should render cards 1`] = `
           </div>
         </a>
         <a
-          className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+          className="inline-block text-center  bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
           href="https://github.com/asaad-abughazaleh"
         >
           <div

@@ -1,13 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render correctly: 
-    <h1 className='text-[20px] sm:text-[40px] mb-3 sm:mb-0'>Subscribe to our <br /> Newsletter !</h1>
-   1`] = `
-<h1
-  class="text-[20px] sm:text-[40px] mb-3 sm:mb-0"
+exports[`render correctly 1`] = `
+<section
+  data-testid="news-letter-section"
 >
-  Subscribe to our 
-  <br />
-   Newsletter !
-</h1>
+  <div
+    class="pt-14 pb-14 pr-10 pl-10 md:flex shadow-md justify-around bg-primary"
+  >
+    <div
+      class="text-background flex flex-col md:flex-row justify-center items-center"
+    >
+      <img
+        alt="email"
+        class="w-24 md:w-40  h-100"
+        src="https://www.freepnglogos.com/uploads/blue-email-logo-png-4.png"
+      />
+      <h1
+        class="text-[20px] sm:text-[40px] mb-3 sm:mb-0"
+      />
+    </div>
+    <div
+      class="mt-4"
+    >
+      <p
+        class="text-background mb-5"
+      >
+        news_letter.description
+      </p>
+      <div
+        class="items-center sm:flex justify-center gap-2"
+      >
+        <input
+          class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid "
+          placeholder="Write your email here"
+          type="text"
+        />
+        <button
+          class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
+          type="submit"
+        >
+          news_letter.subscribe
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 `;

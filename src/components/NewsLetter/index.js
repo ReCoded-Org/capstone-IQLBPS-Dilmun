@@ -6,7 +6,7 @@ const NewsLetter = () => {
   const { t } = useTranslation();
 
   return (
-    <section>
+    <section data-testid= 'news-letter-section'>
       <div className="pt-14 pb-14 pr-10 pl-10 md:flex shadow-md justify-around bg-primary">
         <div className="text-background flex flex-col md:flex-row justify-center items-center">
           <img

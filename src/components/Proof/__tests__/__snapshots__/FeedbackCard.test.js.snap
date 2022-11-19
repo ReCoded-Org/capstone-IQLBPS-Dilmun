@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render feedbackCard component 1`] = `
+<div
+  class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
+  data-testid="feedbackcard-div"
+>
+  <img
+    alt="double_quotes"
+    class="w-[42.6px] h-[27.6px] object-contain"
+    src="quotes.svg"
+  />
+  <p
+    class="font-poppins font-normal text-[17px] leading-[32px] text-black my-10"
+    data-testid="feedback-card-content"
+  />
+  <div
+    class="flex flex-row"
+  >
+    <img
+      class="w-[48px] h-[48px] rounded-full"
+    />
+    <div
+      class="flex flex-col ml-4"
+    >
+      <h4
+        class="font-poppins font-semibold text-[19px] leading-[32px] text-black"
+        data-testid="feedback-card-name"
+      />
+      <p
+        class="font-poppins font-normal text-[15px] leading-[24px] text-left text-dimWhite"
+        data-testid="feedback-card-title"
+      />
+    </div>
+  </div>
+</div>
+`;
