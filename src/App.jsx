@@ -4,7 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
-import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
+import {
+  error,
+  getCurrentSignedInUser,
+  status,
+  user,
+} from './features/slices/user';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
 

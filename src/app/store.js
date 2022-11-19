@@ -3,7 +3,7 @@ import { useDispatch as useReduxDispatch, useSelector as useReduxSelector } from
 import {
   configureStore
 } from '@reduxjs/toolkit';
-import userReducer from '../features/user/userSlice';
+import userReducer from '../features/slices/user';
 import itemReducer from '../features/slices/item'
 
 const store = configureStore({
