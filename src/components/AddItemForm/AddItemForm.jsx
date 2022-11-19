@@ -6,8 +6,7 @@ import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
-// import { addItem } from '../../features/slices/item';
-import { updateUser } from '../../features/user/userSlice';
+import { addItem } from '../../features/slices/item';
 
 // Validation schema
 const schema = yup.object().shape({
@@ -20,13 +19,14 @@ const schema = yup.object().shape({
 
 export default function AddItemForm() {
   const dispatch = useDispatch();
-  const { item, isLoading, error } = useSelector((state) => state.item);
+  const { item, userItems, isLoading } = useSelector((state) => state.item);
   const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
-    console.log('user', user);
-    console.log('item', item, error, isLoading);
-  }, [user, item]);
+    if (item) {
+      console.log(userItems);
+    }
+  }, [item]);
 
   const {
     register,
@@ -43,11 +43,7 @@ export default function AddItemForm() {
   const onSubmit = (values) => {
     setAddress(false);
     getValues(['country', 'city']);
-    console.log('values', values);
-    dispatch(
-      updateUser({ ...user, city: values.city, country: values.country })
-    );
-    // dispatch(addItem({ item: values, user }));
+    dispatch(addItem({ item: values, onwer: user }));
   };
 
   return (
