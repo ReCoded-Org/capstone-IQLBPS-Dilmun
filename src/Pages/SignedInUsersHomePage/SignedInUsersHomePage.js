@@ -1,9 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { BsFillCartFill } from 'react-icons/bs'
+import { IoIosAddCircle } from 'react-icons/io'
 import { user } from '../../features/user/userSlice'
 import { ADD_ITEM_ROUTE, PRODUCT_ROUTE } from '../../route'
 import ItemCard from './ItemCard'
+
 
 
 const SignedInUsersHomePage = () => {
@@ -15,9 +18,10 @@ const SignedInUsersHomePage = () => {
                     <h1 className='text-2xl md:text-5xl font-bold text-center'>Welcome back, </h1>
                     <h1 className='text-2xl md:text-5xl font-bold text-center'> {userData.firstName} {userData.lastName}</h1>
                     <h3 className='text-l md:text-2xl font-semi-bold text-center'> Dilmun is your best choice to buy or sell anything</h3>
-                    <div className='flex flex-row flex-wrap gap-4 justify-center  md:text-2xl m-4'>
-                        <Link className='px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={PRODUCT_ROUTE}>More Products</Link>
-                        <Link className='px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300' to={ADD_ITEM_ROUTE}>Add New Item</Link>
+                    <div className='flex flex-col items-center flex-wrap gap-4 justify-center  md:text-2xl m-4'>
+                        <span className='flex  items-center gap-2'>Can&apos;t find what you need press here<Link to={PRODUCT_ROUTE}><BsFillCartFill size={30} className='hover:text-primary transition duration-300' /></Link> </span>
+                        <span className='flex  items-center gap-2'>Or add your onw <Link to={ADD_ITEM_ROUTE}><IoIosAddCircle size={30} className='hover:text-primary transition duration-300' /></Link> </span>
+
                     </div>
                 </div>
             </div>
