@@ -42,25 +42,21 @@ export default function AddItemForm() {
     resolver: yupResolver(schema),
   });
 
-  // const [address, setAddress] = useState(true);
 
   const onSubmit = async (values) => {
     const userData = doc(db, 'Users', auth.currentUser.uid);
+    if (!userThing.address){
     await setDoc(
       userData,
       { address: { city: values.city, country: values.country } },
       { merge: true }
-    );
+    );}
     dispatch(addItem({ item: values, owner: userThing }));
   };
-  // dispatch(addItem({ item: values, user }));
-  // const [address, setAddress] = useState(true);
+
   const [type, setType] = useState(ITEM_TYPES[0]);
 
-  // const onSubmit = (values) => {
-  //   setAddress(false);
-  //   getValues(['country', 'city']);
-  // };
+
 
   return (
     <div className="bg-background" data-testid="add-item-form">
@@ -185,9 +181,7 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
-                {/* TODO: render conditionally: if the user has set his address the 1st time he added a product,
-                save his address info and do not show this part of the form again. 
-                however, make those info display into every product he adds */}
+
                 {!userThing.address &&(
                 <div>
                   <h1 className="block text-sm font-medium text-background mb-3">
