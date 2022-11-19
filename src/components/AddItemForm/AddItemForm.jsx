@@ -19,7 +19,9 @@ const schema = yup.object().shape({
 
 export default function AddItemForm() {
   const dispatch = useDispatch();
-  const { item, userItems, isLoading } = useSelector((state) => state.item);
+  const { item, userItems, isLoading, error } = useSelector(
+    (state) => state.item
+  );
   const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
@@ -199,6 +201,34 @@ export default function AddItemForm() {
                 <SubmitButton buttonText="Add New Item" loading={isLoading} />
               </div>
             </div>
+            {error && (
+              <div className="mt-4">
+                <div className="rounded-md bg-red-50 p-4">
+                  <div className="flex">
+                    <div className="flex-shrink-0">
+                      <svg
+                        className="h-5 w-5 text-red-400"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M10 12a  2 2 0 100-4  2 2 0 000 4z" />
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-sm font-medium text-red-800">
+                        {error.message}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </form>
