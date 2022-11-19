@@ -1,73 +1,73 @@
 {
     "about_us": {
-        "meet_our_team": "Meet our team"
+        "meet_our_team": "التق بفريقنا"
     },
     "add_item_button": {
-        "add_item": "Add Item"
+        "add_item": "اضافة عنصر"
     },
     "add_item_form": {
-        "product_info": "Product Info",
-        "note": "Your product will be added to the store after filling the required information.",
-        "item_image": "Item Image",
-        "upload_a_file": "Upload a file",
-        "or_drag_and_drop": "or drag and drop",
-        "item_name": "Item Name",
-        "item_price": "Price",
-        "item_type": "Item Type",
-        "item_category": "Item Category",
-        "item_description": "Description",
-        "adress_info": "Address Info",
-        "country": "Country",
-        "city": "City",
-        "add_new_item": "Add New Item"
+        "product_info": "معلومات المنتج",
+        "note": "ستتم إضافة منتجك إلى المتجر بعد تعبئة البيانات المطلوبة.",
+        "item_image": "صورة البند",
+        "upload_a_file": "قم بتحميل ملف",
+        "or_drag_and_drop": "أو السحب والإفلات",
+        "item_name": "اسم العنصر",
+        "item_price": "سعر",
+        "item_type": "نوع العنصر",
+        "item_category": "العنصر فئة",
+        "item_description": "وصف",
+        "adress_info": "معلومات العنوان",
+        "country": "بلد",
+        "city": "مدينة",
+        "add_new_item": "اضافة عنصر جديد"
     },
     "overlap_text": {
-        "check_out": "Watch Full Video",
-        "watch_full_video": "Watch Full Video"
+        "check_out": "شاهد الفيديو كاملاً",
+        "watch_full_video": "شاهد الفيديو كاملاً"
     },
     "faq": {
-        "frequently_asked_questions": "Frequently Asked Questions",
-        "question_one_title": "What is the return policy?",
-        "question_one_answer": "There must be a deal between the customers and the sellers to determine how returning items should be and our staff is not responsible of it.",
-        "question_two_title": "Can I cancel my order?",
-        "question_two_answer": "Sure! you can cancel your order within first 12 hours.",
-        "question_three_title": "What methods of payment you take?",
-        "question_three_answer": "You can pay online via credit card or pay at the door while dealing with the seller.",
-        "question_four_title": "How do I track my order?",
-        "question_four_answer": "You can have the phone number of the company which does the delivering and ask them where your order is.",
-        "question_five_title": "What is the policy for late/non-delivery of items ordered online?",
-        "question_five_answer": "Our customer service team will be there alwyas to resolve your issue, you can contact us."
+        "frequently_asked_questions": "الأسئلة المتكررة",
+        "question_one_title": "هل يمكنني الحصول على معلومات عن المنتج قبل الشراء؟",
+        "question_one_answer": "يجب أن يكون هناك اتفاق بين العملاء والبائعين لتحديد كيفية إرجاع العناصر وموظفينا ليسوا مسؤولين عنها.",
+        "question_two_title": "هل يمكنني إلغاء طلبي؟",
+        "question_two_answer": "بالتأكيد! يمكنك إلغاء طلبك في غضون 12 ساعة الأولى.",
+        "question_three_title": "ما هي طرق الدفع التي تأخذها؟",
+        "question_three_answer": "يمكنك الدفع عبر الإنترنت عن طريق بطاقة الائتمان أو الدفع عند الباب أثناء التعامل مع البائع.",
+        "question_four_title": "كيف أتتبع طلبي؟",
+        "question_four_answer": "يمكنك الحصول على رقم هاتف الشركة التي تقوم بالتوصيل واسألهم عن مكان طلبك.",
+        "question_five_title": "ما هي سياسة التأخر في تسليم / عدم تسليم العناصر المطلوبة عبر الإنترنت؟",
+        "question_five_answer": "سيكون فريق خدمة العملاء لدينا متواجدًا دائمًا لحل مشكلتك ، يمكنك الاتصال بنا."
     },
     "features": {
-        "designed_to_meet_your_needs": "Designed to meet your needs.",
-        "description": "Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.",
-        "feature_one_title": "Filter",
-        "feature_one_description": "Filter your items to find the right information.",
-        "feature_two_title": "Multi Language",
-        "feature_two_description": "Use the website in your preferred language.",
-        "feature_three_title": "Meet",
-        "feature_three_description": "Meet new people and make new connections."
+        "designed_to_meet_your_needs": "مصممة لتلبية احتياجاتك.",
+        "description": "هنا في دلمون نبيع العديد من المنتجات للعملاء ونقبل التبرعات لمساعدة المحتاجين.",
+        "feature_one_title": "منقي",
+        "feature_one_description": "تصفية العناصر الخاصة بك للعثور على المعلومات الصحيحة.",
+        "feature_two_title": "متعدد اللغات",
+        "feature_two_description": "استخدم الموقع بلغتك المفضلة.",
+        "feature_three_title": "يجتمع",
+        "feature_three_description": "تعرف على أشخاص جدد وقم بإجراء اتصالات جديدة."
     },
     "filter": {
-        "filters": "Filters",
+        "filters": "المرشحات",
         "category": {
-            "title": "Category",
-            "men": "Men",
-            "women": "Women",
-            "kids": "Kids",
-            "toys": "Toys",
-            "electronics": "Electronics",
-            "home": "Home"
+            "title": "الفئة",
+            "men": "رجال",
+            "women": "النساء",
+            "kids": "أطفال",
+            "toys": "ألعاب الأطفال",
+            "electronics": "إلكترونيات",
+            "home": "عنصر المنزل"
         },
         "type": {
-            "title": "Type",
-            "new": "New",
-            "used": "Used",
-            "donated": "Donated",
-            "crafted": "Crafted"
+            "title": "أنواع",
+            "new": "الجديد",
+            "used": "تستخدم",
+            "donated": "تبرعت",
+            "crafted": "مصنوع"
         },
-        "price": "Price",
-        "apply": "Apply"
+        "price": "سعر",
+        "apply": "يتقدم"
     },
     "hero": {
         "welcome_to_dilmun": "مرحبا بكم في دلمون",
@@ -75,77 +75,77 @@
         "get_started": "البدء"
     },
     "edit_item_form": {
-        "edit_item": "Edit Item",
-        "edit_item_info": "Edit Item Info",
-        "edit_item_image": "Edit Item Image",
-        "edit_item_name": "Edit Item Name",
-        "edit_item_type": "Edit Item Type",
-        "edit_item_category": "Edit Item Category",
-        "edit_item_description": "Edit Description",
-        "cancel": "Cancel"
+        "edit_item": "تعديل عنصر",
+        "edit_item_info": "تحرير معلومات العنصر",
+        "edit_item_image": "تحرير صورة العنصر",
+        "edit_item_name": "تحرير اسم العنصر",
+        "edit_item_type": "تحرير نوع العنصر",
+        "edit_item_category": "تحرير فئة العنصر",
+        "edit_item_description": "تحرير الوصف",
+        "cancel": "إلغاء"
     },
     "navbar": {
-        "home": "Home",
-        "products": "Products",
-        "about": "About",
-        "profile": "Profile",
-        "sign_in": "Sign In",
-        "log_out": "Log Out"
+        "home": "الصفحة الرئيسية",
+        "products": "منتجات",
+        "about": "حول",
+        "profile": "الملف الشخصي",
+        "sign_in": "تسجيل الدخول",
+        "log_out": "تسجيل خروج"
     },
     "news_letter": {
-        "subscribe_to_our_newsletter": "Subscribe to our <br /> Newsletter !",
-        "description": "Subscribe to our newsletter and stay updated",
-        "subscribe": "Subscribe"
+        "subscribe_to_our_newsletter": "اشترك في النشرة<br /> الإخبارية",
+        "description": "اشترك في النشرة الإخبارية لدينا وابقى على اطلاع",
+        "subscribe": "اشترك"
     },
     "proof": {
-        "our_partners": "Our Partners",
-        "what_they_say": "What People are <br className='sm:block hidden' /> saying about us",
-        "everything_you_need": " Everything you need to know about our business and products anywhere on the planet.",
-        "feedback_one_title": "Client",
-        "feedback_one_description": "I've made multiple purchases and every single one has been great! The selection they offer is so varied I could spend hours looking through all the items.",
+        "our_partners": "شركائنا",
+        "what_they_say": "ما يقوله الناس <br className='block' /> عنا",
+        "everything_you_need": " كل ما تحتاج لمعرفته حول أعمالنا ومنتجاتنا في أي مكان على هذا الكوكب.",
+        "feedback_one_title": "عميل",
+        "feedback_one_description": "لقد أجريت عمليات شراء متعددة وكانت كل عملية شراء رائعة! الاختيار الذي يقدمونه متنوع للغاية ويمكنني قضاء ساعات في البحث في جميع العناصر.",
         "feedback_one_name": "Herman Jensen",
-        "feedback_two_title": "Client",
-        "feedback_two_description": "Every purchase felt secure and all items were received in a timely manner. What a great place to showcase products and goods of the business!",
+        "feedback_two_title": "عميل",
+        "feedback_two_description": "شعرت كل عملية شراء بالأمان وتم استلام جميع العناصر في الوقت المناسب. يا له من مكان رائع لعرض منتجات وسلع العمل!",
         "feedback_two_name": "Steve Mark",
-        "feedback_three_title": "Client",
-        "feedback_three_description": "I found that Dilmun was very professional and delivered a quality product in an efficient time frame. I would consider shopping with them again.",
+        "feedback_three_title": "عميل",
+        "feedback_three_description": "لقد وجدت أن دلمون كانت محترفة للغاية وقدمت منتجًا عالي الجودة في إطار زمني فعال. سأفكر في التسوق معهم مرة أخرى.",
         "feedback_three_name": "Kenn Gallagher"
     },
     "search_bar": {
-        "search_here": "Search here...",
-        "submit": "Submit"
+        "search_here": "ابحث هنا...",
+        "submit": "يُقدِّم"
     },
     "sign_in": {
-        "sign_in": "Sign In",
-        "email": "Email",
-        "password": "Password",
-        "dont_have_account": "Don't have an account?",
-        "sign_up": "Sign Up",
-        "or": "or",
-        "sign_in_with": "Sign in with"
+        "sign_in": "تسجيل الدخول",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "dont_have_account": "ليس لديك حساب؟ ",
+        "sign_up": "اشتراك",
+        "or": "أو",
+        "sign_in_with": "سجل دخولك بواسطة"
     },
     "sign_up": {
-        "sign_up": "Sign Up",
-        "first_name": "First Name",
-        "last_name": "Last Name",
-        "email": "Email",
-        "password": "Password",
-        "confirm_password": "Confirm Password",
-        "already_have_account": "Already Have an Account?",
-        "sign_in": "Sign In",
-        "or": "or",
-        "sign_up_with": "Sign up with"
+        "sign_up": "اشتراك",
+        "first_name": "الاسم الاول",
+        "last_name": "الكنية",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "confirm_password": "تأكيد كلمة المرور",
+        "already_have_account": "هل لديك حساب؟",
+        "sign_in": "الدخول",
+        "or": "أو",
+        "sign_up_with": "سجل مع"
     },
     "sort": {
-        "sort": "Sort",
-        "most_popular": "Most Popular",
-        "best_rating": "Best Rating",
-        "trending": "Trending",
-        "last_7_days": "Last 7 Days",
-        "last_30_days": "Last 30 Days",
-        "coming_soon": "Coming Soon",
-        "price_free": "Price: Free",
-        "price_low_to_high": "Price: Low to High",
-        "price_high_to_low": "Price: High to Low"
+        "sort": "فرز",
+        "most_popular": "الأكثر شهرة",
+        "best_rating": "افضل تقييم",
+        "trending": "الشائع",
+        "last_7_days": "اخر 7 ايام",
+        "last_30_days": "آخر 30 يومًا",
+        "coming_soon": "قريبا",
+        "price_free": "مجاني",
+        "price_low_to_high": "السعر من الارخص للاعلى",
+        "price_high_to_low": "السعر الاعلى الى الادنى"
     }
 }
