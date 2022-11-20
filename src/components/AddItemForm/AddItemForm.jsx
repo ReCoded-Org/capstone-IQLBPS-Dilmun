@@ -36,6 +36,7 @@ export default function AddItemForm() {
     handleSubmit,
     formState: { errors },
     control,
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
@@ -57,6 +58,7 @@ export default function AddItemForm() {
       );
     }
     dispatch(addItem({ item: values, owner: userThing, file: itemImage }));
+    reset();
   };
 
   const [type, setType] = useState(ITEM_TYPES[0]);
