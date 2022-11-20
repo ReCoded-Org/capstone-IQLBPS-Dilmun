@@ -6,7 +6,6 @@ const Testimonials = () => (
         id="clients"
         className="sm:py-5 py-4 flex justify-center items-center flex-col relative"
     >
-        {/* <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient bottom-40" /> */}
         <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-4 mb-2 relative z-[1]">
             <h2 className="font-poppins font-semibold xs:text-[48px] text-[40px] text-black xs:leading-[76.8px] leading-[66.8px] w-full">
                 What People are <br className="sm:block hidden" /> saying about us
@@ -18,7 +17,6 @@ const Testimonials = () => (
                 </p>
             </div>
         </div>
-        {/* <div className="flex flex-col justify-center w-full feedback-container relative z-[1] sm:flex-row sm:items-center"> */}
         <div className="container flex flex-wrap sm:justify-center justify-center w-full feedback-container relative z-[1] p-6">
             {feedback.map((card) => (
                 <FeedbackCard key={card.id} {...card} />
