@@ -48,7 +48,7 @@ const NavBarV2 = () => {
         }, [location.key]);
 
   return (
-    <div className='fixed w-full text-primary font-bold flex justify-between z-10 p-1 items-center bg-white/20'>
+    <div className='fixed w-full text-primary font-bold flex justify-between top-0 z-10 p-1 items-center bg-white/20'>
         <NavLink to={HOME_ROUTE}>
             <img
               src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
