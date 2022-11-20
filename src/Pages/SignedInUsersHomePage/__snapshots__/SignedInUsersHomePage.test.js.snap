@@ -6,7 +6,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
   data-testid="SignedInUseresHomePage"
 >
   <div
-    class=" bg-home-page-for-signed-in-users bg-cover w-full min-h-[40vh] md:min-h-[7p0vh] text-background p-5"
+    class=" bg-home-page-for-signed-in-users bg-cover bg-center w-full min-h-[40vh] md:min-h-[7p0vh] text-background p-5"
   >
     <div
       class=" mb-3 md:mb-0 pt-5 md:pt-14 md:pb-6 w-full"
@@ -28,24 +28,62 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
          Dilmun is your best choice to buy or sell anything
       </h3>
       <div
-        class="text-center md:text-2xl m-4"
+        class="flex flex-col items-center flex-wrap gap-4 justify-center  md:text-2xl m-4"
       >
-        <a
-          class="px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300"
-          href="/products"
+        <span
+          class="flex  items-center gap-2"
         >
-          More Products
-        </a>
-        <a
-          class="px-3 py-2 rounded bg-secondary ml-2 hover:text-tertiary hover:bg-primary transition duration-300"
-          href="/add-item"
+          Can't find what you need press here
+          <a
+            href="/products"
+          >
+            <svg
+              class="hover:text-secondary transition duration-300"
+              fill="currentColor"
+              height="30"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </a>
+           
+        </span>
+        <span
+          class="flex  items-center gap-2"
         >
-          Add New Item
-        </a>
+          Or add your onw 
+          <a
+            href="/add-item"
+          >
+            <svg
+              class="hover:text-secondary transition duration-300"
+              fill="currentColor"
+              height="30"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm90.5 224H272v74.5c0 8.8-7.2 16-16 16-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3V272h-74.5c-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3 0-8.8 7.2-16 16-16H240v-74.5c0-8.8 7.2-16 16-16s16 7.2 16 16V240h74.5c8.8 0 16 7.2 16 16s-7.2 16-16 16z"
+              />
+            </svg>
+          </a>
+           
+        </span>
       </div>
     </div>
   </div>
-  <div>
+  <div
+    class="mx-4 lg:mx-0"
+  >
     <h1
       class="text-2xl md:text-3xl font-bold mt-2 mb-2"
     >

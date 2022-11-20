@@ -1,22 +1,12 @@
-import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
-import _ from 'lodash';
 import NavBar from './components/NavBar/NavBar';
-import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import Footer from './components/Footer/Footer';
-import SignInPage from './Pages/SignInPage/SignInPage';
-import SignUpPage from './Pages/SignUpPage/SignUpPage';
-import HomePage from './Pages/HomePage/HomePage';
-import AddItemPage from './Pages/AddItemPage/AddItemPage';
-import FilterPage from './Pages/FilterPage/FilterPage';
-import FaqPage from './Pages/FaqPage/FaqPage';
 import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
-import SignedInUsersHomePage from './Pages/SignedInUsersHomePage/SignedInUsersHomePage';
-
+import AnimationProvider from './components/animations/AnimationProvider';
 
 function App() {
   const dispatch = useDispatch();
@@ -40,16 +30,7 @@ function App() {
   return (
     <div className="App  ">
       <NavBar />
-      <Routes>
-        {!_.isEmpty(userData) ? <Route path='/' element={<SignedInUsersHomePage />} /> : <Route path='/' element={<HomePage />} />}
-        {/* <Route path="/" element={<HomePage/>} /> */}
-        <Route path="/signin" element={<SignInPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/products" element={<FilterPage />} />
-        <Route path="/about" element={<AboutUsPage />} />
-        <Route path="/faq" element={<FaqPage />} />
-        <Route path="/add-item" element={<AddItemPage />} />
-      </Routes>
+      <AnimationProvider />
       <EditItemModal />
       <Footer />
     </div>

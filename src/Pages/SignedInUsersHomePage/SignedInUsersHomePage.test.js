@@ -10,8 +10,8 @@ test('SignedInUsersHomePage renders without crashing', () => {
     <Provider store={store}>
       <Router>
         <SignedInUsersHomePage>
-            <ItemCard />
-        </SignedInUsersHomePage>      
+          <ItemCard />
+        </SignedInUsersHomePage>
       </Router>
     </Provider>
   );
