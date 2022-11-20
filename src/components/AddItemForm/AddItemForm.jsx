@@ -133,7 +133,7 @@ export default function AddItemForm() {
                         errors={errors?.price}
                         {...register('price')}
                       >
-                        Price
+                        Price $
                       </Input>
                     </div>
                   </div>

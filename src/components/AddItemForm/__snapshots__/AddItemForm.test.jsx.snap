@@ -134,7 +134,7 @@ exports[`Add item form component rendered correctly 1`] = `
                       class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                       for="price"
                     >
-                      Price
+                      Price $
                     </label>
                   </div>
                 </div>
