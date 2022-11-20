@@ -15,10 +15,6 @@ function ImageSlider({ slides }) {
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
     }
-    // Now the the image and the url is passed correctly to the ImageSlider component but it's not renderd for some reason 
-    // also both functions of go to previous and go to next are working correctly 
-    console.log('img src:', imageSrc);
-    console.log(slides[currentIndex]);
 
     return (
         <div className="w-full h-full p-10 relative">
