@@ -174,6 +174,24 @@ export const getCurrentSignedInUser = createAsyncThunk(
     }
   }
 );
+
+export const updateUser = createAsyncThunk(
+  'user/updateUser',
+  async (payload, {
+    rejectWithValue
+  }) => {
+    try {
+      const docRef = doc(db, 'Users', payload.id);
+      await setDoc(docRef, payload, {
+        merge: true,
+      });
+      return JSON.stringify(payload);
+    } catch (error) {
+      return rejectWithValue(JSON.stringify(error));
+    }
+  }
+);
+
 const userSlice = createSlice({
   name: 'user',
   initialState,
@@ -296,6 +314,24 @@ const userSlice = createSlice({
         state.user = {};
       })
       .addCase(Signout.rejected, (state, { payload }) => {
+        state.status = 'failed';
+        state.error = JSON.parse(payload);
+      })
+      // updateUser
+      .addCase(updateUser.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+      })
+      .addCase(updateUser.fulfilled, (state, {
+        payload
+      }) => {
+        state.status = 'succeeded';
+        state.error = null;
+        state.user = JSON.parse(payload);
+      })
+      .addCase(updateUser.rejected, (state, {
+        payload
+      }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
       });

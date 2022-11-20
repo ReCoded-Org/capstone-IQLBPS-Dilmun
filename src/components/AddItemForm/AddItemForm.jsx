@@ -2,14 +2,12 @@ import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { setDoc, doc } from 'firebase/firestore';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
 import { addItem } from '../../features/slices/item';
-import { user } from '../../features/slices/user';
-import { auth, db } from '../../firebase-config';
+import { user, updateUser } from '../../features/slices/user';
 // import { image } from '../../assets';
 
 // Validation schema
@@ -48,13 +46,10 @@ export default function AddItemForm() {
     }
   }, [item]);
 
-  const onSubmit = async (values) => {
-    const userData = doc(db, 'Users', auth.currentUser.uid);
+  const onSubmit = (values) => {
     if (!userThing.address) {
-      await setDoc(
-        userData,
-        { address: { city: values.city, country: values.country } },
-        { merge: true }
+      dispatch(
+        updateUser({ address: { city: values.city, country: values.country } })
       );
     }
     dispatch(addItem({ item: values, owner: userThing, file: itemImage }));
