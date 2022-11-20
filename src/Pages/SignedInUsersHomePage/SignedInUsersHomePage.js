@@ -5,7 +5,6 @@ import { BsFillCartFill } from 'react-icons/bs'
 import { IoIosAddCircle } from 'react-icons/io'
 import { user } from '../../features/user/userSlice'
 import { ADD_ITEM_ROUTE, PRODUCT_ROUTE } from '../../route'
-import ItemCard from './ItemCard'
 import ImageSlider from './ImageSlider'
 
 
@@ -13,11 +12,11 @@ import ImageSlider from './ImageSlider'
 const SignedInUsersHomePage = () => {
     const userData = useSelector(user);
     const slides = [
-        { url: "https://placeimg.com/800/480/tech/grayscale"},
-        { url: "https://placeimg.com/800/480/arch/sepia"},
-        { url: "https://placeimg.com/800/480/tech/grayscale"},
-        { url: "https://placeimg.com/800/480/animals/sepia"},
-        { url: "https://placeimg.com/800/480/tech/sepia"}
+        "https://placeimg.com/800/480/tech/grayscale",
+        "https://placeimg.com/800/480/arch/sepia",
+        "https://placeimg.com/800/480/tech/grayscale",
+        "https://placeimg.com/800/480/animals/sepia",
+        "https://placeimg.com/800/480/tech/sepia"
     ];
 
     return (
@@ -30,27 +29,17 @@ const SignedInUsersHomePage = () => {
                 </div>
             </div>
             <div>
-            <div className='bg-primary bg-cover w-full text-background items-center justify-center  md:text-2xl p-5'>
-                        <span className=' flex items-center justify-center gap-2 font-bold'>Can&apos;t find what you need press here<Link to={PRODUCT_ROUTE}><BsFillCartFill size={40} className='hover:text-secondary transition duration-300' /></Link> </span>
-                        <span className=' flex items-center justify-center gap-2 font-bold'>Or add your onw <Link to={ADD_ITEM_ROUTE}><IoIosAddCircle size={40} className='hover:text-secondary transition duration-300' /></Link> </span>
-                    </div>
+                <div className='bg-primary bg-cover w-full text-background items-center justify-center  md:text-2xl p-5'>
+                    <span className=' flex items-center justify-center gap-2 font-bold'>Can&apos;t find what you need press here<Link to={PRODUCT_ROUTE}><BsFillCartFill size={40} className='hover:text-secondary transition duration-300' /></Link> </span>
+                    <span className=' flex items-center justify-center gap-2 font-bold'>Or add your onw <Link to={ADD_ITEM_ROUTE}><IoIosAddCircle size={40} className='hover:text-secondary transition duration-300' /></Link> </span>
+                </div>
             </div>
 
             <div>
                 <h1 className='text-2xl md:text-3xl font-bold mt-2 mb-2 text-center'>Best selling products</h1>
                 <div className='flex flex-row w-full p-10 h-full'>
-                    <ImageSlider slides = {slides}/>
+                    <ImageSlider slides={slides} />
                 </div>
-            </div>
-
-            <div> 
-                <h1 className='text-2xl md:text-3xl font-bold mt-2 mb-2'>New arrival products</h1>
-                 <div className='flex flex-col md:grid grid-cols-3 gap-6 mt-2'>
-                    <ItemCard imgSrc="https://placeimg.com/300/300/architecture" />
-                    <ItemCard imgSrc="https://placeimg.com/300/300/animals" />
-                    <ItemCard imgSrc="https://placeimg.com/300/300/architecture" />
-                </div> 
-
             </div>
 
         </div>
