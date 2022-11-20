@@ -148,6 +148,7 @@
         "price_low_to_high": "Price: Low to High",
         "price_high_to_low": "Price: High to Low"
     },
+    "not_found": " Maybe this page moved? Got deleted? <br />Is hiding out in quarantine? Never existed in the first place?",
     "error": {
         "title": "Please insert the item name.",
         "price": "Please insert a positive number.",
