@@ -19,11 +19,7 @@ Object {
         </div>
         <div
           class="text-center text-2xl text-primary subpixel-antialiased font-sans-serif"
-        >
-          Maybe this page moved? Got deleted? 
-          <br />
-          Is hiding out in quarantine? Never existed in the first place?
-        </div>
+        />
       </div>
     </div>
   </body>,
@@ -42,11 +38,7 @@ Object {
       </div>
       <div
         class="text-center text-2xl text-primary subpixel-antialiased font-sans-serif"
-      >
-        Maybe this page moved? Got deleted? 
-        <br />
-        Is hiding out in quarantine? Never existed in the first place?
-      </div>
+      />
     </div>
   </div>,
   "debug": [Function],
