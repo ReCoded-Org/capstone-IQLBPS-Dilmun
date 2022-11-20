@@ -1,4 +1,3 @@
-// import { async } from '@firebase/util';
 import {
   createAsyncThunk,
   createSlice
@@ -26,8 +25,6 @@ const initialState = {
   status: 'idle',
   error: null,
 };
-
-
 
 export const signInWithGoogle = createAsyncThunk(
   'user/signInWithGoogle',

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -6,9 +6,8 @@ import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
-import { addItem } from '../../features/slices/item';
 import { user, updateUser } from '../../features/slices/user';
-// import { image } from '../../assets';
+import { addItem } from '../../features/slices/item';
 
 // Validation schema
 const schema = yup.object().shape({
@@ -20,12 +19,13 @@ const schema = yup.object().shape({
 });
 
 export default function AddItemForm() {
+  const [type, setType] = useState(ITEM_TYPES[0]);
   const [itemImage, setItemImage] = useState(
     'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
   );
 
   const dispatch = useDispatch();
-  const { item, userItems, isLoading, error } = useSelector(
+  const { isLoading, error } = useSelector(
     (state) => state.item
   );
   const userThing = useSelector(user);
@@ -39,13 +39,6 @@ export default function AddItemForm() {
     resolver: yupResolver(schema),
   });
 
-  useEffect(() => {
-    if (item) {
-      // eslint-disable-next-line no-console
-      console.log(userItems);
-    }
-  }, [item]);
-
   const onSubmit = (values) => {
     if (!userThing.address) {
       dispatch(
@@ -55,8 +48,6 @@ export default function AddItemForm() {
     dispatch(addItem({ item: values, owner: userThing, file: itemImage }));
     reset();
   };
-
-  const [type, setType] = useState(ITEM_TYPES[0]);
 
   return (
     <div className="bg-background" data-testid="add-item-form">
