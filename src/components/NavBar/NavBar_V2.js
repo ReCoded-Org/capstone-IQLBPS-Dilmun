@@ -9,19 +9,24 @@ import {
     NavLink,
     useLocation
 } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
-// import _ from 'lodash';
+import {
+    useDispatch,
+    useSelector
+} from 'react-redux';
+import _ from 'lodash';
 import NavItems from './NavItems';
 import LanguageButton from '../LanguageButton/LanguageButton';
 import {
     ABOUT_ROUTE,
     HOME_ROUTE,
-    LOG_OUT,
     PRODUCT_ROUTE,
     PROFILE,
     SIGN_IN_ROUTE
 } from '../../route';
-// import { Signout, user } from '../../features/user/userSlice';
+import {
+    Signout,
+    user
+} from '../../features/user/userSlice';
 
 const NavBarV2 = () => {
 
@@ -34,8 +39,8 @@ const NavBarV2 = () => {
 
         const [open, setOpen] = useState(false);
         const location = useLocation();
-        // const dispatch = useDispatch();
-        // const userData = useSelector(user);
+        const dispatch = useDispatch();
+        const userData = useSelector(user);
 
         const closeNavBar = () => {
             if (open) {
@@ -56,36 +61,51 @@ const NavBarV2 = () => {
               alt="logo"
             />
         </NavLink>
-        <nav>
             <div className='absolute right-7 top-8 md:hidden text-4xl'>
                 <FaBars onClick={showItems} className='scale-150 cursor-pointer'/>
             </div>
                 <ul className='hidden md:flex gap-8 p-6 uppercase'>
+
                 <li className='hover:text-secondary duration-300'>
                     <NavLink to={HOME_ROUTE}>Home</NavLink>
                 </li>
+
                 <li className='hover:text-secondary duration-300'>
-                    <NavLink to={PRODUCT_ROUTE}>Products</NavLink>
+                    {!_.isEmpty(userData) ? (
+                    <NavLink to={PRODUCT_ROUTE}>Products</NavLink>):null
+                    }
                     </li>
+
                 <li className='hover:text-secondary duration-300'>
                     <NavLink to={ABOUT_ROUTE}>About</NavLink>
                     </li>
+
+                {!_.isEmpty(userData) ? (
                 <li className='hover:text-secondary duration-300'>
                     <NavLink to={PROFILE}>Profile</NavLink>
                     </li>
+                ) : null}
+
+                {!_.isEmpty(userData) ? (
                 <li className='hover:text-secondary duration-300'>
                     <NavLink to={SIGN_IN_ROUTE}>Sign In</NavLink>
                     </li>
+                ) : null }
+
+                {!_.isEmpty(userData) ? (
                 <li className='hover:text-secondary duration-300'>
-                    <NavLink to={LOG_OUT}>Log Out</NavLink>
+                    <NavLink to='/'
+                    onClick={() => {
+                    dispatch(Signout());
+                    }}
+                    >
+                    Log Out</NavLink>
                     </li>
+                ) : null }
                 <LanguageButton closeNavbar={closeNavBar} />
                 </ul>
 
                 <NavItems showItems={showItems} active={active}/>
-
-        </nav>
-
     </div>
   );
 };

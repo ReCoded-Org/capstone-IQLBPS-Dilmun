@@ -9,23 +9,30 @@ import {
     NavLink,
     useLocation
 } from 'react-router-dom';
+import _ from 'lodash';
+import { useDispatch, useSelector } from 'react-redux';
 import {
     ABOUT_ROUTE,
     HOME_ROUTE,
-    LOG_OUT,
     PRODUCT_ROUTE,
     PROFILE,
     SIGN_IN_ROUTE
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
+import {
+    Signout,
+    user
+} from '../../features/user/userSlice';
 
 const NavItems = ({
         showItems,
         active
     }) => {
 
+        const userData = useSelector(user);
         const [open, setOpen] = useState(false);
         const location = useLocation();
+        const dispatch = useDispatch();
 
         const closeNavBar = () => {
             if (open) {
@@ -43,21 +50,36 @@ const NavItems = ({
         <li className='hover:text-secondary duration-300'>
             <NavLink to={HOME_ROUTE}>Home</NavLink>
             </li>
-        <li className='hover:text-secondary duration-300'>
-            <NavLink to={PRODUCT_ROUTE}>Products</NavLink>
+            <li className='hover:text-secondary duration-300'>
+            {!_.isEmpty(userData) ? (
+            <NavLink to={PRODUCT_ROUTE}>Products</NavLink>):null
+            }
             </li>
         <li className='hover:text-secondary duration-300'>
             <NavLink to={ABOUT_ROUTE}>About</NavLink>
             </li>
+        {!_.isEmpty(userData) ? (
         <li className='hover:text-secondary duration-300'>
             <NavLink to={PROFILE}>Profile</NavLink>
-            </li>
+                </li>
+            ) : null}
+
+        {!_.isEmpty(userData) ? (
         <li className='hover:text-secondary duration-300'>
             <NavLink to={SIGN_IN_ROUTE}>Sign In</NavLink>
-            </li>
+                </li>
+            ) : null }
+
+        {!_.isEmpty(userData) ? (
         <li className='hover:text-secondary duration-300'>
-            <NavLink to={LOG_OUT}>Log Out</NavLink>
+            <NavLink to='/'
+            onClick={() => {
+            dispatch(Signout());
+            }}
+        >
+        Log Out</NavLink>
             </li>
+            ) : null }
         <LanguageButton closeNavbar={closeNavBar} />
     </ul>
   );
