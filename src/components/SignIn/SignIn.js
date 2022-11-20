@@ -18,13 +18,13 @@ import {
 import { errorTypes } from '../../utils/errorTypes';
 
 
-const schema = yup.object().shape({
-  email: yup.string().required('Please insert your Email'),
-  password: yup.string().required('Please insert your Password'),
-});
 
 function SignIn() {
   const { t } = useTranslation();
+  const schema = yup.object().shape({
+    email: yup.string().required(t('error.email')),
+    password: yup.string().required(t('error.password')),
+  });
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userData = useSelector(user);

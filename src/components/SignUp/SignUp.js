@@ -18,26 +18,26 @@ import {
 } from '../../features/user/userSlice';
 import { errorTypes } from '../../utils/errorTypes';
 
-const schema = yup.object().shape({
-  firstName: yup.string().required('Please insert your First Name'),
-  lastName: yup.string().required('Please insert your Last Name'),
-  email: yup
-    .string()
-    .email('Should be a valid email')
-    .required('Please insert your Email'),
-  password: yup
-    .string()
-    .min(6, 'Should be at least 6 characters')
-    .max(15, "Shouldn't be more than 15 characters")
-    .required('Please insert your Password'),
-  confirmPassword: yup
-    .string()
-    .oneOf([yup.ref('password'), null])
-    .required('Please Confirm Password'),
-});
 
 function SignUp() {
   const { t } = useTranslation();
+  const schema = yup.object().shape({
+    firstName: yup.string().required(t('error.first_name')),
+    lastName: yup.string().required(t('error.last_name')),
+    email: yup
+      .string()
+      .email(t('error.valid_email'))
+      .required(t('error.email')),
+    password: yup
+      .string()
+      .min(6, t('error.min_password'))
+      .max(15, t('error.max_password'))
+      .required(t('error.password')),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref('password'), null])
+      .required(t('error.confirm_password_required')),
+  });
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -153,7 +153,7 @@ function SignUp() {
             className="sm:w-96 w-80 shadow-lg focus:outline-none focus:tertiary focus:ring-1 focus:ring-tertiary text-primary rounded-md placeholder:italic placeholder:text-tertiary px-3 py-1 mt-1 block duration-500"
           />
           <p className="text-red-800 font-semibold mt-1 mb-3">
-            {errors?.confirmPassword?.message && 'Passwords should match'}
+            {errors?.confirmPassword?.message && t('error.confirm_password')}
           </p>
         </label>
         <button

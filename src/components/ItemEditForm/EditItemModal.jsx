@@ -9,13 +9,13 @@ import { GiCancel } from 'react-icons/gi';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 
-const schema = yup.object().shape({
-  name: yup.string().required('Cannot stay empty.'),
-  desc: yup.string().required('Cannot stay empty.'),
-});
 
 export default function EditItemModal() {
   const { t } = useTranslation();
+  const schema = yup.object().shape({
+    name: yup.string().required(t('error.title')),
+    desc: yup.string().required(t('error.description')),
+  });
 
   const {
     register,

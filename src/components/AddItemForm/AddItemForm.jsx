@@ -6,16 +6,15 @@ import * as yup from 'yup';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 
-const schema = yup.object().shape({
-  title: yup.string().required('Please insert your Item Name.'),
-  price: yup.number().positive('Please insert a positive number.'),
-  description: yup.string().required('Please add a description.'),
-  country: yup.string().required('Please insert your Country Name.'),
-  city: yup.string().required('Please insert your City Name.'),
-});
-
 export default function AddItemForm() {
   const { t } = useTranslation();
+  const schema = yup.object().shape({
+    title: yup.string().required(t('error.title')),
+    price: yup.number().positive(t('error.price')).required(t('error.price')),
+    description: yup.string().required(t('error.description')),
+    country: yup.string().required(t('error.country')),
+    city: yup.string().required(t('error.city')),
+  });
   const {
     register,
     handleSubmit,

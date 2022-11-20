@@ -147,5 +147,21 @@
         "price_free": "Price: Free",
         "price_low_to_high": "Price: Low to High",
         "price_high_to_low": "Price: High to Low"
+    },
+    "error": {
+        "title": "Please insert the item name.",
+        "price": "Please insert a positive number.",
+        "description": "Please add a description",
+        "country": "Please insert country name.",
+        "city": "Please insert city name.",
+        "email": "Please insert your Email",
+        "valid_email": "Should be a valid email",
+        "password": "Please insert your password",
+        "confirm_password": "Please Confirm Password",
+        "confirm_password_required": "Please insert confirm password",
+        "min_password": "Password should be at least 6 characters",
+        "max_password": "Password should be at most 15 characters",
+        "first_name": "Please insert your first name",
+        "last_name": "Please insert your last name"
     }
 }
