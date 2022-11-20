@@ -86,11 +86,3 @@ export const addItem = createAsyncThunk(
   }
 );
 
-// export const updateItemImage = createAsyncThunk(
-//     'item/addItem',
-//     async (payload, {idk}) => {
-//         try{
-
-//         }
-//     }
-// )

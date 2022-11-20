@@ -10,17 +10,22 @@ import { useSelector, useDispatch } from '../../app/store';
 import { addItem } from '../../features/slices/item';
 import { user } from '../../features/slices/user';
 import { auth, db } from '../../firebase-config';
+// import { image } from '../../assets';
 
 // Validation schema
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
   price: yup.number().positive('Please insert a positive number.'),
   description: yup.string().required('Please add a description.'),
-  country: yup.string().required('Please insert your Country Name.'),
-  city: yup.string().required('Please insert your City Name.'),
+  country: yup.string(),
+  city: yup.string(),
 });
 
 export default function AddItemForm() {
+  const [itemImage, setItemImage] = useState(
+    'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
+  );
+
   const dispatch = useDispatch();
   const { item, userItems, isLoading, error } = useSelector(
     (state) => state.item
@@ -40,21 +45,18 @@ export default function AddItemForm() {
       // eslint-disable-next-line no-console
       console.log(userItems);
     }
-    // eslint-disable-next-line no-console
-    console.log(userThing.address)
   }, [item]);
 
   const onSubmit = async (values) => {
-      const itemImage = values.file[0].name;
-      const userData = doc(db, 'Users', auth.currentUser.uid);
-      if (!userThing.address) {
-        await setDoc(
-          userData,
-          { address: { city: values.city, country: values.country } },
-          { merge: true }
-        ) 
-      } 
-      dispatch(addItem({ item: values, owner: userThing, file: itemImage }));
+    const userData = doc(db, 'Users', auth.currentUser.uid);
+    if (!userThing.address) {
+      await setDoc(
+        userData,
+        { address: { city: values.city, country: values.country } },
+        { merge: true }
+      );
+    }
+    dispatch(addItem({ item: values, owner: userThing, file: itemImage }));
   };
 
   const [type, setType] = useState(ITEM_TYPES[0]);
@@ -107,8 +109,13 @@ export default function AddItemForm() {
                               name="file"
                               type="file"
                               accept="image/*"
-                              {...register('file')}
+                              {...register('file', {
+                                value: itemImage,
+                              })}
                               className="sr-only"
+                              onChange={(e) => {
+                                setItemImage(e.target.files[0].name);
+                              }}
                             />
                           </label>
                           <p className="pl-1">or drag and drop</p>
@@ -179,8 +186,7 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
-
-            
+                {!userThing.address && (
                   <div>
                     <h1 className="block text-sm font-medium text-background mb-3">
                       Address Info
@@ -189,7 +195,7 @@ export default function AddItemForm() {
                       name="country"
                       type="text"
                       errors={errors.country ? errors.country : undefined}
-                      {...register('country')}
+                      {...register('country', { required: true })}
                     >
                       Country
                     </Input>
@@ -197,12 +203,12 @@ export default function AddItemForm() {
                       name="city"
                       type="text"
                       errors={errors.city ? errors.city : undefined}
-                      {...register('city')}
+                      {...register('city', { required: true })}
                     >
                       City
                     </Input>
                   </div>
-
+                )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" loading={isLoading} />
