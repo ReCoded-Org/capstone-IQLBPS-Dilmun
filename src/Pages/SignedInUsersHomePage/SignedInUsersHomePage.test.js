@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from '../../app/store';
-import ItemCard from "./ItemCard"
+import ImageSlider from './ImageSlider'
 import SignedInUsersHomePage from "./SignedInUsersHomePage";
 
 test('SignedInUsersHomePage renders without crashing', () => {
@@ -10,7 +10,7 @@ test('SignedInUsersHomePage renders without crashing', () => {
     <Provider store={store}>
       <Router>
         <SignedInUsersHomePage>
-          <ItemCard />
+          <ImageSlider />
         </SignedInUsersHomePage>
       </Router>
     </Provider>
