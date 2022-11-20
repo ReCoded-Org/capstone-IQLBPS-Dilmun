@@ -6,7 +6,7 @@ import React, {
     useState
 } from 'react';
 import {
-    Link,
+    NavLink,
     useLocation
 } from 'react-router-dom';
 import {
@@ -41,22 +41,22 @@ const NavItems = ({
     <ul className={active ? 'flex-col flex items-center fixed inset-0 left-1/4 uppercase bg-black/40 backdrop-blur-lg gap-8 justify-center p-8 md:hidden' : 'hidden'}>
         <AiOutlineClose onClick={showItems} className='text-2xl cursor-pointer'/>
         <li className='hover:text-secondary duration-300'>
-            <Link to={HOME_ROUTE}>Home</Link>
+            <NavLink to={HOME_ROUTE}>Home</NavLink>
             </li>
         <li className='hover:text-secondary duration-300'>
-            <Link to={PRODUCT_ROUTE}>Products</Link>
+            <NavLink to={PRODUCT_ROUTE}>Products</NavLink>
             </li>
         <li className='hover:text-secondary duration-300'>
-            <Link to={ABOUT_ROUTE}>About</Link>
+            <NavLink to={ABOUT_ROUTE}>About</NavLink>
             </li>
         <li className='hover:text-secondary duration-300'>
-            <Link to={PROFILE}>Profile</Link>
+            <NavLink to={PROFILE}>Profile</NavLink>
             </li>
         <li className='hover:text-secondary duration-300'>
-            <Link to={SIGN_IN_ROUTE}>Sign In</Link>
+            <NavLink to={SIGN_IN_ROUTE}>Sign In</NavLink>
             </li>
         <li className='hover:text-secondary duration-300'>
-            <Link to={LOG_OUT}>Log Out</Link>
+            <NavLink to={LOG_OUT}>Log Out</NavLink>
             </li>
         <LanguageButton closeNavbar={closeNavBar} />
     </ul>

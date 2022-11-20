@@ -6,7 +6,7 @@ import React, {
     useState
 } from 'react';
 import {
-    Link,
+    NavLink,
     useLocation
 } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
@@ -49,35 +49,35 @@ const NavBarV2 = () => {
 
   return (
     <div className='fixed w-full text-primary font-bold flex justify-between z-10 p-1 items-center bg-white/20'>
-        <Link to={HOME_ROUTE}>
+        <NavLink to={HOME_ROUTE}>
             <img
               src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
               className="object-scale-down h-20 md:justify-self-center py-0"
               alt="logo"
             />
-        </Link>
+        </NavLink>
         <nav>
             <div className='absolute right-7 top-8 md:hidden text-4xl'>
                 <FaBars onClick={showItems} className='scale-150 cursor-pointer'/>
             </div>
                 <ul className='hidden md:flex gap-8 p-6 uppercase'>
                 <li className='hover:text-secondary duration-300'>
-                    <Link to={HOME_ROUTE}>Home</Link>
+                    <NavLink to={HOME_ROUTE}>Home</NavLink>
                 </li>
                 <li className='hover:text-secondary duration-300'>
-                    <Link to={PRODUCT_ROUTE}>Products</Link>
+                    <NavLink to={PRODUCT_ROUTE}>Products</NavLink>
                     </li>
                 <li className='hover:text-secondary duration-300'>
-                    <Link to={ABOUT_ROUTE}>About</Link>
+                    <NavLink to={ABOUT_ROUTE}>About</NavLink>
                     </li>
                 <li className='hover:text-secondary duration-300'>
-                    <Link to={PROFILE}>Profile</Link>
+                    <NavLink to={PROFILE}>Profile</NavLink>
                     </li>
                 <li className='hover:text-secondary duration-300'>
-                    <Link to={SIGN_IN_ROUTE}>Sign In</Link>
+                    <NavLink to={SIGN_IN_ROUTE}>Sign In</NavLink>
                     </li>
                 <li className='hover:text-secondary duration-300'>
-                    <Link to={LOG_OUT}>Log Out</Link>
+                    <NavLink to={LOG_OUT}>Log Out</NavLink>
                     </li>
                 <LanguageButton closeNavbar={closeNavBar} />
                 </ul>
