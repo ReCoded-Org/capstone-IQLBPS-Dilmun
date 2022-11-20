@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { setDoc, doc} from 'firebase/firestore';
+import { setDoc, doc } from 'firebase/firestore';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
@@ -26,13 +26,6 @@ export default function AddItemForm() {
     (state) => state.item
   );
   const userThing = useSelector(user);
-
-  useEffect(() => {
-    if (item) {
-      console.log(userItems);
-    }
-  }, [item]);
-
   const {
     register,
     handleSubmit,
@@ -42,21 +35,29 @@ export default function AddItemForm() {
     resolver: yupResolver(schema),
   });
 
+  useEffect(() => {
+    if (item) {
+      // eslint-disable-next-line no-console
+      console.log(userItems);
+    }
+    // eslint-disable-next-line no-console
+    console.log(userThing.address)
+  }, [item]);
 
   const onSubmit = async (values) => {
-    const userData = doc(db, 'Users', auth.currentUser.uid);
-    if (!userThing.address){
-    await setDoc(
-      userData,
-      { address: { city: values.city, country: values.country } },
-      { merge: true }
-    );}
-    dispatch(addItem({ item: values, owner: userThing }));
+      const itemImage = values.file[0].name;
+      const userData = doc(db, 'Users', auth.currentUser.uid);
+      if (!userThing.address) {
+        await setDoc(
+          userData,
+          { address: { city: values.city, country: values.country } },
+          { merge: true }
+        ) 
+      } 
+      dispatch(addItem({ item: values, owner: userThing, file: itemImage }));
   };
 
   const [type, setType] = useState(ITEM_TYPES[0]);
-
-
 
   return (
     <div className="bg-background" data-testid="add-item-form">
@@ -106,10 +107,7 @@ export default function AddItemForm() {
                               name="file"
                               type="file"
                               accept="image/*"
-                              {...register('file', {
-                                value:
-                                  'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png',
-                              })}
+                              {...register('file')}
                               className="sr-only"
                             />
                           </label>
@@ -182,28 +180,29 @@ export default function AddItemForm() {
                   </TextArea>
                 </div>
 
-                {!userThing.address &&(
-                <div>
-                  <h1 className="block text-sm font-medium text-background mb-3">
-                    Address Info
-                  </h1>
-                  <Input
-                    name="country"
-                    type="text"
-                    errors={errors.country ? errors.country : undefined}
-                    {...register('country')}
-                  >
-                    Country
-                  </Input>
-                  <Input
-                    name="city"
-                    type="text"
-                    errors={errors.city ? errors.city : undefined}
-                    {...register('city')}
-                  >
-                    City
-                  </Input>
-                </div>)}
+            
+                  <div>
+                    <h1 className="block text-sm font-medium text-background mb-3">
+                      Address Info
+                    </h1>
+                    <Input
+                      name="country"
+                      type="text"
+                      errors={errors.country ? errors.country : undefined}
+                      {...register('country')}
+                    >
+                      Country
+                    </Input>
+                    <Input
+                      name="city"
+                      type="text"
+                      errors={errors.city ? errors.city : undefined}
+                      {...register('city')}
+                    >
+                      City
+                    </Input>
+                  </div>
+
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                 <SubmitButton buttonText="Add New Item" loading={isLoading} />

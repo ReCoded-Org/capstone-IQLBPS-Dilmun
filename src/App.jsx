@@ -1,8 +1,12 @@
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
+import NotFound from './components/NotFound/NotFound' ;
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+
+
+
 import { auth } from './firebase-config';
 import {
   error,
@@ -20,7 +24,7 @@ function App() {
   const errorData = useSelector(error)
   const statusData = useSelector(status)
   // eslint-disable-next-line no-console
-  console.log(userData, errorData, statusData)
+  console.log(userData, userData.address, errorData, statusData)
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -41,7 +45,9 @@ function App() {
     <div className="App  ">
       <NavBar />
       <AnimationProvider />
+    
       <EditItemModal />
+      <NotFound />
       <Footer />
     </div>
   );
