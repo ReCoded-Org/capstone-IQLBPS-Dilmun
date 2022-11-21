@@ -5,7 +5,7 @@ export const ABOUT_ROUTE = '/about';
 export const SIGN_UP_ROUTE = '/signup';
 export const SIGN_IN_ROUTE = '/signin';
 export const LOG_OUT = '/logout';
-export const PROFILE = '/profile';
+export const PROFILE = '/profile-page';
 export const FAQ_ROUTE = '/faq';
 export const ADD_ITEM_ROUTE = '/add-item';
 
