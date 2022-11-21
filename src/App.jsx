@@ -24,7 +24,7 @@ function App() {
   const errorData = useSelector(error)
   const statusData = useSelector(status)
   // eslint-disable-next-line no-console
-  console.log(userData, userData.address, errorData, statusData)
+  console.log(userData, errorData, statusData)
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {

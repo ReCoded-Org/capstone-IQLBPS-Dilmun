@@ -172,17 +172,17 @@ export const getCurrentSignedInUser = createAsyncThunk(
   }
 );
 
-export const updateUser = createAsyncThunk(
-  'user/updateUser',
+export const updateUserAddress = createAsyncThunk(
+  'user/updateUserAddress',
   async (payload, {
     rejectWithValue
   }) => {
     try {
-      const docRef = doc(db, 'Users', payload.id);
-      await setDoc(docRef, payload, {
+      const docRef = doc(db, 'Users', payload.user.uid);
+      await setDoc(docRef, {address: payload.address}, {
         merge: true,
       });
-      return JSON.stringify(payload);
+      return JSON.stringify({ ...payload.user, address: {...payload.address} });
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
@@ -314,19 +314,19 @@ const userSlice = createSlice({
         state.status = 'failed';
         state.error = JSON.parse(payload);
       })
-      // updateUser
-      .addCase(updateUser.pending, (state) => {
+      // updateUserAddress
+      .addCase(updateUserAddress.pending, (state) => {
         state.status = 'loading';
         state.error = null;
       })
-      .addCase(updateUser.fulfilled, (state, {
+      .addCase(updateUserAddress.fulfilled, (state, {
         payload
       }) => {
         state.status = 'succeeded';
         state.error = null;
         state.user = JSON.parse(payload);
       })
-      .addCase(updateUser.rejected, (state, {
+      .addCase(updateUserAddress.rejected, (state, {
         payload
       }) => {
         state.status = 'failed';

@@ -1,4 +1,4 @@
-import {  useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -6,7 +6,7 @@ import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
-import { user, updateUser } from '../../features/slices/user';
+import { user, updateUserAddress } from '../../features/slices/user';
 import { addItem } from '../../features/slices/item';
 
 // Validation schema
@@ -14,8 +14,8 @@ const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
   price: yup.number().positive('Please insert a positive number.'),
   description: yup.string().required('Please add a description.'),
-  country: yup.string(),
-  city: yup.string(),
+  country: yup.string().required('Please insert your Country Name.'),
+  city: yup.string().required('Please insert your City Name.'),
 });
 
 export default function AddItemForm() {
@@ -25,9 +25,7 @@ export default function AddItemForm() {
   );
 
   const dispatch = useDispatch();
-  const { isLoading, error } = useSelector(
-    (state) => state.item
-  );
+  const { isLoading, error } = useSelector((state) => state.item);
   const userThing = useSelector(user);
   const {
     register,
@@ -35,17 +33,37 @@ export default function AddItemForm() {
     formState: { errors },
     control,
     reset,
+    setValue,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
+  useEffect(() => {
+    if (userThing.address) {
+      setValue('country', userThing.address.country);
+      setValue('city', userThing.address.city);
+    }
+  }, [userThing.address, setValue]);
+
   const onSubmit = (values) => {
     if (!userThing.address) {
       dispatch(
-        updateUser({ address: { city: values.city, country: values.country } })
+        updateUserAddress({
+          user: userThing,
+          address: { city: values.city, country: values.country },
+        })
       );
     }
-    dispatch(addItem({ item: values, owner: userThing, file: itemImage }));
+    dispatch(
+      addItem({
+        item: values,
+        owner: {
+          ...userThing,
+          address: { city: values.city, country: values.country },
+        },
+        file: itemImage,
+      })
+    );
     reset();
   };
 
