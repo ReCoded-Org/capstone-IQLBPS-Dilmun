@@ -14,8 +14,7 @@ const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
   price: yup
     .number()
-    .positive('Please insert a positive number.')
-    .transform((v, originalV) => (originalV.trim() === '' ? null : v)),
+    .positive('Please insert a positive number.').min(0).nullable(),
   description: yup.string().required('Please add a description.'),
   country: yup.string().required('Please insert your Country Name.'),
   city: yup.string().required('Please insert your City Name.'),
@@ -69,6 +68,7 @@ export default function AddItemForm() {
       })
     );
     reset();
+    setType(ITEM_TYPES[0]);
   };
 
   return (
@@ -171,6 +171,7 @@ export default function AddItemForm() {
                       options={ITEM_TYPES}
                       defaultValue={ITEM_TYPES[0]}
                       updateType={(e) => setType(e)}
+                      onChange={type.toLowerCase() === 'donated' ? setValue('price', 0) : null}
                     />
                   </div>
                   <div className="w-full">
