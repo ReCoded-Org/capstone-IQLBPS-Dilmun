@@ -57,10 +57,6 @@ function SignUp() {
     navigate('/');
   };
 
-  const callback = () => {
-    navigate('/');
-  };
-
   const onSubmit = async (data) => {
     const { email, password, firstName, lastName } = data;
     dispatch(
@@ -176,7 +172,7 @@ function SignUp() {
             or
           </button>
           <button type="button"
-           onClick={() => dispatch(signInWithGoogle(callback))}>
+            onClick={() => dispatch(signInWithGoogle(callback))}>
             <BsGoogle className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             .
           </button>
