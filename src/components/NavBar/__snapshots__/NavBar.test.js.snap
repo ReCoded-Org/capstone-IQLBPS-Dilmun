@@ -75,6 +75,15 @@ exports[`render NavBar correctly 1`] = `
           Sign In
         </a>
       </li>
+      <li>
+        <a
+          className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
+          href="/contact-us"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+      </li>
       <div
         className="relative inline-block text-left"
         data-headlessui-state=""
