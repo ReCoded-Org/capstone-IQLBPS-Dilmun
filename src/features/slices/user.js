@@ -46,7 +46,6 @@ export const signInWithGoogle = createAsyncThunk(
         await setDoc(docRef, {
           firstName: user.displayName.split(' ')[0],
           lastName: user.displayName.split(' ')[1],
-          email: user.email,
         });
       }
       payload();
@@ -86,7 +85,6 @@ export const signInWithFacebook = createAsyncThunk(
         await setDoc(docRef, {
           firstName: user.displayName.split(' ')[0],
           lastName: user.displayName.split(' ')[1],
-          email: user.email,
         });
       }
       payload();
@@ -122,7 +120,6 @@ export const signUpWithCredentials = createAsyncThunk(
       await setDoc(doc(db, 'Users', user.uid), {
         firstName,
         lastName,
-        email,
       });
 
       callback();
