@@ -12,6 +12,7 @@ import {
   SIGN_IN_ROUTE,
   PROFILE,
   PRODUCT_ROUTE,
+  CONTACT_US,
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
 import { Signout, user } from '../../features/user/userSlice';
@@ -76,20 +77,21 @@ function NavBar() {
             </NavLink>
           </li>
           <li>
-          {!_.isEmpty(userData) ? (
-            <NavLink
-              className={({ isActive }) =>
-                classNames(
-                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
-                  isActive
-                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
-                    : ''
-                )
-              }
-              to={PRODUCT_ROUTE}
-            >
-              Products
-            </NavLink>) : null}
+            {!_.isEmpty(userData) ? (
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    isActive
+                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      : ''
+                  )
+                }
+                to={PRODUCT_ROUTE}
+              >
+                Products
+              </NavLink>
+            ) : null}
           </li>
           <li>
             <NavLink
@@ -140,6 +142,22 @@ function NavBar() {
               </NavLink>
             </li>
           ) : null}
+
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  isActive
+                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    : ''
+                )
+              }
+              to={CONTACT_US}
+            >
+              Contact Us
+            </NavLink>
+          </li>
 
           {!_.isEmpty(userData) ? (
             <li>

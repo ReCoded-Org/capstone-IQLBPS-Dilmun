@@ -4,12 +4,18 @@ const ContactUs = () => {
       <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col justify-between">
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-primary">
               Lets talk about everything!
             </h2>
-            <div className="text-gray-700 mt-8">Give us your feedback</div>
+            <div className="text-gray-600 mt-8">Give us your feedback</div>
           </div>
-          <div className="mt-8 text-center">vvv</div>
+          <div className="mt-8 text-center">
+            <img
+              className="h-44 sm:h-56 md:h-72"
+              src="https://alshifaeye.org/assets/images/contact-us.png"
+              alt="contact us"
+            />
+          </div>
         </div>
         <div className="">
           <div>
@@ -17,12 +23,12 @@ const ContactUs = () => {
               Full Name
             </span>
             <input
-              className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-gray-300 text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"
               placeholder=""
             />
           </div>
-          <div className="mt-8">
+          <div className="mt-5">
             <span className="uppercase text-sm text-gray-600 font-bold">
               Email
             </span>
@@ -31,16 +37,16 @@ const ContactUs = () => {
               type="text"
             />
           </div>
-          <div className="mt-8">
+          <div className="mt-5">
             <span className="uppercase text-sm text-gray-600 font-bold">
               Message
             </span>
             <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" />
           </div>
-          <div className="mt-8">
+          <div className="mt-5">
             <button
               type="submit"
-              className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+              className="uppercase text-sm font-bold tracking-wide bg-tertiary text-secondary p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
             >
               Send Message
             </button>

@@ -7,7 +7,6 @@ import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
-import ContactUs from './components/ContactUs/ContactUs';
 
 function App() {
   const dispatch = useDispatch();
@@ -33,7 +32,6 @@ function App() {
       <NavBar />
       <AnimationProvider />
       <EditItemModal />
-      <ContactUs />
       <Footer />
     </div>
   );
