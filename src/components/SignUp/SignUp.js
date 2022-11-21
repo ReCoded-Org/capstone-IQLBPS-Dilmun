@@ -10,6 +10,7 @@ import {
   error,
   resetState,
   signInWithFacebook,
+  signInWithGoogle,
   signUpWithCredentials,
   status,
   user,
@@ -56,12 +57,17 @@ function SignUp() {
     navigate('/');
   };
 
+  const callback = () => {
+    navigate('/');
+  };
+
   const onSubmit = async (data) => {
     const { email, password, firstName, lastName } = data;
     dispatch(
       signUpWithCredentials({ email, password, firstName, lastName, callback })
     );
   };
+
   useEffect(() => {
     dispatch(resetState());
   }, []);
@@ -72,6 +78,7 @@ function SignUp() {
       data-testid="sign-up"
     >
       <h1 className="text-5xl font-bold mb-10 text-primary pt-9">SIGN UP</h1>
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-center"
@@ -168,7 +175,8 @@ function SignUp() {
             <BsFacebook className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             or
           </button>
-          <button type="button">
+          <button type="button"
+           onClick={() => dispatch(signInWithGoogle(callback))}>
             <BsGoogle className="inline pb-1 h-9 w-9 hover:text-secondary mx-1 duration-200" />
             .
           </button>
