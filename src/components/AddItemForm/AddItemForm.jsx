@@ -12,7 +12,10 @@ import { addItem } from '../../features/slices/item';
 // Validation schema
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
-  price: yup.number().positive('Please insert a positive number.'),
+  price: yup
+    .number()
+    .positive('Please insert a positive number.')
+    .transform((v, originalV) => (originalV.trim() === '' ? null : v)),
   description: yup.string().required('Please add a description.'),
   country: yup.string().required('Please insert your Country Name.'),
   city: yup.string().required('Please insert your City Name.'),
@@ -27,6 +30,7 @@ export default function AddItemForm() {
   const dispatch = useDispatch();
   const { isLoading, error } = useSelector((state) => state.item);
   const userThing = useSelector(user);
+
   const {
     register,
     handleSubmit,
