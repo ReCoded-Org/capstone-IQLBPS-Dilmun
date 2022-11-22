@@ -36,9 +36,7 @@ Object {
               />
             </div>
           </div>
-          <div
-            class=""
-          >
+          <form>
             <div>
               <span
                 class="uppercase text-sm text-gray-600 font-bold"
@@ -47,6 +45,7 @@ Object {
               </span>
               <input
                 class="w-full bg-background text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                name="name"
                 placeholder=""
                 type="text"
               />
@@ -61,7 +60,8 @@ Object {
               </span>
               <input
                 class="w-full bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                type="text"
+                name="email"
+                type="email"
               />
             </div>
             <div
@@ -74,6 +74,7 @@ Object {
               </span>
               <textarea
                 class="w-full h-40 bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                name="feedback"
               />
             </div>
             <div
@@ -86,7 +87,7 @@ Object {
                 Send Message
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -123,9 +124,7 @@ Object {
             />
           </div>
         </div>
-        <div
-          class=""
-        >
+        <form>
           <div>
             <span
               class="uppercase text-sm text-gray-600 font-bold"
@@ -134,6 +133,7 @@ Object {
             </span>
             <input
               class="w-full bg-background text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              name="name"
               placeholder=""
               type="text"
             />
@@ -148,7 +148,8 @@ Object {
             </span>
             <input
               class="w-full bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text"
+              name="email"
+              type="email"
             />
           </div>
           <div
@@ -161,6 +162,7 @@ Object {
             </span>
             <textarea
               class="w-full h-40 bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              name="feedback"
             />
           </div>
           <div
@@ -173,7 +175,7 @@ Object {
               Send Message
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>,
