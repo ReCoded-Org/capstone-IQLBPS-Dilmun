@@ -28,7 +28,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
          Dilmun is your best choice to buy or sell anything
       </h3>
       <div
-        class="flex justify-center gap-2"
+        class="sm:flex justify-center gap-2 mt-2"
       >
         <span
           class=" flex items-center justify-center gap-2 font-bold md:text-2xl"
