@@ -6,137 +6,301 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
   data-testid="SignedInUseresHomePage"
 >
   <div
-    class=" bg-home-page-for-signed-in-users bg-cover bg-center w-full min-h-[40vh] md:min-h-[70vh] text-background p-5"
+    class=" bg-home-page-for-signed-in-users flex flex-col justify-center bg-cover bg-center w-full min-h-[50vh] text-white p-5 shadow-lg"
   >
     <div
       class=" mb-3 md:mb-0 pt-5 md:pt-14 md:pb-6 w-full"
     >
       <h1
-        class="text-2xl md:text-5xl font-bold text-center text-shadow"
+        class="text-2xl md:text-6xl font-bold text-center text-shadow"
       >
         Welcome back, 
       </h1>
       <h1
-        class="text-2xl md:text-5xl font-bold text-center mb-2"
+        class="text-2xl md:text-6xl font-bold text-center mb-2"
       >
          
          
       </h1>
       <h3
-        class="text-l md:text-2xl font-bold text-center"
+        class="md:text-3xl font-bold text-center"
       >
          Dilmun is your best choice to buy or sell anything
       </h3>
-      <span
-        class=" flex items-center justify-center gap-2 font-bold md:text-2xl"
+      <div
+        class="flex justify-center gap-2"
       >
-        Can't find what you need? Press here
-        <a
-          href="/products"
+        <span
+          class=" flex items-center justify-center gap-2 font-bold md:text-2xl"
         >
-          <svg
-            class="hover:text-secondary transition duration-300"
-            fill="currentColor"
-            height="40"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 16 16"
-            width="40"
-            xmlns="http://www.w3.org/2000/svg"
+          Can't find what you need? Check pur list
+          <a
+            href="/products"
           >
-            <path
-              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-            />
-          </svg>
-        </a>
-         
-      </span>
-      <span
-        class=" flex items-center justify-center gap-2 font-bold md:text-2xl"
-      >
-        Or add your onw 
-        <a
-          href="/add-item"
+            <svg
+              class="hover:text-background transition duration-300"
+              fill="currentColor"
+              height="40"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="40"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </a>
+           
+        </span>
+        <span
+          class=" flex items-center justify-center gap-2 font-bold md:text-2xl"
         >
-          <svg
-            class="hover:text-secondary transition duration-300"
-            fill="currentColor"
-            height="40"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 512 512"
-            width="40"
-            xmlns="http://www.w3.org/2000/svg"
+          or add an item 
+          <a
+            href="/add-item"
           >
-            <path
-              d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm90.5 224H272v74.5c0 8.8-7.2 16-16 16-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3V272h-74.5c-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3 0-8.8 7.2-16 16-16H240v-74.5c0-8.8 7.2-16 16-16s16 7.2 16 16V240h74.5c8.8 0 16 7.2 16 16s-7.2 16-16 16z"
-            />
-          </svg>
-        </a>
-         
-      </span>
+            <svg
+              class="hover:text-background transition duration-300"
+              fill="currentColor"
+              height="40"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="40"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm90.5 224H272v74.5c0 8.8-7.2 16-16 16-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3V272h-74.5c-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3 0-8.8 7.2-16 16-16H240v-74.5c0-8.8 7.2-16 16-16s16 7.2 16 16V240h74.5c8.8 0 16 7.2 16 16s-7.2 16-16 16z"
+              />
+            </svg>
+          </a>
+           
+        </span>
+      </div>
     </div>
   </div>
-  <div>
+  <div
+    class="mt-5"
+  >
     <h1
-      class="text-2xl md:text-3xl font-bold mt-2 mb-2 text-center"
+      class="text-4xl font-semibold mb-4 ml-4"
     >
-      Best selling products
+      Some of our Products
     </h1>
     <div
-      class="flex flex-row w-full h-full"
+      class="w-full px-5 lg:px-0 overflow-x-scroll slider flex flex-col lg:flex-row gap-4"
     >
       <div
-        class="w-full h-full p-10 relative"
+        class="min-w-fit lg:animate-scroll h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
       >
-        <svg
-          class="w-6 h-6 absolute cursor-pointer top-1/2 inset-y-0 left-0 hover:text-secondary transition duration-300"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
         <img
-          alt="best selling list"
+          alt=""
+          class="rounded-t-lg h-1/2"
           src="https://placeimg.com/800/480/tech/grayscale"
         />
-        <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        <div
+          class="p-5"
         >
-          Backpack
-        </h5>
-        <p
-          class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Backpack
+          </h5>
+          <p
+            class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+          >
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+          </p>
+          <button
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="submit"
+          >
+            Read more
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="min-w-fit lg:animate-scroll h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+      >
+        <img
+          alt=""
+          class="rounded-t-lg h-1/2"
+          src="https://placeimg.com/800/480/tech/grayscale"
+        />
+        <div
+          class="p-5"
         >
-          Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-        </p>
-        <button
-          class="inline-flex items-center text-background px-3 py-2 rounded bg-secondary ml-2 hover:bg-primary transition duration-300"
-          type="submit"
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Backpack
+          </h5>
+          <p
+            class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+          >
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+          </p>
+          <button
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="submit"
+          >
+            Read more
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="min-w-fit lg:animate-scroll h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+      >
+        <img
+          alt=""
+          class="rounded-t-lg h-1/2"
+          src="https://placeimg.com/800/480/tech/grayscale"
+        />
+        <div
+          class="p-5"
         >
-          Read more
-        </button>
-        <svg
-          class="w-6 h-6 cursor-pointer absolute top-1/2 inset-y-0 right-0 hover:text-secondary transition duration-300"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Backpack
+          </h5>
+          <p
+            class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+          >
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+          </p>
+          <button
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="submit"
+          >
+            Read more
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="min-w-fit lg:animate-scroll h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+      >
+        <img
+          alt=""
+          class="rounded-t-lg h-1/2"
+          src="https://placeimg.com/800/480/tech/grayscale"
+        />
+        <div
+          class="p-5"
         >
-          <path
-            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Backpack
+          </h5>
+          <p
+            class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+          >
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+          </p>
+          <button
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="submit"
+          >
+            Read more
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="min-w-fit lg:animate-scroll h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+      >
+        <img
+          alt=""
+          class="rounded-t-lg h-1/2"
+          src="https://placeimg.com/800/480/tech/grayscale"
+        />
+        <div
+          class="p-5"
+        >
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Backpack
+          </h5>
+          <p
+            class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+          >
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+          </p>
+          <button
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="submit"
+          >
+            Read more
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
