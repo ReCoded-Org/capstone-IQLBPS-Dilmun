@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { ref, uploadBytes, getDownloadURL, getStorage } from 'firebase/storage';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../firebase-config';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
@@ -67,10 +66,8 @@ export default function AddItemForm() {
       );
     }
     if (typeof itemImage !== 'string') {
-      uploadBytes(itemImageRef, itemImage).then((snapshot) => {
-        console.log('Uploaded a blob or file!', snapshot);
+      uploadBytes(itemImageRef, itemImage).then(() => {
         getDownloadURL(itemImageRef).then((url) => {
-          console.log('File available at', url);
           dispatch(
             addItem({
               item: values,
