@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { ref, uploadBytes} from 'firebase/storage';
+import { ref, uploadBytes, getDownloadURL, getStorage } from 'firebase/storage';
 import { storage } from '../../firebase-config';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
@@ -16,7 +17,9 @@ const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
   price: yup
     .number()
-    .positive('Please insert a positive number.').min(0).nullable(),
+    .positive('Please insert a positive number.')
+    .min(0)
+    .nullable(),
   description: yup.string().required('Please add a description.'),
   country: yup.string().required('Please insert your Country Name.'),
   city: yup.string().required('Please insert your City Name.'),
@@ -24,7 +27,8 @@ const schema = yup.object().shape({
 
 export default function AddItemForm() {
   const [type, setType] = useState(ITEM_TYPES[0]);
-  const [itemImage, setItemImage] = useState('https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
+  const [itemImage, setItemImage] = useState(
+    'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
   );
 
   const dispatch = useDispatch();
@@ -43,25 +47,16 @@ export default function AddItemForm() {
   });
 
   useEffect(() => {
-    if (userData
-  .address) {
-      setValue('country', userData
-  .address.country);
-      setValue('city', userData
-  .address.city);
+    if (userData.address) {
+      setValue('country', userData.address.country);
+      setValue('city', userData.address.city);
     }
-  }, [userData
-.address, setValue]);
+  }, [userData.address, setValue]);
 
   const onSubmit = (values) => {
-
     const rootRef = ref(storage, 'gs://capstone-dilmun.appspot.com');
-    const itemImageRef = ref(rootRef, `images/${itemImage.name}`)
-
-    if (typeof itemImage !== 'string') {
-      uploadBytes(itemImageRef, itemImage)
-    }
-    if (!userData
+    const itemImageRef = ref(rootRef, `images/${itemImage.name}`);
+       if (!userData
   .address) {
       dispatch(
         updateUserAddress({
@@ -71,23 +66,40 @@ export default function AddItemForm() {
         })
       );
     }
-    dispatch(
-      addItem({
-        item: values,
-        owner: {
-          ...userData
-      ,
-          address: { city: values.city, country: values.country },
-        },
-        file: itemImageRef.toString(),
-      })
-    );
-    
-   
+    if (typeof itemImage !== 'string') {
+      uploadBytes(itemImageRef, itemImage).then((snapshot) => {
+        console.log('Uploaded a blob or file!', snapshot);
+        getDownloadURL(itemImageRef).then((url) => {
+          console.log('File available at', url);
+          dispatch(
+            addItem({
+              item: values,
+              owner: {
+                ...userData,
+                address: { city: values.city, country: values.country },
+              },
+              type,
+              file: url,
+            })
+          );
+        });
+      });
+    } else {
+      dispatch(
+        addItem({
+          item: values,
+          owner: {
+            ...userData,
+            address: { city: values.city, country: values.country },
+          },
+          type,
+          file: itemImage,
+        })
+      );
+    }
     reset();
     setType(ITEM_TYPES[0]);
   };
-
 
   return (
     <div className="bg-background" data-testid="add-item-form">
@@ -189,7 +201,11 @@ export default function AddItemForm() {
                       options={ITEM_TYPES}
                       defaultValue={ITEM_TYPES[0]}
                       updateType={(e) => setType(e)}
-                      onChange={type.toLowerCase() === 'donated' ? setValue('price', 0) : null}
+                      onChange={
+                        type.toLowerCase() === 'donated'
+                          ? setValue('price', 0)
+                          : null
+                      }
                     />
                   </div>
                   <div className="w-full">
@@ -215,8 +231,7 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
-                {!userData
-              .address && (
+                {!userData.address && (
                   <div>
                     <h1 className="block text-sm font-medium text-background mb-3">
                       Address Info
