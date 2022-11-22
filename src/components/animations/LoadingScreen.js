@@ -3,7 +3,7 @@ import {Watch} from 'react-loader-spinner'
 
 const LoadingScreen = () => {
     return (
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-center items-center h-screen">
             <Watch
                 color="#4fa94d"
                 height="100"
