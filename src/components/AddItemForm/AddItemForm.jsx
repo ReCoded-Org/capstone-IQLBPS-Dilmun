@@ -3,9 +3,11 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { useNavigate } from 'react-router-dom';
 import { storage } from '../../firebase-config';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
+import { PRODUCT_ROUTE } from '../../route';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
 import { user, updateUserAddress } from '../../features/slices/user';
@@ -29,6 +31,7 @@ export default function AddItemForm() {
   const [itemImage, setItemImage] = useState(
     'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
   );
+  const navigate = useNavigate()
 
   const dispatch = useDispatch();
   const { isLoading, error } = useSelector((state) => state.item);
@@ -55,12 +58,10 @@ export default function AddItemForm() {
   const onSubmit = (values) => {
     const rootRef = ref(storage, 'gs://capstone-dilmun.appspot.com');
     const itemImageRef = ref(rootRef, `images/${itemImage.name}`);
-       if (!userData
-  .address) {
+    if (!userData.address) {
       dispatch(
         updateUserAddress({
-          user: userData
-      ,
+          user: userData,
           address: { city: values.city, country: values.country },
         })
       );
@@ -96,6 +97,7 @@ export default function AddItemForm() {
     }
     reset();
     setType(ITEM_TYPES[0]);
+    navigate(PRODUCT_ROUTE)
   };
 
   return (
