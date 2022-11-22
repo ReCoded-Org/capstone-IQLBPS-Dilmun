@@ -28,7 +28,7 @@ export default function AddItemForm() {
 
   const dispatch = useDispatch();
   const { isLoading, error } = useSelector((state) => state.item);
-  const userThing = useSelector(user);
+  const userData = useSelector(user);
 
   const {
     register,
@@ -42,17 +42,23 @@ export default function AddItemForm() {
   });
 
   useEffect(() => {
-    if (userThing.address) {
-      setValue('country', userThing.address.country);
-      setValue('city', userThing.address.city);
+    if (userData
+  .address) {
+      setValue('country', userData
+  .address.country);
+      setValue('city', userData
+  .address.city);
     }
-  }, [userThing.address, setValue]);
+  }, [userData
+.address, setValue]);
 
   const onSubmit = (values) => {
-    if (!userThing.address) {
+    if (!userData
+  .address) {
       dispatch(
         updateUserAddress({
-          user: userThing,
+          user: userData
+      ,
           address: { city: values.city, country: values.country },
         })
       );
@@ -61,7 +67,8 @@ export default function AddItemForm() {
       addItem({
         item: values,
         owner: {
-          ...userThing,
+          ...userData
+      ,
           address: { city: values.city, country: values.country },
         },
         file: itemImage,
@@ -197,7 +204,8 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
-                {!userThing.address && (
+                {!userData
+              .address && (
                   <div>
                     <h1 className="block text-sm font-medium text-background mb-3">
                       Address Info
