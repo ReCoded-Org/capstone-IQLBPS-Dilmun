@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import { storage } from '../../firebase-config';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
-import { PRODUCT_ROUTE } from '../../route';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
 import { user, updateUserAddress } from '../../features/slices/user';
@@ -97,7 +96,7 @@ export default function AddItemForm() {
     }
     reset();
     setType(ITEM_TYPES[0]);
-    navigate(PRODUCT_ROUTE)
+    navigate(-1)
   };
 
   return (
