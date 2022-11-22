@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import NotFound from './components/NotFound/NotFound';
@@ -14,9 +14,11 @@ import {
 } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
+import LoadingScreen from './components/animations/LoadingScreen';
 
 function App() {
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
   const userData = useSelector(user);
   const errorData = useSelector(error);
   const statusData = useSelector(status);
@@ -33,15 +35,26 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   return (
     <div className="App  ">
+      {loading === true ? (
+        <LoadingScreen />
+      ) : (
+        <>
           <NavBar />
           <AnimationProvider />
           <EditItemModal />
           <Alert color="bg-red-500">Alert</Alert>
           <NotFound />
           <Footer />
+        </>
+      )}
     </div>
   );
 }
