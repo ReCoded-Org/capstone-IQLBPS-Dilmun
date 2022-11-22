@@ -8,6 +8,19 @@ module.exports = {
         "hero-bg": "url('https://images.unsplash.com/photo-1561715276-a2d087060f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
         "home-page-for-signed-in-users": "url('https://wallpaperaccess.com/full/2593068.jpg')"
       },
+      keyframes: {
+        scroll: {
+          '0%': {
+            transform: 'translateX(18%)'
+          },
+          '100%': {
+            transform: 'translateX(-300%)'
+          }
+        }
+      },
+      animation: {
+        scroll: 'scroll 30s infinite linear'
+      },
       colors: {
         primary: '#16425B',
         secondary: '#2F6690',
