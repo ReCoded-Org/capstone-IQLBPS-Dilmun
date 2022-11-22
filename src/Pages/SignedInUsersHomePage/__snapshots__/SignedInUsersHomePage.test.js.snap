@@ -33,7 +33,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
         <span
           class=" flex items-center justify-center gap-2 font-bold md:text-2xl"
         >
-          Can't find what you need? Check pur list
+          Can't find what you need? Check our list
           <a
             href="/products"
           >
