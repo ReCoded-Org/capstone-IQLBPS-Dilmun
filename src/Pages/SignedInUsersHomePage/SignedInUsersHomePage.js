@@ -11,13 +11,6 @@ import ItemCard from './ItemCard'
 
 const SignedInUsersHomePage = () => {
     const userData = useSelector(user);
-    // const slides = [
-    //     "https://placeimg.com/800/480/tech/grayscale",
-    //     "https://placeimg.com/800/480/arch/sepia",
-    //     "https://placeimg.com/800/480/tech/grayscale",
-    //     "https://placeimg.com/800/480/animals/sepia",
-    //     "https://placeimg.com/800/480/tech/sepia"
-    // ];
 
     return (
         <div data-testid='SignedInUseresHomePage' className='bg-background text-primary flex flex-col items-center justify-between'>
