@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { ref, uploadBytes} from 'firebase/storage';
+import { storage } from '../../firebase-config';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
@@ -22,8 +24,7 @@ const schema = yup.object().shape({
 
 export default function AddItemForm() {
   const [type, setType] = useState(ITEM_TYPES[0]);
-  const [itemImage, setItemImage] = useState(
-    'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
+  const [itemImage, setItemImage] = useState('https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
   );
 
   const dispatch = useDispatch();
@@ -53,6 +54,13 @@ export default function AddItemForm() {
 .address, setValue]);
 
   const onSubmit = (values) => {
+
+    const rootRef = ref(storage, 'gs://capstone-dilmun.appspot.com');
+    const itemImageRef = ref(rootRef, `images/${itemImage.name}`)
+
+    if (typeof itemImage !== 'string') {
+      uploadBytes(itemImageRef, itemImage)
+    }
     if (!userData
   .address) {
       dispatch(
@@ -71,12 +79,15 @@ export default function AddItemForm() {
       ,
           address: { city: values.city, country: values.country },
         },
-        file: itemImage,
+        file: itemImageRef.toString(),
       })
     );
+    
+   
     reset();
     setType(ITEM_TYPES[0]);
   };
+
 
   return (
     <div className="bg-background" data-testid="add-item-form">
@@ -131,7 +142,7 @@ export default function AddItemForm() {
                               })}
                               className="sr-only"
                               onChange={(e) => {
-                                setItemImage(e.target.files[0].name);
+                                setItemImage(e.target.files[0]);
                               }}
                             />
                           </label>
