@@ -1,5 +1,9 @@
-{ /* form component */ }
-                    <form className="hidden w-110 ">
+import React from "react" ;
+
+
+function Form(){
+    return (
+        <form className=" w-110 ">
                         <div className="bg-[#81C3D7] py-6 px-10 sm:max-w-md w-full rounded-md">
                             <div className="sm:text-3xl text-2xl font-semibold text-center w-full text-primary  mb-12">
                             Edit your profile 
@@ -45,3 +49,7 @@
                         </div>
                     </div>
                 </form>
+    )
+}
+export default Form ;
+                    
