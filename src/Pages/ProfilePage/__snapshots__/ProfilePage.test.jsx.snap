@@ -36,7 +36,8 @@ exports[`Profile Page Rendered Correctly 1`] = `
         <h3
           class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1"
         >
-           Country, City
+           
+          Country, City
         </h3>
         <h5
           class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1"
@@ -210,14 +211,17 @@ exports[`Profile Page Rendered Correctly 1`] = `
             class="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
             type="button"
           >
-             Add New Item 
+             
+            Add New Item
+             
           </button>
         </a>
         <button
           class="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
           type="button"
         >
-           dump button
+           
+          dump button
         </button>
       </div>
     </div>
