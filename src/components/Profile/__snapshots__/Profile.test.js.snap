@@ -38,7 +38,7 @@ exports[`Profile Rendered Correctly 1`] = `
       <h5
         class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1"
       >
-         Email
+         
         <button
           type="button"
         >
