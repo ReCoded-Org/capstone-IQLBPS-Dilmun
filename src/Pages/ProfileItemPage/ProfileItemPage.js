@@ -4,7 +4,7 @@ import DeleteItemButton from "../../components/DeleteItemButton/DeleteItemButton
 function ProfileItemPage() {
     return ( 
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl mt-10">
-            <div className="md:flex">
+            <div>
                 <div className="md:shrink-0">
                     <img src='https://sc02.alicdn.com/kf/He336d0194012484d8e7ab7b6645a358aZ/229015070/He336d0194012484d8e7ab7b6645a358aZ.jpg' alt='wa3' className="h-48 w-full object-cover md:h-full md:w-48" />
                 </div>
