@@ -1,10 +1,12 @@
 import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { Trans, useTranslation } from 'react-i18next';
 import { db } from '../../firebase-config';
 import CustomButton from '../CustomComponents/CustomButton';
 
 const NewsLetter = () => {
+  const { t } = useTranslation();
   const [error, setError] = useState('');
   const { register, handleSubmit, reset } = useForm();
 
@@ -19,7 +21,7 @@ const NewsLetter = () => {
       setError(null);
       reset();
     } else {
-      setError('Email already subscribed');
+      setError(t('error.exist_email'));
     }
   };
   return (
@@ -32,25 +34,23 @@ const NewsLetter = () => {
             alt="email"
           />
           <h1 className="text-[20px] sm:text-[40px] mb-3 sm:mb-0">
-            Subscribe to our <br /> Newsletter !
+            <Trans i18nKey="news_letter.subscribe_to_our_newsletter" components={{br: <br/>}} />
           </h1>
         </div>
         <div className="mt-4">
-          <p className="text-background mb-5">
-            Subscribe to our newsletter and stay updated
-          </p>
+          <p className="text-background mb-5">{t('news_letter.description')}</p>
           <div className="items-center">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 type="text"
-                placeholder="Write your email here"
+                placeholder={t('news_letter.email')}
                 name="email"
                 {...register('email')}
-                className="rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid "
+                className="rounded p-1 w-full sm:w-fit md:p-2 mb-3 mr-1 sm:mb-0 placeholder:text-background border border-solid "
                 required
               />
               <CustomButton paddingX="px-2" paddingY="py-2">
-                Subscribe
+                {t('news_letter.subscribe')}
               </CustomButton>
             </form>
           </div>

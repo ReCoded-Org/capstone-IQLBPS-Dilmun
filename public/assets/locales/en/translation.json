@@ -95,6 +95,7 @@
     "news_letter": {
         "subscribe_to_our_newsletter": "Subscribe to our <br /> Newsletter !",
         "description": "Subscribe to our newsletter and stay updated",
+        "email": "Write your email here",
         "subscribe": "Subscribe"
     },
     "proof": {
@@ -157,6 +158,7 @@
         "city": "Please insert city name.",
         "email": "Please insert your Email",
         "valid_email": "Should be a valid email",
+        "exist_email": "Email already exists",
         "password": "Please insert your password",
         "confirm_password": "Please Confirm Password",
         "confirm_password_required": "Please insert confirm password",
