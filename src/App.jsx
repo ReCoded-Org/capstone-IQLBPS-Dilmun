@@ -14,7 +14,6 @@ import {
 } from './features/slices/user';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
-import DeleteItemButton from './components/DeleteItemButton/DeleteItemButton';
 
 function App() {
   const dispatch = useDispatch();
@@ -45,7 +44,7 @@ function App() {
       <NavBar />
 
       <AnimationProvider />
-     <DeleteItemButton/>
+
       <EditItemModal />
 
       <Alert color='bg-red-500'>Alert</Alert>
