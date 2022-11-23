@@ -29,6 +29,7 @@ const SignedInUsersHomePage = () => {
             </div>
             <div className='mt-5'>
                 <h1 className='text-4xl font-bold mb-4 ml-4 text-center'>Most Recent Items</h1>
+                {/* Create a new issue to adjust card height when ItemCard is finished */}
                 <div className='w-full px-5 lg:px-0 overflow-x-scroll scrollbar--none flex flex-col lg:flex-row gap-4'>
                     <ItemCard />
                     <ItemCard />
