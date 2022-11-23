@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MdEmail } from 'react-icons/md';
-
-import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE } from '../../route';
+import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE,CONTACT_US } from '../../route';
 
 const Footer = () => {
   return (
@@ -52,12 +50,15 @@ const Footer = () => {
         <div className="col-span-1 mx-3 flex lg:justify-start justify-center text-center">
         <ul className="mb-6 text-base text-primary sm:mb-0 font-base">
         <span className="text-2xl font-bold text-primary">Contact Us</span>
-            <li>
-              <a href="mailto:dilmun.recoded@gmail.com">
-                <MdEmail className=" hover:text-tertiary duration-200 h-8 w-5 inline" />{' '}
-                dilmun.recoded@gmail.com
-              </a>
-            </li>
+         
+        <li>
+            <Link
+              className="hover:text-tertiary duration-200 h-8 w-5 inline"
+              to={CONTACT_US}
+            >
+              Send feedback
+            </Link>
+          </li>
           </ul>
         </div>
       </div>
