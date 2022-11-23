@@ -15,6 +15,8 @@ import {
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
 
+import AboutUsHeader from './components/AboutUs/AboutUsHeader';
+
 function App() {
   const dispatch = useDispatch();
 
@@ -42,8 +44,8 @@ function App() {
   return (
     <div className="App  ">
       <NavBar />
+      <AboutUsHeader />
       <AnimationProvider />
-
       <EditItemModal />
 
       <Alert color='bg-red-500'>Alert</Alert>
