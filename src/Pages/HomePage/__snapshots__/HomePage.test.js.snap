@@ -800,19 +800,23 @@ exports[`Home Page Rendered Correctly 1`] = `
           news_letter.description
         </p>
         <div
-          class="items-center sm:flex justify-center gap-2"
+          class="items-center"
         >
-          <input
-            class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid "
-            placeholder="Write your email here"
-            type="text"
-          />
-          <button
-            class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
-            type="submit"
-          >
-            news_letter.subscribe
-          </button>
+          <form>
+            <input
+              class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid "
+              name="email"
+              placeholder="Write your email here"
+              required=""
+              type="text"
+            />
+            <button
+              class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
     </div>
