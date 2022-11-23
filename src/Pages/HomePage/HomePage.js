@@ -10,10 +10,11 @@ import Testimonials from '../../components/Proof/Testimonials';
 
 const HomePage = () => {
   return (
-    <motion.div data-testid="home-page"
-    initial={{ width: 0 }}
-    animate={{ width: '100%' }}
-    exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+    <motion.div
+      data-testid="home-page"
+      initial={{ width: 0 }}
+      animate={{ width: '100%' }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
     >
       <Hero />
       <DiffSection />
