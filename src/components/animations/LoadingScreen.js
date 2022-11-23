@@ -1,14 +1,13 @@
-import React from 'react'
-import {Watch} from 'react-loader-spinner'
+import React from 'react';
+import { Circles } from 'react-loader-spinner';
 
 const LoadingScreen = () => {
     return (
         <div className="flex flex-col justify-center items-center h-screen">
-            <Watch
-                color="#4fa94d"
+            <Circles
                 height="100"
-                radius="48"
                 width="100"
+                color="#16425B"
                 timeout={3000}
                 visible
             />
