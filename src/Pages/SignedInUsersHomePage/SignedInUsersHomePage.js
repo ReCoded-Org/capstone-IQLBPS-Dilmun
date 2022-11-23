@@ -14,8 +14,8 @@ const SignedInUsersHomePage = () => {
 
     return (
         <div data-testid='SignedInUseresHomePage' className='bg-background text-primary flex flex-col items-center justify-between'>
-            <div className=' bg-home-page-for-signed-in-users backdrop-blur-md flex flex-col justify-center bg-cover bg-center w-full max-h-[30vh] text-white p-5 shadow-lg'>
-                <div className=' mb-3 md:mb-0 pt-5 md:pt-14 md:pb-6 w-full'>
+            <div className=' bg-home-page-for-signed-in-users  flex flex-col justify-center bg-cover bg-center w-full max-h-[30vh] text-white shadow-lg'>
+                <div className='w-full p-6 backdrop-blur-sm bg-white/30'>
                     <h1 className='text-2xl md:text-6xl font-bold text-center text-shadow'>Welcome back, </h1>
                     <h1 className='text-2xl md:text-6xl font-bold text-center mb-2'> {userData.firstName} {userData.lastName}</h1>
                     <h3 className='md:text-3xl font-bold text-center'> Dilmun is your best choice to buy or sell anything</h3>
