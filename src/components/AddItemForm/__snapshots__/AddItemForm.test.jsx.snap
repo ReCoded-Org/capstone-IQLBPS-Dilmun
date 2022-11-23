@@ -104,16 +104,16 @@ exports[`Add item form component rendered correctly 1`] = `
                   class="mb-4"
                 >
                   <div
-                    class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                    class="relative border-2 rounded-md mb-2 text-background border-tertiary  "
                   >
                     <input
-                      class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                      class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2   "
                       id="title"
                       name="title"
                       type="text"
                     />
                     <label
-                      class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                      class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                       for="title"
                     >
                       add_item_form.item_name
@@ -122,19 +122,19 @@ exports[`Add item form component rendered correctly 1`] = `
                 </div>
                 <div>
                   <div
-                    class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                    class="relative border-2 rounded-md mb-2 text-background border-tertiary  "
                   >
                     <input
-                      class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                      class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2   "
                       id="price"
                       name="price"
                       type="number"
                     />
                     <label
-                      class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                      class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                       for="price"
                     >
-                      add_item_form.item_price
+                      Price $
                     </label>
                   </div>
                 </div>
@@ -278,32 +278,32 @@ exports[`Add item form component rendered correctly 1`] = `
                 add_item_form.adress_info
               </h1>
               <div
-                class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                class="relative border-2 rounded-md mb-2 text-background border-tertiary  "
               >
                 <input
-                  class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                  class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2   "
                   id="country"
                   name="country"
                   type="text"
                 />
                 <label
-                  class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                  class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                   for="country"
                 >
                   add_item_form.country
                 </label>
               </div>
               <div
-                class="relative border-2 rounded-md mb-2 text-background border-tertiary "
+                class="relative border-2 rounded-md mb-2 text-background border-tertiary  "
               >
                 <input
-                  class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2  "
+                  class="outline-none w-full rounded bg-transparent text-sm transition-all duration-200 ease-in-out p-2   "
                   id="city"
                   name="city"
                   type="text"
                 />
                 <label
-                  class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
+                  class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                   for="city"
                 >
                   add_item_form.city

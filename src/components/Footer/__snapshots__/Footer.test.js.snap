@@ -63,6 +63,15 @@ exports[`redering footer 1`] = `
             FAQ
           </a>
         </li>
+        <li>
+          <a
+            className="hover:text-tertiary duration-200 h-8 w-5 inline"
+            href="/contact-us"
+            onClick={[Function]}
+          >
+            Send feedback
+          </a>
+        </li>
       </ul>
     </div>
     <div

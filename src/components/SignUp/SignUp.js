@@ -15,7 +15,7 @@ import {
   signUpWithCredentials,
   status,
   user,
-} from '../../features/user/userSlice';
+} from '../../features/slices/user';
 import { errorTypes } from '../../utils/errorTypes';
 
 

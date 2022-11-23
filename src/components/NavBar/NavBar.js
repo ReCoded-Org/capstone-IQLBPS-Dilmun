@@ -15,7 +15,7 @@ import {
   PRODUCT_ROUTE,
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
-import { Signout, user } from '../../features/user/userSlice';
+import { Signout, user } from '../../features/slices/user';
 
 const classNames = (...classes) => {
   return twMerge(classes);
@@ -143,7 +143,6 @@ function NavBar() {
               </NavLink>
             </li>
           ) : null}
-
           {!_.isEmpty(userData) ? (
             <li>
               <NavLink
