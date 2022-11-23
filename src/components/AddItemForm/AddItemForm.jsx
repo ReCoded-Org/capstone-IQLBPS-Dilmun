@@ -1,35 +1,99 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
+// redux
+import { useSelector, useDispatch } from '../../app/store';
+import { user, updateUserAddress } from '../../features/slices/user';
+import { uploadImageItem, addItem } from '../../features/slices/item';
 
+// Validation schema
 const schema = yup.object().shape({
   title: yup.string().required('Please insert your Item Name.'),
-  price: yup.number().positive('Please insert a positive number.'),
+  price: yup
+    .number()
+    .positive('Please insert a positive number.')
+    .min(0)
+    .nullable(),
   description: yup.string().required('Please add a description.'),
   country: yup.string().required('Please insert your Country Name.'),
   city: yup.string().required('Please insert your City Name.'),
 });
 
-
 export default function AddItemForm() {
+  const [type, setType] = useState(ITEM_TYPES[0]);
+  const [itemImage, setItemImage] = useState(
+    'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
+  );
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+  const { isLoading, error } = useSelector((state) => state.item);
+  const userData = useSelector(user);
+
   const {
     register,
     handleSubmit,
-    getValues,
     formState: { errors },
     control,
+    reset,
+    setValue,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const [address, setAddress] = useState(true)
+  useEffect(() => {
+    if (userData.address) {
+      setValue('country', userData.address.country);
+      setValue('city', userData.address.city);
+    }
+  }, [userData.address, setValue]);
 
-  const onSubmit = () => {
-    setAddress(false);
-    getValues(['country', 'city'])
+  const onSubmit = async (values) => {
+    if (!userData.address) {
+      dispatch(
+        updateUserAddress({
+          user: userData,
+          address: { city: values.city, country: values.country },
+        })
+      );
+    }
+    if (typeof itemImage !== 'string') {
+      const imgURL = await dispatch(uploadImageItem(itemImage));
+      if (imgURL.payload) {
+        dispatch(
+          addItem({
+            item: values,
+            owner: {
+              ...userData,
+              address: { city: values.city, country: values.country },
+            },
+            type,
+            file: imgURL.payload,
+          })
+        );
+      }
+    } else {
+      dispatch(
+        addItem({
+          item: values,
+          owner: {
+            ...userData,
+            address: { city: values.city, country: values.country },
+          },
+          type,
+          file: itemImage,
+        })
+      );
+    }
+    if (!error && !isLoading) {
+      reset();
+      setType(ITEM_TYPES[0]);
+      navigate(-1);
+    }
   };
 
   return (
@@ -81,10 +145,12 @@ export default function AddItemForm() {
                               type="file"
                               accept="image/*"
                               {...register('file', {
-                                value:
-                                  'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png',
+                                value: itemImage,
                               })}
                               className="sr-only"
+                              onChange={(e) => {
+                                setItemImage(e.target.files[0]);
+                              }}
                             />
                           </label>
                           <p className="pl-1">or drag and drop</p>
@@ -110,11 +176,11 @@ export default function AddItemForm() {
                       <Input
                         name="price"
                         type="number"
-                        // disabled={item.type.toLowerCase() === 'donated'}
+                        disabled={type.toLowerCase() === 'donated'}
                         errors={errors?.price}
                         {...register('price')}
                       >
-                        Price
+                        Price $
                       </Input>
                     </div>
                   </div>
@@ -129,6 +195,12 @@ export default function AddItemForm() {
                       control={control}
                       options={ITEM_TYPES}
                       defaultValue={ITEM_TYPES[0]}
+                      updateType={(e) => setType(e)}
+                      onChange={
+                        type.toLowerCase() === 'donated'
+                          ? setValue('price', 0)
+                          : null
+                      }
                     />
                   </div>
                   <div className="w-full">
@@ -154,37 +226,62 @@ export default function AddItemForm() {
                     Description
                   </TextArea>
                 </div>
-                {/* TODO: render conditionally: if the user has set his address the 1st time he added a product,
-                save his address info and do not show this part of the form again. 
-                however, make those info display into every product he adds */}
-                {address && (
+                {!userData.address && (
                   <div>
-                  <h1 className="block text-sm font-medium text-background mb-3">
-                    Address Info
-                  </h1>
-                  <Input
-                    name="country"
-                    type="text"
-                    errors={errors.country ? errors.country : undefined}
-                    {...register('country')}
-                  >
-                    Country
-                  </Input>
-                  <Input
-                    name="city"
-                    type="text"
-                    errors={errors.city ? errors.city : undefined}
-                    {...register('city')}
-                  >
-                    City
-                  </Input>
-                </div>
+                    <h1 className="block text-sm font-medium text-background mb-3">
+                      Address Info
+                    </h1>
+                    <Input
+                      name="country"
+                      type="text"
+                      errors={errors.country ? errors.country : undefined}
+                      {...register('country', { required: true })}
+                    >
+                      Country
+                    </Input>
+                    <Input
+                      name="city"
+                      type="text"
+                      errors={errors.city ? errors.city : undefined}
+                      {...register('city', { required: true })}
+                    >
+                      City
+                    </Input>
+                  </div>
                 )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                <SubmitButton buttonText="Add New Item" />
+                <SubmitButton buttonText="Add New Item" loading={isLoading} />
               </div>
             </div>
+            {error && (
+              <div className="mt-4">
+                <div className="rounded-md bg-red-50 p-4">
+                  <div className="flex">
+                    <div className="flex-shrink-0">
+                      <svg
+                        className="h-5 w-5 text-red-400"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M10 12a  2 2 0 100-4  2 2 0 000 4z" />
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-sm font-medium text-red-800">
+                        {error.message}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </form>

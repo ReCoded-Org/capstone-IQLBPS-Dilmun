@@ -29,3 +29,7 @@ code {
 .scrollbar--none::-webkit-scrollbar {
   display: none;
 }
+
+.disabled {
+    @apply border-gray-500 opacity-50 cursor-not-allowed;
+}

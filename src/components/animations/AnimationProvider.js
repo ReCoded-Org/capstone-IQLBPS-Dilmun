@@ -27,9 +27,10 @@ function AnimationProvider() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/add-item" element={<AddItemPage />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </AnimatePresence>
   )
 }
 
-export default AnimationProvider
+export default AnimationProvider;
