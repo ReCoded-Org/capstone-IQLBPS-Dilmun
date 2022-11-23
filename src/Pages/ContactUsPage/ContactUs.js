@@ -13,11 +13,11 @@ const ContactUs = () => {
     <div className="bg-white text-gray-100 px-8 py-12">
       <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-gray-900">
         <div className="flex flex-col justify-between">
-          <div>
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-primary">
+          <div className="self-center text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-primary ">
               Lets talk about everything!
             </h2>
-            <div className="text-gray-600 mt-8">Give us your feedback</div>
+            <div className="text-gray-600 mt-8 ">Give us your feedback</div>
           </div>
           <div className="mt-8 text-center">
             <img

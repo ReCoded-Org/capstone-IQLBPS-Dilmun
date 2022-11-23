@@ -63,6 +63,15 @@ exports[`redering footer 1`] = `
             FAQ
           </a>
         </li>
+        <li>
+          <a
+            className="hover:text-tertiary duration-200 h-8 w-5 inline"
+            href="/contact-us"
+            onClick={[Function]}
+          >
+            Send feedback
+          </a>
+        </li>
       </ul>
     </div>
     <div
@@ -78,11 +87,33 @@ exports[`redering footer 1`] = `
         </span>
         <li>
           <a
-            className="hover:text-tertiary duration-200 h-8 w-5 inline"
-            href="/contact-us"
-            onClick={[Function]}
+            href="mailto:dilmun.recoded@gmail.com"
           >
-            Send feedback
+            <svg
+              className=" hover:text-tertiary duration-200 h-8 w-5 inline"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+             
+            dilmun.recoded@gmail.com
           </a>
         </li>
       </ul>
