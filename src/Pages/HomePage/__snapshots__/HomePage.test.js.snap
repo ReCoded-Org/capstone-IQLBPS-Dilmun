@@ -804,9 +804,9 @@ exports[`Home Page Rendered Correctly 1`] = `
         >
           <form>
             <input
-              class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid "
+              class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 mr-1 sm:mb-0 placeholder:text-background border border-solid "
               name="email"
-              placeholder="Write your email here"
+              placeholder="news_letter.email"
               required=""
               type="text"
             />
@@ -814,7 +814,7 @@ exports[`Home Page Rendered Correctly 1`] = `
               class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
               type="submit"
             >
-              Subscribe
+              news_letter.subscribe
             </button>
           </form>
         </div>
