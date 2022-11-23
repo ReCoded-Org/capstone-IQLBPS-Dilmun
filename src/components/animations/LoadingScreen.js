@@ -8,7 +8,6 @@ const LoadingScreen = () => {
                 height="100"
                 width="100"
                 color="#16425B"
-                timeout={3000}
                 visible
             />
         </div>
