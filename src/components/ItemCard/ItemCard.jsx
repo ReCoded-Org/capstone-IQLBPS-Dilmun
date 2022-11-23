@@ -1,4 +1,8 @@
-function ItemCard () {
+// import { getItemSuccess } from '../../features/slices/item'
+// import { useSelector, useDispatch } from '../../app/store';
+
+function ItemCard() {
+  // const { item } = useSelector((state) => itemList.state);
   return (
     <div className="w-full bg-background py-6 my-2">
       <div className="w-80 bg-background m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300">
@@ -41,7 +45,5 @@ function ItemCard () {
       </div>
     </div>
   );
-  }
+}
 export default ItemCard;
-
-
