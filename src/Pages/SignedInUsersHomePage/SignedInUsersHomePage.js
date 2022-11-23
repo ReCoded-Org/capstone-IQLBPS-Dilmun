@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { BsFillCartFill } from 'react-icons/bs'
 import { IoIosAddCircle } from 'react-icons/io'
-import { user } from '../../features/user/userSlice'
+import { user } from '../../features/slices/user'
 import { ADD_ITEM_ROUTE, PRODUCT_ROUTE } from '../../route'
 import ItemCard from './ItemCard'
 

@@ -10,8 +10,9 @@ import HomePage from '../../Pages/HomePage/HomePage';
 import AddItemPage from '../../Pages/AddItemPage/AddItemPage';
 import FilterPage from '../../Pages/FilterPage/FilterPage';
 import FaqPage from '../../Pages/FaqPage/FaqPage';
+import ContactUs from '../../Pages/ContactUsPage/ContactUs'
 import SignedInUsersHomePage from "../../Pages/SignedInUsersHomePage/SignedInUsersHomePage";
-import { user } from "../../features/user/userSlice";
+import { user } from "../../features/slices/user";
 
 
 function AnimationProvider() {
