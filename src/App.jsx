@@ -14,6 +14,7 @@ import {
 } from './features/slices/user';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
+import ProfileItemPage from './Pages/ProfileItemPage/ProfileItemPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -44,7 +45,7 @@ function App() {
       <NavBar />
 
       <AnimationProvider />
-
+<ProfileItemPage />
       <EditItemModal />
 
       <Alert color='bg-red-500'>Alert</Alert>
