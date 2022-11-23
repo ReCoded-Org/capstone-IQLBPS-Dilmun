@@ -13,8 +13,8 @@ const SignedInUsersHomePage = () => {
     const userData = useSelector(user);
 
     return (
-        <div data-testid='SignedInUseresHomePage' className='bg-background text-primary flex flex-col items-center justify-between'>
-            <div className=' bg-home-page-for-signed-in-users  flex flex-col justify-center bg-cover bg-center w-full max-h-[30vh] text-white shadow-lg'>
+        <div data-testid='SignedInUseresHomePage' className='bg-background text-primary flex flex-col  items-center justify-between'>
+            <div className=' bg-home-page-for-signed-in-users  flex flex-col justify-center bg-cover bg-center w-full text-white shadow-lg'>
                 <div className='w-full p-6 backdrop-blur-sm bg-white/30'>
                     <h1 className='text-2xl md:text-6xl font-bold text-center text-shadow'>Welcome back, </h1>
                     <h1 className='text-2xl md:text-6xl font-bold text-center mb-2'> {userData.firstName} {userData.lastName}</h1>
@@ -27,9 +27,9 @@ const SignedInUsersHomePage = () => {
 
                 </div>
             </div>
-            <div className='mt-5 max-h-[60vh]'>
+            <div className='mt-5'>
                 <h1 className='text-4xl font-bold mb-4 ml-4 text-center'>Most Recent Items</h1>
-                <div className='w-full px-5 lg:px-0 overflow-x-scroll slider flex flex-col lg:flex-row gap-4'>
+                <div className='w-full px-5 lg:px-0 overflow-x-scroll scrollbar--none flex flex-col lg:flex-row gap-4'>
                     <ItemCard />
                     <ItemCard />
                     <ItemCard />

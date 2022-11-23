@@ -26,6 +26,6 @@ code {
 .focus:outline-none:focus {
   @apply outline-none;
 }
-.slider::-webkit-scrollbar {
+.scrollbar--none::-webkit-scrollbar {
   display: none;
 }
