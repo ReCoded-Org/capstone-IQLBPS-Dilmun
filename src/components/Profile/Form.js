@@ -2,8 +2,9 @@ import React from "react" ;
 
 
 function Form(){
-    return ( <form className=" w-full ">
-        <div className="bg-[#81C3D7] py-6 px-10 sm:max-w-md w-full rounded-md">
+    return ( 
+    <form className=" w-full ">
+        <div className="bg- py-6 px-10 sm:max-w-md w-full rounded-md">
                             <div className="sm:text-3xl text-2xl font-semibold text-center w-full text-primary  mb-12">
                             Edit your profile 
                             </div>
@@ -44,13 +45,13 @@ function Form(){
                                 </div>
                         </div>
                         <div className="flex justify-center p-2">
-                            <button type="button"className=" rounded-full  p-3 w-full sm:w-56   bg-[#D9DCD6] hover:bg-neutral-300 text-primary text-lg font-semibold " >Upload</button>
+                            <button type="button"className=" rounded-full  p-3 w-full sm:w-56  hover:bg-neutral-300 text-primary text-lg font-semibold " >Upload</button>
                         </div>
                     </div>
                 </div> 
                         <div className="flex flex-col gap-2">
-                                <input type="text" className=" w-full p-1  bg-background rounded-lg mt-3 "  placeholder=" First name "/>
-                                <input type="text" className=" w-full p-1  bg-background rounded-lg"  placeholder=" Last name "/>
+                                <input type="text" className=" w-full p-1 bg-background rounded-lg mt-3 "  placeholder=" First name "/>
+                                <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" Last name "/>
                                 <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" Country "/>
                                 <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" City "/>
                             <div className="flex justify-center">
