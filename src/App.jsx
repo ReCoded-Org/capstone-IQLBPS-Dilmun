@@ -9,6 +9,7 @@ import { auth } from './firebase-config';
 import { error, getCurrentSignedInUser, status, user } from './features/user/userSlice';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
+import ItemCard from './components/ItemCard/ItemCard';
 
 function App() {
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ function App() {
       <Alert color='bg-red-500'>Alert</Alert>
 
       <NotFound />
-
+<ItemCard/>
       <Footer />
     </div>
   );
