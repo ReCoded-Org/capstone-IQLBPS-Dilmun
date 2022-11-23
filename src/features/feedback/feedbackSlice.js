@@ -36,17 +36,17 @@ const feedbackSlice = createSlice({
       .addCase(sendFeedback.pending, (state) => {
         state.status = 'loading';
         state.error = null;
-        state.user = {};
+        state.feedback = {};
       })
       .addCase(sendFeedback.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
         state.error = null;
-        state.user = JSON.parse(payload);
+        state.feedback = JSON.parse(payload);
       })
       .addCase(sendFeedback.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
-        state.user = {};
+        state.feedback = {};
       });
   },
 });
