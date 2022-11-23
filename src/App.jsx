@@ -11,7 +11,7 @@ import {
   getCurrentSignedInUser,
   status,
   user,
-} from './features/user/userSlice';
+} from './features/slices/user';
 import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
 import LoadingScreen from './components/animations/LoadingScreen';
@@ -27,7 +27,12 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        dispatch(getCurrentSignedInUser(currentUser.uid));
+        dispatch(
+          getCurrentSignedInUser({
+            id: currentUser.uid,
+            email: currentUser.email,
+          })
+        );
       } else {
         // eslint-disable-next-line no-console
         console.log('no user');
