@@ -1,6 +1,6 @@
 {
     "about_us": {
-        "meet_our_team": "التق بفريقنا"
+        "meet_our_team": "تعرف على فريقنا"
     },
     "add_item_button": {
         "add_item": "اضافة عنصر"
@@ -14,7 +14,7 @@
         "item_name": "اسم العنصر",
         "item_price": "سعر",
         "item_type": "نوع العنصر",
-        "item_category": "العنصر فئة",
+        "item_category": "فئة العنصر",
         "item_description": "وصف",
         "adress_info": "معلومات العنوان",
         "country": "بلد",
@@ -22,7 +22,7 @@
         "add_new_item": "اضافة عنصر جديد"
     },
     "overlap_text": {
-        "check_out": "شاهد الفيديو كاملاً",
+        "check_out": "شاهد هذا الفيديو الذي صنعه أحد عملائنا الراضين",
         "watch_full_video": "شاهد الفيديو كاملاً"
     },
     "faq": {
@@ -41,11 +41,11 @@
     "features": {
         "designed_to_meet_your_needs": "مصممة لتلبية احتياجاتك.",
         "description": "هنا في دلمون نبيع العديد من المنتجات للعملاء ونقبل التبرعات لمساعدة المحتاجين.",
-        "feature_one_title": "منقي",
+        "feature_one_title": "فلتر",
         "feature_one_description": "تصفية العناصر الخاصة بك للعثور على المعلومات الصحيحة.",
         "feature_two_title": "متعدد اللغات",
         "feature_two_description": "استخدم الموقع بلغتك المفضلة.",
-        "feature_three_title": "يجتمع",
+        "feature_three_title": "قابل / اجتمع",
         "feature_three_description": "تعرف على أشخاص جدد وقم بإجراء اتصالات جديدة."
     },
     "filter": {
@@ -57,25 +57,25 @@
             "kids": "أطفال",
             "toys": "ألعاب الأطفال",
             "electronics": "إلكترونيات",
-            "home": "عنصر المنزل"
+            "home": "ادوات منزلية"
         },
         "type": {
             "title": "أنواع",
             "new": "الجديد",
-            "used": "تستخدم",
-            "donated": "تبرعت",
-            "crafted": "مصنوع"
+            "used": "مستخدم",
+            "donated": "للتبرع",
+            "crafted": "صناعة يدوية"
         },
         "price": "سعر",
-        "apply": "يتقدم"
+        "apply": "طبّق"
     },
     "hero": {
         "welcome_to_dilmun": "مرحبا بكم في دلمون",
         "your_way": "طريقك للحصول على منتجات عالية الجودة!",
-        "get_started": "البدء"
+        "get_started": "ابدأ الآن"
     },
     "edit_item_form": {
-        "edit_item": "تعديل عنصر",
+        "edit_item": "تحرير عنصر",
         "edit_item_info": "تحرير معلومات العنصر",
         "edit_item_image": "تحرير صورة العنصر",
         "edit_item_name": "تحرير اسم العنصر",
@@ -102,19 +102,19 @@
         "our_partners": "شركائنا",
         "what_they_say": "ما يقوله الناس <br className='block' /> عنا",
         "everything_you_need": " كل ما تحتاج لمعرفته حول أعمالنا ومنتجاتنا في أي مكان على هذا الكوكب.",
-        "feedback_one_title": "عميل",
+        "feedback_one_title": "زبون",
         "feedback_one_description": "لقد أجريت عمليات شراء متعددة وكانت كل عملية شراء رائعة! الاختيار الذي يقدمونه متنوع للغاية ويمكنني قضاء ساعات في البحث في جميع العناصر.",
         "feedback_one_name": "Herman Jensen",
-        "feedback_two_title": "عميل",
+        "feedback_two_title": "زبون",
         "feedback_two_description": "شعرت كل عملية شراء بالأمان وتم استلام جميع العناصر في الوقت المناسب. يا له من مكان رائع لعرض منتجات وسلع العمل!",
         "feedback_two_name": "Steve Mark",
-        "feedback_three_title": "عميل",
+        "feedback_three_title": "زبون",
         "feedback_three_description": "لقد وجدت أن دلمون كانت محترفة للغاية وقدمت منتجًا عالي الجودة في إطار زمني فعال. سأفكر في التسوق معهم مرة أخرى.",
         "feedback_three_name": "Kenn Gallagher"
     },
     "search_bar": {
         "search_here": "ابحث هنا...",
-        "submit": "يُقدِّم"
+        "submit": "ارسال"
     },
     "sign_in": {
         "sign_in": "تسجيل الدخول",
