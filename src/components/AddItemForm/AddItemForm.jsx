@@ -2,15 +2,13 @@ import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { useNavigate } from 'react-router-dom';
-import { storage } from '../../firebase-config';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 // redux
 import { useSelector, useDispatch } from '../../app/store';
 import { user, updateUserAddress } from '../../features/slices/user';
-import { addItem } from '../../features/slices/item';
+import { uploadImageItem, addItem } from '../../features/slices/item';
 
 // Validation schema
 const schema = yup.object().shape({
@@ -30,7 +28,7 @@ export default function AddItemForm() {
   const [itemImage, setItemImage] = useState(
     'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
   );
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
   const { isLoading, error } = useSelector((state) => state.item);
@@ -54,9 +52,7 @@ export default function AddItemForm() {
     }
   }, [userData.address, setValue]);
 
-  const onSubmit = (values) => {
-    const rootRef = ref(storage, 'gs://capstone-dilmun.appspot.com');
-    const itemImageRef = ref(rootRef, `images/${itemImage.name}`);
+  const onSubmit = async (values) => {
     if (!userData.address) {
       dispatch(
         updateUserAddress({
@@ -66,21 +62,20 @@ export default function AddItemForm() {
       );
     }
     if (typeof itemImage !== 'string') {
-      uploadBytes(itemImageRef, itemImage).then(() => {
-        getDownloadURL(itemImageRef).then((url) => {
-          dispatch(
-            addItem({
-              item: values,
-              owner: {
-                ...userData,
-                address: { city: values.city, country: values.country },
-              },
-              type,
-              file: url,
-            })
-          );
-        });
-      });
+      const imgURL = await dispatch(uploadImageItem(itemImage));
+      if (imgURL.payload) {
+        dispatch(
+          addItem({
+            item: values,
+            owner: {
+              ...userData,
+              address: { city: values.city, country: values.country },
+            },
+            type,
+            file: imgURL.payload,
+          })
+        );
+      }
     } else {
       dispatch(
         addItem({
@@ -94,9 +89,11 @@ export default function AddItemForm() {
         })
       );
     }
-    reset();
-    setType(ITEM_TYPES[0]);
-    navigate(-1)
+    if (!error && !isLoading) {
+      reset();
+      setType(ITEM_TYPES[0]);
+      navigate(-1);
+    }
   };
 
   return (
