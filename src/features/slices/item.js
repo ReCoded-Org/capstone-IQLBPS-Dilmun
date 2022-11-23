@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import moment from 'moment';
 import { db, storage } from '../../firebase-config';
 import { dispatch } from '../../app/store';
 
@@ -86,8 +87,8 @@ export const addItem = createAsyncThunk(
         category: item.category,
         type: item.type,
         owner,
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        createdAt: moment().format('LLLL'),
+        updatedAt: moment().format('LLLL'),
       };
       const docRef = await addDoc(collection(db, 'Items'), data);
       // add item to user collection as subcollection
