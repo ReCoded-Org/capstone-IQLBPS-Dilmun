@@ -13,10 +13,13 @@ function ProfileItemPage() {
                     <div className="uppercase tracking-wide text-lg leading-tight text-lg font-semibold">
                         Product Name
                     </div>
+                    <div className="pt-3">
                     <DeleteItemButton />
+                    </div>
+                    
                 </div>
 
-                <p className="mt-2 text-slate-500">
+                <p className="mt-2 text-slate-500 pl-8">
                     Product Description
                 </p>
             </div>
