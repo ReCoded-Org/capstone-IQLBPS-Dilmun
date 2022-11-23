@@ -6,7 +6,6 @@ import {store} from '../../app/store'
 import Profile from './Profile';
 
 
-
 test('Profile Rendered Correctly', () => {
     render(
       <Provider store={store}>
