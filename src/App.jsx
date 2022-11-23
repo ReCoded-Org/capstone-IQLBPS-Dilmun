@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="App  ">
-     {loading === true ? (
+      {loading === true ? (
         <LoadingScreen />
       ) : (
         <>
