@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
-import NotFound from './components/NotFound/NotFound';
 import NavBar from './components/NavBar/NavBar';
-import Alert from './components/alert/Alert';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
 import {
@@ -12,7 +10,6 @@ import {
   status,
   user,
 } from './features/slices/user';
-import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
 
 function App() {
@@ -44,13 +41,6 @@ function App() {
       <NavBar />
 
       <AnimationProvider />
-
-      <EditItemModal />
-
-      <Alert color='bg-red-500'>Alert</Alert>
-
-      <NotFound />
-
       <Footer />
     </div>
   );
