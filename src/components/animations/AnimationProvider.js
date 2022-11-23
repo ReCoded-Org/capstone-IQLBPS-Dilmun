@@ -9,6 +9,7 @@ import AddItemPage from '../../Pages/AddItemPage/AddItemPage';
 import FilterPage from '../../Pages/FilterPage/FilterPage';
 import FaqPage from '../../Pages/FaqPage/FaqPage';
 import ContactUs from '../../Pages/ContactUsPage/ContactUs';
+import ProfilePage from '../../Pages/ProfilePage/ProfilePage'
 
 function AnimationProvider() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function AnimationProvider() {
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/add-item" element={<AddItemPage />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/profile-page" element={<ProfilePage />} />
       </Routes>
     </AnimatePresence>
   );

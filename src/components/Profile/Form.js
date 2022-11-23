@@ -1,7 +1,16 @@
 import React from "react" ;
-
+import { useState } from 'react';
+import { Dialog } from '@headlessui/react';
+import { useForm } from 'react-hook-form';
 
 function Form(){
+    const [isOpen, setIsOpen] = useState(true);
+    const {
+        register,
+        handleSubmit,
+        reset
+      } = useForm();
+
     return ( 
     <form className=" w-full ">
         <div className="bg- py-6 px-10 sm:max-w-md w-full rounded-md">
@@ -23,7 +32,7 @@ function Form(){
                                                 </svg>
                                                 <p className="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">Attach a file</p>
                                         </div>
-                                        <input type="file" className="opacity-0" />
+                                        <input type="file" className="opacity-0" {...register('profilePic')}/>
                                     </div>
                                 </div>
                                 {/* Background Image */}
@@ -39,7 +48,7 @@ function Form(){
                                                 </svg>
                                                 <p className="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">Attach a file</p>
                                         </div>
-                                        <input type="file" className="opacity-0" />
+                                        <input type="file" className="opacity-0" {...register('backgroundPic')}/>
                                     </div>
                                     </div>
                                 </div>
@@ -50,10 +59,10 @@ function Form(){
                     </div>
                 </div> 
                         <div className="flex flex-col gap-2">
-                                <input type="text" className=" w-full p-1 bg-background rounded-lg mt-3 "  placeholder=" First name "/>
-                                <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" Last name "/>
-                                <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" Country "/>
-                                <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" City "/>
+                                <input type="text" className=" w-full p-1 bg-background rounded-lg mt-3 "  placeholder=" First name " {...register('firstName')}/>
+                                <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" Last name " {...register('lastName')}/>
+                                <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" Country " {...register('country')}/>
+                                <input type="text" className=" w-full p-1 bg-background rounded-lg"  placeholder=" City " {...register('city')}/>
                             <div className="flex justify-center">
                                 <button type="button" className=" rounded-full  p-3 w-full sm:w-56  bg-[#D9DCD6] hover:bg-neutral-300  text-primary text-lg font-semibold " >
                                 Save

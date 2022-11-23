@@ -1,4 +1,3 @@
-// import { async } from '@firebase/util';
 import {
   createAsyncThunk,
   createSlice
@@ -26,8 +25,6 @@ const initialState = {
   status: 'idle',
   error: null,
 };
-
-
 
 export const signInWithGoogle = createAsyncThunk(
   'user/signInWithGoogle',
@@ -117,7 +114,7 @@ export const signUpWithCredentials = createAsyncThunk(
       } = await createUserWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
 
       await setDoc(doc(db, 'Users', user.uid), {
@@ -159,18 +156,36 @@ export const getCurrentSignedInUser = createAsyncThunk(
     rejectWithValue
   }) => {
     try {
-      const docRef = doc(db, 'Users', payload);
+      const docRef = doc(db, 'Users', payload.id);
       const docSnap = await getDoc(docRef);
 
       if (!docSnap.exists()) {
         return rejectWithValue(JSON.stringify('no user found'));
       }
-      return JSON.stringify(docSnap.data());
+      return JSON.stringify({ ...docSnap.data(), email: payload.email, uid: payload.id });
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
   }
 );
+
+export const updateUserAddress = createAsyncThunk(
+  'user/updateUserAddress',
+  async (payload, {
+    rejectWithValue
+  }) => {
+    try {
+      const docRef = doc(db, 'Users', payload.user.uid);
+      await setDoc(docRef, {address: payload.address}, {
+        merge: true,
+      });
+      return JSON.stringify({ ...payload.user, address: {...payload.address} });
+    } catch (error) {
+      return rejectWithValue(JSON.stringify(error));
+    }
+  }
+);
+
 const userSlice = createSlice({
   name: 'user',
   initialState,
@@ -295,6 +310,24 @@ const userSlice = createSlice({
       .addCase(Signout.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
+      })
+      // updateUserAddress
+      .addCase(updateUserAddress.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+      })
+      .addCase(updateUserAddress.fulfilled, (state, {
+        payload
+      }) => {
+        state.status = 'succeeded';
+        state.error = null;
+        state.user = JSON.parse(payload);
+      })
+      .addCase(updateUserAddress.rejected, (state, {
+        payload
+      }) => {
+        state.status = 'failed';
+        state.error = JSON.parse(payload);
       });
   },
 });
@@ -302,7 +335,5 @@ const userSlice = createSlice({
 export const user = (state) => state.user.user;
 export const status = (state) => state.user.status;
 export const error = (state) => state.user.error;
-export const {
-  resetState
-} = userSlice.actions;
+export const { resetState } = userSlice.actions;
 export default userSlice.reducer;

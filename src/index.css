@@ -22,3 +22,7 @@ code {
 .focus:outline-none:focus {
     @apply outline-none;
 }
+
+.disabled {
+    @apply border-gray-500 opacity-50 cursor-not-allowed;
+}
