@@ -9,30 +9,26 @@ import defaultProfileImg from '../../assets/img/defaultProfileImg.jpg';
 import defaultBGImg from '../../assets/img/defaultBGImg.jpg';
 import CustomItemCard from '../CustomComponents/CustomItemCard';
 import Form from "./Form";
-// import axios from "axios";
+
 
 function Profile() {
 
   const userData = useSelector(user);
   const [email, setEmail] = useState();
   const [isOpen, setIsOpen] = useState(false);
-  // const [selectedImg, setSelectedImg] = useState(defaultProfileImg);  
-  // const [selectedBGImg , setSelectedBGImg] = useState(defaultBGImg);
+
   useEffect(() => {
     if (!_.isEmpty(userData)) {
       setEmail(auth.currentUser.email);
     }
   }, [email]);
 
- // const openModal = React.useCallback(() => setIsOpen(!isOpen) , [])
+
   
   const toggleForm = () => {
     setIsOpen(!isOpen);
   }
-//   function handleSelectProfile(e) {
-//     // console.log(e.target.files[0])
-//     setSelectedImg(e.target.files[0]);
-//   }
+
 
   return (
     <div
@@ -64,14 +60,16 @@ function Profile() {
           <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
             {' '}
             {email}
-            <button type="button" onClick={toggleForm}>
+           
+          </h5>
+            <button type="button" onClick = { toggleForm } className ="text-primary hover:text-secondary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 ml-3"
+                className="w-6 h-6 m-3"
               >
                 <path
                   strokeLinecap="round"
@@ -86,7 +84,6 @@ function Profile() {
               </svg>
             </button>
             {isOpen && <Form  toggleForm = { toggleForm } /> }
-          </h5>
 
           <div className=" items-center divide-x border-t border-primary ">
             <div className="flex-grow border-t border-primary divide-x" />
