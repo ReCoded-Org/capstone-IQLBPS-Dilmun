@@ -778,47 +778,54 @@ exports[`Home Page Rendered Correctly 1`] = `
       </div>
     </div>
   </section>
-  <section>
+  <div
+    class=" grid grid-col-2 pt-14 pb-14 pr-10 pl-10 hadow-md bg-background border-y-2 border-y-primary"
+    data-testid="newsletter"
+  >
     <div
-      class="pt-14 pb-14 pr-10 pl-10 md:flex shadow-md justify-around bg-primary"
+      class="text-primary flex flex-col lg:flex-row items-center lg:justify-around justify-center"
     >
       <div
-        class="text-background flex flex-col md:flex-row justify-center items-center"
+        class="flex flex-col lg:flex-row lg:justify-start justify-center items-center"
       >
         <img
           alt="email"
-          class="w-24 md:w-40  h-100"
+          class="w-24 md:w-40 h-100"
           src="https://www.freepnglogos.com/uploads/blue-email-logo-png-4.png"
         />
         <h1
-          class="text-[20px] sm:text-[40px] mb-3 sm:mb-0"
+          class="text-[40px] mb-3 sm:mb-0 lg:text-start text-center"
         >
           Subscribe to our 
           <br />
-           Newsletter !
+           Newsletter!
         </h1>
       </div>
       <div
-        class="mt-4"
+        class="mt-4 flex flex-col items-center justify-center"
       >
         <p
-          class="text-background mb-5"
+          class="text-primary mb-5 lg:text-end text-center"
         >
-          Subscribe to our newsletter and stay updated
+          Subscribe to our newsletter and stay
+          <br
+            class="sm:block hidden"
+          />
+          updated.
         </p>
         <div
           class="items-center"
         >
           <form>
             <input
-              class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid "
+              class="rounded p-1 w-full lg:w-fit md:p-2 mb-3 lg:mb-0 placeholder:text-tertiary border border-solid mr-2"
               name="email"
               placeholder="Write your email here"
               required=""
               type="text"
             />
             <button
-              class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
+              class="bg-tertiary px-2 py-2 w-full lg:w-auto text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
               type="submit"
             >
               Subscribe
@@ -827,6 +834,6 @@ exports[`Home Page Rendered Correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
