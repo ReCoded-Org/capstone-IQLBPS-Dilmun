@@ -6,15 +6,17 @@ function ItemCard() {
   const itemData = useSelector(itemList);
   const [items, setItems] = useState([]);
   const dispatch = useDispatch();
+  const func = async () => {
+    await dispatch(getItemList(itemData));
+  };
 
   useEffect(() => {
- const func = async()=> {
-    await dispatch(getItemList(itemData));
-  }
-  func()
-  setItems(itemData);
+    if (items === []) {
+      func();
+      setItems(itemData);
+      console.log(items);
+    }
   }, []);
-
 
   return (
     <div className="w-full grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 content-center items-center justify-items-center bg-background py-6 my-2">
@@ -81,8 +83,8 @@ function ItemCard() {
               <button
                 type="button"
                 className="w-full my-2 duration-300 text-background bg-secondary hover:bg-primary focus:ring-1 focus:outline-none focus:ring-tertiary font-medium rounded-lg text-md px-5 py-2.5 text-center"
-              ><a href={`mailto: ${item.owner.email}`}>
-                Email Owner</a>
+              >
+                <a href={`mailto: ${item.owner.email}`}>Email Owner</a>
               </button>
             </div>
           </div>

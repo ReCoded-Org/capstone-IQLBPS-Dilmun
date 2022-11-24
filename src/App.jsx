@@ -12,7 +12,6 @@ import {
   user,
 } from './features/slices/user';
 import AnimationProvider from './components/animations/AnimationProvider';
-import ItemCard from './components/ItemCard/ItemCard';
 import { UserItemCard } from './components/Cards';
 
 const MOCK_ITEM = {
@@ -62,7 +61,7 @@ function App() {
       <>
       <NavBar />
       <AnimationProvider />
-      <ItemCard/>
+
       <UserItemCard item={MOCK_ITEM} />
       <Footer />
       </>
