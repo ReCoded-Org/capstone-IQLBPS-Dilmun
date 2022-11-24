@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import LoadingScreen from './components/animations/LoadingScreen';
 import { auth } from './firebase-config';
 import {
   error,
@@ -24,7 +25,7 @@ const MOCK_ITEM = {
 
 function App() {
   const dispatch = useDispatch();
-
+  const [loading, setLoading] = useState(true);
   const userData = useSelector(user);
   const errorData = useSelector(error);
   const statusData = useSelector(status);
@@ -46,12 +47,24 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    },500);
+  }, []);
+
   return (
     <div className="App  ">
+      {loading === true ? (
+      <LoadingScreen />
+      ):(
+      <>
       <NavBar />
       <AnimationProvider />
       <UserItemCard item={MOCK_ITEM} />
       <Footer />
+      </>
+      )}
     </div>
   );
 }
