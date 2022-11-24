@@ -24,12 +24,11 @@ function Profile() {
     }
   }, [email]);
 
-  const openModal = React.useCallback(() => setIsOpen(true) , [])
 
-//   function handleSelectProfile(e) {
-//     // console.log(e.target.files[0])
-//     setSelectedImg(e.target.files[0]);
-//   }
+  //   function handleSelectProfile(e) {
+  //     // console.log(e.target.files[0])
+  //     setSelectedImg(e.target.files[0]);
+  //   }
 
   return (
     <div
@@ -61,7 +60,7 @@ function Profile() {
           <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
             {' '}
             {email}
-            <button type="button" onClick={openModal}>
+            <button type="button" onClick={() => setIsOpen(!isOpen)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -82,7 +81,7 @@ function Profile() {
                 />
               </svg>
             </button>
-            {isOpen && <Form/> }
+            {isOpen && <Form />}
           </h5>
 
           <div className=" items-center divide-x border-t border-primary ">
@@ -109,7 +108,7 @@ function Profile() {
               Add New Item{' '}
             </button>
           </Link>
-        <Form />
+          <Form />
 
         </div>
       </div>
