@@ -65,9 +65,6 @@ const SignedInUsersHomePage = () => {
             <ItemCard />
           </div>
         </div>
-
-
-        <ItemCard />
       </div>
     );
 }
