@@ -11,8 +11,6 @@ import {
   user,
 } from './features/slices/user';
 import AnimationProvider from './components/animations/AnimationProvider';
-import ProfileItemPage from './Pages/ProfileItemPage/ProfileItemPage';
-
 import { UserItemCard } from './components/Cards';
 
 function App() {
