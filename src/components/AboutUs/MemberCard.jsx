@@ -3,7 +3,7 @@ import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 const MemberCard = ({ member }) => {
   return (
-    <div className=" max-w-sm rounded-[20px] overflow-hidden shadow-lg ">
+    <div className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background">
       <img className="object-cover  w-full" src={member.img} alt="team member" />
       <div className="px-6 py-4">
         <div className="text-center font-bold text-primary text-xl mb-2">{member.name}</div>
@@ -13,7 +13,7 @@ const MemberCard = ({ member }) => {
         {member.links.map((link) => {
           return (
             <a key={link.name}
-              className="inline-block text-center text-primary bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
+              className="inline-block text-center bg-background rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2 hover:underline"
               href={link.url}
             >
               <div className="flex space-x-2 items-center ">

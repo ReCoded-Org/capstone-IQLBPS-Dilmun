@@ -4,17 +4,11 @@ import team from './team.json';
 
 const AboutUs = () => {
   return (
-    <div className=" container mx-auto px-4 mt-28" >
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-        <h1 className='text-4xl font-bold mt-0 mb-6'>
-          Meet Our Team
-        </h1>
-      </div>
-      <div className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center">
+    <div className="flex flex-col justify-center items-center">
+      <h1 className="sm:text-6xl text-4xl font-extrabold mb-10 text-primary x-auto px-4 mt-28">
+        Meet Our Team
+      </h1>
+      <div className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center">
         {team.map((member) => {
           return <MemberCard key={member.id} member={member} />;
         })}
@@ -24,6 +18,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-
-
-
