@@ -1,6 +1,8 @@
-import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import React from "react";
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import { useSelector } from "react-redux";
+import _ from 'lodash';
 import AboutUsPage from '../../Pages/AboutUsPage/AboutUsPage';
 import SignInPage from '../../Pages/SignInPage/SignInPage';
 import SignUpPage from '../../Pages/SignUpPage/SignUpPage';
@@ -8,14 +10,18 @@ import HomePage from '../../Pages/HomePage/HomePage';
 import AddItemPage from '../../Pages/AddItemPage/AddItemPage';
 import FilterPage from '../../Pages/FilterPage/FilterPage';
 import FaqPage from '../../Pages/FaqPage/FaqPage';
-import ContactUs from '../../Pages/ContactUsPage/ContactUs';
+import ContactUs from '../../Pages/ContactUsPage/ContactUs'
+import SignedInUsersHomePage from "../../Pages/SignedInUsersHomePage/SignedInUsersHomePage";
+import { user } from "../../features/slices/user";
+
 
 function AnimationProvider() {
-  const location = useLocation();
+  const location = useLocation()
+  const userData = useSelector(user)
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage />} />
+        {!_.isEmpty(userData) ? <Route path="/" element={<SignedInUsersHomePage />} /> : <Route path='/' element={<HomePage />} />}
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/products" element={<FilterPage />} />
@@ -25,7 +31,7 @@ function AnimationProvider() {
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </AnimatePresence>
-  );
+  )
 }
 
 export default AnimationProvider;

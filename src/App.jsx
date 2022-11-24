@@ -1,10 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
-import NotFound from './components/NotFound/NotFound';
 import NavBar from './components/NavBar/NavBar';
-import Alert from './components/alert/Alert';
 import Footer from './components/Footer/Footer';
+import LoadingScreen from './components/animations/LoadingScreen';
 import { auth } from './firebase-config';
 import {
   error,
@@ -12,12 +11,21 @@ import {
   status,
   user,
 } from './features/slices/user';
-import EditItemModal from './components/ItemEditForm/EditItemModal';
 import AnimationProvider from './components/animations/AnimationProvider';
+import { UserItemCard } from './components/Cards';
+
+const MOCK_ITEM = {
+  title: 'Title of Item Goes Here',
+  file: 'https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  description: 'Description of item Here...',
+  price: 110,
+  type: 'Item Type',
+  categories: ['Men', 'Women', 'Kids'],
+};
 
 function App() {
   const dispatch = useDispatch();
-
+  const [loading, setLoading] = useState(true);
   const userData = useSelector(user);
   const errorData = useSelector(error);
   const statusData = useSelector(status);
@@ -39,18 +47,24 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    },500);
+  }, []);
+
   return (
     <div className="App  ">
+      {loading === true ? (
+      <LoadingScreen />
+      ):(
+      <>
       <NavBar />
       <AnimationProvider />
-
-      <EditItemModal />
-
-      <Alert color='bg-red-500'>Alert</Alert>
-
-      <NotFound />
-
+      <UserItemCard item={MOCK_ITEM} />
       <Footer />
+      </>
+      )}
     </div>
   );
 }
