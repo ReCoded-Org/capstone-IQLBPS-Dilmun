@@ -6,14 +6,13 @@ function ItemCard() {
   const itemData = useSelector(itemList);
   const [items, setItems] = useState([]);
   const dispatch = useDispatch();
-  const func = async () => {
-    await dispatch(getItemList(itemData));
-  };
-
   useEffect(() => {
-      func();
-      setItems(itemData);
-      console.log(items);
+    const func = async () => {
+      await dispatch(getItemList(itemData));
+    };
+    func();
+    setItems(itemData);
+    console.log(items);
   }, []);
 
   return (
