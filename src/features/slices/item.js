@@ -87,8 +87,8 @@ export const addItem = createAsyncThunk(
         category: item.category,
         type: item.type,
         owner,
-        createdAt: moment().format('LLLL'),
-        updatedAt: moment().format('LLLL'),
+        createdAt: moment().format('LLL'),
+        updatedAt: moment().format('LLL'),
       };
       const docRef = await addDoc(collection(db, 'Items'), data);
       // add item to user collection as subcollection

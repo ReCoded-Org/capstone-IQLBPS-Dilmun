@@ -33,7 +33,7 @@ function ItemCard() {
             <figure className="relative max-w-sm transition-all cursor-pointer">
               <a href="/">
                 <img
-                  className="rounded-t-lg overflow-hidden mb-3 lg:h-80 md:h-64 h-96 shadow-md"
+                  className="rounded-t-lg overflow-hidden mb-3 lg:h-80 md:h-64 h-96 shadow-md md:w-64 lg:w-80 w-96"
                   src={item.file}
                   alt="product"
                 />
@@ -52,18 +52,21 @@ function ItemCard() {
             </figure>
             <div className="px-5 pb-5">
               <h5 className="text-3xl pb-2 font-extrabold text-primary">
-                Title
+                {item.title.slice(0, 1).toUpperCase()}
+                {item.title.slice(1)}
               </h5>
               <span className="text-xl py-1 font-semibold text-primary">
                 {item.type}
               </span>
               {item.description.length > 20 ? (
                 <h5 className="text-base py-1 font-base text-primary">
-                  {item.description.slice(0, 30)}...
+                  {item.description.slice(0, 1).toUpperCase()}
+                  {item.description.slice(1, 30)}...
                 </h5>
               ) : (
                 <h5 className="text-base py-1 font-base text-primary">
-                  {item.description}
+                  {item.description.slice(0, 1).toUpperCase()}
+                  {item.description.slice(1)}
                 </h5>
               )}
               <div className="">
@@ -80,6 +83,9 @@ function ItemCard() {
                     {item.category}
                   </span>
                 )}
+                <h5 className="text-base py-1 font-base text-primary">
+                  {item.createdAt.toString()}
+                </h5>
               </div>
               <button
                 type="button"
