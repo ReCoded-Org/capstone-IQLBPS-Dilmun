@@ -1,8 +1,17 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ContactUs from './ContactUs.js';
+import { store } from '../../app/store';
 
 test('Contact us Page Rendered Correctly', () => {
-  const tree = render(<ContactUs />);
+  const tree = render(
+    <Provider store={store}>
+      <Router>
+        <ContactUs />
+      </Router>
+    </Provider>
+  );
   expect(tree).toMatchSnapshot();
 });
