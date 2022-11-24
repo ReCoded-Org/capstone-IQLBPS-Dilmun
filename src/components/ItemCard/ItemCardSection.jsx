@@ -14,7 +14,7 @@ export default function ItemCardSection() {
   };
   useEffect(() => {
     func();
-  }, [items]);
+  }, []);
 
   return (
     <div
