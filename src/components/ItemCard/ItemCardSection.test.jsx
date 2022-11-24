@@ -12,6 +12,6 @@ test('Render Item Card Section correctly', async () => {
       </ItemCardSection>
     </Provider>
   );
-  const items = await expect(screen.getByTestId('item-card')).toBeInTheDocument();
+  await expect(screen.getByTestId('item-card')).toBeInTheDocument();
 //   await waitFor(() => expect(items).toHaveBeenCalledTimes(1));
 });
