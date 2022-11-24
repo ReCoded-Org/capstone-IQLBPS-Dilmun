@@ -2,7 +2,7 @@
 // import { getItemList, itemList } from '../../features/slices/item';
 // import { useSelector, useDispatch } from '../../app/store';
 
-function ItemCard({ item }) {
+function ItemsCard({ item }) {
   //   const itemData = useSelector(itemList);
   //   const [items, setItems] = useState([]);
   //   const dispatch = useDispatch();
@@ -84,4 +84,4 @@ function ItemCard({ item }) {
     </div>
   );
 }
-export default ItemCard;
+export default ItemsCard;
