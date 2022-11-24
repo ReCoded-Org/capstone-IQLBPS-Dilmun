@@ -3,6 +3,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import LoadingScreen from './components/animations/LoadingScreen';
 import { auth } from './firebase-config';
 import {
   error,
@@ -11,10 +12,16 @@ import {
   user,
 } from './features/slices/user';
 import AnimationProvider from './components/animations/AnimationProvider';
-import LoadingScreen from './components/animations/LoadingScreen';
-import NotFound from  './components/NotFound/NotFound';
-import EditItemModal from './components/ItemEditForm/EditItemModal';
-import Alert from './components/alert/Alert';
+import { UserItemCard } from './components/Cards';
+
+const MOCK_ITEM = {
+  title: 'Title of Item Goes Here',
+  file: 'https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  description: 'Description of item Here...',
+  price: 110,
+  type: 'Item Type',
+  categories: ['Men', 'Women', 'Kids'],
+};
 
 function App() {
   const dispatch = useDispatch();
@@ -49,16 +56,14 @@ function App() {
   return (
     <div className="App  ">
       {loading === true ? (
-        <LoadingScreen />
-      ) : (
-        <>
-          <NavBar />
-          <AnimationProvider />
-          <EditItemModal />
-          <Alert color="bg-red-500">Alert</Alert>
-          <NotFound />
-          <Footer />
-        </>
+      <LoadingScreen />
+      ):(
+      <>
+      <NavBar />
+      <AnimationProvider />
+      <UserItemCard item={MOCK_ITEM} />
+      <Footer />
+      </>
       )}
     </div>
   );
