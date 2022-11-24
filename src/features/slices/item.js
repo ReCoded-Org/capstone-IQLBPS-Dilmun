@@ -111,9 +111,9 @@ export const getItemList = createAsyncThunk(
     try {
       const docRef = collection(db, 'Items')
       const docSnap = await getDocs(docRef)
-      const itemData = docSnap.docs.map((d) => ({...d.data(), id: d.id}))
-      await dispatch(itemSlice.actions.getItemListSuccess(itemData));
-      return itemData
+      // const itemData = docSnap.docs.map((d) => ({...d.data(), id: d.id}))
+      await dispatch(itemSlice.actions.getItemListSuccess(docSnap));
+      return docSnap
     } catch (error) {
       dispatch(itemSlice.actions.HasError(error))
       return rejectWithValue(error)

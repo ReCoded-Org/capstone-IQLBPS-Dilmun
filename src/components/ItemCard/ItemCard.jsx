@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getItemList, itemList } from '../../features/slices/item';
 import { useSelector, useDispatch } from '../../app/store';
+// import { doc } from 'firebase/firestore';
 
 function ItemCard() {
   const itemData = useSelector(itemList);
@@ -9,9 +10,9 @@ function ItemCard() {
   useEffect(() => {
     const func = async () => {
       await dispatch(getItemList(itemData));
+      setItems(itemData.docs.map((d) => ({...d.doc(), id: d.id})));
     };
     func();
-    setItems(itemData);
   }, []);
 
   return (
