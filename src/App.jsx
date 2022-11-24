@@ -13,6 +13,15 @@ import {
 import AnimationProvider from './components/animations/AnimationProvider';
 import { UserItemCard } from './components/Cards';
 
+const MOCK_ITEM = {
+  title: 'Title of Item Goes Here',
+  file: 'https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  description: 'Description of item Here...',
+  price: 110,
+  type: 'Item Type',
+  categories: ['Men', 'Women', 'Kids'],
+};
+
 function App() {
   const dispatch = useDispatch();
 
@@ -41,7 +50,7 @@ function App() {
     <div className="App  ">
       <NavBar />
       <AnimationProvider />
-      <UserItemCard />
+      <UserItemCard item={MOCK_ITEM} />
       <Footer />
     </div>
   );
