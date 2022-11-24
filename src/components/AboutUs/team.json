@@ -90,24 +90,6 @@
     ]
   },
   {
-    "id": "6",
-    "name": "Helin Faidhan",
-    "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03NTLZN3MW-31f24e5340ee-512",
-    "title": "Web Developer", 
-    "links": [
-      {
-        "name": "linkedIn",
-        "url": "https://www.linkedin.com/in/helin-faidhan-a516a71aa/",
-        "icon": "linkedIn"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/Helin-Faidhan",
-        "icon": "github"
-      }
-    ]
-  },
-  {
     "id": "7",
     "name": "Marwa Hakmi",
     "img": "https://ca.slack-edge.com/T03K5TU7K0E-U03M7GU31T9-c3416698ca47-512",
@@ -325,7 +307,7 @@
   },
   {
     "id": "19",
-    "name": "Asaad Masoud Mohammed AbuGhazaleh",
+    "name": "Asaad Abu Ghazaleh",
     "img": "https://cdn.discordapp.com/attachments/1040389461680328834/1040395861588451379/photo_2022-01-03_14-27-04.jpg",
     "title": "Web Developer",
     "links": [

@@ -20,7 +20,7 @@ exports[`redering footer 1`] = `
         src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
       />
       <span
-        className="self-center text-3xl lg:mb-0 mb-3 font-semibold text-primary"
+        className="self-center lg:text-start text-center text-3xl lg:mb-0 mb-3 font-semibold text-primary"
       >
         Designed to meet your needs.
       </span>
@@ -63,22 +63,13 @@ exports[`redering footer 1`] = `
             FAQ
           </a>
         </li>
-        <li>
-          <a
-            className="hover:text-tertiary duration-200 h-8 w-5 inline"
-            href="/contact-us"
-            onClick={[Function]}
-          >
-            Send feedback
-          </a>
-        </li>
       </ul>
     </div>
     <div
       className="col-span-1 mx-3 flex lg:justify-start justify-center text-center"
     >
       <ul
-        className="mb-6 text-base text-primary sm:mb-0 font-base"
+        className="mb-6  text-primary sm:mb-0 font-base"
       >
         <span
           className="text-2xl font-bold text-primary"
@@ -87,10 +78,19 @@ exports[`redering footer 1`] = `
         </span>
         <li>
           <a
+            className="hover:text-tertiary hover:underline text-lg duration-200 h-8 w-5 inline"
+            href="/contact-us"
+            onClick={[Function]}
+          >
+            Send Feedback
+          </a>
+        </li>
+        <li>
+          <a
             href="mailto:dilmun.recoded@gmail.com"
           >
             <svg
-              className=" hover:text-tertiary duration-200 h-8 w-5 inline"
+              className=" hover:text-tertiary duration-200 text-base h-8 w-5 inline"
               fill="currentColor"
               height="1em"
               stroke="currentColor"
@@ -112,8 +112,6 @@ exports[`redering footer 1`] = `
                 d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
               />
             </svg>
-             
-            dilmun.recoded@gmail.com
           </a>
         </li>
       </ul>
