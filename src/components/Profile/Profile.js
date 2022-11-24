@@ -14,8 +14,8 @@ import Form from "./Form";
 function Profile() {
 
   const userData = useSelector(user);
-  //  const userEmail = auth.currentUser.email
   const [email, setEmail] = useState();
+  const [isOpen, setIsOpen] = useState(false);
   // const [selectedImg, setSelectedImg] = useState(defaultProfileImg);  
   // const [selectedBGImg , setSelectedBGImg] = useState(defaultBGImg);
   useEffect(() => {
@@ -24,20 +24,17 @@ function Profile() {
     }
   }, [email]);
 
+  const openModal = React.useCallback(() => setIsOpen(true) , [])
 
 //   function handleSelectProfile(e) {
 //     // console.log(e.target.files[0])
 //     setSelectedImg(e.target.files[0]);
 //   }
-  // function handleSelectBG(e) {
-  //     // console.log(e.target.files[0])
-  //      setSelectedBGImg(e.target.files[0])  ;
-  //      }
 
   return (
     <div
       data-testid="profile"
-      className="mt-5 bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center mt-20"
+      className=" bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center "
     >
       <div className=" mt-5 mb-14 w-5/6 bg-background rounded-lg h-full relative">
         <div className="flex flex-col justify-center items-center rounded-lg ">
@@ -64,7 +61,7 @@ function Profile() {
           <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
             {' '}
             {email}
-            <button type="button">
+            <button type="button" onClick={openModal}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -85,6 +82,7 @@ function Profile() {
                 />
               </svg>
             </button>
+            {isOpen && <Form/> }
           </h5>
 
           <div className=" items-center divide-x border-t border-primary ">
