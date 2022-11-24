@@ -13,7 +13,7 @@ import FaqPage from '../../Pages/FaqPage/FaqPage';
 import ContactUs from '../../Pages/ContactUsPage/ContactUs'
 import SignedInUsersHomePage from "../../Pages/SignedInUsersHomePage/SignedInUsersHomePage";
 import { user } from "../../features/slices/user";
-
+import ProfilePage from '../../Pages/ProfilePage/ProfilePage'
 
 function AnimationProvider() {
   const location = useLocation()
@@ -29,6 +29,7 @@ function AnimationProvider() {
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/add-item" element={<AddItemPage />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/profile-page" element={<ProfilePage />} />
       </Routes>
     </AnimatePresence>
   )
