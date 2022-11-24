@@ -3,7 +3,7 @@ import React ,{ useState} from "react" ;
 
 import { useForm } from 'react-hook-form';
 
-function Form(){
+function Form( {toggleForm} ){
     const {
         register,
        // handleSubmit,
@@ -24,9 +24,6 @@ function Form(){
      ;
       }
       // const closeModal = React.useCallback(() => setIsOpen(false) , [])
-        function closeModal(){
-
-        }
 
     return ( 
     <form  className=" bg-tertiary ">
@@ -96,7 +93,7 @@ function Form(){
                                 <button type="button" onClick={submitForm} className=" rounded-full  p-3 w-full sm:w-56 bg-background hover:border hover:border-primary hover:bg-tertiay text-primary text-lg font-semibold " >
                                 Save
                                 </button>
-                                <button type="button" onClick={closeModal} className=" rounded-full  p-3 w-full sm:w-56  bg-[#D9DCD6] hover:bg-neutral-300  text-primary text-lg font-semibold " >
+                                <button type="button" onClick={ toggleForm } className=" rounded-full  p-3 w-full sm:w-56  bg-[#D9DCD6] hover:bg-neutral-300  text-primary text-lg font-semibold " >
                                 Cancel
                                 </button>
                             

@@ -24,11 +24,15 @@ function Profile() {
     }
   }, [email]);
 
-
-  //   function handleSelectProfile(e) {
-  //     // console.log(e.target.files[0])
-  //     setSelectedImg(e.target.files[0]);
-  //   }
+ // const openModal = React.useCallback(() => setIsOpen(!isOpen) , [])
+  
+  const toggleForm = () => {
+    setIsOpen(!isOpen);
+  }
+//   function handleSelectProfile(e) {
+//     // console.log(e.target.files[0])
+//     setSelectedImg(e.target.files[0]);
+//   }
 
   return (
     <div
@@ -60,7 +64,7 @@ function Profile() {
           <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
             {' '}
             {email}
-            <button type="button" onClick={() => setIsOpen(!isOpen)}>
+            <button type="button" onClick={toggleForm}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -81,7 +85,7 @@ function Profile() {
                 />
               </svg>
             </button>
-            {isOpen && <Form />}
+            {isOpen && <Form  toggleForm = { toggleForm } /> }
           </h5>
 
           <div className=" items-center divide-x border-t border-primary ">
@@ -108,7 +112,6 @@ function Profile() {
               Add New Item{' '}
             </button>
           </Link>
-          <Form />
 
         </div>
       </div>
