@@ -40,7 +40,6 @@ function App() {
   return (
     <div className="App  ">
       <NavBar />
-      <ProfileItemPage />
       <AnimationProvider />
       <UserItemCard />
       <Footer />
