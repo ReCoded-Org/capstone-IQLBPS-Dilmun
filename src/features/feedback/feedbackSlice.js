@@ -14,12 +14,12 @@ export const sendFeedback = createAsyncThunk(
     const { name, email, feedback } = payload;
 
     try {
-      const DocRef = await addDoc(collection(db, 'Feedback'), {
+      await addDoc(collection(db, 'Feedback'), {
         fullName: name,
         Email: email,
         message: feedback,
       });
-      return DocRef.map((data) => data);
+      return payload;
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
@@ -40,7 +40,7 @@ const feedbackSlice = createSlice({
       .addCase(sendFeedback.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
         state.error = null;
-        state.feedback = JSON.parse(payload);
+        state.feedback = JSON.stringify(payload);
       })
       .addCase(sendFeedback.rejected, (state, { payload }) => {
         state.status = 'failed';
@@ -50,4 +50,5 @@ const feedbackSlice = createSlice({
   },
 });
 
+export const status = (state) => state.feedback.status;
 export default feedbackSlice.reducer;

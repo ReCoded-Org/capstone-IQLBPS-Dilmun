@@ -1,25 +1,41 @@
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { sendFeedback } from '../../features/feedback/feedbackSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { sendFeedback, status } from '../../features/feedback/feedbackSlice';
+import LoadingScreen from '../../components/animations/LoadingScreen';
 
 const ContactUs = () => {
   const dispatch = useDispatch();
-
+  const statusData = useSelector(status);
   const {
     register,
     handleSubmit,
-
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = async (data) => {
     const { name, email, feedback } = data;
     dispatch(sendFeedback({ name, email, feedback }));
+    reset();
   };
+
+  const messageForUser = {
+    idle: '',
+    loading: 'Please wait..',
+    succeeded: 'Thank you for your feedback',
+    failed: "We could'nt save your feedback, please try later",
+  };
+
+  if (statusData === 'loading') return <LoadingScreen />;
 
   return (
     <div className="bg-white text-gray-100 px-8 py-12">
-      <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-gray-900">
+      {statusData && (
+        <h2 className="text-2xl lg:text-3xl text-center leading-tight text-tertiary ">
+          {messageForUser[statusData]}
+        </h2>
+      )}
+      <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-gray-900">
         <div className="flex flex-col justify-between">
           <div className="text-center">
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-primary ">
