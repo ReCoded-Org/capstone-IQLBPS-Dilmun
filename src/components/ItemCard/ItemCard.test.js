@@ -4,8 +4,8 @@ import { store } from '../../app/store';
 import ItemCard from './ItemCard';
 import ItemCardSection from './ItemCardSection'
 
-test('Sign In Page Renders Correctly', () => {
-  render(
+test('Sign In Page Renders Correctly', async() => {
+ await render(
     <Provider store={store}>
       <ItemCardSection>
         <ItemCard />
