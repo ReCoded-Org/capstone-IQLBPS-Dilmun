@@ -11,15 +11,25 @@ import {
   user,
 } from './features/slices/user';
 import AnimationProvider from './components/animations/AnimationProvider';
+import { UserItemCard } from './components/Cards';
+
+const MOCK_ITEM = {
+  title: 'Title of Item Goes Here',
+  file: 'https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  description: 'Description of item Here...',
+  price: 110,
+  type: 'Item Type',
+  categories: ['Men', 'Women', 'Kids'],
+};
 
 function App() {
   const dispatch = useDispatch();
 
-  const userData = useSelector(user)
-  const errorData = useSelector(error)
-  const statusData = useSelector(status)
+  const userData = useSelector(user);
+  const errorData = useSelector(error);
+  const statusData = useSelector(status);
   // eslint-disable-next-line no-console
-  console.log(userData, errorData, statusData)
+  console.log(userData, errorData, statusData);
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -39,8 +49,8 @@ function App() {
   return (
     <div className="App  ">
       <NavBar />
-
       <AnimationProvider />
+      <UserItemCard item={MOCK_ITEM} />
       <Footer />
     </div>
   );
