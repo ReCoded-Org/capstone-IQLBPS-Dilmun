@@ -1,9 +1,15 @@
-import { FaEdit,
-  //  FaTrashAlt 
-  } from 'react-icons/fa';
+import {
+  FaEdit,
+  //  FaTrashAlt
+} from 'react-icons/fa';
 import DeleteItemButton from '../DeleteItemButton/DeleteItemButton';
 
-function UserItemCard() {
+function UserItemCard(props) {
+  const { item } = props;
+  // destructure the item object to use values in the JSX
+  // eslint-disable-next-line no-unused-vars
+  const { title, file, description, price, type, categories } = item;
+
   return (
     <div className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-white bg-primary">
       <div className="w-full md:w-1/3 bg-transparent grid place-items-center">
