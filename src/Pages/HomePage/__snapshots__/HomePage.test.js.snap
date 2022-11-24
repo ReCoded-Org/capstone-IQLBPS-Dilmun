@@ -477,7 +477,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     </section>
   </section>
   <section
-    class="bg-primary dark:bg-gray-900"
+    class="bg-background border-y-2 border-y-primary"
     data-testid="features-section"
   >
     <div
@@ -487,13 +487,13 @@ exports[`Home Page Rendered Correctly 1`] = `
         class="mb-8 lg:mb-16"
       >
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
+          class="mb-4 text-4xl tracking-tight font-extrabold text-primary"
           data-testid="features-title"
         >
           Designed to meet your needs.
         </h2>
         <p
-          class="text-background sm:text-xl dark:text-gray-400"
+          class="text-primary sm:text-xl"
           data-testid="features-paragraph"
         >
           Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.
@@ -507,7 +507,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           data-testid="feature-card"
         >
           <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
             data-testid="feature-card-icon"
           >
             <svg
@@ -527,13 +527,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             </svg>
           </div>
           <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
+            class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
             Filter
           </h3>
           <p
-            class="text-background dark:text-gray-400"
+            class="text-primary"
             data-testid="feature-card-paragraph"
           >
             Filter your items to find the right information.
@@ -544,7 +544,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           data-testid="feature-card"
         >
           <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
             data-testid="feature-card-icon"
           >
             <svg
@@ -565,13 +565,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             </svg>
           </div>
           <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
+            class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
             Multi Language
           </h3>
           <p
-            class="text-background dark:text-gray-400"
+            class="text-primary"
             data-testid="feature-card-paragraph"
           >
             Use the website in your preferred language
@@ -582,7 +582,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           data-testid="feature-card"
         >
           <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
             data-testid="feature-card-icon"
           >
             <svg
@@ -602,13 +602,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             </svg>
           </div>
           <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
+            class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
             Meet
           </h3>
           <p
-            class="text-background dark:text-gray-400"
+            class="text-primary"
             data-testid="feature-card-paragraph"
           >
             Meet new people and make new connections
