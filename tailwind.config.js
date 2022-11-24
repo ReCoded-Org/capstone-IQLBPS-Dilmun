@@ -36,6 +36,10 @@ module.exports = {
       maxHeight: {
         "100": '26rem',
       },
+      minHeight: {
+        "100": '26rem',
+        "20": '5rem',
+      },
     },
     plugins: [
       require('@tailwindcss/forms'),
