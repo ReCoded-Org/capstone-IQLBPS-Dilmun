@@ -50,7 +50,5 @@ const feedbackSlice = createSlice({
   },
 });
 
-// export const user = (state) => state.feedback.feedback;
 export const status = (state) => state.feedback.status;
-export const error = (state) => state.feedback.error;
 export default feedbackSlice.reducer;
