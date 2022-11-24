@@ -8,8 +8,8 @@ export default function ItemCardSection() {
   const [items, setItems] = useState([]);
   const dispatch = useDispatch();
 
-  const func = async () => {
-    await dispatch(getItemList(itemData));
+  const func = () => {
+    dispatch(getItemList(itemData));
     setItems(itemData.docs.map((d) => {return ({...d.doc(), id: d.id} )}));
   };
   useEffect(() => {
