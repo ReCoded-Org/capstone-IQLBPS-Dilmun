@@ -2,7 +2,7 @@
 
 exports[`UserItemCard renders correctly 1`] = `
 <div
-  className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-white bg-primary"
+  className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-background bg-primary"
 >
   <div
     className="w-full md:w-1/3 bg-transparent grid place-items-center"
@@ -20,7 +20,7 @@ exports[`UserItemCard renders correctly 1`] = `
       className="flex justify-between item-center"
     >
       <p
-        className="text-gray-500 font-medium"
+        className="text-secondary font-medium text-lg"
       >
         Item Type
       </p>
@@ -102,12 +102,12 @@ exports[`UserItemCard renders correctly 1`] = `
       </div>
     </div>
     <h3
-      className="font-black text-gray-800 md:text-3xl text-xl"
+      className="font-black text-primary md:text-3xl text-xl"
     >
       Title of Item Goes Here
     </h3>
     <p
-      className="md:text-lg text-gray-500 text-base min-h-20"
+      className="md:text-lg text-secondary text-base min-h-20"
     >
       Description of item Here...
     </p>
@@ -115,7 +115,7 @@ exports[`UserItemCard renders correctly 1`] = `
       className="flex justify-between item-center"
     >
       <p
-        className="text-xl font-black text-gray-800"
+        className="text-xl font-black text-secondary"
       >
         $
         110
@@ -124,17 +124,17 @@ exports[`UserItemCard renders correctly 1`] = `
         className="flex justify-center items-center"
       >
         <span
-          className="text-xs font-medium text-gray-500 bg-gray-200 rounded-full px-2 py-1 mr-2 shadow-md"
+          className="text-xs font-medium text-background bg-secondary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
         >
           Men
         </span>
         <span
-          className="text-xs font-medium text-gray-500 bg-gray-200 rounded-full px-2 py-1 mr-2 shadow-md"
+          className="text-xs font-medium text-background bg-secondary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
         >
           Women
         </span>
         <span
-          className="text-xs font-medium text-gray-500 bg-gray-200 rounded-full px-2 py-1 mr-2 shadow-md"
+          className="text-xs font-medium text-background bg-secondary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
         >
           Kids
         </span>
