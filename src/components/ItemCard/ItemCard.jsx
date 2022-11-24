@@ -10,7 +10,7 @@ function ItemCard() {
   useEffect(() => {
     dispatch(getItemList(itemData));
     setItems(itemData);
-  }, []);
+  }, [items]);
   return (
     <div data-testid='item-card' className="w-full grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 content-center items-center justify-items-center bg-background py-6 my-2">
       {items.map((item) => {
@@ -76,8 +76,8 @@ function ItemCard() {
               <button
                 type="button"
                 className="w-full my-2 duration-300 text-background bg-secondary hover:bg-primary focus:ring-1 focus:outline-none focus:ring-tertiary font-medium rounded-lg text-md px-5 py-2.5 text-center"
-              >
-                Email Owner
+              ><a href={`mailto: ${item.owner.email}`}>
+                Email Owner</a>
               </button>
             </div>
           </div>
