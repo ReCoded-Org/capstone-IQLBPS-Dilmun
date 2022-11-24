@@ -11,8 +11,8 @@ function ItemCard() {
  const func = async()=> {
     await dispatch(getItemList(itemData));
   }
+  func()
   setItems(itemData);
-    func()
   }, []);
 
 
