@@ -12,7 +12,6 @@ function ItemCard() {
     };
     func();
     setItems(itemData);
-    console.log(items);
   }, []);
 
   return (
