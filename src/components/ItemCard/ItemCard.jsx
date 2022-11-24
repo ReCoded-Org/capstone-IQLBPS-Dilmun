@@ -11,11 +11,9 @@ function ItemCard() {
   };
 
   useEffect(() => {
-    if (items === []) {
       func();
       setItems(itemData);
       console.log(items);
-    }
   }, []);
 
   return (
