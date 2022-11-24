@@ -1,13 +1,21 @@
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { sendFeedback } from '../../features/feedback/feedbackSlice';
 
 const ContactUs = () => {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
 
     formState: { errors },
   } = useForm();
-  const onSubmit = () => {};
+
+  const onSubmit = async (data) => {
+    const { name, email, feedback } = data;
+    dispatch(sendFeedback({ name, email, feedback }));
+  };
 
   return (
     <div className="bg-white text-gray-100 px-8 py-12">
