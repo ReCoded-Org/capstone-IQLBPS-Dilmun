@@ -1,30 +1,17 @@
-import { collection, getDocs } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import { db } from '../../firebase-config';
-// import { getItemList, itemList } from '../../features/slices/item';
-// import { useSelector, useDispatch } from '../../app/store';
+import { getItemList, itemList } from '../../features/slices/item';
+import { useSelector, useDispatch } from '../../app/store';
 
 function ItemCard() {
-  // const { itemData } = useSelector(itemList);
-
+  const itemData = useSelector(itemList);
   const [items, setItems] = useState([]);
-
-  const docRef = collection(db, 'Items');
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const f = async () => {
-      const docSnap = await getDocs(docRef);
-      setItems(docSnap.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    console.log(items);
-    f();
+    dispatch(getItemList(itemData));
+    setItems(itemData);
+    console.log(itemData);
   }, []);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(getItemList({...itemData}))
-  //   console.log(itemData)
-  // }, [itemData]);
   return (
     <div className="w-full grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 content-center items-center justify-items-center bg-background py-6 my-2">
       {items.map((item) => {
