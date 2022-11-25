@@ -13,7 +13,7 @@ import {
   user,
 } from './features/slices/user';
 import { UserItemCard } from './components/Cards';
-// import ItemCardSection from './components/ItemCard/ItemCardSection';
+import ItemCardSection from './components/ItemCard/ItemCardSection';
 
 const MOCK_ITEM = {
   title: 'Title of Item Goes Here',
@@ -62,7 +62,8 @@ function App() {
         <>
           <NavBar />
           <AnimationProvider />
-          <UserItemCard item={MOCK_ITEM} />
+            <UserItemCard item={MOCK_ITEM} />
+            <ItemCardSection/>
           <Footer />
         </>
       )}

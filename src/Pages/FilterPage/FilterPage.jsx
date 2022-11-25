@@ -6,7 +6,7 @@ import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 import Sort from '../../components/Sort/Sort';
 import ItemDetailsPage from '../ItemDetailsPage/ItemDetailsPage';
 import AddItemButton from '../../components/AddItemButton/AddItemButton';
-import ItemCardSection from '../../components/ItemCard/ItemCardSection';
+
 
 const FilterPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -49,7 +49,6 @@ const FilterPage = () => {
         <AddItemButton />
       </div>
       <ItemDetailsPage />
-      <ItemCardSection />
     </motion.main>
   );
 };
