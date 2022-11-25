@@ -4,7 +4,7 @@ import DiffSection from '../../components/DiffSection/DiffSection';
 import FAQ from '../../components/FAQ';
 import Features from '../../components/Features/Features';
 import Hero from '../../components/HeroSection/Hero';
-import NewsLetter from '../../components/NewsLetter';
+import NewsLetter from '../../components/NewsLetter/NewsLetter';
 import PartnersLogo from '../../components/Proof/PartnersLogo';
 import Testimonials from '../../components/Proof/Testimonials';
 
