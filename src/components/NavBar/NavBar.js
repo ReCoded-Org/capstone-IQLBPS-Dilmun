@@ -37,8 +37,8 @@ function NavBar() {
   }, [location.key]);
 
   return (
-    <nav className="shadow-md w-full z-10 sticky top-0 left-0 bg-primary">
-      <div className="md:flex bg-primary py-2 items-center justify-between md:px-8 px-10 max-h-24">
+    <nav className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-br from-background via-background to-secondary shadow  backdrop-blur-md ">
+      <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24">
         <div>
           <Link to={HOME_ROUTE}>
             <img
@@ -56,7 +56,7 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
+          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
             }`}
         >
           <li>
