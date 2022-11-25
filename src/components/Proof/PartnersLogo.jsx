@@ -6,12 +6,12 @@ const PartnersLogo = () => {
     <section className="pb-8 md:pb-0" data-testid="customerslogo-section">
       <div className="lg:pb-8 mx-auto max-w-screen-xl px-4">
         <h2
-          className="mb-8 lg:mb-16 font-poppins font-bold xs:text-[40px] text-center text-[32px] text-black xs:leading-[70px] leading-[60px] w-full"
+          className="mb-8 lg:mb-16 font-poppins font-bold xs:text-[40px] text-center text-[32px] text-primary xs:leading-[70px] leading-[60px] w-full"
           data-testid="costumerslogo-title"
         >
          {t('proof.our_partners')}
         </h2>
-        <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 ">
+        <div className="grid grid-cols-2 gap-8 text-secondary sm:gap-12 md:grid-cols-3 lg:grid-cols-6 ">
           <div className="flex justify-center items-center">
             <svg
               className="h-9 hover:text-[#FF5A5F] ease-in-out duration-300"

@@ -1,8 +1,9 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import NewsLetter from '.';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import NewsLetter from "./NewsLetter";
 
-it('render correctly', () => {
-  const { getByTestId } = render(<NewsLetter />);
-  expect(getByTestId('news-letter-section')).toMatchSnapshot();
-});
+
+it('render NewsLetter correctly', () => {
+  render(<NewsLetter />)
+  expect(screen.getByTestId('newsletter')).toMatchSnapshot()
+})

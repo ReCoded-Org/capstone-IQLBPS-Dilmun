@@ -87,14 +87,14 @@ exports[`Home Page Rendered Correctly 1`] = `
         class="w-full flex justify-between items-center md:flex-row flex-col sm:mb-4 mb-2"
       >
         <h2
-          class="font-bold text-center xs:text-[48px] text-[40px] text-black xs:leading-[76.8px] leading-[66.8px] w-full"
+          class="font-bold text-center xs:text-[48px] text-[40px] text-primary xs:leading-[76.8px] leading-[66.8px] w-full"
           data-testid="testimonials-title"
         />
         <div
           class="w-full md:mt-0 mt-6"
         >
           <p
-            class="font-poppins font-normal text-[20px] leading-[30.8px] text-center p-6 md:text-left md:max-w-[450px]"
+            class="font-poppins text-primary font-normal text-[20px] leading-[30.8px] text-center p-6 md:text-left md:max-w-[450px]"
             data-testid="testimonials-paragraph"
           >
             proof.everything_you_need
@@ -105,7 +105,7 @@ exports[`Home Page Rendered Correctly 1`] = `
         class="container flex flex-wrap sm:justify-center justify-center w-full feedback-container p-6"
       >
         <div
-          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
+          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-tertiary ease-in-out duration-500"
           data-testid="feedbackcard-div"
         >
           <img
@@ -114,7 +114,7 @@ exports[`Home Page Rendered Correctly 1`] = `
             src="quotes.svg"
           />
           <p
-            class="font-poppins font-normal text-[17px] leading-[32px] text-black my-10"
+            class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
             data-testid="feedback-card-content"
           >
             proof.feedback_one_description
@@ -128,16 +128,16 @@ exports[`Home Page Rendered Correctly 1`] = `
               src="people01.png"
             />
             <div
-              class="flex flex-col ml-4"
+              class="flex flex-col ml-4 hover:text-background text-primary"
             >
               <h4
-                class="font-poppins font-semibold text-[19px] leading-[32px] text-black"
+                class="font-poppins font-semibold text-[19px] leading-[32px] "
                 data-testid="feedback-card-name"
               >
                 proof.feedback_one_name
               </h4>
               <p
-                class="font-poppins font-normal text-[15px] leading-[24px] text-left text-dimWhite"
+                class="font-poppins font-normal text-[15px] leading-[24px] text-left"
                 data-testid="feedback-card-title"
               >
                 proof.feedback_one_title
@@ -146,7 +146,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
+          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-tertiary ease-in-out duration-500"
           data-testid="feedbackcard-div"
         >
           <img
@@ -155,7 +155,7 @@ exports[`Home Page Rendered Correctly 1`] = `
             src="quotes.svg"
           />
           <p
-            class="font-poppins font-normal text-[17px] leading-[32px] text-black my-10"
+            class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
             data-testid="feedback-card-content"
           >
             proof.feedback_two_description
@@ -169,16 +169,16 @@ exports[`Home Page Rendered Correctly 1`] = `
               src="people02.png"
             />
             <div
-              class="flex flex-col ml-4"
+              class="flex flex-col ml-4 hover:text-background text-primary"
             >
               <h4
-                class="font-poppins font-semibold text-[19px] leading-[32px] text-black"
+                class="font-poppins font-semibold text-[19px] leading-[32px] "
                 data-testid="feedback-card-name"
               >
                 proof.feedback_two_name
               </h4>
               <p
-                class="font-poppins font-normal text-[15px] leading-[24px] text-left text-dimWhite"
+                class="font-poppins font-normal text-[15px] leading-[24px] text-left"
                 data-testid="feedback-card-title"
               >
                 proof.feedback_two_title
@@ -187,7 +187,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
+          class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-tertiary ease-in-out duration-500"
           data-testid="feedbackcard-div"
         >
           <img
@@ -196,7 +196,7 @@ exports[`Home Page Rendered Correctly 1`] = `
             src="quotes.svg"
           />
           <p
-            class="font-poppins font-normal text-[17px] leading-[32px] text-black my-10"
+            class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
             data-testid="feedback-card-content"
           >
             proof.feedback_three_description
@@ -210,16 +210,16 @@ exports[`Home Page Rendered Correctly 1`] = `
               src="people03.png"
             />
             <div
-              class="flex flex-col ml-4"
+              class="flex flex-col ml-4 hover:text-background text-primary"
             >
               <h4
-                class="font-poppins font-semibold text-[19px] leading-[32px] text-black"
+                class="font-poppins font-semibold text-[19px] leading-[32px] "
                 data-testid="feedback-card-name"
               >
                 proof.feedback_three_name
               </h4>
               <p
-                class="font-poppins font-normal text-[15px] leading-[24px] text-left text-dimWhite"
+                class="font-poppins font-normal text-[15px] leading-[24px] text-left"
                 data-testid="feedback-card-title"
               >
                 proof.feedback_three_title
@@ -237,13 +237,13 @@ exports[`Home Page Rendered Correctly 1`] = `
         class="lg:pb-8 mx-auto max-w-screen-xl px-4"
       >
         <h2
-          class="mb-8 lg:mb-16 font-poppins font-bold xs:text-[40px] text-center text-[32px] text-black xs:leading-[70px] leading-[60px] w-full"
+          class="mb-8 lg:mb-16 font-poppins font-bold xs:text-[40px] text-center text-[32px] text-primary xs:leading-[70px] leading-[60px] w-full"
           data-testid="costumerslogo-title"
         >
           proof.our_partners
         </h2>
         <div
-          class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 "
+          class="grid grid-cols-2 gap-8 text-secondary sm:gap-12 md:grid-cols-3 lg:grid-cols-6 "
         >
           <div
             class="flex justify-center items-center"
@@ -472,7 +472,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     </section>
   </section>
   <section
-    class="bg-primary dark:bg-gray-900"
+    class="bg-background border-y-2 border-y-primary"
     data-testid="features-section"
   >
     <div
@@ -482,13 +482,13 @@ exports[`Home Page Rendered Correctly 1`] = `
         class="mb-8 lg:mb-16"
       >
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
+          class="mb-4 text-4xl tracking-tight font-extrabold text-primary"
           data-testid="features-title"
         >
           features.designed_to_meet_your_needs
         </h2>
         <p
-          class="text-background sm:text-xl dark:text-gray-400"
+          class="text-primary sm:text-xl"
           data-testid="features-paragraph"
         >
           features.description
@@ -502,7 +502,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           data-testid="feature-card"
         >
           <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
             data-testid="feature-card-icon"
           >
             <svg
@@ -522,13 +522,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             </svg>
           </div>
           <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
+            class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
             features.feature_one_title
           </h3>
           <p
-            class="text-background dark:text-gray-400"
+            class="text-primary"
             data-testid="feature-card-paragraph"
           >
             features.feature_one_description
@@ -539,7 +539,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           data-testid="feature-card"
         >
           <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
             data-testid="feature-card-icon"
           >
             <svg
@@ -560,13 +560,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             </svg>
           </div>
           <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
+            class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
             features.feature_two_title
           </h3>
           <p
-            class="text-background dark:text-gray-400"
+            class="text-primary"
             data-testid="feature-card-paragraph"
           >
             features.feature_two_description
@@ -577,7 +577,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           data-testid="feature-card"
         >
           <div
-            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
             data-testid="feature-card-icon"
           >
             <svg
@@ -597,13 +597,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             </svg>
           </div>
           <h3
-            class="mb-2 text-xl font-bold text-background dark:text-white"
+            class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
             features.feature_three_title
           </h3>
           <p
-            class="text-background dark:text-gray-400"
+            class="text-primary"
             data-testid="feature-card-paragraph"
           >
             features.feature_three_description
@@ -784,7 +784,7 @@ exports[`Home Page Rendered Correctly 1`] = `
       >
         <img
           alt="email"
-          class="w-24 md:w-40  h-100"
+          class="w-24 md:w-40 h-100"
           src="https://www.freepnglogos.com/uploads/blue-email-logo-png-4.png"
         />
         <h1
@@ -792,10 +792,10 @@ exports[`Home Page Rendered Correctly 1`] = `
         />
       </div>
       <div
-        class="mt-4"
+        class="mt-4 flex flex-col items-center justify-center"
       >
         <p
-          class="text-background mb-5"
+          class="text-primary mb-5 lg:text-end text-center"
         >
           news_letter.description
         </p>
@@ -804,14 +804,14 @@ exports[`Home Page Rendered Correctly 1`] = `
         >
           <form>
             <input
-              class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 mr-1 sm:mb-0 placeholder:text-background border border-solid "
+              class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid "
               name="email"
               placeholder="news_letter.email"
               required=""
               type="text"
             />
             <button
-              class="bg-tertiary px-2 py-2 w-full sm:w-auto  text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
+              class="bg-tertiary px-2 py-2 w-full lg:w-auto text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
               type="submit"
             >
               news_letter.subscribe
@@ -820,6 +820,6 @@ exports[`Home Page Rendered Correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;

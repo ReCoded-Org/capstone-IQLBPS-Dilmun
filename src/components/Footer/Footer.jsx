@@ -8,21 +8,22 @@ const Footer = () => {
   return (
     <footer className="p-4 bg-gradient-to-br from-background via-background to-secondary shadow md:p-5 backdrop-blur-md">
       <div className="lg:grid lg:grid-cols-4 gap-4">
-        <Link to={HOME_ROUTE}  className="flex lg:flex-row flex-col mb-4 sm:mb-0 col-span-2 lg:justify-start justify-center">
+        <Link
+          to={HOME_ROUTE}
+          className="flex lg:flex-row flex-col mb-4 sm:mb-0 col-span-2 lg:justify-start justify-center"
+        >
           <img
             src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
             className="mr-3 h-32 w-min lg:self-start self-center"
             alt="Flowbite Logo"
           />
-          <span className="self-center text-3xl lg:mb-0 mb-3 font-semibold text-primary">
-          Designed to meet your needs.
+          <span className="self-center lg:text-start text-center text-3xl lg:mb-0 mb-3 font-semibold text-primary">
+            Designed to meet your needs.
           </span>
-          </Link>
+        </Link>
         <div className="col-span-1 flex lg:my-0 my-3 mx-3 lg:justify-start justify-center text-center">
-        <ul className="mb-6 text-lg text-primary sm:mb-0 font-base justify-self-center">
-        <span className="text-2xl font-bold text-primary">
-          Quick Links
-        </span>
+          <ul className="mb-6 text-lg text-primary sm:mb-0 font-base justify-self-center">
+            <span className="text-2xl font-bold text-primary">Quick Links</span>
             <li>
               <Link
                 to={HOME_ROUTE}
@@ -47,23 +48,22 @@ const Footer = () => {
                 FAQ
               </Link>
             </li>
-            <li>
-            <Link
-              className="hover:text-tertiary duration-200 h-8 w-5 inline"
-              to={CONTACT_US}
-            >
-              Send feedback
-            </Link>
-          </li>
           </ul>
         </div>
         <div className="col-span-1 mx-3 flex lg:justify-start justify-center text-center">
-        <ul className="mb-6 text-base text-primary sm:mb-0 font-base">
-        <span className="text-2xl font-bold text-primary">Contact Us</span>
+          <ul className="mb-6  text-primary sm:mb-0 font-base">
+            <span className="text-2xl font-bold text-primary">Contact Us</span>
+            <li>
+              <Link
+                className="hover:text-tertiary hover:underline text-lg duration-200 h-8 w-5 inline"
+                to={CONTACT_US}
+              >Send
+                Feedback
+              </Link>
+            </li>
             <li>
               <a href="mailto:dilmun.recoded@gmail.com">
-                <MdEmail className=" hover:text-tertiary duration-200 h-8 w-5 inline" />{' '}
-                dilmun.recoded@gmail.com
+                <MdEmail className=" hover:text-tertiary duration-200 text-base h-8 w-5 inline" />
               </a>
             </li>
           </ul>

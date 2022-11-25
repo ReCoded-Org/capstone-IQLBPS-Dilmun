@@ -10,19 +10,19 @@ const Features = () => {
   return (
     <section
       data-testid="features-section"
-      className="bg-primary dark:bg-gray-900"
+      className="bg-background border-y-2 border-y-primary"
     >
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="mb-8 lg:mb-16">
           <h2
             data-testid="features-title"
-            className="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
+            className="mb-4 text-4xl tracking-tight font-extrabold text-primary"
           >
             {t('features.designed_to_meet_your_needs')}
           </h2>
           <p
             data-testid="features-paragraph"
-            className="text-background sm:text-xl dark:text-gray-400"
+            className="text-primary sm:text-xl"
           >
             {t('features.description')}
           </p>
