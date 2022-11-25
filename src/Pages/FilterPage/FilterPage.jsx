@@ -7,13 +7,15 @@ import Sort from '../../components/Sort/Sort';
 import ItemDetailsPage from '../ItemDetailsPage/ItemDetailsPage';
 import AddItemButton from '../../components/AddItemButton/AddItemButton';
 
+
 const FilterPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   return (
-    <motion.main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-    initial={{ width: 0 }}
-    animate={{ width: '100%' }}
-    exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+    <motion.main
+      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      initial={{ width: 0 }}
+      animate={{ width: '100%' }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
     >
       <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
         
