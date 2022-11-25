@@ -22,7 +22,8 @@ function Profile() {
 
   useEffect(() => {
     dispatch(getUserItems(userData.uid));
-  }, [userData, dispatch]);
+    console.log('hello')
+  }, [userData, dispatch, userItems.length]);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
