@@ -26,6 +26,7 @@ function NavBar() {
   const dispatch = useDispatch();
   const userData = useSelector(user);
 
+
   const closeNavBar = () => {
     if (open) {
       setOpen(false);
@@ -37,7 +38,8 @@ function NavBar() {
   }, [location.key]);
 
   return (
-    <nav className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background via-background to-secondary shadow  backdrop-blur-md ">
+    <div className='shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background via-background to-secondary shadow  backdrop-blur-md '>
+    <nav>
       <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ">
         <div>
           <Link to={HOME_ROUTE}>
@@ -56,7 +58,7 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
+          className={`flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static  md:z-auto z-[-1] right-6 md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-172px]'
             }`}
         >
           <li>
@@ -156,8 +158,10 @@ function NavBar() {
 
           <LanguageButton closeNavbar={closeNavBar} />
         </ul>
+
       </div>
     </nav>
+    </div>
   );
 }
 export default NavBar;
