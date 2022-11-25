@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <h1 className="sm:text-6xl text-4xl font-extrabold mb-10 text-primary x-auto px-4 mt-28">
-        Meet Our Team
+       { t('about_us.meet_our_team')}
       </h1>
       <div className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center">
         {team.map((member) => {
