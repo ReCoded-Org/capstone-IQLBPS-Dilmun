@@ -22,7 +22,6 @@ function Profile() {
 
   useEffect(() => {
     dispatch(getUserItems(userData.uid));
-    console.log('hello')
   }, [userData, dispatch, userItems.length]);
 
   const toggleForm = () => {
