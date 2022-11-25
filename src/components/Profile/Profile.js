@@ -98,7 +98,7 @@ function Profile() {
               My Items
             </h3>
           </div>
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 p-5 max-w-screen-2xl	">
+          <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-4 p-5 max-w-screen-2xl	">
             {userItems.length > 0 && userItems.map((item) => (
               <UserItemCard key={item.id} item={item} />
             ))}

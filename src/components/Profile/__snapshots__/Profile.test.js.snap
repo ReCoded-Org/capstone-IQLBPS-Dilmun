@@ -67,7 +67,7 @@ exports[`Profile Rendered Correctly 1`] = `
         </h3>
       </div>
       <div
-        class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 p-5 max-w-screen-2xl	"
+        class="grid lg:grid-cols-2 2xl:grid-cols-3 gap-4 p-5 max-w-screen-2xl	"
       />
       <a
         class="w-full text-center"
