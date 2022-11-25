@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
-import AnimationProvider from './components/animations/AnimationProvider'
-import LoadingScreen from './components/animations/LoadingScreen'
+import AnimationProvider from './components/animations/AnimationProvider';
+import LoadingScreen from './components/animations/LoadingScreen';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
 import {
@@ -12,16 +12,6 @@ import {
   status,
   user,
 } from './features/slices/user';
-import { UserItemCard } from './components/Cards';
-
-const MOCK_ITEM = {
-  title: 'Title of Item Goes Here',
-  file: 'https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-  description: 'Description of item Here...',
-  price: 110,
-  type: 'Item Type',
-  categories: ['Men', 'Women', 'Kids'],
-};
 
 function App() {
   const dispatch = useDispatch();
@@ -61,7 +51,6 @@ function App() {
         <>
           <NavBar />
           <AnimationProvider />
-          <UserItemCard item={MOCK_ITEM} />
           <Footer />
         </>
       )}

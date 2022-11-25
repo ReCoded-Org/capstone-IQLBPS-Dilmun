@@ -6,8 +6,18 @@ import { user } from '../../features/slices/user';
 import { ADD_ITEM_ROUTE } from '../../route';
 import defaultProfileImg from '../../assets/img/defaultProfileImg.jpg';
 import defaultBGImg from '../../assets/img/defaultBGImg.jpg';
-import CustomItemCard from '../CustomComponents/CustomItemCard';
+// import CustomItemCard from '../CustomComponents/CustomItemCard';
+import { UserItemCard } from '../Cards';
 import Form from "./Form";
+
+const MOCK_ITEM = {
+  title: 'Title of Item Goes Here',
+  file: 'https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  description: 'Description of item Here...',
+  price: 110,
+  type: 'Item Type',
+  categories: ['Men', 'Women', 'Kids'],
+};
 
 
 function Profile() {
@@ -82,12 +92,12 @@ function Profile() {
               My Items
             </h3>
           </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 p-5">
-            <CustomItemCard />
-            <CustomItemCard />
-            <CustomItemCard />
-            <CustomItemCard />
-            <CustomItemCard />
+          <div className="grid md:grid-cols-2 gap-4 p-5">
+            <UserItemCard item={MOCK_ITEM} />
+            <UserItemCard item={MOCK_ITEM} />
+            <UserItemCard item={MOCK_ITEM} />
+            <UserItemCard item={MOCK_ITEM} />
+            <UserItemCard item={MOCK_ITEM} />
           </div>
           <Link to={ADD_ITEM_ROUTE}>
             {' '}
