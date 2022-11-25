@@ -1,26 +1,20 @@
 import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
 import AnimationProvider from './components/animations/AnimationProvider';
 import LoadingScreen from './components/animations/LoadingScreen';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
 import {
-  error,
   getCurrentSignedInUser,
-  status,
-  user,
+
 } from './features/slices/user';
 
 function App() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-  const userData = useSelector(user);
-  const errorData = useSelector(error);
-  const statusData = useSelector(status);
   // eslint-disable-next-line no-console
-  console.log(userData, errorData, statusData);
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
