@@ -17,6 +17,8 @@ function Profile() {
   const dispatch = useDispatch();
   const { userItems } = useSelector((state) => state.item);
   const userData = useSelector(user);
+  const [userCity, setUserCity] = useState('')
+  const [userCountry, setUserCountry] = useState()
   const [isOpen, setIsOpen] = useState(false);
   // const [items, setItems] = useState([])
 
@@ -27,7 +29,16 @@ function Profile() {
   const toggleForm = () => {
     setIsOpen(!isOpen);
   }
-
+  useEffect(() => {
+    if (!_.isEmpty(userData)) {
+      const { city } = userData.address
+      const capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1)
+      setUserCity(capitalizeCity)
+      const { country } = userData.address
+      const capitalizeCountry = country.charAt(0).toUpperCase() + country.slice(1)
+      setUserCountry(capitalizeCountry)
+    }
+  })
   return (
     <div
       data-testid="profile"
@@ -51,7 +62,7 @@ function Profile() {
             {userData.firstName} {userData.lastName}
           </h1>
           {!_.isEmpty(userData) && <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-            {userData.address.city},{userData.address.country}
+            {userCity},{userCountry}
           </h3>}
 
           {!_.isEmpty(userData) && <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
