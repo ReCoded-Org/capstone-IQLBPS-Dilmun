@@ -13,7 +13,6 @@ import {
   user,
 } from './features/slices/user';
 import { UserItemCard } from './components/Cards';
-// import ItemCard from './components/ItemCard/ItemCard';
 import ItemCardSection from './components/ItemCard/ItemCardSection';
 
 const MOCK_ITEM = {

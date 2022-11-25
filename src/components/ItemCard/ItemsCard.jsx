@@ -1,22 +1,12 @@
-// import { useState, useEffect } from 'react';
-// import { getItemList, itemList } from '../../features/slices/item';
-// import { useSelector, useDispatch } from '../../app/store';
+
 
 function ItemsCard({ item }) {
-  //   const itemData = useSelector(itemList);
-  //   const [items, setItems] = useState([]);
-  //   const dispatch = useDispatch();
-
-  //   useEffect(() => {
-  //     const func = async () => {
-  //       await dispatch(getItemList(itemData))
-  //     }
-  //     func()
-  //     setItems(itemData)
-  //   }, []);
-
+ 
   return (
-    <div className="lg:w-80 md:w-64 w-96 bg-background m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300">
+    <div
+      data-testid="item-card"
+      className="lg:w-80 md:w-64 w-96 bg-background m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300"
+    >
       <figure className="relative max-w-sm transition-all cursor-pointer">
         <a href="/">
           <img
@@ -58,7 +48,7 @@ function ItemsCard({ item }) {
         )}
         <div className="">
           {typeof item.category === 'object' ? (
-            item.category.map((cat) => {
+            item.category.slice(0, 3).map((cat) => {
               return (
                 <span className="text-sm inline-block mr-1 font-semibold text-primary my-2 bg-tertiary py-2 px-4 bg-opacity-90 rounded-lg">
                   {cat}
@@ -71,7 +61,7 @@ function ItemsCard({ item }) {
             </span>
           )}
           <h5 className="text-base py-1 font-base text-primary">
-            {item.createdAt.toString().unref()}
+            {item.createdAt.toString()}
           </h5>
         </div>
         <button

@@ -109,10 +109,13 @@ export const addItem = createAsyncThunk(
 export const getItemList = createAsyncThunk(
   'item/getItemList', async (payload, { rejectWithValue }) => {
     try {
-      const docRef = collection(db, 'Items')
-      const itemData = await getDocs(docRef)
-      await dispatch(itemSlice.actions.getItemListSuccess(itemData));
-      return JSON.stringify(itemData)
+        const docRef = collection(db, 'Items');
+        const docSnap = await getDocs(docRef);
+        const itemData = docSnap.docs.map((d) => {
+          return { ...d.data(), id: d.id };
+        });
+        await dispatch(itemSlice.actions.getItemListSuccess(itemData));
+        return itemData;
     } catch (error) {
       dispatch(itemSlice.actions.HasError(error))
       return rejectWithValue(error)
