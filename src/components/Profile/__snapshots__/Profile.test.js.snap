@@ -33,14 +33,13 @@ exports[`Profile Rendered Correctly 1`] = `
       <h3
         class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1"
       >
-         
-        Country, City
+        profile.country
+        , 
+        profile.city
       </h3>
       <h5
         class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1"
-      >
-         
-      </h5>
+      />
       <button
         class="text-primary hover:text-secondary"
         type="button"
@@ -74,7 +73,7 @@ exports[`Profile Rendered Correctly 1`] = `
         <h3
           class="flex-shrink mx-16 font-bold text-[14px] sm:text-[18px] lg:text-[24px] text-primary mt-3 mb-3"
         >
-          My Items
+          profile.my_items
         </h3>
       </div>
       <div
@@ -204,14 +203,11 @@ exports[`Profile Rendered Correctly 1`] = `
       <a
         href="/add-item"
       >
-         
         <button
           class="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
           type="button"
         >
-           
-          Add New Item
-           
+          profile.add_new_item
         </button>
       </a>
     </div>

@@ -22,7 +22,7 @@ exports[`redering footer 1`] = `
       <span
         className="self-center lg:text-start text-center text-3xl lg:mb-0 mb-3 font-semibold text-primary"
       >
-        Designed to meet your needs.
+        footer.designed_to_meet_your_needs
       </span>
     </a>
     <div
@@ -34,7 +34,7 @@ exports[`redering footer 1`] = `
         <span
           className="text-2xl font-bold text-primary"
         >
-          Quick Links
+          footer.quick_links
         </span>
         <li>
           <a
@@ -42,7 +42,7 @@ exports[`redering footer 1`] = `
             href="/"
             onClick={[Function]}
           >
-            Home
+            footer.home
           </a>
         </li>
         <li>
@@ -51,7 +51,7 @@ exports[`redering footer 1`] = `
             href="/about"
             onClick={[Function]}
           >
-            Meet The Team
+            footer.meet_the_team
           </a>
         </li>
         <li>
@@ -60,7 +60,7 @@ exports[`redering footer 1`] = `
             href="/faq"
             onClick={[Function]}
           >
-            FAQ
+            footer.faq
           </a>
         </li>
       </ul>
@@ -82,7 +82,7 @@ exports[`redering footer 1`] = `
             href="/contact-us"
             onClick={[Function]}
           >
-            Send Feedback
+            footer.send_feedback
           </a>
         </li>
         <li>
