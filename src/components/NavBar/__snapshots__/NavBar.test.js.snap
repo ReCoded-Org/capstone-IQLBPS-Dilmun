@@ -2,11 +2,7 @@
 
 exports[`render NavBar correctly 1`] = `
 <nav
-  class="shadow-md w-full z-10 sticky top-0  "
->
-  <div
-    class="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24  bg-background bg-opacity-30 backdrop-filter backdrop-blur-lg"
-  className="shadow-md w-full z-10 fixed top-0 left-0 bg-primary"
+  className="shadow-md w-full z-10 sticky top-0 left-0 bg-primary"
 >
   <div
     className="md:flex bg-primary py-2 items-center justify-between md:px-8 px-10 max-h-24"
@@ -86,9 +82,6 @@ exports[`render NavBar correctly 1`] = `
       >
         <div>
           <button
-            aria-expanded="false"
-            aria-haspopup="true"
-            class="md:ml-6 text-2xl md:mt-0 mt-2 text-secondary hover:text-primary duration-500"
             aria-expanded={false}
             aria-haspopup={true}
             className="md:ml-6 text-2xl md:mt-0 mt-2 text-background hover:text-secondary duration-500"

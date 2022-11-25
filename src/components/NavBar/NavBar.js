@@ -14,7 +14,7 @@ import {
   PRODUCT_ROUTE,
 } from '../../route';
 import LanguageButton from '../LanguageButton/LanguageButton';
-import { Signout, user } from '../../features/user/userSlice';
+import { Signout, user } from '../../features/slices/user';
 
 const classNames = (...classes) => {
   return twMerge(classes);
@@ -37,8 +37,8 @@ function NavBar() {
   }, [location.key]);
 
   return (
-    <nav className="shadow-md w-full z-10 sticky top-0">
-      <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 bg-background bg-opacity-30 backdrop-filter backdrop-blur-lg" >
+    <nav className="shadow-md w-full z-10 sticky top-0 left-0 bg-primary">
+      <div className="md:flex bg-primary py-2 items-center justify-between md:px-8 px-10 max-h-24">
         <div>
           <Link to={HOME_ROUTE}>
             <img
@@ -56,15 +56,8 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center w-[150px]  md:justify-items-end  md:flex-row flex-col md:pb-0 pb-2 absolute md:static md:z-auto z-[-1] left-0  md:w-auto transition-all duration-500 ease-in ${open ? 'left-[0] bg-background  backdrop-filter backdrop-blur-lg mt-[-16px]' : 'left-[-100%]'
+          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
             }`}
-        >
-          <li>
-            <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
-          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${
-            open ? 'top-24' : 'top-[-170px]'
-          }`}
         >
           <li>
             <NavLink
@@ -82,26 +75,24 @@ function NavBar() {
             </NavLink>
           </li>
           <li>
-          {!_.isEmpty(userData) ? (
-            <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-primary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
-              className={({ isActive }) =>
-                classNames(
-                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
-                  isActive
-                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
-                    : ''
-                )
-              }
-              to={PRODUCT_ROUTE}
-            >
-              Products
-            </NavLink>) : null}
+            {!_.isEmpty(userData) ? (
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    isActive
+                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      : ''
+                  )
+                }
+                to={PRODUCT_ROUTE}
+              >
+                Products
+              </NavLink>
+            ) : null}
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
-
               className={({ isActive }) =>
                 classNames(
                   'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
@@ -113,38 +104,6 @@ function NavBar() {
               to={ABOUT_ROUTE}
             >
               About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
-              to={PROFILE}
-            >
-              Profile
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
-              to={SIGN_UP_ROUTE}
-            >
-              SignUp
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
-              to={SIGN_IN_ROUTE}
-            >
-              SignIn
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) => classNames("md:ml-6 text-xl md:my-0 text-secondary hover:text-secondary duration-300", isActive ? "bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md " : "")}
-              to={LOG_OUT}
-            >
-              LogOut
             </NavLink>
           </li>
           {!_.isEmpty(userData) ? (
@@ -181,7 +140,6 @@ function NavBar() {
               </NavLink>
             </li>
           ) : null}
-
           {!_.isEmpty(userData) ? (
             <li>
               <NavLink

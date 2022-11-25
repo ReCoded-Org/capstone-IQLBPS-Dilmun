@@ -8,19 +8,19 @@ const FeatureCard = ({ icon, title, description, customClass = '' }) => {
     >
       <div
         data-testid="feature-card-icon"
-        className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+        className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
       >
         {icon}
       </div>
       <h3
         data-testid="feature-card-title"
-        className="mb-2 text-xl font-bold text-background dark:text-white"
+        className="mb-2 text-xl font-bold text-primary"
       >
         {title}
       </h3>
       <p
         data-testid="feature-card-paragraph"
-        className="text-background dark:text-gray-400"
+        className="text-primary"
       >
         {description}
       </p>
