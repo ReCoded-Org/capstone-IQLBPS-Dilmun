@@ -9,7 +9,7 @@ exports[`UserItemCard renders correctly 1`] = `
   >
     <img
       alt="Title of Item Goes Here"
-      className="rounded-xl"
+      className="rounded-xl w-80 h-52 object-contain"
       src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     />
   </div>
@@ -107,7 +107,7 @@ exports[`UserItemCard renders correctly 1`] = `
       Title of Item Goes Here
     </h3>
     <p
-      className="md:text-lg text-secondary text-base min-h-20"
+      className="md:text-lg text-secondary text-base line-clamp-2"
     >
       Description of item Here...
     </p>
@@ -117,7 +117,6 @@ exports[`UserItemCard renders correctly 1`] = `
       <p
         className="text-xl font-black text-secondary"
       >
-        $
         110
       </p>
       <div
