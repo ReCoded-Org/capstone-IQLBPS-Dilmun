@@ -37,8 +37,8 @@ function NavBar() {
   }, [location.key]);
 
   return (
-    <nav className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-br from-background via-background to-secondary shadow  backdrop-blur-md ">
-      <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24">
+    <nav className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background via-background to-secondary shadow  backdrop-blur-md ">
+      <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ">
         <div>
           <Link to={HOME_ROUTE}>
             <img
@@ -63,7 +63,7 @@ function NavBar() {
             <NavLink
               className={({ isActive }) =>
                 classNames(
-                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                   isActive
                     ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
                     : ''
@@ -79,7 +79,7 @@ function NavBar() {
               <NavLink
                 className={({ isActive }) =>
                   classNames(
-                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
                       ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
                       : ''
@@ -95,7 +95,7 @@ function NavBar() {
             <NavLink
               className={({ isActive }) =>
                 classNames(
-                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                   isActive
                     ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
                     : ''
@@ -111,7 +111,7 @@ function NavBar() {
               <NavLink
                 className={({ isActive }) =>
                   classNames(
-                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
                       ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
                       : ''
@@ -128,7 +128,7 @@ function NavBar() {
               <NavLink
                 className={({ isActive }) =>
                   classNames(
-                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
                       ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
                       : ''
@@ -143,7 +143,7 @@ function NavBar() {
           {!_.isEmpty(userData) ? (
             <li>
               <NavLink
-                className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
+                className="md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300"
                 to="/"
                 onClick={() => {
                   dispatch(Signout());
