@@ -69,6 +69,15 @@
         "price": "Price",
         "apply": "Apply"
     },
+    "footer": {
+        "designed_to_meet_your_needs": "Designed to meet your needs.",
+        "quick_links": "Quick Links",
+        "home": "Home",
+        "meet_the_team": "Meet the team",
+        "faq": "FAQ",
+        "contact_us": "Contact us",
+        "send_feedback": "Send Feedback"
+    },
     "hero": {
         "welcome_to_dilmun": "Welcome to Dilmun",
         "your_way": "Your Way to Get Quality Products!",
@@ -97,6 +106,21 @@
         "description": "Subscribe to our newsletter and stay updated",
         "email": "Write your email here",
         "subscribe": "Subscribe"
+    },
+    "profile": {
+        "edit_your_profile": "Edit your profile",
+        "profile_picture_upload": "Profile picture upload",
+        "background_picture_upload": "Background picture upload",
+        "attach_a_file": "Attach a file",
+        "upload": "Upload",
+        "'first_name": "First Name",
+        "last_name": "Last Name",
+        "country": "Country",
+        "city": "City",
+        "save": "Save",
+        "cancel": "Cancel",
+        "my_items": "My Items",
+        "add_new_item": "Add New Item"
     },
     "proof": {
         "our_partners": "Our Partners",

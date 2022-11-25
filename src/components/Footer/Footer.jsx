@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdEmail } from 'react-icons/md';
+import { useTranslation } from 'react-i18next';
 
 import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE ,CONTACT_US} from '../../route';
 
 const Footer = () => {
+  const {t} = useTranslation();
   return (
     <footer className="p-4 bg-gradient-to-br from-background via-background to-secondary shadow md:p-5 backdrop-blur-md">
       <div className="lg:grid lg:grid-cols-4 gap-4">
@@ -18,18 +20,20 @@ const Footer = () => {
             alt="Flowbite Logo"
           />
           <span className="self-center lg:text-start text-center text-3xl lg:mb-0 mb-3 font-semibold text-primary">
-            Designed to meet your needs.
+            {t('footer.designed_to_meet_your_needs')}
           </span>
         </Link>
         <div className="col-span-1 flex lg:my-0 my-3 mx-3 lg:justify-start justify-center text-center">
           <ul className="mb-6 text-lg text-primary sm:mb-0 font-base justify-self-center">
-            <span className="text-2xl font-bold text-primary">Quick Links</span>
+            <span className="text-2xl font-bold text-primary">
+              {t('footer.quick_links')}
+            </span>
             <li>
               <Link
                 to={HOME_ROUTE}
                 className="mr-4 hover:underline hover:text-tertiary duration-200"
               >
-                Home
+                {t('footer.home')}
               </Link>
             </li>
             <li>
@@ -37,7 +41,7 @@ const Footer = () => {
                 to={ABOUT_ROUTE}
                 className="mr-4 hover:underline hover:text-tertiary duration-200"
               >
-                Meet The Team
+                {t('footer.meet_the_team')}
               </Link>
             </li>
             <li>
@@ -45,7 +49,7 @@ const Footer = () => {
                 to={FAQ_ROUTE}
                 className="mr-4 hover:underline hover:text-tertiary duration-200"
               >
-                FAQ
+                {t('footer.faq')}
               </Link>
             </li>
           </ul>
@@ -57,8 +61,8 @@ const Footer = () => {
               <Link
                 className="hover:text-tertiary hover:underline text-lg duration-200 h-8 w-5 inline"
                 to={CONTACT_US}
-              >Send
-                Feedback
+              >
+                {t('footer.send_feedback')}
               </Link>
             </li>
             <li>

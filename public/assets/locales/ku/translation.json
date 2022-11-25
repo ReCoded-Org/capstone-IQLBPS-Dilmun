@@ -69,6 +69,15 @@
         "price": "نرخ",
         "apply": "جێبەجێکردن"
     },
+    "footer": {
+        "designed_to_meet_your_needs": "دیزاین کراوە بۆ دابینکردنی پێداویستییەکانتان.",
+        "quick_links": "بەستەرە خێراکان",
+        "home": "لاپەڕەی سەرەکی",
+        "meet_the_team": "تیمەکە بناسە",
+        "faq": "پرسیارەکان",
+        "contact_us": "پەیوەندیمان پێوەبکە",
+        "send_feedback": "فیدباک بنێرە"
+    },
     "hero": {
         "welcome_to_dilmun": "بەخێربێن بۆ دڵمون",
         "your_way": "ڕێگای تۆ بۆ بەدەستهێنانی بەرهەمی کوالیتی!",
@@ -98,6 +107,21 @@
         "email": "Write your email here",
         "subscribe": "سەبسکرایب بکەن"
     },
+   "profile": {
+    "edit_your_profile": "دەستکاری پەڕەی کەسیت بکە",
+    "profile_picture_upload": "بارکردنی وێنەی پڕۆفایل",
+    "background_picture_upload": "بارکردنی وێنەی پاشبنەما",
+    "attach_a_file": "فایلێک هاوپێچ بکە",
+    "upload": "بارکردن",
+    "'first_name": "ناوی یەکەم",
+    "last_name": "ناوی کۆتایی",
+    "country": "وڵات",
+    "city": "شار",
+    "save": "سەیڤ",
+    "cancel": "هەڵوەشاندنەوە",
+    "my_items": "بابەتەکانم",
+    "add_new_item": "زیادکردنی بابەتی نوێ"
+},
     "proof": {
         "our_partners": "هاوبەشەکانمان",
         "what_they_say": "خەڵک <br className='block' /> چی دەربارەی ئێمە دەڵێن",

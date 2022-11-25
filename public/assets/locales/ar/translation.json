@@ -69,6 +69,15 @@
         "price": "سعر",
         "apply": "طبّق"
     },
+    "footer": {
+        "designed_to_meet_your_needs": "مصممة لتلبية احتياجاتك.",
+        "quick_links": "روابط سريعة",
+        "home": "الصفحه الرئيسيه",
+        "meet_the_team": "تعرّف على الفريق",
+        "faq": "التعليمات",
+        "contact_us": "اتصل بنا",
+        "send_feedback": "ارسل رأيك"
+    },
     "hero": {
         "welcome_to_dilmun": "مرحبا بكم في دلمون",
         "your_way": "طريقك للحصول على منتجات عالية الجودة!",
@@ -97,6 +106,21 @@
         "description": "اشترك في النشرة الإخبارية لدينا وابقى على اطلاع",
         "email": "Write your email here",
         "subscribe": "اشترك"
+    },
+    "profile": {
+        "edit_your_profile": "عدل ملفك الشخصي",
+        "profile_picture_upload": "تحميل صورة الملف الشخصي",
+        "background_picture_upload": "تحميل صورة الخلفية",
+        "attach_a_file": "إرفاق ملف",
+        "upload": "تحميل",
+        "'first_name": "الاسم الاول",
+        "last_name": "الكنية",
+        "country": "دولة",
+        "city": "مدينة",
+        "save": "يحفظ",
+        "cancel": "يلغي",
+        "my_items": "حاجياتي",
+        "add_new_item": "أضف أداة جديدة"
     },
     "proof": {
         "our_partners": "شركائنا",
