@@ -6,10 +6,8 @@ import AnimationProvider from './components/animations/AnimationProvider';
 import LoadingScreen from './components/animations/LoadingScreen';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
-import {
-  getCurrentSignedInUser,
-
-} from './features/slices/user';
+import { getCurrentSignedInUser } from './features/slices/user';
+import ItemCardSection from './components/ItemCard/ItemCardSection';
 
 function App() {
   const dispatch = useDispatch();
@@ -45,6 +43,7 @@ function App() {
         <>
           <NavBar />
           <AnimationProvider />
+          <ItemCardSection />
           <Footer />
         </>
       )}
