@@ -6,7 +6,6 @@ import { user } from '../../features/slices/user';
 import { ADD_ITEM_ROUTE } from '../../route';
 import defaultProfileImg from '../../assets/img/defaultProfileImg.jpg';
 import defaultBGImg from '../../assets/img/defaultBGImg.jpg';
-// import CustomItemCard from '../CustomComponents/CustomItemCard';
 import { UserItemCard } from '../Cards';
 import Form from "./Form";
 import { useDispatch } from '../../app/store';
@@ -20,7 +19,6 @@ function Profile() {
   const [userCity, setUserCity] = useState('')
   const [userCountry, setUserCountry] = useState()
   const [isOpen, setIsOpen] = useState(false);
-  // const [items, setItems] = useState([])
 
   useEffect(() => {
     dispatch(getUserItems(userData.uid));
