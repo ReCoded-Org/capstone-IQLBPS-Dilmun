@@ -16,15 +16,13 @@ function UserItemCard(props) {
         <div className="flex justify-between item-center">
           <p className="text-secondary font-medium text-lg">{type}</p>
           <div className="flex gap-2 justify-between items-center">
-            <DeleteItemButton  className=''/>
+            <DeleteItemButton className="" />
             <Tooltip text="Edit Item">
               <BiEdit className="h-8 w-8 text-primary" />
             </Tooltip>
           </div>
         </div>
-        <h3 className="font-black text-primary md:text-3xl text-xl">
-          {title}
-        </h3>
+        <h3 className="font-black text-primary md:text-3xl text-xl">{title}</h3>
         <p className="md:text-lg text-secondary text-base min-h-20">
           {description}
         </p>
@@ -32,14 +30,15 @@ function UserItemCard(props) {
         <div className="flex justify-between item-center">
           <p className="text-xl font-black text-secondary">${price}</p>
           <div className="flex justify-center items-center">
-            {categories.map((category) => (
-              <span
-                key={category}
-                className="text-xs font-medium text-background bg-secondary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
-              >
-                {category}
-              </span>
-            ))}
+            {typeof categories === 'object' &&
+              categories.map((category) => (
+                <span
+                  key={category}
+                  className="text-xs font-medium text-background bg-secondary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
+                >
+                  {category}
+                </span>
+              ))}
           </div>
         </div>
       </div>

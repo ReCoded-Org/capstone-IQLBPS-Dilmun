@@ -10,19 +10,13 @@ import defaultBGImg from '../../assets/img/defaultBGImg.jpg';
 // import CustomItemCard from '../CustomComponents/CustomItemCard';
 import { UserItemCard } from '../Cards';
 import Form from "./Form";
-
-const MOCK_ITEM = {
-  title: 'Title of Item Goes Here',
-  file: 'https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-  description: 'Description of item Here...',
-  price: 110,
-  type: 'Item Type',
-  categories: ['Men', 'Women', 'Kids'],
-};
+import { useDispatch } from '../../app/store';
+import { getUserItems } from '../../features/slices/item';
 
 
 function Profile() {
-
+  const dispatch = useDispatch();
+  const { userItems } = useSelector((state) => state.item);
   const userData = useSelector(user);
   const [email, setEmail] = useState();
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +25,8 @@ function Profile() {
     if (!_.isEmpty(userData)) {
       setEmail(auth.currentUser.email);
     }
-  }, [email]);
+    dispatch(getUserItems(userData.uid));
+  }, [email, userData, dispatch]);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
@@ -100,11 +95,9 @@ function Profile() {
             </h3>
           </div>
           <div className="grid md:grid-cols-2 gap-4 p-5">
-            <UserItemCard item={MOCK_ITEM} />
-            <UserItemCard item={MOCK_ITEM} />
-            <UserItemCard item={MOCK_ITEM} />
-            <UserItemCard item={MOCK_ITEM} />
-            <UserItemCard item={MOCK_ITEM} />
+            {userItems.length > 0 && userItems.map((item) => (
+              <UserItemCard key={item.id} item={item} />
+            ))}
           </div>
           <Link to={ADD_ITEM_ROUTE}>
             {' '}
