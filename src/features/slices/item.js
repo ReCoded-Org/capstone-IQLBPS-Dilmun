@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
+import { addDoc, collection, doc, setDoc, getDocs } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import moment from 'moment';
 import { db, storage } from '../../firebase-config';
@@ -39,7 +39,7 @@ const itemSlice = createSlice({
     },
 
     getItemListSuccess: (state, action) => {
-      state.itemList = action.payload;
+      state.itemList=(action.payload);
       state.isLoading = false;
     },
 
@@ -87,8 +87,8 @@ export const addItem = createAsyncThunk(
         category: item.category,
         type: item.type,
         owner,
-        createdAt: moment().format('LLLL'),
-        updatedAt: moment().format('LLLL'),
+        createdAt: moment().format('LLL'),
+        updatedAt: moment().format('LLL'),
       };
       const docRef = await addDoc(collection(db, 'Items'), data);
       // add item to user collection as subcollection
@@ -105,3 +105,22 @@ export const addItem = createAsyncThunk(
   }
 );
 
+
+export const getItemList = createAsyncThunk(
+  'item/getItemList', async (payload, { rejectWithValue }) => {
+    try {
+        const docRef = collection(db, 'Items');
+        const docSnap = await getDocs(docRef);
+        const itemData = docSnap.docs.map((d) => {
+          return { ...d.data(), id: d.id };
+        });
+        await dispatch(itemSlice.actions.getItemListSuccess(itemData));
+        return itemData;
+    } catch (error) {
+      dispatch(itemSlice.actions.HasError(error))
+      return rejectWithValue(error)
+    }
+  }
+  )
+  
+  export const itemList = (state) => state.item.itemList
