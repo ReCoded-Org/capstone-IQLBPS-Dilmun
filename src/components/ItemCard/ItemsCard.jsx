@@ -25,10 +25,10 @@ function ItemsCard({ item }) {
         </a>
       </figure>
       <div className="px-5 pb-5">
-        {item.title.length > 11 ? (
+        {item.title.length > 15 ? (
           <h5 className="text-3xl pb-2 font-extrabold text-primary">
             {item.title.slice(0, 1).toUpperCase()}
-            {item.title.slice(1, 10)} ...
+            {item.title.slice(1, 15)} ...
           </h5>
         ) : (
           <h5 className="text-3xl pb-2 font-extrabold text-primary">
