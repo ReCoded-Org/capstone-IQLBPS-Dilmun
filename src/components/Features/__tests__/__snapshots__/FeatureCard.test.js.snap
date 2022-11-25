@@ -6,7 +6,7 @@ exports[`feature card should be render 1`] = `
   data-testid="feature-card"
 >
   <div
-    class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+    class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
     data-testid="feature-card-icon"
   >
     <svg
@@ -26,13 +26,13 @@ exports[`feature card should be render 1`] = `
     </svg>
   </div>
   <h3
-    class="mb-2 text-xl font-bold text-background dark:text-white"
+    class="mb-2 text-xl font-bold text-primary"
     data-testid="feature-card-title"
   >
     Filter
   </h3>
   <p
-    class="text-background dark:text-gray-400"
+    class="text-primary"
     data-testid="feature-card-paragraph"
   >
     Filter your items to find the right information.

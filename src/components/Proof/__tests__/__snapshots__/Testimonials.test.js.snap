@@ -10,14 +10,14 @@ exports[`should render testimonials component 1`] = `
     class="w-full flex justify-between items-center md:flex-row flex-col sm:mb-4 mb-2"
   >
     <h2
-      class="font-bold text-center xs:text-[48px] text-[40px] text-black xs:leading-[76.8px] leading-[66.8px] w-full"
+      class="font-bold text-center xs:text-[48px] text-[40px] text-primary xs:leading-[76.8px] leading-[66.8px] w-full"
       data-testid="testimonials-title"
     />
     <div
       class="w-full md:mt-0 mt-6"
     >
       <p
-        class="font-poppins font-normal text-[20px] leading-[30.8px] text-center p-6 md:text-left md:max-w-[450px]"
+        class="font-poppins text-primary font-normal text-[20px] leading-[30.8px] text-center p-6 md:text-left md:max-w-[450px]"
         data-testid="testimonials-paragraph"
       >
         proof.everything_you_need
@@ -28,7 +28,7 @@ exports[`should render testimonials component 1`] = `
     class="container flex flex-wrap sm:justify-center justify-center w-full feedback-container p-6"
   >
     <div
-      class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
+      class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-tertiary ease-in-out duration-500"
       data-testid="feedbackcard-div"
     >
       <img
@@ -37,7 +37,7 @@ exports[`should render testimonials component 1`] = `
         src="quotes.svg"
       />
       <p
-        class="font-poppins font-normal text-[17px] leading-[32px] text-black my-10"
+        class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
         data-testid="feedback-card-content"
       >
         proof.feedback_one_description
@@ -51,16 +51,16 @@ exports[`should render testimonials component 1`] = `
           src="people01.png"
         />
         <div
-          class="flex flex-col ml-4"
+          class="flex flex-col ml-4 hover:text-background text-primary"
         >
           <h4
-            class="font-poppins font-semibold text-[19px] leading-[32px] text-black"
+            class="font-poppins font-semibold text-[19px] leading-[32px] "
             data-testid="feedback-card-name"
           >
             proof.feedback_one_name
           </h4>
           <p
-            class="font-poppins font-normal text-[15px] leading-[24px] text-left text-dimWhite"
+            class="font-poppins font-normal text-[15px] leading-[24px] text-left"
             data-testid="feedback-card-title"
           >
             proof.feedback_one_title
@@ -69,7 +69,7 @@ exports[`should render testimonials component 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
+      class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-tertiary ease-in-out duration-500"
       data-testid="feedbackcard-div"
     >
       <img
@@ -78,7 +78,7 @@ exports[`should render testimonials component 1`] = `
         src="quotes.svg"
       />
       <p
-        class="font-poppins font-normal text-[17px] leading-[32px] text-black my-10"
+        class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
         data-testid="feedback-card-content"
       >
         proof.feedback_two_description
@@ -92,16 +92,16 @@ exports[`should render testimonials component 1`] = `
           src="people02.png"
         />
         <div
-          class="flex flex-col ml-4"
+          class="flex flex-col ml-4 hover:text-background text-primary"
         >
           <h4
-            class="font-poppins font-semibold text-[19px] leading-[32px] text-black"
+            class="font-poppins font-semibold text-[19px] leading-[32px] "
             data-testid="feedback-card-name"
           >
             proof.feedback_two_name
           </h4>
           <p
-            class="font-poppins font-normal text-[15px] leading-[24px] text-left text-dimWhite"
+            class="font-poppins font-normal text-[15px] leading-[24px] text-left"
             data-testid="feedback-card-title"
           >
             proof.feedback_two_title
@@ -110,7 +110,7 @@ exports[`should render testimonials component 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
+      class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-tertiary ease-in-out duration-500"
       data-testid="feedbackcard-div"
     >
       <img
@@ -119,7 +119,7 @@ exports[`should render testimonials component 1`] = `
         src="quotes.svg"
       />
       <p
-        class="font-poppins font-normal text-[17px] leading-[32px] text-black my-10"
+        class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
         data-testid="feedback-card-content"
       >
         proof.feedback_three_description
@@ -133,16 +133,16 @@ exports[`should render testimonials component 1`] = `
           src="people03.png"
         />
         <div
-          class="flex flex-col ml-4"
+          class="flex flex-col ml-4 hover:text-background text-primary"
         >
           <h4
-            class="font-poppins font-semibold text-[19px] leading-[32px] text-black"
+            class="font-poppins font-semibold text-[19px] leading-[32px] "
             data-testid="feedback-card-name"
           >
             proof.feedback_three_name
           </h4>
           <p
-            class="font-poppins font-normal text-[15px] leading-[24px] text-left text-dimWhite"
+            class="font-poppins font-normal text-[15px] leading-[24px] text-left"
             data-testid="feedback-card-title"
           >
             proof.feedback_three_title

@@ -2,7 +2,7 @@
 
 exports[`should render features component  1`] = `
 <section
-  class="bg-primary dark:bg-gray-900"
+  class="bg-background border-y-2 border-y-primary"
   data-testid="features-section"
 >
   <div
@@ -12,13 +12,13 @@ exports[`should render features component  1`] = `
       class="mb-8 lg:mb-16"
     >
       <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-background dark:text-white"
+        class="mb-4 text-4xl tracking-tight font-extrabold text-primary"
         data-testid="features-title"
       >
         features.designed_to_meet_your_needs
       </h2>
       <p
-        class="text-background sm:text-xl dark:text-gray-400"
+        class="text-primary sm:text-xl"
         data-testid="features-paragraph"
       >
         features.description
@@ -32,7 +32,7 @@ exports[`should render features component  1`] = `
         data-testid="feature-card"
       >
         <div
-          class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+          class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
           data-testid="feature-card-icon"
         >
           <svg
@@ -52,13 +52,13 @@ exports[`should render features component  1`] = `
           </svg>
         </div>
         <h3
-          class="mb-2 text-xl font-bold text-background dark:text-white"
+          class="mb-2 text-xl font-bold text-primary"
           data-testid="feature-card-title"
         >
           features.feature_one_title
         </h3>
         <p
-          class="text-background dark:text-gray-400"
+          class="text-primary"
           data-testid="feature-card-paragraph"
         >
           features.feature_one_description
@@ -69,7 +69,7 @@ exports[`should render features component  1`] = `
         data-testid="feature-card"
       >
         <div
-          class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+          class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
           data-testid="feature-card-icon"
         >
           <svg
@@ -90,13 +90,13 @@ exports[`should render features component  1`] = `
           </svg>
         </div>
         <h3
-          class="mb-2 text-xl font-bold text-background dark:text-white"
+          class="mb-2 text-xl font-bold text-primary"
           data-testid="feature-card-title"
         >
           features.feature_two_title
         </h3>
         <p
-          class="text-background dark:text-gray-400"
+          class="text-primary"
           data-testid="feature-card-paragraph"
         >
           features.feature_two_description
@@ -107,7 +107,7 @@ exports[`should render features component  1`] = `
         data-testid="feature-card"
       >
         <div
-          class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12 dark:bg-yellow-400"
+          class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
           data-testid="feature-card-icon"
         >
           <svg
@@ -127,13 +127,13 @@ exports[`should render features component  1`] = `
           </svg>
         </div>
         <h3
-          class="mb-2 text-xl font-bold text-background dark:text-white"
+          class="mb-2 text-xl font-bold text-primary"
           data-testid="feature-card-title"
         >
           features.feature_three_title
         </h3>
         <p
-          class="text-background dark:text-gray-400"
+          class="text-primary"
           data-testid="feature-card-paragraph"
         >
           features.feature_three_description

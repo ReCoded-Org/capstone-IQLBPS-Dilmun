@@ -773,14 +773,15 @@ exports[`Home Page Rendered Correctly 1`] = `
       </div>
     </div>
   </section>
-  <section
-    data-testid="news-letter-section"
+  <div
+    class=" grid grid-col-2 pt-14 pb-14 pr-10 pl-10 hadow-md bg-background border-y-2 border-y-primary"
+    data-testid="newsletter"
   >
     <div
-      class="pt-14 pb-14 pr-10 pl-10 md:flex shadow-md justify-around bg-primary"
+      class="text-primary flex flex-col lg:flex-row items-center lg:justify-around justify-center"
     >
       <div
-        class="text-background flex flex-col md:flex-row justify-center items-center"
+        class="flex flex-col lg:flex-row lg:justify-start justify-center items-center"
       >
         <img
           alt="email"
@@ -788,7 +789,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           src="https://www.freepnglogos.com/uploads/blue-email-logo-png-4.png"
         />
         <h1
-          class="text-[20px] sm:text-[40px] mb-3 sm:mb-0"
+          class="text-[40px] mb-3 sm:mb-0 lg:text-start text-center"
         />
       </div>
       <div
@@ -804,7 +805,7 @@ exports[`Home Page Rendered Correctly 1`] = `
         >
           <form>
             <input
-              class="rounded p-1 w-full sm:w-fit md:p-2 mb-3 sm:mb-0 placeholder:text-background border border-solid "
+              class="rounded p-1 w-full lg:w-fit md:p-2 mb-3 lg:mb-0 placeholder:text-tertiary border border-solid mr-2"
               name="email"
               placeholder="news_letter.email"
               required=""

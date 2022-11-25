@@ -2,7 +2,7 @@
 
 exports[`should render feedbackCard component 1`] = `
 <div
-  class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-secondary ease-in-out duration-500"
+  class="flex flex-col px-5 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 hover:bg-tertiary ease-in-out duration-500"
   data-testid="feedbackcard-div"
 >
   <img
@@ -11,7 +11,7 @@ exports[`should render feedbackCard component 1`] = `
     src="quotes.svg"
   />
   <p
-    class="font-poppins font-normal text-[17px] leading-[32px] text-black my-10"
+    class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
     data-testid="feedback-card-content"
   />
   <div
@@ -21,14 +21,14 @@ exports[`should render feedbackCard component 1`] = `
       class="w-[48px] h-[48px] rounded-full"
     />
     <div
-      class="flex flex-col ml-4"
+      class="flex flex-col ml-4 hover:text-background text-primary"
     >
       <h4
-        class="font-poppins font-semibold text-[19px] leading-[32px] text-black"
+        class="font-poppins font-semibold text-[19px] leading-[32px] "
         data-testid="feedback-card-name"
       />
       <p
-        class="font-poppins font-normal text-[15px] leading-[24px] text-left text-dimWhite"
+        class="font-poppins font-normal text-[15px] leading-[24px] text-left"
         data-testid="feedback-card-title"
       />
     </div>
