@@ -38,7 +38,7 @@ function NavBar() {
   }, [location.key]);
 
   return (
-    <div className='shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background via-background to-secondary shadow  backdrop-blur-md '>
+    <div className='shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background via-background to-secondary shadow  backdrop-blur-md bg-transparent '>
     <nav>
       <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ">
         <div>
