@@ -58,7 +58,7 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-gradient-to-br from-background/20 via-background/20 to-secondary/20 shadow backdrop-blur-md bg-transparent left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'right-24 top-[96px] py-3' : 'left-[-700px] top-[96px] py-3'
+          className={`flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'right-24 top-[96px] py-3 backdrop-blur-md bg-background/30' : 'left-[-700px] top-[96px] py-3 '
             }`}
         >
           <li>
