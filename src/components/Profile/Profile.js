@@ -41,7 +41,7 @@ function Profile() {
   return (
     <div
       data-testid="profile"
-      className=" bg-background bg-signin-background bg-cover bg-no-repeat w-full h-full flex flex-col justify-center items-center content-center "
+      className=" bg-background  bg-cover bg-no-repeat w-full h-full flex flex-col justify-center items-center content-center "
     >
       <div className=" mt-5 mb-14 w-5/6 bg-background rounded-lg h-full relative">
         <div className="flex flex-col justify-center items-center rounded-lg ">
@@ -56,7 +56,7 @@ function Profile() {
             className="rounded-full w-36 absolute flex outline outline-background  min-h-[15vh] md:min-h-[30vh] min-w-[15vh] md:min-w-[30vh]"
           />
         </div>
-        <div className="flex flex-col items-center justify-center content-center  mb-14 bg-background rounded-lg  pt-4">
+        <div className="flex flex-col items-center justify-center content-center  mb-14  rounded-lg  pt-4">
           <h1 className="font-bold text-[20px] sm:text-[26px] lg:text-[34px] text-primary m-1">
             {userData.firstName} {userData.lastName}
           </h1>
@@ -98,7 +98,7 @@ function Profile() {
               My Items
             </h3>
           </div>
-          <div className="grid lg:grid-cols-2 gap-4 p-5">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 p-5 max-w-screen-2xl	">
             {userItems.length > 0 && userItems.map((item) => (
               <UserItemCard key={item.id} item={item} />
             ))}

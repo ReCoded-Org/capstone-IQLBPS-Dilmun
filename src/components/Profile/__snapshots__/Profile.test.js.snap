@@ -2,7 +2,7 @@
 
 exports[`Profile Rendered Correctly 1`] = `
 <div
-  class=" bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center "
+  class=" bg-background  bg-cover bg-no-repeat w-full h-full flex flex-col justify-center items-center content-center "
   data-testid="profile"
 >
   <div
@@ -23,7 +23,7 @@ exports[`Profile Rendered Correctly 1`] = `
       />
     </div>
     <div
-      class="flex flex-col items-center justify-center content-center  mb-14 bg-background rounded-lg  pt-4"
+      class="flex flex-col items-center justify-center content-center  mb-14  rounded-lg  pt-4"
     >
       <h1
         class="font-bold text-[20px] sm:text-[26px] lg:text-[34px] text-primary m-1"
@@ -67,19 +67,17 @@ exports[`Profile Rendered Correctly 1`] = `
         </h3>
       </div>
       <div
-        class="grid md:grid-cols-2 gap-4 p-5"
+        class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 p-5 max-w-screen-2xl	"
       />
       <a
+        class="w-full text-center"
         href="/add-item"
       >
-         
         <button
-          class="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+          class="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
           type="button"
         >
-           
           Add New Item
-           
         </button>
       </a>
     </div>
