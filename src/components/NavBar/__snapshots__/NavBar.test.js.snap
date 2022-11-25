@@ -84,7 +84,7 @@ exports[`render NavBar correctly 1`] = `
           <button
             aria-expanded={false}
             aria-haspopup={true}
-            className="md:ml-6 text-2xl md:mt-0 mt-2 text-background hover:text-secondary duration-500"
+            className="md:ml-6 text-2xl md:mt-0 mt-2 text-secondary hover:text-primary duration-500"
             data-headlessui-state=""
             data-testid="language-botton-toggle"
             id="headlessui-menu-button-:r0:"
