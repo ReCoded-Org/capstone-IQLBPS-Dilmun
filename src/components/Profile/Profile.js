@@ -42,7 +42,7 @@ function Profile() {
   return (
     <div
       data-testid="profile"
-      className=" bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center "
+      className=" bg-background bg-signin-background bg-cover bg-no-repeat w-full h-full flex flex-col justify-center items-center content-center "
     >
       <div className=" mt-5 mb-14 w-5/6 bg-background rounded-lg h-full relative">
         <div className="flex flex-col justify-center items-center rounded-lg ">
@@ -104,14 +104,12 @@ function Profile() {
               <UserItemCard key={item.id} item={item} />
             ))}
           </div>
-          <Link to={ADD_ITEM_ROUTE}>
-            {' '}
+          <Link className='w-full text-center' to={ADD_ITEM_ROUTE}>
             <button
               type="button"
-              className="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+              className="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
             >
-              {' '}
-              Add New Item{' '}
+              Add New Item
             </button>
           </Link>
 
