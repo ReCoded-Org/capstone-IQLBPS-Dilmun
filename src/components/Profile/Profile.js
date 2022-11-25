@@ -48,10 +48,9 @@ function Profile() {
             {userData.firstName} {userData.lastName}
           </h1>
           <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-            {' '}
-            Country, City
+            {userData.country ? userData.country : 'Country'}, City
           </h3>
-
+          {console.log(userData.country)}
           <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
             {' '}
             {email}

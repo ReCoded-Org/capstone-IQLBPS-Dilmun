@@ -1,15 +1,36 @@
 import { useForm } from 'react-hook-form';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateUserInfo, user } from '../../features/slices/user';
 
 function SettingForm({ toggleForm }) {
+  const userData = useSelector(user);
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    //  reset
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      firstName: userData.firstName ? userData.firstName : '',
+      lastName: userData.lastName ? userData.lastName : '',
+      city: userData.city ? userData.city : '',
+      country: userData.country ? userData.country : '',
+    },
+  });
 
   const onSubmit = (data) => {
-    console.log(data);
+    const { firstName, lastName, city, country } = data;
+    dispatch(
+      updateUserInfo({
+        user: userData,
+        firstName,
+        lastName,
+        city,
+        country,
+      })
+    );
+    toggleForm();
   };
 
   return (

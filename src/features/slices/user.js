@@ -1,7 +1,4 @@
-import {
-  createAsyncThunk,
-  createSlice
-} from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import {
   createUserWithEmailAndPassword,
   FacebookAuthProvider,
@@ -10,15 +7,8 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
-import {
-  doc,
-  getDoc,
-  setDoc
-} from 'firebase/firestore';
-import {
-  auth,
-  db
-} from '../../firebase-config';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { auth, db } from '../../firebase-config';
 
 const initialState = {
   user: {},
@@ -28,16 +18,10 @@ const initialState = {
 
 export const signInWithGoogle = createAsyncThunk(
   'user/signInWithGoogle',
-  async (
-    payload, {
-      rejectWithValue
-    }
-  ) => {
+  async (payload, { rejectWithValue }) => {
     const provider = new GoogleAuthProvider();
     try {
-      const {
-        user
-      } = await signInWithPopup(auth, provider);
+      const { user } = await signInWithPopup(auth, provider);
 
       const docRef = doc(db, 'Users', user.uid);
       const docSnap = await getDoc(docRef);
@@ -53,8 +37,8 @@ export const signInWithGoogle = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
-    }
-)
+  }
+);
 export const Signout = createAsyncThunk(
   'user/signout',
   async (payload, { rejectWithValue }) => {
@@ -66,17 +50,12 @@ export const Signout = createAsyncThunk(
   }
 );
 
-
 export const signInWithFacebook = createAsyncThunk(
   'user/signInWithFacebook',
-  async (payload, {
-    rejectWithValue
-  }) => {
+  async (payload, { rejectWithValue }) => {
     const provider = new FacebookAuthProvider();
     try {
-      const {
-        user
-      } = await signInWithPopup(auth, provider);
+      const { user } = await signInWithPopup(auth, provider);
 
       const docRef = doc(db, 'Users', user.uid);
       const docSnap = await getDoc(docRef);
@@ -97,24 +76,14 @@ export const signInWithFacebook = createAsyncThunk(
 
 export const signUpWithCredentials = createAsyncThunk(
   'user/signUpWithCredentials',
-  async (payload, {
-    rejectWithValue
-  }) => {
-    const {
-      email,
-      password,
-      firstName,
-      lastName,
-      callback
-    } = payload;
+  async (payload, { rejectWithValue }) => {
+    const { email, password, firstName, lastName, callback } = payload;
 
     try {
-      const {
-        user
-      } = await createUserWithEmailAndPassword(
+      const { user } = await createUserWithEmailAndPassword(
         auth,
         email,
-        password,
+        password
       );
 
       await setDoc(doc(db, 'Users', user.uid), {
@@ -131,18 +100,10 @@ export const signUpWithCredentials = createAsyncThunk(
 );
 export const signInWithCredentials = createAsyncThunk(
   'user/signInWithCredentials',
-  async (payload, {
-    rejectWithValue
-  }) => {
-    const {
-      email,
-      password,
-      callback
-    } = payload;
+  async (payload, { rejectWithValue }) => {
+    const { email, password, callback } = payload;
     try {
-      const {
-        user
-      } = await signInWithEmailAndPassword(auth, email, password);
+      const { user } = await signInWithEmailAndPassword(auth, email, password);
       callback();
       return JSON.stringify(user);
     } catch (error) {
@@ -152,9 +113,7 @@ export const signInWithCredentials = createAsyncThunk(
 );
 export const getCurrentSignedInUser = createAsyncThunk(
   'user/getCurrentSignedInUser',
-  async (payload, {
-    rejectWithValue
-  }) => {
+  async (payload, { rejectWithValue }) => {
     try {
       const docRef = doc(db, 'Users', payload.id);
       const docSnap = await getDoc(docRef);
@@ -162,7 +121,11 @@ export const getCurrentSignedInUser = createAsyncThunk(
       if (!docSnap.exists()) {
         return rejectWithValue(JSON.stringify('no user found'));
       }
-      return JSON.stringify({ ...docSnap.data(), email: payload.email, uid: payload.id });
+      return JSON.stringify({
+        ...docSnap.data(),
+        email: payload.email,
+        uid: payload.id,
+      });
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
@@ -171,15 +134,47 @@ export const getCurrentSignedInUser = createAsyncThunk(
 
 export const updateUserAddress = createAsyncThunk(
   'user/updateUserAddress',
-  async (payload, {
-    rejectWithValue
-  }) => {
+  async (payload, { rejectWithValue }) => {
     try {
       const docRef = doc(db, 'Users', payload.user.uid);
-      await setDoc(docRef, {address: payload.address}, {
-        merge: true,
+      await setDoc(
+        docRef,
+        { address: payload.address },
+        {
+          merge: true,
+        }
+      );
+      return JSON.stringify({
+        ...payload.user,
+        address: { ...payload.address },
       });
-      return JSON.stringify({ ...payload.user, address: {...payload.address} });
+    } catch (error) {
+      return rejectWithValue(JSON.stringify(error));
+    }
+  }
+);
+
+export const updateUserInfo = createAsyncThunk(
+  'user/updateUserInfo',
+  async (payload, { rejectWithValue }) => {
+    const { firstName, lastName, city, country } = payload;
+    try {
+      const docRef = doc(db, 'Users', payload.user.uid);
+      await setDoc(
+        docRef,
+        {
+          firstName,
+          lastName,
+          address: {
+            city,
+            country,
+          },
+        },
+        { merge: true }
+      );
+      return JSON.stringify({
+        payload,
+      });
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
@@ -204,16 +199,12 @@ const userSlice = createSlice({
         state.error = null;
         state.user = {};
       })
-      .addCase(signInWithFacebook.fulfilled, (state, {
-        payload
-      }) => {
+      .addCase(signInWithFacebook.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
         state.error = null;
         state.user = JSON.parse(payload);
       })
-      .addCase(signInWithFacebook.rejected, (state, {
-        payload
-      }) => {
+      .addCase(signInWithFacebook.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
         state.user = {};
@@ -224,16 +215,12 @@ const userSlice = createSlice({
         state.error = null;
         state.user = {};
       })
-      .addCase(signInWithGoogle.fulfilled, (state, {
-        payload
-      }) => {
+      .addCase(signInWithGoogle.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
         state.error = null;
         state.user = JSON.parse(payload);
       })
-      .addCase(signInWithGoogle.rejected, (state, {
-        payload
-      }) => {
+      .addCase(signInWithGoogle.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
         state.user = {};
@@ -244,16 +231,12 @@ const userSlice = createSlice({
         state.error = null;
         state.user = {};
       })
-      .addCase(signInWithCredentials.fulfilled, (state, {
-        payload
-      }) => {
+      .addCase(signInWithCredentials.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
         state.error = null;
         state.user = JSON.parse(payload);
       })
-      .addCase(signInWithCredentials.rejected, (state, {
-        payload
-      }) => {
+      .addCase(signInWithCredentials.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
         state.user = {};
@@ -264,16 +247,12 @@ const userSlice = createSlice({
         state.error = null;
         state.user = {};
       })
-      .addCase(signUpWithCredentials.fulfilled, (state, {
-        payload
-      }) => {
+      .addCase(signUpWithCredentials.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
         state.error = null;
         state.user = JSON.parse(payload);
       })
-      .addCase(signUpWithCredentials.rejected, (state, {
-        payload
-      }) => {
+      .addCase(signUpWithCredentials.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
         state.user = {};
@@ -284,16 +263,12 @@ const userSlice = createSlice({
         state.error = null;
         state.user = {};
       })
-      .addCase(getCurrentSignedInUser.fulfilled, (state, {
-        payload
-      }) => {
+      .addCase(getCurrentSignedInUser.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
         state.error = null;
         state.user = JSON.parse(payload);
       })
-      .addCase(getCurrentSignedInUser.rejected, (state, {
-        payload
-      }) => {
+      .addCase(getCurrentSignedInUser.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
         state.user = {};
@@ -316,16 +291,27 @@ const userSlice = createSlice({
         state.status = 'loading';
         state.error = null;
       })
-      .addCase(updateUserAddress.fulfilled, (state, {
-        payload
-      }) => {
+      .addCase(updateUserAddress.fulfilled, (state, { payload }) => {
         state.status = 'succeeded';
         state.error = null;
         state.user = JSON.parse(payload);
       })
-      .addCase(updateUserAddress.rejected, (state, {
-        payload
-      }) => {
+      .addCase(updateUserAddress.rejected, (state, { payload }) => {
+        state.status = 'failed';
+        state.error = JSON.parse(payload);
+      })
+
+      // updateUserIndo
+      .addCase(updateUserInfo.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+      })
+      .addCase(updateUserInfo.fulfilled, (state, { payload }) => {
+        state.status = 'succeeded';
+        state.error = null;
+        state.user = JSON.parse(payload);
+      })
+      .addCase(updateUserInfo.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = JSON.parse(payload);
       });
