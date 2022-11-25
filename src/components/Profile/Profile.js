@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import { user } from '../../features/slices/user';
-import { auth } from '../../firebase-config';
 import { ADD_ITEM_ROUTE } from '../../route';
 import defaultProfileImg from '../../assets/img/defaultProfileImg.jpg';
 import defaultBGImg from '../../assets/img/defaultBGImg.jpg';
@@ -18,15 +17,12 @@ function Profile() {
   const dispatch = useDispatch();
   const { userItems } = useSelector((state) => state.item);
   const userData = useSelector(user);
-  const [email, setEmail] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  // const [items, setItems] = useState([])
 
   useEffect(() => {
-    if (!_.isEmpty(userData)) {
-      setEmail(auth.currentUser.email);
-    }
     dispatch(getUserItems(userData.uid));
-  }, [email, userData, dispatch]);
+  }, [userData, dispatch]);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
@@ -54,16 +50,14 @@ function Profile() {
           <h1 className="font-bold text-[20px] sm:text-[26px] lg:text-[34px] text-primary m-1">
             {userData.firstName} {userData.lastName}
           </h1>
-          <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-            {' '}
-            {userData?.address.country},{userData?.address.city}
-          </h3>
+          {!_.isEmpty(userData) && <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
+            {userData.address.country},{userData.address.city}
+          </h3>}
 
-          <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
-            {' '}
-            {email}
+          {!_.isEmpty(userData) && <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
+            {userData.email}
+          </h5>}
 
-          </h5>
           <button type="button" onClick={toggleForm} className="text-primary hover:text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
