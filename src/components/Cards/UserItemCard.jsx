@@ -2,10 +2,11 @@ import Tooltip from '../Tooltip/Tooltip';
 import DeleteItemButton from '../DeleteItemButton/DeleteItemButton';
 import EditItemModal from '../ItemEditForm/EditItemModal';
 
-function UserItemCard(props) {
+function UserItemCard(props,{deleteItem}) {
   const { item } = props;
   // destructure the item object to use values in the JSX
   const { title, file, description, price, type, categories } = item;
+
 
   return (
     <div className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl border border-background bg-primary">
@@ -20,7 +21,7 @@ function UserItemCard(props) {
         <div className="flex justify-between item-center">
           <p className="text-secondary font-medium text-lg">{type}</p>
           <div className="flex gap-2 justify-between items-center">
-            <DeleteItemButton />
+            <DeleteItemButton onClick={()=>{deleteItem()}}/>
             <Tooltip text="Edit Item">
               <EditItemModal />
             </Tooltip>
