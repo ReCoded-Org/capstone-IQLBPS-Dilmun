@@ -1,10 +1,13 @@
 import { useForm } from 'react-hook-form';
+// import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateUserInfo, user } from '../../features/slices/user';
+// import { PROFILE } from '../../route';
 
 function SettingForm({ toggleForm }) {
   const userData = useSelector(user);
   const dispatch = useDispatch();
+  // const navigate = useNavigate();
 
   const {
     register,
@@ -14,8 +17,8 @@ function SettingForm({ toggleForm }) {
     defaultValues: {
       firstName: userData.firstName ? userData.firstName : '',
       lastName: userData.lastName ? userData.lastName : '',
-      city: userData.city ? userData.city : '',
-      country: userData.country ? userData.country : '',
+      city: userData.address.city ? userData.address.city : '',
+      country: userData.address.country ? userData.address.country : '',
     },
   });
 
