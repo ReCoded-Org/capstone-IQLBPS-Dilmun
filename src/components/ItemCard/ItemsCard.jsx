@@ -28,7 +28,7 @@ function ItemsCard({ item }) {
         {item.title.length > 15 ? (
           <h5 className="text-3xl pb-2 font-extrabold text-primary">
             {item.title.slice(0, 1).toUpperCase()}
-            {item.title.slice(1, 15)} ...
+            {item.title.slice(1, 8)} ...
           </h5>
         ) : (
           <h5 className="text-3xl pb-2 font-extrabold text-primary">
@@ -75,7 +75,7 @@ function ItemsCard({ item }) {
           type="button"
           className="w-full my-2 duration-300 text-background bg-secondary hover:bg-primary focus:ring-1 focus:outline-none focus:ring-tertiary font-medium rounded-lg text-md px-5 py-2.5 text-center"
         >
-          <a href={`mailto: ${item.owner.email}`}>Email Owner</a>
+          <a href={`mailto: ${item.owner?.email}`}>Email Owner</a>
         </button>
       </div>
     </div>

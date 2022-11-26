@@ -14,15 +14,15 @@ import { getUserItems } from '../../features/slices/item';
 
 function Profile() {
   const dispatch = useDispatch();
-  const { userItems } = useSelector((state) => state.item);
+  const {userItems} = useSelector((state) => state.item);
   const userData = useSelector(user);
   const [userCity, setUserCity] = useState('')
   const [userCountry, setUserCountry] = useState()
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    dispatch(getUserItems(userData.uid));
-  }, [userData, dispatch, userItems.length]);
+      if(userData.uid) {dispatch(getUserItems(userData.uid));}
+  }, [userData]);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
@@ -60,7 +60,7 @@ function Profile() {
             {userData.firstName} {userData.lastName}
           </h1>
           {!_.isEmpty(userData) && <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-            {userCity},{userCountry}
+            {userCity}, {userCountry}
           </h3>}
 
           {!_.isEmpty(userData) && <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
