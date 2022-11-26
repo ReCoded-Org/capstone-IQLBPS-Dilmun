@@ -14,15 +14,15 @@ import { getUserItems } from '../../features/slices/item';
 
 function Profile() {
   const dispatch = useDispatch();
-  const { userItems } = useSelector((state) => state.item);
+  const {userItems} = useSelector((state) => state.item);
   const userData = useSelector(user);
   const [userCity, setUserCity] = useState('')
   const [userCountry, setUserCountry] = useState()
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    dispatch(getUserItems(userData.uid));
-  }, [userData, dispatch, userItems.length]);
+      if(userData.uid) {dispatch(getUserItems(userData.uid));}
+  }, [userData]);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
