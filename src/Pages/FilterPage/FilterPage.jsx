@@ -6,6 +6,7 @@ import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 import Sort from '../../components/Sort/Sort';
 import ItemDetailsPage from '../ItemDetailsPage/ItemDetailsPage';
 import AddItemButton from '../../components/AddItemButton/AddItemButton';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 
 const FilterPage = () => {
@@ -21,6 +22,7 @@ const FilterPage = () => {
         <h1 className="text-4xl font-bold tracking-tight text-primary">
           New Arrivals
         </h1>
+        <SearchBar />
         <div className="flex items-center">
           <Sort />
           <button
@@ -38,6 +40,7 @@ const FilterPage = () => {
             <span className="sr-only">Filters</span>
             <FunnelIcon className="h-5 w-5" aria-hidden="true" />
           </button>
+          <AddItemButton />
         </div>
       </div>
       <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
@@ -46,7 +49,6 @@ const FilterPage = () => {
           setMobileFiltersOpen={setMobileFiltersOpen}
         />
         <ItemsDisplay />
-        <AddItemButton />
       </div>
       <ItemDetailsPage />
     </motion.main>
