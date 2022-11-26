@@ -23,31 +23,59 @@ const itemSlice = createSlice({
       state.status = 'idle';
       state.error = null;
     },
-
-    startLoading: (state) => {
-      state.isLoading = true;
-    },
-
-    HasError: (state, action) => {
-      state.error = action.payload;
-      state.isLoading = false;
-    },
-
-    getItemSuccess: (state, action) => {
-      state.item = action.payload;
-      state.isLoading = false;
-    },
-
-    getItemListSuccess: (state, action) => {
-      state.itemList=(action.payload);
-      state.isLoading = false;
-    },
-
-    getUserItemsSuccess: (state, action) => {
-      state.userItems = action.payload;
-      state.isLoading = false;
-    },
   },
+  extraReducers:(builder) => {
+    builder.addCase(addItem.pending, (state) => {
+      state.status = 'loading';
+      state.error = null;
+      state.item = {};
+    })
+    .addCase(addItem.fulfilled, (state) => {
+      state.status = "success";
+      state.error= null;
+      //maybe parse it to JSON
+      state.item = action.payload;
+    })
+    .addCase(addItem.rejected, (state) => {
+      state.status= "failed";
+      state.error = action.payload;
+      state.item = {};
+    })
+
+    //GETITEMLIST
+    .addCase(getItemList.pending, (state) => {
+      state.status= "loading";
+      state.error = null;
+      state.itemList = [];
+    })
+    .addCase(getItemList.fulfilled, (state) => {
+      state.status= "success";
+      state.error = null;
+      state.itemList = action.payload;
+    })
+    .addCase(getItemList.rejected, (state) => {
+      state.status= "failed";
+      state.error = action.payload;
+      state.itemList = [];
+    })
+
+    //GETUSERITEMS
+    .addCase(getUserItems.fulfilled, (state) => {
+      state.status= "success";
+      state.error = null;
+      state.itemList = action.payload;
+    })
+    .addCase(getUserItems.rejected, (state) => {
+      state.status= "failed";
+      state.error = action.payload;
+      state.itemList = [];
+    })
+    .addCase(getUserItems.pending, (state) => {
+      state.status= "loading";
+      state.error = null;
+      state.itemList = [];
+    })
+  }
 });
 
 // Reducer
