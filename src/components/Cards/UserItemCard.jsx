@@ -1,4 +1,3 @@
-// import { BiEdit } from 'react-icons/bi';
 import Tooltip from '../Tooltip/Tooltip';
 import DeleteItemButton from '../DeleteItemButton/DeleteItemButton';
 import EditItemModal from '../ItemEditForm/EditItemModal';
