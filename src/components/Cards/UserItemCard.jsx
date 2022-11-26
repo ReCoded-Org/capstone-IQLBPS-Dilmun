@@ -27,9 +27,17 @@ function UserItemCard(props) {
           </div>
         </div>
         <h3 className="font-black text-primary md:text-3xl text-xl">{title}</h3>
-        <p className="md:text-lg text-secondary text-base line-clamp-2">
-          {description}
-        </p>
+        {description.length > 20 ? (
+          <h5 className="text-base py-1 font-base text-primary">
+            {description.slice(0, 1).toUpperCase()}
+            {description.slice(1, 30)}...
+          </h5>
+        ) : (
+          <h5 className="text-base py-1 font-base text-primary">
+            {description.slice(0, 1).toUpperCase()}
+            {description.slice(1)}
+          </h5>
+        )}
 
         <div className="flex justify-between item-center">
           <p className="text-xl font-black text-secondary">{price}</p>
