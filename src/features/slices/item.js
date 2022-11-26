@@ -26,29 +26,31 @@ export const uploadImageItem = createAsyncThunk(
 );
 
 // ADD ITEM to DB and to state (userItems)
-export const addItem = createAsyncThunk('item/addItem', async (payload) => {
-  try {
-    const { item, owner, file } = payload;
-    const data = {
-      file,
-      title: item.title,
-      price: `${item.price}$`,
-      description: item.description,
-      category: item.category,
-      type: item.type,
-      owner,
-      createdAt: moment().format('LLL'),
-      updatedAt: moment().format('LLL'),
-    };
-    // add item to user collection as subcollection
-    const docRef = await addDoc(collection(db, 'Items'), data);
-    await addDoc(collection(db, 'Items'), data);
-    await setDoc(doc(db, 'Users', owner.uid, 'Items', docRef.id), data);
-    return true;
-  } catch (error) {
-    return error.message;
+export const addItem = createAsyncThunk(
+  'item/addItem',
+  async (payload) => {
+    try {
+      const { item, owner, file } = payload;
+      const data = {
+        file,
+        title: item.title,
+        price: `${item.price} $`,
+        description: item.description,
+        category: item.category,
+        type: item.type,
+        owner,
+        createdAt: moment().format('LLL'),
+        updatedAt: moment().format('LLL'),
+      };
+      // add item to user collection as subcollection
+      const docRef = await addDoc(collection(db, 'Items'), data);
+      await setDoc(doc(db, 'Users', owner.uid, 'Items', docRef.id), data);
+      return true;
+    } catch (error) {
+      return error.message;
+    }
   }
-});
+);
 
 // GET User's Items from DB and save to state
 export const getUserItems = createAsyncThunk(
