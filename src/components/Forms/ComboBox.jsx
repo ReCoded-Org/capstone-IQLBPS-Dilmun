@@ -1,10 +1,16 @@
-import { Fragment, useState, forwardRef } from 'react';
+import { Fragment, useState, forwardRef, useEffect } from 'react';
 import { Combobox, Transition } from '@headlessui/react';
 import { HiSelector, HiOutlineCheck } from 'react-icons/hi';
 
 const ComboBox = forwardRef((props, ref) => {
   const { options } = props;
   const [selectedOptions, setSelectedOptions] = useState([options[0]]);
+
+  useEffect(() => {
+    if (props.edit) {
+      setSelectedOptions([props.value]);
+    }
+  }, [props.value]);
 
   const [query, setQuery] = useState('');
 
