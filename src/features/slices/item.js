@@ -44,7 +44,7 @@ const itemSlice = createSlice({
     },
 
     getUserItemsSuccess: (state, action) => {
-      state.userItems.push(action.payload);
+      state.userItems = action.payload;
       state.isLoading = false;
     },
   },
@@ -98,6 +98,26 @@ export const addItem = createAsyncThunk(
       // save item to userItems
       dispatch(itemSlice.actions.getUserItemsSuccess({ ...item, file }));
       return JSON.stringify({ ...payload, id: docRef.id });
+    } catch (error) {
+      dispatch(itemSlice.actions.HasError(error));
+      return rejectWithValue(error);
+    }
+  }
+);
+
+// GET User's Items from DB and save to state
+export const getUserItems = createAsyncThunk(
+  'item/getUserItems',
+  async (uid, { rejectWithValue }) => {
+    try {
+      dispatch(itemSlice.actions.startLoading());
+      const items = [];
+      const querySnapshot = await getDocs(collection(db, 'Users', uid, 'Items'));
+      querySnapshot.forEach((item) => {
+        items.push({ id: item.id, title: item.data().title, file: item.data().file, price: item.data().price, description: item.data().description, categories: item.data().category, type: item.data().type });
+      });
+      dispatch(itemSlice.actions.getUserItemsSuccess(items));
+      return items;
     } catch (error) {
       dispatch(itemSlice.actions.HasError(error));
       return rejectWithValue(error);
