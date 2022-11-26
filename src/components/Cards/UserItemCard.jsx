@@ -1,6 +1,7 @@
-import { BiEdit } from 'react-icons/bi';
+// import { BiEdit } from 'react-icons/bi';
 import Tooltip from '../Tooltip/Tooltip';
 import DeleteItemButton from '../DeleteItemButton/DeleteItemButton';
+import EditItemModal from '../ItemEditForm/EditItemModal';
 
 function UserItemCard(props) {
   const { item } = props;
@@ -20,9 +21,9 @@ function UserItemCard(props) {
         <div className="flex justify-between item-center">
           <p className="text-secondary font-medium text-lg">{type}</p>
           <div className="flex gap-2 justify-between items-center">
-            <DeleteItemButton className="" />
+            <DeleteItemButton />
             <Tooltip text="Edit Item">
-              <BiEdit className="h-8 w-8 text-primary" />
+              <EditItemModal />
             </Tooltip>
           </div>
         </div>

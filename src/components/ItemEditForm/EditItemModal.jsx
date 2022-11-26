@@ -3,10 +3,12 @@ import { Fragment, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { TbEdit } from 'react-icons/tb';
+// import { TbEdit } from 'react-icons/tb';
+import { BiEdit } from 'react-icons/bi';
 import { GiCancel } from 'react-icons/gi';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
+
 
 const schema = yup.object().shape({
   name: yup.string().required('Cannot stay empty.'),
@@ -56,9 +58,8 @@ export default function EditItemModal() {
         <button
           type="button"
           onClick={openModal}
-          className="rounded-md bg-primary bg-opacity-20 px-4 py-2 text-sm font-medium text-primary hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
-          Edit Item <TbEdit className="text-primary w-4 h-6 inline" />
+          <BiEdit className="h-8 w-8 text-primary" />
         </button>
       </div>
 
@@ -96,13 +97,13 @@ export default function EditItemModal() {
                   onSubmit={handleSubmit(onSubmit)}
                   className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-primary py-1 px-6 text-left align-middle shadow-xl transition-all"
                 >
-                <div className='flex justify-end text-2xl font-bold text-background my-1.5'>
-                <button type='button' onClick={closeModal}> <GiCancel/> </button>
-                </div>
+                  <div className='flex justify-end text-2xl font-bold text-background my-1.5'>
+                    <button type='button' onClick={closeModal}> <GiCancel /> </button>
+                  </div>
                   <Dialog.Title
                     as="h3"
                     className="flex flex-col justify-start text-2xl font-bold text-background mb-3"
-                    >
+                  >
                     Edit Item Info
                   </Dialog.Title>
                   <Dialog.Description>
