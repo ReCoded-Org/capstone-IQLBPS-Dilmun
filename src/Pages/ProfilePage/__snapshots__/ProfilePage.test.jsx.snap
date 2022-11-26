@@ -5,7 +5,7 @@ exports[`Profile Page Rendered Correctly 1`] = `
   data-testid="profile-page"
 >
   <div
-    class=" bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center "
+    class=" bg-background  bg-cover bg-no-repeat w-full h-full flex flex-col justify-center items-center content-center "
     data-testid="profile"
   >
     <div
@@ -26,24 +26,13 @@ exports[`Profile Page Rendered Correctly 1`] = `
         />
       </div>
       <div
-        class="flex flex-col items-center justify-center content-center  mb-14 bg-background rounded-lg  pt-4"
+        class="flex flex-col items-center justify-center content-center  mb-14  rounded-lg  pt-4"
       >
         <h1
           class="font-bold text-[20px] sm:text-[26px] lg:text-[34px] text-primary m-1"
         >
            
         </h1>
-        <h3
-          class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1"
-        >
-           
-          Country, City
-        </h3>
-        <h5
-          class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1"
-        >
-           
-        </h5>
         <button
           class="text-primary hover:text-secondary"
           type="button"
@@ -81,140 +70,17 @@ exports[`Profile Page Rendered Correctly 1`] = `
           </h3>
         </div>
         <div
-          class="grid grid-cols-2 gap-4 md:grid-cols-3 p-5"
-        >
-          <div
-            class="flex flex-col text-background bg-primary p-2 m-1 rounded-lg items-center justify-center content-center "
-          >
-            <img
-              alt="item1"
-              class="w-[140px] sm:w-[200px] lg:w-[320px] rounded-lg"
-              src="Item1.jpg"
-            />
-            <p
-              class="font-bold text-[14px] sm:text-[18px] lg:text-[24px] "
-            >
-               Item name 
-            </p>
-            <p
-              class="font-semibold text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Item details
-            </p>
-            <p
-              class=" text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Price 
-            </p>
-          </div>
-          <div
-            class="flex flex-col text-background bg-primary p-2 m-1 rounded-lg items-center justify-center content-center "
-          >
-            <img
-              alt="item1"
-              class="w-[140px] sm:w-[200px] lg:w-[320px] rounded-lg"
-              src="Item1.jpg"
-            />
-            <p
-              class="font-bold text-[14px] sm:text-[18px] lg:text-[24px] "
-            >
-               Item name 
-            </p>
-            <p
-              class="font-semibold text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Item details
-            </p>
-            <p
-              class=" text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Price 
-            </p>
-          </div>
-          <div
-            class="flex flex-col text-background bg-primary p-2 m-1 rounded-lg items-center justify-center content-center "
-          >
-            <img
-              alt="item1"
-              class="w-[140px] sm:w-[200px] lg:w-[320px] rounded-lg"
-              src="Item1.jpg"
-            />
-            <p
-              class="font-bold text-[14px] sm:text-[18px] lg:text-[24px] "
-            >
-               Item name 
-            </p>
-            <p
-              class="font-semibold text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Item details
-            </p>
-            <p
-              class=" text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Price 
-            </p>
-          </div>
-          <div
-            class="flex flex-col text-background bg-primary p-2 m-1 rounded-lg items-center justify-center content-center "
-          >
-            <img
-              alt="item1"
-              class="w-[140px] sm:w-[200px] lg:w-[320px] rounded-lg"
-              src="Item1.jpg"
-            />
-            <p
-              class="font-bold text-[14px] sm:text-[18px] lg:text-[24px] "
-            >
-               Item name 
-            </p>
-            <p
-              class="font-semibold text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Item details
-            </p>
-            <p
-              class=" text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Price 
-            </p>
-          </div>
-          <div
-            class="flex flex-col text-background bg-primary p-2 m-1 rounded-lg items-center justify-center content-center "
-          >
-            <img
-              alt="item1"
-              class="w-[140px] sm:w-[200px] lg:w-[320px] rounded-lg"
-              src="Item1.jpg"
-            />
-            <p
-              class="font-bold text-[14px] sm:text-[18px] lg:text-[24px] "
-            >
-               Item name 
-            </p>
-            <p
-              class="font-semibold text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Item details
-            </p>
-            <p
-              class=" text-[14px] sm:text-[18px] lg:text-[22px] "
-            >
-              Price 
-            </p>
-          </div>
-        </div>
+          class="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl	"
+        />
         <a
+          class="w-full text-center"
           href="/add-item"
         >
-           
           <button
-            class="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+            class="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
             type="button"
           >
-             
             Add New Item
-             
           </button>
         </a>
       </div>
