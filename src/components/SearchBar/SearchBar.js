@@ -22,7 +22,7 @@ const SearchBar = () => {
     return (
       <div className="sm:flex justify-between  lg:w-1/2 md:w-3/4 w-full md:mx-auto md:mt-5 xl:mt-10 items-center rounded-xl shadow-lg">
         <div className="md:flex justify-between lg:w-full  p-4  my-3 sm:my-0 rounded-lg">
-          <div className="flex items-center bg-gray-100 py-2 rounded-lg mb-1 md:m-0">
+          <div className="flex items-center xl:w-full bg-gray-100 py-2 rounded-lg mb-1 md:m-0">
             <MagnifyingGlassIcon className="min-w-[24px] min-h-[24px] max-w-6 max-h-6 opacity-30 mx-2" />
             <input
               className="bg-gray-100 outline-none"
