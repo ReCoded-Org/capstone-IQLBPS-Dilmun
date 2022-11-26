@@ -107,7 +107,7 @@ function Profile() {
           </div>
           <div className="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl	">
             {userItems.length > 0 && userItems.map((item) => (
-              <UserItemCard key={item.id} item={item} deleteItem={() => deleteItem(item.id)} />
+              <UserItemCard key={item.id} item={item} deleteItem={deleteItem(item.id)} />
             ))}
           </div>
           <Link className='w-full text-center' to={ADD_ITEM_ROUTE}>
