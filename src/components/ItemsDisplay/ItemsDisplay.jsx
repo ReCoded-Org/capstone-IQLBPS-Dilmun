@@ -12,7 +12,7 @@ const ItemsDisplay = () => {
   }, []);
   return (
     <div
-      className="w-full grid lg:col-span-3 gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 content-center items-center justify-items-center bg-background py-6 my-2"
+      className="w-full grid lg:col-span-2 xl:col-span-4 gap-y-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 content-center items-center justify-items-center bg-background py-6"
       data-testid="itemsdisplay-div"
     >
           {itemData.map((item) => {

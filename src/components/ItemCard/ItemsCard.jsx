@@ -2,12 +2,12 @@ function ItemsCard({ item }) {
   return (
     <div
       data-testid="item-card"
-      className="lg:w-80 md:w-64 w-96 bg-background m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300"
+      className="xl:w-80 lg:w-72 md:w-80 w-full bg-background rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300"
     >
       <figure className="relative max-w-sm transition-all cursor-pointer">
         <a href="/">
           <img
-            className="rounded-t-lg overflow-hidden mb-3 lg:h-80 md:h-64 h-96 shadow-md md:w-64 lg:w-80 w-96"
+            className="rounded-t-lg overflow-hidden object-cover mb-3 lg:h-80 h-80 shadow-md md:w-80 xl:w-full lg:w-72 w-full"
             src={item.file}
             alt="product"
           />
@@ -54,7 +54,10 @@ function ItemsCard({ item }) {
           {typeof item.category === 'object' ? (
             item.category.slice(0, 3).map((cat) => {
               return (
-                <span key={cat} className="text-sm inline-block mr-1 font-semibold text-primary my-2 bg-tertiary py-2 px-4 bg-opacity-90 rounded-lg">
+                <span
+                  key={cat}
+                  className="text-sm inline-block mr-1 font-semibold text-primary my-2 bg-tertiary py-2 px-4 bg-opacity-90 rounded-lg"
+                >
                   {cat}
                 </span>
               );

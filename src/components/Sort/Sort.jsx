@@ -21,10 +21,10 @@ const Sort = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="group inline-flex justify-center text-sm font-medium text-primary hover:text-gray-900">
+        <Menu.Button className="group inline-flex justify-center text-sm xl:text-xl font-medium text-primary hover:text-gray-900">
           Sort
           <ChevronDownIcon
-            className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+            className="-mr-1 ml-1 xl:h-7 xl:w-7 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
             aria-hidden="true"
           />
         </Menu.Button>
