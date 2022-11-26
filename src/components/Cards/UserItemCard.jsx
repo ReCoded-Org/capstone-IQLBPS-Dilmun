@@ -8,12 +8,12 @@ function UserItemCard(props) {
   const { title, file, description, price, type, categories } = item;
 
   return (
-    <div className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-background bg-primary">
-      <div className="w-full md:w-1/3 bg-transparent grid place-items-center">
+    <div className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl border border-background bg-primary">
+      <div className="w-full md:w-1/2 bg-transparent grid place-items-center">
         <img
           src={file}
           alt={title}
-          className="rounded-xl w-80 h-52 object-contain"
+          className="rounded-xl w-full h-auto  "
         />
       </div>
       <div className="w-full md:w-2/3 bg-background flex flex-col space-y-2 p-3 rounded-xl justify-between">
@@ -26,7 +26,7 @@ function UserItemCard(props) {
             </Tooltip>
           </div>
         </div>
-        <h3 className="font-black text-primary md:text-3xl text-xl">{title}</h3>
+        <h3 className="font-black text-primary md:text-2xl text-xl">{title}</h3>
         {description.length > 20 ? (
           <h5 className="text-base py-1 font-base text-primary">
             {description.slice(0, 1).toUpperCase()}
