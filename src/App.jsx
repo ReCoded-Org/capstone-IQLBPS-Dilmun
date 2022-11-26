@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './components/NavBar/NavBar';
-import AnimationProvider from './components/animations/AnimationProvider'
-import LoadingScreen from './components/animations/LoadingScreen'
+import AnimationProvider from './components/animations/AnimationProvider';
+import LoadingScreen from './components/animations/LoadingScreen';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
 import {
@@ -13,7 +13,6 @@ import {
   user,
 } from './features/slices/user';
 import { UserItemCard } from './components/Cards';
-import ItemCardSection from './components/ItemCard/ItemCardSection';
 
 const MOCK_ITEM = {
   title: 'Title of Item Goes Here',
@@ -62,8 +61,7 @@ function App() {
         <>
           <NavBar />
           <AnimationProvider />
-            <UserItemCard item={MOCK_ITEM} />
-            <ItemCardSection/>
+          <UserItemCard item={MOCK_ITEM} />
           <Footer />
         </>
       )}
