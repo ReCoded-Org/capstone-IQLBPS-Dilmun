@@ -31,7 +31,7 @@ export default function AddItemForm() {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const { isItemLoading, error} = useSelector((state) => state.item);
+  const { isItemLoading, error } = useSelector((state) => state.item);
   const userData = useSelector(user);
 
   const {
@@ -76,24 +76,24 @@ export default function AddItemForm() {
           })
         );
       }
-    }
-    else {await dispatch(
-      addItem({
-        item: values,
-        owner: {
-          ...userData,
-          address: { city: values.city, country: values.country },
-        },
-        type,
-        file: itemImage,
-      })
+    } else {
+      await dispatch(
+        addItem({
+          item: values,
+          owner: {
+            ...userData,
+            address: { city: values.city, country: values.country },
+          },
+          type,
+          file: itemImage,
+        })
       );
     }
-    
-      if (!isItemLoading) {
-        reset();
-        setType(ITEM_TYPES[0]);
-        navigate(-1);
+
+    if (!isItemLoading) {
+      reset();
+      setType(ITEM_TYPES[0]);
+      navigate(-1);
     }
   };
 
@@ -252,7 +252,10 @@ export default function AddItemForm() {
                 )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                <SubmitButton buttonText="Add New Item" loading={isItemLoading} />
+                <SubmitButton
+                  buttonText="Add New Item"
+                  loading={isItemLoading}
+                />
               </div>
             </div>
             {error && (

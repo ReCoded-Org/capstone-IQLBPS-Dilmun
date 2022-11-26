@@ -60,7 +60,7 @@ function Profile() {
             {userData.firstName} {userData.lastName}
           </h1>
           {!_.isEmpty(userData) && <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-            {userCity},{userCountry}
+            {userCity}, {userCountry}
           </h3>}
 
           {!_.isEmpty(userData) && <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
