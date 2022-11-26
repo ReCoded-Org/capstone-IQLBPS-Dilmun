@@ -67,7 +67,7 @@ function NavBar() {
                 classNames(
                   'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                   isActive
-                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                     : ''
                 )
               }
@@ -83,7 +83,7 @@ function NavBar() {
                   classNames(
                     'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
-                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                       : ''
                   )
                 }
@@ -99,7 +99,7 @@ function NavBar() {
                 classNames(
                   'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                   isActive
-                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                     : ''
                 )
               }
@@ -115,7 +115,7 @@ function NavBar() {
                   classNames(
                     'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
-                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                       : ''
                   )
                 }
@@ -132,7 +132,7 @@ function NavBar() {
                   classNames(
                     'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
-                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                       : ''
                   )
                 }
