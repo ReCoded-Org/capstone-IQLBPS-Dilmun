@@ -9,7 +9,6 @@ import _ from 'lodash';
 import { useTranslation } from 'react-i18next';
 import {
   HOME_ROUTE,
-  ABOUT_ROUTE,
   SIGN_IN_ROUTE,
   PROFILE,
   PRODUCT_ROUTE,
@@ -96,21 +95,6 @@ function NavBar() {
                   {t('navbar.products')}
                 </NavLink>
               ) : null}
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  classNames(
-                    'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
-                    isActive
-                      ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
-                      : ''
-                  )
-                }
-                to={ABOUT_ROUTE}
-              >
-                {t('navbar.about')}
-              </NavLink>
             </li>
             {!_.isEmpty(userData) ? (
               <li>
