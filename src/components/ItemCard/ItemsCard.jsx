@@ -21,7 +21,7 @@ function ItemsCard({ item }) {
               </span>
             ) : (
               <span className="inline-block bg-background bg-opacity-80 rounded-xl px-3 py-1 text-xl font-bold text-primary mr-2 mb-2">
-                {item.price}
+                {item.price} $
               </span>
             )}
           </figcaption>
