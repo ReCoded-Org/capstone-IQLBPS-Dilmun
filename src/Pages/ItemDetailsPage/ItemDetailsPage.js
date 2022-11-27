@@ -47,7 +47,7 @@ const ItemDetailsPage = () => {
                     </span>
                   ))
                 ) : (
-                  <span className="text-xs font-medium text-background bg-tertiary bg-opacity-50 rounded-sm px-2 py-1 mr-2 shadow-md">
+                  <span className="text-lg font-medium text-background bg-tertiary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md">
                     {item.category}
                   </span>
                 )}
