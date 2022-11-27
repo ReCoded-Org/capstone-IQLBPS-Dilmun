@@ -7,9 +7,10 @@ exports[`Home Page Rendered Correctly 1`] = `
 >
   <div
     class="backdrop-blur-md bg-white/30 h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
+    data-testid="hero-section"
   >
     <div
-      class="backdrop-blur-md w-full h-full flex flex-col justify-center text-center"
+      class="backdrop-blur-md w-full h-full  flex flex-col justify-center text-center"
     >
       <div
         class=" text-bg-black md:mx-0 mx-4"
@@ -17,12 +18,12 @@ exports[`Home Page Rendered Correctly 1`] = `
         <h1
           class=" text-background text-7xl font-bold  "
         >
-          Welcome to Dilmun
+          hero.welcome_to_dilmun
         </h1>
         <p
           class="text-background text-xl my-4"
         >
-          Your Way to Get Quality Products!
+          hero.your_way
         </p>
         <div
           class="btn__container"
@@ -34,7 +35,7 @@ exports[`Home Page Rendered Correctly 1`] = `
               class="bg-secondary hover:bg-tertiary text-white font-bold py-2 px-4 rounded-full"
               type="button"
             >
-              Get Started
+              hero.get_started
             </button>
           </a>
         </div>
@@ -63,13 +64,13 @@ exports[`Home Page Rendered Correctly 1`] = `
         <h2
           class="text-center text-white text-[16px] sm:text-[32px] "
         >
-          Check out this video made by one of our satisfied customers!
+          overlap_text.check_out
         </h2>
         <button
-          class="bg-tertiary font-semibold p-2 m-2 hover:shadow-lg text-white font-semibold rounded-lg  sm:w-auto "
+          class="bg-tertiary p-2 m-2 hover:shadow-lg text-white font-semibold rounded-lg  sm:w-auto "
           type="button"
         >
-          Watch Full Video
+          overlap_text.watch_full_video
         </button>
       </div>
     </div>
@@ -88,13 +89,7 @@ exports[`Home Page Rendered Correctly 1`] = `
         <h2
           class="font-bold text-center xs:text-[48px] text-[40px] text-primary xs:leading-[76.8px] leading-[66.8px] w-full"
           data-testid="testimonials-title"
-        >
-          What Are People 
-          <br
-            class="sm:block hidden"
-          />
-           Saying About Us
-        </h2>
+        />
         <div
           class="w-full md:mt-0 mt-6"
         >
@@ -102,7 +97,7 @@ exports[`Home Page Rendered Correctly 1`] = `
             class="font-poppins text-primary font-normal text-[20px] leading-[30.8px] text-center p-6 md:text-left md:max-w-[450px]"
             data-testid="testimonials-paragraph"
           >
-            Everything you need to know about our business and products wherever you are.
+            proof.everything_you_need
           </p>
         </div>
       </div>
@@ -122,13 +117,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
             data-testid="feedback-card-content"
           >
-            I've made multiple purchases and every single one has been great! The selection they offer is so varied I could spend hours looking through all the items.
+            proof.feedback_one_description
           </p>
           <div
             class="flex flex-row"
           >
             <img
-              alt="Herman Jensen"
+              alt="proof.feedback_one_name"
               class="w-[48px] h-[48px] rounded-full"
               src="people01.png"
             />
@@ -139,13 +134,13 @@ exports[`Home Page Rendered Correctly 1`] = `
                 class="font-poppins font-semibold text-[19px] leading-[32px] "
                 data-testid="feedback-card-name"
               >
-                Herman Jensen
+                proof.feedback_one_name
               </h4>
               <p
                 class="font-poppins font-normal text-[15px] leading-[24px] text-left"
                 data-testid="feedback-card-title"
               >
-                Client
+                proof.feedback_one_title
               </p>
             </div>
           </div>
@@ -163,13 +158,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
             data-testid="feedback-card-content"
           >
-            Every purchase felt secure and all items were received in a timely manner. What a great place to showcase products and goods of the business!
+            proof.feedback_two_description
           </p>
           <div
             class="flex flex-row"
           >
             <img
-              alt="Steve Mark"
+              alt="proof.feedback_two_name"
               class="w-[48px] h-[48px] rounded-full"
               src="people02.png"
             />
@@ -180,13 +175,13 @@ exports[`Home Page Rendered Correctly 1`] = `
                 class="font-poppins font-semibold text-[19px] leading-[32px] "
                 data-testid="feedback-card-name"
               >
-                Steve Mark
+                proof.feedback_two_name
               </h4>
               <p
                 class="font-poppins font-normal text-[15px] leading-[24px] text-left"
                 data-testid="feedback-card-title"
               >
-                Client
+                proof.feedback_two_title
               </p>
             </div>
           </div>
@@ -204,13 +199,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             class="font-poppins font-normal text-[17px] leading-[32px] text-primary my-10"
             data-testid="feedback-card-content"
           >
-            I found that Dilmun was very professional and delivered a quality product in an efficient time frame. I would consider shopping with them again.
+            proof.feedback_three_description
           </p>
           <div
             class="flex flex-row"
           >
             <img
-              alt="Kenn Gallagher"
+              alt="proof.feedback_three_name"
               class="w-[48px] h-[48px] rounded-full"
               src="people03.png"
             />
@@ -221,13 +216,13 @@ exports[`Home Page Rendered Correctly 1`] = `
                 class="font-poppins font-semibold text-[19px] leading-[32px] "
                 data-testid="feedback-card-name"
               >
-                Kenn Gallagher
+                proof.feedback_three_name
               </h4>
               <p
                 class="font-poppins font-normal text-[15px] leading-[24px] text-left"
                 data-testid="feedback-card-title"
               >
-                Client
+                proof.feedback_three_title
               </p>
             </div>
           </div>
@@ -245,7 +240,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           class="mb-8 lg:mb-16 font-poppins font-bold xs:text-[40px] text-center text-[32px] text-primary xs:leading-[70px] leading-[60px] w-full"
           data-testid="costumerslogo-title"
         >
-          Our Partners
+          proof.our_partners
         </h2>
         <div
           class="grid grid-cols-2 gap-8 text-secondary sm:gap-12 md:grid-cols-3 lg:grid-cols-6 "
@@ -490,13 +485,13 @@ exports[`Home Page Rendered Correctly 1`] = `
           class="mb-4 text-4xl tracking-tight font-extrabold text-primary"
           data-testid="features-title"
         >
-          Designed to meet your needs.
+          features.designed_to_meet_your_needs
         </h2>
         <p
           class="text-primary sm:text-xl"
           data-testid="features-paragraph"
         >
-          Here at Dilmun we sell various products to customers and accept donations to help those people that are in need.
+          features.description
         </p>
       </div>
       <div
@@ -530,13 +525,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
-            Filter
+            features.feature_one_title
           </h3>
           <p
             class="text-primary"
             data-testid="feature-card-paragraph"
           >
-            Filter your items to find the right information.
+            features.feature_one_description
           </p>
         </div>
         <div
@@ -568,13 +563,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
-            Multi Language
+            features.feature_two_title
           </h3>
           <p
             class="text-primary"
             data-testid="feature-card-paragraph"
           >
-            Use the website in your preferred language
+            features.feature_two_description
           </p>
         </div>
         <div
@@ -605,13 +600,13 @@ exports[`Home Page Rendered Correctly 1`] = `
             class="mb-2 text-xl font-bold text-primary"
             data-testid="feature-card-title"
           >
-            Meet
+            features.feature_three_title
           </h3>
           <p
             class="text-primary"
             data-testid="feature-card-paragraph"
           >
-            Meet new people and make new connections
+            features.feature_three_description
           </p>
         </div>
       </div>
@@ -623,7 +618,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     <h2
       class="text-4xl mb-10 text-primary font-bold text-center"
     >
-      Frequently Asked Questions
+      faq.frequently_asked_questions
     </h2>
     <div
       class="max-w-7xl mx-auto px-4 py-10 lg:max-h-100 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center"
@@ -641,7 +636,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           <span
             class="w-3/4 md:w-full"
           >
-            What is the return policy?
+            faq.question_one_title
           </span>
           <svg
             class="rotate-180 duration-200 transform h-5 w-5"
@@ -668,7 +663,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           <span
             class="w-3/4 md:w-full"
           >
-            Can I cancel my order?
+            faq.question_two_title
           </span>
           <svg
             class="rotate-180 duration-200 transform h-5 w-5"
@@ -695,7 +690,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           <span
             class="w-3/4 md:w-full"
           >
-            What methods of payment you take?
+            faq.question_three_title
           </span>
           <svg
             class="rotate-180 duration-200 transform h-5 w-5"
@@ -722,7 +717,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           <span
             class="w-3/4 md:w-full"
           >
-            How do I track my order?
+            faq.question_four_title
           </span>
           <svg
             class="rotate-180 duration-200 transform h-5 w-5"
@@ -749,7 +744,7 @@ exports[`Home Page Rendered Correctly 1`] = `
           <span
             class="w-3/4 md:w-full"
           >
-            What is the policy for late/non-delivery of items ordered online?
+            faq.question_five_title
           </span>
           <svg
             class="rotate-180 duration-200 transform h-5 w-5"
@@ -795,11 +790,7 @@ exports[`Home Page Rendered Correctly 1`] = `
         />
         <h1
           class="text-[40px] mb-3 sm:mb-0 lg:text-start text-center"
-        >
-          Subscribe to our 
-          <br />
-           Newsletter!
-        </h1>
+        />
       </div>
       <div
         class="mt-4 flex flex-col items-center justify-center"
@@ -807,11 +798,7 @@ exports[`Home Page Rendered Correctly 1`] = `
         <p
           class="text-primary mb-5 lg:text-end text-center"
         >
-          Subscribe to our newsletter and stay
-          <br
-            class="sm:block hidden"
-          />
-          updated.
+          news_letter.description
         </p>
         <div
           class="items-center"
@@ -820,7 +807,7 @@ exports[`Home Page Rendered Correctly 1`] = `
             <input
               class="rounded p-1 w-full lg:w-fit md:p-2 mb-3 lg:mb-0 placeholder:text-tertiary border border-solid mr-2"
               name="email"
-              placeholder="Write your email here"
+              placeholder="news_letter.email"
               required=""
               type="text"
             />
@@ -828,7 +815,7 @@ exports[`Home Page Rendered Correctly 1`] = `
               class="bg-tertiary px-2 py-2 w-full lg:w-auto text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
               type="submit"
             >
-              Subscribe
+              news_letter.subscribe
             </button>
           </form>
         </div>

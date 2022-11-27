@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<div
+  class="backdrop-blur-md bg-white/30 h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
+  data-testid="hero-section"
+>
+  <div
+    class="backdrop-blur-md w-full h-full  flex flex-col justify-center text-center"
+  >
+    <div
+      class=" text-bg-black md:mx-0 mx-4"
+    >
+      <h1
+        class=" text-background text-7xl font-bold  "
+      >
+        hero.welcome_to_dilmun
+      </h1>
+      <p
+        class="text-background text-xl my-4"
+      >
+        hero.your_way
+      </p>
+      <div
+        class="btn__container"
+      >
+        <a
+          href="/signup"
+        >
+          <button
+            class="bg-secondary hover:bg-tertiary text-white font-bold py-2 px-4 rounded-full"
+            type="button"
+          >
+            hero.get_started
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -35,7 +35,7 @@ Object {
             <p
               class="font-semibold"
             >
-              Price:
+              items_details.price
             </p>
              $60
           </span>
@@ -45,7 +45,7 @@ Object {
             <p
               class="font-semibold"
             >
-              Item Type:
+              items_details.item_type
             </p>
              New
           </span>
@@ -55,7 +55,7 @@ Object {
             <p
               class="font-semibold"
             >
-              Country:
+              items_details.country
             </p>
              Spain
           </span>
@@ -65,7 +65,7 @@ Object {
             <p
               class="font-semibold"
             >
-              Address:
+              items_details.address
             </p>
              C/Conde de Xiquena 7, 3º, 1A Izda, 280280, Madrid
           </span>
@@ -73,7 +73,7 @@ Object {
             <span
               class="font-bold text-xl"
             >
-              Description:
+              items_details.description
             </span>
             <p
               class="text-lg"
@@ -85,7 +85,7 @@ Object {
             class="bg-tertiary px-4 py-4 w-full lg:w-auto text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
             type="submit"
           >
-            Email Owner
+            items_details.email_owner
           </button>
         </div>
       </div>
@@ -122,7 +122,7 @@ Object {
           <p
             class="font-semibold"
           >
-            Price:
+            items_details.price
           </p>
            $60
         </span>
@@ -132,7 +132,7 @@ Object {
           <p
             class="font-semibold"
           >
-            Item Type:
+            items_details.item_type
           </p>
            New
         </span>
@@ -142,7 +142,7 @@ Object {
           <p
             class="font-semibold"
           >
-            Country:
+            items_details.country
           </p>
            Spain
         </span>
@@ -152,7 +152,7 @@ Object {
           <p
             class="font-semibold"
           >
-            Address:
+            items_details.address
           </p>
            C/Conde de Xiquena 7, 3º, 1A Izda, 280280, Madrid
         </span>
@@ -160,7 +160,7 @@ Object {
           <span
             class="font-bold text-xl"
           >
-            Description:
+            items_details.description
           </span>
           <p
             class="text-lg"
@@ -172,7 +172,7 @@ Object {
           class="bg-tertiary px-4 py-4 w-full lg:w-auto text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
           type="submit"
         >
-          Email Owner
+          items_details.email_owner
         </button>
       </div>
     </div>

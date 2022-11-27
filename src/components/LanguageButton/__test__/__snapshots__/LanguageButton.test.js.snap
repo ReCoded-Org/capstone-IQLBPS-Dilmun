@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LanguageButton component  1`] = `
+<div
+  class="relative inline-block text-left"
+  data-headlessui-state=""
+  data-testid="language-button"
+>
+  <div>
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="md:ml-6 text-2xl md:mt-0 mt-2 text-secondary hover:text-primary duration-500"
+      data-headlessui-state=""
+      data-testid="language-botton-toggle"
+      id="headlessui-menu-button-:r0:"
+      type="button"
+    >
+      <img
+        alt="English"
+        class="h-8 w-8"
+        src="us-flag.svg"
+      />
+    </button>
+  </div>
+</div>
+`;

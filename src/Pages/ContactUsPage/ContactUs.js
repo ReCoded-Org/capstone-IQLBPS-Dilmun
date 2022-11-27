@@ -1,9 +1,11 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { sendFeedback, status } from '../../features/feedback/feedbackSlice';
 import LoadingScreen from '../../components/animations/LoadingScreen';
 
 const ContactUs = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const statusData = useSelector(status);
   const {
@@ -21,9 +23,9 @@ const ContactUs = () => {
 
   const messageForUser = {
     idle: '',
-    loading: 'Please wait..',
-    succeeded: 'Thank you for your feedback',
-    failed: "We could'nt save your feedback, please try later",
+    loading: t('contact_us.loading_message'),
+    succeeded: t('contact_us.succeeded_message'),
+    failed: t('contact_us.failed_message'),
   };
 
   if (statusData === 'loading') return <LoadingScreen />;
@@ -39,9 +41,9 @@ const ContactUs = () => {
         <div className="flex flex-col justify-between">
           <div className="text-center">
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-primary ">
-              Lets talk about everything!
+              {t('contact_us.lets_talk')}
             </h2>
-            <div className="text-gray-600 mt-8 ">Give us your feedback</div>
+            <div className="text-gray-600 mt-8 ">{t('contact_us.give_us')}</div>
           </div>
           <div className="mt-8 text-center self-center">
             <img
@@ -54,12 +56,12 @@ const ContactUs = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <span className="uppercase text-sm text-gray-600 font-bold">
-              Full Name
+              {t('contact_us.full_name')}
             </span>
             <input
               className="w-full bg-background text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"
-              placeholder=""
+              placeholder={t('error.full_name')}
               {...register('name', {
                 required: '* Enter your name please',
               })}
@@ -72,7 +74,7 @@ const ContactUs = () => {
           </div>
           <div className="mt-5">
             <span className="uppercase text-sm text-gray-600 font-bold">
-              Email
+             {t('contact_us.email')}
             </span>
             <input
               className="w-full bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -89,7 +91,7 @@ const ContactUs = () => {
           </div>
           <div className="mt-5">
             <span className="uppercase text-sm text-gray-600 font-bold">
-              Message
+              {t('contact_us.message')}
             </span>
             <textarea
               className="w-full h-40 bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -108,7 +110,7 @@ const ContactUs = () => {
               type="submit"
               className="uppercase text-sm font-bold tracking-wide bg-tertiary text-primary p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:text-tertiary hover:bg-secondary"
             >
-              Send Message
+              {t('contact_us.send')}
             </button>
           </div>
         </form>

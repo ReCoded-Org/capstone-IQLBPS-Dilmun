@@ -2,45 +2,45 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
+import { useTranslation } from 'react-i18next';
 import { user } from '../../features/slices/user';
 import { ADD_ITEM_ROUTE } from '../../route';
 import defaultProfileImg from '../../assets/img/defaultProfileImg.jpg';
 import defaultBGImg from '../../assets/img/defaultBGImg.jpg';
 import { UserItemCard } from '../Cards';
-import Form from "./Form";
+import Form from './Form';
 import { useDispatch } from '../../app/store';
 import { getUserItems } from '../../features/slices/item';
 
-
-
-
 function Profile() {
   const dispatch = useDispatch();
-  const {userItems} = useSelector((state) => state.item);
+  const { userItems } = useSelector((state) => state.item);
+  const { t } = useTranslation();
   const userData = useSelector(user);
-  const [userCity, setUserCity] = useState('')
-  const [userCountry, setUserCountry] = useState()
+  const [userCity, setUserCity] = useState('');
+  const [userCountry, setUserCountry] = useState();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-      if(userData.uid) {dispatch(getUserItems(userData.uid));}
+    if (userData.uid) {
+      dispatch(getUserItems(userData.uid));
+    }
   }, [userData]);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
-  }
+  };
   useEffect(() => {
     if (!_.isEmpty(userData)) {
-      const { city } = userData.address
-      const capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1)
-      setUserCity(capitalizeCity)
-      const { country } = userData.address
-      const capitalizeCountry = country.charAt(0).toUpperCase() + country.slice(1)
-      setUserCountry(capitalizeCountry)
+      const { city } = userData.address;
+      const capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+      setUserCity(capitalizeCity);
+      const { country } = userData.address;
+      const capitalizeCountry =
+        country.charAt(0).toUpperCase() + country.slice(1);
+      setUserCountry(capitalizeCountry);
     }
-  })
- 
-
+  });
   return (
     <div
       data-testid="profile"
@@ -63,15 +63,23 @@ function Profile() {
           <h1 className="font-bold text-[20px] sm:text-[26px] lg:text-[34px] text-primary m-1">
             {userData.firstName} {userData.lastName}
           </h1>
-          {!_.isEmpty(userData) && <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-            {userCity},{userCountry}
-          </h3>}
+          {!_.isEmpty(userData) && (
+            <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
+              {userCity},{userCountry}
+            </h3>
+          )}
 
-          {!_.isEmpty(userData) && <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
-            {userData.email}
-          </h5>}
+          {!_.isEmpty(userData) && (
+            <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
+              {userData.email}
+            </h5>
+          )}
 
-          <button type="button" onClick={toggleForm} className="text-primary hover:text-secondary">
+          <button
+            type="button"
+            onClick={toggleForm}
+            className="text-primary hover:text-secondary"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -98,7 +106,7 @@ function Profile() {
             <div className="flex-grow border-t border-primary divide-x" />
 
             <h3 className="flex-shrink mx-16 font-bold text-[14px] sm:text-[18px] lg:text-[24px] text-primary mt-3 mb-3">
-              My Items
+              {t('profile.my_items')}
             </h3>
           </div>
           <div className="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl	">
@@ -106,15 +114,14 @@ function Profile() {
               <UserItemCard key={item.id} item={item}/>
             ))}
           </div>
-          <Link className='w-full text-center' to={ADD_ITEM_ROUTE}>
+          <Link className="w-full text-center" to={ADD_ITEM_ROUTE}>
             <button
               type="button"
               className="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
             >
-              Add New Item
+              {t('profile.add_new_item')}
             </button>
           </Link>
-
         </div>
       </div>
     </div>
