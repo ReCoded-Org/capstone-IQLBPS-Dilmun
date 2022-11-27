@@ -21,6 +21,7 @@
         "city": "City",
         "add_new_item": "Add New Item"
     },
+    "delete_item": "Delete item",
     "overlap_text": {
         "check_out": "check out this video made by one of our satisfied customers",
         "watch_full_video": "Watch Full Video"
@@ -82,15 +83,17 @@
         "welcome_to_dilmun": "Welcome to Dilmun",
         "your_way": "Your Way to Get Quality Products!",
         "get_started": "Get Started"
-    },
+    },"email_owner": "Email Owner",
     "edit_item_form": {
         "edit_item": "Edit Item",
         "edit_item_info": "Edit Item Info",
         "edit_item_image": "Edit Item Image",
         "edit_item_name": "Edit Item Name",
         "edit_item_type": "Edit Item Type",
+        "can_not_edit_item_price": "Sorry, cannot edit item price.",
         "edit_item_category": "Edit Item Category",
         "edit_item_description": "Edit Description",
+        "update_info": "Update Info",
         "cancel": "Cancel"
     },
     "navbar": {
@@ -189,6 +192,33 @@
         "min_password": "Password should be at least 6 characters",
         "max_password": "Password should be at most 15 characters",
         "first_name": "Please insert your first name",
-        "last_name": "Please insert your last name"
+        "last_name": "Please insert your last name",
+        "full_name" :"Please insert your full name"
+    },
+    "contact_us": {
+        "loading_message": "Please wait..",
+        "succeeded_message": "Thank you for your feedback",
+        "failed_message": "We could'nt save your feedback, please try later",
+        "lets_talk": "Let's talk about everything!",
+        "give_us":"Give us your feedback",
+        "full_name": "Full Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send"
+    },
+    "items_details": {
+        "price": "Price: ",
+        "item_type": "Item Type: ",
+        "country": "Country: ",
+        "address": "Address: ",
+        "description": "Description: ",
+        "email_owner": "Email Owner"
+    },
+    "signed_in_home_page": {
+        "welcome": "Welcome Back",
+        "best_choice": "Dilmun is your best choice to buy or sell anything",
+        "cant_find": " Can&apos;t find what you need? Check our list",
+        "add_item": "or add an item",
+        "most_recent": "Most Recent Items"
     }
 }

@@ -21,6 +21,7 @@
         "city": "مدينة",
         "add_new_item": "اضافة عنصر جديد"
     },
+    "delete_item": "حذف البند",
     "overlap_text": {
         "check_out": "شاهد هذا الفيديو الذي صنعه أحد عملائنا الراضين",
         "watch_full_video": "شاهد الفيديو كاملاً"
@@ -83,14 +84,17 @@
         "your_way": "طريقك للحصول على منتجات عالية الجودة!",
         "get_started": "ابدأ الآن"
     },
+    "email_owner": "إرسال بريد إلكتروني إلى مالك",
     "edit_item_form": {
         "edit_item": "تحرير عنصر",
         "edit_item_info": "تحرير معلومات العنصر",
         "edit_item_image": "تحرير صورة العنصر",
         "edit_item_name": "تحرير اسم العنصر",
         "edit_item_type": "تحرير نوع العنصر",
+        "can_not_edit_item_price": "عذرا ، لا يمكن تعديل سعر البند.",
         "edit_item_category": "تحرير فئة العنصر",
         "edit_item_description": "تحرير الوصف",
+        "update_info": "تحديث المعلومات",
         "cancel": "إلغاء"
     },
     "navbar": {
@@ -104,7 +108,7 @@
     "news_letter": {
         "subscribe_to_our_newsletter": "اشترك في النشرة<br /> الإخبارية",
         "description": "اشترك في النشرة الإخبارية لدينا وابقى على اطلاع",
-        "email": "Write your email here",
+        "email": "اكتب بريدك الإلكتروني هنا",
         "subscribe": "اشترك"
     },
     "profile": {
@@ -189,6 +193,33 @@
         "min_password": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل",
         "max_password": "يجب ألا تزيد كلمة المرور عن 15 حرفًا",
         "first_name": "الرجاء إدخال اسمك الأول",
-        "last_name": "الرجاء إدخال اسمك الأخير"
+        "last_name": "الرجاء إدخال اسمك الأخير",
+        "full_name": "الرجاء إدخال اسمك الكامل"
+    },
+    "contact_us": {
+        "loading_message": "أرجو الإنتظار..",
+        "succeeded_message": "شكرا لك على ملاحظاتك",
+        "failed_message": "لم نتمكن من حفظ ملاحظاتك ، يرجى المحاولة لاحقًا",
+        "lets_talk": "لنتحدث عن كل شيء!",
+        "give_us": "أعطنا تقييمك",
+        "full_name": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "message": "رسالة",
+        "send": "إرسال"
+    },
+    "items_details": {
+        "price": "سعر:",
+        "item_type": "نوع العنصر:",
+        "country": "دولة:",
+        "address": "تبوك:",
+        "description": "وصف:",
+        "email_owner": "إرسال البريد الإلكتروني لصاحب"
+    },
+    "signed_in_home_page": {
+        "welcome": "مرحبًا بعودتك",
+        "best_choice": "دلمون هي خيارك الأفضل لشراء أو بيع أي شيء",
+        "cant_find": "لا تجد ما تحتاجه؟ تحقق من قائمتنا",
+        "add_item": "أو إضافة عنصر",
+        "most_recent": "أحدث العناصر"
     }
 }

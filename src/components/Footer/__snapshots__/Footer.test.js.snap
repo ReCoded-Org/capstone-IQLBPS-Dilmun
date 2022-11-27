@@ -74,7 +74,7 @@ exports[`redering footer 1`] = `
         <span
           className="text-2xl font-bold text-primary"
         >
-          Contact Us
+          footer.contact_us
         </span>
         <li>
           <a
@@ -124,7 +124,6 @@ exports[`redering footer 1`] = `
     className="block text-sm text-secondary lg:text-start text-center"
   >
     © 2022
-     
     <a
       className="hover:underline"
       href="/"

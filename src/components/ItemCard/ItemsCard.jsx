@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 function ItemsCard({ item }) {
+  const {t} = useTranslation();
   return (
     <div
       data-testid="item-card"
@@ -72,7 +75,7 @@ function ItemsCard({ item }) {
           type="button"
           className="w-full my-2 duration-300 text-background bg-secondary hover:bg-primary focus:ring-1 focus:outline-none focus:ring-tertiary font-medium rounded-lg text-md px-5 py-2.5 text-center"
         >
-          <a href={`mailto: ${item.owner?.email}`}>Email Owner</a>
+          <a href={`mailto: ${item.owner?.email}`}>{t('email_owner')}</a>
         </button>
       </div>
     </div>

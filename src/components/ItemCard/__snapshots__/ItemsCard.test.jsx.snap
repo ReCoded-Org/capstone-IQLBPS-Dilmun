@@ -64,7 +64,7 @@ exports[`render item cards correctly 1`] = `
       <a
         href="mailto: email"
       >
-        Email Owner
+        email_owner
       </a>
     </button>
   </div>

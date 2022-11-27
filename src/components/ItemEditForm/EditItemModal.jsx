@@ -56,10 +56,7 @@ export default function EditItemModal() {
         className="flex items-center justify-end bg-background p-3"
         data-testid="edit-item"
       >
-        <button
-          type="button"
-          onClick={openModal}
-        >
+        <button type="button" onClick={openModal}>
           <BiEdit className="h-8 w-8 text-primary" />
         </button>
       </div>
@@ -140,7 +137,7 @@ export default function EditItemModal() {
                     </Input>
                     <input
                       disabled
-                      placeholder="Sorry, cannot edit item price."
+                      placeholder={t('edit_item_form.can_not_edit_item_price')}
                       type="number"
                       className="items-center text-background border-2 rounded-md mb-2 border-background w-full text-opacity-50 p-2"
                     />
@@ -187,7 +184,9 @@ export default function EditItemModal() {
                     </div>
                   </Dialog.Description>
                   <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                    <SubmitButton buttonText="Update Info" />
+                    <SubmitButton
+                      buttonText={t('edit_item_form.update_info')}
+                    />
                     <button
                       type="button"
                       className="ml-2 inline-flex justify-center rounded-md border border-transparent bg-background px-4 py-2 text-sm font-medium text-primary hover:bg-tertiary focus:outline-none focus-visible:ring-2 focus-visible:ring-tertiary focus-visible:ring-offset-2"

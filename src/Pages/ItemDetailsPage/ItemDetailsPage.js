@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import CustomButton from '../../components/CustomComponents/CustomButton';
 
 const ItemDetailsPage = () => {
+  const {t} = useTranslation();
   return (
     <div
       data-testid="item-details-page"
@@ -20,20 +22,22 @@ const ItemDetailsPage = () => {
           <span>Other</span>
         </div>
         <span className="flex gap-1">
-          <p className="font-semibold">Price:</p> $60
+          <p className="font-semibold">{t('items_details.price')}</p> $60
         </span>
         <span className="flex gap-1">
-          <p className="font-semibold">Item Type:</p> New
+          <p className="font-semibold">{t('items_details.item_type')}</p> New
         </span>
         <span className="flex gap-1">
-          <p className="font-semibold">Country:</p> Spain
+          <p className="font-semibold">{t('items_details.country')}</p> Spain
         </span>
         <span className="flex gap-1">
-          <p className="font-semibold">Address:</p> C/Conde de Xiquena 7, 3º, 1A
-          Izda, 280280, Madrid
+          <p className="font-semibold">{t('items_details.address')}</p> C/Conde
+          de Xiquena 7, 3º, 1A Izda, 280280, Madrid
         </span>
         <div>
-          <span className="font-bold text-xl">Description:</span>
+          <span className="font-bold text-xl">
+            {t('items_details.description')}
+          </span>
           <p className="text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
             facilis cupiditate reiciendis dignissimos hic aliquam esse
@@ -41,7 +45,7 @@ const ItemDetailsPage = () => {
           </p>
         </div>
         <CustomButton paddingX="px-4" paddingY="py-4">
-          Email Owner
+          {t('items_details.email_owner')}
         </CustomButton>
       </div>
     </div>

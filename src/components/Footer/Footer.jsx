@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { MdEmail } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
 
-import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE ,CONTACT_US} from '../../route';
+import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE, CONTACT_US } from '../../route';
 
 const Footer = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <footer className="p-4 bg-gradient-to-br from-background via-background to-secondary shadow md:p-5 backdrop-blur-md">
       <div className="lg:grid lg:grid-cols-4 gap-4">
@@ -56,7 +56,9 @@ const Footer = () => {
         </div>
         <div className="col-span-1 mx-3 flex lg:justify-start justify-center text-center">
           <ul className="mb-6  text-primary sm:mb-0 font-base">
-            <span className="text-2xl font-bold text-primary">Contact Us</span>
+            <span className="text-2xl font-bold text-primary">
+              {t('footer.contact_us')}
+            </span>
             <li>
               <Link
                 className="hover:text-tertiary hover:underline text-lg duration-200 h-8 w-5 inline"
@@ -75,7 +77,7 @@ const Footer = () => {
       </div>
       <hr className="my-4 border-secondary sm:mx-auto lg:my-6" />
       <span className="block text-sm text-secondary lg:text-start text-center">
-        © 2022{' '}
+        © 2022
         <Link to={HOME_ROUTE} className="hover:underline">
           Dilmun™
         </Link>
