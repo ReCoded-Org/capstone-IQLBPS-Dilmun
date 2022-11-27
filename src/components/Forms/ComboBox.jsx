@@ -5,10 +5,10 @@ import { HiSelector, HiOutlineCheck } from 'react-icons/hi';
 const ComboBox = forwardRef((props, ref) => {
   const { options } = props;
   const [selectedOptions, setSelectedOptions] = useState([options[0]]);
-
   useEffect(() => {
     if (props.edit) {
-      setSelectedOptions([props.value]);
+      if (typeof props.value !== 'string') setSelectedOptions([...props.value]);
+      else setSelectedOptions([props.value]);
     }
   }, [props.value]);
 
@@ -41,7 +41,6 @@ const ComboBox = forwardRef((props, ref) => {
           <div className="relative w-full text-left bg-background text-primary font-medium rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-background focus-visible:ring-offset-teal-300 focus-visible:ring-offset-2 sm:text-sm overflow-hidden border border-secondary">
             <Combobox.Input
               className="w-full border-none focus:ring-0 py-2 pl-3 pr-10 text-sm leading-5 text-primary bg-background rounded-lg"
-              // displayValue={(option) => option}
               displayValue={(option) => option.map((o) => o).join(', ')}
               onChange={(event) => setQuery(event.target.value)}
             />

@@ -60,10 +60,11 @@ export const editItem = createAsyncThunk(
       });
       await setDoc(doc(db, 'Users', owner.uid, 'Items', item.id), {
         ...item,
+        category: [...item.category],
         owner,
         updatedAt: moment().format('LLL'),
       });
-      return { ...item, owner, updatedAt: moment().format('LLL') };
+      return { ...item, category: [...item.category], owner, updatedAt: moment().format('LLL') };
     } catch (error) {
       return error.message;
     }

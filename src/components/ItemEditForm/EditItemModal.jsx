@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
@@ -11,6 +10,7 @@ import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
 import { editItem, uploadImageItem } from '../../features/slices/item';
 import { useDispatch, useSelector } from '../../app/store';
 import { user } from '../../features/slices/user';
+import Tooltip from '../Tooltip/Tooltip';
 
 const schema = yup.object().shape({
   title: yup.string().required('Cannot stay empty.'),
@@ -25,7 +25,6 @@ export default function EditItemModal({ item }) {
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
     reset,
     control,
@@ -47,7 +46,6 @@ export default function EditItemModal({ item }) {
     if (typeof imgRef !== 'string') {
       const imgURL = await dispatch(uploadImageItem(imgRef));
       if (imgURL.payload) {
-        // e.file = imgURL.payload;
         setImgRef(imgURL.payload);
         const res = await dispatch(
           editItem({
@@ -89,7 +87,6 @@ export default function EditItemModal({ item }) {
       keepDirty: false,
       keepValues: false,
     });
-    // setImg(defaultImg);
   }
 
   function openModal() {
@@ -103,7 +100,9 @@ export default function EditItemModal({ item }) {
         data-testid="edit-item"
       >
         <button type="button" onClick={openModal}>
-          <BiEdit className="h-8 w-8 text-primary" />
+          <Tooltip text="Edit Item">
+            <BiEdit className="h-8 w-8 text-primary" />
+          </Tooltip>
         </button>
       </div>
 
@@ -157,81 +156,80 @@ export default function EditItemModal({ item }) {
                     <span className="block text-sm font-medium text-background">
                       Edit Item Image
                     </span>
-                    <figure className="flex relative  transition-all duration-300 cursor-pointer filter border-2 rounded-md border-dashed my-3  border-tertiary">
-                      <img
-                        className="rounded-lg max-h-28 m-1"
-                        src={`${item.file}`}
-                        alt="item"
-                      />
-
-                      <input
-                        type="file"
-                        accept="image/*"
-                        {...register('file')}
-                        onChange={(e) => {
-                          setImgRef(e.target.files[0]);
-                        }}
-                        className="w-full self-center text-xs text-background file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-background file:text-secondary m-2"
-                      />
-                    </figure>
-                    <Input
-                      isActive
-                      name="title"
-                      {...register('title')}
-                      errors={errors.title ? errors.title : undefined}
-                    >
-                      Edit Item Name
-                    </Input>
-                    <input
-                      disabled
-                      placeholder="Sorry, cannot edit item price."
-                      type="number"
-                      className="items-center text-background border-2 rounded-md mb-2 border-background w-full text-opacity-50 p-2"
-                    />
-                    <div className="flex justify-between items-center gap-8 w-full flex-col md:flex-row">
-                      <div className="w-full">
-                        <span className="block text-sm font-medium text-background">
-                          Edit Item Type
-                        </span>
-                        <ListBox
-                          name="type"
-                          control={control}
-                          options={ITEM_TYPES}
-                          defaultValue={ITEM_TYPES[0]}
-                          {...register('type')}
-                        />
-                      </div>
-                      <div className="w-full">
-                        <span className="block text-sm font-medium text-background">
-                          Edit Item Category
-                        </span>
-                        <Controller
-                          name="category"
-                          control={control}
-                          defaultValue={item.categories}
-                          render={({ field }) => (
-                            <ComboBox
-                              value={item.categories}
-                              options={ITEM_CATEGORY}
-                              edit
-                              {...field}
-                              {...register('category')}
-                            />
-                          )}
-                        />
-                      </div>
-                    </div>
-                    <div className="my-4">
-                      <TextArea
-                        isActive
-                        name="description"
-                        {...register('description')}
-                        errors={errors?.description}
-                      >
-                        Edit Description
-                      </TextArea>
-                    </div>
                   </Dialog.Description>
+
+                  <div className="flex relative  transition-all duration-300 cursor-pointer filter border-2 rounded-md border-dashed my-3  border-tertiary">
+                    <img
+                      className="rounded-lg max-h-28 m-1"
+                      src={`${item.file}`}
+                      alt="item"
+                    />
+
+                    <input
+                      type="file"
+                      accept="image/*"
+                      {...register('file')}
+                      onChange={(e) => {
+                        setImgRef(e.target.files[0]);
+                      }}
+                      className="w-full self-center text-xs text-background file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-background file:text-secondary m-2"
+                    />
+                  </div>
+                  <Input
+                    isActive
+                    name="title"
+                    {...register('title')}
+                    errors={errors.title ? errors.title : undefined}
+                  >
+                    Edit Item Name
+                  </Input>
+                  <input
+                    disabled
+                    placeholder="Sorry, cannot edit item price."
+                    type="number"
+                    className="items-center text-background border-2 rounded-md mb-2 border-background w-full text-opacity-50 p-2"
+                  />
+                  <div className="flex justify-between items-center gap-8 w-full flex-col md:flex-row">
+                    <div className="w-full">
+                      <span className="block text-sm font-medium text-background">
+                        Edit Item Type
+                      </span>
+                      <ListBox
+                        name="type"
+                        control={control}
+                        options={ITEM_TYPES}
+                        defaultValue={item.type}
+                        updateType={() => {}}
+                      />
+                    </div>
+                    <div className="w-full">
+                      <span className="block text-sm font-medium text-background">
+                        Edit Item Category
+                      </span>
+                      <Controller
+                        name="category"
+                        control={control}
+                        render={({ field }) => (
+                          <ComboBox
+                            value={item.categories}
+                            options={ITEM_CATEGORY}
+                            edit
+                            {...field}
+                          />
+                        )}
+                      />
+                    </div>
+                  </div>
+                  <div className="my-4">
+                    <TextArea
+                      isActive
+                      name="description"
+                      {...register('description')}
+                      errors={errors?.description}
+                    >
+                      Edit Description
+                    </TextArea>
+                  </div>
                   <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                     <SubmitButton
                       buttonText="Update Info"

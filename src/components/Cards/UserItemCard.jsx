@@ -1,4 +1,3 @@
-import Tooltip from '../Tooltip/Tooltip';
 import DeleteItemButton from '../DeleteItemButton/DeleteItemButton';
 import EditItemModal from '../ItemEditForm/EditItemModal';
 
@@ -17,9 +16,7 @@ function UserItemCard(props) {
           <p className="text-secondary font-medium text-lg">{type}</p>
           <div className="flex gap-2 justify-between items-center">
             <DeleteItemButton />
-            <Tooltip text="Edit Item">
-              <EditItemModal item={item} />
-            </Tooltip>
+            <EditItemModal item={item} />
           </div>
         </div>
         <h3 className="font-black text-primary md:text-2xl text-xl">{title}</h3>
