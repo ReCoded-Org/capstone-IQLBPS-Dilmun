@@ -24,6 +24,7 @@ const schema = yup.object().shape({
 });
 
 export default function AddItemForm() {
+  const [imgSrc, setImgSrc] = useState(null);
   const [type, setType] = useState(ITEM_TYPES[0]);
   const [itemImage, setItemImage] = useState(
     'https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png'
@@ -31,7 +32,7 @@ export default function AddItemForm() {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const { isItemLoading, error} = useSelector((state) => state.item);
+  const { isItemLoading, error } = useSelector((state) => state.item);
   const userData = useSelector(user);
 
   const {
@@ -76,24 +77,24 @@ export default function AddItemForm() {
           })
         );
       }
-    }
-    else {await dispatch(
-      addItem({
-        item: values,
-        owner: {
-          ...userData,
-          address: { city: values.city, country: values.country },
-        },
-        type,
-        file: itemImage,
-      })
+    } else {
+      await dispatch(
+        addItem({
+          item: values,
+          owner: {
+            ...userData,
+            address: { city: values.city, country: values.country },
+          },
+          type,
+          file: itemImage,
+        })
       );
     }
-    
-      if (!isItemLoading) {
-        reset();
-        setType(ITEM_TYPES[0]);
-        navigate(-1);
+
+    if (!isItemLoading) {
+      reset();
+      setType(ITEM_TYPES[0]);
+      navigate(-1);
     }
   };
 
@@ -120,20 +121,28 @@ export default function AddItemForm() {
                     </p>
                     <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6">
                       <div className="space-y-1 text-center">
-                        <svg
-                          className="mx-auto h-12 w-12 text-tertiary"
-                          stroke="currentColor"
-                          fill="none"
-                          viewBox="0 0 48 48"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                        {imgSrc === null ? (
+                          <svg
+                            className="mx-auto h-12 w-12 text-tertiary"
+                            stroke="currentColor"
+                            fill="none"
+                            viewBox="0 0 48 48"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        ) : (
+                          <img
+                            className="rounded-lg max-h-28 m-1 mx-auto"
+                            src={imgSrc}
+                            alt="item"
                           />
-                        </svg>
+                        )}
                         <div className="flex text-sm text-background">
                           <label
                             htmlFor="file"
@@ -151,6 +160,9 @@ export default function AddItemForm() {
                               className="sr-only"
                               onChange={(e) => {
                                 setItemImage(e.target.files[0]);
+                                setImgSrc(
+                                  URL.createObjectURL(e.target.files[0])
+                                );
                               }}
                             />
                           </label>
@@ -252,7 +264,10 @@ export default function AddItemForm() {
                 )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                <SubmitButton buttonText="Add New Item" loading={isItemLoading} />
+                <SubmitButton
+                  buttonText="Add New Item"
+                  loading={isItemLoading}
+                />
               </div>
             </div>
             {error && (
