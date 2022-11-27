@@ -35,9 +35,7 @@ const ItemDetailsPage = () => {
         <div className="w-full lg:w-1/2 md:ml-auto  max-h-full md:mr-auto flex flex-col gap-7 rounded pt-5 px-5 bg-gradient-to-tl from-tertiary to-primary justify-between py-10">
           <div className="flex flex-col gap-7">
             <div>
-              <h2 className="font-bold text-4xl pb-4">
-                {item.title.slice(0, 1).toUpperCase()}{item.title.slice(1)}
-              </h2>
+              <h2 className="font-bold text-4xl pb-4">{item.title}</h2>
               <div className="">
                 {typeof item.category === 'object' ? (
                   item.category.map((c) => (
@@ -64,22 +62,15 @@ const ItemDetailsPage = () => {
               {item.price} $
             </span>
             <span className="flex gap-1">
-              <p className="font-bold">{t('items_details.address')}</p>{' '}
-              {`${item.owner?.address.city
-                .slice(0, 1)
-                .toUpperCase()}${item.owner?.address.city.slice(
-                1
-              )}, ${item.owner?.address.country
-                .slice(0, 1)
-                .toUpperCase()}${item.owner?.address.country.slice(1)}`}
+              <p className="font-bold">{t('items_details.address')}</p>
+              {`${item.owner?.address.city}, ${item.owner?.address.country}`}
             </span>
             <div>
               <span className="font-bold text-xl">
                 {t('items_details.description')}
               </span>
               <p className="text-lg">
-                {item.description.slice(0, 1).toUpperCase()}
-                {item.description.slice(1)}
+                {item.description}
               </p>
             </div>
           </div>
