@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import Tooltip from '../Tooltip/Tooltip';
 
-function DeleteItemButton() {
+
+function DeleteItemButton({handleClick}) {
   const {t} = useTranslation();
   return (
     <Tooltip text={t('delete_item')}>
       <button
+      onClick={handleClick}
         type="button"
         className="relative inline-flex items-center justify-center p-1 px-1 py-2 overflow-hidden transition duration-300 ease-out rounded-full group"
       >
