@@ -9,19 +9,19 @@ const ItemsDisplay = ({ filter }) => {
 
   useEffect(() => {
     const func = async (items, filters) => {
-      const category = filters[0];
       let filteredItems = items;
+      const category = filters[0];
       const type = filters[1];
       if (category) {
         filteredItems = query(
           docRef,
-          where('category', '==', `${category.options.label}`)
+          where('category', '==', `${category.options.map((cat) => cat.label)}`)
         );
       }
       if (type) {
          filteredItems = query(
            docRef,
-           where('type', '==', `${type.optionslabel}`)
+           where('type', '==', `${type.options.map((t)=> t.label)}`)
          );
       }
       const final = await getDocs(filteredItems);
