@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { addDoc, collection, doc, setDoc, getDocs } from 'firebase/firestore';
+import { filter } from 'lodash';
+import { addDoc, collection, doc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import moment from 'moment';
 import { db, storage } from '../../firebase-config';
@@ -102,6 +103,14 @@ export const getItemList = createAsyncThunk(
     } catch (error) {
       return error.message
     }
+  }
+)
+
+export const deleteItem = createAsyncThunk(
+  'item/deleteItem', async (payload) => {
+    await deleteDoc(doc(db, "Items", payload.itemId));
+    await deleteDoc(doc(db, 'Users', payload.userId, 'Items', payload.itemId))
+    return payload.itemId
   }
 )
 
@@ -211,6 +220,12 @@ const itemSlice = createSlice({
         state.error = null;
         state.isUserItemsLoading = true;
         state.userItems = [];
+      })
+
+      // DELTEITEM
+      .addCase(deleteItem.fulfilled, (state, action) => {
+        state.error = null
+        state.userItems = filter(state.userItems, (c) => c.id !== action.payload);
       })
   }
 });

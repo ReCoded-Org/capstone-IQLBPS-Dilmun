@@ -12,6 +12,8 @@ import { useDispatch } from '../../app/store';
 import { getUserItems } from '../../features/slices/item';
 
 
+
+
 function Profile() {
   const dispatch = useDispatch();
   const {userItems} = useSelector((state) => state.item);
@@ -37,6 +39,8 @@ function Profile() {
       setUserCountry(capitalizeCountry)
     }
   })
+ 
+
   return (
     <div
       data-testid="profile"
@@ -99,7 +103,7 @@ function Profile() {
           </div>
           <div className="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl	">
             {userItems.length > 0 && userItems.map((item) => (
-              <UserItemCard key={item.id} item={item} />
+              <UserItemCard key={item.id} item={item}/>
             ))}
           </div>
           <Link className='w-full text-center' to={ADD_ITEM_ROUTE}>
