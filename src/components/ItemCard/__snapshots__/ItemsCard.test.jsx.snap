@@ -2,7 +2,7 @@
 
 exports[`render item cards correctly 1`] = `
 <div
-  class="lg:w-80 md:w-64 w-96 bg-background m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300"
+  class="lg:w-80 md:w-64 w-96 bg-background  m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300"
   data-testid="item-card"
 >
   <a
