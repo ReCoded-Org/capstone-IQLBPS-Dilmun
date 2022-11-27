@@ -6,7 +6,7 @@ const AboutUsHeader = () => {
         <div className=" container mx-auto px-4 mt-28" >
             <div className="flex justify-center	items-center">
                 <h1 className='text-4xl text-primary font-bold mt-0 mb-6'>
-                    Meet Our Team
+                    About us
                 </h1>
             </div>
             <div className=" flex lg:flex-row  flex-col justify-around">

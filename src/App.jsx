@@ -13,7 +13,6 @@ import {
   user,
 } from './features/slices/user';
 import { UserItemCard } from './components/Cards';
-import AboutUsHeader from './components/AboutUs/AboutUsHeader';
 
 const MOCK_ITEM = {
   title: 'Title of Item Goes Here',
@@ -61,7 +60,6 @@ function App() {
       ) : (
         <>
           <NavBar />
-          <AboutUsHeader/>
           <AnimationProvider />
           <UserItemCard item={MOCK_ITEM} />
           <Footer />
