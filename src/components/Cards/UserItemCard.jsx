@@ -13,7 +13,7 @@ function UserItemCard(props) {
   const dispatch = useDispatch()
   const { item } = props;
   // destructure the item object to use values in the JSX
-  const { title, file, description, price, type, category } = item;
+  const { title, file, description, price, type, category, id } = item;
 
   const handleDelete = (itemId, userId) => {
     dispatch(deleteItem({ itemId, userId }))
