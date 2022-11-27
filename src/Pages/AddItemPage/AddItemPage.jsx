@@ -4,7 +4,6 @@ import AddItemForm from '../../components/AddItemForm/AddItemForm';
 export default function AddItemPage() {
   return (
     <motion.div
-      className="mt-24"
       data-testid="add-item-page"
       initial={{ width: 0 }}
       animate={{ width: '100%' }}

@@ -4,9 +4,7 @@ import { motion } from 'framer-motion';
 import Filter from '../../components/Filter/Filter';
 import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 import Sort from '../../components/Sort/Sort';
-import ItemDetailsPage from '../ItemDetailsPage/ItemDetailsPage';
 import AddItemButton from '../../components/AddItemButton/AddItemButton';
-
 
 const FilterPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -18,7 +16,6 @@ const FilterPage = () => {
       exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
     >
       <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
-        
         <div className="flex items-center">
           <Sort />
           <button
@@ -46,7 +43,6 @@ const FilterPage = () => {
         <ItemsDisplay />
         <AddItemButton />
       </div>
-      <ItemDetailsPage />
     </motion.main>
   );
 };

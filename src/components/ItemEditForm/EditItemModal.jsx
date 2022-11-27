@@ -13,8 +13,6 @@ import { useDispatch, useSelector } from '../../app/store';
 import { user } from '../../features/slices/user';
 import Tooltip from '../Tooltip/Tooltip';
 
-
-
 export default function EditItemModal({ item }) {
   const dispatch = useDispatch();
   const userData = useSelector(user);

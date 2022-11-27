@@ -2,7 +2,7 @@
 
 exports[`FAQ renders correctly 1`] = `
 <div
-  className="bg-background pt-40 py-20"
+  className="bg-background pt-10 py-10"
   data-testid="FAQ-page"
   style={
     Object {
