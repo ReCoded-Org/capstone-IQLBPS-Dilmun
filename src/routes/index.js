@@ -29,7 +29,7 @@ export default function Router() {
         { path: '/faq', element: <FaqPage /> },
         { path: '/add-item', element: <AddItemPage /> },
         { path: '/contact-us', element: <ContactUs /> },
-        { path: '/profile-page', element: <ProfilePage /> },
+        { path: '/profile-page', element: _.isEmpty(userData) ? <NotFoundPage /> : <ProfilePage /> },
         { path: "404", element: <NotFoundPage /> },
         { path: "*", element: <Navigate to="/404" replace /> },
     ]);
