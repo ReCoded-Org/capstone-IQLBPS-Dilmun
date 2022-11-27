@@ -4,7 +4,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useTranslation } from 'react-i18next';
-import { TbEdit } from 'react-icons/tb';
+import { BiEdit } from 'react-icons/bi';
 import { GiCancel } from 'react-icons/gi';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
 import { ITEM_CATEGORY, ITEM_TYPES } from '../../utils/Items';
@@ -59,10 +59,8 @@ export default function EditItemModal() {
         <button
           type="button"
           onClick={openModal}
-          className="rounded-md bg-primary bg-opacity-20 px-4 py-2 text-sm font-medium text-primary hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
-          {t('edit_item_form.edit_item')}
-          <TbEdit className="text-primary w-4 h-6 inline" />
+          <BiEdit className="h-8 w-8 text-primary" />
         </button>
       </div>
 

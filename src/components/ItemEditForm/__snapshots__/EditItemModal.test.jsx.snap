@@ -6,36 +6,27 @@ exports[`Add item form component rendered correctly 1`] = `
   data-testid="edit-item"
 >
   <button
-    class="rounded-md bg-primary bg-opacity-20 px-4 py-2 text-sm font-medium text-primary hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
     type="button"
   >
+<<<<<<< HEAD
     edit_item_form.edit_item
+=======
+>>>>>>> f577c515f4f30ee0ac90b3d01a65eaf2ec5156e9
     <svg
-      class="text-primary w-4 h-6 inline"
-      fill="none"
+      class="h-8 w-8 text-primary"
+      fill="currentColor"
       height="1em"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      stroke-width="0"
       viewBox="0 0 24 24"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <desc />
       <path
-        d="M0 0h24v24H0z"
-        fill="none"
-        stroke="none"
+        d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"
       />
       <path
-        d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"
-      />
-      <path
-        d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"
-      />
-      <path
-        d="M16 5l3 3"
+        d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"
       />
     </svg>
   </button>

@@ -2,14 +2,14 @@
 
 exports[`UserItemCard renders correctly 1`] = `
 <div
-  className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-background bg-primary"
+  className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl border border-background bg-primary"
 >
   <div
-    className="w-full md:w-1/3 bg-transparent grid place-items-center"
+    className="w-full md:w-1/2 bg-transparent grid place-items-center"
   >
     <img
       alt="Title of Item Goes Here"
-      className="rounded-xl"
+      className="rounded-xl w-full h-auto  "
       src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     />
   </div>
@@ -45,7 +45,7 @@ exports[`UserItemCard renders correctly 1`] = `
               <img
                 alt=""
                 className="w-6 h-6 "
-                src="https://cdn.discordapp.com/attachments/1043477388589277264/1045145545250971779/recycle-bin.png"
+                src="https://cdn.discordapp.com/attachments/1043477388589277264/1045835010378321970/recycle-bin-removebg-preview.png"
               />
             </span>
             <span
@@ -76,48 +76,59 @@ exports[`UserItemCard renders correctly 1`] = `
           >
             Edit Item
           </span>
-          <svg
-            className="h-8 w-8 text-primary"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="flex items-center justify-end bg-background p-3"
+            data-testid="edit-item"
           >
-            <path
-              d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"
-            />
-            <path
-              d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"
-            />
-          </svg>
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="h-8 w-8 text-primary"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"
+                />
+                <path
+                  d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"
+                />
+              </svg>
+            </button>
+          </div>
         </span>
       </div>
     </div>
     <h3
-      className="font-black text-primary md:text-3xl text-xl"
+      className="font-black text-primary md:text-2xl text-xl"
     >
       Title of Item Goes Here
     </h3>
-    <p
-      className="md:text-lg text-secondary text-base min-h-20"
+    <h5
+      className="text-base py-1 font-base text-primary"
     >
-      Description of item Here...
-    </p>
+      D
+      escription of item Here...
+      ...
+    </h5>
     <div
       className="flex justify-between item-center"
     >
       <p
         className="text-xl font-black text-secondary"
       >
-        $
         110
       </p>
       <div

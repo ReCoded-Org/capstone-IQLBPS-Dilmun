@@ -1,36 +1,47 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import { useTranslation } from 'react-i18next';
 import { user } from '../../features/slices/user';
-import { auth } from '../../firebase-config';
 import { ADD_ITEM_ROUTE } from '../../route';
 import defaultProfileImg from '../../assets/img/defaultProfileImg.jpg';
 import defaultBGImg from '../../assets/img/defaultBGImg.jpg';
-import CustomItemCard from '../CustomComponents/CustomItemCard';
-import Form from './Form';
+import { UserItemCard } from '../Cards';
+import Form from "./Form";
+import { useDispatch } from '../../app/store';
+import { getUserItems } from '../../features/slices/item';
+
 
 function Profile() {
-  const {t} = useTranslation();
+  const dispatch = useDispatch();
+  const {userItems} = useSelector((state) => state.item);  const {t} = useTranslation();
   const userData = useSelector(user);
-  const [email, setEmail] = useState();
+  const [userCity, setUserCity] = useState('')
+  const [userCountry, setUserCountry] = useState()
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (!_.isEmpty(userData)) {
-      setEmail(auth.currentUser.email);
-    }
-  }, [email]);
+      if(userData.uid) {dispatch(getUserItems(userData.uid));}
+  }, [userData]);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
-  };
-
+  }
+  useEffect(() => {
+    if (!_.isEmpty(userData)) {
+      const { city } = userData.address
+      const capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1)
+      setUserCity(capitalizeCity)
+      const { country } = userData.address
+      const capitalizeCountry = country.charAt(0).toUpperCase() + country.slice(1)
+      setUserCountry(capitalizeCountry)
+    }
+  })
   return (
     <div
       data-testid="profile"
-      className=" bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] flex flex-col justify-center items-center content-center "
+      className=" bg-background  bg-cover bg-no-repeat w-full h-full flex flex-col justify-center items-center content-center "
     >
       <div className=" mt-5 mb-14 w-5/6 bg-background rounded-lg h-full relative">
         <div className="flex flex-col justify-center items-center rounded-lg ">
@@ -45,22 +56,19 @@ function Profile() {
             className="rounded-full w-36 absolute flex outline outline-background  min-h-[15vh] md:min-h-[30vh] min-w-[15vh] md:min-w-[30vh]"
           />
         </div>
-        <div className="flex flex-col items-center justify-center content-center  mb-14 bg-background rounded-lg  pt-4">
+        <div className="flex flex-col items-center justify-center content-center  mb-14  rounded-lg  pt-4">
           <h1 className="font-bold text-[20px] sm:text-[26px] lg:text-[34px] text-primary m-1">
             {userData.firstName} {userData.lastName}
           </h1>
-          <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-            {t('profile.country')}, {t('profile.city')}
-          </h3>
+          {!_.isEmpty(userData) && <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
+            {userCity},{userCountry}
+          </h3>}
 
-          <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
-            {email}
-          </h5>
-          <button
-            type="button"
-            onClick={toggleForm}
-            className="text-primary hover:text-secondary"
-          >
+          {!_.isEmpty(userData) && <h5 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1">
+            {userData.email}
+          </h5>}
+
+          <button type="button" onClick={toggleForm} className="text-primary hover:text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -90,17 +98,15 @@ function Profile() {
               {t('profile.my_items')}
             </h3>
           </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 p-5">
-            <CustomItemCard />
-            <CustomItemCard />
-            <CustomItemCard />
-            <CustomItemCard />
-            <CustomItemCard />
+          <div className="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl	">
+            {userItems.length > 0 && userItems.map((item) => (
+              <UserItemCard key={item.id} item={item} />
+            ))}
           </div>
-          <Link to={ADD_ITEM_ROUTE}>
+          <Link className='w-full text-center' to={ADD_ITEM_ROUTE}>
             <button
               type="button"
-              className="sm:w-96 w-80 font-semibold shadow-lg my-2 bg-primary text-background py-2 rounded-md hover:bg-tertiary hover:text-primary duration-500"
+              className="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
             >
               {t('profile.add_new_item')}
             </button>

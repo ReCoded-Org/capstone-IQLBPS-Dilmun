@@ -28,7 +28,7 @@ const LanguageButton = ({ closeNavbar }) => {
       <div>
         <Menu.Button
           data-testid="language-botton-toggle"
-          className="md:ml-6 text-2xl md:mt-0 mt-2 text-background hover:text-secondary duration-500"
+          className="md:ml-6 text-2xl md:mt-0 mt-2 text-secondary hover:text-primary duration-500"
         >
           <img
             className={classNames(

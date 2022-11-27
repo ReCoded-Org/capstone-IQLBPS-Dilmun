@@ -19,7 +19,7 @@ export default function AddItemForm() {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const { isLoading, error } = useSelector((state) => state.item);
+  const { isItemLoading, error} = useSelector((state) => state.item);
   const userData = useSelector(user);
 
   const { t } = useTranslation();
@@ -60,7 +60,7 @@ export default function AddItemForm() {
     if (typeof itemImage !== 'string') {
       const imgURL = await dispatch(uploadImageItem(itemImage));
       if (imgURL.payload) {
-        dispatch(
+        await dispatch(
           addItem({
             item: values,
             owner: {
@@ -72,23 +72,24 @@ export default function AddItemForm() {
           })
         );
       }
-    } else {
-      dispatch(
-        addItem({
-          item: values,
-          owner: {
-            ...userData,
-            address: { city: values.city, country: values.country },
-          },
-          type,
-          file: itemImage,
-        })
+    }
+    else {await dispatch(
+      addItem({
+        item: values,
+        owner: {
+          ...userData,
+          address: { city: values.city, country: values.country },
+        },
+        type,
+        file: itemImage,
+      })
       );
     }
-    if (!error && !isLoading) {
-      reset();
-      setType(ITEM_TYPES[0]);
-      navigate(-1);
+    
+      if (!isItemLoading) {
+        reset();
+        setType(ITEM_TYPES[0]);
+        navigate(-1);
     }
   };
 
@@ -250,7 +251,10 @@ export default function AddItemForm() {
                 )}
               </div>
               <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
-                <SubmitButton buttonText={t('add_item_form.add_new_item')} />
+                <SubmitButton
+                  buttonText={t('add_item_form.add_new_item')}
+                  loading={isItemLoading}
+                />
               </div>
             </div>
             {error && (
