@@ -21,7 +21,7 @@ export default function Router() {
     const userData = useSelector(user)
 
     return useRoutes([
-        { path: '/', element: !_.isEmpty(userData) ? <HomePage /> : <SignedInUsersHomePage /> },
+        { path: '/', element: _.isEmpty(userData) ? <HomePage /> : <SignedInUsersHomePage /> },
         { path: '/signin', element: <SignInPage /> },
         { path: '/signup', element: <SignUpPage /> },
         { path: '/products', element: <FilterPage /> },
