@@ -26,7 +26,7 @@ export default function EditItemModal({ item }) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isDirty },
     reset,
     control,
   } = useForm({
@@ -236,6 +236,7 @@ export default function EditItemModal({ item }) {
                     <SubmitButton
                       buttonText="Update Info"
                       loading={isItemLoading}
+                      disabled={!isDirty}
                     />
                     <button
                       type="button"

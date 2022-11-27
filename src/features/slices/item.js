@@ -30,7 +30,7 @@ export const addItem = createAsyncThunk(
         title: item.title,
         price: `${item.price} $`,
         description: item.description,
-        category: item.category,
+        category: (typeof item.category) === 'string' ? item.category : [...item.category],
         type: item.type,
         owner,
         createdAt: moment().format('LLL'),
@@ -54,17 +54,17 @@ export const editItem = createAsyncThunk(
       const { item, owner } = payload;
       await setDoc(doc(db, 'Items', item.id), {
         ...item,
-        category: [...item.category],
+        category: (typeof item.category) === 'string' ? item.category : [...item.category],
         owner,
         updatedAt: moment().format('LLL'),
       });
       await setDoc(doc(db, 'Users', owner.uid, 'Items', item.id), {
         ...item,
-        category: [...item.category],
+        category: (typeof item.category) === 'string' ? item.category : [...item.category],
         owner,
         updatedAt: moment().format('LLL'),
       });
-      return { ...item, category: [...item.category], owner, updatedAt: moment().format('LLL') };
+      return { ...item, category: (typeof item.category) === 'string' ? item.category : [...item.category], owner, updatedAt: moment().format('LLL') };
     } catch (error) {
       return error.message;
     }
