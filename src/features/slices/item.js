@@ -36,7 +36,7 @@ export const addItem = createAsyncThunk(
         title: item.title,
         price: `${item.price} $`,
         description: item.description,
-        category: item.category,
+        category: (typeof item.category) === 'string' ? item.category : [...item.category],
         type: item.type,
         owner,
         createdAt: moment().format('LLL'),
@@ -52,6 +52,32 @@ export const addItem = createAsyncThunk(
   }
 );
 
+// Edit Item
+export const editItem = createAsyncThunk(
+  'item/editItem',
+  async (payload) => {
+    try {
+      const { item, owner } = payload;
+      await setDoc(doc(db, 'Items', item.id), {
+        ...item,
+        category: (typeof item.category) === 'string' ? item.category : [...item.category],
+        owner,
+        updatedAt: moment().format('LLL'),
+      });
+      await setDoc(doc(db, 'Users', owner.uid, 'Items', item.id), {
+        ...item,
+        category: (typeof item.category) === 'string' ? item.category : [...item.category],
+        owner,
+        updatedAt: moment().format('LLL'),
+      });
+      return { ...item, category: (typeof item.category) === 'string' ? item.category : [...item.category], owner, updatedAt: moment().format('LLL') };
+    } catch (error) {
+      return error.message;
+    }
+  }
+);
+
+
 // GET User's Items from DB and save to state
 export const getUserItems = createAsyncThunk(
   'item/getUserItems',
@@ -62,15 +88,7 @@ export const getUserItems = createAsyncThunk(
         collection(db, 'Users', uid, 'Items')
       );
       querySnapshot.forEach((item) => {
-        items.push({
-          id: item.id,
-          title: item.data().title,
-          file: item.data().file,
-          price: item.data().price,
-          description: item.data().description,
-          categories: item.data().category,
-          type: item.data().type,
-        });
+        items.push({ id: item.id, title: item.data().title, file: item.data().file, price: item.data().price, description: item.data().description, category: item.data().category, type: item.data().type, createdAt: item.data().createdAt });
       });
       return items;
     } catch (error) {
@@ -129,7 +147,33 @@ const itemSlice = createSlice({
         state.item = action.payload;
       })
       .addCase(addItem.rejected, (state, action) => {
-        state.addItemStatus = 'failed';
+        state.addItemStatus = "failed";
+        state.error = action.payload;
+        state.isItemLoading = false;
+        state.item = {};
+      })
+
+      // Edit Item
+      .addCase(editItem.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+        state.isItemLoading = true;
+        state.item = {};
+      })
+      .addCase(editItem.fulfilled, (state, action) => {
+        state.status = "success";
+        state.error = null;
+        state.isItemLoading = false;
+        state.item = action.payload;
+        state.userItems = state.userItems.map((item) => {
+          if (item.id === action.payload.id) {
+            return { ...item, ...action.payload };
+          }
+          return item;
+        });
+      })
+      .addCase(editItem.rejected, (state, action) => {
+        state.status = "failed";
         state.error = action.payload;
         state.isItemLoading = false;
         state.item = {};
@@ -137,19 +181,19 @@ const itemSlice = createSlice({
 
       // GETITEMLIST
       .addCase(getItemList.pending, (state) => {
-        state.status = 'loading';
+        state.status = "loading";
         state.error = null;
         state.isLoading = true;
         state.itemList = [];
       })
       .addCase(getItemList.fulfilled, (state, action) => {
-        state.status = 'success';
+        state.status = "success";
         state.error = null;
         state.isLoading = false;
         state.itemList = action.payload;
       })
       .addCase(getItemList.rejected, (state, action) => {
-        state.status = 'failed';
+        state.status = "failed";
         state.error = action.payload;
         state.isLoading = false;
         state.itemList = [];
@@ -157,31 +201,30 @@ const itemSlice = createSlice({
 
       // GETUSERITEMS
       .addCase(getUserItems.fulfilled, (state, action) => {
-        state.getItemListStatus = 'success';
+        state.getItemListStatus = "success";
         state.error = null;
         state.isUserItemsLoading = false;
         state.userItems = action.payload;
       })
       .addCase(getUserItems.rejected, (state, action) => {
-        state.getItemListStatus = 'failed';
+        state.getItemListStatus = "failed";
         state.error = action.payload;
         state.isUserItemsLoading = false;
         state.userItems = [];
       })
       .addCase(getUserItems.pending, (state) => {
-        state.getItemListStatus = 'loading';
+        state.getItemListStatus = "loading";
         state.error = null;
         state.isUserItemsLoading = true;
         state.userItems = [];
-      });
-  },
+      })
+  }
 });
 
 // Reducer
 export default itemSlice.reducer;
 
-//   deleteItem(state, action) {
-//       state.isLoading = false;
-//       state.itemList = filter(state.itemList, (c) => c.itemID !== action.payload);
-//     }
-// import { filter } from 'lodash';
+// Actions
+
+// Upload Image Item to Firebase Storage
+export const itemList = (state) => state.item.itemList

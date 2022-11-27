@@ -1,5 +1,6 @@
 import renderer from 'react-test-renderer';
-
+import { Provider } from 'react-redux';
+import { store } from '../../../app/store';
 import UserItemCard from '../UserItemCard';
 
 const MOCK_ITEM = {
@@ -13,7 +14,13 @@ const MOCK_ITEM = {
 
 describe('UserItemCard', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<UserItemCard item={MOCK_ITEM} />).toJSON();
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <UserItemCard item={MOCK_ITEM} />
+        </Provider>
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
