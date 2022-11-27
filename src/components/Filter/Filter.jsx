@@ -1,17 +1,17 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 import { useTranslation } from 'react-i18next';
 import MobileFilter from './MobileFilter';
 
-const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
+const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen, handleFilter }) => {
   const { t } = useTranslation();
-  const checkFilters = [
+  const [checkFilters, setCheckFilters] = useState([
     {
       id: 'category',
       name: t('filter.category.title'),
       options: [
-        { value: 'men', label: t('filter.category.men'), checked: true },
+        { value: 'men', label: t('filter.category.men'), checked: false },
         { value: 'women', label: t('filter.category.women'), checked: false },
         { value: 'kids', label: t('filter.category.kids'), checked: false },
         { value: 'toys', label: t('filter.category.toys'), checked: false },
@@ -27,48 +27,100 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
       id: 'type',
       name: t('filter.type.title'),
       options: [
-        { value: 'new', label: t('filter.type.new'), checked: true },
+        { value: 'new', label: t('filter.type.new'), checked: false },
         { value: 'used', label: t('filter.type.used'), checked: false },
         { value: 'donated', label: t('filter.type.donated'), checked: false },
         { value: 'crafted', label: t('filter.type.crafted'), checked: false },
       ],
     },
-  ];
-  const radioFilters = [
+  ]);
+  const [radioFilters, setRadioFilters] = useState([
     {
       id: 'price',
       name: t('filter.price'),
       options: [
-        { value: { min: '1', max: '25' }, label: '1$ - 25$', checked: false },
-        { value: { min: '26', max: '50' }, label: '26$ - 50$', checked: false },
+        { value: { min: 1, max: 25 }, label: '1$ - 25$', checked: false },
+        { value: { min: 26, max: 50 }, label: '26$ - 50$', checked: false },
         {
-          value: { min: '51', max: '100' },
+          value: { min: 51, max: 100 },
           label: '51$ - 100$',
           checked: false,
         },
         {
-          value: { min: '101', max: '200' },
+          value: { min: 101, max: 200 },
           label: '101$ - 200$',
           checked: false,
         },
         {
-          value: { min: '201', max: '400' },
+          value: { min: 201, max: 400 },
           label: '201$ - 400$',
           checked: false,
         },
         {
-          value: { min: '401', max: '800' },
+          value: { min: 401, max: 800 },
           label: '401$ - 800$',
           checked: false,
         },
         {
-          value: { min: '800' },
+          value: { min: 800 },
           label: '+800$',
           checked: false,
         },
       ],
     },
-  ];
+  ]);
+
+  const handleOnCheckChange = (sectionId, optionIndex) => {
+    const updatedFilters = checkFilters.map((section) => {
+      if (section.id === sectionId) {
+        const updatedOptions = section.options.map((option, index) => {
+          if (index === optionIndex) {
+            return { ...option, checked: !option.checked };
+          }
+          return option;
+        });
+        return { ...section, options: updatedOptions };
+      }
+      return section;
+    });
+    setCheckFilters(updatedFilters);
+  };
+
+  const handleOnRadioChange = (sectionId, optionIndex) => {
+    const updatedFilters = radioFilters.map((section) => {
+      if (section.id === sectionId) {
+        const updatedOptions = section.options.map((option, index) => {
+          if (index === optionIndex) {
+            return { ...option, checked: !option.checked };
+          }
+          return { ...option, checked: false };
+        });
+        return { ...section, options: updatedOptions };
+      }
+      return section;
+    });
+    setRadioFilters(updatedFilters);
+  };
+  const selectedCheckFilters = checkFilters.map((section) => {
+    const selectedOptions = section.options.filter((option) => option.checked);
+    return { ...section, options: selectedOptions };
+  });
+  const selectedRadioFilters = radioFilters.map((section) => {
+    const selectedOptions = section.options.filter((option) => option.checked);
+    return { ...section, options: selectedOptions };
+  });
+
+  const categoryOptions = selectedCheckFilters[0].options.length
+    ? selectedCheckFilters[0].options.map((option) => option.label)
+    : [];
+  const typeOptions = selectedCheckFilters[0].options.length
+    ? selectedCheckFilters[1].options.map((option) => option.label)
+    : [];
+  const priceOptions = selectedRadioFilters[0].options.length
+    ? selectedRadioFilters[0].options[0].value
+    : {};
+
+  handleFilter(categoryOptions, typeOptions, priceOptions);
   return (
     <div data-testid="filter" className="bg-background">
       <div>
@@ -117,7 +169,7 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
                             defaultChecked={option.checked}
                             className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
                             onChange={() =>
-                              handleOnChange(section.id, optionIdx)
+                              handleOnCheckChange(section.id, optionIdx)
                             }
                           />
                           <label
@@ -194,6 +246,9 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
                             type="radio"
                             defaultChecked={option.checked}
                             className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                            onChange={() =>
+                              handleOnRadioChange(section.id, optionIdx)
+                            }
                           />
                           <label
                             htmlFor={`filter-${section.id}-${optionIdx}`}

@@ -1,5 +1,5 @@
 import { FunnelIcon } from '@heroicons/react/20/solid';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Filter from '../../components/Filter/Filter';
 import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
@@ -8,12 +8,49 @@ import ItemDetailsPage from '../ItemDetailsPage/ItemDetailsPage';
 import AddItemButton from '../../components/AddItemButton/AddItemButton';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { user } from '../../features/slices/user';
-import { useSelector } from '../../app/store';
+import { dispatch, useSelector } from '../../app/store';
+import { getItemList, itemList } from '../../features/slices/item';
 
 const FilterPage = () => {
   const { firstName, lastName } = useSelector(user);
-  const [filter, setFilter] = useState({});
+  const allItems = useSelector(itemList);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const handleFilter = (category, type, price) => {
+    const filteredItems = allItems
+      .filter((item) => {
+        if (!category.length) {
+          return true;
+        } 
+          if (typeof item.category === 'string') {
+            return category.includes(item.category);
+          }
+          return item.category.some((cat) => category.includes(cat));
+        
+      })
+      .filter((item) => {
+        if (!type.length) {
+          return true;
+        }
+        return type.includes(item.type);
+      })
+      .filter((item) => {
+        
+        if (!price.min && !price.max) {
+          return true;
+        }
+        if (price.min && !price.max) {
+          return item.price >= price.min;
+        }
+        return item.price >= price.min && item.price <= price.max;
+      });
+
+    // eslint-disable-next-line no-console
+    console.log(filteredItems);
+  };
+  useEffect(() => {
+    dispatch(getItemList());
+  }, []);
+
   return (
     <motion.main
       className="mx-auto px-4 sm:px-6 lg:px-8 bg-background"
@@ -49,11 +86,11 @@ const FilterPage = () => {
       </div>
       <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 xl:grid-cols-5">
         <Filter
-          setFilter={setFilter}
+          handleFilter={handleFilter}
           mobileFiltersOpen={mobileFiltersOpen}
           setMobileFiltersOpen={setMobileFiltersOpen}
         />
-        <ItemsDisplay filter={filter} />
+        <ItemsDisplay items={allItems} />
       </div>
       <ItemDetailsPage />
     </motion.main>
