@@ -22,6 +22,7 @@ export default function EditItemModal({ item }) {
   const userData = useSelector(user);
   const { isItemLoading } = useSelector((state) => state.item);
   const [imgRef, setImgRef] = useState(item.file);
+  const [imgSrc, setImgSrc] = useState(item.file);
   const {
     register,
     handleSubmit,
@@ -161,7 +162,7 @@ export default function EditItemModal({ item }) {
                   <div className="flex relative  transition-all duration-300 cursor-pointer filter border-2 rounded-md border-dashed my-3  border-tertiary">
                     <img
                       className="rounded-lg max-h-28 m-1"
-                      src={`${item.file}`}
+                      src={imgSrc}
                       alt="item"
                     />
 
@@ -171,6 +172,7 @@ export default function EditItemModal({ item }) {
                       {...register('file')}
                       onChange={(e) => {
                         setImgRef(e.target.files[0]);
+                        setImgSrc(URL.createObjectURL(e.target.files[0]));
                       }}
                       className="w-full self-center text-xs text-background file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-background file:text-secondary m-2"
                     />
