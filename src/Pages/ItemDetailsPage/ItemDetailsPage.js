@@ -23,7 +23,7 @@ const ItemDetailsPage = () => {
     item && (
       <div
         data-testid="item-details-page"
-        className="md:flex text-background p-6 bg-background gap-4 h-screen w-full"
+        className="md:flex text-background p-20 bg-background gap-4 h-screen w-full"
       >
         <div className="w-full lg:w-1/2">
           <img
