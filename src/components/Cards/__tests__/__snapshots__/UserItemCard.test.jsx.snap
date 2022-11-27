@@ -45,7 +45,7 @@ exports[`UserItemCard renders correctly 1`] = `
               <img
                 alt=""
                 className="w-6 h-6 "
-                src="https://cdn.discordapp.com/attachments/1043477388589277264/1045145545250971779/recycle-bin.png"
+                src="https://cdn.discordapp.com/attachments/1043477388589277264/1045835010378321970/recycle-bin-removebg-preview.png"
               />
             </span>
             <span
