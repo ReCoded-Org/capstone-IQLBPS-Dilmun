@@ -27,7 +27,7 @@ exports[`Filter Component Renders Correctly 1`] = `
             <span
               class="font-medium text-primary"
             >
-              Category
+              filter.category.title
             </span>
             <span
               class="ml-6 flex items-center"
@@ -71,7 +71,7 @@ exports[`Filter Component Renders Correctly 1`] = `
                 class="ml-3 text-sm text-primary select-none"
                 for="filter-category-0"
               >
-                Men
+                filter.category.men
               </label>
             </div>
             <div
@@ -88,7 +88,7 @@ exports[`Filter Component Renders Correctly 1`] = `
                 class="ml-3 text-sm text-primary select-none"
                 for="filter-category-1"
               >
-                Women
+                filter.category.women
               </label>
             </div>
             <div
@@ -105,7 +105,7 @@ exports[`Filter Component Renders Correctly 1`] = `
                 class="ml-3 text-sm text-primary select-none"
                 for="filter-category-2"
               >
-                Kids
+                filter.category.kids
               </label>
             </div>
             <div
@@ -122,7 +122,7 @@ exports[`Filter Component Renders Correctly 1`] = `
                 class="ml-3 text-sm text-primary select-none"
                 for="filter-category-3"
               >
-                Toys
+                filter.category.toys
               </label>
             </div>
             <div
@@ -139,7 +139,7 @@ exports[`Filter Component Renders Correctly 1`] = `
                 class="ml-3 text-sm text-primary select-none"
                 for="filter-category-4"
               >
-                Electronics
+                filter.category.electronics
               </label>
             </div>
             <div
@@ -156,7 +156,7 @@ exports[`Filter Component Renders Correctly 1`] = `
                 class="ml-3 text-sm text-primary select-none"
                 for="filter-category-5"
               >
-                Home
+                filter.category.home
               </label>
             </div>
           </div>
@@ -179,7 +179,7 @@ exports[`Filter Component Renders Correctly 1`] = `
             <span
               class="font-medium text-primary"
             >
-              Type
+              filter.type.title
             </span>
             <span
               class="ml-6 flex items-center"
@@ -216,7 +216,7 @@ exports[`Filter Component Renders Correctly 1`] = `
             <span
               class="font-medium text-primary"
             >
-              Price
+              filter.price
             </span>
             <span
               class="ml-6 flex items-center"

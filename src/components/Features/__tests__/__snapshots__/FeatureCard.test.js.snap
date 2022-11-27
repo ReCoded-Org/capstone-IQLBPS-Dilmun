@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`feature card should be render 1`] = `
+<div
+  class="flex flex-col justify-center items-center "
+  data-testid="feature-card"
+>
+  <div
+    class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-secondary lg:h-12 lg:w-12"
+    data-testid="feature-card-icon"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <polygon
+        points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+      />
+    </svg>
+  </div>
+  <h3
+    class="mb-2 text-xl font-bold text-primary"
+    data-testid="feature-card-title"
+  >
+    Filter
+  </h3>
+  <p
+    class="text-primary"
+    data-testid="feature-card-paragraph"
+  >
+    Filter your items to find the right information.
+  </p>
+</div>
+`;

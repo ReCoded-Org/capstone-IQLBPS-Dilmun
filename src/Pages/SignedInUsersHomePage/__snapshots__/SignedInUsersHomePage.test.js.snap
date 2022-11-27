@@ -14,8 +14,8 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
       <h1
         class="text-2xl md:text-6xl font-bold text-center text-shadow"
       >
-        Welcome back,
-         
+        signed_in_home_page.welcome
+        ,
       </h1>
       <h1
         class="text-2xl md:text-6xl font-bold text-center mb-2"
@@ -27,7 +27,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
         class="md:text-3xl font-bold text-center"
       >
          
-        Dilmun is your best choice to buy or sell anything
+        signed_in_home_page.best_choice
       </h3>
       <div
         class="sm:flex justify-center gap-2 mt-2"
@@ -35,7 +35,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
         <span
           class=" flex items-center justify-center gap-2 font-bold md:text-2xl"
         >
-          Can't find what you need? Check our list
+          signed_in_home_page.cant_find
           <a
             href="/products"
           >
@@ -59,8 +59,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
         <span
           class=" flex items-center justify-center gap-2 font-bold md:text-2xl"
         >
-          or add an item
-           
+          signed_in_home_page.add_item
           <a
             href="/add-item"
           >
@@ -90,7 +89,7 @@ exports[`SignedInUsersHomePage renders without crashing 1`] = `
     <h1
       class="text-5xl font-bold my-7 text-center"
     >
-      Most Recent Items
+      signed_in_home_page.most_recent
     </h1>
     <div
       class="w-full px-5 lg:px-0 overflow-x-scroll scrollbar--none flex flex-col lg:flex-row gap-4"

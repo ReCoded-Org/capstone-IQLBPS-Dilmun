@@ -1,0 +1,225 @@
+{
+    "about_us": {
+        "meet_our_team": "تعرف على فريقنا"
+    },
+    "add_item_button": {
+        "add_item": "اضافة عنصر"
+    },
+    "add_item_form": {
+        "product_info": "معلومات المنتج",
+        "note": "ستتم إضافة منتجك إلى المتجر بعد تعبئة البيانات المطلوبة.",
+        "item_image": "صورة البند",
+        "upload_a_file": "قم بتحميل ملف",
+        "or_drag_and_drop": "أو السحب والإفلات",
+        "item_name": "اسم العنصر",
+        "item_price": "سعر",
+        "item_type": "نوع العنصر",
+        "item_category": "فئة العنصر",
+        "item_description": "وصف",
+        "adress_info": "معلومات العنوان",
+        "country": "بلد",
+        "city": "مدينة",
+        "add_new_item": "اضافة عنصر جديد"
+    },
+    "delete_item": "حذف البند",
+    "overlap_text": {
+        "check_out": "شاهد هذا الفيديو الذي صنعه أحد عملائنا الراضين",
+        "watch_full_video": "شاهد الفيديو كاملاً"
+    },
+    "faq": {
+        "frequently_asked_questions": "الأسئلة المتكررة",
+        "question_one_title": "هل يمكنني الحصول على معلومات عن المنتج قبل الشراء؟",
+        "question_one_answer": "يجب أن يكون هناك اتفاق بين العملاء والبائعين لتحديد كيفية إرجاع العناصر وموظفينا ليسوا مسؤولين عنها.",
+        "question_two_title": "هل يمكنني إلغاء طلبي؟",
+        "question_two_answer": "بالتأكيد! يمكنك إلغاء طلبك في غضون 12 ساعة الأولى.",
+        "question_three_title": "ما هي طرق الدفع التي تأخذها؟",
+        "question_three_answer": "يمكنك الدفع عبر الإنترنت عن طريق بطاقة الائتمان أو الدفع عند الباب أثناء التعامل مع البائع.",
+        "question_four_title": "كيف أتتبع طلبي؟",
+        "question_four_answer": "يمكنك الحصول على رقم هاتف الشركة التي تقوم بالتوصيل واسألهم عن مكان طلبك.",
+        "question_five_title": "ما هي سياسة التأخر في تسليم / عدم تسليم العناصر المطلوبة عبر الإنترنت؟",
+        "question_five_answer": "سيكون فريق خدمة العملاء لدينا متواجدًا دائمًا لحل مشكلتك ، يمكنك الاتصال بنا."
+    },
+    "features": {
+        "designed_to_meet_your_needs": "مصممة لتلبية احتياجاتك.",
+        "description": "هنا في دلمون نبيع العديد من المنتجات للعملاء ونقبل التبرعات لمساعدة المحتاجين.",
+        "feature_one_title": "فلتر",
+        "feature_one_description": "تصفية العناصر الخاصة بك للعثور على المعلومات الصحيحة.",
+        "feature_two_title": "متعدد اللغات",
+        "feature_two_description": "استخدم الموقع بلغتك المفضلة.",
+        "feature_three_title": "قابل / اجتمع",
+        "feature_three_description": "تعرف على أشخاص جدد وقم بإجراء اتصالات جديدة."
+    },
+    "filter": {
+        "filters": "المرشحات",
+        "category": {
+            "title": "الفئة",
+            "men": "رجال",
+            "women": "النساء",
+            "kids": "أطفال",
+            "toys": "ألعاب الأطفال",
+            "electronics": "إلكترونيات",
+            "home": "ادوات منزلية"
+        },
+        "type": {
+            "title": "أنواع",
+            "new": "الجديد",
+            "used": "مستخدم",
+            "donated": "للتبرع",
+            "crafted": "صناعة يدوية"
+        },
+        "price": "سعر",
+        "apply": "طبّق"
+    },
+    "footer": {
+        "designed_to_meet_your_needs": "مصممة لتلبية احتياجاتك.",
+        "quick_links": "روابط سريعة",
+        "home": "الصفحه الرئيسيه",
+        "meet_the_team": "تعرّف على الفريق",
+        "faq": "التعليمات",
+        "contact_us": "اتصل بنا",
+        "send_feedback": "ارسل رأيك"
+    },
+    "hero": {
+        "welcome_to_dilmun": "مرحبا بكم في دلمون",
+        "your_way": "طريقك للحصول على منتجات عالية الجودة!",
+        "get_started": "ابدأ الآن"
+    },
+    "email_owner": "إرسال بريد إلكتروني إلى مالك",
+    "edit_item_form": {
+        "edit_item": "تحرير عنصر",
+        "edit_item_info": "تحرير معلومات العنصر",
+        "edit_item_image": "تحرير صورة العنصر",
+        "edit_item_name": "تحرير اسم العنصر",
+        "edit_item_type": "تحرير نوع العنصر",
+        "can_not_edit_item_price": "عذرا ، لا يمكن تعديل سعر البند.",
+        "edit_item_category": "تحرير فئة العنصر",
+        "edit_item_description": "تحرير الوصف",
+        "update_info": "تحديث المعلومات",
+        "cancel": "إلغاء"
+    },
+    "navbar": {
+        "home": "الصفحة الرئيسية",
+        "products": "منتجات",
+        "about": "حول",
+        "profile": "الملف الشخصي",
+        "sign_in": "تسجيل الدخول",
+        "log_out": "تسجيل خروج"
+    },
+    "news_letter": {
+        "subscribe_to_our_newsletter": "اشترك في النشرة<br /> الإخبارية",
+        "description": "اشترك في النشرة الإخبارية لدينا وابقى على اطلاع",
+        "email": "اكتب بريدك الإلكتروني هنا",
+        "subscribe": "اشترك"
+    },
+    "profile": {
+        "edit_your_profile": "عدل ملفك الشخصي",
+        "profile_picture_upload": "تحميل صورة الملف الشخصي",
+        "background_picture_upload": "تحميل صورة الخلفية",
+        "attach_a_file": "إرفاق ملف",
+        "upload": "تحميل",
+        "'first_name": "الاسم الاول",
+        "last_name": "الكنية",
+        "country": "دولة",
+        "city": "مدينة",
+        "save": "يحفظ",
+        "cancel": "يلغي",
+        "my_items": "حاجياتي",
+        "add_new_item": "أضف أداة جديدة"
+    },
+    "proof": {
+        "our_partners": "شركائنا",
+        "what_they_say": "ما يقوله الناس <br className='block' /> عنا",
+        "everything_you_need": " كل ما تحتاج لمعرفته حول أعمالنا ومنتجاتنا في أي مكان على هذا الكوكب.",
+        "feedback_one_title": "زبون",
+        "feedback_one_description": "لقد أجريت عمليات شراء متعددة وكانت كل عملية شراء رائعة! الاختيار الذي يقدمونه متنوع للغاية ويمكنني قضاء ساعات في البحث في جميع العناصر.",
+        "feedback_one_name": "Herman Jensen",
+        "feedback_two_title": "زبون",
+        "feedback_two_description": "شعرت كل عملية شراء بالأمان وتم استلام جميع العناصر في الوقت المناسب. يا له من مكان رائع لعرض منتجات وسلع العمل!",
+        "feedback_two_name": "Steve Mark",
+        "feedback_three_title": "زبون",
+        "feedback_three_description": "لقد وجدت أن دلمون كانت محترفة للغاية وقدمت منتجًا عالي الجودة في إطار زمني فعال. سأفكر في التسوق معهم مرة أخرى.",
+        "feedback_three_name": "Kenn Gallagher"
+    },
+    "search_bar": {
+        "search_here": "ابحث هنا...",
+        "submit": "ارسال"
+    },
+    "sign_in": {
+        "sign_in": "تسجيل الدخول",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "dont_have_account": "ليس لديك حساب؟ ",
+        "sign_up": "اشتراك",
+        "or": "أو",
+        "sign_in_with": "سجل دخولك بواسطة"
+    },
+    "sign_up": {
+        "sign_up": "اشتراك",
+        "first_name": "الاسم الاول",
+        "last_name": "الكنية",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "confirm_password": "تأكيد كلمة المرور",
+        "already_have_account": "هل لديك حساب؟",
+        "sign_in": "الدخول",
+        "or": "أو",
+        "sign_up_with": "سجل مع"
+    },
+    "sort": {
+        "sort": "فرز",
+        "most_popular": "الأكثر شهرة",
+        "best_rating": "افضل تقييم",
+        "trending": "الشائع",
+        "last_7_days": "اخر 7 ايام",
+        "last_30_days": "آخر 30 يومًا",
+        "coming_soon": "قريبا",
+        "price_free": "مجاني",
+        "price_low_to_high": "السعر من الارخص للاعلى",
+        "price_high_to_low": "السعر الاعلى الى الادنى"
+    },
+    "not_found": "ربما انتقلت هذه الصفحة؟ هل تم حذفه؟ <br /> هل يختبئ في الحجر الصحي؟ لم تكن موجودة في المقام الأول؟",
+    "error": {
+        "title": "الرجاء إدخال اسم العنصر.",
+        "price": "الرجاء إدخال رقم موجب.",
+        "description": "الرجاء إضافة وصف",
+        "country": "الرجاء إدخال اسم الدولة.",
+        "city": "الرجاء إدخال اسم المدينة.",
+        "email": "الرجاء إدخال البريد الإلكتروني الخاص بك",
+        "valid_email": "يجب أن يكون بريدًا إلكترونيًا صالحًا",
+        "exist_email": "البريد الالكتروني موجود بالفعل",
+        "password": "الرجاء إدخال كلمة المرور الخاصة بك",
+        "confirm_password": "الرجاء تأكيد كلمة المرور",
+        "confirm_password_required": "الرجاء إدخال تأكيد كلمة المرور",
+        "min_password": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل",
+        "max_password": "يجب ألا تزيد كلمة المرور عن 15 حرفًا",
+        "first_name": "الرجاء إدخال اسمك الأول",
+        "last_name": "الرجاء إدخال اسمك الأخير",
+        "full_name": "الرجاء إدخال اسمك الكامل"
+    },
+    "contact_us": {
+        "loading_message": "أرجو الإنتظار..",
+        "succeeded_message": "شكرا لك على ملاحظاتك",
+        "failed_message": "لم نتمكن من حفظ ملاحظاتك ، يرجى المحاولة لاحقًا",
+        "lets_talk": "لنتحدث عن كل شيء!",
+        "give_us": "أعطنا تقييمك",
+        "full_name": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "message": "رسالة",
+        "send": "إرسال"
+    },
+    "items_details": {
+        "price": "سعر:",
+        "item_type": "نوع العنصر:",
+        "country": "دولة:",
+        "address": "تبوك:",
+        "description": "وصف:",
+        "email_owner": "إرسال البريد الإلكتروني لصاحب"
+    },
+    "signed_in_home_page": {
+        "welcome": "مرحبًا بعودتك",
+        "best_choice": "دلمون هي خيارك الأفضل لشراء أو بيع أي شيء",
+        "cant_find": "لا تجد ما تحتاجه؟ تحقق من قائمتنا",
+        "add_item": "أو إضافة عنصر",
+        "most_recent": "أحدث العناصر"
+    }
+}

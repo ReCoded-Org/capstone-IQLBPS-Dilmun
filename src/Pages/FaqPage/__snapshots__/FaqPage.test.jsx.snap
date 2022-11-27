@@ -16,7 +16,7 @@ exports[`FAQ renders correctly 1`] = `
     <h2
       className="text-4xl mb-10 text-primary font-bold text-center"
     >
-      Frequently Asked Questions
+      faq.frequently_asked_questions
     </h2>
     <div
       className="max-w-7xl mx-auto px-4 py-10 lg:max-h-100 flex flex-col-reverse lg:flex-row gap-4 justify-between items-center"
@@ -37,7 +37,7 @@ exports[`FAQ renders correctly 1`] = `
           <span
             className="w-3/4 md:w-full"
           >
-            What is the return policy?
+            faq.question_one_title
           </span>
           <svg
             className="rotate-180 duration-200 transform h-5 w-5"
@@ -67,7 +67,7 @@ exports[`FAQ renders correctly 1`] = `
           <span
             className="w-3/4 md:w-full"
           >
-            Can I cancel my order?
+            faq.question_two_title
           </span>
           <svg
             className="rotate-180 duration-200 transform h-5 w-5"
@@ -97,7 +97,7 @@ exports[`FAQ renders correctly 1`] = `
           <span
             className="w-3/4 md:w-full"
           >
-            What methods of payment you take?
+            faq.question_three_title
           </span>
           <svg
             className="rotate-180 duration-200 transform h-5 w-5"
@@ -127,7 +127,7 @@ exports[`FAQ renders correctly 1`] = `
           <span
             className="w-3/4 md:w-full"
           >
-            How do I track my order?
+            faq.question_four_title
           </span>
           <svg
             className="rotate-180 duration-200 transform h-5 w-5"
@@ -157,7 +157,7 @@ exports[`FAQ renders correctly 1`] = `
           <span
             className="w-3/4 md:w-full"
           >
-            What is the policy for late/non-delivery of items ordered online?
+            faq.question_five_title
           </span>
           <svg
             className="rotate-180 duration-200 transform h-5 w-5"
