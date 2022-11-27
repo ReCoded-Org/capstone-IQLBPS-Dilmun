@@ -1,9 +1,10 @@
 import Tooltip from '../Tooltip/Tooltip';
 
-function DeleteItemButton() {
+function DeleteItemButton({handleClick}) {
   return (
     <Tooltip text="Delete item">
       <button
+      onClick={handleClick}
         type="button"
         className="relative inline-flex items-center justify-center p-1 px-1 py-2 overflow-hidden transition duration-300 ease-out rounded-full group" >
         <span

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { doc, deleteDoc } from "firebase/firestore";
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import { user } from '../../features/slices/user';
@@ -11,7 +10,7 @@ import { UserItemCard } from '../Cards';
 import Form from "./Form";
 import { useDispatch } from '../../app/store';
 import { getUserItems } from '../../features/slices/item';
-import { db } from '../../firebase-config';
+
 
 
 
@@ -40,10 +39,7 @@ function Profile() {
       setUserCountry(capitalizeCountry)
     }
   })
-  const deleteItem = async (id) => {
-    await deleteDoc(doc(db, "Items", id));
-    console.log('deleted')
-  }
+ 
 
   return (
     <div
@@ -107,7 +103,7 @@ function Profile() {
           </div>
           <div className="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl	">
             {userItems.length > 0 && userItems.map((item) => (
-              <UserItemCard key={item.id} item={item} deleteItem={() => deleteItem(item.id)} />
+              <UserItemCard key={item.id} item={item}/>
             ))}
           </div>
           <Link className='w-full text-center' to={ADD_ITEM_ROUTE}>

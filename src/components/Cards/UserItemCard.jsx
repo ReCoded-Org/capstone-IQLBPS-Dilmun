@@ -1,11 +1,24 @@
+import { doc, deleteDoc } from "firebase/firestore";
+import { useSelector } from "react-redux";
 import Tooltip from '../Tooltip/Tooltip';
 import DeleteItemButton from '../DeleteItemButton/DeleteItemButton';
 import EditItemModal from '../ItemEditForm/EditItemModal';
+import { db } from '../../firebase-config';
 
-function UserItemCard(props, { deleteItem }) {
+
+function UserItemCard(props) {
+  const userData = useSelector((state) => state.user.user)
+
   const { item } = props;
   // destructure the item object to use values in the JSX
-  const { title, file, description, price, type, categories } = item;
+  const { title, file, description, price, type, categories, id } = item;
+
+  const deleteItem = async (userId, itemId) => {
+    await deleteDoc(doc(db, "Items", itemId));
+    await deleteDoc(doc(db, 'Users', userId, 'Items', itemId))
+    await alert('Deleted')
+  }
+
 
 
   return (
@@ -21,7 +34,8 @@ function UserItemCard(props, { deleteItem }) {
         <div className="flex justify-between item-center">
           <p className="text-secondary font-medium text-lg">{type}</p>
           <div className="flex gap-2 justify-between items-center">
-            <DeleteItemButton onClick={deleteItem} />
+            <DeleteItemButton handleClick={() => deleteItem(userData.uid, id)} />
+
             <Tooltip text="Edit Item">
               <EditItemModal />
             </Tooltip>
