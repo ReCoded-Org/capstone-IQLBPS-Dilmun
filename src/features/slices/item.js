@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { addDoc, collection, doc, setDoc, getDocs } from 'firebase/firestore';
+import { addDoc, collection, doc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import moment from 'moment';
 import { db, storage } from '../../firebase-config';
@@ -67,23 +67,35 @@ export const getUserItems = createAsyncThunk(
 export const getItemList = createAsyncThunk(
   'item/getItemList', async () => {
     try {
-        const docRef = collection(db, 'Items');
-        const docSnap = await getDocs(docRef);
-        const itemData = docSnap.docs.map((item) => {
-          return { ...item.data(), id: item.id };
-        });
-        return itemData;
+      const docRef = collection(db, 'Items');
+      const docSnap = await getDocs(docRef);
+      const itemData = docSnap.docs.map((item) => {
+        return { ...item.data(), id: item.id };
+      });
+      return itemData;
     } catch (error) {
       return error.message
     }
   }
-  )
-  
+)
+
+export const deleteItem = createAsyncThunk(
+  'item/deleteItem', async (payload) => {
+    console.log('item-id ', payload.itemId);
+    console.log('spacee');
+    console.log('user-id ', payload.userId);
+    await deleteDoc(doc(db, "Items", payload.itemId));
+    await deleteDoc(doc(db, 'Users', payload.userId, 'Items', payload.itemId))
+    await console.log('deleted');
+    return payload.itemId
+  }
+)
+
 const initialState = {
   isItemLoading: false,
   isUserItemsLoading: false,
-  getItemListStatus : 'idle',
-  addItemStatus : 'idle',
+  getItemListStatus: 'idle',
+  addItemStatus: 'idle',
   status: 'idle',
   error: null,
   item: {},
@@ -101,65 +113,70 @@ const itemSlice = createSlice({
       state.error = null;
     },
   },
-  extraReducers:(builder) => {
+  extraReducers: (builder) => {
     builder.addCase(addItem.pending, (state) => {
       state.addItemStatus = 'loading';
       state.error = null;
       state.isItemLoading = true;
       state.item = {};
     })
-    .addCase(addItem.fulfilled, (state, action) => {
-      state.addItemStatus = "success";
-      state.error= null;
-      state.isItemLoading = false;
-      state.item = action.payload;
-    })
-    .addCase(addItem.rejected, (state, action) => {
-      state.addItemStatus= "failed";
-      state.error = action.payload;
-      state.isItemLoading = false;
-      state.item = {};
-    })
+      .addCase(addItem.fulfilled, (state, action) => {
+        state.addItemStatus = "success";
+        state.error = null;
+        state.isItemLoading = false;
+        state.item = action.payload;
+      })
+      .addCase(addItem.rejected, (state, action) => {
+        state.addItemStatus = "failed";
+        state.error = action.payload;
+        state.isItemLoading = false;
+        state.item = {};
+      })
 
-    // GETITEMLIST
-    .addCase(getItemList.pending, (state) => {
-      state.status= "loading";
-      state.error = null;
-      state.isLoading = true;
-      state.itemList = [];
-    })
-    .addCase(getItemList.fulfilled, (state, action) => {
-      state.status= "success";
-      state.error = null;
-      state.isLoading = false;
-      state.itemList = action.payload;
-    })
-    .addCase(getItemList.rejected, (state, action) => {
-      state.status= "failed";
-      state.error = action.payload;
-      state.isLoading = false;
-      state.itemList = [];
-    })
+      // GETITEMLIST
+      .addCase(getItemList.pending, (state) => {
+        state.status = "loading";
+        state.error = null;
+        state.isLoading = true;
+        state.itemList = [];
+      })
+      .addCase(getItemList.fulfilled, (state, action) => {
+        state.status = "success";
+        state.error = null;
+        state.isLoading = false;
+        state.itemList = action.payload;
+      })
+      .addCase(getItemList.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.payload;
+        state.isLoading = false;
+        state.itemList = [];
+      })
 
-    // GETUSERITEMS
-    .addCase(getUserItems.fulfilled, (state, action) => {
-      state.getItemListStatus= "success";
-      state.error = null;
-      state.isUserItemsLoading = false;
-      state.userItems = action.payload;
-    })
-    .addCase(getUserItems.rejected, (state, action) => {
-      state.getItemListStatus= "failed";
-      state.error = action.payload;
-      state.isUserItemsLoading = false;
-      state.userItems = [];
-    })
-    .addCase(getUserItems.pending, (state) => {
-      state.getItemListStatus= "loading";
-      state.error = null;
-      state.isUserItemsLoading = true;
-      state.userItems = [];
-    })
+      // GETUSERITEMS
+      .addCase(getUserItems.fulfilled, (state, action) => {
+        state.getItemListStatus = "success";
+        state.error = null;
+        state.isUserItemsLoading = false;
+        state.userItems = action.payload;
+      })
+      .addCase(getUserItems.rejected, (state, action) => {
+        state.getItemListStatus = "failed";
+        state.error = action.payload;
+        state.isUserItemsLoading = false;
+        state.userItems = [];
+      })
+      .addCase(getUserItems.pending, (state) => {
+        state.getItemListStatus = "loading";
+        state.error = null;
+        state.isUserItemsLoading = true;
+        state.userItems = [];
+      })
+
+      // DELTEITEM
+      .addCase(deleteItem.fulfilled, (state) => {
+        state.error = null
+      })
   }
 });
 
@@ -169,4 +186,4 @@ export default itemSlice.reducer;
 // Actions
 
 // Upload Image Item to Firebase Storage
-  export const itemList = (state) => state.item.itemList
+export const itemList = (state) => state.item.itemList
