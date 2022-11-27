@@ -20,10 +20,12 @@ export default function EditItemModal({ item }) {
   const [imgRef, setImgRef] = useState(item.file);
   const [imgSrc, setImgSrc] = useState(item.file);
   const { t } = useTranslation();
+  
   const schema = yup.object().shape({
-    name: yup.string().required(t('error.title')),
-    desc: yup.string().required(t('error.description')),
+    title: yup.string().required(t('error.title')),
+    description: yup.string().required(t('error.description')),
   });
+
   const {
     register,
     handleSubmit,
