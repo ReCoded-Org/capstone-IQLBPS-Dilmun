@@ -38,7 +38,6 @@ export const addItem = createAsyncThunk(
       };
       // add item to user collection as subcollection
       const docRef = await addDoc(collection(db, 'Items'), data);
-      await addDoc(collection(db, 'Items'), data);
       await setDoc(doc(db, 'Users', owner.uid, 'Items', docRef.id), data);
       return true;
     } catch (error) {
