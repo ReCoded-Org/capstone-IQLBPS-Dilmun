@@ -39,11 +39,11 @@ const FilterPage = () => {
         <h1 className="text-2xl xl:text-3xl text-center tracking-tight text-primary">
           Welcome
           {firstName ? (
-            <span className="font-bold">{` ${firstName} ${lastName}`}</span>
+            <span className="font-bold">{` ${firstName} ${lastName}`}, </span>
           ) : (
             ''
           )}{' '}
-          hope to find the items that you need.
+          hope you find the items you need.
         </h1>
         <SearchBar />
       </div>
