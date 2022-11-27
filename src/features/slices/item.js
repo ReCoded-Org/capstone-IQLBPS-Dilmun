@@ -80,7 +80,7 @@ export const getUserItems = createAsyncThunk(
       const items = [];
       const querySnapshot = await getDocs(collection(db, 'Users', uid, 'Items'));
       querySnapshot.forEach((item) => {
-        items.push({ id: item.id, title: item.data().title, file: item.data().file, price: item.data().price, description: item.data().description, category: item.data().category, type: item.data().type });
+        items.push({ id: item.id, title: item.data().title, file: item.data().file, price: item.data().price, description: item.data().description, category: item.data().category, type: item.data().type, createdAt: item.data().createdAt });
       });
       return items;
     } catch (error) {

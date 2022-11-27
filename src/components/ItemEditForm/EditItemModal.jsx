@@ -38,6 +38,7 @@ export default function EditItemModal({ item }) {
       category: item.category,
       description: item.description,
       price: item.price,
+      createdAt: item.createdAt,
     },
   });
 
