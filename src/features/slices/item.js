@@ -29,7 +29,7 @@ export const addItem = createAsyncThunk(
       const data = {
         file,
         title: item.title,
-        price: `${item.price} $`,
+        price: item.price,
         description: item.description,
         category: (typeof item.category) === 'string' ? item.category : [...item.category],
         type: item.type,
