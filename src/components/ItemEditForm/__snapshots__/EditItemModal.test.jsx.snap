@@ -8,10 +8,6 @@ exports[`Add item form component rendered correctly 1`] = `
   <button
     type="button"
   >
-<<<<<<< HEAD
-    edit_item_form.edit_item
-=======
->>>>>>> f577c515f4f30ee0ac90b3d01a65eaf2ec5156e9
     <svg
       class="h-8 w-8 text-primary"
       fill="currentColor"

@@ -10,7 +10,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     data-testid="hero-section"
   >
     <div
-      class="backdrop-blur-md w-full h-full flex flex-col justify-center text-center"
+      class="backdrop-blur-md w-full h-full  flex flex-col justify-center text-center"
     >
       <div
         class=" text-bg-black md:mx-0 mx-4"

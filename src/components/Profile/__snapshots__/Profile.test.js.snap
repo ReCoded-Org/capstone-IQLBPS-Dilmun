@@ -30,19 +30,6 @@ exports[`Profile Rendered Correctly 1`] = `
       >
          
       </h1>
-<<<<<<< HEAD
-      <h3
-        class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1"
-      >
-        profile.country
-        , 
-        profile.city
-      </h3>
-      <h5
-        class="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary flex flex-row m-1"
-      />
-=======
->>>>>>> f577c515f4f30ee0ac90b3d01a65eaf2ec5156e9
       <button
         class="text-primary hover:text-secondary"
         type="button"
@@ -90,11 +77,7 @@ exports[`Profile Rendered Correctly 1`] = `
           class="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
           type="button"
         >
-<<<<<<< HEAD
           profile.add_new_item
-=======
-          Add New Item
->>>>>>> f577c515f4f30ee0ac90b3d01a65eaf2ec5156e9
         </button>
       </a>
     </div>
