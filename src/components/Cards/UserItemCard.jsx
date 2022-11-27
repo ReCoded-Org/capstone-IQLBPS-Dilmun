@@ -11,17 +11,14 @@ import { deleteItem } from "../../features/slices/item";
 
 function UserItemCard(props) {
   const userData = useSelector((state) => state.user.user)
-  const items = useSelector((state) => state.item.itemList)
   const dispatch = useDispatch()
   const { item } = props;
   // destructure the item object to use values in the JSX
   const { title, file, description, price, type, categories, id } = item;
 
   const handleDelete = (itemId, userId) => {
-    console.log(items);
-    console.log('from userItem ', userId);
     dispatch(deleteItem({ itemId, userId }))
-    console.log(items)
+
   }
 
   return (

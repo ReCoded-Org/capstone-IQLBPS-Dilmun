@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { filter } from 'lodash';
 import { addDoc, collection, doc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import moment from 'moment';
@@ -81,12 +82,8 @@ export const getItemList = createAsyncThunk(
 
 export const deleteItem = createAsyncThunk(
   'item/deleteItem', async (payload) => {
-    console.log('item-id ', payload.itemId);
-    console.log('spacee');
-    console.log('user-id ', payload.userId);
     await deleteDoc(doc(db, "Items", payload.itemId));
     await deleteDoc(doc(db, 'Users', payload.userId, 'Items', payload.itemId))
-    await console.log('deleted');
     return payload.itemId
   }
 )
@@ -174,8 +171,9 @@ const itemSlice = createSlice({
       })
 
       // DELTEITEM
-      .addCase(deleteItem.fulfilled, (state) => {
+      .addCase(deleteItem.fulfilled, (state, action) => {
         state.error = null
+        state.userItems = filter(state.userItems, (c) => c.id !== action.payload);
       })
   }
 });
