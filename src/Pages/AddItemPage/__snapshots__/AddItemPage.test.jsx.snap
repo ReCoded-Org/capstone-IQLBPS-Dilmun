@@ -23,12 +23,12 @@ exports[`Add item page rendered correctly 1`] = `
             <h3
               class="text-2xl font-bold text-primary"
             >
-              Product Info
+              add_item_form.product_info
             </h3>
             <p
               class="mt-1 text-base text-secondary font-semibold"
             >
-              Your product will be added to the store after filling the required information.
+              add_item_form.note
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ exports[`Add item page rendered correctly 1`] = `
                   <p
                     class="block text-sm font-medium text-background"
                   >
-                    Item Image
+                    add_item_form.item_image
                   </p>
                   <div
                     class="mt-1 flex justify-center rounded-md border-2 border-dashed border-tertiary px-6 pt-5 pb-6"
@@ -78,7 +78,7 @@ exports[`Add item page rendered correctly 1`] = `
                           for="file"
                         >
                           <span>
-                            Upload a file
+                            add_item_form.upload_a_file
                           </span>
                           <input
                             accept="image/*"
@@ -91,7 +91,7 @@ exports[`Add item page rendered correctly 1`] = `
                         <p
                           class="pl-1"
                         >
-                          or drag and drop
+                          add_item_form.or_drag_and_drop
                         </p>
                       </div>
                       <p
@@ -121,7 +121,7 @@ exports[`Add item page rendered correctly 1`] = `
                         class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                         for="title"
                       >
-                        Item Name
+                        add_item_form.item_name
                       </label>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ exports[`Add item page rendered correctly 1`] = `
                         class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                         for="price"
                       >
-                        Price $
+                        add_item_form.item_price
                       </label>
                     </div>
                   </div>
@@ -154,7 +154,7 @@ exports[`Add item page rendered correctly 1`] = `
                   <span
                     class="block text-sm font-medium text-background"
                   >
-                    Item Type
+                    add_item_form.item_type
                   </span>
                   <div
                     class="w-full mt-4"
@@ -206,7 +206,7 @@ exports[`Add item page rendered correctly 1`] = `
                   <span
                     class="block text-sm font-medium text-background"
                   >
-                    Item Category
+                    add_item_form.item_category
                   </span>
                   <div
                     class="w-full"
@@ -272,7 +272,7 @@ exports[`Add item page rendered correctly 1`] = `
                     class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm "
                     for="description"
                   >
-                    Description
+                    add_item_form.item_description
                   </label>
                 </div>
               </div>
@@ -280,7 +280,7 @@ exports[`Add item page rendered correctly 1`] = `
                 <h1
                   class="block text-sm font-medium text-background mb-3"
                 >
-                  Address Info
+                  add_item_form.adress_info
                 </h1>
                 <div
                   class="relative border-2 rounded-md mb-2 text-background border-tertiary  "
@@ -295,7 +295,7 @@ exports[`Add item page rendered correctly 1`] = `
                     class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                     for="country"
                   >
-                    Country
+                    add_item_form.country
                   </label>
                 </div>
                 <div
@@ -311,7 +311,7 @@ exports[`Add item page rendered correctly 1`] = `
                     class="absolute top-0 left-0 flex items-center text-tertiary text-opacity-50 p-2 transition-all duration-200 ease-in-out text-sm  "
                     for="city"
                   >
-                    City
+                    add_item_form.city
                   </label>
                 </div>
               </div>
@@ -323,7 +323,7 @@ exports[`Add item page rendered correctly 1`] = `
                 class="shadow-lg justify-center py-2 px-4 border border-secondary rounded-md text-sm font-medium text-background bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
                 type="submit"
               >
-                Add New Item
+                add_item_form.add_new_item
               </button>
             </div>
           </div>

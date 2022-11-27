@@ -18,11 +18,7 @@ exports[`render NewsLetter correctly 1`] = `
       />
       <h1
         class="text-[40px] mb-3 sm:mb-0 lg:text-start text-center"
-      >
-        Subscribe to our 
-        <br />
-         Newsletter!
-      </h1>
+      />
     </div>
     <div
       class="mt-4 flex flex-col items-center justify-center"
@@ -30,11 +26,7 @@ exports[`render NewsLetter correctly 1`] = `
       <p
         class="text-primary mb-5 lg:text-end text-center"
       >
-        Subscribe to our newsletter and stay
-        <br
-          class="sm:block hidden"
-        />
-        updated.
+        news_letter.description
       </p>
       <div
         class="items-center"
@@ -43,7 +35,7 @@ exports[`render NewsLetter correctly 1`] = `
           <input
             class="rounded p-1 w-full lg:w-fit md:p-2 mb-3 lg:mb-0 placeholder:text-tertiary border border-solid mr-2"
             name="email"
-            placeholder="Write your email here"
+            placeholder="news_letter.email"
             required=""
             type="text"
           />
@@ -51,7 +43,7 @@ exports[`render NewsLetter correctly 1`] = `
             class="bg-tertiary px-2 py-2 w-full lg:w-auto text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer"
             type="submit"
           >
-            Subscribe
+            news_letter.subscribe
           </button>
         </form>
       </div>

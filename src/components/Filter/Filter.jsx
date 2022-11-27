@@ -1,94 +1,74 @@
 import { Fragment, useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
+import { useTranslation } from 'react-i18next';
 import MobileFilter from './MobileFilter';
 
-const radioFilters = [
-  {
-    id: 'price',
-    name: 'Price',
-    options: [
-      { value: { min: '1', max: '25' }, label: '1$ - 25$', checked: false },
-      { value: { min: '26', max: '50' }, label: '26$ - 50$', checked: false },
-      { value: { min: '51', max: '100' }, label: '51$ - 100$', checked: false },
-      {
-        value: { min: '101', max: '200' },
-        label: '101$ - 200$',
-        checked: false,
-      },
-      {
-        value: { min: '201', max: '400' },
-        label: '201$ - 400$',
-        checked: false,
-      },
-      {
-        value: { min: '401', max: '800' },
-        label: '401$ - 800$',
-        checked: false,
-      },
-      {
-        value: { min: '800' },
-        label: '+800$',
-        checked: false,
-      },
-    ],
-  },
-];
-
-const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen, setFilter }) => {
-  const [checkFilters, setCheckFilters] = useState([
+const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
+  const { t } = useTranslation();
+  const checkFilters = [
     {
       id: 'category',
-      name: 'Category',
+      name: t('filter.category.title'),
       options: [
-        { value: 'men', label: 'Men', checked: true },
-        { value: 'women', label: 'Women', checked: false },
-        { value: 'kids', label: 'Kids', checked: false },
-        { value: 'toys', label: 'Toys', checked: false },
-        { value: 'electronics', label: 'Electronics', checked: false },
-        { value: 'home', label: 'Home', checked: false },
+        { value: 'men', label: t('filter.category.men'), checked: true },
+        { value: 'women', label: t('filter.category.women'), checked: false },
+        { value: 'kids', label: t('filter.category.kids'), checked: false },
+        { value: 'toys', label: t('filter.category.toys'), checked: false },
+        {
+          value: 'electronics',
+          label: t('filter.category.electronics'),
+          checked: false,
+        },
+        { value: 'home', label: t('filter.category.home'), checked: false },
       ],
     },
     {
       id: 'type',
-      name: 'Type',
+      name: t('filter.type.title'),
       options: [
-        { value: 'new', label: 'New', checked: true },
-        { value: 'used', label: 'Used', checked: false },
-        { value: 'donated', label: 'Donated', checked: false },
-        { value: 'crafted', label: 'Crafted', checked: false },
+        { value: 'new', label: t('filter.type.new'), checked: true },
+        { value: 'used', label: t('filter.type.used'), checked: false },
+        { value: 'donated', label: t('filter.type.donated'), checked: false },
+        { value: 'crafted', label: t('filter.type.crafted'), checked: false },
       ],
     },
-  ]);
-  const handleOnChange = (sectionId, optionIndex) => {
-    const newCheckFilters = checkFilters.map((section) => {
-      if (section.id === sectionId) {
-        const newOptions = section.options.map((option, index) => {
-          if (index === optionIndex) {
-            return { ...option, checked: !option.checked };
-          }
-          return option;
-        });
-        return { ...section, options: newOptions };
-      }
-      return section;
-    });
-    
-    console.log('newCheckFilters', newCheckFilters);
-    setCheckFilters(newCheckFilters);
-  };
-  const handleFilter = () => {
-    const newCheckFilters = checkFilters.map((section) => ({
-      ...section,
-      options: section.options.filter((option) => option.checked),
-    }));
-    setFilter(newCheckFilters);
-  };
-
-  useEffect(() => {
-    handleFilter();
-  }, [checkFilters]);
-
+  ];
+  const radioFilters = [
+    {
+      id: 'price',
+      name: t('filter.price'),
+      options: [
+        { value: { min: '1', max: '25' }, label: '1$ - 25$', checked: false },
+        { value: { min: '26', max: '50' }, label: '26$ - 50$', checked: false },
+        {
+          value: { min: '51', max: '100' },
+          label: '51$ - 100$',
+          checked: false,
+        },
+        {
+          value: { min: '101', max: '200' },
+          label: '101$ - 200$',
+          checked: false,
+        },
+        {
+          value: { min: '201', max: '400' },
+          label: '201$ - 400$',
+          checked: false,
+        },
+        {
+          value: { min: '401', max: '800' },
+          label: '401$ - 800$',
+          checked: false,
+        },
+        {
+          value: { min: '800' },
+          label: '+800$',
+          checked: false,
+        },
+      ],
+    },
+  ];
   return (
     <div data-testid="filter" className="bg-background">
       <div>
@@ -199,7 +179,7 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen, setFilter }) => {
                           type="button"
                           className="bg-primary text-background px-3 py-1 rounded-md ml-5"
                         >
-                          Apply
+                          {t('filter.apply')}
                         </button>
                       </div>
                       {section.options.map((option, optionIdx) => (

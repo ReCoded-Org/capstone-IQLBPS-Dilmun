@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FiFilter } from 'react-icons/fi';
 import { GrLanguage } from 'react-icons/gr';
 import { SiGotomeeting } from 'react-icons/si';
 import FeatureCard from './FeatureCard';
 
 const Features = () => {
+  const {t} = useTranslation();
   return (
     <section
       data-testid="features-section"
@@ -16,35 +18,34 @@ const Features = () => {
             data-testid="features-title"
             className="mb-4 text-4xl tracking-tight font-extrabold text-primary"
           >
-            Designed to meet your needs.
+            {t('features.designed_to_meet_your_needs')}
           </h2>
           <p
             data-testid="features-paragraph"
             className="text-primary sm:text-xl"
           >
-            Here at Dilmun we sell various products to customers and accept
-            donations to help those people that are in need.
+            {t('features.description')}
           </p>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
           <FeatureCard
             data-testid="feature-card"
             icon={<FiFilter />}
-            title="Filter"
-            description="Filter your items to find the right information."
+            title={t('features.feature_one_title')}
+            description={t('features.feature_one_description')}
           />
           <FeatureCard
             data-testid="feature-card"
             icon={<GrLanguage />}
-            title="Multi Language"
-            description="Use the website in your preferred language"
+            title={t('features.feature_two_title')}
+            description={t('features.feature_two_description')}
           />
           <FeatureCard
             customClass="git col-span-2 lg:col-span-1"
             data-testid="feature-card"
             icon={<SiGotomeeting />}
-            title="Meet"
-            description="Meet new people and make new connections"
+            title={t('features.feature_three_title')}
+            description={t('features.feature_three_description')}
           />
         </div>
       </div>

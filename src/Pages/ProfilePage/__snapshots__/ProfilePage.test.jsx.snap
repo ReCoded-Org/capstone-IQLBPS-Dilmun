@@ -66,7 +66,7 @@ exports[`Profile Page Rendered Correctly 1`] = `
           <h3
             class="flex-shrink mx-16 font-bold text-[14px] sm:text-[18px] lg:text-[24px] text-primary mt-3 mb-3"
           >
-            My Items
+            profile.my_items
           </h3>
         </div>
         <div
@@ -80,7 +80,7 @@ exports[`Profile Page Rendered Correctly 1`] = `
             class="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
             type="button"
           >
-            Add New Item
+            profile.add_new_item
           </button>
         </a>
       </div>

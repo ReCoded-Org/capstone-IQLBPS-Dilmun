@@ -1,11 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import {
-  addDoc,
-  collection,
-  doc,
-  setDoc,
-  getDocs,
-} from 'firebase/firestore';
+import { filter } from 'lodash';
+import { addDoc, collection, doc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import moment from 'moment';
 import { db, storage } from '../../firebase-config';
@@ -97,18 +92,29 @@ export const getUserItems = createAsyncThunk(
   }
 );
 
-export const getItemList = createAsyncThunk('item/getItemList', async () => {
-  try {
-    const docRef = collection(db, 'Items');
-    const docSnap = await getDocs(docRef);
-    const itemData = docSnap.docs.map((item) => {
-      return { ...item.data(), id: item.id };
-    });
-    return itemData;
-  } catch (error) {
-    return error.message;
+
+export const getItemList = createAsyncThunk(
+  'item/getItemList', async () => {
+    try {
+      const docRef = collection(db, 'Items');
+      const docSnap = await getDocs(docRef);
+      const itemData = docSnap.docs.map((item) => {
+        return { ...item.data(), id: item.id };
+      });
+      return itemData;
+    } catch (error) {
+      return error.message
+    }
   }
-});
+)
+
+export const deleteItem = createAsyncThunk(
+  'item/deleteItem', async (payload) => {
+    await deleteDoc(doc(db, "Items", payload.itemId));
+    await deleteDoc(doc(db, 'Users', payload.userId, 'Items', payload.itemId))
+    return payload.itemId
+  }
+)
 
 const initialState = {
   isItemLoading: false,
@@ -217,6 +223,12 @@ const itemSlice = createSlice({
         state.error = null;
         state.isUserItemsLoading = true;
         state.userItems = [];
+      })
+
+      // DELTEITEM
+      .addCase(deleteItem.fulfilled, (state, action) => {
+        state.error = null
+        state.userItems = filter(state.userItems, (c) => c.id !== action.payload);
       })
   }
 });

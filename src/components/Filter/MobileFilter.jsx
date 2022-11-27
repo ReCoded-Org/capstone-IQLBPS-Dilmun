@@ -2,6 +2,7 @@ import { Dialog, Disclosure, Transition } from '@headlessui/react';
 import React, { Fragment } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
+import { useTranslation } from 'react-i18next';
 
 const MobileFilter = ({
   mobileFiltersOpen,
@@ -9,6 +10,7 @@ const MobileFilter = ({
   checkFilters,
   radioFilters,
 }) => {
+  const {t} = useTranslation();
   return (
     <Transition.Root show={mobileFiltersOpen} as={Fragment}>
       <Dialog
@@ -40,7 +42,7 @@ const MobileFilter = ({
           >
             <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-background py-4 pb-12 shadow-xl">
               <div className="flex items-center justify-between px-4">
-                <h2 className="text-lg font-medium text-primary">Filters</h2>
+                <h2 className="text-lg font-medium text-primary">{t('filter.filters')}</h2>
                 <button
                   type="button"
                   className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-background p-2 text-primary"
@@ -163,7 +165,7 @@ const MobileFilter = ({
                                 type="button"
                                 className="bg-primary text-background px-3 py-1 rounded-md ml-5"
                               >
-                                Apply
+                                {t('filter.apply')}
                               </button>
                             </div>
                             {section.options.map((option, optionIdx) => (

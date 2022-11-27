@@ -23,12 +23,12 @@ Object {
               <h2
                 class="text-4xl lg:text-5xl font-bold leading-tight text-primary "
               >
-                Lets talk about everything!
+                contact_us.lets_talk
               </h2>
               <div
                 class="text-gray-600 mt-8 "
               >
-                Give us your feedback
+                contact_us.give_us
               </div>
             </div>
             <div
@@ -46,12 +46,12 @@ Object {
               <span
                 class="uppercase text-sm text-gray-600 font-bold"
               >
-                Full Name
+                contact_us.full_name
               </span>
               <input
                 class="w-full bg-background text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 name="name"
-                placeholder=""
+                placeholder="error.full_name"
                 type="text"
               />
             </div>
@@ -61,7 +61,7 @@ Object {
               <span
                 class="uppercase text-sm text-gray-600 font-bold"
               >
-                Email
+                contact_us.email
               </span>
               <input
                 class="w-full bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -75,7 +75,7 @@ Object {
               <span
                 class="uppercase text-sm text-gray-600 font-bold"
               >
-                Message
+                contact_us.message
               </span>
               <textarea
                 class="w-full h-40 bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -89,7 +89,7 @@ Object {
                 class="uppercase text-sm font-bold tracking-wide bg-tertiary text-primary p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:text-tertiary hover:bg-secondary"
                 type="submit"
               >
-                Send Message
+                contact_us.send
               </button>
             </div>
           </form>
@@ -116,12 +116,12 @@ Object {
             <h2
               class="text-4xl lg:text-5xl font-bold leading-tight text-primary "
             >
-              Lets talk about everything!
+              contact_us.lets_talk
             </h2>
             <div
               class="text-gray-600 mt-8 "
             >
-              Give us your feedback
+              contact_us.give_us
             </div>
           </div>
           <div
@@ -139,12 +139,12 @@ Object {
             <span
               class="uppercase text-sm text-gray-600 font-bold"
             >
-              Full Name
+              contact_us.full_name
             </span>
             <input
               class="w-full bg-background text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
               name="name"
-              placeholder=""
+              placeholder="error.full_name"
               type="text"
             />
           </div>
@@ -154,7 +154,7 @@ Object {
             <span
               class="uppercase text-sm text-gray-600 font-bold"
             >
-              Email
+              contact_us.email
             </span>
             <input
               class="w-full bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -168,7 +168,7 @@ Object {
             <span
               class="uppercase text-sm text-gray-600 font-bold"
             >
-              Message
+              contact_us.message
             </span>
             <textarea
               class="w-full h-40 bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -182,7 +182,7 @@ Object {
               class="uppercase text-sm font-bold tracking-wide bg-tertiary text-primary p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:text-tertiary hover:bg-secondary"
               type="submit"
             >
-              Send Message
+              contact_us.send
             </button>
           </div>
         </form>

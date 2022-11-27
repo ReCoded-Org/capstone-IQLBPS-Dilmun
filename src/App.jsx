@@ -9,6 +9,8 @@ import { auth } from './firebase-config';
 import { getCurrentSignedInUser } from './features/slices/user';
 
 
+import Router from './routes';
+
 function App() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
@@ -42,7 +44,9 @@ function App() {
       ) : (
         <>
           <NavBar />
-          <AnimationProvider />
+          <AnimationProvider>
+            <Router />
+          </AnimationProvider>
           <Footer />
         </>
       )}

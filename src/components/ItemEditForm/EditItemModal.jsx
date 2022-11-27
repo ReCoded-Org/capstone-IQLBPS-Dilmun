@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useTranslation } from 'react-i18next';
 import { BiEdit } from 'react-icons/bi';
 import { GiCancel } from 'react-icons/gi';
 import { Input, TextArea, SubmitButton, ListBox, ComboBox } from '../Forms';
@@ -12,10 +13,7 @@ import { useDispatch, useSelector } from '../../app/store';
 import { user } from '../../features/slices/user';
 import Tooltip from '../Tooltip/Tooltip';
 
-const schema = yup.object().shape({
-  title: yup.string().required('Cannot stay empty.'),
-  description: yup.string().required('Cannot stay empty.'),
-});
+
 
 export default function EditItemModal({ item }) {
   const dispatch = useDispatch();
@@ -23,6 +21,11 @@ export default function EditItemModal({ item }) {
   const { isItemLoading } = useSelector((state) => state.item);
   const [imgRef, setImgRef] = useState(item.file);
   const [imgSrc, setImgSrc] = useState(item.file);
+  const { t } = useTranslation();
+  const schema = yup.object().shape({
+    name: yup.string().required(t('error.title')),
+    desc: yup.string().required(t('error.description')),
+  });
   const {
     register,
     handleSubmit,
@@ -152,11 +155,11 @@ export default function EditItemModal({ item }) {
                     as="h3"
                     className="flex flex-col justify-start text-2xl font-bold text-background mb-3"
                   >
-                    Edit Item Info
+                    {t('edit_item_form.edit_item_info')}
                   </Dialog.Title>
                   <Dialog.Description>
                     <span className="block text-sm font-medium text-background">
-                      Edit Item Image
+                      {t('edit_item_form.edit_item_image')}
                     </span>
                   </Dialog.Description>
 
@@ -184,18 +187,18 @@ export default function EditItemModal({ item }) {
                     {...register('title')}
                     errors={errors.title ? errors.title : undefined}
                   >
-                    Edit Item Name
+                    {t('edit_item_form.edit_item_name')}
                   </Input>
                   <input
                     disabled
-                    placeholder="Sorry, cannot edit item price."
+                    placeholder={t('edit_item_form.can_not_edit_item_price')}
                     type="number"
                     className="items-center text-background border-2 rounded-md mb-2 border-background w-full text-opacity-50 p-2"
                   />
                   <div className="flex justify-between items-center gap-8 w-full flex-col md:flex-row">
                     <div className="w-full">
                       <span className="block text-sm font-medium text-background">
-                        Edit Item Type
+                        {t('edit_item_form.edit_item_type')}
                       </span>
                       <ListBox
                         name="type"
@@ -207,7 +210,7 @@ export default function EditItemModal({ item }) {
                     </div>
                     <div className="w-full">
                       <span className="block text-sm font-medium text-background">
-                        Edit Item Category
+                        {t('edit_item_form.edit_item_category')}
                       </span>
                       <Controller
                         name="category"
@@ -230,12 +233,12 @@ export default function EditItemModal({ item }) {
                       {...register('description')}
                       errors={errors?.description}
                     >
-                      Edit Description
+                      {t('edit_item_form.edit_item_description')}
                     </TextArea>
                   </div>
                   <div className="bg-primary bg-opacity-25 px-4 py-3 text-right sm:px-6">
                     <SubmitButton
-                      buttonText="Update Info"
+                      buttonText={t('edit_item_form.update_info')}
                       loading={isItemLoading}
                       disabled={!isDirty}
                     />
@@ -244,7 +247,7 @@ export default function EditItemModal({ item }) {
                       className="ml-2 inline-flex justify-center rounded-md border border-transparent bg-background px-4 py-2 text-sm font-medium text-primary hover:bg-tertiary focus:outline-none focus-visible:ring-2 focus-visible:ring-tertiary focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
-                      Cancel
+                      {t('edit_item_form.cancel')}
                     </button>
                   </div>
                 </Dialog.Panel>

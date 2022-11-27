@@ -1,23 +1,22 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { SiGoogletranslate } from 'react-icons/si';
+import i18next from 'i18next';
 
-import UsFlag from '../../assets/img/us-flag.svg';
-import IraqFlag from '../../assets/img/iraq-flag.svg';
+import languages from './LanguageConstants';
+import getCurrentLanguage from '../../utils/getCurrentLanguage';
 
 const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ');
 };
 
-const LanguageButton = ( {closeNavbar}) => {
+const LanguageButton = ({ closeNavbar }) => {
+  const currentLanguage = getCurrentLanguage();
   const handleLanguageChange = (language) => {
+    i18next.changeLanguage(language);
 
-
-    localStorage.setItem('language', language);
-       if(closeNavbar){
-       closeNavbar();
-       }
-    
+    if (closeNavbar) {
+      closeNavbar();
+    }
   };
 
   return (
@@ -31,7 +30,14 @@ const LanguageButton = ( {closeNavbar}) => {
           data-testid="language-botton-toggle"
           className="md:ml-6 text-2xl md:mt-0 mt-2 text-secondary hover:text-primary duration-500"
         >
-          <SiGoogletranslate />
+          <img
+            className={classNames(
+              currentLanguage.code === 'ku' ? 'h-6' : 'h-8',
+              'w-8'
+            )}
+            src={currentLanguage.flag}
+            alt={currentLanguage.name}
+          />
         </Menu.Button>
       </div>
 
@@ -46,42 +52,33 @@ const LanguageButton = ( {closeNavbar}) => {
       >
         <Menu.Items className="absolute -right-24 md:right-0 z-10 mt-2 w-56 origin-center md:origin-top-right rounded-md bg-primary shadow-lg ring-1 ring-white ring-opacity-5 focus:outline-none">
           <div>
-            <Menu.Item>
-              {({ active }) => (
-                <div
-                  data-testid="language-button-option"
-                  onClick={() => handleLanguageChange('en')}
-                  aria-hidden="true"
-                  className={classNames(
-                    active
-                      ? 'bg-background text-secondary rounded-md'
-                      : 'text-background',
-                    'text-sm flex justify-between items-center px-4 cursor-pointer '
-                  )}
-                >
-                  <h3>English</h3>
-                  <img className="h-8 w-8" src={UsFlag} alt="English" />
-                </div>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <div
-                  data-testid="language-button-option"
-                  onClick={() => handleLanguageChange('ar')}
-                  aria-hidden="true"
-                  className={classNames(
-                    active
-                      ? 'bg-background text-secondary rounded-md'
-                      : 'text-background',
-                    'text-sm flex justify-between items-center px-4 cursor-pointer text-background'
-                  )}
-                >
-                  <h3>Arabic</h3>
-                  <img className="h-8 w-8" src={IraqFlag} alt="Arabic" />
-                </div>
-              )}
-            </Menu.Item>
+            {languages.map((language) => (
+              <Menu.Item key={language.code}>
+                {({ active }) => (
+                  <div
+                    data-testid="language-button-option"
+                    onClick={() => handleLanguageChange(language.code)}
+                    aria-hidden="true"
+                    className={classNames(
+                      active
+                        ? 'bg-background text-secondary rounded-md'
+                        : 'text-background',
+                      'text-sm flex justify-between items-center px-4 cursor-pointer text-background py-1'
+                    )}
+                  >
+                    <h3>{language.name}</h3>
+                    <img
+                      className={classNames(
+                        currentLanguage.code === 'ku' ? 'h-6' : 'h-8',
+                        'w-8'
+                      )}
+                      src={language.flag}
+                      alt={language.name}
+                    />
+                  </div>
+                )}
+              </Menu.Item>
+            ))}
           </div>
         </Menu.Items>
       </Transition>
