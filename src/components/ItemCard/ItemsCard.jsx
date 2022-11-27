@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 
-function ItemsCard({ item }) {
+function ItemsCard({ item,animate }) {
   const {t} = useTranslation();
   return (
+    // keep animate prop false if you don't want the slide animation
     <div
       data-testid="item-card"
-      className="lg:w-80 md:w-64 w-96 bg-background m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300"
+      className={`lg:w-80 md:w-64 w-96 bg-background ${animate ? 'lg:animate-scroll': '' } m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300`}
     >
       <figure className="relative max-w-sm transition-all cursor-pointer">
         <a href="/">
