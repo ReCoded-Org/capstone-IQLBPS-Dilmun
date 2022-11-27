@@ -26,6 +26,7 @@ function NavBar() {
   const dispatch = useDispatch();
   const userData = useSelector(user);
 
+
   const closeNavBar = () => {
     if (open) {
       setOpen(false);
@@ -37,8 +38,9 @@ function NavBar() {
   }, [location.key]);
 
   return (
-    <nav className="shadow-md w-full z-10 sticky top-0 left-0 bg-primary">
-      <div className="md:flex bg-primary py-2 items-center justify-between md:px-8 px-10 max-h-24">
+    <div className='shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background/10 via-background/20 to-secondary shadow backdrop-blur-md bg-transparent '>
+    <nav>
+      <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ">
         <div>
           <Link to={HOME_ROUTE}>
             <img
@@ -56,16 +58,16 @@ function NavBar() {
           )}
         </button>
         <ul
-          className={`flex items-center md:justify-items-end justify-items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static bg-primary md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-24' : 'top-[-170px]'
+          className={`flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'right-24 top-[96px] py-3 backdrop-blur-md bg-background/30' : 'left-[-700px] top-[96px] py-3 '
             }`}
         >
           <li>
             <NavLink
               className={({ isActive }) =>
                 classNames(
-                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                   isActive
-                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                     : ''
                 )
               }
@@ -79,9 +81,9 @@ function NavBar() {
               <NavLink
                 className={({ isActive }) =>
                   classNames(
-                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
-                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                       : ''
                   )
                 }
@@ -95,9 +97,9 @@ function NavBar() {
             <NavLink
               className={({ isActive }) =>
                 classNames(
-                  'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                  'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                   isActive
-                    ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                    ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                     : ''
                 )
               }
@@ -111,9 +113,9 @@ function NavBar() {
               <NavLink
                 className={({ isActive }) =>
                   classNames(
-                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
-                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                       : ''
                   )
                 }
@@ -128,9 +130,9 @@ function NavBar() {
               <NavLink
                 className={({ isActive }) =>
                   classNames(
-                    'md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300',
+                    'md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300',
                     isActive
-                      ? 'bg-tertiary text-secondary font-bold px-2 pb-1 rounded-md '
+                      ? 'bg-tertiary text-secondary px-2 pb-1 rounded-md '
                       : ''
                   )
                 }
@@ -143,7 +145,7 @@ function NavBar() {
           {!_.isEmpty(userData) ? (
             <li>
               <NavLink
-                className="md:ml-6 text-xl md:my-0 text-background hover:text-secondary duration-300"
+                className="md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300"
                 to="/"
                 onClick={() => {
                   dispatch(Signout());
@@ -156,8 +158,10 @@ function NavBar() {
 
           <LanguageButton closeNavbar={closeNavBar} />
         </ul>
+
       </div>
     </nav>
+    </div>
   );
 }
 export default NavBar;
