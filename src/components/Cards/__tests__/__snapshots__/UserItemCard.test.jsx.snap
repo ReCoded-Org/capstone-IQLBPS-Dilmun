@@ -9,7 +9,7 @@ exports[`UserItemCard renders correctly 1`] = `
     onClick={[Function]}
   >
     <div
-      className="w-full md:w-1/2 bg-transparent grid place-items-center"
+      className="w-full md:w-1/2 min-w-[200px] bg-transparent grid place-items-center"
     >
       <img
         alt="Title of Item Goes Here"

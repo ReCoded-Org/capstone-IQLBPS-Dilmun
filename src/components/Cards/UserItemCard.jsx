@@ -19,7 +19,7 @@ function UserItemCard(props) {
   return (
     <div className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl border border-background bg-primary">
       <Link to={`/product/${id}`}>
-        <div className="w-full md:w-1/2 bg-transparent grid place-items-center">
+        <div className="w-full md:w-1/2 min-w-[200px] bg-transparent grid place-items-center">
           <img src={file} alt={title} className="rounded-xl w-full h-auto  " />
         </div>
       </Link>
