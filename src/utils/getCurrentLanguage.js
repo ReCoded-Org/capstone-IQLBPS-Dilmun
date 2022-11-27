@@ -1,5 +1,5 @@
-import Cookies from "js-cookie";
-import languages from "../components/LanguageButton/LanguageConstants";
+import Cookies from 'js-cookie';
+import languages from '../components/LanguageButton/LanguageConstants';
 
 const getCurrentLanguage = () => {
   const currentLanguageCode = Cookies.get('i18next') || 'en';
