@@ -19,52 +19,51 @@ const ItemDetailsPage = () => {
     getItem();
   }, [dispatch, id]);
 
-  return (
-    !isItemLoading ?
-      item &&
+  return !isItemLoading ? (
+    item && (
       <div
         data-testid="item-details-page"
         className="md:flex text-background p-6 bg-background gap-4 h-screen w-full"
       >
-        <div className='w-full lg:w-1/2'>
+        <div className="w-full lg:w-1/2">
           <img
             className="max-h-full min-h-[600px] mb-6 md:mb-0 w-full object-contain"
             src={item.file}
             alt={item.title}
           />
         </div>
-        <div className="w-full lg:w-1/2 md:ml-auto  max-h-full md:mr-auto flex flex-col gap-7 rounded pt-5 px-5 bg-primary justify-between py-10">
-          <div className='flex flex-col gap-7'>
+        <div className="w-full lg:w-1/2 md:ml-auto  max-h-full md:mr-auto flex flex-col gap-7 rounded pt-5 px-5 bg-gradient-to-tl from-tertiary to-primary justify-between py-10">
+          <div className="flex flex-col gap-7">
             <div>
-              <h2 className="font-bold text-4xl pb-4 text-center">{item.title}</h2>
-              <div className="flex justify-center items-center">
-                {(typeof item.category) === 'object' ? (
+              <h2 className="font-bold text-4xl pb-4">{item.title}</h2>
+              <div className="">
+                {typeof item.category === 'object' ? (
                   item.category.map((c) => (
                     <span
                       key={c}
-                      className="text-xs text-center font-medium text-background bg-tertiary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
+                      className="text-lg text-center font-medium text-background bg-tertiary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
                     >
                       {c}
                     </span>
                   ))
                 ) : (
-                  <span className="text-xs font-medium text-background bg-tertiary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md">
+                  <span className="text-xs font-medium text-background bg-tertiary bg-opacity-50 rounded-sm px-2 py-1 mr-2 shadow-md">
                     {item.category}
                   </span>
                 )}
               </div>
             </div>
             <span className="flex gap-1">
-              <p className="font-semibold">{t('items_details.price')}</p> {item.price}
+              <p className="font-bold">{t('items_details.item_type')}</p>
+              {item.type}
             </span>
             <span className="flex gap-1">
-              <p className="font-semibold">{t('items_details.item_type')}</p> {item.type}
+              <p className="font-bold">{t('items_details.price')}</p>
+              {item.price}
             </span>
             <span className="flex gap-1">
-              <p className="font-semibold">{t('items_details.country')}</p> {item.owner?.address.country}
-            </span>
-            <span className="flex gap-1">
-              <p className="font-semibold">{t('items_details.address')}</p> {`${item.owner?.address.country}, ${item.owner?.address.city}`}
+              <p className="font-bold">{t('items_details.address')}</p>
+              {`${item.owner?.address.city}, ${item.owner?.address.country}`}
             </span>
             <div>
               <span className="font-bold text-xl">
@@ -75,8 +74,13 @@ const ItemDetailsPage = () => {
               </p>
             </div>
           </div>
-          <div className='w-full self-end'>
-            <a href={`mailto:${item.owner?.email}`} target="_blank" rel="noopener noreferrer" className='w-full'>
+          <div className="w-full self-end">
+            <a
+              href={`mailto:${item.owner?.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
               <CustomButton paddingX="px-4" paddingY="py-4" width="lg:w-full">
                 {t('items_details.email_owner')}
               </CustomButton>
@@ -84,7 +88,9 @@ const ItemDetailsPage = () => {
           </div>
         </div>
       </div>
-      : <LoadingScreen />
+    )
+  ) : (
+    <LoadingScreen />
   );
 };
 
