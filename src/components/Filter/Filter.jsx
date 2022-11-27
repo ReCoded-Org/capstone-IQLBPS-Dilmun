@@ -1,32 +1,8 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 import MobileFilter from './MobileFilter';
 
-const checkFilters = [
-  {
-    id: 'category',
-    name: 'Category',
-    options: [
-      { value: 'men', label: 'Men', checked: true },
-      { value: 'women', label: 'Women', checked: false },
-      { value: 'kids', label: 'Kids', checked: false },
-      { value: 'toys', label: 'Toys', checked: false },
-      { value: 'electronics', label: 'Electronics', checked: false },
-      { value: 'home', label: 'Home', checked: false },
-    ],
-  },
-  {
-    id: 'type',
-    name: 'Type',
-    options: [
-      { value: 'new', label: 'New', checked: true },
-      { value: 'used', label: 'Used', checked: false },
-      { value: 'donated', label: 'Donated', checked: false },
-      { value: 'crafted', label: 'Crafted', checked: false },
-    ],
-  },
-];
 const radioFilters = [
   {
     id: 'price',
@@ -59,8 +35,59 @@ const radioFilters = [
   },
 ];
 
-const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
+const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen, setFilter }) => {
+  const [checkFilters, setCheckFilters] = useState([
+    {
+      id: 'category',
+      name: 'Category',
+      options: [
+        { value: 'men', label: 'Men', checked: true },
+        { value: 'women', label: 'Women', checked: false },
+        { value: 'kids', label: 'Kids', checked: false },
+        { value: 'toys', label: 'Toys', checked: false },
+        { value: 'electronics', label: 'Electronics', checked: false },
+        { value: 'home', label: 'Home', checked: false },
+      ],
+    },
+    {
+      id: 'type',
+      name: 'Type',
+      options: [
+        { value: 'new', label: 'New', checked: true },
+        { value: 'used', label: 'Used', checked: false },
+        { value: 'donated', label: 'Donated', checked: false },
+        { value: 'crafted', label: 'Crafted', checked: false },
+      ],
+    },
+  ]);
+  const handleOnChange = (sectionId, optionIndex) => {
+    const newCheckFilters = checkFilters.map((section) => {
+      if (section.id === sectionId) {
+        const newOptions = section.options.map((option, index) => {
+          if (index === optionIndex) {
+            return { ...option, checked: !option.checked };
+          }
+          return option;
+        });
+        return { ...section, options: newOptions };
+      }
+      return section;
+    });
+    
+    console.log('newCheckFilters', newCheckFilters);
+    setCheckFilters(newCheckFilters);
+  };
+  const handleFilter = () => {
+    const newCheckFilters = checkFilters.map((section) => ({
+      ...section,
+      options: section.options.filter((option) => option.checked),
+    }));
+    setFilter(newCheckFilters);
+  };
 
+  useEffect(() => {
+    handleFilter();
+  }, [checkFilters]);
 
   return (
     <div data-testid="filter" className="bg-background">
@@ -109,6 +136,9 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen }) => {
                             type="checkbox"
                             defaultChecked={option.checked}
                             className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                            onChange={() =>
+                              handleOnChange(section.id, optionIdx)
+                            }
                           />
                           <label
                             htmlFor={`filter-${section.id}-${optionIdx}`}

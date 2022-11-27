@@ -12,6 +12,7 @@ import { useSelector } from '../../app/store';
 
 const FilterPage = () => {
   const { firstName, lastName } = useSelector(user);
+  const [filter, setFilter] = useState({});
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   return (
     <motion.main
@@ -48,10 +49,11 @@ const FilterPage = () => {
       </div>
       <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 xl:grid-cols-5">
         <Filter
+          setFilter={setFilter}
           mobileFiltersOpen={mobileFiltersOpen}
           setMobileFiltersOpen={setMobileFiltersOpen}
         />
-        <ItemsDisplay />
+        <ItemsDisplay filter={filter} />
       </div>
       <ItemDetailsPage />
     </motion.main>
