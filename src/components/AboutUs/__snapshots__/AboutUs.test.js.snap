@@ -31,7 +31,7 @@ exports[`redering AboutUS 1`] = `
         <p
           className="text-center text-primary text-base"
         >
-          Project supervisor
+          Project Supervisor
         </p>
       </div>
       <div
@@ -1685,7 +1685,7 @@ exports[`should render cards 1`] = `
         <p
           className="text-center text-primary text-base"
         >
-          Project supervisor
+          Project Supervisor
         </p>
       </div>
       <div

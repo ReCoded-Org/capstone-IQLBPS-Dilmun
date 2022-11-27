@@ -61,15 +61,6 @@ exports[`render NavBar correctly 1`] = `
         <li>
           <a
             className="md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300"
-            href="/about"
-            onClick={[Function]}
-          >
-            navbar.about
-          </a>
-        </li>
-        <li>
-          <a
-            className="md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300"
             href="/signin"
             onClick={[Function]}
           >
