@@ -68,22 +68,22 @@ exports[`UserItemCard renders correctly 1`] = `
             </span>
           </button>
         </span>
-        <span
-          className="group relative"
+        <div
+          className="flex items-center justify-end bg-background p-3"
+          data-testid="edit-item"
         >
-          <span
-            className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-white opacity-0 transition before:absolute before:left-1/2 before:top-full before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-black before:content-[''] group-hover:opacity-100"
+          <button
+            onClick={[Function]}
+            type="button"
           >
-            Edit Item
-          </span>
-          <div
-            className="flex items-center justify-end bg-background p-3"
-            data-testid="edit-item"
-          >
-            <button
-              onClick={[Function]}
-              type="button"
+            <span
+              className="group relative"
             >
+              <span
+                className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-white opacity-0 transition before:absolute before:left-1/2 before:top-full before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-black before:content-[''] group-hover:opacity-100"
+              >
+                Edit Item
+              </span>
               <svg
                 className="h-8 w-8 text-primary"
                 fill="currentColor"
@@ -106,9 +106,9 @@ exports[`UserItemCard renders correctly 1`] = `
                   d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"
                 />
               </svg>
-            </button>
-          </div>
-        </span>
+            </span>
+          </button>
+        </div>
       </div>
     </div>
     <h3
@@ -136,19 +136,7 @@ exports[`UserItemCard renders correctly 1`] = `
       >
         <span
           className="text-xs font-medium text-background bg-secondary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
-        >
-          Men
-        </span>
-        <span
-          className="text-xs font-medium text-background bg-secondary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
-        >
-          Women
-        </span>
-        <span
-          className="text-xs font-medium text-background bg-secondary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
-        >
-          Kids
-        </span>
+        />
       </div>
     </div>
   </div>

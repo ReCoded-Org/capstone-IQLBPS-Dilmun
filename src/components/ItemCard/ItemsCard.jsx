@@ -57,7 +57,10 @@ function ItemsCard({ item }) {
           {typeof item.category === 'object' ? (
             item.category.slice(0, 3).map((cat) => {
               return (
-                <span className="text-sm inline-block mr-1 font-semibold text-primary my-2 bg-tertiary py-2 px-4 bg-opacity-90 rounded-lg">
+                <span
+                  key={cat}
+                  className="text-sm inline-block mr-1 font-semibold text-primary my-2 bg-tertiary py-2 px-4 bg-opacity-90 rounded-lg"
+                >
                   {cat}
                 </span>
               );
