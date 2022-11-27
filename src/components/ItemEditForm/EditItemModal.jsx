@@ -34,7 +34,7 @@ export default function EditItemModal({ item }) {
       title: item.title,
       file: item.file,
       type: item.type,
-      category: item.categories,
+      category: item.category,
       description: item.description,
       price: item.price,
     },
@@ -211,7 +211,7 @@ export default function EditItemModal({ item }) {
                         control={control}
                         render={({ field }) => (
                           <ComboBox
-                            value={item.categories}
+                            value={item.category}
                             options={ITEM_CATEGORY}
                             edit
                             {...field}
