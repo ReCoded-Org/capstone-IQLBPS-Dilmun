@@ -78,7 +78,7 @@ const Footer = () => {
       <hr className="my-4 border-secondary sm:mx-auto lg:my-6" />
       <span className="block text-sm text-secondary lg:text-start text-center">
         © 2022
-        <Link to={HOME_ROUTE} className="hover:underline">
+        <Link to={HOME_ROUTE} className="hover:underline"> {' '}
           Dilmun™
         </Link>
         . All Rights Reserved.
