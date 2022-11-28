@@ -44,14 +44,29 @@ const FilterPage = () => {
         }
         return item.price >= price.min && item.price <= price.max;
       });
+      
 
     // eslint-disable-next-line no-console
     console.log(filteredItems);
     return filteredItems;
   };
+  const onChange = (e) => {
+    const name = e.target.value;
+    const onSearchItems = allItems
+    .filter((item) => {
+      if (name.length === 0) {
+        return false
+      } 
+      return name.toLowerCase().includes(item.title.toLowerCase())
+     
+    })
+    setItems(onSearchItems)
+    return onSearchItems
+  };
   useEffect(() => {
     dispatch(getItemList());
   }, []);
+
 
   return (
     <motion.main
@@ -84,7 +99,7 @@ const FilterPage = () => {
           )}{' '}
           hope you find the items you need.
         </h1>
-        <SearchBar />
+        <SearchBar onInputChange={onChange} />
       </div>
       <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 xl:grid-cols-5">
         <Filter
