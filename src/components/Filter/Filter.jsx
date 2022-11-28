@@ -105,16 +105,18 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen, handleFilter }) => {
     const selectedOptions = section.options.filter((option) => option.checked);
     return { ...section, options: selectedOptions };
   });
+
+  
   const selectedRadioFilters = radioFilters.map((section) => {
     const selectedOptions = section.options.filter((option) => option.checked);
     return { ...section, options: selectedOptions };
   });
 
   const categoryOptions = selectedCheckFilters[0].options.length
-    ? selectedCheckFilters[0].options.map((option) => option.label)
+    ? selectedCheckFilters[0].options.map((option) => option.value)
     : [];
-  const typeOptions = selectedCheckFilters[0].options.length
-    ? selectedCheckFilters[1].options.map((option) => option.label)
+  const typeOptions = selectedCheckFilters[1].options.length
+    ? selectedCheckFilters[1].options.map((option) => option.value)
     : [];
   const priceOptions = selectedRadioFilters[0].options.length
     ? selectedRadioFilters[0].options[0].value

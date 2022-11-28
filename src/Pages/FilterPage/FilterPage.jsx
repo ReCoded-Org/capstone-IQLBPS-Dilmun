@@ -20,21 +20,20 @@ const FilterPage = () => {
       .filter((item) => {
         if (!category.length) {
           return true;
-        } 
-          if (typeof item.category === 'string') {
-            return category.includes(item.category);
-          }
-          return item.category.some((cat) => category.includes(cat));
-        
+        }
+        if (typeof item.category === 'string') {
+          return category.includes(item.category.toLowerCase());
+        }
+        return item.category
+          .some((cat) => category.includes(cat.toLowerCase()));
       })
       .filter((item) => {
         if (!type.length) {
           return true;
         }
-        return type.includes(item.type);
+        return type.includes(item.type.toLowerCase());
       })
       .filter((item) => {
-        
         if (!price.min && !price.max) {
           return true;
         }
