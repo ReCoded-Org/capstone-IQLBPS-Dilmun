@@ -21,12 +21,38 @@ const classNames = (...classes) => {
   return twMerge(classes);
 };
 
-function NavBar() {
+function NavBar({ initialTransparency = true }) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const dispatch = useDispatch();
   const userData = useSelector(user);
+  const [padding, setPadding] = useState(10);
+  const [boxShadow, setBoxShadow] = useState(0);
+  const [clientWindowHeight, setClientWindowHeight] = useState("");
+  const [backgroundTransparency, setBackgroundTransparency] = useState(0);
+
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  useEffect(() => {
+    const backgroundTransparencyVar = clientWindowHeight / 600;
+    if (!initialTransparency) setBackgroundTransparency(100)
+    if (backgroundTransparencyVar < 1) {
+      const paddingVar = 10 - backgroundTransparencyVar * 20;
+      const boxShadowVar = backgroundTransparencyVar * 0.1;
+      if (initialTransparency)
+        setBackgroundTransparency(backgroundTransparencyVar);
+      setPadding(paddingVar);
+      setBoxShadow(boxShadowVar);
+    }
+  }, [clientWindowHeight, initialTransparency]);
 
   const closeNavBar = () => {
     if (open) {
@@ -39,8 +65,13 @@ function NavBar() {
   }, [location.key]);
 
   return (
-    <div className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background/10 via-background/20 to-secondary shadow backdrop-blur-md bg-transparent ">
-      <nav>
+    <div className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background/10 via-background/20 to-secondary backdrop-blur-md bg-transparent "
+      style={{
+        backgroundColor: `rgba(255, 255, 255, ${backgroundTransparency})`,
+        boxShadow: `0px 0px 10px 0px rgba(0, 0, 0, ${boxShadow})`,
+        padding: `${padding}px 1rem`
+      }}>
+      <nav role="navigation">
         <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ">
           <div>
             <Link to={HOME_ROUTE}>
@@ -58,12 +89,15 @@ function NavBar() {
               <FaBars className="text-6xl text-secondary absolute right-8 top-5 cursor-pointer md:hidden" />
             )}
           </button>
-          <ul
+          {/* <div id="menu" className="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center"> */}
+          <ul className={classNames("hidden md:flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto ", open ? "top-[96px] right-24 py-3 backdrop-blur-md bg-background flex transition-all duration-500 ease-in" : 'left-[-700px] top-[96px] py-3 ', (backgroundTransparency * 100) !== 0 && 'hidden')}
+          >
+            {/* <ul
             className={`flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto transition-all duration-500 ease-in ${open
               ? 'right-24 top-[96px] py-3 backdrop-blur-md bg-background'
               : 'left-[-700px] top-[96px] py-3 '
               }`}
-          >
+          > */}
             <li>
               <NavLink
                 className={({ isActive }) =>
@@ -161,6 +195,7 @@ function NavBar() {
 
             <LanguageButton closeNavbar={closeNavBar} />
           </ul>
+          {/* </div> */}
         </div>
       </nav>
     </div>
