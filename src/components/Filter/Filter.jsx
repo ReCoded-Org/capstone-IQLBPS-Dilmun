@@ -156,6 +156,8 @@ const Filter = ({
           setMobileFiltersOpen={setMobileFiltersOpen}
           checkFilters={checkFilters}
           radioFilters={radioFilters}
+          handleOnCheckChange={handleOnCheckChange}
+          handleOnRadioChange={handleOnRadioChange}
         />
 
         {/* Filters */}

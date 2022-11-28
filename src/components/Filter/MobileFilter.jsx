@@ -9,6 +9,8 @@ const MobileFilter = ({
   setMobileFiltersOpen,
   checkFilters,
   radioFilters,
+  handleOnCheckChange,
+  handleOnRadioChange,
 }) => {
   const {t} = useTranslation();
   return (
@@ -98,6 +100,7 @@ const MobileFilter = ({
                                   type="checkbox"
                                   defaultChecked={option.checked}
                                   className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                                  onChange={() => handleOnCheckChange(section.id, optionIdx)}
                                 />
                                 <label
                                   htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
@@ -180,6 +183,7 @@ const MobileFilter = ({
                                   type="radio"
                                   defaultChecked={option.checked}
                                   className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                                  onChange={() => handleOnRadioChange(section.id, optionIdx)}
                                 />
                                 <label
                                   htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
