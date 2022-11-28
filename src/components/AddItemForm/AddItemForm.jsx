@@ -26,7 +26,7 @@ export default function AddItemForm() {
   const { t } = useTranslation();
   const schema = yup.object().shape({
     title: yup.string().required(t('error.title')),
-    price: yup.number().positive(t('error.price')).required(t('error.price')),
+    price: yup.number().required(t('error.price')),
     description: yup.string().required(t('error.description')),
     country: yup.string().required(t('error.country')),
     city: yup.string().required(t('error.city')),
@@ -207,12 +207,10 @@ export default function AddItemForm() {
                       control={control}
                       options={ITEM_TYPES}
                       defaultValue={ITEM_TYPES[0]}
-                      updateType={(e) => setType(e)}
-                      onChange={
-                        type.toLowerCase() === 'donated'
-                          ? setValue('price', 0)
-                          : null
-                      }
+                      updateType={(e) => {
+                        setType(e);
+                        if (e.toLowerCase() === 'donated') setValue('price', 0);
+                      }}
                     />
                   </div>
                   <div className="w-full">
