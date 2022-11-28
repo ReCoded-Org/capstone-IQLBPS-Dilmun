@@ -61,7 +61,7 @@ const ItemDetailsPage = () => {
             </span>
             <span className="flex gap-1">
               <p className="font-bold">{t('items_details.price')}</p>
-              {item.price}
+              {item.price} $
             </span>
             <span className="flex gap-1">
               <p className="font-bold">{t('items_details.address')}</p>

@@ -135,6 +135,7 @@ exports[`UserItemCard renders correctly 1`] = `
           className="text-xl font-black text-secondary"
         >
           110
+           $
         </p>
         <div
           className="flex justify-center items-center"

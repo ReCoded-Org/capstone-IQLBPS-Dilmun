@@ -49,7 +49,7 @@ function UserItemCard(props) {
           )}
 
           <div className="flex justify-between item-center">
-            <p className="text-xl font-black text-secondary">{price}</p>
+            <p className="text-xl font-black text-secondary">{price} $</p>
             <div className="flex justify-center items-center">
               {typeof category === 'object' ? (
                 category.map((c) => (
