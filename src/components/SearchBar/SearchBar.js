@@ -3,7 +3,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 
 const SearchBar = ({ onInputChange }) => {
   const { t } = useTranslation();
-
+  
   return (
     <div className="sm:flex text-center my-3 justify-center mt-28 items-center p-6  bg-primary rounded-xl shadow-lg">
       <div className="sm:flex justify-between bg-gray-100 p-4 w-full my-3 sm:my-0 rounded-lg">
