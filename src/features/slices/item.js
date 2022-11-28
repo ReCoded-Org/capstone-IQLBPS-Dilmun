@@ -29,7 +29,7 @@ export const addItem = createAsyncThunk(
       const data = {
         file,
         title: item.title,
-        price: `${item.price} $`,
+        price: item.price,
         description: item.description,
         category: (typeof item.category) === 'string' ? item.category : [...item.category],
         type: item.type,
@@ -79,7 +79,9 @@ export const getUserItems = createAsyncThunk(
   async (uid) => {
     try {
       const items = [];
-      const querySnapshot = await getDocs(collection(db, 'Users', uid, 'Items'));
+      const querySnapshot = await getDocs(
+        collection(db, 'Users', uid, 'Items')
+      );
       querySnapshot.forEach((item) => {
         items.push({ id: item.id, title: item.data().title, file: item.data().file, price: item.data().price, description: item.data().description, category: item.data().category, type: item.data().type, createdAt: item.data().createdAt });
       });
@@ -150,14 +152,15 @@ const itemSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(addItem.pending, (state) => {
-      state.addItemStatus = 'loading';
-      state.error = null;
-      state.isItemLoading = true;
-      state.item = {};
-    })
+    builder
+      .addCase(addItem.pending, (state) => {
+        state.addItemStatus = 'loading';
+        state.error = null;
+        state.isItemLoading = true;
+        state.item = {};
+      })
       .addCase(addItem.fulfilled, (state, action) => {
-        state.addItemStatus = "success";
+        state.addItemStatus = 'success';
         state.error = null;
         state.isItemLoading = false;
         state.item = action.payload;
