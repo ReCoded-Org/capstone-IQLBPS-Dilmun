@@ -67,7 +67,7 @@ function NavBar({ initialTransparency = true }) {
   return (
     <div className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background/10 via-background/20 to-secondary backdrop-blur-md bg-transparent "
       style={{
-        backgroundColor: `rgba(255, 255, 255, ${backgroundTransparency})`,
+        // backgroundColor: `rgba(255, 255, 255, ${backgroundTransparency})`,
         boxShadow: `0px 0px 10px 0px rgba(0, 0, 0, ${boxShadow})`,
         padding: `${padding}px 1rem`
       }}>
