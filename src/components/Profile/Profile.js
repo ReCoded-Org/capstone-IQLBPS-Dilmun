@@ -65,7 +65,7 @@ export default function Profile() {
           </h1>
           {!_.isEmpty(userData.address) && (
             <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-              {userData.address.country}, {userData.address.city}
+              {userData.address.city}, {userData.address.country}
             </h3>
           )}
 
