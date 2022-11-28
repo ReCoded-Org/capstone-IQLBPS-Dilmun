@@ -1,10 +1,15 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 import { useTranslation } from 'react-i18next';
 import MobileFilter from './MobileFilter';
 
-const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen, handleFilter }) => {
+const Filter = ({
+  mobileFiltersOpen,
+  setMobileFiltersOpen,
+  handleFilter,
+  setItems,
+}) => {
   const { t } = useTranslation();
   const [checkFilters, setCheckFilters] = useState([
     {
@@ -106,23 +111,42 @@ const Filter = ({ mobileFiltersOpen, setMobileFiltersOpen, handleFilter }) => {
     return { ...section, options: selectedOptions };
   });
 
-  
   const selectedRadioFilters = radioFilters.map((section) => {
     const selectedOptions = section.options.filter((option) => option.checked);
     return { ...section, options: selectedOptions };
   });
 
-  const categoryOptions = selectedCheckFilters[0].options.length
-    ? selectedCheckFilters[0].options.map((option) => option.value)
-    : [];
-  const typeOptions = selectedCheckFilters[1].options.length
-    ? selectedCheckFilters[1].options.map((option) => option.value)
-    : [];
-  const priceOptions = selectedRadioFilters[0].options.length
-    ? selectedRadioFilters[0].options[0].value
-    : {};
+  const categoryOptions = useMemo(
+    () =>
+      selectedCheckFilters[0].options.length
+        ? selectedCheckFilters[0].options.map((option) => option.value)
+        : [],
+    [selectedCheckFilters[0].options.length]
+  );
+  const typeOptions = useMemo(
+    () =>
+      selectedCheckFilters[1].options.length
+        ? selectedCheckFilters[1].options.map((option) => option.value)
+        : [],
+    [selectedCheckFilters[1].options.length]
+  );
+  const priceOptions = useMemo(
+    () =>
+      selectedRadioFilters[0].options.length
+        ? selectedRadioFilters[0].options[0].value
+        : {},
+    [
+      selectedRadioFilters[0].options.length
+        ? selectedRadioFilters[0].options[0].label
+        : selectedRadioFilters[0].options.length,
+    ]
+  );
 
-  handleFilter(categoryOptions, typeOptions, priceOptions);
+  useEffect(() => {
+    // eslint-disable-next-line no-console
+    console.log('useEffect');
+    setItems(handleFilter(categoryOptions, typeOptions, priceOptions));
+  }, [categoryOptions, typeOptions, priceOptions]);
   return (
     <div data-testid="filter" className="bg-background">
       <div>

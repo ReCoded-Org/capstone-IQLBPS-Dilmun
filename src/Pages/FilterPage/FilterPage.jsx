@@ -15,6 +15,8 @@ const FilterPage = () => {
   const { firstName, lastName } = useSelector(user);
   const allItems = useSelector(itemList);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [items, setItems] = useState([]);
+
   const handleFilter = (category, type, price) => {
     const filteredItems = allItems
       .filter((item) => {
@@ -24,8 +26,9 @@ const FilterPage = () => {
         if (typeof item.category === 'string') {
           return category.includes(item.category.toLowerCase());
         }
-        return item.category
-          .some((cat) => category.includes(cat.toLowerCase()));
+        return item.category.some((cat) =>
+          category.includes(cat.toLowerCase())
+        );
       })
       .filter((item) => {
         if (!type.length) {
@@ -45,6 +48,7 @@ const FilterPage = () => {
 
     // eslint-disable-next-line no-console
     console.log(filteredItems);
+    return filteredItems;
   };
   useEffect(() => {
     dispatch(getItemList());
@@ -85,11 +89,12 @@ const FilterPage = () => {
       </div>
       <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 xl:grid-cols-5">
         <Filter
+          setItems={setItems}
           handleFilter={handleFilter}
           mobileFiltersOpen={mobileFiltersOpen}
           setMobileFiltersOpen={setMobileFiltersOpen}
         />
-        <ItemsDisplay items={allItems} />
+        <ItemsDisplay items={items} />
       </div>
       <ItemDetailsPage />
     </motion.main>
