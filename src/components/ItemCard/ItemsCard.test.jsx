@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import ItemsCard from './ItemsCard';
 import { store } from '../../app/store';
 
@@ -9,18 +10,20 @@ const MOCK_ITEM_DATA = {
   description: 'Description',
   price: 110,
   type: 'Item Type',
-    categories: ['Men'],
-    owner: {
-      email: 'email'
-  }
+  categories: ['Men'],
+  owner: {
+    email: 'email',
+  },
 };
 
 test('render item cards correctly', () => {
   render(
-    <Provider store={store}>
-      <ItemsCard item={MOCK_ITEM_DATA} />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <ItemsCard item={MOCK_ITEM_DATA} />
+      </Provider>
+    </BrowserRouter>
   );
-    
-    expect(screen.getByTestId('item-card')).toMatchSnapshot()
+
+  expect(screen.getByTestId('item-card')).toMatchSnapshot();
 });

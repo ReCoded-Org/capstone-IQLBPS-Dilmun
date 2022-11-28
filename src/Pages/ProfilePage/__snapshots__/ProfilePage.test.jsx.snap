@@ -70,14 +70,14 @@ exports[`Profile Page Rendered Correctly 1`] = `
           </h3>
         </div>
         <div
-          class="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl	"
+          class="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl place-items-center"
         />
         <a
           class="w-full text-center"
           href="/add-item"
         >
           <button
-            class="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
+            class="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background rounded-md hover:bg-tertiary hover:text-primary duration-500"
             type="button"
           >
             profile.add_new_item

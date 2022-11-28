@@ -54,7 +54,7 @@ export const signInWithGoogle = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
-    }
+  }
 )
 export const Signout = createAsyncThunk(
   'user/signout',
@@ -123,6 +123,10 @@ export const signUpWithCredentials = createAsyncThunk(
         firstName,
         lastName,
         email,
+        address: {
+          city: 'Beirut',
+          country: 'Lebanon',
+        }
       });
 
       callback();
@@ -179,10 +183,10 @@ export const updateUserAddress = createAsyncThunk(
   }) => {
     try {
       const docRef = doc(db, 'Users', payload.user.uid);
-      await setDoc(docRef, {address: payload.address}, {
+      await setDoc(docRef, { address: payload.address }, {
         merge: true,
       });
-      return JSON.stringify({ ...payload.user, address: {...payload.address} });
+      return JSON.stringify({ ...payload.user, address: { ...payload.address } });
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }

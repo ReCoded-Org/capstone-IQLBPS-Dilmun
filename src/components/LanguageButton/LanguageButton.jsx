@@ -63,7 +63,7 @@ const LanguageButton = ({ closeNavbar }) => {
                       active
                         ? 'bg-background text-secondary rounded-md'
                         : 'text-background',
-                      'text-sm flex justify-between items-center px-4 cursor-pointer text-background py-1'
+                      'text-sm flex justify-between items-center px-4 cursor-pointer text-background hover:text-primary py-1'
                     )}
                   >
                     <h3>{language.name}</h3>

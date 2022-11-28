@@ -2,7 +2,6 @@
 
 exports[`Add item page rendered correctly 1`] = `
 <div
-  class="mt-24"
   data-testid="add-item-page"
   style="width: 0px;"
 >
