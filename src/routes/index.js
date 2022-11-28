@@ -14,6 +14,7 @@ import FilterPage from '../Pages/FilterPage/FilterPage';
 import FaqPage from '../Pages/FaqPage/FaqPage';
 import ContactUs from '../Pages/ContactUsPage/ContactUs'
 import ProfilePage from '../Pages/ProfilePage/ProfilePage'
+import ItemDetailsPage from '../Pages/ItemDetailsPage/ItemDetailsPage';
 import SignedInUsersHomePage from "../Pages/SignedInUsersHomePage/SignedInUsersHomePage";
 import NotFoundPage from '../Pages/NotFoundPage/NotFoundPage'
 
@@ -25,6 +26,7 @@ export default function Router() {
         { path: '/signin', element: <SignInPage /> },
         { path: '/signup', element: <SignUpPage /> },
         { path: '/products', element: <FilterPage /> },
+        { path: '/product/:id', element: <ItemDetailsPage /> },
         { path: '/about', element: <AboutUsPage /> },
         { path: '/faq', element: <FaqPage /> },
         { path: '/add-item', element: <AddItemPage /> },

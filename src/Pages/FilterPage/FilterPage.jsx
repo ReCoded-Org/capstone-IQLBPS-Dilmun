@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Filter from '../../components/Filter/Filter';
 import ItemsDisplay from '../../components/ItemsDisplay/ItemsDisplay';
 import Sort from '../../components/Sort/Sort';
-import ItemDetailsPage from '../ItemDetailsPage/ItemDetailsPage';
 import AddItemButton from '../../components/AddItemButton/AddItemButton';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { user } from '../../features/slices/user';
@@ -96,7 +95,6 @@ const FilterPage = () => {
         />
         <ItemsDisplay items={items} />
       </div>
-      <ItemDetailsPage />
     </motion.main>
   );
 };

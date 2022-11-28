@@ -129,6 +129,8 @@ exports[`redering footer 1`] = `
       href="/"
       onClick={[Function]}
     >
+       
+       
       Dilmun™
     </a>
     . All Rights Reserved.

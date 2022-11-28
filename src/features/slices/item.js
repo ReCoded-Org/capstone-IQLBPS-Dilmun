@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { filter } from 'lodash';
-import { addDoc, collection, doc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
+import { addDoc, collection, doc, setDoc, getDoc, getDocs, deleteDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import moment from 'moment';
 import { db, storage } from '../../firebase-config';
@@ -86,6 +86,19 @@ export const getUserItems = createAsyncThunk(
         items.push({ id: item.id, title: item.data().title, file: item.data().file, price: item.data().price, description: item.data().description, category: item.data().category, type: item.data().type, createdAt: item.data().createdAt });
       });
       return items;
+    } catch (error) {
+      return error.message;
+    }
+  }
+);
+
+// GET Item by ID from DB and save to state
+export const getItemById = createAsyncThunk(
+  'item/getItemById',
+  async (id) => {
+    try {
+      const item = await getDoc(doc(db, 'Items', id));
+      return { id: item.id, ...item.data() };
     } catch (error) {
       return error.message;
     }
@@ -179,6 +192,26 @@ const itemSlice = createSlice({
         });
       })
       .addCase(editItem.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.payload;
+        state.isItemLoading = false;
+        state.item = {};
+      })
+
+      // GET ITEM
+      .addCase(getItemById.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+        state.isItemLoading = true;
+        state.item = {};
+      })
+      .addCase(getItemById.fulfilled, (state, action) => {
+        state.status = "success";
+        state.error = null;
+        state.isItemLoading = false;
+        state.item = action.payload;
+      })
+      .addCase(getItemById.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.payload;
         state.isItemLoading = false;

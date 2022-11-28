@@ -7,8 +7,6 @@ import LoadingScreen from './components/animations/LoadingScreen';
 import Footer from './components/Footer/Footer';
 import { auth } from './firebase-config';
 import { getCurrentSignedInUser } from './features/slices/user';
-
-
 import Router from './routes';
 
 function App() {
