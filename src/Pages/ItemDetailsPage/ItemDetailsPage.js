@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+// comps.
+import LoadingScreen from '../../components/animations/LoadingScreen';
 import CustomButton from '../../components/CustomComponents/CustomButton';
+// redux
 import { getItemById } from '../../features/slices/item';
 import { useDispatch, useSelector } from '../../app/store';
-import LoadingScreen from '../../components/animations/LoadingScreen';
 
 const ItemDetailsPage = () => {
   const dispatch = useDispatch();
@@ -23,16 +25,16 @@ const ItemDetailsPage = () => {
     item && (
       <div
         data-testid="item-details-page"
-        className="md:flex text-background p-20 bg-background gap-4 h-screen w-full"
+        className="flex flex-col md:flex-row text-background p-10 md:p-20 bg-background w-full"
       >
         <div className="w-full lg:w-1/2">
           <img
-            className="max-h-full min-h-[600px] mb-6 md:mb-0 w-full object-contain"
+            className="max-h-full min-h-[600px] w-full object-cover md:object-fill	"
             src={item.file}
             alt={item.title}
           />
         </div>
-        <div className="w-full lg:w-1/2 md:ml-auto  max-h-full md:mr-auto flex flex-col gap-7 rounded pt-5 px-5 bg-gradient-to-tl from-tertiary to-primary justify-between py-10">
+        <div className="w-full lg:w-1/2 md:ml-auto max-h-full md:mr-auto flex flex-col gap-7 rounded pt-5 px-5 bg-gradient-to-tl from-tertiary to-primary justify-between py-10 min-h-[600px]">
           <div className="flex flex-col gap-7">
             <div>
               <h2 className="font-bold text-4xl pb-4">{item.title}</h2>
