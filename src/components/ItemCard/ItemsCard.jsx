@@ -14,7 +14,7 @@ function ItemsCard({ item, animate }) {
       <Link to={`/product/${item.id}`}>
         <figure className="relative max-w-sm transition-all cursor-pointer">
           <img
-            className="rounded-t-lg overflow-hidden mb-3 lg:h-80 md:h-64 h-96 shadow-md md:w-64 lg:w-80 w-96"
+            className="rounded-t-lg overflow-hidden object-cover mb-3 lg:h-80 h-80 shadow-md md:w-80 xl:w-full lg:w-72 w-full"
             src={item.file}
             alt="product"
           />
@@ -25,7 +25,7 @@ function ItemsCard({ item, animate }) {
               </span>
             ) : (
               <span className="inline-block bg-background bg-opacity-80 rounded-xl px-3 py-1 text-xl font-bold text-primary mr-2 mb-2">
-                {item.price}
+                {item.price} $
               </span>
             )}
           </figcaption>

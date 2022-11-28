@@ -21,7 +21,7 @@ Object {
             sort.sort
             <svg
               aria-hidden="true"
-              class="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+              class="-mr-1 ml-1 xl:h-7 xl:w-7 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ Object {
           sort.sort
           <svg
             aria-hidden="true"
-            class="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+            class="-mr-1 ml-1 xl:h-7 xl:w-7 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
