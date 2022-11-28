@@ -12,13 +12,13 @@ import Form from './Form';
 import { useDispatch } from '../../app/store';
 import { getUserItems } from '../../features/slices/item';
 
-function Profile() {
+export default function Profile() {
   const dispatch = useDispatch();
   const { userItems } = useSelector((state) => state.item);
   const { t } = useTranslation();
   const userData = useSelector(user);
-  const [userCity, setUserCity] = useState('');
-  const [userCountry, setUserCountry] = useState();
+  // const [userCity, setUserCity] = useState('');
+  // const [userCountry, setUserCountry] = useState();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -30,17 +30,17 @@ function Profile() {
   const toggleForm = () => {
     setIsOpen(!isOpen);
   };
-  useEffect(() => {
-    if (!_.isEmpty(userData)) {
-      const { city } = userData.address;
-      const capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
-      setUserCity(capitalizeCity);
-      const { country } = userData.address;
-      const capitalizeCountry =
-        country.charAt(0).toUpperCase() + country.slice(1);
-      setUserCountry(capitalizeCountry);
-    }
-  });
+  // useEffect(() => {
+  //   if (!_.isEmpty(userData)) {
+  //     const { city } = userData.address;
+  //     const capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+      
+  //     const { country } = userData.address;
+  //     const capitalizeCountry =
+  //       country.charAt(0).toUpperCase() + country.slice(1);
+ 
+  //   }
+  // });
   return (
     <div
       data-testid="profile"
@@ -63,9 +63,9 @@ function Profile() {
           <h1 className="font-bold text-[20px] sm:text-[26px] lg:text-[34px] text-primary m-1">
             {userData.firstName} {userData.lastName}
           </h1>
-          {!_.isEmpty(userData) && (
+          {!_.isEmpty(userData.address) && (
             <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-              {userCity},{userCountry}
+              {userData.address.country}, {userData.address.city}
             </h3>
           )}
 
@@ -127,5 +127,3 @@ function Profile() {
     </div>
   );
 }
-
-export default Profile;
