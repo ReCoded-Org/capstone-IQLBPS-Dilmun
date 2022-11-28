@@ -17,11 +17,11 @@ exports[`Filter Component Renders Correctly 1`] = `
           class="-my-3 flow-root"
         >
           <button
-            aria-controls="headlessui-disclosure-panel-:r2:"
+            aria-controls="headlessui-disclosure-panel-:r3:"
             aria-expanded="true"
             class="flex w-full items-center justify-between bg-background py-3 text-sm text-primary hover:text-secondary"
             data-headlessui-state="open"
-            id="headlessui-disclosure-button-:r1:"
+            id="headlessui-disclosure-button-:r2:"
             type="button"
           >
             <span
@@ -51,7 +51,7 @@ exports[`Filter Component Renders Correctly 1`] = `
         <div
           class="pt-6"
           data-headlessui-state="open"
-          id="headlessui-disclosure-panel-:r2:"
+          id="headlessui-disclosure-panel-:r3:"
         >
           <div
             class="space-y-4"
@@ -60,7 +60,6 @@ exports[`Filter Component Renders Correctly 1`] = `
               class="flex items-center"
             >
               <input
-                checked=""
                 class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
                 id="filter-category-0"
                 name="category[]"
@@ -173,7 +172,7 @@ exports[`Filter Component Renders Correctly 1`] = `
             aria-expanded="false"
             class="flex w-full items-center justify-between bg-background py-3 text-sm text-primary hover:text-secondary"
             data-headlessui-state=""
-            id="headlessui-disclosure-button-:r3:"
+            id="headlessui-disclosure-button-:r4:"
             type="button"
           >
             <span
@@ -210,7 +209,7 @@ exports[`Filter Component Renders Correctly 1`] = `
             aria-expanded="false"
             class="flex w-full items-center justify-between bg-background py-3 text-primary hover:text-secondary"
             data-headlessui-state=""
-            id="headlessui-disclosure-button-:r5:"
+            id="headlessui-disclosure-button-:r6:"
             type="button"
           >
             <span

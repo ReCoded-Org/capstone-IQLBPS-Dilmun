@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`should render feedbackCard component 1`] = `
-<div
-  class="grid lg:grid-cols-4 lg:col-span-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6"
-  data-testid="itemsdisplay-div"
-/>
-`;
