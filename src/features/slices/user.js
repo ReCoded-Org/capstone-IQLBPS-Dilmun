@@ -123,10 +123,6 @@ export const signUpWithCredentials = createAsyncThunk(
         firstName,
         lastName,
         email,
-        address: {
-          city: 'Beirut',
-          country: 'Lebanon',
-        }
       });
 
       callback();
