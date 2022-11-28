@@ -109,15 +109,15 @@ function Profile() {
               {t('profile.my_items')}
             </h3>
           </div>
-          <div className="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl	">
+          <div className="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl place-items-center">
             {userItems.length > 0 && userItems.map((item) => (
-              <UserItemCard key={item.id} item={item}/>
+              <UserItemCard key={item.id} item={item} />
             ))}
           </div>
           <Link className="w-full text-center" to={ADD_ITEM_ROUTE}>
             <button
               type="button"
-              className="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background  rounded-md hover:bg-tertiary hover:text-primary duration-500"
+              className="w-1/2 p-4 font-semibold shadow-lg bg-primary text-background rounded-md hover:bg-tertiary hover:text-primary duration-500"
             >
               {t('profile.add_new_item')}
             </button>

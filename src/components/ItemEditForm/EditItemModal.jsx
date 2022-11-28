@@ -20,7 +20,7 @@ export default function EditItemModal({ item }) {
   const [imgRef, setImgRef] = useState(item.file);
   const [imgSrc, setImgSrc] = useState(item.file);
   const { t } = useTranslation();
-  
+
   const schema = yup.object().shape({
     title: yup.string().required(t('error.title')),
     description: yup.string().required(t('error.description')),
@@ -94,7 +94,8 @@ export default function EditItemModal({ item }) {
     });
   }
 
-  function openModal() {
+  function openModal(e) {
+    e.preventDefault();
     setIsOpen(true);
   }
 
@@ -104,7 +105,7 @@ export default function EditItemModal({ item }) {
         className="flex items-center justify-end bg-background p-3"
         data-testid="edit-item"
       >
-        <button type="button" onClick={openModal}>
+        <button type="button" onClick={(e) => openModal(e)}>
           <Tooltip text="Edit Item">
             <BiEdit className="h-8 w-8 text-primary" />
           </Tooltip>
