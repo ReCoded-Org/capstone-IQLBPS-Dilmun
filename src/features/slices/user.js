@@ -130,7 +130,7 @@ export const signUpWithCredentials = createAsyncThunk(
       });
 
       callback();
-      return JSON.stringify(user);
+      return JSON.stringify({ firstName, lastName, email, address: { city: 'Beirut', country: 'Lebanon' } });
     } catch (error) {
       return rejectWithValue(JSON.stringify(error));
     }
