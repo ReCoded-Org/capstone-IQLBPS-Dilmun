@@ -17,8 +17,6 @@ export default function Profile() {
   const { userItems } = useSelector((state) => state.item);
   const { t } = useTranslation();
   const userData = useSelector(user);
-  // const [userCity, setUserCity] = useState('');
-  // const [userCountry, setUserCountry] = useState();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -30,17 +28,7 @@ export default function Profile() {
   const toggleForm = () => {
     setIsOpen(!isOpen);
   };
-  // useEffect(() => {
-  //   if (!_.isEmpty(userData)) {
-  //     const { city } = userData.address;
-  //     const capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
-      
-  //     const { country } = userData.address;
-  //     const capitalizeCountry =
-  //       country.charAt(0).toUpperCase() + country.slice(1);
  
-  //   }
-  // });
   return (
     <div
       data-testid="profile"
@@ -65,7 +53,10 @@ export default function Profile() {
           </h1>
           {!_.isEmpty(userData.address) && (
             <h3 className="font-semibold text-[14px] sm:text-[18px] lg:text-[24px] text-primary m-1">
-              {userData.address.city}, {userData.address.country}
+              {userData.address.city.slice(0, 1).toUpperCase()}
+              {userData.address.city.slice(1)},{' '}
+              {userData.address.country.slice(0, 1).toUpperCase()}
+              {userData.address.country.slice(1)}
             </h3>
           )}
 
@@ -110,9 +101,10 @@ export default function Profile() {
             </h3>
           </div>
           <div className="grid xl:grid-cols-2 gap-4 p-5 max-w-screen-2xl place-items-center">
-            {userItems.length > 0 && userItems.map((item) => (
-              <UserItemCard key={item.id} item={item} />
-            ))}
+            {userItems.length > 0 &&
+              userItems.map((item) => (
+                <UserItemCard key={item.id} item={item} />
+              ))}
           </div>
           <Link className="w-full text-center" to={ADD_ITEM_ROUTE}>
             <button
