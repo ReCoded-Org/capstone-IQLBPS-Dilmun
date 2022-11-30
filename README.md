@@ -47,8 +47,23 @@ The purpose of this project is to facilitate shopping, selling, donations, and r
 
 Meet our team members through their GitHub profiles
 
-| [<img alt="Kutay" src="https://avatars.githubusercontent.com/u/63947758?v=4?size=115" width="115"><br><sub>@Iseluin</sub>](https://github.com/Iseluin) | [<img alt="karzan" src="https://avatars.githubusercontent.com/u/77196732?v=4?size=115" width="115"><br><sub>@karzan7899</sub>](https://github.com/karzan7899) | [<img alt="dania" src="https://avatars.githubusercontent.com/u/76593645?v=4?size=115" width="115"><br><sub>@dania-diar</sub>](https://github.com/dania-diar) | [<img alt="rondik" src="https://avatars.githubusercontent.com/u/109873857?v=4?size=115" width="115"><br><sub>@dania-diar</sub>](https://github.com/rondikmousa) | [<img alt="marwa" src="https://avatars.githubusercontent.com/u/50196875?v=4?size=115" width="115"><br><sub>@MARWAHAKMI</sub>](https://github.com/MARWAHAKMI) | [<img alt="ayub" src="https://avatars.githubusercontent.com/u/55099143?v=4?size=115" width="115"><br><sub>@ayubabdullah</sub>](https://github.com/ayubabdullah) | [<img alt="omar" src="https://avatars.githubusercontent.com/u/95765277?v=4?size=115" width="115"><br><sub>@omarbassatni97</sub>](https://github.com/OmarBassatni97) | [<img alt="sarah" src="https://avatars.githubusercontent.com/u/109027707?s=400&u=5b6ec524767db4bbfbe83ae0bf23412bbeb00527&v=4?size=115" width="115"><br><sub>@sarahaboudalal</sub>](https://github.com/sarahaboudalal) | [<img alt="oussama" src="https://avatars.githubusercontent.com/u/67838526?v=4?size=115" width="115"><br><sub>@OussamaMasri</sub>](https://github.com/OussamaMasri) | [<img alt="mawa" src="https://avatars.githubusercontent.com/u/95765277?v=4?size=115" width="115"><br><sub>@mawaidris</sub>](https://github.com/mawaidris) | [<img alt="niyan" src="https://avatars.githubusercontent.com/u/79282569?v=4?size=115" width="115"><br><sub>@viyan-najmaldin</sub>](https://github.com/viyan-najmaldin) | [<img alt="hiba" src="https://avatars.githubusercontent.com/u/32968546?v=4?size=115" width="115"><br><sub>@haboosh92</sub>](https://github.com/haboosh92) | [<img alt="zahraa" src="https://avatars.githubusercontent.com/u/72053572?v=4?size=115" width="115"><br><sub>@zahraaz</sub>](https://github.com/zahraaz) | [<img alt="maria" src="https://avatars.githubusercontent.com/u/109473070?v=4?size=115" width="115"><br><sub>@MariaTheresaAzzi</sub>](https://github.com/MariaTheresaAzzi) | [<img alt="sozyar" src="https://avatars.githubusercontent.com/u/99980873?v=4?size=115" width="115"><br><sub>@sozinadr</sub>](https://github.com/sozinadr) | [<img alt="maryam" src="https://avatars.githubusercontent.com/u/107570695?v=4?size=115" width="115"><br><sub>@aptx-maryam</sub>](https://github.com/aptx-maryam) | [<img alt="asaad" src="https://avatars.githubusercontent.com/u/108824657?v=4?size=115" width="115"><br><sub>@asaad-abughazaleh</sub>](https://github.com/asaad-abughazaleh) |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+- [<sub>@Iseluin</sub>](https://github.com/Iseluin) 
+- [<sub>@karzan7899</sub>](https://github.com/karzan7899)
+- [<sub>@dania-diar</sub>](https://github.com/dania-diar)
+- [<sub>@dania-diar</sub>](https://github.com/rondikmousa)-
+- [<sub>@MARWAHAKMI</sub>](https://github.com/MARWAHAKMI)
+- [<sub>@ayubabdullah</sub>](https://github.com/ayubabdullah)
+- [<sub>@omarbassatni97</sub>](https://github.com/OmarBassatni97)
+- [<sub>@sarahaboudalal</sub>](https://github.com/sarahaboudalal)
+- [<sub>@OussamaMasri</sub>](https://github.com/OussamaMasri)
+- [<sub>@mawaidris</sub>](https://github.com/mawaidris)
+- [<sub>@viyan-najmaldin</sub>](https://github.com/viyan-najmaldin)
+- [<sub>@haboosh92</sub>](https://github.com/haboosh92)
+- [<sub>@zahraaz</sub>](https://github.com/zahraaz)
+- [<sub>@MariaTheresaAzzi</sub>](https://github.com/MariaTheresaAzzi)
+- [<sub>@sozinadr</sub>](https://github.com/sozinadr)
+- [<sub>@aptx-maryam</sub>](https://github.com/aptx-maryam)
+- [<sub>@asaad-abughazaleh</sub>](https://github.com/asaad-abughazaleh)
 
 ##  Project Setup
 
