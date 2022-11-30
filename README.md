@@ -47,7 +47,7 @@ The purpose of this project is to facilitate shopping, selling, donations, and r
 
 Meet our team members through their GitHub profiles
 
-- Trainer: [<sub>Kutay Kağan Özen</sub>](https://github.com/Iseluin) 
+- [<sub>Kutay Kağan Özen</sub>](https://github.com/Iseluin) 
 - [<sub>Karzan Luqman</sub>](https://github.com/karzan7899)
 - [<sub>Dania Diar</sub>](https://github.com/dania-diar)
 - [<sub>Rondik Mousa</sub>](https://github.com/rondikmousa)
