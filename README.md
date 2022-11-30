@@ -1,8 +1,58 @@
-# Getting Started with Create React App and Redux
+# Dilmun
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+Dilmun is a website that allows people to sell, buy, and even donate products with a click of a button. With its availability in 3 different languages, it also helps people to meet and connect online. By signing up with either your email, Google, or Facebook account, you'll get to see the world we built in Dilmun.
 
-## Available Scripts
+# Outline & Objective
+
+The purpose of this project is to facilitate shopping, selling, donations, and retales for people around the world. It's also a way to help one another and connect with people from different cultures.
+
+## Features
+
+- Home Page 
+- Newsletter and Subscription
+- About Page
+- Sign In / Sign Up page
+    - Authentication available for email, Google, and Facebook
+- Home Page for Signed in users
+- Products Page with filtering / search functioanlity
+- Add new item page
+- User profile page
+- Edit / Delete user specific items 
+
+
+## Check out our application
+
+ https://capstone-dilmun.netlify.app/
+
+## Technologies
+
+- React.js
+- Redux Toolkit
+- Firebase 
+- HTML 5
+- CSS 3
+- Tailwind CSS
+- Headless UI
+- Flowbite
+- React Hook Form
+- React Router
+- Git
+- i18n
+- Netlify
+- ESlint
+- Prettier
+- React Icons
+
+## Our Amazing Team
+
+Meet our team members through their GitHub profiles
+
+| [<img alt="Kutay" src="https://avatars.githubusercontent.com/u/63947758?v=4?size=115" width="115"><br><sub>@Iseluin</sub>](https://github.com/Iseluin) | [<img alt="karzan" src="https://avatars.githubusercontent.com/u/77196732?v=4?size=115" width="115"><br><sub>@karzan7899</sub>](https://github.com/karzan7899) | [<img alt="dania" src="https://avatars.githubusercontent.com/u/76593645?v=4?size=115" width="115"><br><sub>@dania-diar</sub>](https://github.com/dania-diar) | [<img alt="rondik" src="https://avatars.githubusercontent.com/u/109873857?v=4?size=115" width="115"><br><sub>@dania-diar</sub>](https://github.com/rondikmousa) | [<img alt="marwa" src="https://avatars.githubusercontent.com/u/50196875?v=4?size=115" width="115"><br><sub>@MARWAHAKMI</sub>](https://github.com/MARWAHAKMI) | [<img alt="ayub" src="https://avatars.githubusercontent.com/u/55099143?v=4?size=115" width="115"><br><sub>@ayubabdullah</sub>](https://github.com/ayubabdullah) | [<img alt="omar" src="https://avatars.githubusercontent.com/u/95765277?v=4?size=115" width="115"><br><sub>@omarbassatni97</sub>](https://github.com/OmarBassatni97) | [<img alt="sarah" src="https://avatars.githubusercontent.com/u/109027707?s=400&u=5b6ec524767db4bbfbe83ae0bf23412bbeb00527&v=4?size=115" width="115"><br><sub>@sarahaboudalal</sub>](https://github.com/sarahaboudalal) | [<img alt="oussama" src="https://avatars.githubusercontent.com/u/67838526?v=4?size=115" width="115"><br><sub>@OussamaMasri</sub>](https://github.com/OussamaMasri) | [<img alt="mawa" src="https://avatars.githubusercontent.com/u/95765277?v=4?size=115" width="115"><br><sub>@mawaidris</sub>](https://github.com/mawaidris) | [<img alt="niyan" src="https://avatars.githubusercontent.com/u/79282569?v=4?size=115" width="115"><br><sub>@viyan-najmaldin</sub>](https://github.com/viyan-najmaldin) | [<img alt="hiba" src="https://avatars.githubusercontent.com/u/32968546?v=4?size=115" width="115"><br><sub>@haboosh92</sub>](https://github.com/haboosh92) | [<img alt="zahraa" src="https://avatars.githubusercontent.com/u/72053572?v=4?size=115" width="115"><br><sub>@zahraaz</sub>](https://github.com/zahraaz) | [<img alt="maria" src="https://avatars.githubusercontent.com/u/109473070?v=4?size=115" width="115"><br><sub>@MariaTheresaAzzi</sub>](https://github.com/MariaTheresaAzzi) | [<img alt="sozyar" src="https://avatars.githubusercontent.com/u/99980873?v=4?size=115" width="115"><br><sub>@sozinadr</sub>](https://github.com/sozinadr) | [<img alt="maryam" src="https://avatars.githubusercontent.com/u/107570695?v=4?size=115" width="115"><br><sub>@aptx-maryam</sub>](https://github.com/aptx-maryam) | [<img alt="asaad" src="https://avatars.githubusercontent.com/u/108824657?v=4?size=115" width="115"><br><sub>@asaad-abughazaleh</sub>](https://github.com/asaad-abughazaleh) |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+
+##  Project Setup
+
+This project was bootstrapped with Create React App, using the Redux and Redux Toolkit template.
 
 In the project directory, you can run:
 
@@ -28,19 +78,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
