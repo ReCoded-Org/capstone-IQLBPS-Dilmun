@@ -31,6 +31,7 @@ The purpose of this project is to facilitate shopping, selling, donations, and r
 - Firebase 
 - HTML 5
 - CSS 3
+- JavaScript
 - Tailwind CSS
 - Headless UI
 - Flowbite
