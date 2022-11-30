@@ -47,23 +47,23 @@ The purpose of this project is to facilitate shopping, selling, donations, and r
 
 Meet our team members through their GitHub profiles
 
-- [<sub>@Iseluin</sub>](https://github.com/Iseluin) 
-- [<sub>@karzan7899</sub>](https://github.com/karzan7899)
-- [<sub>@dania-diar</sub>](https://github.com/dania-diar)
-- [<sub>@dania-diar</sub>](https://github.com/rondikmousa)-
-- [<sub>@MARWAHAKMI</sub>](https://github.com/MARWAHAKMI)
-- [<sub>@ayubabdullah</sub>](https://github.com/ayubabdullah)
-- [<sub>@omarbassatni97</sub>](https://github.com/OmarBassatni97)
-- [<sub>@sarahaboudalal</sub>](https://github.com/sarahaboudalal)
-- [<sub>@OussamaMasri</sub>](https://github.com/OussamaMasri)
-- [<sub>@mawaidris</sub>](https://github.com/mawaidris)
-- [<sub>@viyan-najmaldin</sub>](https://github.com/viyan-najmaldin)
-- [<sub>@haboosh92</sub>](https://github.com/haboosh92)
-- [<sub>@zahraaz</sub>](https://github.com/zahraaz)
-- [<sub>@MariaTheresaAzzi</sub>](https://github.com/MariaTheresaAzzi)
-- [<sub>@sozinadr</sub>](https://github.com/sozinadr)
-- [<sub>@aptx-maryam</sub>](https://github.com/aptx-maryam)
-- [<sub>@asaad-abughazaleh</sub>](https://github.com/asaad-abughazaleh)
+- Trainer: [<sub>Kutay Kağan Özen</sub>](https://github.com/Iseluin) 
+- [<sub>Karzan Luqman</sub>](https://github.com/karzan7899)
+- [<sub>Dania Diar</sub>](https://github.com/dania-diar)
+- [<sub>Rondik Mousa</sub>](https://github.com/rondikmousa)
+- [<sub>Marwa Hakmi</sub>](https://github.com/MARWAHAKMI)
+- [<sub>Ayub Abdullah</sub>](https://github.com/ayubabdullah)
+- [<sub>Omar Bassatni</sub>](https://github.com/OmarBassatni97)
+- [<sub>Sarah Abou Dalal</sub>](https://github.com/sarahaboudalal)
+- [<sub>Oussama Masri</sub>](https://github.com/OussamaMasri)
+- [<sub>Mawa Idris</sub>](https://github.com/mawaidris)
+- [<sub>Viyan Najmaldina</sub>](https://github.com/viyan-najmaldin)
+- [<sub>Hiba Ithawi</sub>](https://github.com/haboosh92)
+- [<sub>Zahraa Mahmood</sub>](https://github.com/zahraaz)
+- [<sub>Maria Theresa Azzi</sub>](https://github.com/MariaTheresaAzzi)
+- [<sub>Sozyar Nadir</sub>](https://github.com/sozinadr)
+- [<sub>Maryam Haitham Najaf</sub>](https://github.com/aptx-maryam)
+- [<sub>Asaad Abu Ghazaleh</sub>](https://github.com/asaad-abughazaleh)
 
 ##  Project Setup
 
