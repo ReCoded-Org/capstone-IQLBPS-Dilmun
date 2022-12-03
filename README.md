@@ -32,11 +32,13 @@ The purpose of this project is to facilitate shopping, selling, donations, and r
 - HTML 5
 - CSS 3
 - JavaScript
+- React Testing Library
 - Tailwind CSS
 - Headless UI
 - Flowbite
 - React Hook Form
 - React Router
+- Framer Motion
 - Git
 - i18n
 - Netlify
@@ -92,5 +94,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
