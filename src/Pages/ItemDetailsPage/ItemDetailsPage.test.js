@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
+import { unmountComponentAtNode } from 'react-dom';
 import { Provider } from 'react-redux';
 import ItemDetailsPage from './ItemDetailsPage';
 import { store } from '../../app/store';
@@ -15,8 +17,26 @@ const MOCK_ITEM_DATA = {
     email: 'email',
   },
 };
+let container = null;
+beforeEach(() => {
+  // setup a DOM element as a render target
+  container = document.createElement('div');
+  document.body.appendChild(container);
+});
 
-test('Sort the Products', () => {
-    const tree = render(<Provider store={store}><ItemDetailsPage item={MOCK_ITEM_DATA} /></Provider>);
-    expect(tree).toMatchSnapshot();
+afterEach(() => {
+  // cleanup on exiting
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
+
+test('Sort the Products', async() => {
+  const tree = render(
+    <Provider store={store}>
+      <ItemDetailsPage item={MOCK_ITEM_DATA} />
+    </Provider>
+  );
+  await act(() => tree)
+  expect(tree).toMatchSnapshot();
 });
