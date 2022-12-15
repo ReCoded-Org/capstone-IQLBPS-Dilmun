@@ -6,7 +6,7 @@ exports[`Home Page Rendered Correctly 1`] = `
   style="width: 0px;"
 >
   <div
-    class="backdrop-blur-md bg-white/30 h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
+    class="backdrop-blur-md bg-background h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
     data-testid="hero-section"
   >
     <div
@@ -184,7 +184,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     </div>
   </section>
   <div
-    class="shadow-md bg-primary w-full h-96 relative"
+    class="shadow-md bg-background w-full h-96 relative"
   >
     <video
       autoplay=""

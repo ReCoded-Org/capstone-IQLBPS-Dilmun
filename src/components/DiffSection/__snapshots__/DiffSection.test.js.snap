@@ -2,7 +2,7 @@
 
 exports[`DiffSection renders without crashing  1`] = `
 <div
-  className="shadow-md bg-primary w-full h-96 relative"
+  className="shadow-md bg-background w-full h-96 relative"
 >
   <video
     autoPlay={true}
