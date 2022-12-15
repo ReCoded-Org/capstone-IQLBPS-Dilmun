@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
 function NotFound() {
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="bg-background flex flex-col justify-center items-center h-screen">
       <div className="text-primary">

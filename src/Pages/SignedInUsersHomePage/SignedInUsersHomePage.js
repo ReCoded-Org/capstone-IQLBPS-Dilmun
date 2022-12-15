@@ -10,7 +10,7 @@ import ItemsCard from '../../components/ItemCard/ItemsCard';
 import { getItemList, itemList } from '../../features/slices/item';
 
 const SignedInUsersHomePage = () => {
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   const userData = useSelector(user);
   const itemData = useSelector(itemList);
   const dispatch = useDispatch();

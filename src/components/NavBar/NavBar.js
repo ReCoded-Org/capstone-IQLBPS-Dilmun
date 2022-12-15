@@ -22,7 +22,7 @@ const classNames = (...classes) => {
 };
 
 function NavBar({ initialTransparency = true }) {
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const dispatch = useDispatch();

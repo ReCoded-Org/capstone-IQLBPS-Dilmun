@@ -46,7 +46,8 @@ const FilterPage = () => {
       });
       
 
-
+    // eslint-disable-next-line no-console
+    console.log(filteredItems);
     return filteredItems;
   };
   const onChange = (e) => {

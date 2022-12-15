@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function OverlapText() {
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
 
   function WatchFullVideoHandler() {
     const videoLink = 'https://youtu.be/K8ABga4Xcb0';

@@ -1,7 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { unmountComponentAtNode } from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import ItemDetailsPage from './ItemDetailsPage';
 import { store } from '../../app/store';
@@ -18,27 +16,7 @@ const MOCK_ITEM_DATA = {
   },
 };
 
-let container = null;
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement('div');
-  document.body.appendChild(container);
-});
-
-
-afterEach(() => {
-  // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
-test('Sort the Products', async () => {
- await act(() => {
-    render(
-      <Provider store={store}>
-        <ItemDetailsPage item={MOCK_ITEM_DATA} isItemLoading={false} />
-      </Provider>
-    );
-  });
-  expect(screen.getByTestId('item-details-page')).toMatchSnapshot();
+test('Sort the Products', () => {
+    const tree = render(<Provider store={store}><ItemDetailsPage item={MOCK_ITEM_DATA} /></Provider>);
+    expect(tree).toMatchSnapshot();
 });

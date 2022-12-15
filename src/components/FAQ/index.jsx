@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 function FAQ() {
   const closeRecent = useRef(undefined);
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   const data = {
     questions: [
       {

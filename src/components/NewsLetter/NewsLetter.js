@@ -6,7 +6,7 @@ import { db } from '../../firebase-config';
 import CustomButton from '../CustomComponents/CustomButton';
 
 const NewsLetter = () => {
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   const [error, setError] = useState('');
   const { register, handleSubmit, reset } = useForm();
 

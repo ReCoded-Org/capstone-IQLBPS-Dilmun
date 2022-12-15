@@ -5,7 +5,7 @@ import { sendFeedback, status } from '../../features/feedback/feedbackSlice';
 import LoadingScreen from '../../components/animations/LoadingScreen';
 
 const ContactUs = () => {
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const statusData = useSelector(status);
   const {

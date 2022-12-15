@@ -23,7 +23,7 @@ export default function AddItemForm() {
   const { isItemLoading, error } = useSelector((state) => state.item);
   const userData = useSelector(user);
 
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   const schema = yup.object().shape({
     title: yup.string().required(t('error.title')),
     price: yup.number().required(t('error.price')),

@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from '../../app/store';
 const ItemDetailsPage = () => {
   const dispatch = useDispatch();
   const { item, isItemLoading } = useSelector((state) => state.item);
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   const { id } = useParams();
 
   useEffect(() => {

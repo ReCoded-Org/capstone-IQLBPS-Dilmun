@@ -5,7 +5,7 @@ import team from './team.json';
 import AboutUsHeader from './AboutUsHeader';
 
 const AboutUs = () => {
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <AboutUsHeader />

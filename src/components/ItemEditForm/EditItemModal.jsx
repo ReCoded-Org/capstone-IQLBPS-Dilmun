@@ -19,7 +19,8 @@ export default function EditItemModal({ item }) {
   const { isItemLoading } = useSelector((state) => state.item);
   const [imgRef, setImgRef] = useState(item.file);
   const [imgSrc, setImgSrc] = useState(item.file);
-  const { t } = jest ? { t: (s) => s } : useTranslation();
+  const { t } = useTranslation();
+
   const schema = yup.object().shape({
     title: yup.string().required(t('error.title')),
     description: yup.string().required(t('error.description')),
