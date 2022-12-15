@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`redering divs correctly correctly 1`] = `undefined`;
-
 exports[`redering footer 1`] = `
 <footer
   className="p-4 bg-gradient-to-br from-background via-background to-secondary shadow md:p-5 border-t"
