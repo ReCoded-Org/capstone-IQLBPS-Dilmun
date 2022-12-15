@@ -1,5 +1,5 @@
 import React from 'react';
-import { render , screen } from '@testing-library/react';
+import { render , screen, cleanup } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import {store} from '../../app/store'
@@ -26,6 +26,7 @@ const MOCK_USER_DATA = {
   email: 'user@user.user',
 };
 
+afterEach(cleanup);
 
 test('Profile Rendered Correctly', () => {
     render(

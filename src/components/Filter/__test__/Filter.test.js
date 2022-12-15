@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { store } from '../../../app/store';
@@ -19,14 +19,16 @@ const MOCK_RADIO_FILTER = {
     {value: {min: 1, max: 25}, label: '1$ - 25$', checked: false}
   ]
 }
+afterEach(cleanup);
 
 test('Filter Component Renders Correctly', () => {
-  render(
+render(
     <Provider store={store}>
       <Router>
         <FilterPage checkFilterS={MOCK_CHECK_FILTER} radioFilters={MOCK_RADIO_FILTER}/>
       </Router>
     </Provider>
   );
+
   expect(screen.getByTestId('filter')).toMatchSnapshot();
 });
