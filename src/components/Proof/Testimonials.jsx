@@ -33,21 +33,21 @@ const Testimonials = () => {
       data-testid="testimonials-section"
       className="sm:py-5 py-4 flex justify-center items-center flex-col"
     >
-      <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-4 mb-2">
+      <div className="w-full flex lg:justify-between justify-center items-center lg:flex-row flex-col sm:mb-4 mb-2">
         <h2
-          className="font-bold text-center xs:text-[48px] text-[40px] text-primary xs:leading-[76.8px] leading-[66.8px] w-full"
+          className="font-bold text-center lg:text-left pl-0 lg:pl-8 xs:text-[48px] text-[40px] text-primary xs:leading-[76.8px] leading-[66.8px] w-full"
           data-testid="testimonials-title"
         >
           <Trans i18nKey="proof.what_they_say" components={{ br: <br /> }} />
         </h2>
-        <div className="w-full md:mt-0 mt-6">
+
           <p
-            className="font-poppins text-primary font-normal text-[20px] leading-[30.8px] text-center p-6 md:text-left md:max-w-[450px]"
+            className="font-poppins text-primary font-normal text-[20px] leading-[30.8px] text-center p-6 lg:text-left md:max-w-[450px]"
             data-testid="testimonials-paragraph"
           >
             {t('proof.everything_you_need')}
           </p>
-        </div>
+
       </div>
 
       <div className="container flex flex-wrap sm:justify-center justify-center w-full feedback-container p-6">

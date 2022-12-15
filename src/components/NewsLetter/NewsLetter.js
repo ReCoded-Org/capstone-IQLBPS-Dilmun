@@ -27,9 +27,9 @@ const NewsLetter = () => {
   return (
     <div
       data-testid="newsletter"
-      className=" grid grid-col-2 pt-14 pb-14 pr-10 pl-10 hadow-md bg-background border-y-2 border-y-primary"
+      className=" grid grid-col-2 pt-14 pb-14 pr-10 pl-10 hadow-md bg-background"
     >
-      <div className="text-primary flex flex-col lg:flex-row items-center lg:justify-around justify-center">
+    <div className="text-primary flex flex-col lg:flex-row items-center lg:justify-around justify-center">
         <div className="flex flex-col lg:flex-row lg:justify-start justify-center items-center">
           <img
             className="w-24 md:w-40 h-100"

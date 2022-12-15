@@ -36,7 +36,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App  ">
+    <div className="App bg-background">
       {loading === true ? (
         <LoadingScreen />
       ) : (

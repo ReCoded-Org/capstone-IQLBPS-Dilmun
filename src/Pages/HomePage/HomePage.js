@@ -17,12 +17,12 @@ const HomePage = () => {
       exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
     >
       <Hero />
+      <Features />
       <DiffSection />
       <section className="min-h-screen bg-background sna">
         <Testimonials />
         <PartnersLogo />
       </section>
-      <Features />
       <FAQ />
       <NewsLetter />
     </motion.div>

@@ -8,15 +8,12 @@ import FeatureCard from './FeatureCard';
 const Features = () => {
   const {t} = useTranslation();
   return (
-    <section
-      data-testid="features-section"
-      className="bg-background border-y-2 border-y-primary"
-    >
+    <section data-testid="features-section" className="bg-background">
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div className="mb-8 lg:mb-16">
+        <div className="mb-8 lg:mb-16 lg:text-start text-center">
           <h2
             data-testid="features-title"
-            className="mb-4 text-4xl tracking-tight font-extrabold text-primary"
+            className="mb-4 text-4xl tracking-tight font-extrabold text-primary "
           >
             {t('features.designed_to_meet_your_needs')}
           </h2>
