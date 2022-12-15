@@ -2,7 +2,7 @@
 
 exports[`render NewsLetter correctly 1`] = `
 <div
-  class=" grid grid-col-2 pt-14 pb-14 pr-10 pl-10 hadow-md bg-background border-y-2 border-y-primary"
+  class=" grid grid-col-2 pt-14 pb-14 pr-10 pl-10 hadow-md bg-background"
   data-testid="newsletter"
 >
   <div

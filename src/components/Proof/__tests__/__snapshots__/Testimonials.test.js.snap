@@ -7,22 +7,18 @@ exports[`should render testimonials component 1`] = `
   id="clients"
 >
   <div
-    class="w-full flex justify-between items-center md:flex-row flex-col sm:mb-4 mb-2"
+    class="w-full flex lg:justify-between justify-center items-center lg:flex-row flex-col sm:mb-4 mb-2"
   >
     <h2
-      class="font-bold text-center xs:text-[48px] text-[40px] text-primary xs:leading-[76.8px] leading-[66.8px] w-full"
+      class="font-bold text-center lg:text-left pl-0 lg:pl-8 xs:text-[48px] text-[40px] text-primary xs:leading-[76.8px] leading-[66.8px] w-full"
       data-testid="testimonials-title"
     />
-    <div
-      class="w-full md:mt-0 mt-6"
+    <p
+      class="font-poppins text-primary font-normal text-[20px] leading-[30.8px] text-center p-6 lg:text-left md:max-w-[450px]"
+      data-testid="testimonials-paragraph"
     >
-      <p
-        class="font-poppins text-primary font-normal text-[20px] leading-[30.8px] text-center p-6 md:text-left md:max-w-[450px]"
-        data-testid="testimonials-paragraph"
-      >
-        proof.everything_you_need
-      </p>
-    </div>
+      proof.everything_you_need
+    </p>
   </div>
   <div
     class="container flex flex-wrap sm:justify-center justify-center w-full feedback-container p-6"
