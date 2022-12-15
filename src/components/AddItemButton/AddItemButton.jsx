@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 function AddItemButton() {
-  const { t } = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   return (
     <Link to="/add-item">
       <div className="btn__container">

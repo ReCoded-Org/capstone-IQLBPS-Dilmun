@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 const PartnersLogo = () => {
-  const {t} = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   return (
     <section className="pb-8 md:pb-0" data-testid="customerslogo-section">
       <div className="lg:pb-8 mx-auto max-w-screen-xl px-4">

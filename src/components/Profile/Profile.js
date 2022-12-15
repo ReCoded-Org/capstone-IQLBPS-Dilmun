@@ -15,7 +15,7 @@ import { getUserItems } from '../../features/slices/item';
 export default function Profile() {
   const dispatch = useDispatch();
   const { userItems } = useSelector((state) => state.item);
-  const { t } = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   const userData = useSelector(user);
   const [isOpen, setIsOpen] = useState(false);
 

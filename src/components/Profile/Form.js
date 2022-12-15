@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 function Form({ toggleForm }) {
-  const { t } = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   const {
     register,
     // handleSubmit,

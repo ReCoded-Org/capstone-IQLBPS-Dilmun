@@ -3,7 +3,7 @@ import Tooltip from '../Tooltip/Tooltip';
 
 
 function DeleteItemButton({handleClick}) {
-  const {t} = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   return (
     <Tooltip text={t('delete_item')}>
       <button

@@ -13,14 +13,12 @@ import {
   signInWithFacebook,
   signInWithGoogle,
   signUpWithCredentials,
-  status,
-  user,
 } from '../../features/slices/user';
 import { errorTypes } from '../../utils/errorTypes';
 
 
 function SignUp() {
-  const { t } = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   const schema = yup.object().shape({
     firstName: yup.string().required(t('error.first_name')),
     lastName: yup.string().required(t('error.last_name')),
@@ -41,12 +39,11 @@ function SignUp() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const userData = useSelector(user);
+  // const userData = useSelector(user);
   const userError = useSelector(error);
-  const userStatus = useSelector(status);
+  // const userStatus = useSelector(status);
 
-  // eslint-disable-next-line no-console
-  console.log(userData, userError, userStatus);
+
 
   const {
     register,

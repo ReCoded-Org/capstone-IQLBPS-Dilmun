@@ -7,7 +7,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 const Sort = () => {
-  const { t } = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   const sortOptions = [
     { name: t('most_popular'), href: '#', current: true },
     { name: t('best_rating'), href: '#', current: false },

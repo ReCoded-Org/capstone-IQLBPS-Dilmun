@@ -10,7 +10,7 @@ const Filter = ({
   handleFilter,
   setItems,
 }) => {
-  const { t } = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   const [checkFilters, setCheckFilters] = useState([
     {
       id: 'category',
@@ -143,8 +143,6 @@ const Filter = ({
   );
 
   useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log('useEffect');
     setItems(handleFilter(categoryOptions, typeOptions, priceOptions));
   }, [categoryOptions, typeOptions, priceOptions]);
   return (

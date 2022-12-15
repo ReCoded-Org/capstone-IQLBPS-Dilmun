@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE, CONTACT_US } from '../../route';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   return (
     <footer className="p-4 bg-gradient-to-br from-background via-background to-secondary shadow md:p-5 border-t">
       <div className="lg:grid lg:grid-cols-4 gap-4">

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 
 const SearchBar = ({ onInputChange }) => {
-  const { t } = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   
   return (
     <div className="sm:flex text-center my-3 justify-center mt-28 items-center p-6  bg-primary rounded-xl shadow-lg">

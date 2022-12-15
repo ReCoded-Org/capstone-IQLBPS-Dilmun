@@ -12,7 +12,7 @@ const MobileFilter = ({
   handleOnCheckChange,
   handleOnRadioChange,
 }) => {
-  const {t} = useTranslation();
+  const { t } = jest ? { t: (s) => s } : useTranslation();
   return (
     <Transition.Root show={mobileFiltersOpen} as={Fragment}>
       <Dialog
