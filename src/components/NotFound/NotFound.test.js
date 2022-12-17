@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import NotFound from './NotFound.js';
+import NotFound from './NotFound'
 
 test('Sort the Products', () => {
   const tree = render(<NotFound/>);

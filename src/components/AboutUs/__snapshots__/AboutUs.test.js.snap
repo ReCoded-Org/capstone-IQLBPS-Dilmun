@@ -15,7 +15,7 @@ Array [
       </h1>
     </div>
     <div
-      className=" flex lg:flex-row  flex-col justify-around"
+      className=" flex lg:flex-row flex-col lg:justify-around justify-center items-center"
     >
       <div
         className=""
@@ -27,7 +27,7 @@ Array [
         </p>
       </div>
       <div
-        className="max-sm rounded-[32px] overflow-hidden shadow-lg"
+        className="max-w-sm rounded-[32px] overflow-hidden shadow-lgr"
       >
         <img
           alt="Team"
@@ -45,14 +45,14 @@ Array [
       about_us.meet_our_team
     </h1>
     <div
-      className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center"
+      className=" grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 content-center justify-items-center"
     >
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://avatars.githubusercontent.com/u/18458259?v=4"
         />
         <div
@@ -101,7 +101,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -139,11 +139,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://media-exp1.licdn.com/dms/image/C4E03AQHdVCFCMpleXA/profile-displayphoto-shrink_400_400/0/1644323192070?e=1673481600&v=beta&t=KegoYa3Bxr0W_xVi_d6uGDxhpaF1Tlgpyq16AUT5YTo"
         />
         <div
@@ -192,7 +192,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -230,11 +230,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://avatars.githubusercontent.com/u/77196732?v=4"
         />
         <div
@@ -283,7 +283,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -321,11 +321,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03NEE0RFT3-3c68f27559f8-512"
         />
         <div
@@ -374,7 +374,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -412,11 +412,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ME7K3Q07-7c77b4b5ec30-512"
         />
         <div
@@ -465,7 +465,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -503,11 +503,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03M7GU31T9-c3416698ca47-512"
         />
         <div
@@ -556,7 +556,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -594,11 +594,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MFBY877G-fa68f334cdc6-512"
         />
         <div
@@ -647,7 +647,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -685,11 +685,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ML8M4TDK-39b1e18f3beb-512"
         />
         <div
@@ -738,7 +738,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -776,11 +776,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1035620424366698537/1040399760936407140/20221111_005321.jpg"
         />
         <div
@@ -829,7 +829,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -867,11 +867,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://media-exp1.licdn.com/dms/image/C4E03AQHVkuZrm119sw/profile-displayphoto-shrink_400_400/0/1664138752140?e=1673481600&v=beta&t=Tck8GXnCVLTgOpaFkt3JcPICGcKrGqhPRJTXvK8e5cs"
         />
         <div
@@ -920,7 +920,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -958,11 +958,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03NLRW93S4-58883f4311a9-512"
         />
         <div
@@ -1011,7 +1011,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1049,11 +1049,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MM3YL9T8-9de8727e5be8-512"
         />
         <div
@@ -1102,7 +1102,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1140,11 +1140,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1040665604501287015/1040945758205136916/Snapchat-447202707.jpg"
         />
         <div
@@ -1193,7 +1193,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1231,11 +1231,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://images-ext-1.discordapp.net/external/v3hBuX4Izg5bw5M86rQ4c-n9XmSzCKyvz2VNvB0Sa8Q/%3Fe%3D1673481600%26v%3Dbeta%26t%3DidTOSgPpLg5IPA2mXP2QOW_BDyMHT1yCedhkIt4DZ9o/https/media-exp1.licdn.com/dms/image/D4E03AQHKQsWIAMPs6g/profile-displayphoto-shrink_400_400/0/1665437478526"
         />
         <div
@@ -1284,7 +1284,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1322,11 +1322,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ME5BM4G7-33939c579835-512"
         />
         <div
@@ -1375,7 +1375,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1413,11 +1413,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MS03CNNN-e137f5f4be76-512"
         />
         <div
@@ -1466,7 +1466,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1504,11 +1504,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03N0QN0T4Z-329e8b0488d0-512"
         />
         <div
@@ -1557,7 +1557,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1595,11 +1595,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1040389461680328834/1040395861588451379/photo_2022-01-03_14-27-04.jpg"
         />
         <div
@@ -1648,7 +1648,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1705,7 +1705,7 @@ Array [
       </h1>
     </div>
     <div
-      className=" flex lg:flex-row  flex-col justify-around"
+      className=" flex lg:flex-row flex-col lg:justify-around justify-center items-center"
     >
       <div
         className=""
@@ -1717,7 +1717,7 @@ Array [
         </p>
       </div>
       <div
-        className="max-sm rounded-[32px] overflow-hidden shadow-lg"
+        className="max-w-sm rounded-[32px] overflow-hidden shadow-lgr"
       >
         <img
           alt="Team"
@@ -1735,14 +1735,14 @@ Array [
       about_us.meet_our_team
     </h1>
     <div
-      className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center"
+      className=" grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 content-center justify-items-center"
     >
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://avatars.githubusercontent.com/u/18458259?v=4"
         />
         <div
@@ -1791,7 +1791,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1829,11 +1829,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://media-exp1.licdn.com/dms/image/C4E03AQHdVCFCMpleXA/profile-displayphoto-shrink_400_400/0/1644323192070?e=1673481600&v=beta&t=KegoYa3Bxr0W_xVi_d6uGDxhpaF1Tlgpyq16AUT5YTo"
         />
         <div
@@ -1882,7 +1882,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -1920,11 +1920,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://avatars.githubusercontent.com/u/77196732?v=4"
         />
         <div
@@ -1973,7 +1973,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2011,11 +2011,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03NEE0RFT3-3c68f27559f8-512"
         />
         <div
@@ -2064,7 +2064,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2102,11 +2102,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ME7K3Q07-7c77b4b5ec30-512"
         />
         <div
@@ -2155,7 +2155,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2193,11 +2193,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03M7GU31T9-c3416698ca47-512"
         />
         <div
@@ -2246,7 +2246,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2284,11 +2284,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MFBY877G-fa68f334cdc6-512"
         />
         <div
@@ -2337,7 +2337,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2375,11 +2375,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ML8M4TDK-39b1e18f3beb-512"
         />
         <div
@@ -2428,7 +2428,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2466,11 +2466,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1035620424366698537/1040399760936407140/20221111_005321.jpg"
         />
         <div
@@ -2519,7 +2519,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2557,11 +2557,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://media-exp1.licdn.com/dms/image/C4E03AQHVkuZrm119sw/profile-displayphoto-shrink_400_400/0/1664138752140?e=1673481600&v=beta&t=Tck8GXnCVLTgOpaFkt3JcPICGcKrGqhPRJTXvK8e5cs"
         />
         <div
@@ -2610,7 +2610,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2648,11 +2648,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03NLRW93S4-58883f4311a9-512"
         />
         <div
@@ -2701,7 +2701,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2739,11 +2739,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MM3YL9T8-9de8727e5be8-512"
         />
         <div
@@ -2792,7 +2792,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2830,11 +2830,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1040665604501287015/1040945758205136916/Snapchat-447202707.jpg"
         />
         <div
@@ -2883,7 +2883,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -2921,11 +2921,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://images-ext-1.discordapp.net/external/v3hBuX4Izg5bw5M86rQ4c-n9XmSzCKyvz2VNvB0Sa8Q/%3Fe%3D1673481600%26v%3Dbeta%26t%3DidTOSgPpLg5IPA2mXP2QOW_BDyMHT1yCedhkIt4DZ9o/https/media-exp1.licdn.com/dms/image/D4E03AQHKQsWIAMPs6g/profile-displayphoto-shrink_400_400/0/1665437478526"
         />
         <div
@@ -2974,7 +2974,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3012,11 +3012,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ME5BM4G7-33939c579835-512"
         />
         <div
@@ -3065,7 +3065,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3103,11 +3103,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MS03CNNN-e137f5f4be76-512"
         />
         <div
@@ -3156,7 +3156,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3194,11 +3194,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03N0QN0T4Z-329e8b0488d0-512"
         />
         <div
@@ -3247,7 +3247,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3285,11 +3285,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1040389461680328834/1040395861588451379/photo_2022-01-03_14-27-04.jpg"
         />
         <div
@@ -3338,7 +3338,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3395,7 +3395,7 @@ Array [
       </h1>
     </div>
     <div
-      className=" flex lg:flex-row  flex-col justify-around"
+      className=" flex lg:flex-row flex-col lg:justify-around justify-center items-center"
     >
       <div
         className=""
@@ -3407,7 +3407,7 @@ Array [
         </p>
       </div>
       <div
-        className="max-sm rounded-[32px] overflow-hidden shadow-lg"
+        className="max-w-sm rounded-[32px] overflow-hidden shadow-lgr"
       >
         <img
           alt="Team"
@@ -3425,14 +3425,14 @@ Array [
       about_us.meet_our_team
     </h1>
     <div
-      className=" grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center"
+      className=" grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 content-center justify-items-center"
     >
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://avatars.githubusercontent.com/u/18458259?v=4"
         />
         <div
@@ -3481,7 +3481,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3519,11 +3519,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://media-exp1.licdn.com/dms/image/C4E03AQHdVCFCMpleXA/profile-displayphoto-shrink_400_400/0/1644323192070?e=1673481600&v=beta&t=KegoYa3Bxr0W_xVi_d6uGDxhpaF1Tlgpyq16AUT5YTo"
         />
         <div
@@ -3572,7 +3572,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3610,11 +3610,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://avatars.githubusercontent.com/u/77196732?v=4"
         />
         <div
@@ -3663,7 +3663,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3701,11 +3701,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03NEE0RFT3-3c68f27559f8-512"
         />
         <div
@@ -3754,7 +3754,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3792,11 +3792,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ME7K3Q07-7c77b4b5ec30-512"
         />
         <div
@@ -3845,7 +3845,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3883,11 +3883,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03M7GU31T9-c3416698ca47-512"
         />
         <div
@@ -3936,7 +3936,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -3974,11 +3974,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MFBY877G-fa68f334cdc6-512"
         />
         <div
@@ -4027,7 +4027,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4065,11 +4065,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ML8M4TDK-39b1e18f3beb-512"
         />
         <div
@@ -4118,7 +4118,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4156,11 +4156,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1035620424366698537/1040399760936407140/20221111_005321.jpg"
         />
         <div
@@ -4209,7 +4209,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4247,11 +4247,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://media-exp1.licdn.com/dms/image/C4E03AQHVkuZrm119sw/profile-displayphoto-shrink_400_400/0/1664138752140?e=1673481600&v=beta&t=Tck8GXnCVLTgOpaFkt3JcPICGcKrGqhPRJTXvK8e5cs"
         />
         <div
@@ -4300,7 +4300,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4338,11 +4338,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03NLRW93S4-58883f4311a9-512"
         />
         <div
@@ -4391,7 +4391,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4429,11 +4429,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MM3YL9T8-9de8727e5be8-512"
         />
         <div
@@ -4482,7 +4482,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4520,11 +4520,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1040665604501287015/1040945758205136916/Snapchat-447202707.jpg"
         />
         <div
@@ -4573,7 +4573,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4611,11 +4611,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://images-ext-1.discordapp.net/external/v3hBuX4Izg5bw5M86rQ4c-n9XmSzCKyvz2VNvB0Sa8Q/%3Fe%3D1673481600%26v%3Dbeta%26t%3DidTOSgPpLg5IPA2mXP2QOW_BDyMHT1yCedhkIt4DZ9o/https/media-exp1.licdn.com/dms/image/D4E03AQHKQsWIAMPs6g/profile-displayphoto-shrink_400_400/0/1665437478526"
         />
         <div
@@ -4664,7 +4664,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4702,11 +4702,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03ME5BM4G7-33939c579835-512"
         />
         <div
@@ -4755,7 +4755,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4793,11 +4793,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03MS03CNNN-e137f5f4be76-512"
         />
         <div
@@ -4846,7 +4846,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4884,11 +4884,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://ca.slack-edge.com/T03K5TU7K0E-U03N0QN0T4Z-329e8b0488d0-512"
         />
         <div
@@ -4937,7 +4937,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a
@@ -4975,11 +4975,11 @@ Array [
         </div>
       </div>
       <div
-        className="max-w-sm rounded-[20px] overflow-hidden shadow-lg bg-background"
+        className="max-w-sm flex flex-col rounded-[20px] overflow-hidden shadow-xl bg-background"
       >
         <img
           alt="team member"
-          className="object-cover  w-full"
+          className="max-h-64"
           src="https://cdn.discordapp.com/attachments/1040389461680328834/1040395861588451379/photo_2022-01-03_14-27-04.jpg"
         />
         <div
@@ -5028,7 +5028,7 @@ Array [
                   />
                 </svg>
               </div>
-              linkedIn
+              LinkedIn
             </div>
           </a>
           <a

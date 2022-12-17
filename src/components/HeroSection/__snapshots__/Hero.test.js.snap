@@ -2,7 +2,7 @@
 
 exports[`render correctly 1`] = `
 <div
-  class="backdrop-blur-md bg-white/30 h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
+  class="backdrop-blur-md bg-background h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
   data-testid="hero-section"
 >
   <div

@@ -2,7 +2,7 @@
 
 exports[`render NavBar correctly 1`] = `
 <div
-  className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-background/10 via-background/20 to-secondary backdrop-blur-md bg-transparent "
+  className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-transparent via-transparent to-secondary backdrop-blur-md bg-transparent "
   style={
     Object {
       "boxShadow": "0px 0px 10px 0px rgba(0, 0, 0, 0)",
@@ -58,7 +58,7 @@ exports[`render NavBar correctly 1`] = `
         <li>
           <a
             aria-current="page"
-            className="md:ml-6 text-xl md:my-0 hover:text-secondary duration-300 bg-tertiary text-secondary px-2 pb-1 rounded-md"
+            className="md:ml-6 text-xl font-semibold md:my-0 hover:text-secondary duration-300 text-secondary underline"
             href="/"
             onClick={[Function]}
           >
@@ -68,7 +68,7 @@ exports[`render NavBar correctly 1`] = `
         <li />
         <li>
           <a
-            className="md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300"
+            className="md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300"
             href="/about"
             onClick={[Function]}
           >
@@ -77,7 +77,7 @@ exports[`render NavBar correctly 1`] = `
         </li>
         <li>
           <a
-            className="md:ml-6 text-xl md:my-0 text-primary hover:text-secondary duration-300"
+            className="md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300"
             href="/signin"
             onClick={[Function]}
           >

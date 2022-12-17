@@ -10,13 +10,3 @@ test("redering footer", () => {
     expect(tree).toMatchSnapshot();
 })
 
-it("redering divs correctly correctly", () => {
-    const { divs } = renderer.create(
-        <Router>
-            <div />
-            <div />
-            <div />
-        </Router>).toJSON();
-    expect(divs).toMatchSnapshot();
-})
-

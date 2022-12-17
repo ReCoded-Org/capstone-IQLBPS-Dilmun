@@ -73,7 +73,7 @@ function SignUp() {
 
   return (
     <div
-      className="bg-background bg-signin-background bg-cover bg-no-repeat w-full min-h-[100vh] h-full flex flex-col justify-center items-center content-center"
+      className="bg-background md:bg-signin-background md:bg-contain bg-no-repeat w-full min-h-[100vh] h-full flex flex-col justify-center items-center content-center"
       data-testid="sign-up"
     >
       <h1 className="text-5xl font-bold mb-10 text-primary pt-9 uppercase">

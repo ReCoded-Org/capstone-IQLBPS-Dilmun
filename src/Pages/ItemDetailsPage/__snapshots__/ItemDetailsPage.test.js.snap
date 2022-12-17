@@ -6,96 +6,182 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col justify-center items-center h-screen"
+        class="flex flex-col md:flex-row text-background p-10 md:p-20 bg-background w-full"
+        data-testid="item-details-page"
       >
         <div
-          aria-busy="true"
-          aria-label="circles-loading"
-          data-testid="circles-loading"
-          role="status"
-          style="display: flex;"
+          class="w-full lg:w-1/2"
         >
-          <svg
-            data-testid="circles-svg"
-            fill="#16425B"
-            height="100"
-            viewBox="0 0 135 135"
-            width="100"
-            xmlns="http://www.w3.org/2000/svg"
+          <img
+            class="max-h-full min-h-[600px] w-full object-cover md:object-fill	"
+          />
+        </div>
+        <div
+          class="w-full lg:w-1/2 md:ml-auto max-h-full md:mr-auto flex flex-col gap-7 rounded pt-5 px-5 bg-gradient-to-tl from-tertiary to-primary justify-between py-10 min-h-[600px]"
+        >
+          <div
+            class="flex flex-col gap-7"
           >
-            <path
-              d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z"
-            >
-              <animatetransform
-                attributeName="transform"
-                dur="2.5s"
-                from="0 67 67"
-                repeatCount="indefinite"
-                to="-360 67 67"
-                type="rotate"
+            <div>
+              <h2
+                class="font-bold text-4xl pb-4"
               />
-            </path>
-            <path
-              d="M28.19 40.31c6.627 0 12-5.374 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.626 5.372 12 12 12zm30.72-19.825c4.686 4.687 12.284 4.687 16.97 0 4.686-4.686 4.686-12.284 0-16.97-4.686-4.687-12.284-4.687-16.97 0-4.687 4.686-4.687 12.284 0 16.97zm35.74 7.705c0 6.627 5.37 12 12 12 6.626 0 12-5.373 12-12 0-6.628-5.374-12-12-12-6.63 0-12 5.372-12 12zm19.822 30.72c-4.686 4.686-4.686 12.284 0 16.97 4.687 4.686 12.285 4.686 16.97 0 4.687-4.686 4.687-12.284 0-16.97-4.685-4.687-12.283-4.687-16.97 0zm-7.704 35.74c-6.627 0-12 5.37-12 12 0 6.626 5.373 12 12 12s12-5.374 12-12c0-6.63-5.373-12-12-12zm-30.72 19.822c-4.686-4.686-12.284-4.686-16.97 0-4.686 4.687-4.686 12.285 0 16.97 4.686 4.687 12.284 4.687 16.97 0 4.687-4.685 4.687-12.283 0-16.97zm-35.74-7.704c0-6.627-5.372-12-12-12-6.626 0-12 5.373-12 12s5.374 12 12 12c6.628 0 12-5.373 12-12zm-19.823-30.72c4.687-4.686 4.687-12.284 0-16.97-4.686-4.686-12.284-4.686-16.97 0-4.687 4.686-4.687 12.284 0 16.97 4.686 4.687 12.284 4.687 16.97 0z"
+              <div
+                class=""
+              >
+                <span
+                  class="text-lg font-medium text-background bg-tertiary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
+                />
+              </div>
+            </div>
+            <span
+              class="flex gap-1"
             >
-              <animatetransform
-                attributeName="transform"
-                dur="8s"
-                from="0 67 67"
-                repeatCount="indefinite"
-                to="360 67 67"
-                type="rotate"
+              <p
+                class="font-bold"
+              >
+                items_details.item_type
+              </p>
+            </span>
+            <span
+              class="flex gap-1"
+            >
+              <p
+                class="font-bold"
+              >
+                items_details.price
+              </p>
+               $
+            </span>
+            <span
+              class="flex gap-1"
+            >
+              <p
+                class="font-bold"
+              >
+                items_details.address
+              </p>
+              undefined, undefined
+            </span>
+            <div>
+              <span
+                class="font-bold text-xl"
+              >
+                items_details.description
+              </span>
+              <p
+                class="text-lg"
               />
-            </path>
-          </svg>
+            </div>
+          </div>
+          <div
+            class="w-full self-end"
+          >
+            <a
+              class="w-full"
+              href="mailto:undefined"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <button
+                class="bg-tertiary px-4 py-4 w-full text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer lg:w-full"
+                type="submit"
+              >
+                items_details.email_owner
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="flex flex-col justify-center items-center h-screen"
+      class="flex flex-col md:flex-row text-background p-10 md:p-20 bg-background w-full"
+      data-testid="item-details-page"
     >
       <div
-        aria-busy="true"
-        aria-label="circles-loading"
-        data-testid="circles-loading"
-        role="status"
-        style="display: flex;"
+        class="w-full lg:w-1/2"
       >
-        <svg
-          data-testid="circles-svg"
-          fill="#16425B"
-          height="100"
-          viewBox="0 0 135 135"
-          width="100"
-          xmlns="http://www.w3.org/2000/svg"
+        <img
+          class="max-h-full min-h-[600px] w-full object-cover md:object-fill	"
+        />
+      </div>
+      <div
+        class="w-full lg:w-1/2 md:ml-auto max-h-full md:mr-auto flex flex-col gap-7 rounded pt-5 px-5 bg-gradient-to-tl from-tertiary to-primary justify-between py-10 min-h-[600px]"
+      >
+        <div
+          class="flex flex-col gap-7"
         >
-          <path
-            d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z"
-          >
-            <animatetransform
-              attributeName="transform"
-              dur="2.5s"
-              from="0 67 67"
-              repeatCount="indefinite"
-              to="-360 67 67"
-              type="rotate"
+          <div>
+            <h2
+              class="font-bold text-4xl pb-4"
             />
-          </path>
-          <path
-            d="M28.19 40.31c6.627 0 12-5.374 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.626 5.372 12 12 12zm30.72-19.825c4.686 4.687 12.284 4.687 16.97 0 4.686-4.686 4.686-12.284 0-16.97-4.686-4.687-12.284-4.687-16.97 0-4.687 4.686-4.687 12.284 0 16.97zm35.74 7.705c0 6.627 5.37 12 12 12 6.626 0 12-5.373 12-12 0-6.628-5.374-12-12-12-6.63 0-12 5.372-12 12zm19.822 30.72c-4.686 4.686-4.686 12.284 0 16.97 4.687 4.686 12.285 4.686 16.97 0 4.687-4.686 4.687-12.284 0-16.97-4.685-4.687-12.283-4.687-16.97 0zm-7.704 35.74c-6.627 0-12 5.37-12 12 0 6.626 5.373 12 12 12s12-5.374 12-12c0-6.63-5.373-12-12-12zm-30.72 19.822c-4.686-4.686-12.284-4.686-16.97 0-4.686 4.687-4.686 12.285 0 16.97 4.686 4.687 12.284 4.687 16.97 0 4.687-4.685 4.687-12.283 0-16.97zm-35.74-7.704c0-6.627-5.372-12-12-12-6.626 0-12 5.373-12 12s5.374 12 12 12c6.628 0 12-5.373 12-12zm-19.823-30.72c4.687-4.686 4.687-12.284 0-16.97-4.686-4.686-12.284-4.686-16.97 0-4.687 4.686-4.687 12.284 0 16.97 4.686 4.687 12.284 4.687 16.97 0z"
+            <div
+              class=""
+            >
+              <span
+                class="text-lg font-medium text-background bg-tertiary bg-opacity-50 rounded-full px-2 py-1 mr-2 shadow-md"
+              />
+            </div>
+          </div>
+          <span
+            class="flex gap-1"
           >
-            <animatetransform
-              attributeName="transform"
-              dur="8s"
-              from="0 67 67"
-              repeatCount="indefinite"
-              to="360 67 67"
-              type="rotate"
+            <p
+              class="font-bold"
+            >
+              items_details.item_type
+            </p>
+          </span>
+          <span
+            class="flex gap-1"
+          >
+            <p
+              class="font-bold"
+            >
+              items_details.price
+            </p>
+             $
+          </span>
+          <span
+            class="flex gap-1"
+          >
+            <p
+              class="font-bold"
+            >
+              items_details.address
+            </p>
+            undefined, undefined
+          </span>
+          <div>
+            <span
+              class="font-bold text-xl"
+            >
+              items_details.description
+            </span>
+            <p
+              class="text-lg"
             />
-          </path>
-        </svg>
+          </div>
+        </div>
+        <div
+          class="w-full self-end"
+        >
+          <a
+            class="w-full"
+            href="mailto:undefined"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <button
+              class="bg-tertiary px-4 py-4 w-full text-white font-semibold rounded-lg hover:shadow-lg hover:bg-secondary transition duration-500 cursor-pointer lg:w-full"
+              type="submit"
+            >
+              items_details.email_owner
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </div>,

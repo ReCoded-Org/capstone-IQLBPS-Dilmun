@@ -1,0 +1,538 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render filter correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="bg-background"
+        data-testid="filter"
+      >
+        <div>
+          <form
+            class="hidden lg:block p-4"
+          >
+            <div
+              class="border-b border-gray-200 py-6"
+              data-headlessui-state="open"
+            >
+              <h3
+                class="-my-3 flow-root"
+              >
+                <button
+                  aria-controls="headlessui-disclosure-panel-:r1:"
+                  aria-expanded="true"
+                  class="flex w-full items-center justify-between bg-background py-3 text-sm text-primary hover:text-secondary"
+                  data-headlessui-state="open"
+                  id="headlessui-disclosure-button-:r0:"
+                  type="button"
+                >
+                  <span
+                    class="font-medium text-primary"
+                  >
+                    filter.category.title
+                  </span>
+                  <span
+                    class="ml-6 flex items-center"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="pt-6"
+                data-headlessui-state="open"
+                id="headlessui-disclosure-panel-:r1:"
+              >
+                <div
+                  class="space-y-4"
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <input
+                      class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                      id="filter-category-0"
+                      name="category[]"
+                      type="checkbox"
+                      value="men"
+                    />
+                    <label
+                      class="ml-3 text-sm text-primary select-none"
+                      for="filter-category-0"
+                    >
+                      filter.category.men
+                    </label>
+                  </div>
+                  <div
+                    class="flex items-center"
+                  >
+                    <input
+                      class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                      id="filter-category-1"
+                      name="category[]"
+                      type="checkbox"
+                      value="women"
+                    />
+                    <label
+                      class="ml-3 text-sm text-primary select-none"
+                      for="filter-category-1"
+                    >
+                      filter.category.women
+                    </label>
+                  </div>
+                  <div
+                    class="flex items-center"
+                  >
+                    <input
+                      class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                      id="filter-category-2"
+                      name="category[]"
+                      type="checkbox"
+                      value="kids"
+                    />
+                    <label
+                      class="ml-3 text-sm text-primary select-none"
+                      for="filter-category-2"
+                    >
+                      filter.category.kids
+                    </label>
+                  </div>
+                  <div
+                    class="flex items-center"
+                  >
+                    <input
+                      class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                      id="filter-category-3"
+                      name="category[]"
+                      type="checkbox"
+                      value="toys"
+                    />
+                    <label
+                      class="ml-3 text-sm text-primary select-none"
+                      for="filter-category-3"
+                    >
+                      filter.category.toys
+                    </label>
+                  </div>
+                  <div
+                    class="flex items-center"
+                  >
+                    <input
+                      class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                      id="filter-category-4"
+                      name="category[]"
+                      type="checkbox"
+                      value="electronics"
+                    />
+                    <label
+                      class="ml-3 text-sm text-primary select-none"
+                      for="filter-category-4"
+                    >
+                      filter.category.electronics
+                    </label>
+                  </div>
+                  <div
+                    class="flex items-center"
+                  >
+                    <input
+                      class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                      id="filter-category-5"
+                      name="category[]"
+                      type="checkbox"
+                      value="home"
+                    />
+                    <label
+                      class="ml-3 text-sm text-primary select-none"
+                      for="filter-category-5"
+                    >
+                      filter.category.home
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border-b border-gray-200 py-6"
+              data-headlessui-state=""
+            >
+              <h3
+                class="-my-3 flow-root"
+              >
+                <button
+                  aria-expanded="false"
+                  class="flex w-full items-center justify-between bg-background py-3 text-sm text-primary hover:text-secondary"
+                  data-headlessui-state=""
+                  id="headlessui-disclosure-button-:r2:"
+                  type="button"
+                >
+                  <span
+                    class="font-medium text-primary"
+                  >
+                    filter.type.title
+                  </span>
+                  <span
+                    class="ml-6 flex items-center"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+            </div>
+            <div
+              class="border-b border-gray-200 py-6"
+              data-headlessui-state=""
+            >
+              <h3
+                class="-my-3 flow-root"
+              >
+                <button
+                  aria-expanded="false"
+                  class="flex w-full items-center justify-between bg-background py-3 text-primary hover:text-secondary"
+                  data-headlessui-state=""
+                  id="headlessui-disclosure-button-:r4:"
+                  type="button"
+                >
+                  <span
+                    class="font-medium text-primary"
+                  >
+                    filter.price
+                  </span>
+                  <span
+                    class="ml-6 flex items-center"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="bg-background"
+      data-testid="filter"
+    >
+      <div>
+        <form
+          class="hidden lg:block p-4"
+        >
+          <div
+            class="border-b border-gray-200 py-6"
+            data-headlessui-state="open"
+          >
+            <h3
+              class="-my-3 flow-root"
+            >
+              <button
+                aria-controls="headlessui-disclosure-panel-:r1:"
+                aria-expanded="true"
+                class="flex w-full items-center justify-between bg-background py-3 text-sm text-primary hover:text-secondary"
+                data-headlessui-state="open"
+                id="headlessui-disclosure-button-:r0:"
+                type="button"
+              >
+                <span
+                  class="font-medium text-primary"
+                >
+                  filter.category.title
+                </span>
+                <span
+                  class="ml-6 flex items-center"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h3>
+            <div
+              class="pt-6"
+              data-headlessui-state="open"
+              id="headlessui-disclosure-panel-:r1:"
+            >
+              <div
+                class="space-y-4"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <input
+                    class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                    id="filter-category-0"
+                    name="category[]"
+                    type="checkbox"
+                    value="men"
+                  />
+                  <label
+                    class="ml-3 text-sm text-primary select-none"
+                    for="filter-category-0"
+                  >
+                    filter.category.men
+                  </label>
+                </div>
+                <div
+                  class="flex items-center"
+                >
+                  <input
+                    class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                    id="filter-category-1"
+                    name="category[]"
+                    type="checkbox"
+                    value="women"
+                  />
+                  <label
+                    class="ml-3 text-sm text-primary select-none"
+                    for="filter-category-1"
+                  >
+                    filter.category.women
+                  </label>
+                </div>
+                <div
+                  class="flex items-center"
+                >
+                  <input
+                    class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                    id="filter-category-2"
+                    name="category[]"
+                    type="checkbox"
+                    value="kids"
+                  />
+                  <label
+                    class="ml-3 text-sm text-primary select-none"
+                    for="filter-category-2"
+                  >
+                    filter.category.kids
+                  </label>
+                </div>
+                <div
+                  class="flex items-center"
+                >
+                  <input
+                    class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                    id="filter-category-3"
+                    name="category[]"
+                    type="checkbox"
+                    value="toys"
+                  />
+                  <label
+                    class="ml-3 text-sm text-primary select-none"
+                    for="filter-category-3"
+                  >
+                    filter.category.toys
+                  </label>
+                </div>
+                <div
+                  class="flex items-center"
+                >
+                  <input
+                    class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                    id="filter-category-4"
+                    name="category[]"
+                    type="checkbox"
+                    value="electronics"
+                  />
+                  <label
+                    class="ml-3 text-sm text-primary select-none"
+                    for="filter-category-4"
+                  >
+                    filter.category.electronics
+                  </label>
+                </div>
+                <div
+                  class="flex items-center"
+                >
+                  <input
+                    class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-secondary"
+                    id="filter-category-5"
+                    name="category[]"
+                    type="checkbox"
+                    value="home"
+                  />
+                  <label
+                    class="ml-3 text-sm text-primary select-none"
+                    for="filter-category-5"
+                  >
+                    filter.category.home
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-b border-gray-200 py-6"
+            data-headlessui-state=""
+          >
+            <h3
+              class="-my-3 flow-root"
+            >
+              <button
+                aria-expanded="false"
+                class="flex w-full items-center justify-between bg-background py-3 text-sm text-primary hover:text-secondary"
+                data-headlessui-state=""
+                id="headlessui-disclosure-button-:r2:"
+                type="button"
+              >
+                <span
+                  class="font-medium text-primary"
+                >
+                  filter.type.title
+                </span>
+                <span
+                  class="ml-6 flex items-center"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h3>
+          </div>
+          <div
+            class="border-b border-gray-200 py-6"
+            data-headlessui-state=""
+          >
+            <h3
+              class="-my-3 flow-root"
+            >
+              <button
+                aria-expanded="false"
+                class="flex w-full items-center justify-between bg-background py-3 text-primary hover:text-secondary"
+                data-headlessui-state=""
+                id="headlessui-disclosure-button-:r4:"
+                type="button"
+              >
+                <span
+                  class="font-medium text-primary"
+                >
+                  filter.price
+                </span>
+                <span
+                  class="ml-6 flex items-center"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h3>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

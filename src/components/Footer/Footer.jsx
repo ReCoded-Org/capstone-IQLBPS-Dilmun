@@ -8,7 +8,7 @@ import { HOME_ROUTE, ABOUT_ROUTE, FAQ_ROUTE, CONTACT_US } from '../../route';
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="p-4 bg-gradient-to-br from-background via-background to-secondary shadow md:p-5 backdrop-blur-md">
+    <footer className="p-4 bg-gradient-to-br from-background via-background to-secondary shadow md:p-5 border-t">
       <div className="lg:grid lg:grid-cols-4 gap-4">
         <Link
           to={HOME_ROUTE}
@@ -78,7 +78,8 @@ const Footer = () => {
       <hr className="my-4 border-secondary sm:mx-auto lg:my-6" />
       <span className="block text-sm text-secondary lg:text-start text-center">
         © 2022
-        <Link to={HOME_ROUTE} className="hover:underline"> {' '}
+        <Link to={HOME_ROUTE} className="hover:underline">
+          {' '}
           Dilmun™
         </Link>
         . All Rights Reserved.

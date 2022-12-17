@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import ItemsCard from './ItemsCard';
@@ -15,6 +15,7 @@ const MOCK_ITEM_DATA = {
     email: 'email',
   },
 };
+afterEach(cleanup);
 
 test('render item cards correctly', () => {
   render(

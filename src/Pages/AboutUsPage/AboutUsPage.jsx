@@ -10,7 +10,7 @@ const AboutUsPage = () => {
       animate={{ width: '100%' }}
       exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
     >
-      <div className=" bg-signin-background bg-cover bg-background p-5">
+      <div className=" bg-background p-5">
         <AboutUs />
       </div>
     </motion.div>
