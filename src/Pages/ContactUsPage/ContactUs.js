@@ -31,19 +31,21 @@ const ContactUs = () => {
   if (statusData === 'loading') return <LoadingScreen />;
 
   return (
-    <div className="bg-white text-gray-100 px-8 py-12">
+    <div className="bg-background text-primary px-8 py-12">
       {statusData && (
         <h2 className="text-2xl lg:text-3xl text-center leading-tight text-tertiary ">
           {messageForUser[statusData]}
         </h2>
       )}
-      <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-gray-900">
+      <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-primary">
         <div className="flex flex-col justify-between">
           <div className="text-center">
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-primary ">
               {t('contact_us.lets_talk')}
             </h2>
-            <div className="text-gray-600 mt-8 ">{t('contact_us.give_us')}</div>
+            <div className="text-secondary mt-8 ">
+              {t('contact_us.give_us')}
+            </div>
           </div>
           <div className="mt-8 text-center self-center">
             <img
@@ -55,13 +57,12 @@ const ContactUs = () => {
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <span className="uppercase text-sm text-gray-600 font-bold">
+            <span className="uppercase text-sm text-secondary font-bold">
               {t('contact_us.full_name')}
             </span>
             <input
-              className="w-full bg-background text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-background text-primary mt- p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
               type="text"
-              placeholder={t('error.full_name')}
               {...register('name', {
                 required: '* Enter your name please',
               })}
@@ -73,11 +74,11 @@ const ContactUs = () => {
             )}
           </div>
           <div className="mt-5">
-            <span className="uppercase text-sm text-gray-600 font-bold">
-             {t('contact_us.email')}
+            <span className="uppercase text-sm text-secondary font-bold">
+              {t('contact_us.email')}
             </span>
             <input
-              className="w-full bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-background text-primary mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
               type="email"
               {...register('email', {
                 required: '* Email address is required',
@@ -90,11 +91,11 @@ const ContactUs = () => {
             )}
           </div>
           <div className="mt-5">
-            <span className="uppercase text-sm text-gray-600 font-bold">
+            <span className="uppercase text-sm text-secondary font-bold">
               {t('contact_us.message')}
             </span>
             <textarea
-              className="w-full h-40 bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full h-40 bg-background text-primary mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
               {...register('feedback', {
                 required: '* This Input is required',
               })}

@@ -6,13 +6,13 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="bg-white text-gray-100 px-8 py-12"
+        class="bg-background text-primary px-8 py-12"
       >
         <h2
           class="text-2xl lg:text-3xl text-center leading-tight text-tertiary "
         />
         <div
-          class="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-gray-900"
+          class="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-primary"
         >
           <div
             class="flex flex-col justify-between"
@@ -26,7 +26,7 @@ Object {
                 contact_us.lets_talk
               </h2>
               <div
-                class="text-gray-600 mt-8 "
+                class="text-secondary mt-8 "
               >
                 contact_us.give_us
               </div>
@@ -44,14 +44,13 @@ Object {
           <form>
             <div>
               <span
-                class="uppercase text-sm text-gray-600 font-bold"
+                class="uppercase text-sm text-secondary font-bold"
               >
                 contact_us.full_name
               </span>
               <input
-                class="w-full bg-background text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                class="w-full bg-background text-primary mt- p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
                 name="name"
-                placeholder="error.full_name"
                 type="text"
               />
             </div>
@@ -59,12 +58,12 @@ Object {
               class="mt-5"
             >
               <span
-                class="uppercase text-sm text-gray-600 font-bold"
+                class="uppercase text-sm text-secondary font-bold"
               >
                 contact_us.email
               </span>
               <input
-                class="w-full bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                class="w-full bg-background text-primary mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
                 name="email"
                 type="email"
               />
@@ -73,12 +72,12 @@ Object {
               class="mt-5"
             >
               <span
-                class="uppercase text-sm text-gray-600 font-bold"
+                class="uppercase text-sm text-secondary font-bold"
               >
                 contact_us.message
               </span>
               <textarea
-                class="w-full h-40 bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                class="w-full h-40 bg-background text-primary mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
                 name="feedback"
               />
             </div>
@@ -99,13 +98,13 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="bg-white text-gray-100 px-8 py-12"
+      class="bg-background text-primary px-8 py-12"
     >
       <h2
         class="text-2xl lg:text-3xl text-center leading-tight text-tertiary "
       />
       <div
-        class="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-gray-900"
+        class="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-primary"
       >
         <div
           class="flex flex-col justify-between"
@@ -119,7 +118,7 @@ Object {
               contact_us.lets_talk
             </h2>
             <div
-              class="text-gray-600 mt-8 "
+              class="text-secondary mt-8 "
             >
               contact_us.give_us
             </div>
@@ -137,14 +136,13 @@ Object {
         <form>
           <div>
             <span
-              class="uppercase text-sm text-gray-600 font-bold"
+              class="uppercase text-sm text-secondary font-bold"
             >
               contact_us.full_name
             </span>
             <input
-              class="w-full bg-background text-gray-900 mt- p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              class="w-full bg-background text-primary mt- p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
               name="name"
-              placeholder="error.full_name"
               type="text"
             />
           </div>
@@ -152,12 +150,12 @@ Object {
             class="mt-5"
           >
             <span
-              class="uppercase text-sm text-gray-600 font-bold"
+              class="uppercase text-sm text-secondary font-bold"
             >
               contact_us.email
             </span>
             <input
-              class="w-full bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              class="w-full bg-background text-primary mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
               name="email"
               type="email"
             />
@@ -166,12 +164,12 @@ Object {
             class="mt-5"
           >
             <span
-              class="uppercase text-sm text-gray-600 font-bold"
+              class="uppercase text-sm text-secondary font-bold"
             >
               contact_us.message
             </span>
             <textarea
-              class="w-full h-40 bg-background text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              class="w-full h-40 bg-background text-primary mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border border-secondary"
               name="feedback"
             />
           </div>
