@@ -43,7 +43,7 @@ function FAQ() {
   );
 
   return (
-    <section className="bg-background py-20 mx-auto border-y-2 border-y-primary border-opacity-20 mt-5">
+    <section className="bg-background py-20 mx-auto  mt-5">
       <h2 className="text-4xl mb-10 text-primary font-bold text-center">
         {t('faq.frequently_asked_questions')}
       </h2>
