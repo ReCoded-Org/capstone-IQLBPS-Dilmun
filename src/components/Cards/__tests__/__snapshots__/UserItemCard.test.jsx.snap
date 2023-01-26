@@ -9,11 +9,11 @@ exports[`UserItemCard renders correctly 1`] = `
     className="my-10 relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl border border-background bg-primary"
   >
     <div
-      className="w-full md:w-1/2 min-w-[200px] bg-transparent grid place-items-center"
+      className=" md:w-64 max-w-xs md:h-64 h-80 bg-transparent grid place-items-center"
     >
       <img
         alt="Title of Item Goes Here"
-        className="rounded-xl w-full h-auto"
+        className="rounded-xl md:w-full h-auto overflow-hidden "
         src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
       />
     </div>
