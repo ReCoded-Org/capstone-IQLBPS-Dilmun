@@ -66,9 +66,9 @@ function NavBar() {
         </button>
         <ul
           className={classNames(
-            'hidden md:flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto md:bg-transparent bg-background/30 md:shadow-none shadow-lg',
+            'hidden md:flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto md:bg-transparent bg-background/70 md:shadow-none shadow-lg  transition-all duration-500 ease-in',
             open
-              ? 'top-[103px] right-24 py-3 flex transition-all duration-500 ease-in'
+              ? 'top-[103px] right-24 py-3 flex'
               : 'left-[-700px] top-[96px] py-3 '
           )}
         >
