@@ -21,38 +21,12 @@ const classNames = (...classes) => {
   return twMerge(classes);
 };
 
-function NavBar({ initialTransparency = true }) {
+function NavBar() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const dispatch = useDispatch();
   const userData = useSelector(user);
-  const [padding, setPadding] = useState(10);
-  const [boxShadow, setBoxShadow] = useState(0);
-  const [clientWindowHeight, setClientWindowHeight] = useState('');
-  const [backgroundTransparency, setBackgroundTransparency] = useState(0);
-
-  const handleScroll = () => {
-    setClientWindowHeight(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  });
-
-  useEffect(() => {
-    const backgroundTransparencyVar = clientWindowHeight / 600;
-    if (!initialTransparency) setBackgroundTransparency(100);
-    if (backgroundTransparencyVar < 1) {
-      const paddingVar = 10 - backgroundTransparencyVar * 20;
-      const boxShadowVar = backgroundTransparencyVar * 0.1;
-      if (initialTransparency)
-        setBackgroundTransparency(backgroundTransparencyVar);
-      setPadding(paddingVar);
-      setBoxShadow(boxShadowVar);
-    }
-  }, [clientWindowHeight, initialTransparency]);
 
   const closeNavBar = () => {
     if (open) {
@@ -65,140 +39,128 @@ function NavBar({ initialTransparency = true }) {
   }, [location.key]);
 
   return (
-    <div
-      className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-transparent via-transparent to-secondary backdrop-blur-md bg-transparent "
+    <nav
+      role="navigation"
+      className="shadow-md w-full z-10 sticky top-0 left-0 bg-gradient-to-tl from-transparent via-transparent to-secondary backdrop-blur-md "
       style={{
-        // backgroundColor: `rgba(255, 255, 255, ${backgroundTransparency})`,
-        boxShadow: `0px 0px 10px 0px rgba(0, 0, 0, ${boxShadow})`,
-        padding: `${padding}px 1rem`,
+        boxShadow: `0px 0px 10px 0px rgba(0, 0, 0, .25)`,
+        padding: `3px 1rem`,
       }}
     >
-      <nav role="navigation">
-        <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ">
-          <div>
-            <Link to={HOME_ROUTE}>
-              <img
-                src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
-                className="object-scale-down h-20 md:justify-self-center py-0"
-                alt="logo"
-              />
-            </Link>
-          </div>
-          <button type="button" onClick={() => setOpen(!open)}>
-            {open ? (
-              <AiOutlineClose className="text-6xl text-secondary absolute right-8 top-5 cursor-pointer md:hidden" />
-            ) : (
-              <FaBars className="text-6xl text-secondary absolute right-8 top-5 cursor-pointer md:hidden" />
-            )}
-          </button>
-          {/* <div id="menu" className="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center"> */}
-
-          <ul
-            className={classNames(
-              'hidden md:flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto ',
-              open
-                ? 'top-[96px] right-24 py-3 md:backdrop-blur-none backdrop-blur-md md:bg-transparent bg-background flex transition-all duration-500 ease-in'
-                : 'left-[-700px] top-[96px] py-3 ',
-              backgroundTransparency * 100 !== 0 && ''
-            )}
-          >
-            {/* <ul
-            className={`flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto transition-all duration-500 ease-in ${open
-              ? 'right-24 top-[96px] py-3 backdrop-blur-md bg-background'
-              : 'left-[-700px] top-[96px] py-3 '
-              }`}
-          > */}
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  classNames(
-                    'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
-                    isActive ? 'text-secondary underline' : ''
-                  )
-                }
-                to={HOME_ROUTE}
-              >
-                {t('navbar.home')}
-              </NavLink>
-            </li>
-            <li>
-              {!_.isEmpty(userData) ? (
-                <NavLink
-                  className={({ isActive }) =>
-                    classNames(
-                      'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
-                      isActive ? 'text-secondary underline' : ''
-                    )
-                  }
-                  to={PRODUCT_ROUTE}
-                >
-                  {t('navbar.products')}
-                </NavLink>
-              ) : null}
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  classNames(
-                    'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
-                    isActive ? 'text-secondary underline' : ''
-                  )
-                }
-                to={ABOUT_ROUTE}
-              >
-                {t('navbar.about')}
-              </NavLink>
-            </li>
-            {!_.isEmpty(userData) ? (
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    classNames(
-                      'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
-                      isActive ? 'text-secondary underline' : ''
-                    )
-                  }
-                  to={PROFILE}
-                >
-                  {t('navbar.profile')}
-                </NavLink>
-              </li>
-            ) : null}
-            {_.isEmpty(userData) ? (
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    classNames(
-                      'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
-                      isActive ? ' text-secondary underline' : ''
-                    )
-                  }
-                  to={SIGN_IN_ROUTE}
-                >
-                  {t('navbar.sign_in')}
-                </NavLink>
-              </li>
-            ) : null}
-            {!_.isEmpty(userData) ? (
-              <li>
-                <NavLink
-                  className="md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300"
-                  to="/"
-                  onClick={() => {
-                    dispatch(Signout());
-                  }}
-                >
-                  {t('navbar.log_out')}
-                </NavLink>
-              </li>
-            ) : null}
-
-            <LanguageButton closeNavbar={closeNavBar} />
-          </ul>
-          {/* </div> */}
+      <div className="md:flex py-2 items-center justify-between md:px-8 px-10 max-h-24 ">
+        <div>
+          <Link to={HOME_ROUTE}>
+            <img
+              src="https://cdn.discordapp.com/attachments/1031834305703460906/1035627738440159303/Asset_23.png"
+              className="object-scale-down h-20 md:justify-self-center py-0"
+              alt="logo"
+            />
+          </Link>
         </div>
-      </nav>
-    </div>
+        <button type="button" onClick={() => setOpen(!open)}>
+          {open ? (
+            <AiOutlineClose className="text-6xl text-secondary absolute right-8 top-5 cursor-pointer md:hidden" />
+          ) : (
+            <FaBars className="text-6xl text-secondary absolute right-8 top-5 cursor-pointer md:hidden" />
+          )}
+        </button>
+        <ul
+          className={classNames(
+            'hidden md:flex items-center md:flex-row flex-col md:pb-0 pb-2 absolute md:static left-0 w-full md:w-auto md:bg-transparent bg-background/70 md:shadow-none shadow-lg  transition-all duration-500 ease-in',
+            open
+              ? 'top-[103px] right-24 py-3 flex'
+              : 'left-[-700px] top-[96px] py-3 '
+          )}
+        >
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
+                  isActive ? 'text-secondary underline' : ''
+                )
+              }
+              to={HOME_ROUTE}
+            >
+              {t('navbar.home')}
+            </NavLink>
+          </li>
+          <li>
+            {!_.isEmpty(userData) ? (
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
+                    isActive ? 'text-secondary underline' : ''
+                  )
+                }
+                to={PRODUCT_ROUTE}
+              >
+                {t('navbar.products')}
+              </NavLink>
+            ) : null}
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                classNames(
+                  'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
+                  isActive ? 'text-secondary underline' : ''
+                )
+              }
+              to={ABOUT_ROUTE}
+            >
+              {t('navbar.about')}
+            </NavLink>
+          </li>
+          {!_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
+                    isActive ? 'text-secondary underline' : ''
+                  )
+                }
+                to={PROFILE}
+              >
+                {t('navbar.profile')}
+              </NavLink>
+            </li>
+          ) : null}
+          {_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    'md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300',
+                    isActive ? ' text-secondary underline' : ''
+                  )
+                }
+                to={SIGN_IN_ROUTE}
+              >
+                {t('navbar.sign_in')}
+              </NavLink>
+            </li>
+          ) : null}
+          {!_.isEmpty(userData) ? (
+            <li>
+              <NavLink
+                className="md:ml-6 text-xl font-semibold md:my-0 text-primary hover:text-secondary duration-300"
+                to="/"
+                onClick={() => {
+                  dispatch(Signout());
+                }}
+              >
+                {t('navbar.log_out')}
+              </NavLink>
+            </li>
+          ) : null}
+
+          <LanguageButton closeNavbar={closeNavBar} />
+        </ul>
+      </div>
+    </nav>
   );
 }
 export default NavBar;

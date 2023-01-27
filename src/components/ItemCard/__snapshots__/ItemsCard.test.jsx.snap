@@ -2,7 +2,7 @@
 
 exports[`render item cards correctly 1`] = `
 <div
-  class="lg:w-80 md:w-64 w-96 bg-background  m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300"
+  class="lg:w-80 w-auto bg-background  m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300"
   data-testid="item-card"
 >
   <a
@@ -13,7 +13,7 @@ exports[`render item cards correctly 1`] = `
     >
       <img
         alt="product"
-        class="rounded-t-lg overflow-hidden object-cover mb-3 lg:h-80 h-80 shadow-md md:w-80 xl:w-full lg:w-72 w-full"
+        class="rounded-t-lg overflow-hidden object-cover mb-3 lg:h-80 h-80 shadow-md xl:w-full w-80 "
         src="https://cdn.discordapp.com/attachments/1031834305703460906/1041710013992947812/image.png"
       />
       <figcaption

@@ -5,7 +5,10 @@ import { SIGN_UP_ROUTE } from '../../route';
 function Hero() {
   const { t } = useTranslation();
   return (
-    <div data-testid= 'hero-section' className="backdrop-blur-md bg-background h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center">
+    <div
+      data-testid="hero-section"
+      className=" overflow-hidden backdrop-blur-md bg-background h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
+    >
       <div className="backdrop-blur-md w-full h-full  flex flex-col justify-center text-center">
         <div className=" text-bg-black md:mx-0 mx-4">
           <h1 className=" text-background text-7xl font-bold  ">

@@ -7,14 +7,14 @@ function ItemsCard({ item, animate }) {
     // keep animate prop false if you don't want the slide animation
     <div
       data-testid="item-card"
-      className={`lg:w-80 md:w-64 w-96 bg-background ${
+      className={`lg:w-80 w-auto bg-background ${
         animate ? 'lg:animate-scroll' : ''
       } m-7 rounded-lg hover:shadow-secondary shadow-gray-400 shadow-lg hover:shadow-2xl duration-300`}
     >
       <Link to={`/product/${item.id}`}>
         <figure className="relative max-w-sm transition-all cursor-pointer">
           <img
-            className="rounded-t-lg overflow-hidden object-cover mb-3 lg:h-80 h-80 shadow-md md:w-80 xl:w-full lg:w-72 w-full"
+            className="rounded-t-lg overflow-hidden object-cover mb-3 lg:h-80 h-80 shadow-md xl:w-full w-80 "
             src={item.file}
             alt="product"
           />

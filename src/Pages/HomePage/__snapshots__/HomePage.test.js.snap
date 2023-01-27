@@ -6,7 +6,7 @@ exports[`Home Page Rendered Correctly 1`] = `
   style="width: 0px;"
 >
   <div
-    class="backdrop-blur-md bg-background h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
+    class=" overflow-hidden backdrop-blur-md bg-background h-[100vh] bg-hero-bg bg-no-repeat text-center text-background bg-cover bg-center"
     data-testid="hero-section"
   >
     <div
@@ -609,7 +609,7 @@ exports[`Home Page Rendered Correctly 1`] = `
     </section>
   </section>
   <section
-    class="bg-background py-20 mx-auto border-y-2 border-y-primary border-opacity-20 mt-5"
+    class="bg-background py-20 mx-auto  mt-5"
   >
     <h2
       class="text-4xl mb-10 text-primary font-bold text-center"
